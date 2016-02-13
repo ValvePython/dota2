@@ -1,0 +1,8 @@
+https://github.com/SteamRE/SteamKit/raw/master/Resources/Protobufs/dota/steammessages.proto
+https://github.com/SteamRE/SteamKit/raw/master/Resources/Protobufs/dota/gcsystemmsgs.proto
+https://github.com/SteamRE/SteamKit/raw/master/Resources/Protobufs/dota/base_gcmessages.proto
+https://github.com/SteamRE/SteamKit/raw/master/Resources/Protobufs/dota/gcsdk_gcmessages.proto
+https://github.com/SteamRE/SteamKit/raw/master/Resources/Protobufs/dota/dota_gcmessages_common.proto
+https://github.com/SteamRE/SteamKit/raw/master/Resources/Protobufs/dota/dota_gcmessages_client.proto
+https://github.com/SteamRE/SteamKit/raw/master/Resources/Protobufs/dota/dota_gcmessages_client_fantasy.proto
+
