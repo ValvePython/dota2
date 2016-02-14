@@ -4,10 +4,11 @@ from dota2.enums import EDOTAGCMsg
 class Match(object):
     def __init__(self):
         super(Match, self).__init__()
+        self.__jobid_map = {}
 
         # register our handlers
         self.on(EDOTAGCMsg.EMsgGCMatchmakingStatsResponse, self.__handle_mmstats)
-        self.on(EDOTAGCMsg.EMsgGCMatchDetailsResponse, self.__handle_match_details)
+        self.on(None, self.__handle_match_details)
 
     def request_matchmaking_stats(self):
         """
@@ -15,15 +16,13 @@ class Match(object):
 
         Response event: ``matchmaking_stats``
 
+        :param message: MatchmakingStatsResponse proto
+
         """
         self.send(EDOTAGCMsg.EMsgGCMatchmakingStatsRequest)
 
     def __handle_mmstats(self, message):
-        self.emit("matchmaking_stats", {
-          'searching_players_by_group_source2': message.searching_players_by_group_source2,
-          'legacy_disabled_groups_source2': message.legacy_disabled_groups_source2,
-          'raw': message,
-          })
+        self.emit("matchmaking_stats", message)
 
     def request_match_details(self, match_id):
         """
@@ -33,15 +32,27 @@ class Match(object):
         :return: job event id
         :rtype: str
 
-        Succesful response event: ``match_details``
-        """
-        return self.send_job(EDOTAGCMsg.EMsgGCMatchDetailsRequest, {
-                             'match_id': match_id,
-                             })
+        Response event: ``match_details``
 
-    def __handle_match_details(self, message):
-        if message.result != EResult.OK:
-            self._logger.error("Got %s for match_details" % repr(EResult(message.result)))
+        :param match_id: match_id for response
+        :param eresult: :class:`steam.enums.EResult`
+        :param match: ``CMsgDOTAMatch`` proto
+        """
+        jobid = self.send_job(EDOTAGCMsg.EMsgGCMatchDetailsRequest, {
+                              'match_id': match_id,
+                              })
+
+        self.__jobid_map[jobid] = match_id
+
+        return jobid
+
+    def __handle_match_details(self, event, *args):
+        if event not in self.__jobid_map:
             return
 
-        self.emit('match_details', message)
+        message = args[0]
+        match_id = self.__jobid_map.pop(event)
+        eresult = EResult(message.result)
+        match = message.match if eresult == EResult.OK else None
+
+        self.emit('match_details', match_id, eresult, match)
