@@ -4,7 +4,8 @@ import google.protobuf
 from steam.util.events import EventEmitter
 from steam.core.msg import GCMsgHdrProto
 from steam.client.gc import GameCoordinator
-from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg, GCConnectionStatus, ESourceEngine
+from dota2.features import FeatureBase
+from dota2.enums import EGCBaseClientMsg, EDOTAGCSessionNeed, GCConnectionStatus, ESourceEngine
 from dota2.msg import get_emsg_enum, find_proto
 from dota2.protobufs import gcsdk_gcmessages_pb2 as pb_gc
 from dota2.protobufs import dota_gcmessages_client_pb2 as pb_gclient
@@ -12,7 +13,8 @@ from dota2.protobufs import dota_gcmessages_client_pb2 as pb_gclient
 logger = logging.getLogger("Dota2Client")
 
 
-class Dota2Client(EventEmitter):
+class Dota2Client(EventEmitter, FeatureBase):
+    _logger = logger
     verbose_debug = False
     appid = 570
 
@@ -21,6 +23,8 @@ class Dota2Client(EventEmitter):
         return self.steam.steam_id.id
 
     def __init__(self, client_instance=None):
+        super(Dota2Client, self).__init__()
+
         from steam.client import SteamClient
 
         if not isinstance(client_instance, SteamClient):
@@ -110,7 +114,7 @@ class Dota2Client(EventEmitter):
         self.steam.games_played([self.appid])
 
         self.send(EGCBaseClientMsg.EMsgGCClientHello, {
-            'client_session_need': 104,
+            'client_session_need': EDOTAGCSessionNeed.UserInUINeverConnected,
             'engine': ESourceEngine.ESE_Source2,
             })
 

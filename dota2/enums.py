@@ -24,7 +24,7 @@ for name in _proto_modules:
 
         items = {}
         for ikey, ivalue in value.items():
-            ikey = re.sub(r'^(k|%s)_' % key, '', ikey)
+            ikey = re.sub(r'^(k_)?(%s_)?' % key, '', ikey)
             items[ikey] = ivalue
 
         gvars[key] = IntEnum(key, items)

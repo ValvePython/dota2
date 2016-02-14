@@ -25,10 +25,13 @@ def find_proto(emsg):
                    dota_gcmessages_client_pb2,
                   ):
 
-        proto = getattr(module, emsg.name.replace("EMsgGC", "CMsg"), None)
+        proto = getattr(module, emsg.name.replace("EMsg", "CMsg"), None)
 
         if proto is None:
             proto = getattr(module, emsg.name.replace("EMsgGC", "CMsgDOTA"), None)
+        if proto is None:
+            proto = getattr(module, emsg.name.replace("EMsgGC", "CMsg"), None)
+
 
         if proto is not None:
             break
