@@ -17,6 +17,7 @@ class Dota2Client(EventEmitter, FeatureBase):
     _logger = logger
     verbose_debug = False
     appid = 570
+    current_jobid = 0
 
     @property
     def account_id(self):
@@ -80,6 +81,9 @@ class Dota2Client(EventEmitter, FeatureBase):
 
         self.emit(emsg, message)
 
+        if header.proto.job_id_target != 18446744073709551615:
+            self.emit('job_%d' % header.proto.job_id_target, message)
+
     def _set_connection_status(self, status):
         self.connection_status = GCConnectionStatus(status)
 
@@ -90,7 +94,14 @@ class Dota2Client(EventEmitter, FeatureBase):
             self.ready = False
             self.emit('notready')
 
-    def send(self, emsg, data={}, proto=None):
+    def send_job(self, *args, **kwargs):
+        jobid = self.current_jobid = (self.current_jobid + 1) % 4294967295
+
+        self.send(*args, jobid=jobid, **kwargs)
+
+        return "job_%d" % jobid
+
+    def send(self, emsg, data={}, proto=None, jobid=None):
         if not isinstance(data, dict):
             raise ValueError("data kwarg can only be a dict")
 
@@ -105,7 +116,12 @@ class Dota2Client(EventEmitter, FeatureBase):
         for key, value in data.items():
             setattr(message, key, value)
 
-        self.gc.send(GCMsgHdrProto(emsg), message.SerializeToString())
+        header = GCMsgHdrProto(emsg)
+
+        if jobid is not None:
+            header.proto.job_id_source = jobid
+
+        self.gc.send(header, message.SerializeToString())
 
     def launch(self):
         if not self.steam.logged_on:
