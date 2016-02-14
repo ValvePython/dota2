@@ -1,7 +1,7 @@
 import logging
 import gevent
 import google.protobuf
-from steam.util.events import EventEmitter
+from eventemitter import EventEmitter
 from steam.core.msg import GCMsgHdrProto
 from steam.client.gc import GameCoordinator
 from dota2.features import FeatureBase
