@@ -35,7 +35,9 @@ class Match(object):
         Response event: ``match_details``
 
         :param match_id: match_id for response
-        :param eresult: :class:`steam.enums.EResult`
+        :type match_id: :class:`int`
+        :param eresult: result enum
+        :type eresult: :class:`steam.enums.EResult`
         :param match: ``CMsgDOTAMatch`` proto
         """
         jobid = self.send_job(EDOTAGCMsg.EMsgGCMatchDetailsRequest, {

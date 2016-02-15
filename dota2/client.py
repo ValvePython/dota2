@@ -114,7 +114,10 @@ class Dota2Client(EventEmitter, FeatureBase):
         message = proto()
 
         for key, value in data.items():
-            setattr(message, key, value)
+            if isinstance(value, list):
+                getattr(message, key).extend(value)
+            else:
+                setattr(message, key, value)
 
         header = GCMsgHdrProto(emsg)
 

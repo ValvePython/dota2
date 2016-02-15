@@ -1,6 +1,8 @@
 from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg
 from dota2.protobufs import gcsdk_gcmessages_pb2
+from dota2.protobufs import dota_gcmessages_common_pb2
 from dota2.protobufs import dota_gcmessages_client_pb2
+from dota2.protobufs import dota_gcmessages_client_fantasy_pb2
 
 
 def get_emsg_enum(emsg):
@@ -20,9 +22,13 @@ def find_proto(emsg):
 
     if emsg == EGCBaseClientMsg.EMsgGCClientConnectionStatus:
         return gcsdk_gcmessages_pb2.CMsgConnectionStatus
+    elif emsg == EDOTAGCMsg.EMsgClientToGCGetProfileCardResponse:
+        return dota_gcmessages_common_pb2.CMsgDOTAProfileCard
 
     for module in (gcsdk_gcmessages_pb2,
+                   dota_gcmessages_common_pb2,
                    dota_gcmessages_client_pb2,
+                   dota_gcmessages_client_fantasy_pb2,
                   ):
 
         proto = getattr(module, emsg.name.replace("EMsg", "CMsg"), None)
