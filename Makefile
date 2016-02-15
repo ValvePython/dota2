@@ -2,10 +2,21 @@ define HELPBODY
 Available commands:
 
 	make help       - this thing.
+
 	make init       - install python dependancies
 	make test       - run tests and coverage
 	make pylint     - code analysis
 	make build      - pylint + test
+	make docs       - generate html docs using sphinx
+
+	make dist		- build source distribution
+	mage register	- register in pypi
+	make upload 	- upload to pypi
+
+	make pb_fetch   - fetch protobufs from SteamRE
+	make pb_compile - compile with protoc
+	make pb_clear   - removes *.proto
+	make pb_update  - pb_fetch + pb_compile
 
 endef
 
@@ -23,7 +34,11 @@ test:
 pylint:
 	pylint -r n -f colorized dota2 || true
 
-build: pylint test
+build: pylint test docs
+
+.FORCE:
+docs: .FORCE
+	$(MAKE) -C docs html
 
 clean:
 	rm -rf dist dota2.egg-info dota2/*.pyc
@@ -48,4 +63,4 @@ pb_compile:
 pb_clear:
 	rm -f ./dota2/protobufs/*.proto
 
-pb_update: pb_fetch pb_compile pb_clear
+pb_update: pb_fetch pb_compile

@@ -1,0 +1,4 @@
+[run]
+concurrency = gevent
+omit =
+    dota2/protobufs/*
