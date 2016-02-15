@@ -1,6 +1,9 @@
 """
-This module will load enums from protobufs at runtime and convert to Enum
+This module contains various :class:`enum.IntEnum` generated at runtime from protobufs.
+Why generate python enums? In short, protobuf's enums aren't great.
+:class:`enum.IntEnum` are much more flexible and easy to work with.
 """
+
 import re
 from enum import IntEnum
 from google.protobuf.internal.enum_type_wrapper import EnumTypeWrapper

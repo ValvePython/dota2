@@ -1,3 +1,8 @@
+"""
+Only the most essential features to :class:`dota2.client.Dota2Client` are found here. Every other feature is inherited from
+the :mod:`dota2.features` package and it's submodules.
+"""
+
 import logging
 import gevent
 import google.protobuf
@@ -14,30 +19,36 @@ logger = logging.getLogger("Dota2Client")
 
 
 class Dota2Client(EventEmitter, FeatureBase):
+    """
+    :param steam_client: Instance of the steam client
+    :type steam_client: :class:`steam.client.SteamClient`
+    """
     _logger = logger
-    verbose_debug = False
-    appid = 570
+    verbose_debug = False  #: enable pretty print of messages in debug logging
+    appid = 570  #: main client app id
     current_jobid = 0
+    ready = False  #: ``True`` when we have a session with GC
+    connection_status = GCConnectionStatus.NO_SESSION  #: :class:`dota2.enums.GCConnectionStatus`
 
     @property
     def account_id(self):
+        """
+        Account ID of the logged in user in the steam client
+        """
         return self.steam.steam_id.id
 
-    def __init__(self, client_instance=None):
+    def __init__(self, steam_client=None):
         super(Dota2Client, self).__init__()
 
         from steam.client import SteamClient
 
-        if not isinstance(client_instance, SteamClient):
+        if not isinstance(steam_client, SteamClient):
             raise ValueError("Expected an instance of SteamClient as argument")
 
-        self.steam = client_instance
-        self.gc = GameCoordinator(self.steam, self.appid)
+        self.steam = steam_client  #: instance of steam client
+        self.gc = GameCoordinator(self.steam, self.appid)  #: instance of :class:`steam.client.gc.GameCoordinator`
 
         self.gc.on(None, self._handle_gc_message)
-
-        self.ready = False
-        self.connection_status = GCConnectionStatus.NO_SESSION
 
         self.on(EGCBaseClientMsg.EMsgGCClientConnectionStatus, self._handle_conn_status)
         self.on(EGCBaseClientMsg.EMsgGCClientWelcome, self._handle_client_welcome)
@@ -95,13 +106,33 @@ class Dota2Client(EventEmitter, FeatureBase):
             self.emit('notready')
 
     def send_job(self, *args, **kwargs):
+        """
+        Send a message as a job
+
+        Exactly the same as :meth:`send`
+
+        :return: jobid event identifier
+        :rtype: :class:`str`
+
+        """
         jobid = self.current_jobid = (self.current_jobid + 1) % 4294967295
 
-        self.send(*args, jobid=jobid, **kwargs)
+        self._send(*args, jobid=jobid, **kwargs)
 
         return "job_%d" % jobid
 
-    def send(self, emsg, data={}, proto=None, jobid=None):
+    def send(self, emsg, data={}, proto=None):
+        """
+        Send a message
+
+        :param emsg: Enum for the message
+        :param data: data for the proto message
+        :type data: :class:`dict`
+        :param proto: (optional) manually specify protobuf, other it's detected based on ``emsg``
+        """
+        self._send(emsg, data, proto)
+
+    def _send(self, emsg, data={}, proto=None, jobid=None):
         if not isinstance(data, dict):
             raise ValueError("data kwarg can only be a dict")
 
@@ -127,6 +158,13 @@ class Dota2Client(EventEmitter, FeatureBase):
         self.gc.send(header, message.SerializeToString())
 
     def launch(self):
+        """
+        Launch Dota 2 and establish connection with the game coordinator
+
+        ``ready`` event will fire when the session is ready.
+        If the session is lost ``notready`` event will fire.
+        Alternatively, ``connection_status`` event can be monitored for changes.
+        """
         if not self.steam.logged_on:
             self.steam.wait_event('logged_on')
 
@@ -138,5 +176,8 @@ class Dota2Client(EventEmitter, FeatureBase):
             })
 
     def exit(self):
+        """
+        Close connection to Dota 2's game coordinator
+        """
         self.steam.games_played([])
         self._set_connection_status(GCConnectionStatus.NO_SESSION)
