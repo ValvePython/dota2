@@ -4,18 +4,9 @@ from dota2.enums import EDOTAGCMsg
 class Community(object):
     def __init__(self):
         super(Community, self).__init__()
-        self.__profile_map = {}
-        self.__profile_card_map = {}
 
         # register our handlers
-        self.on(None, self.__handle_jobs)
         self.on(EDOTAGCMsg.EMsgGCPlayerInfo, self.__handle_player_info)
-
-    def __handle_jobs(self, event, *args):
-        if event in self.__profile_map:
-            self.__handle_profile(event, *args)
-        elif event in self.__profile_card_map:
-            self.__handle_profile_card(event, *args)
 
     def request_profile(self, account_id, request_name=False):
         """
@@ -46,15 +37,14 @@ class Community(object):
                               'request_name': request_name,
                               })
 
-        self.__profile_map[jobid] = account_id
+        def wrap_profile_data(message):
+            eresult = EResult(message.result)
+            message = message if eresult == EResult.OK else None
+            self.emit("profile_data", account_id, eresult, message)
+
+        self.once(jobid, wrap_profile_data)
+
         return jobid
-
-    def __handle_profile(self, message):
-        account_id = self.__profile_map.pop(event)
-        eresult = EResult(message.result)
-        message = message if eresult == EResult.OK else None
-
-        self.emit("profile_data", account_id, eresult, message)
 
     def request_profile_card(self, account_id):
         """
@@ -76,12 +66,12 @@ class Community(object):
                               'account_id': account_id,
                               })
 
-        self.__profile_card_map[jobid] = account_id
-        return jobid
+        def wrap_profile_card(message):
+            self.emit("profile_card", account_id, message)
 
-    def __handle_profile_card(self, event, message):
-        account_id = self.__profile_card_map.pop(event)
-        self.emit("profile_card", account_id, message)
+        self.once(jobid, wrap_profile_card)
+
+        return jobid
 
     def request_player_info(self, account_ids):
         """

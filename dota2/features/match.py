@@ -4,11 +4,9 @@ from dota2.enums import EDOTAGCMsg
 class Match(object):
     def __init__(self):
         super(Match, self).__init__()
-        self.__jobid_map = {}
 
         # register our handlers
         self.on(EDOTAGCMsg.EMsgGCMatchmakingStatsResponse, self.__handle_mmstats)
-        self.on(None, self.__handle_match_details)
 
     def request_matchmaking_stats(self):
         """
@@ -44,17 +42,11 @@ class Match(object):
                               'match_id': match_id,
                               })
 
-        self.__jobid_map[jobid] = match_id
+        def wrap_match_details(message):
+            eresult = EResult(message.result)
+            match = message.match if eresult == EResult.OK else None
+            self.emit('match_details', match_id, eresult, match)
+
+        self.once(jobid, wrap_match_details)
 
         return jobid
-
-    def __handle_match_details(self, event, *args):
-        if event not in self.__jobid_map:
-            return
-
-        message = args[0]
-        match_id = self.__jobid_map.pop(event)
-        eresult = EResult(message.result)
-        match = message.match if eresult == EResult.OK else None
-
-        self.emit('match_details', match_id, eresult, match)
