@@ -9,6 +9,7 @@ import google.protobuf
 from eventemitter import EventEmitter
 from steam.core.msg import GCMsgHdrProto
 from steam.client.gc import GameCoordinator
+from steam.enums.emsg import EMsg
 from dota2.features import FeatureBase
 from dota2.enums import EGCBaseClientMsg, EDOTAGCSessionNeed, GCConnectionStatus, ESourceEngine
 from dota2.msg import get_emsg_enum, find_proto
@@ -45,11 +46,18 @@ class Dota2Client(EventEmitter, FeatureBase):
         if not isinstance(steam_client, SteamClient):
             raise ValueError("Expected an instance of SteamClient as argument")
 
+        # SteamClient setup
         self.steam = steam_client  #: instance of steam client
+
+        self.steam.on('disconnected', self._handle_disconnect)
+        self.steam.on(EMsg.ClientPlayingSessionState, self._handle_play_sess_state)
+
+        # GC setup
         self.gc = GameCoordinator(self.steam, self.appid)  #: instance of :class:`steam.client.gc.GameCoordinator`
 
         self.gc.on(None, self._handle_gc_message)
 
+        # register GC message handles
         self.on(EGCBaseClientMsg.EMsgGCClientConnectionStatus, self._handle_conn_status)
         self.on(EGCBaseClientMsg.EMsgGCClientWelcome, self._handle_client_welcome)
 
@@ -63,6 +71,13 @@ class Dota2Client(EventEmitter, FeatureBase):
         if event is not None:
             logger.debug("Emit event: %s" % repr(event))
         super(Dota2Client, self).emit(event, *args)
+
+    def _handle_play_sess_state(self, message):
+        if self.ready and message.playing_app != self.appid:
+            self._set_connection_status(GCConnectionStatus.NO_SESSION)
+
+    def _handle_disconnect(self):
+        self._set_connection_status(GCConnectionStatus.NO_SESSION)
 
     def _handle_client_welcome(self, message):
         self._set_connection_status(GCConnectionStatus.HAVE_SESSION)
