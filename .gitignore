@@ -1,0 +1,7 @@
+dist
+*.egg-info
+*.pyc
+.coverage
+*.swp
+
+dota2/protobufs/*.proto
