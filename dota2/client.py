@@ -38,7 +38,7 @@ class Dota2Client(EventEmitter, FeatureBase):
         """
         return self.steam.steam_id.id
 
-    def __init__(self, steam_client=None):
+    def __init__(self, steam_client):
         super(Dota2Client, self).__init__()
 
         from steam.client import SteamClient
