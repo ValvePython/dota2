@@ -1,9 +1,9 @@
 from steam.enums import EResult
 from dota2.enums import EDOTAGCMsg
 
-class Community(object):
+class Player(object):
     def __init__(self):
-        super(Community, self).__init__()
+        super(Player, self).__init__()
 
         # register our handlers
         self.on(EDOTAGCMsg.EMsgGCPlayerInfo, self.__handle_player_info)
