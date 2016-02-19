@@ -5,5 +5,5 @@ This package contains all high level features of the :class:`dota2.client.Dota2C
 
 .. toctree::
 
-   dota2.features.community
+   dota2.features.player
    dota2.features.match
