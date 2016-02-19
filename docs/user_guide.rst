@@ -75,7 +75,7 @@ Fetch player profile card
 You've probably seen the profile cards in Dota 2.
 They contain player selected stats, such trophies, number of matches, or MMR.
 
-We can request that data using one APIs from the :doc:`dota2.features` module.
+We can request that data using an API from the :doc:`dota2.features` module.
 
 Let's get Dendi's profile card. All we need is his account id, which is ``70388657``.
 
@@ -92,7 +92,10 @@ Let's get Dendi's profile card. All we need is his account id, which is ``703886
 
 The profile card request also happens to be a job.
 ``request_profile_card`` returns a ``job id`` and we can wait for it instead.
-We will only get the raw profile card protobuf message as argument.
+However, we will not get the same parameters as from ``profile_card``
+
+.. note::
+    Listening for the ``job id``` will only give you one arugment: the protobuf message
 
 .. code:: python
 
