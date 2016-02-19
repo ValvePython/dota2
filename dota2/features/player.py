@@ -7,6 +7,8 @@ class Player(object):
 
         # register our handlers
         self.on(EDOTAGCMsg.EMsgGCPlayerInfo, self.__handle_player_info)
+        self.on(EDOTAGCMsg.EMsgClientToGCLatestConductScorecard, self.__handle_conduct_scorecard)
+        self.on(EDOTAGCMsg.EMsgGCGetHeroStandingsResponse, self.__handle_hero_standings)
 
     def request_profile(self, account_id, request_name=False):
         """
@@ -73,6 +75,33 @@ class Player(object):
 
         return jobid
 
+    def request_player_stats(self, account_id):
+        """
+        Request players stats. These are located in the ``play style`` box on a player profie.
+
+        :param account_id: steam account_id
+        :type account_id: :class:`int`
+        :return: job id
+        :rtype: :class:`str`
+
+        Response event: ``player_stats``
+
+        :param account_id: account_id from request
+        :type account_id: :class:`int`
+        :param message: ``CMsgGCToClientPlayerStatsResponsed`` proto
+
+        """
+        jobid = self.send_job(EDOTAGCMsg.EMsgClientToGCPlayerStatsRequest, {
+                              'account_id': account_id,
+                              })
+
+        def wrap_player_stats(message):
+            self.emit("player_stats", account_id, message)
+
+        self.once(jobid, wrap_player_stats)
+
+        return jobid
+
     def request_player_info(self, account_ids):
         """
         Request official player information
@@ -94,3 +123,33 @@ class Player(object):
 
     def __handle_player_info(self, message):
         self.emit("player_info", message)
+
+    def request_conduct_scorecard(self):
+        """
+        Request conduct scorecard, otherwise knows as conduct summary
+
+        :return: job id
+        :rtype: :class:`str`
+
+        Response event: ``conduct_scorecard``
+
+        :param message: ``CMsgPlayerConductScorecard`` proto
+        """
+        return self.send_job(EDOTAGCMsg.EMsgClientToGCLatestConductScorecardRequest)
+
+    def __handle_conduct_scorecard(self, message):
+        self.emit("conduct_scorecard", message)
+
+    def request_hero_standings(self):
+        """
+        Request hero stands for the currently logged on account.
+        This is the data from the ``stats`` tab on your profile.
+
+        Response event: ``hero_standings``
+
+        :param message: ``CMsgGCGetHeroStandingsResponse`` proto
+        """
+        return self.send_job(EDOTAGCMsg.EMsgGCGetHeroStandings)
+
+    def __handle_hero_standings(self, message):
+        self.emit("hero_standings", message)

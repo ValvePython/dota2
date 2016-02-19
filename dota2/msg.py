@@ -41,10 +41,10 @@ def find_proto(emsg):
     if type(emsg) is int:
         return None
 
-    if emsg == EGCBaseClientMsg.EMsgGCClientConnectionStatus:
-        return gcsdk_gcmessages_pb2.CMsgConnectionStatus
-    elif emsg == EDOTAGCMsg.EMsgClientToGCGetProfileCardResponse:
-        return dota_gcmessages_common_pb2.CMsgDOTAProfileCard
+    proto = _proto_map_why_cant_we_name_things_properly.get(emsg, None)
+
+    if proto is not None:
+        return proto
 
     for module in (gcsdk_gcmessages_pb2,
                    dota_gcmessages_common_pb2,
@@ -64,3 +64,12 @@ def find_proto(emsg):
             break
 
     return proto
+
+
+_proto_map_why_cant_we_name_things_properly = {
+    EGCBaseClientMsg.EMsgGCClientConnectionStatus: gcsdk_gcmessages_pb2.CMsgConnectionStatus,
+    EDOTAGCMsg.EMsgClientToGCGetProfileCardResponse: dota_gcmessages_common_pb2.CMsgDOTAProfileCard,
+    EDOTAGCMsg.EMsgClientToGCLatestConductScorecardRequest: dota_gcmessages_client_pb2.CMsgPlayerConductScorecardRequest,
+    EDOTAGCMsg.EMsgClientToGCLatestConductScorecard: dota_gcmessages_client_pb2.CMsgPlayerConductScorecard,
+
+}
