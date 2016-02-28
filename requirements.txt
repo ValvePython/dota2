@@ -1,5 +1,5 @@
 enum34==1.1.2
 gevent==1.1rc3
 protobuf==2.6.1
-steam==0.6.0
+steam==0.6.4
 gevent-eventemitter==1.2
