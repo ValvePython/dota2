@@ -25,6 +25,7 @@ class Dota2Client(EventEmitter, FeatureBase):
     :type steam_client: :class:`steam.client.SteamClient`
     """
     _logger = logger
+    _retry_welcome_loop = None
     verbose_debug = False  #: enable pretty print of messages in debug logging
     appid = 570  #: main client app id
     current_jobid = 0
@@ -77,6 +78,9 @@ class Dota2Client(EventEmitter, FeatureBase):
             self._set_connection_status(GCConnectionStatus.NO_SESSION)
 
     def _handle_disconnect(self):
+        if self._retry_welcome_loop:
+            self._retry_welcome_loop.kill()
+
         self._set_connection_status(GCConnectionStatus.NO_SESSION)
 
     def _handle_client_welcome(self, message):
@@ -175,6 +179,23 @@ class Dota2Client(EventEmitter, FeatureBase):
 
         self.gc.send(header, message.SerializeToString())
 
+    def _knock_on_gc(self):
+            n = 1
+
+            while True:
+                if not self.ready:
+                    self.send(EGCBaseClientMsg.EMsgGCClientHello, {
+                        'client_session_need': EDOTAGCSessionNeed.UserInUINeverConnected,
+                        'engine': ESourceEngine.ESE_Source2,
+                        })
+
+                    self.wait_event('ready', timeout=3 + (2**n))
+                    n = min(n + 1, 4)
+
+                else:
+                    self.wait_event('notready')
+                    gevent.sleep(1)
+
     def launch(self):
         """
         Launch Dota 2 and establish connection with the game coordinator
@@ -186,16 +207,16 @@ class Dota2Client(EventEmitter, FeatureBase):
         if not self.steam.logged_on:
             self.steam.wait_event('logged_on')
 
-        self.steam.games_played([self.appid])
-
-        self.send(EGCBaseClientMsg.EMsgGCClientHello, {
-            'client_session_need': EDOTAGCSessionNeed.UserInUINeverConnected,
-            'engine': ESourceEngine.ESE_Source2,
-            })
+        if not self._retry_welcome_loop:
+            self.steam.games_played([self.appid])
+            self._retry_welcome_loop = gevent.spawn(self._knock_on_gc)
 
     def exit(self):
         """
         Close connection to Dota 2's game coordinator
         """
+        if self._retry_welcome_loop:
+            self._retry_welcome_loop.kill()
+
         self.steam.games_played([])
         self._set_connection_status(GCConnectionStatus.NO_SESSION)
