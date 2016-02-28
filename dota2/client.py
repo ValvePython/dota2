@@ -84,7 +84,6 @@ class Dota2Client(EventEmitter, FeatureBase):
 
     def _handle_conn_status(self, message):
         self._set_connection_status(message.status)
-        self.emit("connetion_status", self.connection_status)
 
     def _handle_gc_message(self, emsg, header, payload):
         emsg = get_emsg_enum(emsg)
@@ -111,7 +110,11 @@ class Dota2Client(EventEmitter, FeatureBase):
             self.emit('job_%d' % header.proto.job_id_target, message)
 
     def _set_connection_status(self, status):
+        prev_status = self.connection_status
         self.connection_status = GCConnectionStatus(status)
+
+        if self.connection_status != prev_status:
+            self.emit("connection_status", self.connection_status)
 
         if self.connection_status == GCConnectionStatus.HAVE_SESSION and not self.ready:
             self.ready = True
