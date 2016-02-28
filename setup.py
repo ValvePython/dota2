@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from codecs import open
 from os import path
 import sys
@@ -39,7 +39,7 @@ setup(
         'Operating System :: OS Independent',
     ],
     keywords='valve steam steamid api webapi',
-    packages=['dota2'],
+    packages=['dota2'] + ['dota2.'+x for x in find_packages(where='dota2')],
     install_requires=install_requires,
     zip_safe=True,
 )
