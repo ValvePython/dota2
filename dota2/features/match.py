@@ -14,7 +14,7 @@ class Match(object):
 
         Response event: ``matchmaking_stats``
 
-        :param message: MatchmakingStatsResponse proto
+        :param message: `CMsgDOTAMatchmakingStatsResponse <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L1948>`_ proto message
 
         """
         self.send(EDOTAGCMsg.EMsgGCMatchmakingStatsRequest)
@@ -36,7 +36,7 @@ class Match(object):
         :type match_id: :class:`int`
         :param eresult: result enum
         :type eresult: :class:`steam.enums.EResult`
-        :param match: ``CMsgDOTAMatch`` proto
+        :param match: `CMsgDOTAMatch <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L489>`_ proto message
         """
         jobid = self.send_job(EDOTAGCMsg.EMsgGCMatchDetailsRequest, {
                               'match_id': match_id,
@@ -48,5 +48,53 @@ class Match(object):
             self.emit('match_details', match_id, eresult, match)
 
         self.once(jobid, wrap_match_details)
+
+        return jobid
+
+
+    def request_matches(self, **kwargs):
+        """
+        Request matches. For arguments see `CMsgDOTARequestMatches <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L658>`_
+
+        .. warning::
+            Some of the arguments don't work even if you set them. Ask Valve.
+
+        :return: job event id
+        :rtype: str
+
+        Response event: ``matches``
+
+        :param message: `CMsgDOTARequestMatchesResponse <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L682>`_ proto message
+        """
+        jobid = self.send_job(EDOTAGCMsg.EMsgGCRequestMatches, kwargs)
+
+        def wrap_matches(message):
+            self.emit('matches', message)
+        self.once(jobid, wrap_matches)
+
+        return jobid
+
+    def request_matches_minimal(self, match_ids):
+        """
+        Request matches with only minimal data.
+
+        :param match_ids: match ids
+        :type match_ids: :class:`list`
+        :return: job event id
+        :rtype: str
+
+        Response event: ``matches_minimal``
+
+        :param matches: list of `CMsgDOTAMatchMinimal <https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/dota/dota_gcmessages_client.proto#L621>`_ proto message
+        :type matches: :class:`list`
+
+        """
+        jobid = self.send_job(EDOTAGCMsg.EMsgClientToGCMatchesMinimalRequest, {
+                              'match_ids': match_ids,
+                              })
+
+        def wrap_matches_minimal(message):
+            self.emit('matches_minimal', message.matches)
+        self.once(jobid, wrap_matches_minimal)
 
         return jobid
