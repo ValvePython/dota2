@@ -177,6 +177,20 @@ class Dota2Client(EventEmitter, FeatureBase):
         if jobid is not None:
             header.proto.job_id_source = jobid
 
+        if self.verbose_debug:
+            str_message = ''
+            str_header = str(header)
+            str_body = str(message)
+
+            if str_header:
+                str_message += "-- header ---------\n%s\n" % str_header
+            if str_body:
+                str_message += "-- message --------\n%s\n" % str_body
+
+            logger.debug("Outgoing: %s\n%s" % (repr(emsg), str_message))
+        else:
+            logger.debug("Outgoing: %s", repr(emsg))
+
         self.gc.send(header, message.SerializeToString())
 
     def _knock_on_gc(self):
