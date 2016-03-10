@@ -194,6 +194,7 @@ class Dota2Client(EventEmitter, FeatureBase):
 
                 else:
                     self.wait_event('notready')
+                    n = 1
                     gevent.sleep(1)
 
     def launch(self):
