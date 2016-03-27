@@ -3,7 +3,7 @@ Various utility function for dealing with messages.
 
 """
 
-from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg
+from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg, ESOMsg
 from dota2.protobufs import gcsdk_gcmessages_pb2
 from dota2.protobufs import dota_gcmessages_common_pb2
 from dota2.protobufs import dota_gcmessages_client_pb2
@@ -21,6 +21,7 @@ def get_emsg_enum(emsg):
     """
     for enum in (EGCBaseClientMsg,
                  EDOTAGCMsg,
+                 ESOMsg,
                  ):
         try:
             return enum(emsg)
@@ -45,6 +46,9 @@ def find_proto(emsg):
 
     if proto is not None:
         return proto
+
+    if isinstance(emsg, ESOMsg):
+        return getattr(gcsdk_gcmessages_pb2, "CMsgSO%s" % emsg.name, None)
 
     for module in (gcsdk_gcmessages_pb2,
                    dota_gcmessages_common_pb2,
@@ -71,5 +75,8 @@ _proto_map_why_cant_we_name_things_properly = {
     EDOTAGCMsg.EMsgClientToGCGetProfileCardResponse: dota_gcmessages_common_pb2.CMsgDOTAProfileCard,
     EDOTAGCMsg.EMsgClientToGCLatestConductScorecardRequest: dota_gcmessages_client_pb2.CMsgPlayerConductScorecardRequest,
     EDOTAGCMsg.EMsgClientToGCLatestConductScorecard: dota_gcmessages_client_pb2.CMsgPlayerConductScorecard,
-
+    ESOMsg.Create: gcsdk_gcmessages_pb2.CMsgSOSingleObject,
+    ESOMsg.Update: gcsdk_gcmessages_pb2.CMsgSOSingleObject,
+    ESOMsg.Destroy: gcsdk_gcmessages_pb2.CMsgSOSingleObject,
+    ESOMsg.UpdateMultiple: gcsdk_gcmessages_pb2.CMsgSOMultipleObjects,
 }
