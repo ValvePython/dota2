@@ -32,4 +32,26 @@ for name in _proto_modules:
 
         gvars[key] = IntEnum(key, items)
 
+
+class ESOType(IntEnum):
+    CSOEconItem = 1
+    CSOItemRecipe = 5
+    CSOEconGameAccountClient = 7
+    CSOSelectedItemPreset = 35
+    CSOEconItemPresetInstance = 36
+    CSOEconItemDropRateBonus = 38
+    CSOEconItemLeagueViewPass = 39
+    CSOEconItemEventTicket = 40
+    CSOEconItemTournamentPassport = 42
+    CSODOTAGameAccountClient = 2002
+    CSODOTAParty = 2003
+    CSODOTALobby = 2004
+    CSODOTAPartyInvite = 2006
+    CSODOTAGameHeroFavorites = 2007
+    CSODOTAMapLocationState = 2008
+    CMsgDOTATournament = 2009
+    CSODOTAPlayerChallenge = 2010
+    CSODOTALobbyInvite = 2011
+
 del re, IntEnum, EnumTypeWrapper, _proto_modules, _proto_module, name, proto, gvars, key, value, items, ikey, ivalue
+
