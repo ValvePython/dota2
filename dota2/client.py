@@ -86,6 +86,21 @@ class Dota2Client(EventEmitter, FeatureBase):
     def _handle_client_welcome(self, message):
         self._set_connection_status(GCConnectionStatus.HAVE_SESSION)
 
+        # handle DOTAWelcome
+        submessage = pb_gclient.CMsgDOTAWelcome()
+        submessage.ParseFromString(message.game_data)
+
+        if self.verbose_debug:
+            logger.debug("Got DOTAWelcome:\n%s" % str(submessage))
+        else:
+            logger.debug("Got DOTAWelcome")
+
+        self.emit('dota_welcome', submessage)
+
+        for extra in submessage.extra_messages:
+            self.gc.emit(extra.id, GCMsgHdrProto(extra.id), extra.contents)
+
+
     def _handle_conn_status(self, message):
         self._set_connection_status(message.status)
 

@@ -61,7 +61,11 @@ def find_proto(emsg):
         if proto is None:
             proto = getattr(module, emsg.name.replace("EMsgGC", "CMsgDOTA"), None)
         if proto is None:
+            proto = getattr(module, emsg.name.replace("EMsgGCToClient", "CMsgDOTA"), None)
+        if proto is None:
             proto = getattr(module, emsg.name.replace("EMsgGC", "CMsg"), None)
+        if proto is None:
+            proto = getattr(module, emsg.name.replace("EMsgDOTA", "CMsg"), None)
 
 
         if proto is not None:
