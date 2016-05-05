@@ -7,6 +7,7 @@ class Match(object):
 
         # register our handlers
         self.on(EDOTAGCMsg.EMsgGCMatchmakingStatsResponse, self.__handle_mmstats)
+        self.on(EDOTAGCMsg.EMsgGCToClientFindTopSourceTVGamesResponse, self.__handle_top_source_tv)
 
     def request_matchmaking_stats(self):
         """
@@ -98,3 +99,16 @@ class Match(object):
         self.once(jobid, wrap_matches_minimal)
 
         return jobid
+
+    def request_top_source_tv_games(self, **kwargs):
+        """
+        Find top source TV games.
+
+        Response event: ``top_source_tv_games``
+
+        :param response: `CMsgClientToGCFindTopSourceTVGames <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L136>`_ proto message
+        """
+        self.send(EDOTAGCMsg.EMsgClientToGCFindTopSourceTVGames, kwargs)
+
+    def __handle_top_source_tv(self, message):
+        self.emit("top_source_tv_games", message)
