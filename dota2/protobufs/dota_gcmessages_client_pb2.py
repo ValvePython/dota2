@@ -10,43 +10,17 @@ from google.protobuf import descriptor_pb2
 
 
 import steammessages_pb2
+import dota_shared_enums_pb2
 import dota_gcmessages_common_pb2
 import gcsdk_gcmessages_pb2
-import dota_gcmessages_client_fantasy_pb2
-import base_gcmessages_pb2
+import dota_gcmessages_common_match_management_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client.proto',
   package='',
-  serialized_pb='\n\x1c\x64ota_gcmessages_client.proto\x1a\x13steammessages.proto\x1a\x1c\x64ota_gcmessages_common.proto\x1a\x16gcsdk_gcmessages.proto\x1a$dota_gcmessages_client_fantasy.proto\x1a\x15\x62\x61se_gcmessages.proto\"\xe4\x03\n\x15\x43MsgStartFindingMatch\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1f\n\x0bmatchgroups\x18\x02 \x01(\r:\n4294967295\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12\x1e\n\ngame_modes\x18\x04 \x01(\r:\n4294967295\x12?\n\x0e\x62ot_difficulty\x18\x05 \x01(\x0e\x32\x12.DOTABotDifficulty:\x13\x42OT_DIFFICULTY_HARD\x12\x31\n\nmatch_type\x18\x06 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x12\"\n\x0ematchlanguages\x18\x07 \x01(\r:\n4294967295\x12\x16\n\x0emap_preference\x18\t \x01(\r\x12\x0f\n\x07team_id\x18\x08 \x01(\r\x12\x43\n\x12game_language_enum\x18\n \x01(\x0e\x32\x0f.MatchLanguages:\x16MATCH_LANGUAGE_INVALID\x12\x1a\n\x12game_language_name\x18\x0b \x01(\t\x12&\n\tping_data\x18\x0c \x01(\x0b\x32\x13.CMsgClientPingData\x12\x1b\n\x13region_select_flags\x18\r \x01(\r\"\x16\n\x14\x43MsgStopFindingMatch\"\x9b\x01\n\x0b\x43MsgReadyUp\x12\x43\n\x05state\x18\x01 \x01(\x0e\x32\x14.DOTALobbyReadyState:\x1e\x44OTALobbyReadyState_UNDECLARED\x12\x14\n\x0cready_up_key\x18\x02 \x01(\x06\x12\x31\n\x0ehardware_specs\x18\x03 \x01(\x0b\x32\x19.CDOTAClientHardwareSpecs\"Q\n\x11\x43MsgReadyUpStatus\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x14\n\x0c\x61\x63\x63\x65pted_ids\x18\x02 \x03(\r\x12\x14\n\x0c\x64\x65\x63lined_ids\x18\x03 \x03(\r\"\x8a\x04\n\x12\x43SourceTVGameSmall\x12\x15\n\ractivate_time\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65\x61\x63tivate_time\x18\x02 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x03 \x01(\x04\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x11\n\tleague_id\x18\x05 \x01(\r\x12\x12\n\nlobby_type\x18\x06 \x01(\r\x12\x11\n\tgame_time\x18\x07 \x01(\x05\x12\r\n\x05\x64\x65lay\x18\x08 \x01(\r\x12\x12\n\nspectators\x18\t \x01(\r\x12\x11\n\tgame_mode\x18\n \x01(\r\x12\x13\n\x0b\x61verage_mmr\x18\x0b \x01(\r\x12\x19\n\x11team_name_radiant\x18\x0f \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x10 \x01(\t\x12\x12\n\nsort_score\x18\x11 \x01(\r\x12\x18\n\x10last_update_time\x18\x12 \x01(\x02\x12\x14\n\x0cradiant_lead\x18\x13 \x01(\x05\x12\x15\n\rradiant_score\x18\x14 \x01(\r\x12\x12\n\ndire_score\x18\x15 \x01(\r\x12+\n\x07players\x18\x16 \x03(\x0b\x32\x1a.CSourceTVGameSmall.Player\x12\x16\n\x0e\x62uilding_state\x18\x17 \x01(\x07\x1a-\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\x9c\x01\n\"CMsgClientToGCFindTopSourceTVGames\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x05 \x01(\r\x12\x11\n\tlobby_ids\x18\x06 \x03(\x04\"\xe4\x01\n*CMsgGCToClientFindTopSourceTVGamesResponse\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x11\n\tnum_games\x18\x05 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x06 \x01(\r\x12&\n\tgame_list\x18\x07 \x03(\x0b\x32\x13.CSourceTVGameSmall\x12\x16\n\x0especific_games\x18\x08 \x01(\x08\"^\n\x1f\x43MsgClientToGCTopMatchesRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\"\'\n%CMsgClientToGCTopLeagueMatchesRequest\"\'\n%CMsgClientToGCTopFriendMatchesRequest\"8\n#CMsgClientToGCMatchesMinimalRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"b\n$CMsgClientToGCMatchesMinimalResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\x12\n\nlast_match\x18\x02 \x01(\x08\"P\n&CMsgGCToClientTopLeagueMatchesResponse\x12&\n\x07matches\x18\x02 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"P\n&CMsgGCToClientTopFriendMatchesResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"\x93\x01\n\x1c\x43MsgClientToGCFindTopMatches\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tfriend_id\x18\x04 \x01(\r\x12\x13\n\x0b\x66riend_list\x18\x05 \x01(\x08\x12\x13\n\x0bleague_list\x18\x06 \x01(\x08\"\x98\x01\n*CMsgGCToClientFindTopLeagueMatchesResponse\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tmatch_ids\x18\x04 \x03(\r\x12\x1f\n\x07matches\x18\x05 \x03(\x0b\x32\x0e.CMsgDOTAMatch\"*\n\x16\x43MsgSpectateFriendGame\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"8\n\x1e\x43MsgSpectateFriendGameResponse\x12\x16\n\x0eserver_steamid\x18\x04 \x01(\x06\"\x18\n\x16\x43MsgAbandonCurrentGame\"\'\n\x13\x43MsgClientSuspended\x12\x10\n\x08time_end\x18\x01 \x01(\r\"\xf1\n\n\x1b\x43MsgPracticeLobbySetDetails\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x11\n\tgame_name\x18\x02 \x01(\t\x12(\n\x0cteam_details\x18\x03 \x03(\x0b\x32\x12.CLobbyTeamDetails\x12\x15\n\rserver_region\x18\x04 \x01(\r\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12.\n\x07\x63m_pick\x18\x06 \x01(\x0e\x32\r.DOTA_CM_PICK:\x0e\x44OTA_CM_RANDOM\x12\x41\n\x0e\x62ot_difficulty\x18\t \x01(\x0e\x32\x12.DOTABotDifficulty:\x15\x42OT_DIFFICULTY_MEDIUM\x12\x14\n\x0c\x61llow_cheats\x18\n \x01(\x08\x12\x16\n\x0e\x66ill_with_bots\x18\x0b \x01(\x08\x12\x12\n\nintro_mode\x18\x0c \x01(\x08\x12\x18\n\x10\x61llow_spectating\x18\r \x01(\x08\x12<\n\x0cgame_version\x18\x0e \x01(\x0e\x32\x10.DOTAGameVersion:\x14GAME_VERSION_CURRENT\x12\x10\n\x08pass_key\x18\x0f \x01(\t\x12\x10\n\x08leagueid\x18\x10 \x01(\r\x12\x1d\n\x15penalty_level_radiant\x18\x11 \x01(\r\x12\x1a\n\x12penalty_level_dire\x18\x12 \x01(\r\x12\x14\n\x0cload_game_id\x18\x13 \x01(\r\x12\x13\n\x0bseries_type\x18\x14 \x01(\r\x12\x1b\n\x13radiant_series_wins\x18\x15 \x01(\r\x12\x18\n\x10\x64ire_series_wins\x18\x16 \x01(\r\x12\x16\n\x07\x61llchat\x18\x17 \x01(\x08:\x05\x66\x61lse\x12\x39\n\rdota_tv_delay\x18\x18 \x01(\x0e\x32\x11.LobbyDotaTVDelay:\x0fLobbyDotaTV_120\x12\x0b\n\x03lan\x18\x19 \x01(\x08\x12\x18\n\x10\x63ustom_game_mode\x18\x1a \x01(\t\x12\x17\n\x0f\x63ustom_map_name\x18\x1b \x01(\t\x12\x19\n\x11\x63ustom_difficulty\x18\x1c \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x1d \x01(\x04\x12\x1a\n\x12\x63ustom_min_players\x18\x1e \x01(\r\x12\x1a\n\x12\x63ustom_max_players\x18\x1f \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18  \x01(\r\x12\x44\n\nvisibility\x18! \x01(\x0e\x32\x14.DOTALobbyVisibility:\x1a\x44OTALobbyVisibility_Public\x12\x17\n\x0f\x63ustom_game_crc\x18\" \x01(\x06\x12\x18\n\x10league_series_id\x18# \x01(\r\x12\x16\n\x0eleague_game_id\x18$ \x01(\r\x12\x1d\n\x15\x63ustom_game_timestamp\x18% \x01(\x07\x12\x1f\n\x17previous_match_override\x18& \x01(\x04\x12&\n\x1eleague_selection_priority_team\x18\' \x01(\r\x12K\n league_selection_priority_choice\x18( \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12O\n$league_non_selection_priority_choice\x18) \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12N\n\rpause_setting\x18* \x01(\x0e\x32\x16.LobbyDotaPauseSetting:\x1fLobbyDotaPauseSetting_Unlimited\"\x92\x02\n\x17\x43MsgPracticeLobbyCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x10\n\x08pass_key\x18\x05 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x06 \x01(\r\x12\x33\n\rlobby_details\x18\x07 \x01(\x0b\x32\x1c.CMsgPracticeLobbySetDetails\x12\x34\n\tsave_game\x18\x08 \x01(\x0b\x32!.CMsgPracticeLobbyCreate.SaveGame\x1aN\n\x08SaveGame\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x10\n\x08steam_id\x18\x03 \x01(\x06\x12\x11\n\tsignature\x18\x04 \x01(\x06\"\xa5\x01\n\x1c\x43MsgPracticeLobbySetTeamSlot\x12\x33\n\x04team\x18\x01 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x0c\n\x04slot\x18\x02 \x01(\r\x12\x42\n\x0e\x62ot_difficulty\x18\x03 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\"P\n\x19\x43MsgPracticeLobbySetCoach\x12\x33\n\x04team\x18\x01 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\"\x98\x01\n%CMsgPracticeLobbyJoinBroadcastChannel\x12\x0f\n\x07\x63hannel\x18\x01 \x01(\r\x12\x1d\n\x15preferred_description\x18\x02 \x01(\t\x12\x1e\n\x16preferred_country_code\x18\x03 \x01(\t\x12\x1f\n\x17preferred_language_code\x18\x04 \x01(\t\"9\n&CMsgPracticeLobbyCloseBroadcastChannel\x12\x0f\n\x07\x63hannel\x18\x01 \x01(\r\"8\n6CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus\"+\n\x15\x43MsgPracticeLobbyKick\x12\x12\n\naccount_id\x18\x03 \x01(\r\"3\n\x1d\x43MsgPracticeLobbyKickFromTeam\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\x18\n\x16\x43MsgPracticeLobbyLeave\"1\n\x17\x43MsgPracticeLobbyLaunch\x12\x16\n\x0e\x63lient_version\x18\x05 \x01(\r\"/\n\x1c\x43MsgApplyTeamToPracticeLobby\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\x1c\n\x1a\x43MsgClearPracticeLobbyTeam\"\x8a\x01\n\x15\x43MsgPracticeLobbyList\x12\x18\n\x10tournament_games\x18\x01 \x01(\x08\x12\x10\n\x08pass_key\x18\x02 \x01(\t\x12\x0e\n\x06region\x18\x03 \x01(\r\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\"\xce\x04\n\"CMsgPracticeLobbyListResponseEntry\x12\x10\n\x02id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\x15\n\rtournament_id\x18\x03 \x01(\r\x12\x1a\n\x12tournament_game_id\x18\x04 \x01(\r\x12\x41\n\x07members\x18\x05 \x03(\x0b\x32\x30.CMsgPracticeLobbyListResponseEntry.CLobbyMember\x12\x19\n\x11requires_pass_key\x18\x06 \x01(\x08\x12\x19\n\x11leader_account_id\x18\x07 \x01(\r\x12\x10\n\x08guild_id\x18\x08 \x01(\r\x12\x12\n\nguild_logo\x18\t \x01(\x04\x12\x0c\n\x04name\x18\n \x01(\t\x12\x18\n\x10\x63ustom_game_mode\x18\x0b \x01(\t\x12\x35\n\tgame_mode\x18\x0c \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x16\n\x0e\x66riend_present\x18\r \x01(\x08\x12\x0f\n\x07players\x18\x0e \x01(\r\x12\x17\n\x0f\x63ustom_map_name\x18\x0f \x01(\t\x12\x18\n\x10max_player_count\x18\x10 \x01(\r\x12\x15\n\rserver_region\x18\x11 \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18\x12 \x01(\r\x12\x11\n\tleague_id\x18\x13 \x01(\r\x1a\x37\n\x0c\x43LobbyMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\"o\n\x1d\x43MsgPracticeLobbyListResponse\x12\x18\n\x10tournament_games\x18\x01 \x01(\x08\x12\x34\n\x07lobbies\x18\x02 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"`\n\rCMsgLobbyList\x12\x18\n\rserver_region\x18\x01 \x01(\r:\x01\x30\x12\x35\n\tgame_mode\x18\x02 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\"M\n\x15\x43MsgLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"\x8b\x01\n\x15\x43MsgPracticeLobbyJoin\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x10\n\x08pass_key\x18\x03 \x01(\t\x12\x17\n\x0f\x63ustom_game_crc\x18\x04 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x05 \x01(\x07\"_\n\x1d\x43MsgPracticeLobbyJoinResponse\x12>\n\x06result\x18\x01 \x01(\x0e\x32\x14.DOTAJoinLobbyResult:\x18\x44OTA_JOIN_RESULT_SUCCESS\"5\n\"CMsgFriendPracticeLobbyListRequest\x12\x0f\n\x07\x66riends\x18\x01 \x03(\r\"[\n#CMsgFriendPracticeLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"7\n%CMsgGuildmatePracticeLobbyListRequest\x12\x0e\n\x06guilds\x18\x01 \x03(\r\"^\n&CMsgGuildmatePracticeLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\";\n\"CMsgJoinableCustomGameModesRequest\x12\x15\n\rserver_region\x18\x01 \x01(\r\"m\n(CMsgJoinableCustomGameModesResponseEntry\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0blobby_count\x18\x02 \x01(\r\x12\x14\n\x0cplayer_count\x18\x03 \x01(\r\"d\n#CMsgJoinableCustomGameModesResponse\x12=\n\ngame_modes\x18\x01 \x03(\x0b\x32).CMsgJoinableCustomGameModesResponseEntry\"Q\n CMsgJoinableCustomLobbiesRequest\x12\x15\n\rserver_region\x18\x01 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\"\xb4\x02\n&CMsgJoinableCustomLobbiesResponseEntry\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x12\n\nlobby_name\x18\x03 \x01(\t\x12\x14\n\x0cmember_count\x18\x04 \x01(\r\x12\x19\n\x11leader_account_id\x18\x05 \x01(\r\x12\x13\n\x0bleader_name\x18\x06 \x01(\t\x12\x17\n\x0f\x63ustom_map_name\x18\x07 \x01(\t\x12\x18\n\x10max_player_count\x18\x08 \x01(\r\x12\x15\n\rserver_region\x18\t \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18\n \x01(\r\x12\x14\n\x0chas_pass_key\x18\x0b \x01(\x08\"]\n!CMsgJoinableCustomLobbiesResponse\x12\x38\n\x07lobbies\x18\x01 \x03(\x0b\x32\'.CMsgJoinableCustomLobbiesResponseEntry\"\xfa\x02\n\x18\x43MsgQuickJoinCustomLobby\x12\x1c\n\x14legacy_server_region\x18\x01 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12:\n\x14\x63reate_lobby_details\x18\x04 \x01(\x0b\x32\x1c.CMsgPracticeLobbySetDetails\x12\x15\n\rallow_any_map\x18\x05 \x01(\x08\x12G\n\x13legacy_region_pings\x18\x06 \x03(\x0b\x32*.CMsgQuickJoinCustomLobby.LegacyRegionPing\x12&\n\tping_data\x18\x07 \x01(\x0b\x32\x13.CMsgClientPingData\x1aL\n\x10LegacyRegionPing\x12\x15\n\rserver_region\x18\x01 \x01(\r\x12\x0c\n\x04ping\x18\x02 \x01(\r\x12\x13\n\x0bregion_code\x18\x03 \x01(\x07\"b\n CMsgQuickJoinCustomLobbyResponse\x12>\n\x06result\x18\x01 \x01(\x0e\x32\x14.DOTAJoinLobbyResult:\x18\x44OTA_JOIN_RESULT_SUCCESS\"\xc7\x01\n\x11\x43MsgBotGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12>\n\ndifficulty\x18\x03 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x33\n\x04team\x18\x04 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x11\n\tgame_mode\x18\x05 \x01(\r\"\x8e\x01\n\x14\x43MsgCustomGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x12\n\ndifficulty\x18\x03 \x01(\r\x12\x11\n\tgame_mode\x18\x04 \x01(\t\x12\x0b\n\x03map\x18\x05 \x01(\t\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x04\"\x8d\x01\n\x13\x43MsgEventGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x12\n\ndifficulty\x18\x03 \x01(\r\x12\x11\n\tgame_mode\x18\x04 \x01(\t\x12\x0b\n\x03map\x18\x05 \x01(\t\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x04\" \n\x1e\x43MsgRequestInternationalTicket\"\x1a\n\x18\x43MsgBalancedShuffleLobby\"9\n CMsgInitialQuestionnaireResponse\x12\x15\n\rinitial_skill\x18\x01 \x01(\r\"\xf9\x15\n\rCMsgDOTAMatch\x12\x15\n\rgood_guys_win\x18\x02 \x01(\x08\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x11\n\tstartTime\x18\x04 \x01(\x07\x12&\n\x07players\x18\x05 \x03(\x0b\x32\x15.CMsgDOTAMatch.Player\x12\x10\n\x08match_id\x18\x06 \x01(\x04\x12\x14\n\x0ctower_status\x18\x08 \x03(\r\x12\x17\n\x0f\x62\x61rracks_status\x18\t \x03(\r\x12\x0f\n\x07\x63luster\x18\n \x01(\r\x12\x18\n\x10\x66irst_blood_time\x18\x0c \x01(\r\x12\x13\n\x0breplay_salt\x18\r \x01(\x07\x12\x11\n\tserver_ip\x18\x0e \x01(\x07\x12\x13\n\x0bserver_port\x18\x0f \x01(\r\x12\x12\n\nlobby_type\x18\x10 \x01(\r\x12\x15\n\rhuman_players\x18\x11 \x01(\r\x12\x15\n\raverage_skill\x18\x12 \x01(\r\x12\x14\n\x0cgame_balance\x18\x13 \x01(\x02\x12\x17\n\x0fradiant_team_id\x18\x14 \x01(\r\x12\x14\n\x0c\x64ire_team_id\x18\x15 \x01(\r\x12\x10\n\x08leagueid\x18\x16 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x17 \x01(\t\x12\x16\n\x0e\x64ire_team_name\x18\x18 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x19 \x01(\x04\x12\x16\n\x0e\x64ire_team_logo\x18\x1a \x01(\x04\x12\x1d\n\x15radiant_team_complete\x18\x1b \x01(\r\x12\x1a\n\x12\x64ire_team_complete\x18\x1c \x01(\r\x12\x16\n\x0epositive_votes\x18\x1d \x01(\r\x12\x16\n\x0enegative_votes\x18\x1e \x01(\r\x12\x35\n\tgame_mode\x18\x1f \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12*\n\npicks_bans\x18  \x03(\x0b\x32\x16.CMatchHeroSelectEvent\x12\x15\n\rmatch_seq_num\x18! \x01(\x04\x12\x42\n\x0creplay_state\x18\" \x01(\x0e\x32\x1a.CMsgDOTAMatch.ReplayState:\x10REPLAY_AVAILABLE\x12\x18\n\x10radiant_guild_id\x18# \x01(\r\x12\x15\n\rdire_guild_id\x18$ \x01(\r\x12\x18\n\x10radiant_team_tag\x18% \x01(\t\x12\x15\n\rdire_team_tag\x18& \x01(\t\x12\x11\n\tseries_id\x18\' \x01(\r\x12\x13\n\x0bseries_type\x18( \x01(\r\x12?\n\x14\x62roadcaster_channels\x18+ \x03(\x0b\x32!.CMsgDOTAMatch.BroadcasterChannel\x12\x0e\n\x06\x65ngine\x18, \x01(\r\x12\x37\n\x10\x63ustom_game_data\x18- \x01(\x0b\x32\x1d.CMsgDOTAMatch.CustomGameData\x12\x13\n\x0bmatch_flags\x18. \x01(\r\x12\x1c\n\x14private_metadata_key\x18/ \x01(\x07\x12\x1a\n\x12radiant_team_score\x18\x30 \x01(\r\x12\x17\n\x0f\x64ire_team_score\x18\x31 \x01(\r\x1a\xdf\t\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06item_0\x18\x04 \x01(\r\x12\x0e\n\x06item_1\x18\x05 \x01(\r\x12\x0e\n\x06item_2\x18\x06 \x01(\r\x12\x0e\n\x06item_3\x18\x07 \x01(\r\x12\x0e\n\x06item_4\x18\x08 \x01(\r\x12\x0e\n\x06item_5\x18\t \x01(\r\x12\"\n\x1a\x65xpected_team_contribution\x18\n \x01(\x02\x12\x15\n\rscaled_metric\x18\x0b \x01(\x02\x12\x15\n\rprevious_rank\x18\x0c \x01(\r\x12\x13\n\x0brank_change\x18\r \x01(\r\x12\x11\n\tsolo_rank\x18\x31 \x01(\x08\x12\r\n\x05kills\x18\x0e \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x0f \x01(\r\x12\x0f\n\x07\x61ssists\x18\x10 \x01(\r\x12\x15\n\rleaver_status\x18\x11 \x01(\r\x12\x0c\n\x04gold\x18\x12 \x01(\r\x12\x11\n\tlast_hits\x18\x13 \x01(\r\x12\x0e\n\x06\x64\x65nies\x18\x14 \x01(\r\x12\x14\n\x0cgold_per_min\x18\x15 \x01(\r\x12\x12\n\nXP_per_min\x18\x16 \x01(\r\x12\x12\n\ngold_spent\x18\x17 \x01(\r\x12\x13\n\x0bhero_damage\x18\x18 \x01(\r\x12\x14\n\x0ctower_damage\x18\x19 \x01(\r\x12\x14\n\x0chero_healing\x18\x1a \x01(\r\x12\r\n\x05level\x18\x1b \x01(\r\x12\x16\n\x0etime_last_seen\x18\x1c \x01(\r\x12\x13\n\x0bplayer_name\x18\x1d \x01(\t\x12\x1d\n\x15support_ability_value\x18\x1e \x01(\r\x12\x18\n\x10\x66\x65\x65\x64ing_detected\x18  \x01(\x08\x12\x13\n\x0bsearch_rank\x18\" \x01(\r\x12\x1f\n\x17search_rank_uncertainty\x18# \x01(\r\x12\x1f\n\x17rank_uncertainty_change\x18$ \x01(\x05\x12\x17\n\x0fhero_play_count\x18% \x01(\r\x12\x10\n\x08party_id\x18& \x01(\x06\x12\x14\n\x0cscaled_kills\x18\' \x01(\x02\x12\x15\n\rscaled_deaths\x18( \x01(\x02\x12\x16\n\x0escaled_assists\x18) \x01(\x02\x12\x19\n\x11\x63laimed_farm_gold\x18* \x01(\r\x12\x14\n\x0csupport_gold\x18+ \x01(\r\x12\x16\n\x0e\x63laimed_denies\x18, \x01(\r\x12\x16\n\x0e\x63laimed_misses\x18- \x01(\r\x12\x0e\n\x06misses\x18. \x01(\r\x12\x35\n\x10\x61\x62ility_upgrades\x18/ \x03(\x0b\x32\x1b.CMatchPlayerAbilityUpgrade\x12\x42\n\x1a\x61\x64\x64itional_units_inventory\x18\x30 \x03(\x0b\x32\x1e.CMatchAdditionalUnitInventory\x12>\n\x10\x63ustom_game_data\x18\x32 \x01(\x0b\x32$.CMsgDOTAMatch.Player.CustomGameData\x12\x1a\n\x12\x61\x63tive_battle_pass\x18\x33 \x01(\x08\x12\x11\n\tnet_worth\x18\x34 \x01(\r\x1a\x33\n\x0e\x43ustomGameData\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x0e\n\x06winner\x18\x02 \x01(\x08\x1a\x33\n\x0f\x42roadcasterInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x1a\x91\x01\n\x12\x42roadcasterChannel\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x39\n\x11\x62roadcaster_infos\x18\x03 \x03(\x0b\x32\x1e.CMsgDOTAMatch.BroadcasterInfo\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\x1a:\n\x0e\x43ustomGameData\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x10\n\x08map_name\x18\x02 \x01(\t\"P\n\x0bReplayState\x12\x14\n\x10REPLAY_AVAILABLE\x10\x00\x12\x17\n\x13REPLAY_NOT_RECORDED\x10\x01\x12\x12\n\x0eREPLAY_EXPIRED\x10\x02\"/\n\x1a\x43MsgDOTAPlayerMatchHistory\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"\xc3\x04\n\x14\x43MsgDOTAMatchMinimal\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\x07\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x14\n\x0cwinning_team\x18\x05 \x01(\r\x12-\n\x07players\x18\x06 \x03(\x0b\x32\x1c.CMsgDOTAMatchMinimal.Player\x12,\n\x06league\x18\x07 \x01(\x0b\x32\x1c.CMsgDOTAMatchMinimal.League\x1al\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05items\x18\x06 \x03(\r\x1a\xda\x01\n\x06League\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fradiant_team_id\x18\x02 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x03 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x04 \x01(\x06\x12\x14\n\x0c\x64ire_team_id\x18\x05 \x01(\r\x12\x16\n\x0e\x64ire_team_name\x18\x06 \x01(\t\x12\x16\n\x0e\x64ire_team_logo\x18\x07 \x01(\x06\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\x13\n\x0bseries_game\x18\t \x01(\r\"o\n\x1a\x43MsgDOTAMatchHistoryFilter\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\x12%\n\x1dnewest_match_id_at_last_query\x18\x02 \x01(\x04\x12\x17\n\x0ftime_last_query\x18\x03 \x01(\r\"\xa1\x03\n\x16\x43MsgDOTARequestMatches\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x11\n\tgame_mode\x18\x03 \x01(\r\x12\x10\n\x08\x64\x61te_min\x18\x06 \x01(\x07\x12\x10\n\x08\x64\x61te_max\x18\x07 \x01(\x07\x12\x19\n\x11matches_requested\x18\n \x01(\r\x12\x19\n\x11start_at_match_id\x18\x0b \x01(\x04\x12\x13\n\x0bmin_players\x18\x0c \x01(\x07\x12\x12\n\nrequest_id\x18\r \x01(\r\x12\x1d\n\x15tournament_games_only\x18\x0e \x01(\x08\x12\x12\n\naccount_id\x18\x0f \x01(\r\x12\x11\n\tleague_id\x18\x10 \x01(\r\x12\x36\n\x05skill\x18\x11 \x01(\x0e\x32\".CMsgDOTARequestMatches.SkillLevel:\x03\x41ny\x12\x0f\n\x07team_id\x18\x12 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x14 \x01(\x04\"9\n\nSkillLevel\x12\x07\n\x03\x41ny\x10\x00\x12\n\n\x06Normal\x10\x01\x12\x08\n\x04High\x10\x02\x12\x0c\n\x08VeryHigh\x10\x03\"\x92\x02\n\x1e\x43MsgDOTARequestMatchesResponse\x12\x1f\n\x07matches\x18\x01 \x03(\x0b\x32\x0e.CMsgDOTAMatch\x12\x36\n\x06series\x18\x02 \x03(\x0b\x32&.CMsgDOTARequestMatchesResponse.Series\x12\x12\n\nrequest_id\x18\x03 \x01(\r\x12\x15\n\rtotal_results\x18\x04 \x01(\r\x12\x19\n\x11results_remaining\x18\x05 \x01(\r\x1aQ\n\x06Series\x12\x1f\n\x07matches\x18\x01 \x03(\x0b\x32\x0e.CMsgDOTAMatch\x12\x11\n\tseries_id\x18\x02 \x01(\r\x12\x13\n\x0bseries_type\x18\x03 \x01(\r\"\x8a\x11\n\rCMsgDOTAPopup\x12\x35\n\x02id\x18\x01 \x01(\x0e\x32\x16.CMsgDOTAPopup.PopupID:\x11KICKED_FROM_LOBBY\x12\x13\n\x0b\x63ustom_text\x18\x02 \x01(\t\x12\x10\n\x08int_data\x18\x03 \x01(\x11\x12\x12\n\npopup_data\x18\x04 \x01(\x0c\"\x86\x10\n\x07PopupID\x12\x15\n\x11KICKED_FROM_LOBBY\x10\x00\x12\x15\n\x11KICKED_FROM_PARTY\x10\x01\x12\x14\n\x10KICKED_FROM_TEAM\x10\x02\x12\x16\n\x12TEAM_WAS_DISBANDED\x10\x03\x12 \n\x1cTEAM_MATCHMAKE_ALREADY_MATCH\x10\x04\x12\"\n\x1eTEAM_MATCHMAKE_ALREADY_FINDING\x10\x05\x12\x17\n\x13TEAM_MATCHMAKE_FULL\x10\x06\x12\x1b\n\x17TEAM_MATCHMAKE_FAIL_ADD\x10\x07\x12#\n\x1fTEAM_MATCHMAKE_FAIL_ADD_CURRENT\x10\x08\x12%\n!TEAM_MATCHMAKE_FAILED_TEAM_MEMBER\x10\t\x12\x1f\n\x1bTEAM_MATCHMAKE_ALREADY_GAME\x10\n\x12!\n\x1dTEAM_MATCHMAKE_FAIL_GET_PARTY\x10\x0b\x12\x18\n\x14MATCHMAKING_DISABLED\x10\x0c\x12\x11\n\rINVITE_DENIED\x10\r\x12\x0e\n\nPARTY_FULL\x10\x0e\x12\x0e\n\nMADE_ADMIN\x10\x0f\x12\x14\n\x10NEED_TO_PURCHASE\x10\x10\x12\x12\n\x0eSIGNON_MESSAGE\x10\x11\x12\x10\n\x0cGUILD_KICKED\x10\x12\x12\x1e\n\x1aMATCHMAKING_REGION_OFFLINE\x10\x13\x12\x18\n\x14TOO_MANY_MATCHGROUPS\x10\x14\x12\x1d\n\x19TOURNAMENT_GAME_NOT_FOUND\x10\x15\x12 \n\x1cTOURNAMENT_GAME_HAS_LOBBY_ID\x10\x16\x12 \n\x1cTOURNAMENT_GAME_HAS_MATCH_ID\x10\x17\x12\'\n#TOURNAMENT_GAME_HAS_NO_RADIANT_TEAM\x10\x18\x12$\n TOURNAMENT_GAME_HAS_NO_DIRE_TEAM\x10\x19\x12%\n!TOURNAMENT_GAME_SQL_UPDATE_FAILED\x10\x1a\x12\x14\n\x10NOT_LEAGUE_ADMIN\x10\x1b\x12\x19\n\x15PARTY_NOT_VALID_TO_MM\x10\x1c\x12$\n PARTY_NOT_VALID_TO_MM_COACHCOUNT\x10\x1d\x12 \n\x1cPARTY_MEMBER_IN_ANOTHER_GAME\x10\x1e\x12 \n\x1cPARTY_MEMBER_IN_LOW_PRIORITY\x10\x1f\x12\x16\n\x12\x43LIENT_OUT_OF_DATE\x10 \x12\x1d\n\x19\x43OMPETITIVE_MM_NO_COACHES\x10!\x12\"\n\x1e\x43OMPETITIVE_MM_NO_LOW_PRIORITY\x10\"\x12\x1f\n\x1b\x43OMPETITIVE_MM_NOT_UNLOCKED\x10#\x12(\n$COMPETITIVE_MM_GAME_MODE_NOT_ALLOWED\x10$\x12\x1a\n\x16GAME_MODE_NOT_UNLOCKED\x10%\x12\x15\n\x11SAVE_GAME_CORRUPT\x10&\x12\x17\n\x13INSUFFICIENT_INGOTS\x10\'\x12\x1d\n\x19\x43OMPETITIVE_MM_NO_4STACKS\x10(\x12-\n)COMPETITIVE_MM_PARTY_MMR_SPREAD_TOO_LARGE\x10)\x12\x39\n5COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_PLAY_MORE_CASUAL\x10*\x12\x31\n-COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_IN_PARTY\x10+\x12\x1d\n\x19PARTY_LEADER_JOINED_LOBBY\x10,\x12\x15\n\x11MM_1V1_NO_PARTIES\x10-\x12\x1a\n\x16MM_1V1_NO_LOW_PRIORITY\x10.\x12)\n%WEEKEND_TOURNEY_REGISTRATION_NOT_OPEN\x10/\x12\x1d\n\x19WEEKEND_TOURNEY_UNMATCHED\x10\x30\x12\x15\n\x11POST_MATCH_SURVEY\x10\x31\x12\x12\n\x0eTROPHY_AWARDED\x10\x32\x12\x13\n\x0fTROPHY_LEVEL_UP\x10\x33\x12\x1f\n\x1b\x41LL_HERO_CHALLENGE_PROGRESS\x10\x34\x12\x16\n\x12NEED_INITIAL_SKILL\x10\x35\x12\x1f\n\x1bNEED_INITIAL_SKILL_IN_PARTY\x10\x36\x12\x1a\n\x16TARGET_ENGINE_MISMATCH\x10\x37\x12\x14\n\x10VAC_NOT_VERIFIED\x10\x38\x12$\n KICKED_FROM_QUEUE_EVENT_STARTING\x10\x39\x12\"\n\x1eKICKED_FROM_QUEUE_EVENT_ENDING\x10:\x12\x19\n\x15\x45VENT_NO_LOW_PRIORITY\x10;\x12\x1d\n\x19MM_LOW_PRI_ONLY_CASUAL_AR\x10<\x12\x1a\n\x16\x43NY2015_ONCE_PER_ROUND\x10=\x12\x0e\n\nLOBBY_FULL\x10>\x12\x17\n\x13\x45VENT_POINTS_EARNED\x10?\x12!\n\x1d\x43USTOM_GAME_INCORRECT_VERSION\x10@\x12\"\n\x1e\x43OMPETITIVE_MM_MMR_TOO_HIGH_S2\x10\x41\x12\x15\n\x11LIMITED_USER_CHAT\x10\x42\x12\x1f\n\x1b\x45VENT_PREMIUM_POINTS_EARNED\x10\x43\"V\n\x15\x43MsgDOTATeamMemberSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\x12\x17\n\x0fprofile_team_id\x18\x03 \x01(\r\"<\n\x14\x43MsgDOTATeamAdminSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\"=\n\x12\x43MsgDOTATeamMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0btime_joined\x18\x04 \x01(\r\"\xc9\x04\n\x0c\x43MsgDOTATeam\x12$\n\x07members\x18\x01 \x03(\x0b\x32\x13.CMsgDOTATeamMember\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0b\n\x03tag\x18\x04 \x01(\t\x12\x10\n\x08\x61\x64min_id\x18\x05 \x01(\r\x12\x14\n\x0ctime_created\x18\x06 \x01(\r\x12\x11\n\tdisbanded\x18\x07 \x01(\x08\x12\x0c\n\x04wins\x18\x08 \x01(\r\x12\x0e\n\x06losses\x18\t \x01(\r\x12\x0c\n\x04rank\x18\n \x01(\r\x12#\n\x1b\x63\x61libration_games_remaining\x18\x18 \x01(\r\x12\x0c\n\x04logo\x18\x0b \x01(\x04\x12\x11\n\tbase_logo\x18\x0c \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\r \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x0e \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x0f \x01(\t\x12\x0b\n\x03url\x18\x10 \x01(\t\x12\x17\n\x0f\x66ullgamesplayed\x18\x11 \x01(\r\x12\x0f\n\x07leagues\x18\x12 \x03(\r\x12\x13\n\x0bgamesplayed\x18\x13 \x01(\r\x12$\n\x1cgamesplayedwithcurrentroster\x18\x14 \x01(\r\x12\"\n\x1ateammatchmakinggamesplayed\x18\x15 \x01(\r\x12\x1a\n\x12lastplayedgametime\x18\x16 \x01(\r\x12\x16\n\x0elastrenametime\x18\x17 \x01(\r\x12\x18\n\x10recent_match_ids\x18\x19 \x03(\x04\x12\x15\n\rtop_match_ids\x18\x1a \x03(\x04\"D\n\x11\x43MsgDOTATeamsInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x1c\n\x05teams\x18\x02 \x03(\x0b\x32\r.CMsgDOTATeam\"\x9e\x01\n\x12\x43MsgDOTACreateTeam\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x0c\n\x04logo\x18\x03 \x01(\x04\x12\x11\n\tbase_logo\x18\x04 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x05 \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x06 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x07 \x01(\t\x12\x0b\n\x03url\x18\x08 \x01(\t\"\xa8\x04\n\x1a\x43MsgDOTACreateTeamResponse\x12\x33\n\x07results\x18\x01 \x03(\x0e\x32\".CMsgDOTACreateTeamResponse.Result\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x19\n\x11seconds_remaining\x18\x03 \x01(\r\x12\x16\n\x0erequired_level\x18\x04 \x01(\r\"\x90\x03\n\x06Result\x12\x14\n\x07INVALID\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0e\n\nNAME_EMPTY\x10\x01\x12\x17\n\x13NAME_BAD_CHARACTERS\x10\x02\x12\x0e\n\nNAME_TAKEN\x10\x03\x12\x11\n\rNAME_TOO_LONG\x10\x04\x12\r\n\tTAG_EMPTY\x10\x05\x12\x16\n\x12TAG_BAD_CHARACTERS\x10\x06\x12\r\n\tTAG_TAKEN\x10\x07\x12\x10\n\x0cTAG_TOO_LONG\x10\x08\x12\x10\n\x0c\x43REATOR_BUSY\x10\t\x12\x15\n\x11UNSPECIFIED_ERROR\x10\n\x12\x1e\n\x1a\x43REATOR_TEAM_LIMIT_REACHED\x10\x0b\x12\x0b\n\x07NO_LOGO\x10\x0c\x12\"\n\x1e\x43REATOR_TEAM_CREATION_COOLDOWN\x10\r\x12\x16\n\x12LOGO_UPLOAD_FAILED\x10\x0e\x12\x1d\n\x19NAME_CHANGED_TOO_RECENTLY\x10\x0f\x12\x1e\n\x1a\x43REATOR_INSUFFICIENT_LEVEL\x10\x10\"\xad\x01\n\x10\x43MsgDOTAEditTeam\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x0c\n\x04logo\x18\x03 \x01(\x04\x12\x11\n\tbase_logo\x18\x04 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x05 \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x06 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x07 \x01(\t\x12\x0b\n\x03url\x18\x08 \x01(\t\x12\x0f\n\x07team_id\x18\t \x01(\r\"s\n\x14\x43MsgDOTAEditTeamLogo\x12\x0c\n\x04logo\x18\x01 \x01(\x04\x12\x11\n\tbase_logo\x18\x02 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x03 \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x04 \x01(\x04\x12\x0f\n\x07team_id\x18\x05 \x01(\r\"\xb8\x01\n\x1c\x43MsgDOTAEditTeamLogoResponse\x12\x35\n\x07results\x18\x01 \x03(\x0e\x32$.CMsgDOTAEditTeamLogoResponse.Result\"a\n\x06Result\x12\x14\n\x07INVALID\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x0b\n\x07SUCCESS\x10\x00\x12\x10\n\x0c\x43REATOR_BUSY\x10\t\x12\x15\n\x11UNSPECIFIED_ERROR\x10\n\x12\x0b\n\x07NO_LOGO\x10\x0c\"M\n\x17\x43MsgDOTAEditTeamDetails\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0f\n\x07team_id\x18\x03 \x01(\r\"\xb1\x01\n\x1f\x43MsgDOTAEditTeamDetailsResponse\x12\x38\n\x07results\x18\x01 \x03(\x0e\x32\'.CMsgDOTAEditTeamDetailsResponse.Result\"T\n\x06Result\x12\x14\n\x07INVALID\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x0b\n\x07SUCCESS\x10\x00\x12\x10\n\x0c\x43REATOR_BUSY\x10\t\x12\x15\n\x11UNSPECIFIED_ERROR\x10\n\"&\n\x13\x43MsgDOTADisbandTeam\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\xa9\x01\n\x1b\x43MsgDOTADisbandTeamResponse\x12<\n\x06result\x18\x01 \x01(\x0e\x32#.CMsgDOTADisbandTeamResponse.Result:\x07SUCCESS\x12\x11\n\tteam_name\x18\x02 \x01(\t\"9\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0b\n\x07\x46\x41ILURE\x10\x01\x12\x15\n\x11\x46\x41ILURE_NOT_EMPTY\x10\x02\"\x19\n\x17\x43MsgDOTARequestTeamData\"\xa8\x01\n\x1f\x43MsgDOTARequestTeamDataResponse\x12@\n\x06result\x18\x01 \x01(\x0e\x32\'.CMsgDOTARequestTeamDataResponse.Result:\x07SUCCESS\x12\x1f\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32\x11.CMsgDOTATeamData\"\"\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0b\n\x07\x46\x41ILURE\x10\x01\"V\n\x10\x43MsgDOTATeamData\x12\x0f\n\x07on_team\x18\x01 \x01(\x08\x12\x14\n\x0cprofile_team\x18\x02 \x01(\x08\x12\x1b\n\x04team\x18\x03 \x01(\x0b\x32\r.CMsgDOTATeam\"-\n\x1a\x43MsgDOTATeamProfileRequest\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"4\n CMsgDOTATeamMemberProfileRequest\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"+\n\x1b\x43MsgDOTATeamIDByNameRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"@\n\x1c\x43MsgDOTATeamIDByNameResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"K\n\x1b\x43MsgDOTATeamProfileResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\x12\x1b\n\x04team\x18\x02 \x01(\x0b\x32\r.CMsgDOTATeam\"\x1c\n\x1a\x43MsgDOTAProTeamListRequest\"\xe0\x01\n\x1b\x43MsgDOTAProTeamListResponse\x12\x35\n\x05teams\x18\x01 \x03(\x0b\x32&.CMsgDOTAProTeamListResponse.TeamEntry\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\x1ay\n\tTeamEntry\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x14\n\x0ctime_created\x18\x03 \x01(\r\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x05 \x01(\t\x12\x14\n\x0cmember_count\x18\x06 \x01(\r\"E\n\x1e\x43MsgDOTATeamInvite_InviterToGC\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\x87\x03\n/CMsgDOTATeamInvite_GCImmediateResponseToInviter\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x37.CMsgDOTATeamInvite_GCImmediateResponseToInviter.Result:\x07SUCCESS\x12\x14\n\x0cinvitee_name\x18\x02 \x01(\t\x12\x16\n\x0erequired_level\x18\x03 \x01(\r\"\xd3\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x10\n\x0cMEMBER_LIMIT\x10\x01\x12\x19\n\x15INVITEE_NOT_AVAILABLE\x10\x02\x12\x10\n\x0cINVITEE_BUSY\x10\x03\x12\x1f\n\x1bINVITEE_ALREADY_ON_THE_TEAM\x10\x04\x12%\n!INVITEE_ALREADY_ON_TOO_MANY_TEAMS\x10\x05\x12\x15\n\x11UNSPECIFIED_ERROR\x10\x06\x12\x1e\n\x1aINVITEE_INSUFFICIENT_LEVEL\x10\x07\"v\n%CMsgDOTATeamInvite_GCRequestToInvitee\x12\x1a\n\x12inviter_account_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\"\x9b\x01\n&CMsgDOTATeamInvite_InviteeResponseToGC\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32..CMsgDOTATeamInvite_InviteeResponseToGC.Result:\x04JOIN\"+\n\x06Result\x12\x08\n\x04JOIN\x10\x00\x12\n\n\x06REJECT\x10\x01\x12\x0b\n\x07TIMEOUT\x10\x02\"\xcf\x01\n&CMsgDOTATeamInvite_GCResponseToInviter\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32..CMsgDOTATeamInvite_GCResponseToInviter.Result:\x06JOINED\x12\x14\n\x0cinvitee_name\x18\x02 \x01(\t\"G\n\x06Result\x12\n\n\x06JOINED\x10\x00\x12\r\n\tREJECTION\x10\x01\x12\x0b\n\x07TIMEOUT\x10\x02\x12\x15\n\x11UNSPECIFIED_ERROR\x10\x03\"\xa8\x01\n&CMsgDOTATeamInvite_GCResponseToInvitee\x12G\n\x06result\x18\x01 \x01(\x0e\x32..CMsgDOTATeamInvite_GCResponseToInvitee.Result:\x07SUCCESS\x12\x11\n\tteam_name\x18\x02 \x01(\t\"\"\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0b\n\x07\x46\x41ILURE\x10\x01\"9\n\x15\x43MsgDOTATeamOnProfile\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0f\n\x07\x65nabled\x18\x02 \x01(\x08\"=\n\x16\x43MsgDOTAKickTeamMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\x85\x01\n\x1e\x43MsgDOTAKickTeamMemberResponse\x12?\n\x06result\x18\x01 \x01(\x0e\x32&.CMsgDOTAKickTeamMemberResponse.Result:\x07SUCCESS\"\"\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0b\n\x07\x46\x41ILURE\x10\x01\"J\n\x19\x43MsgDOTATransferTeamAdmin\x12\x1c\n\x14new_admin_account_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\xe6\x01\n!CMsgDOTATransferTeamAdminResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).CMsgDOTATransferTeamAdminResponse.Result:\x07SUCCESS\x12\x14\n\x0cinvitee_name\x18\x02 \x01(\t\"g\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\r\n\tNOT_ADMIN\x10\x01\x12\x11\n\rON_OTHER_TEAM\x10\x02\x12\x17\n\x13\x41\x44MIN_OF_OTHER_TEAM\x10\x03\x12\x15\n\x11UNSPECIFIED_ERROR\x10\x04\"$\n\x11\x43MsgDOTALeaveTeam\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\x8e\x01\n\x19\x43MsgDOTALeaveTeamResponse\x12:\n\x06result\x18\x01 \x01(\x0e\x32!.CMsgDOTALeaveTeamResponse.Result:\x07SUCCESS\x12\x11\n\tteam_name\x18\x02 \x01(\t\"\"\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0b\n\x07\x46\x41ILURE\x10\x01\"2\n\x19\x43MsgDOTABetaParticipation\x12\x15\n\raccess_rights\x18\x01 \x01(\r\"w\n\x17\x43MsgDOTAJoinChatChannel\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x04 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\".\n\x18\x43MsgDOTALeaveChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x04\"7\n\x19\x43MsgDOTAClientIgnoredUser\x12\x1a\n\x12ignored_account_id\x18\x01 \x01(\r\"\xc7\x05\n\x13\x43MsgDOTAChatMessage\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nchannel_id\x18\x02 \x01(\x04\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x11\n\ttimestamp\x18\x05 \x01(\r\x12!\n\x19suggest_invite_account_id\x18\x06 \x01(\r\x12\x1b\n\x13suggest_invite_name\x18\x07 \x01(\t\x12&\n\x1e\x66\x61ntasy_draft_owner_account_id\x18\x08 \x01(\r\x12\'\n\x1f\x66\x61ntasy_draft_player_account_id\x18\t \x01(\r\x12\x10\n\x08\x65vent_id\x18\n \x01(\r\x12\x1f\n\x17suggest_invite_to_lobby\x18\x0b \x01(\x08\x12\x14\n\x0c\x65vent_points\x18\x0c \x01(\r\x12\x11\n\tcoin_flip\x18\r \x01(\x08\x12\x15\n\tplayer_id\x18\x0e \x01(\x05:\x02-1\x12 \n\x18share_profile_account_id\x18\x0f \x01(\r\x12\x17\n\x0f\x63hannel_user_id\x18\x10 \x01(\r\x12\x30\n\tdice_roll\x18\x11 \x01(\x0b\x32\x1d.CMsgDOTAChatMessage.DiceRoll\x12\x16\n\x0eshare_party_id\x18\x12 \x01(\x04\x12\x16\n\x0eshare_lobby_id\x18\x13 \x01(\x04\x12\"\n\x1ashare_lobby_custom_game_id\x18\x14 \x01(\x04\x12\x1b\n\x13share_lobby_passkey\x18\x15 \x01(\t\x12\x1f\n\x17private_chat_channel_id\x18\x16 \x01(\r\x12\x0e\n\x06status\x18\x17 \x01(\r\x1a>\n\x08\x44iceRoll\x12\x10\n\x08roll_min\x18\x01 \x01(\x05\x12\x10\n\x08roll_max\x18\x02 \x01(\x05\x12\x0e\n\x06result\x18\x03 \x01(\x05\"e\n\x12\x43MsgDOTAChatMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"\xea\x05\n\x1f\x43MsgDOTAJoinChatChannelResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x12\n\nchannel_id\x18\x03 \x01(\x06\x12\x13\n\x0bmax_members\x18\x04 \x01(\r\x12$\n\x07members\x18\x05 \x03(\x0b\x32\x13.CMsgDOTAChatMember\x12\x46\n\x0c\x63hannel_type\x18\x06 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x45\n\x06result\x18\x07 \x01(\x0e\x32\'.CMsgDOTAJoinChatChannelResponse.Result:\x0cJOIN_SUCCESS\x12\x19\n\x11gc_initiated_join\x18\x08 \x01(\x08\x12\x17\n\x0f\x63hannel_user_id\x18\t \x01(\r\x12\x17\n\x0fwelcome_message\x18\n \x01(\t\"\xf3\x02\n\x06Result\x12\x10\n\x0cJOIN_SUCCESS\x10\x00\x12\x18\n\x14INVALID_CHANNEL_TYPE\x10\x01\x12\x15\n\x11\x41\x43\x43OUNT_NOT_FOUND\x10\x02\x12\x0e\n\nACH_FAILED\x10\x03\x12\x1d\n\x19USER_IN_TOO_MANY_CHANNELS\x10\x04\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x10\n\x0c\x43HANNEL_FULL\x10\x06\x12\x1b\n\x17\x43HANNEL_FULL_OVERFLOWED\x10\x07\x12\x16\n\x12\x46\x41ILED_TO_ADD_USER\x10\x08\x12\x19\n\x15\x43HANNEL_TYPE_DISABLED\x10\t\x12\x1e\n\x1aPRIVATE_CHAT_CREATE_FAILED\x10\n\x12\x1e\n\x1aPRIVATE_CHAT_NO_PERMISSION\x10\x0b\x12#\n\x1fPRIVATE_CHAT_CREATE_LOCK_FAILED\x10\x0c\x12\x17\n\x13PRIVATE_CHAT_KICKED\x10\r\"Y\n\x1d\x43MsgDOTAChatChannelFullUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12$\n\x07members\x18\x02 \x03(\x0b\x32\x13.CMsgDOTAChatMember\"\x85\x01\n\x1e\x43MsgDOTAOtherJoinedChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08steam_id\x18\x03 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x04 \x01(\r\x12\x0e\n\x06status\x18\x05 \x01(\r\"]\n\x1c\x43MsgDOTAOtherLeftChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\"\xf5\x01\n\x1f\x43MsgDOTAChatChannelMemberUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x16\n\x0eleft_steam_ids\x18\x02 \x03(\x06\x12\x45\n\x0ejoined_members\x18\x03 \x03(\x0b\x32-.CMsgDOTAChatChannelMemberUpdate.JoinedMember\x1a_\n\x0cJoinedMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\" \n\x1e\x43MsgDOTARequestChatChannelList\"\xf2\x01\n&CMsgDOTARequestChatChannelListResponse\x12\x45\n\x08\x63hannels\x18\x01 \x03(\x0b\x32\x33.CMsgDOTARequestChatChannelListResponse.ChatChannel\x1a\x80\x01\n\x0b\x43hatChannel\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x13\n\x0bnum_members\x18\x02 \x01(\r\x12\x46\n\x0c\x63hannel_type\x18\x03 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"-\n\x17\x43MsgDOTAChatGetUserList\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\"\xca\x01\n\x1f\x43MsgDOTAChatGetUserListResponse\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x38\n\x07members\x18\x02 \x03(\x0b\x32\'.CMsgDOTAChatGetUserListResponse.Member\x1aY\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"z\n\x1a\x43MsgDOTAChatGetMemberCount\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"\x98\x01\n\"CMsgDOTAChatGetMemberCountResponse\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x14\n\x0cmember_count\x18\x03 \x01(\r\"\xd9\x01\n\x1a\x43MsgDOTAChatRegionsEnabled\x12\x1a\n\x12\x65nable_all_regions\x18\x01 \x01(\x08\x12;\n\x0f\x65nabled_regions\x18\x02 \x03(\x0b\x32\".CMsgDOTAChatRegionsEnabled.Region\x1a\x62\n\x06Region\x12\x14\n\x0cmin_latitude\x18\x01 \x01(\x02\x12\x14\n\x0cmax_latitude\x18\x02 \x01(\x02\x12\x15\n\rmin_longitude\x18\x03 \x01(\x02\x12\x15\n\rmax_longitude\x18\x04 \x01(\x02\"\xb8\x03\n\x10\x43MsgDOTAGuildSDO\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03tag\x18\x03 \x01(\t\x12\x14\n\x0ctime_created\x18\x04 \x01(\r\x12\x16\n\x0etime_disbanded\x18\x05 \x01(\r\x12\x0c\n\x04logo\x18\x06 \x01(\x04\x12\x11\n\tbase_logo\x18\x07 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x08 \x01(\x04\x12)\n\x07members\x18\t \x03(\x0b\x32\x18.CMsgDOTAGuildSDO.Member\x12\x31\n\x0binvitations\x18\n \x03(\x0b\x32\x1c.CMsgDOTAGuildSDO.Invitation\x12\x0f\n\x07message\x18\x0b \x01(\t\x12\x13\n\x0bincremental\x18\x0c \x01(\x08\x1a?\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0btime_joined\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x1aN\n\nInvitation\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\ttime_sent\x18\x02 \x01(\r\x12\x19\n\x11\x61\x63\x63ount_id_sender\x18\x03 \x01(\r\"\x87\x02\n\x15\x43MsgDOTAGuildAuditSDO\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12-\n\x07\x65ntries\x18\x02 \x03(\x0b\x32\x1c.CMsgDOTAGuildAuditSDO.Entry\x1a\xac\x01\n\x05\x45ntry\x12\x13\n\x0b\x65vent_index\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x0e\n\x06\x61\x63tion\x18\x03 \x01(\r\x12\x1c\n\x14\x61\x63\x63ount_id_requestor\x18\x04 \x01(\r\x12\x19\n\x11\x61\x63\x63ount_id_target\x18\x05 \x01(\r\x12\x18\n\x10reference_data_a\x18\x06 \x01(\r\x12\x18\n\x10reference_data_b\x18\x07 \x01(\r\"\xbe\x02\n\"CMsgDOTAAccountGuildMembershipsSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x43\n\x0bmemberships\x18\x02 \x03(\x0b\x32..CMsgDOTAAccountGuildMembershipsSDO.Membership\x12\x43\n\x0binvitations\x18\x03 \x03(\x0b\x32..CMsgDOTAAccountGuildMembershipsSDO.Invitation\x1a,\n\nMembership\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0c\n\x04role\x18\x02 \x01(\r\x1aL\n\nInvitation\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\ttime_sent\x18\x02 \x01(\r\x12\x19\n\x11\x61\x63\x63ount_id_sender\x18\x03 \x01(\r\"m\n\x1a\x43MsgDOTAGuildCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x0c\n\x04logo\x18\x03 \x01(\x04\x12\x11\n\tbase_logo\x18\x04 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x05 \x01(\x04\"\xba\x02\n\x1b\x43MsgDOTAGuildCreateResponse\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x33\n\x06\x65rrors\x18\x02 \x03(\x0e\x32#.CMsgDOTAGuildCreateResponse.EError\"\xd3\x01\n\x06\x45\x45rror\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0e\n\nNAME_EMPTY\x10\x01\x12\x17\n\x13NAME_BAD_CHARACTERS\x10\x02\x12\x11\n\rNAME_TOO_LONG\x10\x03\x12\x0e\n\nNAME_TAKEN\x10\x04\x12\r\n\tTAG_EMPTY\x10\x05\x12\x16\n\x12TAG_BAD_CHARACTERS\x10\x06\x12\x10\n\x0cTAG_TOO_LONG\x10\x07\x12\x1b\n\x17\x41\x43\x43OUNT_TOO_MANY_GUILDS\x10\x08\x12\x16\n\x12LOGO_UPLOAD_FAILED\x10\t\"f\n\"CMsgDOTAGuildSetAccountRoleRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x13\n\x0btarget_role\x18\x03 \x01(\r\"\x95\x02\n#CMsgDOTAGuildSetAccountRoleResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.CMsgDOTAGuildSetAccountRoleResponse.EResult:\x07SUCCESS\"\xa6\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x19\n\x15\x45RROR_NO_OTHER_LEADER\x10\x03\x12!\n\x1d\x45RROR_ACCOUNT_TOO_MANY_GUILDS\x10\x04\x12 \n\x1c\x45RROR_GUILD_TOO_MANY_MEMBERS\x10\x05\"P\n!CMsgDOTAGuildInviteAccountRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xe3\x02\n\"CMsgDOTAGuildInviteAccountResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32+.CMsgDOTAGuildInviteAccountResponse.EResult:\x07SUCCESS\"\xf6\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12!\n\x1d\x45RROR_ACCOUNT_ALREADY_INVITED\x10\x03\x12\"\n\x1e\x45RROR_ACCOUNT_ALREADY_IN_GUILD\x10\x04\x12\"\n\x1e\x45RROR_ACCOUNT_TOO_MANY_INVITES\x10\x05\x12 \n\x1c\x45RROR_GUILD_TOO_MANY_INVITES\x10\x06\x12!\n\x1d\x45RROR_ACCOUNT_TOO_MANY_GUILDS\x10\x07\"O\n CMsgDOTAGuildCancelInviteRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xb0\x01\n!CMsgDOTAGuildCancelInviteResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.CMsgDOTAGuildCancelInviteResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"k\n!CMsgDOTAGuildUpdateDetailsRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0c\n\x04logo\x18\x02 \x01(\x04\x12\x11\n\tbase_logo\x18\x03 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x04 \x01(\x04\"\xb2\x01\n\"CMsgDOTAGuildUpdateDetailsResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32+.CMsgDOTAGuildUpdateDetailsResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\x80\x01\n)CMsgDOTAGCToGCUpdateOpenGuildPartyRequest\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12\x1a\n\x12member_account_ids\x18\x03 \x03(\r\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"J\n*CMsgDOTAGCToGCUpdateOpenGuildPartyResponse\x12\x1c\n\x14maintain_association\x18\x01 \x01(\x08\"P\n*CMsgDOTAGCToGCDestroyOpenGuildPartyRequest\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x10\n\x08guild_id\x18\x02 \x01(\r\"-\n+CMsgDOTAGCToGCDestroyOpenGuildPartyResponse\"I\n CMsgDOTAPartySetOpenGuildRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x97\x01\n!CMsgDOTAPartySetOpenGuildResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.CMsgDOTAPartySetOpenGuildResponse.EResult:\x07SUCCESS\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"5\n!CMsgDOTAJoinOpenGuildPartyRequest\x12\x10\n\x08party_id\x18\x01 \x01(\x04\"\x99\x01\n\"CMsgDOTAJoinOpenGuildPartyResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32+.CMsgDOTAJoinOpenGuildPartyResponse.EResult:\x07SUCCESS\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"\xd7\x01\n\x1d\x43MsgDOTAGuildOpenPartyRefresh\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12>\n\x0copen_parties\x18\x02 \x03(\x0b\x32(.CMsgDOTAGuildOpenPartyRefresh.OpenParty\x1a\x64\n\tOpenParty\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x1a\n\x12member_account_ids\x18\x02 \x03(\r\x12\x14\n\x0ctime_created\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"\x1a\n\x18\x43MsgDOTARequestGuildData\"\xb7\x01\n\x17\x43MsgDOTAGuildInviteData\x12\x18\n\x10invited_to_guild\x18\x01 \x01(\x08\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12\x12\n\nguild_name\x18\x03 \x01(\t\x12\x11\n\tguild_tag\x18\x04 \x01(\t\x12\x0c\n\x04logo\x18\x05 \x01(\x04\x12\x0f\n\x07inviter\x18\x06 \x01(\r\x12\x14\n\x0cinviter_name\x18\x07 \x01(\t\x12\x14\n\x0cmember_count\x18\x08 \x01(\r\"?\n\x1a\x43MsgDOTAGuildUpdateMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x10\n\x08guild_id\x18\x02 \x01(\r\">\n\x1c\x43MsgDOTAGuildEditLogoRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0c\n\x04logo\x18\x02 \x01(\x04\"\xcc\x01\n\x1d\x43MsgDOTAGuildEditLogoResponse\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12?\n\x06result\x18\x02 \x01(\x0e\x32&.CMsgDOTAGuildEditLogoResponse.EResult:\x07SUCCESS\"X\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rNO_PERMISSION\x10\x01\x12\x16\n\x12LOGO_UPLOAD_FAILED\x10\x02\x12\x15\n\x11UNSPECIFIED_ERROR\x10\x03\"!\n\x1f\x43MsgDOTAReportsRemainingRequest\"\xba\x01\n CMsgDOTAReportsRemainingResponse\x12&\n\x1enum_positive_reports_remaining\x18\x01 \x01(\r\x12&\n\x1enum_negative_reports_remaining\x18\x02 \x01(\r\x12\"\n\x1anum_positive_reports_total\x18\x03 \x01(\r\x12\"\n\x1anum_negative_reports_total\x18\x04 \x01(\r\"^\n\x1a\x43MsgDOTASubmitPlayerReport\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x14\n\x0creport_flags\x18\x02 \x01(\r\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\"e\n\"CMsgDOTASubmitPlayerReportResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x14\n\x0creport_flags\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\"8\n\x1b\x43MsgDOTAReportCountsRequest\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\"\x9c\x01\n\x1c\x43MsgDOTAReportCountsResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x18\n\x10leadership_count\x18\x02 \x01(\r\x12\x16\n\x0eteaching_count\x18\x03 \x01(\r\x12\x16\n\x0e\x66riendly_count\x18\x04 \x01(\r\x12\x17\n\x0f\x66orgiving_count\x18\x05 \x01(\r\"W\n\"CMsgDOTAKickedFromMatchmakingQueue\x12\x31\n\nmatch_type\x18\x01 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\"1\n\x18\x43MsgDOTARequestSaveGames\x12\x15\n\rserver_region\x18\x01 \x01(\r\"X\n CMsgDOTARequestSaveGamesResponse\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\"\n\nsave_games\x18\x02 \x03(\x0b\x32\x0e.CDOTASaveGame\"\x80\x01\n\rCMsgWatchGame\x12\x16\n\x0eserver_steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x1c\n\x14watch_server_steamid\x18\x03 \x01(\x06\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x0f\n\x07regions\x18\x05 \x03(\r\"\x15\n\x13\x43MsgCancelWatchGame\"\xc9\x03\n\x15\x43MsgWatchGameResponse\x12J\n\x11watch_game_result\x18\x01 \x01(\x0e\x32&.CMsgWatchGameResponse.WatchGameResult:\x07PENDING\x12\x1d\n\x15source_tv_public_addr\x18\x02 \x01(\r\x12\x1e\n\x16source_tv_private_addr\x18\x03 \x01(\r\x12\x16\n\x0esource_tv_port\x18\x04 \x01(\r\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\x12\x1c\n\x14watch_server_steamid\x18\x06 \x01(\x06\x12#\n\x1bwatch_tv_unique_secret_code\x18\x07 \x01(\x06\"\xac\x01\n\x0fWatchGameResult\x12\x0b\n\x07PENDING\x10\x00\x12\t\n\x05READY\x10\x01\x12\x16\n\x12GAMESERVERNOTFOUND\x10\x02\x12\x0f\n\x0bUNAVAILABLE\x10\x03\x12\r\n\tCANCELLED\x10\x04\x12\x17\n\x13INCOMPATIBLEVERSION\x10\x05\x12\x1d\n\x19MISSINGLEAGUESUBSCRIPTION\x10\x06\x12\x11\n\rLOBBYNOTFOUND\x10\x07\"=\n\x1e\x43MsgPartyLeaderWatchGamePrompt\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\"-\n\x19\x43MsgGCMatchDetailsRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\"\x80\x01\n\x1a\x43MsgGCMatchDetailsResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x1d\n\x05match\x18\x02 \x01(\x0b\x32\x0e.CMsgDOTAMatch\x12\x33\n\x04vote\x18\x03 \x01(\x0e\x32\x0e.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\"6\n!CMsgServerToGCMatchDetailsRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"E\n\"CMsgGCToServerMatchDetailsResponse\x12\x1f\n\x07matches\x18\x01 \x03(\x0b\x32\x0e.CMsgDOTAMatch\"q\n\x16\x43MsgDOTAProfileRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0crequest_name\x18\x02 \x01(\x08\x12-\n\x06\x65ngine\x18\x03 \x01(\x0e\x32\x0e.ESourceEngine:\rk_ESE_Source1\"\xc2\x06\n\x17\x43MsgDOTAProfileResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x36\n\x13game_account_client\x18\x02 \x01(\x0b\x32\x19.CSODOTAGameAccountClient\x12&\n\x0elatest_matches\x18\x03 \x03(\x0b\x32\x0e.CMsgDOTAMatch\x12\x33\n\x06heroes\x18\x04 \x03(\x0b\x32#.CMsgDOTAProfileResponse.PlayedHero\x12\x13\n\x0bplayer_name\x18\x05 \x01(\t\x12\x11\n\tteam_name\x18\x06 \x01(\t\x12\x10\n\x08team_tag\x18\x07 \x01(\t\x12\x11\n\tteam_logo\x18\x08 \x01(\x04\x12<\n\rshowcase_hero\x18\t \x01(\x0b\x32%.CMsgDOTAProfileResponse.ShowcaseHero\x12:\n\rleague_passes\x18\n \x03(\x0b\x32#.CMsgDOTAProfileResponse.LeaguePass\x12;\n\revent_tickets\x18\x0b \x03(\x0b\x32$.CMsgDOTAProfileResponse.EventTicket\x12\x0f\n\x07team_id\x18\x0c \x01(\r\x12\x14\n\x0chas_passport\x18\r \x01(\x08\x12=\n\x0e\x66\x65\x61tured_items\x18\x0e \x03(\x0b\x32%.CMsgDOTAProfileResponse.FeaturedItem\x12\x17\n\x0f\x61\x62\x61ndon_percent\x18\x0f \x01(\r\x1a+\n\nPlayedHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0c\n\x04wins\x18\x02 \x01(\r\x1a\x34\n\x0cShowcaseHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bobject_data\x18\x02 \x03(\x0c\x1a\x31\n\nLeaguePass\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x1a\x1f\n\x0b\x45ventTicket\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x1aH\n\x0c\x46\x65\x61turedItem\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x13\n\x0bobject_data\x18\x02 \x01(\x0c\x12\x12\n\nslot_index\x18\x03 \x01(\r\"\x87\x02\n\x16\x43MsgDOTAProfileTickets\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12\x39\n\rleague_passes\x18\x03 \x03(\x0b\x32\".CMsgDOTAProfileTickets.LeaguePass\x12:\n\revent_tickets\x18\x04 \x03(\x0b\x32#.CMsgDOTAProfileTickets.EventTicket\x1a\x31\n\nLeaguePass\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x1a\x1f\n\x0b\x45ventTicket\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"5\n\x1f\x43MsgClientToGCGetProfileTickets\x12\x12\n\naccount_id\x18\x01 \x01(\r\"/\n\x19\x43MsgGCSteamProfileRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\"3\n!CMsgGCSteamProfileRequestResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"%\n#CMsgDOTAClearNotifySuccessfulReport\"\xa7\x07\n\x0f\x43MsgDOTAWelcome\x12\x17\n\x0fstore_item_hash\x18\x05 \x01(\r\x12\x1f\n\x17timeplayedconsecutively\x18\x06 \x01(\r\x12%\n\x1d\x61llow_3rd_party_match_history\x18\x07 \x01(\x08\x12?\n\x14partner_account_type\x18\x08 \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12 \n\x18\x62\x61nned_word_list_word_id\x18\t \x01(\r\x12\x1d\n\x15partner_account_state\x18\x0b \x01(\r\x12\x18\n\x10last_time_played\x18\x0c \x01(\r\x12\x17\n\x0flast_ip_address\x18\r \x01(\r\x12#\n\x1bshutdownlawterminateminutes\x18\x0f \x01(\r\x12 \n\x18\x62\x61nned_word_list_version\x18\x10 \x01(\r\x12\x17\n\x0fprofile_private\x18\x11 \x01(\x08\x12\x10\n\x08\x63urrency\x18\x12 \x01(\r\x12\x0f\n\x07\x62\x61ng_no\x18\x13 \x01(\r\x12$\n\x1cshould_request_player_origin\x18\x14 \x01(\x08\x12\x1a\n\x12\x63ompendium_unlocks\x18\x15 \x01(\x04\x12\x1f\n\x17gc_socache_file_version\x18\x16 \x01(\r\x12\x41\n\x14localization_digests\x18\x17 \x03(\x0b\x32#.CMsgDOTAWelcome.LocalizationDigest\x12%\n\x1dis_perfect_world_test_account\x18\x18 \x01(\x08\x12\x1e\n\ractive_events\x18\x19 \x03(\x0e\x32\x07.EEvent\x12\x32\n\x0e\x65xtra_messages\x18\x1a \x03(\x0b\x32\x1a.CMsgDOTAWelcome.CExtraMsg\x12\x1e\n\x16minimum_recent_item_id\x18\x1b \x01(\x04\x1a\x8e\x01\n\x12LocalizationDigest\x12\x0f\n\x07\x63ontext\x18\x01 \x01(\t\x12\x33\n\x1a\x65nglish_language_file_sha1\x18\x02 \x01(\x0b\x32\x0f.CMsgSHA1Digest\x12\x32\n\x19\x63lient_language_file_sha1\x18\x03 \x01(\x0b\x32\x0f.CMsgSHA1Digest\x1a)\n\tCExtraMsg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63ontents\x18\x02 \x01(\x0c\"K\n\x18\x43SODOTAGameHeroFavorites\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\xa6\x1d\x01\x12\x15\n\x07hero_id\x18\x02 \x01(\rB\x04\x80\xa6\x1d\x01\"+\n\x18\x43MsgDOTAHeroFavoritesAdd\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\".\n\x1b\x43MsgDOTAHeroFavoritesRemove\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"/\n\x13\x43MsgSetShowcaseHero\x12\x18\n\x10showcase_hero_id\x18\x01 \x01(\r\"0\n\x14\x43MsgSetFeaturedItems\x12\x18\n\x10\x66\x65\x61tured_item_id\x18\x01 \x03(\x04\"Z\n\x15\x43MsgDOTAFeaturedItems\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10\x66\x65\x61tured_item_id\x18\x02 \x03(\x04\x12\x13\n\x0bobject_data\x18\x03 \x03(\x0c\"\x17\n\x15\x43MsgRequestLeagueInfo\"\xd0\x01\n\x12\x43\x44ynamicLeagueData\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0flast_match_time\x18\x02 \x01(\x07\x12\x16\n\x0eprize_pool_usd\x18\x03 \x01(\r\x12\x18\n\x10has_live_matches\x18\x04 \x01(\x08\x12\x1c\n\x14is_compendium_public\x18\x05 \x01(\x08\x12\x1a\n\x12\x63ompendium_version\x18\x06 \x01(\r\x12\"\n\x1a\x63ompendium_content_version\x18\x07 \x01(\r\"\xb6\x03\n\x11\x43StaticLeagueData\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0b\x62\x61nner_name\x18\x04 \x01(\t\x12\x14\n\x0citemdef_name\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x16\n\x0eitem_def_index\x18\x07 \x01(\r\x12\x1f\n\x17hud_skin_item_def_index\x18\x08 \x01(\r\x12\x1b\n\x13loading_screen_name\x18\t \x01(\t\x12\x17\n\x0f\x62\x61se_prize_pool\x18\n \x01(\r\x12\x10\n\x08is_major\x18\x0b \x01(\x08\x12\x12\n\nsort_order\x18\x0c \x01(\r\x12\x0c\n\x04tier\x18\r \x01(\r\x12\x16\n\x0e\x61mateur_region\x18\x0e \x01(\r\x12\x11\n\torganizer\x18\x0f \x01(\t\x12\x12\n\nstart_date\x18\x10 \x01(\r\x12\x10\n\x08\x65nd_date\x18\x11 \x01(\r\x12\x10\n\x08location\x18\x12 \x01(\t\x12\x17\n\x0finventory_image\x18\x13 \x01(\t\x12\x14\n\x0csquare_image\x18\x14 \x01(\t\"s\n\x0b\x43LeagueData\x12)\n\x0c\x64ynamic_data\x18\x01 \x01(\x0b\x32\x13.CDynamicLeagueData\x12\'\n\x0bstatic_data\x18\x02 \x01(\x0b\x32\x12.CStaticLeagueData\x12\x10\n\x08is_owned\x18\x03 \x01(\x08\">\n\x16\x43MsgResponseLeagueInfo\x12$\n\x07leagues\x18\x01 \x03(\x0b\x32\x13.CDynamicLeagueData\"\x85\x01\n\x12\x43MsgDOTAMatchVotes\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12-\n\x05votes\x18\x02 \x03(\x0b\x32\x1e.CMsgDOTAMatchVotes.PlayerVote\x1a.\n\nPlayerVote\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04vote\x18\x02 \x01(\r\"Z\n\x11\x43MsgCastMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x33\n\x04vote\x18\x02 \x01(\x0e\x32\x0e.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\">\n\x15\x43MsgRetrieveMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x13\n\x0bincremental\x18\x02 \x01(\r\"\x90\x01\n\x15\x43MsgMatchVoteResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x33\n\x04vote\x18\x02 \x01(\x0e\x32\x0e.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\x12\x16\n\x0epositive_votes\x18\x03 \x01(\r\x12\x16\n\x0enegative_votes\x18\x04 \x01(\r\"\xe5\x02\n\x12\x43MsgDOTAHallOfFame\x12\x0c\n\x04week\x18\x01 \x01(\r\x12<\n\x10\x66\x65\x61tured_players\x18\x02 \x03(\x0b\x32\".CMsgDOTAHallOfFame.FeaturedPlayer\x12;\n\x0f\x66\x65\x61tured_farmer\x18\x03 \x01(\x0b\x32\".CMsgDOTAHallOfFame.FeaturedFarmer\x1ag\n\x0e\x46\x65\x61turedPlayer\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x1d\n\x15\x61verage_scaled_metric\x18\x03 \x01(\x02\x12\x11\n\tnum_games\x18\x04 \x01(\r\x1a]\n\x0e\x46\x65\x61turedFarmer\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x14\n\x0cgold_per_min\x18\x03 \x01(\r\x12\x10\n\x08match_id\x18\x04 \x01(\x04\")\n\x19\x43MsgDOTAHallOfFameRequest\x12\x0c\n\x04week\x18\x01 \x01(\r\"[\n\x1a\x43MsgDOTAHallOfFameResponse\x12)\n\x0chall_of_fame\x18\x01 \x01(\x0b\x32\x13.CMsgDOTAHallOfFame\x12\x12\n\x07\x65result\x18\x02 \x01(\r:\x01\x32\"6\n!CMsgDOTAHalloweenHighScoreRequest\x12\x11\n\x05round\x18\x01 \x01(\x05:\x02-1\"r\n\"CMsgDOTAHalloweenHighScoreResponse\x12\r\n\x05score\x18\x01 \x01(\r\x12\x1d\n\x05match\x18\x02 \x01(\x0b\x32\x0e.CMsgDOTAMatch\x12\x0f\n\x07\x65result\x18\x03 \x01(\r\x12\r\n\x05round\x18\x04 \x01(\x05\"6\n\x1e\x43MsgDOTAStorePromoPagesRequest\x12\x14\n\x0cversion_seen\x18\x01 \x01(\r\"\x97\x01\n\x1f\x43MsgDOTAStorePromoPagesResponse\x12\x39\n\x05pages\x18\x01 \x03(\x0b\x32*.CMsgDOTAStorePromoPagesResponse.PromoPage\x1a\x39\n\tPromoPage\x12\x10\n\x08promo_id\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\"N\n\x1f\x43MsgLeagueScheduleBlockTeamInfo\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\"\x91\x01\n\x17\x43MsgLeagueScheduleBlock\x12\x10\n\x08\x62lock_id\x18\x01 \x01(\r\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x0e\n\x06\x66inals\x18\x04 \x01(\x08\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\x12/\n\x05teams\x18\x06 \x03(\x0b\x32 .CMsgLeagueScheduleBlockTeamInfo\"O\n\x0e\x43MsgDOTALeague\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12*\n\x08schedule\x18\x02 \x03(\x0b\x32\x18.CMsgLeagueScheduleBlock\"2\n\x1d\x43MsgDOTALeagueScheduleRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\"U\n\x1e\x43MsgDOTALeagueScheduleResponse\x12\x1f\n\x06league\x18\x01 \x01(\x0b\x32\x0f.CMsgDOTALeague\x12\x12\n\x07\x65result\x18\x02 \x01(\r:\x01\x32\"q\n\x1a\x43MsgDOTALeagueScheduleEdit\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12*\n\x08schedule\x18\x02 \x01(\x0b\x32\x18.CMsgLeagueScheduleBlock\x12\x14\n\x0c\x64\x65lete_block\x18\x03 \x01(\x08\"Y\n\"CMsgDOTALeagueScheduleEditResponse\x12\x1f\n\x06league\x18\x01 \x01(\x0b\x32\x0f.CMsgDOTALeague\x12\x12\n\x07\x65result\x18\x02 \x01(\r:\x01\x32\"J\n\x1d\x43MsgDOTALeaguesInMonthRequest\x12\r\n\x05month\x18\x01 \x01(\r\x12\x0c\n\x04year\x18\x02 \x01(\r\x12\x0c\n\x04tier\x18\x03 \x01(\r\"s\n\x1e\x43MsgDOTALeaguesInMonthResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\r\n\x05month\x18\x02 \x01(\r\x12\x0c\n\x04year\x18\x03 \x01(\r\x12 \n\x07leagues\x18\x04 \x03(\x0b\x32\x0f.CMsgDOTALeague\"\xab\x01\n\x1d\x43MsgMatchmakingMatchGroupInfo\x12\x19\n\x11players_searching\x18\x01 \x01(\r\x12\'\n\x1f\x61uto_region_select_ping_penalty\x18\x02 \x01(\x11\x12\x46\n\x06status\x18\x03 \x01(\x0e\x32\x18.EMatchGroupServerStatus:\x1ck_EMatchGroupServerStatus_OK\"!\n\x1f\x43MsgDOTAMatchmakingStatsRequest\"\xa8\x01\n CMsgDOTAMatchmakingStatsResponse\x12\x1b\n\x13matchgroups_version\x18\x01 \x01(\r\x12\x31\n)legacy_searching_players_by_group_source2\x18\x07 \x03(\r\x12\x34\n\x0cmatch_groups\x18\x08 \x03(\x0b\x32\x1e.CMsgMatchmakingMatchGroupInfo\"F\n\x1d\x43MsgDOTASetMatchHistoryAccess\x12%\n\x1d\x61llow_3rd_party_match_history\x18\x01 \x01(\x08\";\n%CMsgDOTASetMatchHistoryAccessResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"L\n CMsgDOTANotifyAccountFlagsChange\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x15\n\raccount_flags\x18\x02 \x01(\r\"4\n\x19\x43MsgDOTASetProfilePrivacy\x12\x17\n\x0fprofile_private\x18\x01 \x01(\x08\"4\n!CMsgDOTASetProfilePrivacyResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\"<\n\x15\x43MsgUpgradeLeagueItem\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tleague_id\x18\x02 \x01(\r\"\x1f\n\x1d\x43MsgUpgradeLeagueItemResponse\"t\n\x1b\x43MsgGCWatchDownloadedReplay\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x43\n\nwatch_type\x18\x02 \x01(\x0e\x32\x15.DOTA_WatchReplayType:\x18\x44OTA_WATCH_REPLAY_NORMAL\"A\n\x17\x43MsgSetMapLocationState\x12\x13\n\x0blocation_id\x18\x01 \x01(\x05\x12\x11\n\tcompleted\x18\x02 \x01(\x08\"5\n\x1f\x43MsgSetMapLocationStateResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"\x17\n\x15\x43MsgResetMapLocations\"3\n\x1d\x43MsgResetMapLocationsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"5\n\x1d\x43MsgRefreshPartnerAccountLink\x12\x14\n\x0cpartner_type\x18\x01 \x01(\x05\"\x1f\n\x1d\x43MsgClientsRejoinChatChannels\".\n\x1a\x43MsgDOTASendFriendRecruits\x12\x10\n\x08recruits\x18\x01 \x03(\r\"4\n\x1d\x43MsgDOTAFriendRecruitsRequest\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\x82\x03\n\x1e\x43MsgDOTAFriendRecruitsResponse\x12@\n\x06result\x18\x01 \x01(\x0e\x32\'.CMsgDOTAFriendRecruitsResponse.EResult:\x07SUCCESS\x12\x45\n\x08recruits\x18\x02 \x03(\x0b\x32\x33.CMsgDOTAFriendRecruitsResponse.FriendRecruitStatus\x12G\n\nrecruiters\x18\x03 \x03(\x0b\x32\x33.CMsgDOTAFriendRecruitsResponse.FriendRecruitStatus\x1a_\n\x13\x46riendRecruitStatus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x15\n\rlevels_earned\x18\x03 \x01(\r\x12\r\n\x05\x62onus\x18\x04 \x01(\x08\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"P\n(CMsgDOTAFriendRecruitInviteAcceptDecline\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x01 \x01(\x08\x12\x12\n\naccount_id\x18\x02 \x01(\r\"/\n\x1a\x43MsgRequestLeaguePrizePool\x12\x11\n\tleague_id\x18\x01 \x01(\r\"K\n\"CMsgRequestLeaguePrizePoolResponse\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x12\n\nprize_pool\x18\x02 \x01(\r\"\x18\n\x16\x43MsgGCGetHeroStandings\"\xff\x02\n\x1e\x43MsgGCGetHeroStandingsResponse\x12\x37\n\tstandings\x18\x01 \x03(\x0b\x32$.CMsgGCGetHeroStandingsResponse.Hero\x1a\xa3\x02\n\x04Hero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0c\n\x04wins\x18\x02 \x01(\r\x12\x0e\n\x06losses\x18\x03 \x01(\r\x12\x12\n\nwin_streak\x18\x04 \x01(\r\x12\x17\n\x0f\x62\x65st_win_streak\x18\x05 \x01(\r\x12\x11\n\tavg_kills\x18\x06 \x01(\x02\x12\x12\n\navg_deaths\x18\x07 \x01(\x02\x12\x13\n\x0b\x61vg_assists\x18\x08 \x01(\x02\x12\x0f\n\x07\x61vg_gpm\x18\t \x01(\x02\x12\x0f\n\x07\x61vg_xpm\x18\n \x01(\x02\x12\x12\n\nbest_kills\x18\x0b \x01(\r\x12\x14\n\x0c\x62\x65st_assists\x18\x0c \x01(\r\x12\x10\n\x08\x62\x65st_gpm\x18\r \x01(\r\x12\x10\n\x08\x62\x65st_xpm\x18\x0e \x01(\r\x12\x13\n\x0bperformance\x18\x0f \x01(\x02\"%\n#CMsgGCItemEditorReservationsRequest\">\n\x1b\x43MsgGCItemEditorReservation\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"Z\n$CMsgGCItemEditorReservationsResponse\x12\x32\n\x0creservations\x18\x01 \x03(\x0b\x32\x1c.CMsgGCItemEditorReservation\"E\n\x1e\x43MsgGCItemEditorReserveItemDef\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\"]\n&CMsgGCItemEditorReserveItemDefResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0e\n\x06result\x18\x03 \x01(\r\"I\n\"CMsgGCItemEditorReleaseReservation\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\"Q\n*CMsgGCItemEditorReleaseReservationResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08released\x18\x02 \x01(\x08\"6\n!CMsgGCItemEditorRequestLeagueInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xba\x01\n\"CMsgGCItemEditorLeagueInfoResponse\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x13\n\x0bleague_name\x18\x02 \x01(\t\x12\x13\n\x0bleague_desc\x18\x03 \x01(\t\x12\x12\n\nleague_url\x18\x04 \x01(\t\x12\x13\n\x0brevenue_url\x18\x05 \x01(\t\x12\x0c\n\x04tier\x18\x06 \x01(\r\x12\x10\n\x08location\x18\x07 \x01(\r\x12\x0e\n\x06result\x18\x08 \x01(\r\"J\n\x1c\x43MsgDOTARewardTutorialPrizes\x12\x13\n\x0blocation_id\x18\x01 \x01(\r\x12\x15\n\rtracking_only\x18\x02 \x01(\x08\"L\n%CMsgDOTALastHitChallengeHighScorePost\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhigh_score\x18\x02 \x01(\r\";\n(CMsgDOTALastHitChallengeHighScoreRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"K\n)CMsgDOTALastHitChallengeHighScoreResponse\x12\r\n\x05score\x18\x01 \x01(\r\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\"\x14\n\x12\x43MsgFlipLobbyTeams\"!\n\x1f\x43MsgPresentedClientTerminateDlg\"}\n%CMsgGCLobbyUpdateBroadcastChannelInfo\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\"S\n\x18\x43MsgDOTARedeemEventPrize\x12\x10\n\x08prize_id\x18\x01 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\x12\x13\n\x08quantity\x18\x03 \x01(\r:\x01\x31\"\x8b\x02\n CMsgDOTARedeemEventPrizeResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.CMsgDOTARedeemEventPrizeResponse.ResultCode:\x07Success\x12\x18\n\x10remaining_points\x18\x02 \x01(\r\x12 \n\x18remaining_premium_points\x18\x03 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x04 \x01(\r\"R\n\nResultCode\x12\x0b\n\x07Success\x10\x00\x12\x0f\n\x0bServerError\x10\x01\x12\x16\n\x12InsufficientPoints\x10\x02\x12\x0e\n\nPointsHeld\x10\x03\">\n\x16\x43MsgDOTAGetEventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\xc3\x02\n\x1e\x43MsgDOTAGetEventPointsResponse\x12\x14\n\x0ctotal_points\x18\x01 \x01(\r\x12\x1c\n\x14total_premium_points\x18\x02 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\x12\x0e\n\x06points\x18\x04 \x01(\r\x12\x16\n\x0epremium_points\x18\x05 \x01(\r\x12\x41\n\x11\x63ompleted_actions\x18\x06 \x03(\x0b\x32&.CMsgDOTAGetEventPointsResponse.Action\x12\x12\n\naccount_id\x18\x07 \x01(\r\x12\r\n\x05owned\x18\x08 \x01(\x08\x12\x14\n\x0c\x61udit_action\x18\t \x01(\r\x1a\x37\n\x06\x41\x63tion\x12\x11\n\taction_id\x18\x01 \x01(\r\x12\x1a\n\x0ftimes_completed\x18\x02 \x01(\r:\x01\x31\"9\n\x1c\x43MsgDOTALiveLeagueGameUpdate\x12\x19\n\x11live_league_games\x18\x01 \x01(\r\"[\n\x1b\x43MsgDOTACompendiumSelection\x12\x17\n\x0fselection_index\x18\x01 \x01(\r\x12\x11\n\tselection\x18\x02 \x01(\r\x12\x10\n\x08leagueid\x18\x03 \x01(\r\"q\n#CMsgDOTACompendiumSelectionResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x36\n\x10\x65xtra_selections\x18\x02 \x03(\x0b\x32\x1c.CMsgDOTACompendiumSelection\"J\n\x16\x43MsgDOTACompendiumData\x12\x30\n\nselections\x18\x01 \x03(\x0b\x32\x1c.CMsgDOTACompendiumSelection\"E\n\x1d\x43MsgDOTACompendiumDataRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08leagueid\x18\x02 \x01(\r\"\x8b\x01\n\x1e\x43MsgDOTACompendiumDataResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08leagueid\x18\x02 \x01(\r\x12\x11\n\x06result\x18\x03 \x01(\r:\x01\x32\x12\x30\n\x0f\x63ompendium_data\x18\x04 \x01(\x0b\x32\x17.CMsgDOTACompendiumData\"\xce\x01\n\x1d\x43MsgDOTAGetPlayerMatchHistory\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x19\n\x11start_at_match_id\x18\x02 \x01(\x04\x12\x19\n\x11matches_requested\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x12\n\nrequest_id\x18\x05 \x01(\r\x12 \n\x18include_practice_matches\x18\x07 \x01(\x08\x12\x1c\n\x14include_custom_games\x18\x08 \x01(\x08\"\x80\x03\n%CMsgDOTAGetPlayerMatchHistoryResponse\x12=\n\x07matches\x18\x01 \x03(\x0b\x32,.CMsgDOTAGetPlayerMatchHistoryResponse.Match\x12\x12\n\nrequest_id\x18\x02 \x01(\r\x1a\x83\x02\n\x05Match\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06winner\x18\x04 \x01(\x08\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12\x13\n\x0brank_change\x18\x06 \x01(\x05\x12\x15\n\rprevious_rank\x18\x07 \x01(\r\x12\x12\n\nlobby_type\x18\x08 \x01(\r\x12\x11\n\tsolo_rank\x18\t \x01(\x08\x12\x0f\n\x07\x61\x62\x61ndon\x18\n \x01(\x08\x12\x10\n\x08\x64uration\x18\x0b \x01(\r\x12\x0e\n\x06\x65ngine\x18\x0c \x01(\r\x12\x1a\n\x12\x61\x63tive_battle_pass\x18\r \x01(\x08\"!\n\x1f\x43MsgDOTAStartDailyHeroChallenge\"\x1c\n\x1a\x43MsgGCNotificationsRequest\"\xeb\x02\n\x1b\x43MsgGCNotificationsResponse\x12=\n\x06result\x18\x01 \x01(\x0e\x32$.CMsgGCNotificationsResponse.EResult:\x07SUCCESS\x12@\n\rnotifications\x18\x02 \x03(\x0b\x32).CMsgGCNotificationsResponse.Notification\x1a\x9b\x01\n\x0cNotification\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x13\n\x0breference_a\x18\x04 \x01(\r\x12\x13\n\x0breference_b\x18\x05 \x01(\r\x12\x13\n\x0breference_c\x18\x06 \x01(\r\x12\x0f\n\x07message\x18\x07 \x01(\t\x12\x0e\n\x06unread\x18\x08 \x01(\x08\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"$\n\"CMsgGCNotificationsMarkReadRequest\"B\n&CMsgClientToGCMarkNotificationListRead\x12\x18\n\x10notification_ids\x18\x01 \x03(\x04\"\x9d\x01\n\x16\x43MsgGCLeagueAdminState\x12\x0f\n\x07leagues\x18\x01 \x03(\r\x12\x37\n\x04keys\x18\x02 \x03(\x0b\x32).CMsgGCLeagueAdminState.PrivateLeagueKeys\x1a\x39\n\x11PrivateLeagueKeys\x12\x10\n\x08leagueid\x18\x01 \x01(\r\x12\x12\n\nprivatekey\x18\x02 \x01(\r\".\n\x17\x43MsgGCPlayerInfoRequest\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"t\n\x16\x43MsgGCPlayerInfoSubmit\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x14\n\x0c\x66\x61ntasy_role\x18\x03 \x01(\r\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x0f\n\x07sponsor\x18\x05 \x01(\t\"\xa8\x01\n\x1e\x43MsgGCPlayerInfoSubmitResponse\x12@\n\x06result\x18\x01 \x01(\x0e\x32\'.CMsgGCPlayerInfoSubmitResponse.EResult:\x07SUCCESS\"D\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x15\n\x11\x45RROR_INFO_LOCKED\x10\x02\"\xfc\x02\n\x15\x43MsgSerializedSOCache\x12\x14\n\x0c\x66ile_version\x18\x01 \x01(\r\x12,\n\x06\x63\x61\x63hes\x18\x02 \x03(\x0b\x32\x1c.CMsgSerializedSOCache.Cache\x12\x1f\n\x17gc_socache_file_version\x18\x03 \x01(\r\x1a>\n\tTypeCache\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07objects\x18\x02 \x03(\x0c\x12\x12\n\nservice_id\x18\x03 \x01(\r\x1a\xbd\x01\n\x05\x43\x61\x63he\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\x12\x36\n\x08versions\x18\x03 \x03(\x0b\x32$.CMsgSerializedSOCache.Cache.Version\x12\x35\n\x0btype_caches\x18\x04 \x03(\x0b\x32 .CMsgSerializedSOCache.TypeCache\x1a+\n\x07Version\x12\x0f\n\x07service\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"#\n!CMsgRequestWeekendTourneySchedule\"\xad\x01\n\x1a\x43MsgWeekendTourneySchedule\x12\x37\n\tdivisions\x18\x01 \x03(\x0b\x32$.CMsgWeekendTourneySchedule.Division\x1aV\n\x08\x44ivision\x12\x15\n\rdivision_code\x18\x01 \x01(\r\x12\x18\n\x10time_window_open\x18\x02 \x01(\r\x12\x19\n\x11time_window_close\x18\x03 \x01(\r\"\xa6\x01\n\x1d\x43MsgClientProvideSurveyResult\x12:\n\tresponses\x18\x01 \x03(\x0b\x32\'.CMsgClientProvideSurveyResult.Response\x12\x12\n\nsurvey_key\x18\x02 \x01(\x04\x1a\x35\n\x08Response\x12\x13\n\x0bquestion_id\x18\x01 \x01(\r\x12\x14\n\x0csurvey_value\x18\x02 \x01(\r\"K\n\x19\x43MsgDOTAEmoticonAccessSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1a\n\x12unlocked_emoticons\x18\x02 \x01(\x0c\"#\n!CMsgClientToGCEmoticonDataRequest\"Q\n\x1a\x43MsgGCToClientEmoticonData\x12\x33\n\x0f\x65moticon_access\x18\x01 \x01(\x0b\x32\x1a.CMsgDOTAEmoticonAccessSDO\"C\n\x1f\x43MsgClientToGCTrackDialogResult\x12\x11\n\tdialog_id\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\"H\n CMsgGCToClientTournamentItemDrop\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x12\n\nevent_type\x18\x02 \x01(\r\"J\n!CMsgClientToGCSetAdditionalEquips\x12%\n\x06\x65quips\x18\x01 \x03(\x0b\x32\x15.CAdditionalEquipSlot\"+\n)CMsgClientToGCSetAdditionalEquipsResponse\"#\n!CMsgClientToGCGetAdditionalEquips\"R\n)CMsgClientToGCGetAdditionalEquipsResponse\x12%\n\x06\x65quips\x18\x01 \x03(\x0b\x32\x15.CAdditionalEquipSlot\"\x1f\n\x1d\x43MsgClientToGCGetAllHeroOrder\"9\n%CMsgClientToGCGetAllHeroOrderResponse\x12\x10\n\x08hero_ids\x18\x01 \x03(\r\"6\n CMsgClientToGCGetAllHeroProgress\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\x99\x04\n(CMsgClientToGCGetAllHeroProgressResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63urr_hero_id\x18\x02 \x01(\r\x12\x16\n\x0elaps_completed\x18\x03 \x01(\r\x12\x17\n\x0f\x63urr_hero_games\x18\x04 \x01(\r\x12\x1d\n\x15\x63urr_lap_time_started\x18\x05 \x01(\r\x12\x16\n\x0e\x63urr_lap_games\x18\x06 \x01(\r\x12\x16\n\x0e\x62\x65st_lap_games\x18\x07 \x01(\r\x12\x15\n\rbest_lap_time\x18\x08 \x01(\r\x12\x1c\n\x14lap_heroes_completed\x18\t \x01(\r\x12\x1c\n\x14lap_heroes_remaining\x18\n \x01(\r\x12\x14\n\x0cnext_hero_id\x18\x0b \x01(\r\x12\x14\n\x0cprev_hero_id\x18\x0c \x01(\r\x12\x17\n\x0fprev_hero_games\x18\r \x01(\r\x12\x16\n\x0eprev_avg_tries\x18\x0e \x01(\x02\x12\x16\n\x0e\x63urr_avg_tries\x18\x0f \x01(\x02\x12\x16\n\x0enext_avg_tries\x18\x10 \x01(\x02\x12\x1a\n\x12\x66ull_lap_avg_tries\x18\x11 \x01(\x02\x12\x1a\n\x12\x63urr_lap_avg_tries\x18\x12 \x01(\x02\x12\x14\n\x0cprofile_name\x18\x13 \x01(\t\x12\x15\n\rstart_hero_id\x18\x14 \x01(\r\"1\n\x1b\x43MsgClientToGCGetTrophyList\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd7\x01\n#CMsgClientToGCGetTrophyListResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12=\n\x08trophies\x18\x02 \x03(\x0b\x32+.CMsgClientToGCGetTrophyListResponse.Trophy\x12\x14\n\x0cprofile_name\x18\x03 \x01(\t\x1aG\n\x06Trophy\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x12\x14\n\x0clast_updated\x18\x03 \x01(\r\"v\n\x1b\x43MsgGCToClientTrophyAwarded\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x12\x18\n\x10trophy_old_score\x18\x03 \x01(\r\x12\x14\n\x0clast_updated\x18\x04 \x01(\r\"2\n\x1c\x43MsgClientToGCGetProfileCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd8\x01\n!CMsgClientToGCSetProfileCardSlots\x12:\n\x05slots\x18\x01 \x03(\x0b\x32+.CMsgClientToGCSetProfileCardSlots.CardSlot\x1aw\n\x08\x43\x61rdSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x46\n\tslot_type\x18\x02 \x01(\x0e\x32\x15.EProfileCardSlotType:\x1ck_EProfileCardSlotType_Empty\x12\x12\n\nslot_value\x18\x03 \x01(\x04\"#\n!CMsgClientToGCGetProfileCardStats\"\xd4\x01\n\x1e\x43MsgClientToGCCreateHeroStatue\x12\x13\n\x0bsource_item\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x15\n\rsequence_name\x18\x04 \x01(\t\x12\r\n\x05\x63ycle\x18\x05 \x01(\x02\x12\x11\n\twearables\x18\x06 \x03(\r\x12\x13\n\x0binscription\x18\x07 \x01(\t\x12\x0e\n\x06styles\x18\x08 \x03(\r\x12\x15\n\rreforger_item\x18\t \x01(\x04\x12\x17\n\x0ftournament_drop\x18\n \x01(\x08\"\xa6\x01\n CMsgClientToGCCreateTeamShowcase\x12\x13\n\x0bsource_item\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x15\n\rsequence_name\x18\x04 \x01(\t\x12\r\n\x05\x63ycle\x18\x05 \x01(\x02\x12\x11\n\twearables\x18\x06 \x03(\r\x12\x13\n\x0binscription\x18\x07 \x01(\t\x12\x0e\n\x06styles\x18\x08 \x03(\r\">\n$CMsgGCToClientHeroStatueCreateResult\x12\x16\n\x0eresulting_item\x18\x01 \x01(\x04\"@\n&CMsgGCToClientTeamShowcaseCreateResult\x12\x16\n\x0eresulting_item\x18\x01 \x01(\x04\"\x94\x01\n#CMsgClientToGCRecordCompendiumStats\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fview_duration_s\x18\x02 \x01(\r\x12\x15\n\rvideos_viewed\x18\x03 \x01(\r\x12\x12\n\npage_turns\x18\x04 \x01(\r\x12\x16\n\x0elinks_followed\x18\x05 \x01(\r\"B\n CMsgGCToClientEventStatusChanged\x12\x1e\n\ractive_events\x18\x01 \x03(\x0e\x32\x07.EEvent\"6\n CMsgClientToGCPlayerStatsRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xcf\x03\n!CMsgGCToClientPlayerStatsResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0cplayer_stats\x18\x02 \x03(\x02\x12\x13\n\x0bmatch_count\x18\x03 \x01(\r\x12\x10\n\x08mean_gpm\x18\x04 \x01(\x02\x12\x11\n\tmean_xppm\x18\x05 \x01(\x02\x12\x15\n\rmean_lasthits\x18\x06 \x01(\x02\x12\x10\n\x08rampages\x18\x07 \x01(\r\x12\x14\n\x0ctriple_kills\x18\x08 \x01(\r\x12\x1b\n\x13\x66irst_blood_claimed\x18\t \x01(\r\x12\x19\n\x11\x66irst_blood_given\x18\n \x01(\r\x12\x17\n\x0f\x63ouriers_killed\x18\x0b \x01(\r\x12\x18\n\x10\x61\x65gises_snatched\x18\x0c \x01(\r\x12\x15\n\rcheeses_eaten\x18\r \x01(\r\x12\x16\n\x0e\x63reeps_stacked\x18\x0e \x01(\r\x12\x13\n\x0b\x66ight_score\x18\x0f \x01(\x02\x12\x12\n\nfarm_score\x18\x10 \x01(\x02\x12\x15\n\rsupport_score\x18\x11 \x01(\x02\x12\x12\n\npush_score\x18\x12 \x01(\x02\x12\x19\n\x11versatility_score\x18\x13 \x01(\x02\"D\n*CMsgClientToGCCustomGamePlayerCountRequest\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\"t\n+CMsgGCToClientCustomGamePlayerCountResponse\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x14\n\x0cplayer_count\x18\x02 \x01(\x04\x12\x17\n\x0fspectator_count\x18\x03 \x01(\x04\"/\n-CMsgClientToGCCustomGamesFriendsPlayedRequest\"\xca\x01\n.CMsgGCToClientCustomGamesFriendsPlayedResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12I\n\x05games\x18\x02 \x03(\x0b\x32:.CMsgGCToClientCustomGamesFriendsPlayedResponse.CustomGame\x1a\x39\n\nCustomGame\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"O\n*CMsgClientToGCSocialFeedPostCommentRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\">\n+CMsgGCToClientSocialFeedPostCommentResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"h\n*CMsgClientToGCSocialFeedPostMessageRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x17\n\x0fmatch_timestamp\x18\x03 \x01(\r\">\n+CMsgGCToClientSocialFeedPostMessageResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"F\n,CMsgClientToGCFriendsPlayedCustomGameRequest\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\"\\\n-CMsgGCToClientFriendsPlayedCustomGameResponse\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"%\n#CMsgClientToGCFeaturedHeroesRequest\"\x91\x04\n$CMsgGCToClientFeaturedHeroesResponse\x12\x42\n\ncategories\x18\x01 \x03(\x0b\x32..CMsgGCToClientFeaturedHeroesResponse.Category\x1a\xad\x01\n\tDataField\x12I\n\tdata_type\x18\x01 \x01(\x0e\x32\x16.EFeaturedHeroDataType:\x1ek_EFeaturedHeroDataType_HeroID\x12\x14\n\x0cuint32_value\x18\x02 \x01(\r\x12\x14\n\x0cuint64_value\x18\x03 \x01(\x04\x12\x14\n\x0cstring_value\x18\x04 \x01(\t\x12\x13\n\x0b\x66loat_value\x18\x05 \x01(\x02\x1aT\n\x0c\x46\x65\x61turedHero\x12\x44\n\x0b\x64\x61ta_fields\x18\x01 \x03(\x0b\x32/.CMsgGCToClientFeaturedHeroesResponse.DataField\x1a\x9e\x01\n\x08\x43\x61tegory\x12\x17\n\x0f\x63\x61tegory_weight\x18\x01 \x01(\x05\x12,\n\x0btext_fields\x18\x02 \x03(\x0e\x32\x17.EFeaturedHeroTextField\x12K\n\x0f\x66\x65\x61tured_heroes\x18\x03 \x03(\x0b\x32\x32.CMsgGCToClientFeaturedHeroesResponse.FeaturedHero\"P\n+CMsgClientToGCSocialMatchPostCommentRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\"?\n,CMsgGCToClientSocialMatchPostCommentResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"Y\n\'CMsgClientToGCSocialMatchDetailsRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x1c\n\x14pagination_timestamp\x18\x02 \x01(\r\"\xd9\x01\n(CMsgGCToClientSocialMatchDetailsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x43\n\x08\x63omments\x18\x02 \x03(\x0b\x32\x31.CMsgGCToClientSocialMatchDetailsResponse.Comment\x1aW\n\x07\x43omment\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x0f\n\x07\x63omment\x18\x04 \x01(\t\"2\n\x1b\x43MsgDOTAPartyMemberSetCoach\x12\x13\n\x0bwants_coach\x18\x01 \x01(\x08\"4\n\x16\x43MsgDOTASetGroupLeader\x12\x1a\n\x12new_leader_steamid\x18\x01 \x01(\x06\"P\n\x1a\x43MsgDOTACancelGroupInvites\x12\x18\n\x10invited_steamids\x18\x01 \x03(\x06\x12\x18\n\x10invited_groupids\x18\x02 \x03(\x06\"*\n\x1a\x43MsgDOTASetGroupOpenStatus\x12\x0c\n\x04open\x18\x01 \x01(\x08\"2\n\x18\x43MsgDOTAGroupMergeInvite\x12\x16\n\x0eother_group_id\x18\x01 \x01(\x06\"H\n\x1a\x43MsgDOTAGroupMergeResponse\x12\x1a\n\x12initiator_group_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\"]\n\x17\x43MsgDOTAGroupMergeReply\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32\x16.EDOTAGroupMergeResult:\x1ak_EDOTAGroupMergeResult_OK\"\xde\x01\n\x19\x43MsgDOTAPartyRichPresence\x12\x10\n\x08party_id\x18\x01 \x01(\x06\x12,\n\x0bparty_state\x18\x02 \x01(\x0e\x32\x13.CSODOTAParty.State:\x02UI\x12\x0c\n\x04open\x18\x03 \x01(\x08\x12\x14\n\x0clow_priority\x18\x05 \x01(\x08\x12\x32\n\x07members\x18\x04 \x03(\x0b\x32!.CMsgDOTAPartyRichPresence.Member\x1a)\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\r\n\x05\x63oach\x18\x02 \x01(\x08\"\xfa\x01\n\x19\x43MsgDOTALobbyRichPresence\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12,\n\x0blobby_state\x18\x02 \x01(\x0e\x32\x13.CSODOTALobby.State:\x02UI\x12\x10\n\x08password\x18\x03 \x01(\x08\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x14\n\x0cmember_count\x18\x05 \x01(\r\x12\x18\n\x10max_member_count\x18\x06 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x06\x12\x0c\n\x04name\x18\x08 \x01(\t\"\x83\x01\n,CMsgDOTACustomGameListenServerStartedLoading\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x15\n\rlobby_members\x18\x03 \x03(\r\x12\x12\n\nstart_time\x18\x04 \x01(\r\"\xa9\x01\n\'CMsgDOTACustomGameClientFinishedLoading\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x18\n\x10loading_duration\x18\x02 \x01(\r\x12\x13\n\x0bresult_code\x18\x03 \x01(\x11\x12\x15\n\rresult_string\x18\x04 \x01(\t\x12\x15\n\rsignon_states\x18\x05 \x01(\r\x12\x0f\n\x07\x63omment\x18\x06 \x01(\t\"2\n\x1d\x43MsgClientToGCGetLeagueSeries\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xb2\x03\n%CMsgClientToGCGetLeagueSeriesResponse\x12=\n\x06series\x18\x01 \x03(\x0b\x32-.CMsgClientToGCGetLeagueSeriesResponse.Series\x1a\xc9\x02\n\x06Series\x12\x11\n\tseries_id\x18\x01 \x01(\r\x12\x11\n\tnum_games\x18\x02 \x01(\r\x12\x41\n\x05teams\x18\x03 \x03(\x0b\x32\x32.CMsgClientToGCGetLeagueSeriesResponse.Series.Team\x12\x13\n\x0bseries_name\x18\x04 \x01(\t\x12\x12\n\nphase_name\x18\x05 \x01(\t\x12\x12\n\nstart_time\x18\x06 \x01(\r\x12\x17\n\x0f\x61\x66ter_series_id\x18\x07 \x01(\r\x12\x1b\n\x13num_completed_games\x18\x08 \x01(\r\x1a\x63\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x12\n\nteam_score\x18\x04 \x01(\r\x12\x11\n\tteam_wins\x18\x05 \x01(\r\"F\n\x1e\x43MsgClientToGCApplyGemCombiner\x12\x11\n\titem_id_1\x18\x01 \x01(\x04\x12\x11\n\titem_id_2\x18\x02 \x01(\x04\"\x95\x01\n\x14\x43\x44ummyUnbreakMessage\x12\x31\n\x0b\x64ummy_field\x18\x01 \x01(\x0b\x32\x1c.CMsgDOTAClearTournamentGame\x12J\n\x13\x61nother_dummy_field\x18\x02 \x01(\x0e\x32\x11.ETournamentState:\x1ak_ETournamentState_Unknown\"\xcc\x01\n\x17\x43\x44OTAReplayDownloadInfo\x12$\n\x05match\x18\x01 \x01(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\r\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12\x16\n\x0e\x65xists_on_disk\x18\x06 \x01(\x08\x1a\x33\n\tHighlight\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x82\x02\n\x14\x43\x44OTABroadcasterInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x02 \x01(\x06\x12\x0c\n\x04live\x18\x03 \x01(\x08\x12\x19\n\x11team_name_radiant\x18\x04 \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x05 \x01(\t\x12\x12\n\nstage_name\x18\x06 \x01(\t\x12\x13\n\x0bseries_game\x18\x07 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12$\n\x1cupcoming_broadcast_timestamp\x18\t \x01(\r\x12\x18\n\x10\x61llow_live_video\x18\n \x01(\x08\"\x1f\n\x1d\x43MsgClientToGCH264Unsupported\"\"\n CMsgClientToGCRequestH264Support\"3\n\x1e\x43MsgClientToGCGetQuestProgress\x12\x11\n\tquest_ids\x18\x01 \x03(\r\"\xda\x02\n&CMsgClientToGCGetQuestProgressResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12=\n\x06quests\x18\x02 \x03(\x0b\x32-.CMsgClientToGCGetQuestProgressResponse.Quest\x1at\n\tChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\x12\x16\n\x0etime_completed\x18\x02 \x01(\r\x12\x10\n\x08\x61ttempts\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_type\x18\x05 \x01(\r\x1aj\n\x05Quest\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12O\n\x14\x63ompleted_challenges\x18\x02 \x03(\x0b\x32\x31.CMsgClientToGCGetQuestProgressResponse.Challenge\"0\n\x1c\x43MsgGCToClientMatchSignedOut\x12\x10\n\x08match_id\x18\x01 \x01(\x04\",\n\x19\x43MsgGCGetHeroStatsHistory\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"c\n!CMsgGCGetHeroStatsHistoryResponse\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12-\n\x07records\x18\x02 \x03(\x0b\x32\x1c.CMsgDOTASDOHeroStatsHistory\"`\n\x1f\x43MsgClientToGCPrivateChatInvite\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12invited_account_id\x18\x02 \x01(\r\"[\n\x1d\x43MsgClientToGCPrivateChatKick\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x17\n\x0fkick_account_id\x18\x02 \x01(\r\"a\n CMsgClientToGCPrivateChatPromote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12promote_account_id\x18\x02 \x01(\r\"_\n\x1f\x43MsgClientToGCPrivateChatDemote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x19\n\x11\x64\x65mote_account_id\x18\x02 \x01(\r\"\xbd\x04\n!CMsgGCToClientPrivateChatResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x42\n\x06result\x18\x02 \x01(\x0e\x32).CMsgGCToClientPrivateChatResponse.Result:\x07SUCCESS\x12\x10\n\x08username\x18\x03 \x01(\t\"\x9e\x03\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x19\n\x15\x46\x41ILURE_CREATION_LOCK\x10\x01\x12\x1b\n\x17\x46\x41ILURE_SQL_TRANSACTION\x10\x02\x12\x14\n\x10\x46\x41ILURE_SDO_LOAD\x10\x03\x12\x19\n\x15\x46\x41ILURE_NO_PERMISSION\x10\x04\x12\x1a\n\x16\x46\x41ILURE_ALREADY_MEMBER\x10\x05\x12\x18\n\x14\x46\x41ILURE_NOT_A_MEMBER\x10\x07\x12\x1f\n\x1b\x46\x41ILURE_NO_REMAINING_ADMINS\x10\x08\x12\x13\n\x0f\x46\x41ILURE_NO_ROOM\x10\t\x12!\n\x1d\x46\x41ILURE_CREATION_RATE_LIMITED\x10\n\x12 \n\x1c\x46\x41ILURE_UNKNOWN_CHANNEL_NAME\x10\x0b\x12\x18\n\x14\x46\x41ILURE_UNKNOWN_USER\x10\x0c\x12\x19\n\x15\x46\x41ILURE_UNKNOWN_ERROR\x10\r\x12\x1d\n\x19\x46\x41ILURE_CANNOT_KICK_ADMIN\x10\x0e\x12\x19\n\x15\x46\x41ILURE_ALREADY_ADMIN\x10\x0f\"I\n$CMsgClientToGCPrivateChatInfoRequest\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\"\xee\x01\n%CMsgGCToClientPrivateChatInfoResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12>\n\x07members\x18\x02 \x03(\x0b\x32-.CMsgGCToClientPrivateChatInfoResponse.Member\x12\x0f\n\x07\x63reator\x18\x03 \x01(\r\x12\x15\n\rcreation_date\x18\x04 \x01(\r\x1a:\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\r\"#\n!CMsgPlayerConductScorecardRequest\"\xb3\x02\n\x1a\x43MsgPlayerConductScorecard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x0f\n\x07seq_num\x18\x03 \x01(\r\x12\x0f\n\x07reasons\x18\x04 \x01(\r\x12\x19\n\x11matches_in_report\x18\x05 \x01(\r\x12\x15\n\rmatches_clean\x18\x06 \x01(\r\x12\x18\n\x10matches_reported\x18\x07 \x01(\r\x12\x19\n\x11matches_abandoned\x18\x08 \x01(\r\x12\x15\n\rreports_count\x18\t \x01(\r\x12\x17\n\x0freports_parties\x18\n \x01(\r\x12\x15\n\rcommend_count\x18\x0b \x01(\r\x12\x11\n\tend_score\x18\r \x01(\r\x12\x0c\n\x04\x64\x61te\x18\x0e \x01(\r\"1\n\x1d\x43MsgClientToGCWageringRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"\xc1\x01\n\x1e\x43MsgGCToClientWageringResponse\x12\x17\n\x0f\x63oins_remaining\x18\x01 \x01(\r\x12\x18\n\x10total_points_won\x18\x02 \x01(\r\x12\x1c\n\x14total_points_wagered\x18\x03 \x01(\r\x12\x1b\n\x13total_points_tipped\x18\x04 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x05 \x01(\r\x12\x1b\n\x13total_games_wagered\x18\x06 \x01(\r\"@\n\x19\x43MsgClientToGCMysteryItem\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x11\n\taction_id\x18\x02 \x01(\r\"\x95\x03\n!CMsgGCToClientMysteryItemResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).CMsgGCToClientMysteryItemResponse.Result:\x07SUCCESS\x12\x13\n\x0breward_type\x18\x02 \x01(\r\x12\x0f\n\x07itemdef\x18\x03 \x01(\r\"\x85\x02\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x14\n\x10\x46\x41ILURE_SDO_LOAD\x10\x01\x12\x16\n\x12\x46\x41ILURE_NO_ACTIONS\x10\x02\x12\x17\n\x13\x46\x41ILURE_NO_LOOTLIST\x10\x03\x12\x1a\n\x16\x46\x41ILURE_EMPTY_LOOTLIST\x10\x04\x12\x1d\n\x19\x46\x41ILURE_NO_ITEM_GENERATED\x10\x05\x12\x16\n\x12\x46\x41ILURE_SQL_COMMIT\x10\x06\x12\x1b\n\x17\x46\x41ILURE_EVENT_NOT_OWNED\x10\x07\x12\x1a\n\x16\x46\x41ILURE_INVALID_ACTION\x10\x08\x12\x1b\n\x17\x46\x41ILURE_ALREADY_GRANTED\x10\t\"9\n\x1b\x43MsgClientToGCGetEventGoals\x12\x1a\n\tevent_ids\x18\x01 \x03(\x0e\x32\x07.EEvent\"\x97\x01\n\x0e\x43MsgEventGoals\x12.\n\x0b\x65vent_goals\x18\x01 \x03(\x0b\x32\x19.CMsgEventGoals.EventGoal\x1aU\n\tEventGoal\x12(\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x07.EEvent:\rEVENT_ID_NONE\x12\x0f\n\x07goal_id\x18\x02 \x01(\r\x12\r\n\x05value\x18\x03 \x01(\x04\"0\n\x1b\x43MsgGCToGCLeaguePredictions\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\x9c\x02\n\x16\x43MsgPredictionRankings\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\".CMsgPredictionRankings.Prediction\x1a\x63\n\x0ePredictionLine\x12\x11\n\tanswer_id\x18\x01 \x01(\r\x12\x13\n\x0b\x61nswer_name\x18\x02 \x01(\t\x12\x13\n\x0b\x61nswer_logo\x18\x03 \x01(\x04\x12\x14\n\x0c\x61nswer_value\x18\x04 \x01(\x02\x1a\x64\n\nPrediction\x12\x14\n\x0cselection_id\x18\x01 \x01(\r\x12@\n\x10prediction_lines\x18\x02 \x03(\x0b\x32&.CMsgPredictionRankings.PredictionLine\"\xec\x01\n\x15\x43MsgPredictionResults\x12.\n\x07results\x18\x01 \x03(\x0b\x32\x1d.CMsgPredictionResults.Result\x1a\x41\n\x0fResultBreakdown\x12\x18\n\x10\x61nswer_selection\x18\x02 \x01(\r\x12\x14\n\x0c\x61nswer_value\x18\x03 \x01(\x02\x1a`\n\x06Result\x12\x14\n\x0cselection_id\x18\x01 \x01(\r\x12@\n\x10result_breakdown\x18\x02 \x03(\x0b\x32&.CMsgPredictionResults.ResultBreakdown\"4\n CMsgClientToGCSuspiciousActivity\x12\x10\n\x08\x61pp_data\x18\x01 \x01(\x04\"6\n\"CMsgClientToGCHasPlayerVotedForMVP\x12\x10\n\x08match_id\x18\x01 \x01(\x04\"<\n*CMsgClientToGCHasPlayerVotedForMVPResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"@\n\x18\x43MsgClientToGCVoteForMVP\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x03 \x01(\r\"2\n CMsgClientToGCVoteForMVPResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"w\n\x14\x43MsgMVPVotesForMatch\x12-\n\x07players\x18\x01 \x03(\x0b\x32\x1c.CMsgMVPVotesForMatch.Player\x1a\x30\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nvote_count\x18\x02 \x01(\r*\x95\x01\n\x17\x45MatchGroupServerStatus\x12 \n\x1ck_EMatchGroupServerStatus_OK\x10\x00\x12\x31\n-k_EMatchGroupServerStatus_LimitedAvailability\x10\x01\x12%\n!k_EMatchGroupServerStatus_Offline\x10\x02*V\n\x14\x44OTA_WatchReplayType\x12\x1c\n\x18\x44OTA_WATCH_REPLAY_NORMAL\x10\x00\x12 \n\x1c\x44OTA_WATCH_REPLAY_HIGHLIGHTS\x10\x01*\xd1\x01\n\x1c\x45ItemEditorReservationResult\x12%\n!k_EItemEditorReservationResult_OK\x10\x01\x12\x30\n,k_EItemEditorReservationResult_AlreadyExists\x10\x02\x12+\n\'k_EItemEditorReservationResult_Reserved\x10\x03\x12+\n\'k_EItemEditorReservationResult_TimedOut\x10\x04*\xe3\x01\n\x14\x45ProfileCardSlotType\x12 \n\x1ck_EProfileCardSlotType_Empty\x10\x00\x12\x1f\n\x1bk_EProfileCardSlotType_Stat\x10\x01\x12!\n\x1dk_EProfileCardSlotType_Trophy\x10\x02\x12\x1f\n\x1bk_EProfileCardSlotType_Item\x10\x03\x12\x1f\n\x1bk_EProfileCardSlotType_Hero\x10\x04\x12#\n\x1fk_EProfileCardSlotType_Emoticon\x10\x05*\x92\x04\n\x16\x45\x46\x65\x61turedHeroTextField\x12$\n k_EFeaturedHeroTextField_NewHero\x10\x00\x12$\n k_EFeaturedHeroTextField_NewItem\x10\x01\x12/\n+k_EFeaturedHeroTextField_ItemSetDescription\x10\x02\x12,\n(k_EFeaturedHeroTextField_ItemDescription\x10\x03\x12!\n\x1dk_EFeaturedHeroTextField_Hype\x10\x04\x12(\n$k_EFeaturedHeroTextField_HeroWinLoss\x10\x05\x12\x31\n-k_EFeaturedHeroTextField_FrequentlyPlayedHero\x10\x06\x12)\n%k_EFeaturedHeroTextField_FeaturedItem\x10\x07\x12(\n$k_EFeaturedHeroTextField_PopularItem\x10\x08\x12%\n!k_EFeaturedHeroTextField_SaleItem\x10\t\x12)\n%k_EFeaturedHeroTextField_SaleDiscount\x10\n\x12&\n\"k_EFeaturedHeroTextField_Container\x10\x0b*\x87\x03\n\x15\x45\x46\x65\x61turedHeroDataType\x12\"\n\x1ek_EFeaturedHeroDataType_HeroID\x10\x00\x12#\n\x1fk_EFeaturedHeroDataType_ItemDef\x10\x01\x12&\n\"k_EFeaturedHeroDataType_HypeString\x10\x02\x12*\n&k_EFeaturedHeroDataType_StartTimestamp\x10\x03\x12+\n\'k_EFeaturedHeroDataType_ExpireTimestamp\x10\x04\x12$\n k_EFeaturedHeroDataType_HeroWins\x10\x05\x12&\n\"k_EFeaturedHeroDataType_HeroLosses\x10\x06\x12(\n$k_EFeaturedHeroDataType_SaleDiscount\x10\x07\x12,\n(k_EFeaturedHeroDataType_ContainerItemDef\x10\x08*\xc7\x03\n\x15\x45\x44OTAGroupMergeResult\x12\x1e\n\x1ak_EDOTAGroupMergeResult_OK\x10\x00\x12*\n&k_EDOTAGroupMergeResult_FAILED_GENERIC\x10\x01\x12&\n\"k_EDOTAGroupMergeResult_NOT_LEADER\x10\x02\x12,\n(k_EDOTAGroupMergeResult_TOO_MANY_PLAYERS\x10\x03\x12,\n(k_EDOTAGroupMergeResult_TOO_MANY_COACHES\x10\x04\x12+\n\'k_EDOTAGroupMergeResult_ENGINE_MISMATCH\x10\x05\x12)\n%k_EDOTAGroupMergeResult_NO_SUCH_GROUP\x10\x06\x12\x30\n,k_EDOTAGroupMergeResult_OTHER_GROUP_NOT_OPEN\x10\x07\x12+\n\'k_EDOTAGroupMergeResult_ALREADY_INVITED\x10\x08\x12\'\n#k_EDOTAGroupMergeResult_NOT_INVITED\x10\tB\x05H\x01\x80\x01\x00')
+  serialized_pb='\n\x1c\x64ota_gcmessages_client.proto\x1a\x13steammessages.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x1c\x64ota_gcmessages_common.proto\x1a\x16gcsdk_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"\'\n\x13\x43MsgClientSuspended\x12\x10\n\x08time_end\x18\x01 \x01(\r\" \n\x1e\x43MsgRequestInternationalTicket\"\x1a\n\x18\x43MsgBalancedShuffleLobby\"9\n CMsgInitialQuestionnaireResponse\x12\x15\n\rinitial_skill\x18\x01 \x01(\r\"/\n\x1a\x43MsgDOTAPlayerMatchHistory\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"o\n\x1a\x43MsgDOTAMatchHistoryFilter\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\x12%\n\x1dnewest_match_id_at_last_query\x18\x02 \x01(\x04\x12\x17\n\x0ftime_last_query\x18\x03 \x01(\r\"\xa1\x03\n\x16\x43MsgDOTARequestMatches\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x11\n\tgame_mode\x18\x03 \x01(\r\x12\x10\n\x08\x64\x61te_min\x18\x06 \x01(\x07\x12\x10\n\x08\x64\x61te_max\x18\x07 \x01(\x07\x12\x19\n\x11matches_requested\x18\n \x01(\r\x12\x19\n\x11start_at_match_id\x18\x0b \x01(\x04\x12\x13\n\x0bmin_players\x18\x0c \x01(\x07\x12\x12\n\nrequest_id\x18\r \x01(\r\x12\x1d\n\x15tournament_games_only\x18\x0e \x01(\x08\x12\x12\n\naccount_id\x18\x0f \x01(\r\x12\x11\n\tleague_id\x18\x10 \x01(\r\x12\x36\n\x05skill\x18\x11 \x01(\x0e\x32\".CMsgDOTARequestMatches.SkillLevel:\x03\x41ny\x12\x0f\n\x07team_id\x18\x12 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x14 \x01(\x04\"9\n\nSkillLevel\x12\x07\n\x03\x41ny\x10\x00\x12\n\n\x06Normal\x10\x01\x12\x08\n\x04High\x10\x02\x12\x0c\n\x08VeryHigh\x10\x03\"\x92\x02\n\x1e\x43MsgDOTARequestMatchesResponse\x12\x1f\n\x07matches\x18\x01 \x03(\x0b\x32\x0e.CMsgDOTAMatch\x12\x36\n\x06series\x18\x02 \x03(\x0b\x32&.CMsgDOTARequestMatchesResponse.Series\x12\x12\n\nrequest_id\x18\x03 \x01(\r\x12\x15\n\rtotal_results\x18\x04 \x01(\r\x12\x19\n\x11results_remaining\x18\x05 \x01(\r\x1aQ\n\x06Series\x12\x1f\n\x07matches\x18\x01 \x03(\x0b\x32\x0e.CMsgDOTAMatch\x12\x11\n\tseries_id\x18\x02 \x01(\r\x12\x13\n\x0bseries_type\x18\x03 \x01(\r\"\xc9\x0c\n\rCMsgDOTAPopup\x12(\n\x02id\x18\x01 \x01(\x0e\x32\x16.CMsgDOTAPopup.PopupID:\x04NONE\x12\x13\n\x0b\x63ustom_text\x18\x02 \x01(\t\x12\x10\n\x08int_data\x18\x03 \x01(\x11\x12\x12\n\npopup_data\x18\x04 \x01(\x0c\"\xd2\x0b\n\x07PopupID\x12\x11\n\x04NONE\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x15\n\x11KICKED_FROM_LOBBY\x10\x00\x12\x15\n\x11KICKED_FROM_PARTY\x10\x01\x12\x14\n\x10KICKED_FROM_TEAM\x10\x02\x12\x16\n\x12TEAM_WAS_DISBANDED\x10\x03\x12 \n\x1cTEAM_MATCHMAKE_ALREADY_MATCH\x10\x04\x12\"\n\x1eTEAM_MATCHMAKE_ALREADY_FINDING\x10\x05\x12\x17\n\x13TEAM_MATCHMAKE_FULL\x10\x06\x12\x1b\n\x17TEAM_MATCHMAKE_FAIL_ADD\x10\x07\x12#\n\x1fTEAM_MATCHMAKE_FAIL_ADD_CURRENT\x10\x08\x12%\n!TEAM_MATCHMAKE_FAILED_TEAM_MEMBER\x10\t\x12\x1f\n\x1bTEAM_MATCHMAKE_ALREADY_GAME\x10\n\x12!\n\x1dTEAM_MATCHMAKE_FAIL_GET_PARTY\x10\x0b\x12\x18\n\x14MATCHMAKING_DISABLED\x10\x0c\x12\x11\n\rINVITE_DENIED\x10\r\x12\x0e\n\nPARTY_FULL\x10\x0e\x12\x0e\n\nMADE_ADMIN\x10\x0f\x12\x14\n\x10NEED_TO_PURCHASE\x10\x10\x12\x12\n\x0eSIGNON_MESSAGE\x10\x11\x12\x10\n\x0cGUILD_KICKED\x10\x12\x12\x1e\n\x1aMATCHMAKING_REGION_OFFLINE\x10\x13\x12\x1d\n\x19TOURNAMENT_GAME_NOT_FOUND\x10\x15\x12 \n\x1cTOURNAMENT_GAME_HAS_LOBBY_ID\x10\x16\x12 \n\x1cTOURNAMENT_GAME_HAS_MATCH_ID\x10\x17\x12\'\n#TOURNAMENT_GAME_HAS_NO_RADIANT_TEAM\x10\x18\x12$\n TOURNAMENT_GAME_HAS_NO_DIRE_TEAM\x10\x19\x12%\n!TOURNAMENT_GAME_SQL_UPDATE_FAILED\x10\x1a\x12\x14\n\x10NOT_LEAGUE_ADMIN\x10\x1b\x12 \n\x1cPARTY_MEMBER_IN_ANOTHER_GAME\x10\x1e\x12 \n\x1cPARTY_MEMBER_IN_LOW_PRIORITY\x10\x1f\x12\x16\n\x12\x43LIENT_OUT_OF_DATE\x10 \x12\x15\n\x11SAVE_GAME_CORRUPT\x10&\x12\x17\n\x13INSUFFICIENT_INGOTS\x10\'\x12\x39\n5COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_PLAY_MORE_CASUAL\x10*\x12\x1d\n\x19PARTY_LEADER_JOINED_LOBBY\x10,\x12\x1d\n\x19WEEKEND_TOURNEY_UNMATCHED\x10\x30\x12\x15\n\x11POST_MATCH_SURVEY\x10\x31\x12\x12\n\x0eTROPHY_AWARDED\x10\x32\x12\x13\n\x0fTROPHY_LEVEL_UP\x10\x33\x12\x1f\n\x1b\x41LL_HERO_CHALLENGE_PROGRESS\x10\x34\x12\x16\n\x12NEED_INITIAL_SKILL\x10\x35\x12\x1f\n\x1bNEED_INITIAL_SKILL_IN_PARTY\x10\x36\x12\x1a\n\x16TARGET_ENGINE_MISMATCH\x10\x37\x12\x14\n\x10VAC_NOT_VERIFIED\x10\x38\x12$\n KICKED_FROM_QUEUE_EVENT_STARTING\x10\x39\x12\"\n\x1eKICKED_FROM_QUEUE_EVENT_ENDING\x10:\x12\x0e\n\nLOBBY_FULL\x10>\x12\x17\n\x13\x45VENT_POINTS_EARNED\x10?\x12!\n\x1d\x43USTOM_GAME_INCORRECT_VERSION\x10@\x12\x15\n\x11LIMITED_USER_CHAT\x10\x42\x12\x1f\n\x1b\x45VENT_PREMIUM_POINTS_EARNED\x10\x43\x12\x15\n\x11LOBBY_MVP_AWARDED\x10\x44\"!\n\x1f\x43MsgDOTAReportsRemainingRequest\"\xba\x01\n CMsgDOTAReportsRemainingResponse\x12&\n\x1enum_positive_reports_remaining\x18\x01 \x01(\r\x12&\n\x1enum_negative_reports_remaining\x18\x02 \x01(\r\x12\"\n\x1anum_positive_reports_total\x18\x03 \x01(\r\x12\"\n\x1anum_negative_reports_total\x18\x04 \x01(\r\"^\n\x1a\x43MsgDOTASubmitPlayerReport\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x14\n\x0creport_flags\x18\x02 \x01(\r\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\"e\n\"CMsgDOTASubmitPlayerReportResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x14\n\x0creport_flags\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\"8\n\x1b\x43MsgDOTAReportCountsRequest\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\"\x9c\x01\n\x1c\x43MsgDOTAReportCountsResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x18\n\x10leadership_count\x18\x02 \x01(\r\x12\x16\n\x0eteaching_count\x18\x03 \x01(\r\x12\x16\n\x0e\x66riendly_count\x18\x04 \x01(\r\x12\x17\n\x0f\x66orgiving_count\x18\x05 \x01(\r\"7\n\x1a\x43MsgDOTASubmitLobbyMVPVote\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\"P\n\"CMsgDOTASubmitLobbyMVPVoteResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\"j\n\x1f\x43MsgDOTALobbyMVPNotifyRecipient\x12\x18\n\x10voter_account_id\x18\x01 \x01(\r\x12\x11\n\tnum_votes\x18\x02 \x01(\r\x12\x1a\n\x12voter_persona_name\x18\x03 \x01(\t\"1\n\x17\x43MsgDOTALobbyMVPAwarded\x12\x16\n\x0emvp_account_id\x18\x01 \x01(\r\"W\n\"CMsgDOTAKickedFromMatchmakingQueue\x12\x31\n\nmatch_type\x18\x01 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\"1\n\x18\x43MsgDOTARequestSaveGames\x12\x15\n\rserver_region\x18\x01 \x01(\r\"X\n CMsgDOTARequestSaveGamesResponse\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\"\n\nsave_games\x18\x02 \x03(\x0b\x32\x0e.CDOTASaveGame\"-\n\x19\x43MsgGCMatchDetailsRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\"\x80\x01\n\x1a\x43MsgGCMatchDetailsResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x1d\n\x05match\x18\x02 \x01(\x0b\x32\x0e.CMsgDOTAMatch\x12\x33\n\x04vote\x18\x03 \x01(\x0e\x32\x0e.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\"6\n!CMsgServerToGCMatchDetailsRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"E\n\"CMsgGCToServerMatchDetailsResponse\x12\x1f\n\x07matches\x18\x01 \x03(\x0b\x32\x0e.CMsgDOTAMatch\"q\n\x16\x43MsgDOTAProfileRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0crequest_name\x18\x02 \x01(\x08\x12-\n\x06\x65ngine\x18\x03 \x01(\x0e\x32\x0e.ESourceEngine:\rk_ESE_Source1\"\xc2\x06\n\x17\x43MsgDOTAProfileResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x36\n\x13game_account_client\x18\x02 \x01(\x0b\x32\x19.CSODOTAGameAccountClient\x12&\n\x0elatest_matches\x18\x03 \x03(\x0b\x32\x0e.CMsgDOTAMatch\x12\x33\n\x06heroes\x18\x04 \x03(\x0b\x32#.CMsgDOTAProfileResponse.PlayedHero\x12\x13\n\x0bplayer_name\x18\x05 \x01(\t\x12\x11\n\tteam_name\x18\x06 \x01(\t\x12\x10\n\x08team_tag\x18\x07 \x01(\t\x12\x11\n\tteam_logo\x18\x08 \x01(\x04\x12<\n\rshowcase_hero\x18\t \x01(\x0b\x32%.CMsgDOTAProfileResponse.ShowcaseHero\x12:\n\rleague_passes\x18\n \x03(\x0b\x32#.CMsgDOTAProfileResponse.LeaguePass\x12;\n\revent_tickets\x18\x0b \x03(\x0b\x32$.CMsgDOTAProfileResponse.EventTicket\x12\x0f\n\x07team_id\x18\x0c \x01(\r\x12\x14\n\x0chas_passport\x18\r \x01(\x08\x12=\n\x0e\x66\x65\x61tured_items\x18\x0e \x03(\x0b\x32%.CMsgDOTAProfileResponse.FeaturedItem\x12\x17\n\x0f\x61\x62\x61ndon_percent\x18\x0f \x01(\r\x1a+\n\nPlayedHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0c\n\x04wins\x18\x02 \x01(\r\x1a\x34\n\x0cShowcaseHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bobject_data\x18\x02 \x03(\x0c\x1a\x31\n\nLeaguePass\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x1a\x1f\n\x0b\x45ventTicket\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x1aH\n\x0c\x46\x65\x61turedItem\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x13\n\x0bobject_data\x18\x02 \x01(\x0c\x12\x12\n\nslot_index\x18\x03 \x01(\r\"\x87\x02\n\x16\x43MsgDOTAProfileTickets\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12\x39\n\rleague_passes\x18\x03 \x03(\x0b\x32\".CMsgDOTAProfileTickets.LeaguePass\x12:\n\revent_tickets\x18\x04 \x03(\x0b\x32#.CMsgDOTAProfileTickets.EventTicket\x1a\x31\n\nLeaguePass\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x1a\x1f\n\x0b\x45ventTicket\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"5\n\x1f\x43MsgClientToGCGetProfileTickets\x12\x12\n\naccount_id\x18\x01 \x01(\r\"/\n\x19\x43MsgGCSteamProfileRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\"3\n!CMsgGCSteamProfileRequestResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"%\n#CMsgDOTAClearNotifySuccessfulReport\"\xa7\x07\n\x0f\x43MsgDOTAWelcome\x12\x17\n\x0fstore_item_hash\x18\x05 \x01(\r\x12\x1f\n\x17timeplayedconsecutively\x18\x06 \x01(\r\x12%\n\x1d\x61llow_3rd_party_match_history\x18\x07 \x01(\x08\x12?\n\x14partner_account_type\x18\x08 \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12 \n\x18\x62\x61nned_word_list_word_id\x18\t \x01(\r\x12\x1d\n\x15partner_account_state\x18\x0b \x01(\r\x12\x18\n\x10last_time_played\x18\x0c \x01(\r\x12\x17\n\x0flast_ip_address\x18\r \x01(\r\x12#\n\x1bshutdownlawterminateminutes\x18\x0f \x01(\r\x12 \n\x18\x62\x61nned_word_list_version\x18\x10 \x01(\r\x12\x17\n\x0fprofile_private\x18\x11 \x01(\x08\x12\x10\n\x08\x63urrency\x18\x12 \x01(\r\x12\x0f\n\x07\x62\x61ng_no\x18\x13 \x01(\r\x12$\n\x1cshould_request_player_origin\x18\x14 \x01(\x08\x12\x1a\n\x12\x63ompendium_unlocks\x18\x15 \x01(\x04\x12\x1f\n\x17gc_socache_file_version\x18\x16 \x01(\r\x12\x41\n\x14localization_digests\x18\x17 \x03(\x0b\x32#.CMsgDOTAWelcome.LocalizationDigest\x12%\n\x1dis_perfect_world_test_account\x18\x18 \x01(\x08\x12\x1e\n\ractive_events\x18\x19 \x03(\x0e\x32\x07.EEvent\x12\x32\n\x0e\x65xtra_messages\x18\x1a \x03(\x0b\x32\x1a.CMsgDOTAWelcome.CExtraMsg\x12\x1e\n\x16minimum_recent_item_id\x18\x1b \x01(\x04\x1a\x8e\x01\n\x12LocalizationDigest\x12\x0f\n\x07\x63ontext\x18\x01 \x01(\t\x12\x33\n\x1a\x65nglish_language_file_sha1\x18\x02 \x01(\x0b\x32\x0f.CMsgSHA1Digest\x12\x32\n\x19\x63lient_language_file_sha1\x18\x03 \x01(\x0b\x32\x0f.CMsgSHA1Digest\x1a)\n\tCExtraMsg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63ontents\x18\x02 \x01(\x0c\"K\n\x18\x43SODOTAGameHeroFavorites\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\xa6\x1d\x01\x12\x15\n\x07hero_id\x18\x02 \x01(\rB\x04\x80\xa6\x1d\x01\"+\n\x18\x43MsgDOTAHeroFavoritesAdd\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\".\n\x1b\x43MsgDOTAHeroFavoritesRemove\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"/\n\x13\x43MsgSetShowcaseHero\x12\x18\n\x10showcase_hero_id\x18\x01 \x01(\r\"0\n\x14\x43MsgSetFeaturedItems\x12\x18\n\x10\x66\x65\x61tured_item_id\x18\x01 \x03(\x04\"Z\n\x15\x43MsgDOTAFeaturedItems\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10\x66\x65\x61tured_item_id\x18\x02 \x03(\x04\x12\x13\n\x0bobject_data\x18\x03 \x03(\x0c\"\x17\n\x15\x43MsgRequestLeagueInfo\"\xd0\x01\n\x12\x43\x44ynamicLeagueData\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0flast_match_time\x18\x02 \x01(\x07\x12\x16\n\x0eprize_pool_usd\x18\x03 \x01(\r\x12\x18\n\x10has_live_matches\x18\x04 \x01(\x08\x12\x1c\n\x14is_compendium_public\x18\x05 \x01(\x08\x12\x1a\n\x12\x63ompendium_version\x18\x06 \x01(\r\x12\"\n\x1a\x63ompendium_content_version\x18\x07 \x01(\r\"\xb6\x03\n\x11\x43StaticLeagueData\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0b\x62\x61nner_name\x18\x04 \x01(\t\x12\x14\n\x0citemdef_name\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x16\n\x0eitem_def_index\x18\x07 \x01(\r\x12\x1f\n\x17hud_skin_item_def_index\x18\x08 \x01(\r\x12\x1b\n\x13loading_screen_name\x18\t \x01(\t\x12\x17\n\x0f\x62\x61se_prize_pool\x18\n \x01(\r\x12\x10\n\x08is_major\x18\x0b \x01(\x08\x12\x12\n\nsort_order\x18\x0c \x01(\r\x12\x0c\n\x04tier\x18\r \x01(\r\x12\x16\n\x0e\x61mateur_region\x18\x0e \x01(\r\x12\x11\n\torganizer\x18\x0f \x01(\t\x12\x12\n\nstart_date\x18\x10 \x01(\r\x12\x10\n\x08\x65nd_date\x18\x11 \x01(\r\x12\x10\n\x08location\x18\x12 \x01(\t\x12\x17\n\x0finventory_image\x18\x13 \x01(\t\x12\x14\n\x0csquare_image\x18\x14 \x01(\t\"s\n\x0b\x43LeagueData\x12)\n\x0c\x64ynamic_data\x18\x01 \x01(\x0b\x32\x13.CDynamicLeagueData\x12\'\n\x0bstatic_data\x18\x02 \x01(\x0b\x32\x12.CStaticLeagueData\x12\x10\n\x08is_owned\x18\x03 \x01(\x08\">\n\x16\x43MsgResponseLeagueInfo\x12$\n\x07leagues\x18\x01 \x03(\x0b\x32\x13.CDynamicLeagueData\"\x85\x01\n\x12\x43MsgDOTAMatchVotes\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12-\n\x05votes\x18\x02 \x03(\x0b\x32\x1e.CMsgDOTAMatchVotes.PlayerVote\x1a.\n\nPlayerVote\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04vote\x18\x02 \x01(\r\"Z\n\x11\x43MsgCastMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x33\n\x04vote\x18\x02 \x01(\x0e\x32\x0e.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\">\n\x15\x43MsgRetrieveMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x13\n\x0bincremental\x18\x02 \x01(\r\"\x90\x01\n\x15\x43MsgMatchVoteResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x33\n\x04vote\x18\x02 \x01(\x0e\x32\x0e.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\x12\x16\n\x0epositive_votes\x18\x03 \x01(\r\x12\x16\n\x0enegative_votes\x18\x04 \x01(\r\"\xe5\x02\n\x12\x43MsgDOTAHallOfFame\x12\x0c\n\x04week\x18\x01 \x01(\r\x12<\n\x10\x66\x65\x61tured_players\x18\x02 \x03(\x0b\x32\".CMsgDOTAHallOfFame.FeaturedPlayer\x12;\n\x0f\x66\x65\x61tured_farmer\x18\x03 \x01(\x0b\x32\".CMsgDOTAHallOfFame.FeaturedFarmer\x1ag\n\x0e\x46\x65\x61turedPlayer\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x1d\n\x15\x61verage_scaled_metric\x18\x03 \x01(\x02\x12\x11\n\tnum_games\x18\x04 \x01(\r\x1a]\n\x0e\x46\x65\x61turedFarmer\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x14\n\x0cgold_per_min\x18\x03 \x01(\r\x12\x10\n\x08match_id\x18\x04 \x01(\x04\")\n\x19\x43MsgDOTAHallOfFameRequest\x12\x0c\n\x04week\x18\x01 \x01(\r\"[\n\x1a\x43MsgDOTAHallOfFameResponse\x12)\n\x0chall_of_fame\x18\x01 \x01(\x0b\x32\x13.CMsgDOTAHallOfFame\x12\x12\n\x07\x65result\x18\x02 \x01(\r:\x01\x32\"6\n!CMsgDOTAHalloweenHighScoreRequest\x12\x11\n\x05round\x18\x01 \x01(\x05:\x02-1\"r\n\"CMsgDOTAHalloweenHighScoreResponse\x12\r\n\x05score\x18\x01 \x01(\r\x12\x1d\n\x05match\x18\x02 \x01(\x0b\x32\x0e.CMsgDOTAMatch\x12\x0f\n\x07\x65result\x18\x03 \x01(\r\x12\r\n\x05round\x18\x04 \x01(\x05\"6\n\x1e\x43MsgDOTAStorePromoPagesRequest\x12\x14\n\x0cversion_seen\x18\x01 \x01(\r\"\x97\x01\n\x1f\x43MsgDOTAStorePromoPagesResponse\x12\x39\n\x05pages\x18\x01 \x03(\x0b\x32*.CMsgDOTAStorePromoPagesResponse.PromoPage\x1a\x39\n\tPromoPage\x12\x10\n\x08promo_id\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\"N\n\x1f\x43MsgLeagueScheduleBlockTeamInfo\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\"\x91\x01\n\x17\x43MsgLeagueScheduleBlock\x12\x10\n\x08\x62lock_id\x18\x01 \x01(\r\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x0e\n\x06\x66inals\x18\x04 \x01(\x08\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\x12/\n\x05teams\x18\x06 \x03(\x0b\x32 .CMsgLeagueScheduleBlockTeamInfo\"O\n\x0e\x43MsgDOTALeague\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12*\n\x08schedule\x18\x02 \x03(\x0b\x32\x18.CMsgLeagueScheduleBlock\"2\n\x1d\x43MsgDOTALeagueScheduleRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\"U\n\x1e\x43MsgDOTALeagueScheduleResponse\x12\x1f\n\x06league\x18\x01 \x01(\x0b\x32\x0f.CMsgDOTALeague\x12\x12\n\x07\x65result\x18\x02 \x01(\r:\x01\x32\"q\n\x1a\x43MsgDOTALeagueScheduleEdit\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12*\n\x08schedule\x18\x02 \x01(\x0b\x32\x18.CMsgLeagueScheduleBlock\x12\x14\n\x0c\x64\x65lete_block\x18\x03 \x01(\x08\"Y\n\"CMsgDOTALeagueScheduleEditResponse\x12\x1f\n\x06league\x18\x01 \x01(\x0b\x32\x0f.CMsgDOTALeague\x12\x12\n\x07\x65result\x18\x02 \x01(\r:\x01\x32\"J\n\x1d\x43MsgDOTALeaguesInMonthRequest\x12\r\n\x05month\x18\x01 \x01(\r\x12\x0c\n\x04year\x18\x02 \x01(\r\x12\x0c\n\x04tier\x18\x03 \x01(\r\"s\n\x1e\x43MsgDOTALeaguesInMonthResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\r\n\x05month\x18\x02 \x01(\r\x12\x0c\n\x04year\x18\x03 \x01(\r\x12 \n\x07leagues\x18\x04 \x03(\x0b\x32\x0f.CMsgDOTALeague\"\xab\x01\n\x1d\x43MsgMatchmakingMatchGroupInfo\x12\x19\n\x11players_searching\x18\x01 \x01(\r\x12\'\n\x1f\x61uto_region_select_ping_penalty\x18\x02 \x01(\x11\x12\x46\n\x06status\x18\x03 \x01(\x0e\x32\x18.EMatchGroupServerStatus:\x1ck_EMatchGroupServerStatus_OK\"!\n\x1f\x43MsgDOTAMatchmakingStatsRequest\"\xa8\x01\n CMsgDOTAMatchmakingStatsResponse\x12\x1b\n\x13matchgroups_version\x18\x01 \x01(\r\x12\x31\n)legacy_searching_players_by_group_source2\x18\x07 \x03(\r\x12\x34\n\x0cmatch_groups\x18\x08 \x03(\x0b\x32\x1e.CMsgMatchmakingMatchGroupInfo\"F\n\x1d\x43MsgDOTASetMatchHistoryAccess\x12%\n\x1d\x61llow_3rd_party_match_history\x18\x01 \x01(\x08\";\n%CMsgDOTASetMatchHistoryAccessResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"L\n CMsgDOTANotifyAccountFlagsChange\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x15\n\raccount_flags\x18\x02 \x01(\r\"4\n\x19\x43MsgDOTASetProfilePrivacy\x12\x17\n\x0fprofile_private\x18\x01 \x01(\x08\"4\n!CMsgDOTASetProfilePrivacyResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\"<\n\x15\x43MsgUpgradeLeagueItem\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tleague_id\x18\x02 \x01(\r\"\x1f\n\x1d\x43MsgUpgradeLeagueItemResponse\"t\n\x1b\x43MsgGCWatchDownloadedReplay\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x43\n\nwatch_type\x18\x02 \x01(\x0e\x32\x15.DOTA_WatchReplayType:\x18\x44OTA_WATCH_REPLAY_NORMAL\"A\n\x17\x43MsgSetMapLocationState\x12\x13\n\x0blocation_id\x18\x01 \x01(\x05\x12\x11\n\tcompleted\x18\x02 \x01(\x08\"5\n\x1f\x43MsgSetMapLocationStateResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"\x17\n\x15\x43MsgResetMapLocations\"3\n\x1d\x43MsgResetMapLocationsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"5\n\x1d\x43MsgRefreshPartnerAccountLink\x12\x14\n\x0cpartner_type\x18\x01 \x01(\x05\"\x1f\n\x1d\x43MsgClientsRejoinChatChannels\".\n\x1a\x43MsgDOTASendFriendRecruits\x12\x10\n\x08recruits\x18\x01 \x03(\r\"4\n\x1d\x43MsgDOTAFriendRecruitsRequest\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\x82\x03\n\x1e\x43MsgDOTAFriendRecruitsResponse\x12@\n\x06result\x18\x01 \x01(\x0e\x32\'.CMsgDOTAFriendRecruitsResponse.EResult:\x07SUCCESS\x12\x45\n\x08recruits\x18\x02 \x03(\x0b\x32\x33.CMsgDOTAFriendRecruitsResponse.FriendRecruitStatus\x12G\n\nrecruiters\x18\x03 \x03(\x0b\x32\x33.CMsgDOTAFriendRecruitsResponse.FriendRecruitStatus\x1a_\n\x13\x46riendRecruitStatus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x15\n\rlevels_earned\x18\x03 \x01(\r\x12\r\n\x05\x62onus\x18\x04 \x01(\x08\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"P\n(CMsgDOTAFriendRecruitInviteAcceptDecline\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x01 \x01(\x08\x12\x12\n\naccount_id\x18\x02 \x01(\r\"/\n\x1a\x43MsgRequestLeaguePrizePool\x12\x11\n\tleague_id\x18\x01 \x01(\r\"K\n\"CMsgRequestLeaguePrizePoolResponse\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x12\n\nprize_pool\x18\x02 \x01(\r\"\x18\n\x16\x43MsgGCGetHeroStandings\"\xff\x02\n\x1e\x43MsgGCGetHeroStandingsResponse\x12\x37\n\tstandings\x18\x01 \x03(\x0b\x32$.CMsgGCGetHeroStandingsResponse.Hero\x1a\xa3\x02\n\x04Hero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0c\n\x04wins\x18\x02 \x01(\r\x12\x0e\n\x06losses\x18\x03 \x01(\r\x12\x12\n\nwin_streak\x18\x04 \x01(\r\x12\x17\n\x0f\x62\x65st_win_streak\x18\x05 \x01(\r\x12\x11\n\tavg_kills\x18\x06 \x01(\x02\x12\x12\n\navg_deaths\x18\x07 \x01(\x02\x12\x13\n\x0b\x61vg_assists\x18\x08 \x01(\x02\x12\x0f\n\x07\x61vg_gpm\x18\t \x01(\x02\x12\x0f\n\x07\x61vg_xpm\x18\n \x01(\x02\x12\x12\n\nbest_kills\x18\x0b \x01(\r\x12\x14\n\x0c\x62\x65st_assists\x18\x0c \x01(\r\x12\x10\n\x08\x62\x65st_gpm\x18\r \x01(\r\x12\x10\n\x08\x62\x65st_xpm\x18\x0e \x01(\r\x12\x13\n\x0bperformance\x18\x0f \x01(\x02\"%\n#CMsgGCItemEditorReservationsRequest\">\n\x1b\x43MsgGCItemEditorReservation\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"Z\n$CMsgGCItemEditorReservationsResponse\x12\x32\n\x0creservations\x18\x01 \x03(\x0b\x32\x1c.CMsgGCItemEditorReservation\"E\n\x1e\x43MsgGCItemEditorReserveItemDef\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\"]\n&CMsgGCItemEditorReserveItemDefResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0e\n\x06result\x18\x03 \x01(\r\"I\n\"CMsgGCItemEditorReleaseReservation\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\"Q\n*CMsgGCItemEditorReleaseReservationResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08released\x18\x02 \x01(\x08\"6\n!CMsgGCItemEditorRequestLeagueInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xba\x01\n\"CMsgGCItemEditorLeagueInfoResponse\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x13\n\x0bleague_name\x18\x02 \x01(\t\x12\x13\n\x0bleague_desc\x18\x03 \x01(\t\x12\x12\n\nleague_url\x18\x04 \x01(\t\x12\x13\n\x0brevenue_url\x18\x05 \x01(\t\x12\x0c\n\x04tier\x18\x06 \x01(\r\x12\x10\n\x08location\x18\x07 \x01(\r\x12\x0e\n\x06result\x18\x08 \x01(\r\"J\n\x1c\x43MsgDOTARewardTutorialPrizes\x12\x13\n\x0blocation_id\x18\x01 \x01(\r\x12\x15\n\rtracking_only\x18\x02 \x01(\x08\"L\n%CMsgDOTALastHitChallengeHighScorePost\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhigh_score\x18\x02 \x01(\r\";\n(CMsgDOTALastHitChallengeHighScoreRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"K\n)CMsgDOTALastHitChallengeHighScoreResponse\x12\r\n\x05score\x18\x01 \x01(\r\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\"\x14\n\x12\x43MsgFlipLobbyTeams\"!\n\x1f\x43MsgPresentedClientTerminateDlg\"}\n%CMsgGCLobbyUpdateBroadcastChannelInfo\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\"S\n\x18\x43MsgDOTARedeemEventPrize\x12\x10\n\x08prize_id\x18\x01 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\x12\x13\n\x08quantity\x18\x03 \x01(\r:\x01\x31\"\x8b\x02\n CMsgDOTARedeemEventPrizeResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.CMsgDOTARedeemEventPrizeResponse.ResultCode:\x07Success\x12\x18\n\x10remaining_points\x18\x02 \x01(\r\x12 \n\x18remaining_premium_points\x18\x03 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x04 \x01(\r\"R\n\nResultCode\x12\x0b\n\x07Success\x10\x00\x12\x0f\n\x0bServerError\x10\x01\x12\x16\n\x12InsufficientPoints\x10\x02\x12\x0e\n\nPointsHeld\x10\x03\">\n\x16\x43MsgDOTAGetEventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\xe3\x02\n\x1e\x43MsgDOTAGetEventPointsResponse\x12\x14\n\x0ctotal_points\x18\x01 \x01(\r\x12\x1c\n\x14total_premium_points\x18\x02 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\x12\x0e\n\x06points\x18\x04 \x01(\r\x12\x16\n\x0epremium_points\x18\x05 \x01(\r\x12\x41\n\x11\x63ompleted_actions\x18\x06 \x03(\x0b\x32&.CMsgDOTAGetEventPointsResponse.Action\x12\x12\n\naccount_id\x18\x07 \x01(\r\x12\r\n\x05owned\x18\x08 \x01(\x08\x12\x14\n\x0c\x61udit_action\x18\t \x01(\r\x12\x1e\n\x16wager_tokens_remaining\x18\n \x01(\r\x1a\x37\n\x06\x41\x63tion\x12\x11\n\taction_id\x18\x01 \x01(\r\x12\x1a\n\x0ftimes_completed\x18\x02 \x01(\r:\x01\x31\"9\n\x1c\x43MsgDOTALiveLeagueGameUpdate\x12\x19\n\x11live_league_games\x18\x01 \x01(\r\"[\n\x1b\x43MsgDOTACompendiumSelection\x12\x17\n\x0fselection_index\x18\x01 \x01(\r\x12\x11\n\tselection\x18\x02 \x01(\r\x12\x10\n\x08leagueid\x18\x03 \x01(\r\"q\n#CMsgDOTACompendiumSelectionResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x36\n\x10\x65xtra_selections\x18\x02 \x03(\x0b\x32\x1c.CMsgDOTACompendiumSelection\"J\n\x16\x43MsgDOTACompendiumData\x12\x30\n\nselections\x18\x01 \x03(\x0b\x32\x1c.CMsgDOTACompendiumSelection\"E\n\x1d\x43MsgDOTACompendiumDataRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08leagueid\x18\x02 \x01(\r\"\x8b\x01\n\x1e\x43MsgDOTACompendiumDataResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08leagueid\x18\x02 \x01(\r\x12\x11\n\x06result\x18\x03 \x01(\r:\x01\x32\x12\x30\n\x0f\x63ompendium_data\x18\x04 \x01(\x0b\x32\x17.CMsgDOTACompendiumData\"\xce\x01\n\x1d\x43MsgDOTAGetPlayerMatchHistory\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x19\n\x11start_at_match_id\x18\x02 \x01(\x04\x12\x19\n\x11matches_requested\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x12\n\nrequest_id\x18\x05 \x01(\r\x12 \n\x18include_practice_matches\x18\x07 \x01(\x08\x12\x1c\n\x14include_custom_games\x18\x08 \x01(\x08\"\x97\x03\n%CMsgDOTAGetPlayerMatchHistoryResponse\x12=\n\x07matches\x18\x01 \x03(\x0b\x32,.CMsgDOTAGetPlayerMatchHistoryResponse.Match\x12\x12\n\nrequest_id\x18\x02 \x01(\r\x1a\x9a\x02\n\x05Match\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06winner\x18\x04 \x01(\x08\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12\x13\n\x0brank_change\x18\x06 \x01(\x05\x12\x15\n\rprevious_rank\x18\x07 \x01(\r\x12\x12\n\nlobby_type\x18\x08 \x01(\r\x12\x11\n\tsolo_rank\x18\t \x01(\x08\x12\x0f\n\x07\x61\x62\x61ndon\x18\n \x01(\x08\x12\x10\n\x08\x64uration\x18\x0b \x01(\r\x12\x0e\n\x06\x65ngine\x18\x0c \x01(\r\x12\x1a\n\x12\x61\x63tive_battle_pass\x18\r \x01(\x08\x12\x15\n\rseasonal_rank\x18\x0e \x01(\x08\"!\n\x1f\x43MsgDOTAStartDailyHeroChallenge\"\x1c\n\x1a\x43MsgGCNotificationsRequest\"\xeb\x02\n\x1b\x43MsgGCNotificationsResponse\x12=\n\x06result\x18\x01 \x01(\x0e\x32$.CMsgGCNotificationsResponse.EResult:\x07SUCCESS\x12@\n\rnotifications\x18\x02 \x03(\x0b\x32).CMsgGCNotificationsResponse.Notification\x1a\x9b\x01\n\x0cNotification\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x13\n\x0breference_a\x18\x04 \x01(\r\x12\x13\n\x0breference_b\x18\x05 \x01(\r\x12\x13\n\x0breference_c\x18\x06 \x01(\r\x12\x0f\n\x07message\x18\x07 \x01(\t\x12\x0e\n\x06unread\x18\x08 \x01(\x08\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"$\n\"CMsgGCNotificationsMarkReadRequest\"B\n&CMsgClientToGCMarkNotificationListRead\x12\x18\n\x10notification_ids\x18\x01 \x03(\x04\"\x9d\x01\n\x16\x43MsgGCLeagueAdminState\x12\x0f\n\x07leagues\x18\x01 \x03(\r\x12\x37\n\x04keys\x18\x02 \x03(\x0b\x32).CMsgGCLeagueAdminState.PrivateLeagueKeys\x1a\x39\n\x11PrivateLeagueKeys\x12\x10\n\x08leagueid\x18\x01 \x01(\r\x12\x12\n\nprivatekey\x18\x02 \x01(\r\"\x89\x01\n\x17\x43MsgGCPlayerInfoRequest\x12\x39\n\x0cplayer_infos\x18\x01 \x03(\x0b\x32#.CMsgGCPlayerInfoRequest.PlayerInfo\x1a\x33\n\nPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\"t\n\x16\x43MsgGCPlayerInfoSubmit\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x14\n\x0c\x66\x61ntasy_role\x18\x03 \x01(\r\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x0f\n\x07sponsor\x18\x05 \x01(\t\"\xa8\x01\n\x1e\x43MsgGCPlayerInfoSubmitResponse\x12@\n\x06result\x18\x01 \x01(\x0e\x32\'.CMsgGCPlayerInfoSubmitResponse.EResult:\x07SUCCESS\"D\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x15\n\x11\x45RROR_INFO_LOCKED\x10\x02\"\xa6\x01\n\x1d\x43MsgClientProvideSurveyResult\x12:\n\tresponses\x18\x01 \x03(\x0b\x32\'.CMsgClientProvideSurveyResult.Response\x12\x12\n\nsurvey_key\x18\x02 \x01(\x04\x1a\x35\n\x08Response\x12\x13\n\x0bquestion_id\x18\x01 \x01(\r\x12\x14\n\x0csurvey_value\x18\x02 \x01(\r\"K\n\x19\x43MsgDOTAEmoticonAccessSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1a\n\x12unlocked_emoticons\x18\x02 \x01(\x0c\"#\n!CMsgClientToGCEmoticonDataRequest\"Q\n\x1a\x43MsgGCToClientEmoticonData\x12\x33\n\x0f\x65moticon_access\x18\x01 \x01(\x0b\x32\x1a.CMsgDOTAEmoticonAccessSDO\"C\n\x1f\x43MsgClientToGCTrackDialogResult\x12\x11\n\tdialog_id\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\"H\n CMsgGCToClientTournamentItemDrop\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x12\n\nevent_type\x18\x02 \x01(\r\"J\n!CMsgClientToGCSetAdditionalEquips\x12%\n\x06\x65quips\x18\x01 \x03(\x0b\x32\x15.CAdditionalEquipSlot\"+\n)CMsgClientToGCSetAdditionalEquipsResponse\"#\n!CMsgClientToGCGetAdditionalEquips\"R\n)CMsgClientToGCGetAdditionalEquipsResponse\x12%\n\x06\x65quips\x18\x01 \x03(\x0b\x32\x15.CAdditionalEquipSlot\"\x1f\n\x1d\x43MsgClientToGCGetAllHeroOrder\"9\n%CMsgClientToGCGetAllHeroOrderResponse\x12\x10\n\x08hero_ids\x18\x01 \x03(\r\"6\n CMsgClientToGCGetAllHeroProgress\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\x99\x04\n(CMsgClientToGCGetAllHeroProgressResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63urr_hero_id\x18\x02 \x01(\r\x12\x16\n\x0elaps_completed\x18\x03 \x01(\r\x12\x17\n\x0f\x63urr_hero_games\x18\x04 \x01(\r\x12\x1d\n\x15\x63urr_lap_time_started\x18\x05 \x01(\r\x12\x16\n\x0e\x63urr_lap_games\x18\x06 \x01(\r\x12\x16\n\x0e\x62\x65st_lap_games\x18\x07 \x01(\r\x12\x15\n\rbest_lap_time\x18\x08 \x01(\r\x12\x1c\n\x14lap_heroes_completed\x18\t \x01(\r\x12\x1c\n\x14lap_heroes_remaining\x18\n \x01(\r\x12\x14\n\x0cnext_hero_id\x18\x0b \x01(\r\x12\x14\n\x0cprev_hero_id\x18\x0c \x01(\r\x12\x17\n\x0fprev_hero_games\x18\r \x01(\r\x12\x16\n\x0eprev_avg_tries\x18\x0e \x01(\x02\x12\x16\n\x0e\x63urr_avg_tries\x18\x0f \x01(\x02\x12\x16\n\x0enext_avg_tries\x18\x10 \x01(\x02\x12\x1a\n\x12\x66ull_lap_avg_tries\x18\x11 \x01(\x02\x12\x1a\n\x12\x63urr_lap_avg_tries\x18\x12 \x01(\x02\x12\x14\n\x0cprofile_name\x18\x13 \x01(\t\x12\x15\n\rstart_hero_id\x18\x14 \x01(\r\"1\n\x1b\x43MsgClientToGCGetTrophyList\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd7\x01\n#CMsgClientToGCGetTrophyListResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12=\n\x08trophies\x18\x02 \x03(\x0b\x32+.CMsgClientToGCGetTrophyListResponse.Trophy\x12\x14\n\x0cprofile_name\x18\x03 \x01(\t\x1aG\n\x06Trophy\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x12\x14\n\x0clast_updated\x18\x03 \x01(\r\"v\n\x1b\x43MsgGCToClientTrophyAwarded\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x12\x18\n\x10trophy_old_score\x18\x03 \x01(\r\x12\x14\n\x0clast_updated\x18\x04 \x01(\r\"2\n\x1c\x43MsgClientToGCGetProfileCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd8\x01\n!CMsgClientToGCSetProfileCardSlots\x12:\n\x05slots\x18\x01 \x03(\x0b\x32+.CMsgClientToGCSetProfileCardSlots.CardSlot\x1aw\n\x08\x43\x61rdSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x46\n\tslot_type\x18\x02 \x01(\x0e\x32\x15.EProfileCardSlotType:\x1ck_EProfileCardSlotType_Empty\x12\x12\n\nslot_value\x18\x03 \x01(\x04\"#\n!CMsgClientToGCGetProfileCardStats\"\xd4\x01\n\x1e\x43MsgClientToGCCreateHeroStatue\x12\x13\n\x0bsource_item\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x15\n\rsequence_name\x18\x04 \x01(\t\x12\r\n\x05\x63ycle\x18\x05 \x01(\x02\x12\x11\n\twearables\x18\x06 \x03(\r\x12\x13\n\x0binscription\x18\x07 \x01(\t\x12\x0e\n\x06styles\x18\x08 \x03(\r\x12\x15\n\rreforger_item\x18\t \x01(\x04\x12\x17\n\x0ftournament_drop\x18\n \x01(\x08\"\xa6\x01\n CMsgClientToGCCreateTeamShowcase\x12\x13\n\x0bsource_item\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x15\n\rsequence_name\x18\x04 \x01(\t\x12\r\n\x05\x63ycle\x18\x05 \x01(\x02\x12\x11\n\twearables\x18\x06 \x03(\r\x12\x13\n\x0binscription\x18\x07 \x01(\t\x12\x0e\n\x06styles\x18\x08 \x03(\r\">\n$CMsgGCToClientHeroStatueCreateResult\x12\x16\n\x0eresulting_item\x18\x01 \x01(\x04\"@\n&CMsgGCToClientTeamShowcaseCreateResult\x12\x16\n\x0eresulting_item\x18\x01 \x01(\x04\"\x94\x01\n#CMsgClientToGCRecordCompendiumStats\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fview_duration_s\x18\x02 \x01(\r\x12\x15\n\rvideos_viewed\x18\x03 \x01(\r\x12\x12\n\npage_turns\x18\x04 \x01(\r\x12\x16\n\x0elinks_followed\x18\x05 \x01(\r\"B\n CMsgGCToClientEventStatusChanged\x12\x1e\n\ractive_events\x18\x01 \x03(\x0e\x32\x07.EEvent\"6\n CMsgClientToGCPlayerStatsRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xcf\x03\n!CMsgGCToClientPlayerStatsResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0cplayer_stats\x18\x02 \x03(\x02\x12\x13\n\x0bmatch_count\x18\x03 \x01(\r\x12\x10\n\x08mean_gpm\x18\x04 \x01(\x02\x12\x11\n\tmean_xppm\x18\x05 \x01(\x02\x12\x15\n\rmean_lasthits\x18\x06 \x01(\x02\x12\x10\n\x08rampages\x18\x07 \x01(\r\x12\x14\n\x0ctriple_kills\x18\x08 \x01(\r\x12\x1b\n\x13\x66irst_blood_claimed\x18\t \x01(\r\x12\x19\n\x11\x66irst_blood_given\x18\n \x01(\r\x12\x17\n\x0f\x63ouriers_killed\x18\x0b \x01(\r\x12\x18\n\x10\x61\x65gises_snatched\x18\x0c \x01(\r\x12\x15\n\rcheeses_eaten\x18\r \x01(\r\x12\x16\n\x0e\x63reeps_stacked\x18\x0e \x01(\r\x12\x13\n\x0b\x66ight_score\x18\x0f \x01(\x02\x12\x12\n\nfarm_score\x18\x10 \x01(\x02\x12\x15\n\rsupport_score\x18\x11 \x01(\x02\x12\x12\n\npush_score\x18\x12 \x01(\x02\x12\x19\n\x11versatility_score\x18\x13 \x01(\x02\"D\n*CMsgClientToGCCustomGamePlayerCountRequest\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\"t\n+CMsgGCToClientCustomGamePlayerCountResponse\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x14\n\x0cplayer_count\x18\x02 \x01(\x04\x12\x17\n\x0fspectator_count\x18\x03 \x01(\x04\"/\n-CMsgClientToGCCustomGamesFriendsPlayedRequest\"\xca\x01\n.CMsgGCToClientCustomGamesFriendsPlayedResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12I\n\x05games\x18\x02 \x03(\x0b\x32:.CMsgGCToClientCustomGamesFriendsPlayedResponse.CustomGame\x1a\x39\n\nCustomGame\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"O\n*CMsgClientToGCSocialFeedPostCommentRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\">\n+CMsgGCToClientSocialFeedPostCommentResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"h\n*CMsgClientToGCSocialFeedPostMessageRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x17\n\x0fmatch_timestamp\x18\x03 \x01(\r\">\n+CMsgGCToClientSocialFeedPostMessageResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"F\n,CMsgClientToGCFriendsPlayedCustomGameRequest\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\"\\\n-CMsgGCToClientFriendsPlayedCustomGameResponse\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"%\n#CMsgClientToGCFeaturedHeroesRequest\"\x91\x04\n$CMsgGCToClientFeaturedHeroesResponse\x12\x42\n\ncategories\x18\x01 \x03(\x0b\x32..CMsgGCToClientFeaturedHeroesResponse.Category\x1a\xad\x01\n\tDataField\x12I\n\tdata_type\x18\x01 \x01(\x0e\x32\x16.EFeaturedHeroDataType:\x1ek_EFeaturedHeroDataType_HeroID\x12\x14\n\x0cuint32_value\x18\x02 \x01(\r\x12\x14\n\x0cuint64_value\x18\x03 \x01(\x04\x12\x14\n\x0cstring_value\x18\x04 \x01(\t\x12\x13\n\x0b\x66loat_value\x18\x05 \x01(\x02\x1aT\n\x0c\x46\x65\x61turedHero\x12\x44\n\x0b\x64\x61ta_fields\x18\x01 \x03(\x0b\x32/.CMsgGCToClientFeaturedHeroesResponse.DataField\x1a\x9e\x01\n\x08\x43\x61tegory\x12\x17\n\x0f\x63\x61tegory_weight\x18\x01 \x01(\x05\x12,\n\x0btext_fields\x18\x02 \x03(\x0e\x32\x17.EFeaturedHeroTextField\x12K\n\x0f\x66\x65\x61tured_heroes\x18\x03 \x03(\x0b\x32\x32.CMsgGCToClientFeaturedHeroesResponse.FeaturedHero\"P\n+CMsgClientToGCSocialMatchPostCommentRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\"?\n,CMsgGCToClientSocialMatchPostCommentResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"Y\n\'CMsgClientToGCSocialMatchDetailsRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x1c\n\x14pagination_timestamp\x18\x02 \x01(\r\"\xd9\x01\n(CMsgGCToClientSocialMatchDetailsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x43\n\x08\x63omments\x18\x02 \x03(\x0b\x32\x31.CMsgGCToClientSocialMatchDetailsResponse.Comment\x1aW\n\x07\x43omment\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x0f\n\x07\x63omment\x18\x04 \x01(\t\"\xb0\x04\n\x19\x43MsgDOTAPartyRichPresence\x12\x10\n\x08party_id\x18\x01 \x01(\x06\x12,\n\x0bparty_state\x18\x02 \x01(\x0e\x32\x13.CSODOTAParty.State:\x02UI\x12\x0c\n\x04open\x18\x03 \x01(\x08\x12\x14\n\x0clow_priority\x18\x05 \x01(\x08\x12\x0f\n\x07team_id\x18\x07 \x01(\r\x12\x11\n\tteam_name\x18\x08 \x01(\t\x12\x18\n\x10ugc_team_ui_logo\x18\t \x01(\x04\x12\x32\n\x07members\x18\x04 \x03(\x0b\x32!.CMsgDOTAPartyRichPresence.Member\x12\x42\n\x0fweekend_tourney\x18\x06 \x01(\x0b\x32).CMsgDOTAPartyRichPresence.WeekendTourney\x1a)\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\r\n\x05\x63oach\x18\x02 \x01(\x08\x1a\xcd\x01\n\x0eWeekendTourney\x12\x10\n\x08\x64ivision\x18\x01 \x01(\r\x12\x13\n\x0bskill_level\x18\x02 \x01(\r\x12\r\n\x05round\x18\x03 \x01(\r\x12\x15\n\rtournament_id\x18\x04 \x01(\r\x12Y\n\x05\x65vent\x18\x05 \x01(\x0e\x32!.EWeekendTourneyRichPresenceEvent:\'k_EWeekendTourneyRichPresenceEvent_None\x12\x13\n\x0b\x65vent_round\x18\x06 \x01(\r\"\xfa\x01\n\x19\x43MsgDOTALobbyRichPresence\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12,\n\x0blobby_state\x18\x02 \x01(\x0e\x32\x13.CSODOTALobby.State:\x02UI\x12\x10\n\x08password\x18\x03 \x01(\x08\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x14\n\x0cmember_count\x18\x05 \x01(\r\x12\x18\n\x10max_member_count\x18\x06 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x06\x12\x0c\n\x04name\x18\x08 \x01(\t\"\x83\x01\n,CMsgDOTACustomGameListenServerStartedLoading\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x15\n\rlobby_members\x18\x03 \x03(\r\x12\x12\n\nstart_time\x18\x04 \x01(\r\"\xa9\x01\n\'CMsgDOTACustomGameClientFinishedLoading\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x18\n\x10loading_duration\x18\x02 \x01(\r\x12\x13\n\x0bresult_code\x18\x03 \x01(\x11\x12\x15\n\rresult_string\x18\x04 \x01(\t\x12\x15\n\rsignon_states\x18\x05 \x01(\r\x12\x0f\n\x07\x63omment\x18\x06 \x01(\t\"2\n\x1d\x43MsgClientToGCGetLeagueSeries\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xb2\x03\n%CMsgClientToGCGetLeagueSeriesResponse\x12=\n\x06series\x18\x01 \x03(\x0b\x32-.CMsgClientToGCGetLeagueSeriesResponse.Series\x1a\xc9\x02\n\x06Series\x12\x11\n\tseries_id\x18\x01 \x01(\r\x12\x11\n\tnum_games\x18\x02 \x01(\r\x12\x41\n\x05teams\x18\x03 \x03(\x0b\x32\x32.CMsgClientToGCGetLeagueSeriesResponse.Series.Team\x12\x13\n\x0bseries_name\x18\x04 \x01(\t\x12\x12\n\nphase_name\x18\x05 \x01(\t\x12\x12\n\nstart_time\x18\x06 \x01(\r\x12\x17\n\x0f\x61\x66ter_series_id\x18\x07 \x01(\r\x12\x1b\n\x13num_completed_games\x18\x08 \x01(\r\x1a\x63\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x12\n\nteam_score\x18\x04 \x01(\r\x12\x11\n\tteam_wins\x18\x05 \x01(\r\"F\n\x1e\x43MsgClientToGCApplyGemCombiner\x12\x11\n\titem_id_1\x18\x01 \x01(\x04\x12\x11\n\titem_id_2\x18\x02 \x01(\x04\"\x1f\n\x1d\x43MsgClientToGCH264Unsupported\"\"\n CMsgClientToGCRequestH264Support\"3\n\x1e\x43MsgClientToGCGetQuestProgress\x12\x11\n\tquest_ids\x18\x01 \x03(\r\"\xef\x02\n&CMsgClientToGCGetQuestProgressResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12=\n\x06quests\x18\x02 \x03(\x0b\x32-.CMsgClientToGCGetQuestProgressResponse.Quest\x1a\x88\x01\n\tChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\x12\x16\n\x0etime_completed\x18\x02 \x01(\r\x12\x10\n\x08\x61ttempts\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_type\x18\x05 \x01(\r\x12\x12\n\nquest_rank\x18\x06 \x01(\r\x1aj\n\x05Quest\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12O\n\x14\x63ompleted_challenges\x18\x02 \x03(\x0b\x32\x31.CMsgClientToGCGetQuestProgressResponse.Challenge\"0\n\x1c\x43MsgGCToClientMatchSignedOut\x12\x10\n\x08match_id\x18\x01 \x01(\x04\",\n\x19\x43MsgGCGetHeroStatsHistory\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"c\n!CMsgGCGetHeroStatsHistoryResponse\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12-\n\x07records\x18\x02 \x03(\x0b\x32\x1c.CMsgDOTASDOHeroStatsHistory\"#\n!CMsgPlayerConductScorecardRequest\"\xb3\x02\n\x1a\x43MsgPlayerConductScorecard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x0f\n\x07seq_num\x18\x03 \x01(\r\x12\x0f\n\x07reasons\x18\x04 \x01(\r\x12\x19\n\x11matches_in_report\x18\x05 \x01(\r\x12\x15\n\rmatches_clean\x18\x06 \x01(\r\x12\x18\n\x10matches_reported\x18\x07 \x01(\r\x12\x19\n\x11matches_abandoned\x18\x08 \x01(\r\x12\x15\n\rreports_count\x18\t \x01(\r\x12\x17\n\x0freports_parties\x18\n \x01(\r\x12\x15\n\rcommend_count\x18\x0b \x01(\r\x12\x11\n\tend_score\x18\r \x01(\r\x12\x0c\n\x04\x64\x61te\x18\x0e \x01(\r\"1\n\x1d\x43MsgClientToGCWageringRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"\xd4\x01\n\x1e\x43MsgGCToClientWageringResponse\x12\x17\n\x0f\x63oins_remaining\x18\x01 \x01(\r\x12\x18\n\x10total_points_won\x18\x02 \x01(\r\x12\x1c\n\x14total_points_wagered\x18\x03 \x01(\r\x12\x1b\n\x13total_points_tipped\x18\x04 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x05 \x01(\r\x12\x1b\n\x13total_games_wagered\x18\x06 \x01(\r\x12\x11\n\tcoins_max\x18\x07 \x01(\r\"h\n\x1c\x43MsgGCToClientWageringUpdate\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x36\n\rwagering_info\x18\x02 \x01(\x0b\x32\x1f.CMsgGCToClientWageringResponse\"}\n\x1f\x43MsgGCToClientArcanaVotesUpdate\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12H\n\x0c\x61rcana_votes\x18\x02 \x01(\x0b\x32\x32.CMsgClientToGCRequestArcanaVotesRemainingResponse\"@\n\x19\x43MsgClientToGCMysteryItem\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x11\n\taction_id\x18\x02 \x01(\r\"\x95\x03\n!CMsgGCToClientMysteryItemResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).CMsgGCToClientMysteryItemResponse.Result:\x07SUCCESS\x12\x13\n\x0breward_type\x18\x02 \x01(\r\x12\x0f\n\x07itemdef\x18\x03 \x01(\r\"\x85\x02\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x14\n\x10\x46\x41ILURE_SDO_LOAD\x10\x01\x12\x16\n\x12\x46\x41ILURE_NO_ACTIONS\x10\x02\x12\x17\n\x13\x46\x41ILURE_NO_LOOTLIST\x10\x03\x12\x1a\n\x16\x46\x41ILURE_EMPTY_LOOTLIST\x10\x04\x12\x1d\n\x19\x46\x41ILURE_NO_ITEM_GENERATED\x10\x05\x12\x16\n\x12\x46\x41ILURE_SQL_COMMIT\x10\x06\x12\x1b\n\x17\x46\x41ILURE_EVENT_NOT_OWNED\x10\x07\x12\x1a\n\x16\x46\x41ILURE_INVALID_ACTION\x10\x08\x12\x1b\n\x17\x46\x41ILURE_ALREADY_GRANTED\x10\t\"9\n\x1b\x43MsgClientToGCGetEventGoals\x12\x1a\n\tevent_ids\x18\x01 \x03(\x0e\x32\x07.EEvent\"\x97\x01\n\x0e\x43MsgEventGoals\x12.\n\x0b\x65vent_goals\x18\x01 \x03(\x0b\x32\x19.CMsgEventGoals.EventGoal\x1aU\n\tEventGoal\x12(\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x07.EEvent:\rEVENT_ID_NONE\x12\x0f\n\x07goal_id\x18\x02 \x01(\r\x12\r\n\x05value\x18\x03 \x01(\x04\"0\n\x1b\x43MsgGCToGCLeaguePredictions\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\x9c\x02\n\x16\x43MsgPredictionRankings\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\".CMsgPredictionRankings.Prediction\x1a\x63\n\x0ePredictionLine\x12\x11\n\tanswer_id\x18\x01 \x01(\r\x12\x13\n\x0b\x61nswer_name\x18\x02 \x01(\t\x12\x13\n\x0b\x61nswer_logo\x18\x03 \x01(\x04\x12\x14\n\x0c\x61nswer_value\x18\x04 \x01(\x02\x1a\x64\n\nPrediction\x12\x14\n\x0cselection_id\x18\x01 \x01(\r\x12@\n\x10prediction_lines\x18\x02 \x03(\x0b\x32&.CMsgPredictionRankings.PredictionLine\"\xec\x01\n\x15\x43MsgPredictionResults\x12.\n\x07results\x18\x01 \x03(\x0b\x32\x1d.CMsgPredictionResults.Result\x1a\x41\n\x0fResultBreakdown\x12\x18\n\x10\x61nswer_selection\x18\x02 \x01(\r\x12\x14\n\x0c\x61nswer_value\x18\x03 \x01(\x02\x1a`\n\x06Result\x12\x14\n\x0cselection_id\x18\x01 \x01(\r\x12@\n\x10result_breakdown\x18\x02 \x03(\x0b\x32&.CMsgPredictionResults.ResultBreakdown\"4\n CMsgClientToGCSuspiciousActivity\x12\x10\n\x08\x61pp_data\x18\x01 \x01(\x04\"6\n\"CMsgClientToGCHasPlayerVotedForMVP\x12\x10\n\x08match_id\x18\x01 \x01(\x04\"<\n*CMsgClientToGCHasPlayerVotedForMVPResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"@\n\x18\x43MsgClientToGCVoteForMVP\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x03 \x01(\r\"2\n CMsgClientToGCVoteForMVPResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"w\n\x14\x43MsgMVPVotesForMatch\x12-\n\x07players\x18\x01 \x03(\x0b\x32\x1c.CMsgMVPVotesForMatch.Player\x1a\x30\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nvote_count\x18\x02 \x01(\r\"G\n\x13\x43MsgLeaguePrizePool\x12\x12\n\nprize_pool\x18\x01 \x01(\r\x12\x1c\n\x14increment_per_second\x18\x02 \x01(\x02\"$\n\"CMsgClientToGCTeammateStatsRequest\"\x9f\x02\n#CMsgClientToGCTeammateStatsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12I\n\x0eteammate_stats\x18\x02 \x03(\x0b\x32\x31.CMsgClientToGCTeammateStatsResponse.TeammateStat\x1a\x9b\x01\n\x0cTeammateStat\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05games\x18\x02 \x01(\r\x12\x0c\n\x04wins\x18\x03 \x01(\r\x12\"\n\x1amost_recent_game_timestamp\x18\x04 \x01(\r\x12!\n\x19most_recent_game_match_id\x18\x05 \x01(\x04\x12\x13\n\x0bperformance\x18\x64 \x01(\x02\"9\n CMsgClientToGCGetGiftPermissions\x12\x15\n\rgift_item_def\x18\x01 \x01(\r\"\xb2\x01\n(CMsgClientToGCGetGiftPermissionsResponse\x12\x14\n\x0cis_unlimited\x18\x01 \x01(\x08\x12\x1b\n\x13\x61llowed_account_ids\x18\x02 \x03(\r\x12\x16\n\x0ehas_two_factor\x18\x03 \x01(\x08\x12\x1c\n\x14item_def_limit_count\x18\x04 \x01(\r\x12\x1d\n\x15item_def_limit_period\x18\x05 \x01(\r\"\x9a\x01\n\x1b\x43MsgClientToGCVoteForArcana\x12\x37\n\x07matches\x18\x01 \x03(\x0b\x32&.CMsgClientToGCVoteForArcana.MatchVote\x1a\x42\n\tMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nvote_count\x18\x03 \x01(\r\"\xbd\x01\n#CMsgClientToGCVoteForArcanaResponse\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32+.CMsgClientToGCVoteForArcanaResponse.Result:\tSUCCEEDED\"N\n\x06Result\x12\r\n\tSUCCEEDED\x10\x00\x12 \n\x1cVOTING_NOT_ENABLED_FOR_ROUND\x10\x01\x12\x13\n\x0fUNKNOWN_FAILURE\x10\x02\"\xee\x03\n\x0f\x43MsgArcanaVotes\x12\'\n\x07matches\x18\x01 \x03(\x0b\x32\x16.CMsgArcanaVotes.Match\x12\x1c\n\x14round_time_remaining\x18\x02 \x01(\r\x12\x14\n\x0cround_number\x18\x03 \x01(\r\x12\x14\n\x0cvoting_state\x18\x04 \x01(\r\x12$\n\x1cis_current_round_calibrating\x18\x05 \x01(\x08\x1a\x84\x02\n\x05Match\x12\x10\n\x08match_id\x18\x01 \x01(\r\x12\x11\n\thero_id_0\x18\x02 \x01(\r\x12\x11\n\thero_id_1\x18\x03 \x01(\r\x12\x16\n\x0ehero_seeding_0\x18\x04 \x01(\r\x12\x16\n\x0ehero_seeding_1\x18\x05 \x01(\r\x12\x14\n\x0cvote_count_0\x18\x06 \x01(\r\x12\x14\n\x0cvote_count_1\x18\x07 \x01(\r\x12\x14\n\x0cvoting_state\x18\x08 \x01(\r\x12\x14\n\x0cround_number\x18\t \x01(\r\x12\x17\n\x0fis_votes_hidden\x18\n \x01(\x08\x12\"\n\x1a\x63\x61libration_time_remaining\x18\x0b \x01(\r\";\n\x0bVotingState\x12\x0c\n\x08\x46INISHED\x10\x00\x12\x0f\n\x0bIN_PROGRESS\x10\x01\x12\r\n\tIN_FUTURE\x10\x02\"+\n)CMsgClientToGCRequestArcanaVotesRemaining\"\x99\x02\n1CMsgClientToGCRequestArcanaVotesRemainingResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12\x17\n\x0fvotes_remaining\x18\x02 \x01(\r\x12\x13\n\x0bvotes_total\x18\x03 \x01(\r\x12\x62\n\x1cmatches_previously_voted_for\x18\x04 \x03(\x0b\x32<.CMsgClientToGCRequestArcanaVotesRemainingResponse.MatchVote\x1a\x42\n\tMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nvote_count\x18\x03 \x01(\r\"6\n\"CMsgClientToGCRequestEventPointLog\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"\xb7\n\n*CMsgClientToGCRequestEventPointLogResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12W\n\x0ctransactions\x18\x02 \x03(\x0b\x32\x41.CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\x1aK\n\x13QuestChallengeEvent\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63hallenge_id\x18\x02 \x01(\r\x12\x0c\n\x04rank\x18\x03 \x01(\r\x1a!\n\rWagerWonEvent\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x1a\x45\n\rTipGivenEvent\x12\x1c\n\x14recipient_account_id\x18\x01 \x01(\r\x12\x16\n\x0erecipient_name\x18\x02 \x01(\t\x1a@\n\x10TipReceivedEvent\x12\x18\n\x10giver_account_id\x18\x01 \x01(\r\x12\x12\n\ngiver_name\x18\x02 \x01(\t\x1a\x32\n\x11RecycledItemEvent\x12\x1d\n\x15recipe_item_def_index\x18\x01 \x01(\r\x1a%\n\x10\x41\x63hievementEvent\x12\x11\n\taction_id\x18\x01 \x01(\r\x1a\x37\n\x18MysteryItemReceivedEvent\x12\x1b\n\x13\x63ommunity_goal_item\x18\x01 \x01(\x08\x1a\x80\x06\n\x15\x45ventPointTransaction\x12\x0c\n\x04time\x18\x01 \x01(\r\x12\x14\n\x0c\x65vent_points\x18\x02 \x01(\x05\x12\"\n\x1a\x63ompendium_activated_event\x18\x03 \x01(\x08\x12\x1d\n\x15point_item_used_event\x18\x04 \x01(\x08\x12R\n\x0fwager_won_event\x18\x05 \x01(\x0b\x32\x39.CMsgClientToGCRequestEventPointLogResponse.WagerWonEvent\x12i\n\x1bmystery_item_received_event\x18\x06 \x01(\x0b\x32\x44.CMsgClientToGCRequestEventPointLogResponse.MysteryItemReceivedEvent\x12^\n\x15quest_challenge_event\x18\x07 \x01(\x0b\x32?.CMsgClientToGCRequestEventPointLogResponse.QuestChallengeEvent\x12R\n\x0ftip_given_event\x18\x08 \x01(\x0b\x32\x39.CMsgClientToGCRequestEventPointLogResponse.TipGivenEvent\x12X\n\x12tip_received_event\x18\t \x01(\x0b\x32<.CMsgClientToGCRequestEventPointLogResponse.TipReceivedEvent\x12Z\n\x13recycled_item_event\x18\n \x01(\x0b\x32=.CMsgClientToGCRequestEventPointLogResponse.RecycledItemEvent\x12W\n\x11\x61\x63hievement_event\x18\x0b \x01(\x0b\x32<.CMsgClientToGCRequestEventPointLogResponse.AchievementEvent\"Q\n\x1d\x43MsgClientToGCPublishUserStat\x12\x18\n\x10user_stats_event\x18\x01 \x01(\r\x12\x16\n\x0ereference_data\x18\x02 \x01(\x04\"1\n CMsgClientToGCAddTI6TreeProgress\x12\r\n\x05trees\x18\x01 \x01(\r\"Y\n\x1a\x43MsgClientToGCRedeemReward\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x11\n\taction_id\x18\x02 \x01(\r\x12\x16\n\x0e\x62\x61se_action_id\x18\x03 \x01(\r\"\xd8\x02\n\"CMsgGCToClientRedeemRewardResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.CMsgGCToClientRedeemRewardResponse.Result:\x07SUCCESS\"\xec\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x14\n\x10\x46\x41ILURE_SDO_LOCK\x10\x01\x12\x14\n\x10\x46\x41ILURE_SDO_LOAD\x10\x02\x12\x1b\n\x17\x46\x41ILURE_EVENT_NOT_OWNED\x10\x03\x12\x1c\n\x18\x46\x41ILURE_EVENT_NOT_ACTIVE\x10\x04\x12\x1a\n\x16\x46\x41ILURE_INVALID_ACTION\x10\x05\x12 \n\x1c\x46\x41ILURE_REQUIREMENTS_NOT_MET\x10\x06\x12\x1b\n\x17\x46\x41ILURE_ALREADY_GRANTED\x10\x07\x12\x13\n\x0f\x46\x41ILURE_TIMEOUT\x10\x08\"S\n\'CMsgClientToGCRequestLinaPlaysRemaining\x12(\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x07.EEvent:\rEVENT_ID_NONE\"_\n/CMsgClientToGCRequestLinaPlaysRemainingResponse\x12\x17\n\x0fplays_remaining\x18\x01 \x01(\r\x12\x13\n\x0bplays_total\x18\x02 \x01(\r\"d\n#CMsgClientToGCRequestLinaGameResult\x12(\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x07.EEvent:\rEVENT_ID_NONE\x12\x13\n\x0bslot_chosen\x18\x02 \x01(\r\"=\n+CMsgClientToGCRequestLinaGameResultResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"\x8e\x02\n\"CMsgGCToClientQuestProgressUpdated\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12K\n\x14\x63ompleted_challenges\x18\x02 \x03(\x0b\x32-.CMsgGCToClientQuestProgressUpdated.Challenge\x1a\x88\x01\n\tChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\x12\x16\n\x0etime_completed\x18\x02 \x01(\r\x12\x10\n\x08\x61ttempts\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_type\x18\x05 \x01(\r\x12\x12\n\nquest_rank\x18\x06 \x01(\r\"?\n\x12\x43MsgDOTARedeemItem\x12\x13\n\x0b\x63urrency_id\x18\x01 \x01(\x04\x12\x14\n\x0cpurchase_def\x18\x02 \x01(\r\"\x92\x01\n\x1a\x43MsgDOTARedeemItemResponse\x12\x46\n\x08response\x18\x01 \x01(\x0e\x32\'.CMsgDOTARedeemItemResponse.EResultCode:\x0bk_Succeeded\",\n\x0b\x45ResultCode\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x0c\n\x08k_Failed\x10\x01\"6\n!CMsgPerfectWorldUserLookupRequest\x12\x11\n\tuser_name\x18\x01 \x01(\t\"\xc8\x02\n\"CMsgPerfectWorldUserLookupResponse\x12[\n\x0bresult_code\x18\x01 \x01(\x0e\x32/.CMsgPerfectWorldUserLookupResponse.EResultCode:\x15SUCCESS_ACCOUNT_FOUND\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\xb0\x01\n\x0b\x45ResultCode\x12\x19\n\x15SUCCESS_ACCOUNT_FOUND\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\x12 \n\x1c\x45RROR_USER_NAME_WRONG_FORMAT\x10\x02\x12(\n$ERROR_NO_PERFECT_WORLD_ACCOUNT_FOUND\x10\x03\x12\'\n#ERROR_NO_LINKED_STEAM_ACCOUNT_FOUND\x10\x04\"W\n\x16\x43MsgNexonPartnerUpdate\x12\x13\n\x0bmessagetype\x18\x01 \x01(\r\x12\x15\n\rtimeremaining\x18\x02 \x01(\r\x12\x11\n\tterminate\x18\x03 \x01(\x08\"#\n\x10\x43MsgMakeOffering\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\x16\n\x14\x43MsgRequestOfferings\"\xac\x01\n\x1c\x43MsgRequestOfferingsResponse\x12\x41\n\tofferings\x18\x01 \x03(\x0b\x32..CMsgRequestOfferingsResponse.NewYearsOffering\x12\x11\n\tcompleted\x18\x02 \x01(\x08\x1a\x36\n\x10NewYearsOffering\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"Q\n\x19\x43MsgDOTAPCBangTimedReward\x12\x0f\n\x07persona\x18\x01 \x01(\t\x12\x0f\n\x07itemdef\x18\x02 \x01(\r\x12\x12\n\npcbangname\x18\x03 \x01(\t*V\n\x14\x44OTA_WatchReplayType\x12\x1c\n\x18\x44OTA_WATCH_REPLAY_NORMAL\x10\x00\x12 \n\x1c\x44OTA_WATCH_REPLAY_HIGHLIGHTS\x10\x01*\xd1\x01\n\x1c\x45ItemEditorReservationResult\x12%\n!k_EItemEditorReservationResult_OK\x10\x01\x12\x30\n,k_EItemEditorReservationResult_AlreadyExists\x10\x02\x12+\n\'k_EItemEditorReservationResult_Reserved\x10\x03\x12+\n\'k_EItemEditorReservationResult_TimedOut\x10\x04*\x92\x04\n\x16\x45\x46\x65\x61turedHeroTextField\x12$\n k_EFeaturedHeroTextField_NewHero\x10\x00\x12$\n k_EFeaturedHeroTextField_NewItem\x10\x01\x12/\n+k_EFeaturedHeroTextField_ItemSetDescription\x10\x02\x12,\n(k_EFeaturedHeroTextField_ItemDescription\x10\x03\x12!\n\x1dk_EFeaturedHeroTextField_Hype\x10\x04\x12(\n$k_EFeaturedHeroTextField_HeroWinLoss\x10\x05\x12\x31\n-k_EFeaturedHeroTextField_FrequentlyPlayedHero\x10\x06\x12)\n%k_EFeaturedHeroTextField_FeaturedItem\x10\x07\x12(\n$k_EFeaturedHeroTextField_PopularItem\x10\x08\x12%\n!k_EFeaturedHeroTextField_SaleItem\x10\t\x12)\n%k_EFeaturedHeroTextField_SaleDiscount\x10\n\x12&\n\"k_EFeaturedHeroTextField_Container\x10\x0b*\x87\x03\n\x15\x45\x46\x65\x61turedHeroDataType\x12\"\n\x1ek_EFeaturedHeroDataType_HeroID\x10\x00\x12#\n\x1fk_EFeaturedHeroDataType_ItemDef\x10\x01\x12&\n\"k_EFeaturedHeroDataType_HypeString\x10\x02\x12*\n&k_EFeaturedHeroDataType_StartTimestamp\x10\x03\x12+\n\'k_EFeaturedHeroDataType_ExpireTimestamp\x10\x04\x12$\n k_EFeaturedHeroDataType_HeroWins\x10\x05\x12&\n\"k_EFeaturedHeroDataType_HeroLosses\x10\x06\x12(\n$k_EFeaturedHeroDataType_SaleDiscount\x10\x07\x12,\n(k_EFeaturedHeroDataType_ContainerItemDef\x10\x08*\xe8\x01\n EWeekendTourneyRichPresenceEvent\x12+\n\'k_EWeekendTourneyRichPresenceEvent_None\x10\x00\x12\x33\n/k_EWeekendTourneyRichPresenceEvent_StartedMatch\x10\x01\x12/\n+k_EWeekendTourneyRichPresenceEvent_WonMatch\x10\x02\x12\x31\n-k_EWeekendTourneyRichPresenceEvent_Eliminated\x10\x03\x42\x05H\x01\x80\x01\x00')
 
-_EMATCHGROUPSERVERSTATUS = _descriptor.EnumDescriptor(
-  name='EMatchGroupServerStatus',
-  full_name='EMatchGroupServerStatus',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='k_EMatchGroupServerStatus_OK', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EMatchGroupServerStatus_LimitedAvailability', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EMatchGroupServerStatus_Offline', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=54826,
-  serialized_end=54975,
-)
-
-EMatchGroupServerStatus = enum_type_wrapper.EnumTypeWrapper(_EMATCHGROUPSERVERSTATUS)
 _DOTA_WATCHREPLAYTYPE = _descriptor.EnumDescriptor(
   name='DOTA_WatchReplayType',
   full_name='DOTA_WatchReplayType',
@@ -64,8 +38,8 @@ _DOTA_WATCHREPLAYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=54977,
-  serialized_end=55063,
+  serialized_start=32295,
+  serialized_end=32381,
 )
 
 DOTA_WatchReplayType = enum_type_wrapper.EnumTypeWrapper(_DOTA_WATCHREPLAYTYPE)
@@ -94,49 +68,11 @@ _EITEMEDITORRESERVATIONRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=55066,
-  serialized_end=55275,
+  serialized_start=32384,
+  serialized_end=32593,
 )
 
 EItemEditorReservationResult = enum_type_wrapper.EnumTypeWrapper(_EITEMEDITORRESERVATIONRESULT)
-_EPROFILECARDSLOTTYPE = _descriptor.EnumDescriptor(
-  name='EProfileCardSlotType',
-  full_name='EProfileCardSlotType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='k_EProfileCardSlotType_Empty', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EProfileCardSlotType_Stat', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EProfileCardSlotType_Trophy', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EProfileCardSlotType_Item', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EProfileCardSlotType_Hero', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EProfileCardSlotType_Emoticon', index=5, number=5,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=55278,
-  serialized_end=55505,
-)
-
-EProfileCardSlotType = enum_type_wrapper.EnumTypeWrapper(_EPROFILECARDSLOTTYPE)
 _EFEATUREDHEROTEXTFIELD = _descriptor.EnumDescriptor(
   name='EFeaturedHeroTextField',
   full_name='EFeaturedHeroTextField',
@@ -194,8 +130,8 @@ _EFEATUREDHEROTEXTFIELD = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=55508,
-  serialized_end=56038,
+  serialized_start=32596,
+  serialized_end=33126,
 )
 
 EFeaturedHeroTextField = enum_type_wrapper.EnumTypeWrapper(_EFEATUREDHEROTEXTFIELD)
@@ -244,80 +180,47 @@ _EFEATUREDHERODATATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=56041,
-  serialized_end=56432,
+  serialized_start=33129,
+  serialized_end=33520,
 )
 
 EFeaturedHeroDataType = enum_type_wrapper.EnumTypeWrapper(_EFEATUREDHERODATATYPE)
-_EDOTAGROUPMERGERESULT = _descriptor.EnumDescriptor(
-  name='EDOTAGroupMergeResult',
-  full_name='EDOTAGroupMergeResult',
+_EWEEKENDTOURNEYRICHPRESENCEEVENT = _descriptor.EnumDescriptor(
+  name='EWeekendTourneyRichPresenceEvent',
+  full_name='EWeekendTourneyRichPresenceEvent',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_OK', index=0, number=0,
+      name='k_EWeekendTourneyRichPresenceEvent_None', index=0, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_FAILED_GENERIC', index=1, number=1,
+      name='k_EWeekendTourneyRichPresenceEvent_StartedMatch', index=1, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_NOT_LEADER', index=2, number=2,
+      name='k_EWeekendTourneyRichPresenceEvent_WonMatch', index=2, number=2,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_TOO_MANY_PLAYERS', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_TOO_MANY_COACHES', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_ENGINE_MISMATCH', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_NO_SUCH_GROUP', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_OTHER_GROUP_NOT_OPEN', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_ALREADY_INVITED', index=8, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_EDOTAGroupMergeResult_NOT_INVITED', index=9, number=9,
+      name='k_EWeekendTourneyRichPresenceEvent_Eliminated', index=3, number=3,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=56435,
-  serialized_end=56890,
+  serialized_start=33523,
+  serialized_end=33755,
 )
 
-EDOTAGroupMergeResult = enum_type_wrapper.EnumTypeWrapper(_EDOTAGROUPMERGERESULT)
-k_EMatchGroupServerStatus_OK = 0
-k_EMatchGroupServerStatus_LimitedAvailability = 1
-k_EMatchGroupServerStatus_Offline = 2
+EWeekendTourneyRichPresenceEvent = enum_type_wrapper.EnumTypeWrapper(_EWEEKENDTOURNEYRICHPRESENCEEVENT)
 DOTA_WATCH_REPLAY_NORMAL = 0
 DOTA_WATCH_REPLAY_HIGHLIGHTS = 1
 k_EItemEditorReservationResult_OK = 1
 k_EItemEditorReservationResult_AlreadyExists = 2
 k_EItemEditorReservationResult_Reserved = 3
 k_EItemEditorReservationResult_TimedOut = 4
-k_EProfileCardSlotType_Empty = 0
-k_EProfileCardSlotType_Stat = 1
-k_EProfileCardSlotType_Trophy = 2
-k_EProfileCardSlotType_Item = 3
-k_EProfileCardSlotType_Hero = 4
-k_EProfileCardSlotType_Emoticon = 5
 k_EFeaturedHeroTextField_NewHero = 0
 k_EFeaturedHeroTextField_NewItem = 1
 k_EFeaturedHeroTextField_ItemSetDescription = 2
@@ -339,42 +242,11 @@ k_EFeaturedHeroDataType_HeroWins = 5
 k_EFeaturedHeroDataType_HeroLosses = 6
 k_EFeaturedHeroDataType_SaleDiscount = 7
 k_EFeaturedHeroDataType_ContainerItemDef = 8
-k_EDOTAGroupMergeResult_OK = 0
-k_EDOTAGroupMergeResult_FAILED_GENERIC = 1
-k_EDOTAGroupMergeResult_NOT_LEADER = 2
-k_EDOTAGroupMergeResult_TOO_MANY_PLAYERS = 3
-k_EDOTAGroupMergeResult_TOO_MANY_COACHES = 4
-k_EDOTAGroupMergeResult_ENGINE_MISMATCH = 5
-k_EDOTAGroupMergeResult_NO_SUCH_GROUP = 6
-k_EDOTAGroupMergeResult_OTHER_GROUP_NOT_OPEN = 7
-k_EDOTAGroupMergeResult_ALREADY_INVITED = 8
-k_EDOTAGroupMergeResult_NOT_INVITED = 9
+k_EWeekendTourneyRichPresenceEvent_None = 0
+k_EWeekendTourneyRichPresenceEvent_StartedMatch = 1
+k_EWeekendTourneyRichPresenceEvent_WonMatch = 2
+k_EWeekendTourneyRichPresenceEvent_Eliminated = 3
 
-
-_CMSGDOTAMATCH_REPLAYSTATE = _descriptor.EnumDescriptor(
-  name='ReplayState',
-  full_name='CMsgDOTAMatch.ReplayState',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='REPLAY_AVAILABLE', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='REPLAY_NOT_RECORDED', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='REPLAY_EXPIRED', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=11408,
-  serialized_end=11488,
-)
 
 _CMSGDOTAREQUESTMATCHES_SKILLLEVEL = _descriptor.EnumDescriptor(
   name='SkillLevel',
@@ -401,8 +273,8 @@ _CMSGDOTAREQUESTMATCHES_SKILLLEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12595,
-  serialized_end=12652,
+  serialized_start=864,
+  serialized_end=921,
 )
 
 _CMSGDOTAPOPUP_POPUPID = _descriptor.EnumDescriptor(
@@ -412,87 +284,87 @@ _CMSGDOTAPOPUP_POPUPID = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='KICKED_FROM_LOBBY', index=0, number=0,
+      name='NONE', index=0, number=-1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='KICKED_FROM_PARTY', index=1, number=1,
+      name='KICKED_FROM_LOBBY', index=1, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='KICKED_FROM_TEAM', index=2, number=2,
+      name='KICKED_FROM_PARTY', index=2, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_WAS_DISBANDED', index=3, number=3,
+      name='KICKED_FROM_TEAM', index=3, number=2,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_MATCHMAKE_ALREADY_MATCH', index=4, number=4,
+      name='TEAM_WAS_DISBANDED', index=4, number=3,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_MATCHMAKE_ALREADY_FINDING', index=5, number=5,
+      name='TEAM_MATCHMAKE_ALREADY_MATCH', index=5, number=4,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_MATCHMAKE_FULL', index=6, number=6,
+      name='TEAM_MATCHMAKE_ALREADY_FINDING', index=6, number=5,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_MATCHMAKE_FAIL_ADD', index=7, number=7,
+      name='TEAM_MATCHMAKE_FULL', index=7, number=6,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_MATCHMAKE_FAIL_ADD_CURRENT', index=8, number=8,
+      name='TEAM_MATCHMAKE_FAIL_ADD', index=8, number=7,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_MATCHMAKE_FAILED_TEAM_MEMBER', index=9, number=9,
+      name='TEAM_MATCHMAKE_FAIL_ADD_CURRENT', index=9, number=8,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_MATCHMAKE_ALREADY_GAME', index=10, number=10,
+      name='TEAM_MATCHMAKE_FAILED_TEAM_MEMBER', index=10, number=9,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEAM_MATCHMAKE_FAIL_GET_PARTY', index=11, number=11,
+      name='TEAM_MATCHMAKE_ALREADY_GAME', index=11, number=10,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MATCHMAKING_DISABLED', index=12, number=12,
+      name='TEAM_MATCHMAKE_FAIL_GET_PARTY', index=12, number=11,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='INVITE_DENIED', index=13, number=13,
+      name='MATCHMAKING_DISABLED', index=13, number=12,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='PARTY_FULL', index=14, number=14,
+      name='INVITE_DENIED', index=14, number=13,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MADE_ADMIN', index=15, number=15,
+      name='PARTY_FULL', index=15, number=14,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='NEED_TO_PURCHASE', index=16, number=16,
+      name='MADE_ADMIN', index=16, number=15,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SIGNON_MESSAGE', index=17, number=17,
+      name='NEED_TO_PURCHASE', index=17, number=16,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='GUILD_KICKED', index=18, number=18,
+      name='SIGNON_MESSAGE', index=18, number=17,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MATCHMAKING_REGION_OFFLINE', index=19, number=19,
+      name='GUILD_KICKED', index=19, number=18,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TOO_MANY_MATCHGROUPS', index=20, number=20,
+      name='MATCHMAKING_REGION_OFFLINE', index=20, number=19,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
@@ -524,928 +396,106 @@ _CMSGDOTAPOPUP_POPUPID = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='PARTY_NOT_VALID_TO_MM', index=28, number=28,
+      name='PARTY_MEMBER_IN_ANOTHER_GAME', index=28, number=30,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='PARTY_NOT_VALID_TO_MM_COACHCOUNT', index=29, number=29,
+      name='PARTY_MEMBER_IN_LOW_PRIORITY', index=29, number=31,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='PARTY_MEMBER_IN_ANOTHER_GAME', index=30, number=30,
+      name='CLIENT_OUT_OF_DATE', index=30, number=32,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='PARTY_MEMBER_IN_LOW_PRIORITY', index=31, number=31,
+      name='SAVE_GAME_CORRUPT', index=31, number=38,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CLIENT_OUT_OF_DATE', index=32, number=32,
+      name='INSUFFICIENT_INGOTS', index=32, number=39,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_NO_COACHES', index=33, number=33,
+      name='COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_PLAY_MORE_CASUAL', index=33, number=42,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_NO_LOW_PRIORITY', index=34, number=34,
+      name='PARTY_LEADER_JOINED_LOBBY', index=34, number=44,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_NOT_UNLOCKED', index=35, number=35,
+      name='WEEKEND_TOURNEY_UNMATCHED', index=35, number=48,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_GAME_MODE_NOT_ALLOWED', index=36, number=36,
+      name='POST_MATCH_SURVEY', index=36, number=49,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='GAME_MODE_NOT_UNLOCKED', index=37, number=37,
+      name='TROPHY_AWARDED', index=37, number=50,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SAVE_GAME_CORRUPT', index=38, number=38,
+      name='TROPHY_LEVEL_UP', index=38, number=51,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='INSUFFICIENT_INGOTS', index=39, number=39,
+      name='ALL_HERO_CHALLENGE_PROGRESS', index=39, number=52,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_NO_4STACKS', index=40, number=40,
+      name='NEED_INITIAL_SKILL', index=40, number=53,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_PARTY_MMR_SPREAD_TOO_LARGE', index=41, number=41,
+      name='NEED_INITIAL_SKILL_IN_PARTY', index=41, number=54,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_PLAY_MORE_CASUAL', index=42, number=42,
+      name='TARGET_ENGINE_MISMATCH', index=42, number=55,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_IN_PARTY', index=43, number=43,
+      name='VAC_NOT_VERIFIED', index=43, number=56,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='PARTY_LEADER_JOINED_LOBBY', index=44, number=44,
+      name='KICKED_FROM_QUEUE_EVENT_STARTING', index=44, number=57,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MM_1V1_NO_PARTIES', index=45, number=45,
+      name='KICKED_FROM_QUEUE_EVENT_ENDING', index=45, number=58,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MM_1V1_NO_LOW_PRIORITY', index=46, number=46,
+      name='LOBBY_FULL', index=46, number=62,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='WEEKEND_TOURNEY_REGISTRATION_NOT_OPEN', index=47, number=47,
+      name='EVENT_POINTS_EARNED', index=47, number=63,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='WEEKEND_TOURNEY_UNMATCHED', index=48, number=48,
+      name='CUSTOM_GAME_INCORRECT_VERSION', index=48, number=64,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='POST_MATCH_SURVEY', index=49, number=49,
+      name='LIMITED_USER_CHAT', index=49, number=66,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TROPHY_AWARDED', index=50, number=50,
+      name='EVENT_PREMIUM_POINTS_EARNED', index=50, number=67,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TROPHY_LEVEL_UP', index=51, number=51,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ALL_HERO_CHALLENGE_PROGRESS', index=52, number=52,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NEED_INITIAL_SKILL', index=53, number=53,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NEED_INITIAL_SKILL_IN_PARTY', index=54, number=54,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TARGET_ENGINE_MISMATCH', index=55, number=55,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='VAC_NOT_VERIFIED', index=56, number=56,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='KICKED_FROM_QUEUE_EVENT_STARTING', index=57, number=57,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='KICKED_FROM_QUEUE_EVENT_ENDING', index=58, number=58,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='EVENT_NO_LOW_PRIORITY', index=59, number=59,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='MM_LOW_PRI_ONLY_CASUAL_AR', index=60, number=60,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CNY2015_ONCE_PER_ROUND', index=61, number=61,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LOBBY_FULL', index=62, number=62,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='EVENT_POINTS_EARNED', index=63, number=63,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CUSTOM_GAME_INCORRECT_VERSION', index=64, number=64,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='COMPETITIVE_MM_MMR_TOO_HIGH_S2', index=65, number=65,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LIMITED_USER_CHAT', index=66, number=66,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='EVENT_PREMIUM_POINTS_EARNED', index=67, number=67,
+      name='LOBBY_MVP_AWARDED', index=51, number=68,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=13064,
-  serialized_end=15118,
-)
-
-_CMSGDOTACREATETEAMRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTACreateTeamResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='INVALID', index=0, number=-1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_EMPTY', index=2, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_BAD_CHARACTERS', index=3, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_TAKEN', index=4, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_TOO_LONG', index=5, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TAG_EMPTY', index=6, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TAG_BAD_CHARACTERS', index=7, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TAG_TAKEN', index=8, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TAG_TOO_LONG', index=9, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CREATOR_BUSY', index=10, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED_ERROR', index=11, number=10,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CREATOR_TEAM_LIMIT_REACHED', index=12, number=11,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NO_LOGO', index=13, number=12,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CREATOR_TEAM_CREATION_COOLDOWN', index=14, number=13,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LOGO_UPLOAD_FAILED', index=15, number=14,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_CHANGED_TOO_RECENTLY', index=16, number=15,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CREATOR_INSUFFICIENT_LEVEL', index=17, number=16,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=16305,
-  serialized_end=16705,
-)
-
-_CMSGDOTAEDITTEAMLOGORESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTAEditTeamLogoResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='INVALID', index=0, number=-1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CREATOR_BUSY', index=2, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED_ERROR', index=3, number=10,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NO_LOGO', index=4, number=12,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=17088,
-  serialized_end=17185,
-)
-
-_CMSGDOTAEDITTEAMDETAILSRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTAEditTeamDetailsResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='INVALID', index=0, number=-1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CREATOR_BUSY', index=2, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED_ERROR', index=3, number=10,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=17088,
-  serialized_end=17172,
-)
-
-_CMSGDOTADISBANDTEAMRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTADisbandTeamResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_NOT_EMPTY', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=17599,
-  serialized_end=17656,
-)
-
-_CMSGDOTAREQUESTTEAMDATARESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTARequestTeamDataResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=17599,
-  serialized_end=17633,
-)
-
-_CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTATeamInvite_GCImmediateResponseToInviter.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='MEMBER_LIMIT', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVITEE_NOT_AVAILABLE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVITEE_BUSY', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVITEE_ALREADY_ON_THE_TEAM', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVITEE_ALREADY_ON_TOO_MANY_TEAMS', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED_ERROR', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVITEE_INSUFFICIENT_LEVEL', index=7, number=7,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=18742,
-  serialized_end=18953,
-)
-
-_CMSGDOTATEAMINVITE_INVITEERESPONSETOGC_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTATeamInvite_InviteeResponseToGC.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='JOIN', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='REJECT', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TIMEOUT', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=19188,
-  serialized_end=19231,
-)
-
-_CMSGDOTATEAMINVITE_GCRESPONSETOINVITER_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTATeamInvite_GCResponseToInviter.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='JOINED', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='REJECTION', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TIMEOUT', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED_ERROR', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=19370,
-  serialized_end=19441,
-)
-
-_CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTATeamInvite_GCResponseToInvitee.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=17599,
-  serialized_end=17633,
-)
-
-_CMSGDOTAKICKTEAMMEMBERRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTAKickTeamMemberResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=17599,
-  serialized_end=17633,
-)
-
-_CMSGDOTATRANSFERTEAMADMINRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTATransferTeamAdminResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NOT_ADMIN', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ON_OTHER_TEAM', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ADMIN_OF_OTHER_TEAM', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED_ERROR', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=20076,
-  serialized_end=20179,
-)
-
-_CMSGDOTALEAVETEAMRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTALeaveTeamResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=17599,
-  serialized_end=17633,
-)
-
-_CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgDOTAJoinChatChannelResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='JOIN_SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVALID_CHANNEL_TYPE', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ACCOUNT_NOT_FOUND', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ACH_FAILED', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='USER_IN_TOO_MANY_CHANNELS', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='RATE_LIMIT_EXCEEDED', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CHANNEL_FULL', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CHANNEL_FULL_OVERFLOWED', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILED_TO_ADD_USER', index=8, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CHANNEL_TYPE_DISABLED', index=9, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PRIVATE_CHAT_CREATE_FAILED', index=10, number=10,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PRIVATE_CHAT_NO_PERMISSION', index=11, number=11,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PRIVATE_CHAT_CREATE_LOCK_FAILED', index=12, number=12,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PRIVATE_CHAT_KICKED', index=13, number=13,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=21835,
-  serialized_end=22206,
-)
-
-_CMSGDOTAGUILDCREATERESPONSE_EERROR = _descriptor.EnumDescriptor(
-  name='EError',
-  full_name='CMsgDOTAGuildCreateResponse.EError',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_EMPTY', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_BAD_CHARACTERS', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_TOO_LONG', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NAME_TAKEN', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TAG_EMPTY', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TAG_BAD_CHARACTERS', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TAG_TOO_LONG', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ACCOUNT_TOO_MANY_GUILDS', index=8, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LOGO_UPLOAD_FAILED', index=9, number=9,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=25053,
-  serialized_end=25264,
-)
-
-_CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='CMsgDOTAGuildSetAccountRoleResponse.EResult',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PERMISSION', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_OTHER_LEADER', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_TOO_MANY_GUILDS', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_GUILD_TOO_MANY_MEMBERS', index=5, number=5,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=25482,
-  serialized_end=25648,
-)
-
-_CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='CMsgDOTAGuildInviteAccountResponse.EResult',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PERMISSION', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_ALREADY_INVITED', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_ALREADY_IN_GUILD', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_TOO_MANY_INVITES', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_GUILD_TOO_MANY_INVITES', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_TOO_MANY_GUILDS', index=7, number=7,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=25842,
-  serialized_end=26088,
-)
-
-_CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='CMsgDOTAGuildCancelInviteResponse.EResult',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PERMISSION', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=25482,
-  serialized_end=25552,
-)
-
-_CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='CMsgDOTAGuildUpdateDetailsResponse.EResult',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PERMISSION', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=25482,
-  serialized_end=25552,
-)
-
-_CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='CMsgDOTAPartySetOpenGuildResponse.EResult',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=25482,
-  serialized_end=25527,
-)
-
-_CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='CMsgDOTAJoinOpenGuildPartyResponse.EResult',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=25482,
-  serialized_end=25527,
-)
-
-_CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='CMsgDOTAGuildEditLogoResponse.EResult',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NO_PERMISSION', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LOGO_UPLOAD_FAILED', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED_ERROR', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=28094,
-  serialized_end=28182,
-)
-
-_CMSGWATCHGAMERESPONSE_WATCHGAMERESULT = _descriptor.EnumDescriptor(
-  name='WatchGameResult',
-  full_name='CMsgWatchGameResponse.WatchGameResult',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='PENDING', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='READY', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='GAMESERVERNOTFOUND', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UNAVAILABLE', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CANCELLED', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INCOMPATIBLEVERSION', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='MISSINGLEAGUESUBSCRIPTION', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LOBBYNOTFOUND', index=7, number=7,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=29494,
-  serialized_end=29666,
+  serialized_start=1320,
+  serialized_end=2810,
 )
 
 _CMSGDOTAFRIENDRECRUITSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
@@ -1465,8 +515,8 @@ _CMSGDOTAFRIENDRECRUITSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=25482,
-  serialized_end=25527,
+  serialized_start=11664,
+  serialized_end=11709,
 )
 
 _CMSGDOTAREDEEMEVENTPRIZERESPONSE_RESULTCODE = _descriptor.EnumDescriptor(
@@ -1494,8 +544,8 @@ _CMSGDOTAREDEEMEVENTPRIZERESPONSE_RESULTCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=39593,
-  serialized_end=39675,
+  serialized_start=13842,
+  serialized_end=13924,
 )
 
 _CMSGGCNOTIFICATIONSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
@@ -1515,8 +565,8 @@ _CMSGGCNOTIFICATIONSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=25482,
-  serialized_end=25527,
+  serialized_start=11664,
+  serialized_end=11709,
 )
 
 _CMSGGCPLAYERINFOSUBMITRESPONSE_ERESULT = _descriptor.EnumDescriptor(
@@ -1540,81 +590,8 @@ _CMSGGCPLAYERINFOSUBMITRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=42183,
-  serialized_end=42251,
-)
-
-_CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='CMsgGCToClientPrivateChatResponse.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_CREATION_LOCK', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_SQL_TRANSACTION', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_SDO_LOAD', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_NO_PERMISSION', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_ALREADY_MEMBER', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_NOT_A_MEMBER', index=6, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_NO_REMAINING_ADMINS', index=7, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_NO_ROOM', index=8, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_CREATION_RATE_LIMITED', index=9, number=10,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_UNKNOWN_CHANNEL_NAME', index=10, number=11,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_UNKNOWN_USER', index=11, number=12,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_UNKNOWN_ERROR', index=12, number=13,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_CANNOT_KICK_ADMIN', index=13, number=14,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILURE_ALREADY_ADMIN', index=14, number=15,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=51825,
-  serialized_end=52239,
+  serialized_start=16579,
+  serialized_end=16647,
 )
 
 _CMSGGCTOCLIENTMYSTERYITEMRESPONSE_RESULT = _descriptor.EnumDescriptor(
@@ -1666,959 +643,161 @@ _CMSGGCTOCLIENTMYSTERYITEMRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=53362,
-  serialized_end=53623,
+  serialized_start=25421,
+  serialized_end=25682,
 )
 
-
-_CMSGSTARTFINDINGMATCH = _descriptor.Descriptor(
-  name='CMsgStartFindingMatch',
-  full_name='CMsgStartFindingMatch',
+_CMSGCLIENTTOGCVOTEFORARCANARESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='CMsgClientToGCVoteForArcanaResponse.Result',
   filename=None,
   file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='SUCCEEDED', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='VOTING_NOT_ENABLED_FOR_ROUND', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN_FAILURE', index=2, number=2,
+      options=None,
+      type=None),
+  ],
   containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='CMsgStartFindingMatch.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='matchgroups', full_name='CMsgStartFindingMatch.matchgroups', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=True, default_value=4294967295,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgStartFindingMatch.client_version', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_modes', full_name='CMsgStartFindingMatch.game_modes', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=True, default_value=4294967295,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='bot_difficulty', full_name='CMsgStartFindingMatch.bot_difficulty', index=4,
-      number=5, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=3,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_type', full_name='CMsgStartFindingMatch.match_type', index=5,
-      number=6, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='matchlanguages', full_name='CMsgStartFindingMatch.matchlanguages', index=6,
-      number=7, type=13, cpp_type=3, label=1,
-      has_default_value=True, default_value=4294967295,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='map_preference', full_name='CMsgStartFindingMatch.map_preference', index=7,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgStartFindingMatch.team_id', index=8,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_language_enum', full_name='CMsgStartFindingMatch.game_language_enum', index=9,
-      number=10, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_language_name', full_name='CMsgStartFindingMatch.game_language_name', index=10,
-      number=11, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='ping_data', full_name='CMsgStartFindingMatch.ping_data', index=11,
-      number=12, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='region_select_flags', full_name='CMsgStartFindingMatch.region_select_flags', index=12,
-      number=13, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=169,
-  serialized_end=653,
+  serialized_start=27794,
+  serialized_end=27872,
 )
 
-
-_CMSGSTOPFINDINGMATCH = _descriptor.Descriptor(
-  name='CMsgStopFindingMatch',
-  full_name='CMsgStopFindingMatch',
+_CMSGARCANAVOTES_VOTINGSTATE = _descriptor.EnumDescriptor(
+  name='VotingState',
+  full_name='CMsgArcanaVotes.VotingState',
   filename=None,
   file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='FINISHED', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IN_PROGRESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IN_FUTURE', index=2, number=2,
+      options=None,
+      type=None),
+  ],
   containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=655,
-  serialized_end=677,
+  serialized_start=28310,
+  serialized_end=28369,
 )
 
-
-_CMSGREADYUP = _descriptor.Descriptor(
-  name='CMsgReadyUp',
-  full_name='CMsgReadyUp',
+_CMSGGCTOCLIENTREDEEMREWARDRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='CMsgGCToClientRedeemRewardResponse.Result',
   filename=None,
   file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE_SDO_LOCK', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE_SDO_LOAD', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE_EVENT_NOT_OWNED', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE_EVENT_NOT_ACTIVE', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE_INVALID_ACTION', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE_REQUIREMENTS_NOT_MET', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE_ALREADY_GRANTED', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE_TIMEOUT', index=8, number=8,
+      options=None,
+      type=None),
+  ],
   containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='state', full_name='CMsgReadyUp.state', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='ready_up_key', full_name='CMsgReadyUp.ready_up_key', index=1,
-      number=2, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hardware_specs', full_name='CMsgReadyUp.hardware_specs', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=680,
-  serialized_end=835,
+  serialized_start=30428,
+  serialized_end=30664,
 )
 
-
-_CMSGREADYUPSTATUS = _descriptor.Descriptor(
-  name='CMsgReadyUpStatus',
-  full_name='CMsgReadyUpStatus',
+_CMSGDOTAREDEEMITEMRESPONSE_ERESULTCODE = _descriptor.EnumDescriptor(
+  name='EResultCode',
+  full_name='CMsgDOTARedeemItemResponse.EResultCode',
   filename=None,
   file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_Succeeded', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_Failed', index=1, number=1,
+      options=None,
+      type=None),
+  ],
   containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CMsgReadyUpStatus.lobby_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='accepted_ids', full_name='CMsgReadyUpStatus.accepted_ids', index=1,
-      number=2, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='declined_ids', full_name='CMsgReadyUpStatus.declined_ids', index=2,
-      number=3, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=837,
-  serialized_end=918,
+  serialized_start=31454,
+  serialized_end=31498,
 )
 
-
-_CSOURCETVGAMESMALL_PLAYER = _descriptor.Descriptor(
-  name='Player',
-  full_name='CSourceTVGameSmall.Player',
+_CMSGPERFECTWORLDUSERLOOKUPRESPONSE_ERESULTCODE = _descriptor.EnumDescriptor(
+  name='EResultCode',
+  full_name='CMsgPerfectWorldUserLookupResponse.EResultCode',
   filename=None,
   file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS_ACCOUNT_FOUND', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_UNKNOWN', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_USER_NAME_WRONG_FORMAT', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NO_PERFECT_WORLD_ACCOUNT_FOUND', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NO_LINKED_STEAM_ACCOUNT_FOUND', index=4, number=4,
+      options=None,
+      type=None),
+  ],
   containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CSourceTVGameSmall.Player.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='CSourceTVGameSmall.Player.hero_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
   options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=1398,
-  serialized_end=1443,
-)
-
-_CSOURCETVGAMESMALL = _descriptor.Descriptor(
-  name='CSourceTVGameSmall',
-  full_name='CSourceTVGameSmall',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='activate_time', full_name='CSourceTVGameSmall.activate_time', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='deactivate_time', full_name='CSourceTVGameSmall.deactivate_time', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='server_steam_id', full_name='CSourceTVGameSmall.server_steam_id', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CSourceTVGameSmall.lobby_id', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_id', full_name='CSourceTVGameSmall.league_id', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobby_type', full_name='CSourceTVGameSmall.lobby_type', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_time', full_name='CSourceTVGameSmall.game_time', index=6,
-      number=7, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='delay', full_name='CSourceTVGameSmall.delay', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='spectators', full_name='CSourceTVGameSmall.spectators', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CSourceTVGameSmall.game_mode', index=9,
-      number=10, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='average_mmr', full_name='CSourceTVGameSmall.average_mmr', index=10,
-      number=11, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_name_radiant', full_name='CSourceTVGameSmall.team_name_radiant', index=11,
-      number=15, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_name_dire', full_name='CSourceTVGameSmall.team_name_dire', index=12,
-      number=16, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sort_score', full_name='CSourceTVGameSmall.sort_score', index=13,
-      number=17, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='last_update_time', full_name='CSourceTVGameSmall.last_update_time', index=14,
-      number=18, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_lead', full_name='CSourceTVGameSmall.radiant_lead', index=15,
-      number=19, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_score', full_name='CSourceTVGameSmall.radiant_score', index=16,
-      number=20, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_score', full_name='CSourceTVGameSmall.dire_score', index=17,
-      number=21, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='players', full_name='CSourceTVGameSmall.players', index=18,
-      number=22, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='building_state', full_name='CSourceTVGameSmall.building_state', index=19,
-      number=23, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CSOURCETVGAMESMALL_PLAYER, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=921,
-  serialized_end=1443,
-)
-
-
-_CMSGCLIENTTOGCFINDTOPSOURCETVGAMES = _descriptor.Descriptor(
-  name='CMsgClientToGCFindTopSourceTVGames',
-  full_name='CMsgClientToGCFindTopSourceTVGames',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='search_key', full_name='CMsgClientToGCFindTopSourceTVGames.search_key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgClientToGCFindTopSourceTVGames.league_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='CMsgClientToGCFindTopSourceTVGames.hero_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='start_game', full_name='CMsgClientToGCFindTopSourceTVGames.start_game', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_list_index', full_name='CMsgClientToGCFindTopSourceTVGames.game_list_index', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobby_ids', full_name='CMsgClientToGCFindTopSourceTVGames.lobby_ids', index=5,
-      number=6, type=4, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=1446,
-  serialized_end=1602,
-)
-
-
-_CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE = _descriptor.Descriptor(
-  name='CMsgGCToClientFindTopSourceTVGamesResponse',
-  full_name='CMsgGCToClientFindTopSourceTVGamesResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='search_key', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.search_key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.league_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.hero_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='start_game', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.start_game', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='num_games', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.num_games', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_list_index', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.game_list_index', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_list', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.game_list', index=6,
-      number=7, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='specific_games', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.specific_games', index=7,
-      number=8, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=1605,
-  serialized_end=1833,
-)
-
-
-_CMSGCLIENTTOGCTOPMATCHESREQUEST = _descriptor.Descriptor(
-  name='CMsgClientToGCTopMatchesRequest',
-  full_name='CMsgClientToGCTopMatchesRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='CMsgClientToGCTopMatchesRequest.hero_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_account_id', full_name='CMsgClientToGCTopMatchesRequest.player_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgClientToGCTopMatchesRequest.team_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=1835,
-  serialized_end=1929,
-)
-
-
-_CMSGCLIENTTOGCTOPLEAGUEMATCHESREQUEST = _descriptor.Descriptor(
-  name='CMsgClientToGCTopLeagueMatchesRequest',
-  full_name='CMsgClientToGCTopLeagueMatchesRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=1931,
-  serialized_end=1970,
-)
-
-
-_CMSGCLIENTTOGCTOPFRIENDMATCHESREQUEST = _descriptor.Descriptor(
-  name='CMsgClientToGCTopFriendMatchesRequest',
-  full_name='CMsgClientToGCTopFriendMatchesRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=1972,
-  serialized_end=2011,
-)
-
-
-_CMSGCLIENTTOGCMATCHESMINIMALREQUEST = _descriptor.Descriptor(
-  name='CMsgClientToGCMatchesMinimalRequest',
-  full_name='CMsgClientToGCMatchesMinimalRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='match_ids', full_name='CMsgClientToGCMatchesMinimalRequest.match_ids', index=0,
-      number=1, type=4, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2013,
-  serialized_end=2069,
-)
-
-
-_CMSGCLIENTTOGCMATCHESMINIMALRESPONSE = _descriptor.Descriptor(
-  name='CMsgClientToGCMatchesMinimalResponse',
-  full_name='CMsgClientToGCMatchesMinimalResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='matches', full_name='CMsgClientToGCMatchesMinimalResponse.matches', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='last_match', full_name='CMsgClientToGCMatchesMinimalResponse.last_match', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2071,
-  serialized_end=2169,
-)
-
-
-_CMSGGCTOCLIENTTOPLEAGUEMATCHESRESPONSE = _descriptor.Descriptor(
-  name='CMsgGCToClientTopLeagueMatchesResponse',
-  full_name='CMsgGCToClientTopLeagueMatchesResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='matches', full_name='CMsgGCToClientTopLeagueMatchesResponse.matches', index=0,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2171,
-  serialized_end=2251,
-)
-
-
-_CMSGGCTOCLIENTTOPFRIENDMATCHESRESPONSE = _descriptor.Descriptor(
-  name='CMsgGCToClientTopFriendMatchesResponse',
-  full_name='CMsgGCToClientTopFriendMatchesResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='matches', full_name='CMsgGCToClientTopFriendMatchesResponse.matches', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2253,
-  serialized_end=2333,
-)
-
-
-_CMSGCLIENTTOGCFINDTOPMATCHES = _descriptor.Descriptor(
-  name='CMsgClientToGCFindTopMatches',
-  full_name='CMsgClientToGCFindTopMatches',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='start_game', full_name='CMsgClientToGCFindTopMatches.start_game', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgClientToGCFindTopMatches.league_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='CMsgClientToGCFindTopMatches.hero_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='friend_id', full_name='CMsgClientToGCFindTopMatches.friend_id', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='friend_list', full_name='CMsgClientToGCFindTopMatches.friend_list', index=4,
-      number=5, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_list', full_name='CMsgClientToGCFindTopMatches.league_list', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2336,
-  serialized_end=2483,
-)
-
-
-_CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE = _descriptor.Descriptor(
-  name='CMsgGCToClientFindTopLeagueMatchesResponse',
-  full_name='CMsgGCToClientFindTopLeagueMatchesResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='start_game', full_name='CMsgGCToClientFindTopLeagueMatchesResponse.start_game', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgGCToClientFindTopLeagueMatchesResponse.league_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='CMsgGCToClientFindTopLeagueMatchesResponse.hero_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_ids', full_name='CMsgGCToClientFindTopLeagueMatchesResponse.match_ids', index=3,
-      number=4, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='matches', full_name='CMsgGCToClientFindTopLeagueMatchesResponse.matches', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2486,
-  serialized_end=2638,
-)
-
-
-_CMSGSPECTATEFRIENDGAME = _descriptor.Descriptor(
-  name='CMsgSpectateFriendGame',
-  full_name='CMsgSpectateFriendGame',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgSpectateFriendGame.steam_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2640,
-  serialized_end=2682,
-)
-
-
-_CMSGSPECTATEFRIENDGAMERESPONSE = _descriptor.Descriptor(
-  name='CMsgSpectateFriendGameResponse',
-  full_name='CMsgSpectateFriendGameResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='server_steamid', full_name='CMsgSpectateFriendGameResponse.server_steamid', index=0,
-      number=4, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2684,
-  serialized_end=2740,
-)
-
-
-_CMSGABANDONCURRENTGAME = _descriptor.Descriptor(
-  name='CMsgAbandonCurrentGame',
-  full_name='CMsgAbandonCurrentGame',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2742,
-  serialized_end=2766,
+  serialized_start=31709,
+  serialized_end=31885,
 )
 
 
@@ -2645,1839 +824,8 @@ _CMSGCLIENTSUSPENDED = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=2768,
-  serialized_end=2807,
-)
-
-
-_CMSGPRACTICELOBBYSETDETAILS = _descriptor.Descriptor(
-  name='CMsgPracticeLobbySetDetails',
-  full_name='CMsgPracticeLobbySetDetails',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CMsgPracticeLobbySetDetails.lobby_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_name', full_name='CMsgPracticeLobbySetDetails.game_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_details', full_name='CMsgPracticeLobbySetDetails.team_details', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='server_region', full_name='CMsgPracticeLobbySetDetails.server_region', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgPracticeLobbySetDetails.game_mode', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='cm_pick', full_name='CMsgPracticeLobbySetDetails.cm_pick', index=5,
-      number=6, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='bot_difficulty', full_name='CMsgPracticeLobbySetDetails.bot_difficulty', index=6,
-      number=9, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=2,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='allow_cheats', full_name='CMsgPracticeLobbySetDetails.allow_cheats', index=7,
-      number=10, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fill_with_bots', full_name='CMsgPracticeLobbySetDetails.fill_with_bots', index=8,
-      number=11, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='intro_mode', full_name='CMsgPracticeLobbySetDetails.intro_mode', index=9,
-      number=12, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='allow_spectating', full_name='CMsgPracticeLobbySetDetails.allow_spectating', index=10,
-      number=13, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_version', full_name='CMsgPracticeLobbySetDetails.game_version', index=11,
-      number=14, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pass_key', full_name='CMsgPracticeLobbySetDetails.pass_key', index=12,
-      number=15, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='leagueid', full_name='CMsgPracticeLobbySetDetails.leagueid', index=13,
-      number=16, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='penalty_level_radiant', full_name='CMsgPracticeLobbySetDetails.penalty_level_radiant', index=14,
-      number=17, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='penalty_level_dire', full_name='CMsgPracticeLobbySetDetails.penalty_level_dire', index=15,
-      number=18, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='load_game_id', full_name='CMsgPracticeLobbySetDetails.load_game_id', index=16,
-      number=19, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='series_type', full_name='CMsgPracticeLobbySetDetails.series_type', index=17,
-      number=20, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_series_wins', full_name='CMsgPracticeLobbySetDetails.radiant_series_wins', index=18,
-      number=21, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_series_wins', full_name='CMsgPracticeLobbySetDetails.dire_series_wins', index=19,
-      number=22, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='allchat', full_name='CMsgPracticeLobbySetDetails.allchat', index=20,
-      number=23, type=8, cpp_type=7, label=1,
-      has_default_value=True, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dota_tv_delay', full_name='CMsgPracticeLobbySetDetails.dota_tv_delay', index=21,
-      number=24, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=1,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lan', full_name='CMsgPracticeLobbySetDetails.lan', index=22,
-      number=25, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_mode', full_name='CMsgPracticeLobbySetDetails.custom_game_mode', index=23,
-      number=26, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_map_name', full_name='CMsgPracticeLobbySetDetails.custom_map_name', index=24,
-      number=27, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_difficulty', full_name='CMsgPracticeLobbySetDetails.custom_difficulty', index=25,
-      number=28, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_id', full_name='CMsgPracticeLobbySetDetails.custom_game_id', index=26,
-      number=29, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_min_players', full_name='CMsgPracticeLobbySetDetails.custom_min_players', index=27,
-      number=30, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_max_players', full_name='CMsgPracticeLobbySetDetails.custom_max_players', index=28,
-      number=31, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lan_host_ping_to_server_region', full_name='CMsgPracticeLobbySetDetails.lan_host_ping_to_server_region', index=29,
-      number=32, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='visibility', full_name='CMsgPracticeLobbySetDetails.visibility', index=30,
-      number=33, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_crc', full_name='CMsgPracticeLobbySetDetails.custom_game_crc', index=31,
-      number=34, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_series_id', full_name='CMsgPracticeLobbySetDetails.league_series_id', index=32,
-      number=35, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_game_id', full_name='CMsgPracticeLobbySetDetails.league_game_id', index=33,
-      number=36, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_timestamp', full_name='CMsgPracticeLobbySetDetails.custom_game_timestamp', index=34,
-      number=37, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='previous_match_override', full_name='CMsgPracticeLobbySetDetails.previous_match_override', index=35,
-      number=38, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_selection_priority_team', full_name='CMsgPracticeLobbySetDetails.league_selection_priority_team', index=36,
-      number=39, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_selection_priority_choice', full_name='CMsgPracticeLobbySetDetails.league_selection_priority_choice', index=37,
-      number=40, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_non_selection_priority_choice', full_name='CMsgPracticeLobbySetDetails.league_non_selection_priority_choice', index=38,
-      number=41, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pause_setting', full_name='CMsgPracticeLobbySetDetails.pause_setting', index=39,
-      number=42, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=2810,
-  serialized_end=4203,
-)
-
-
-_CMSGPRACTICELOBBYCREATE_SAVEGAME = _descriptor.Descriptor(
-  name='SaveGame',
-  full_name='CMsgPracticeLobbyCreate.SaveGame',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='data', full_name='CMsgPracticeLobbyCreate.SaveGame.data', index=0,
-      number=1, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='version', full_name='CMsgPracticeLobbyCreate.SaveGame.version', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgPracticeLobbyCreate.SaveGame.steam_id', index=2,
-      number=3, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='signature', full_name='CMsgPracticeLobbyCreate.SaveGame.signature', index=3,
-      number=4, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=4402,
-  serialized_end=4480,
-)
-
-_CMSGPRACTICELOBBYCREATE = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyCreate',
-  full_name='CMsgPracticeLobbyCreate',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='search_key', full_name='CMsgPracticeLobbyCreate.search_key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pass_key', full_name='CMsgPracticeLobbyCreate.pass_key', index=1,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgPracticeLobbyCreate.client_version', index=2,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobby_details', full_name='CMsgPracticeLobbyCreate.lobby_details', index=3,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='save_game', full_name='CMsgPracticeLobbyCreate.save_game', index=4,
-      number=8, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGPRACTICELOBBYCREATE_SAVEGAME, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=4206,
-  serialized_end=4480,
-)
-
-
-_CMSGPRACTICELOBBYSETTEAMSLOT = _descriptor.Descriptor(
-  name='CMsgPracticeLobbySetTeamSlot',
-  full_name='CMsgPracticeLobbySetTeamSlot',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='team', full_name='CMsgPracticeLobbySetTeamSlot.team', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='slot', full_name='CMsgPracticeLobbySetTeamSlot.slot', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='bot_difficulty', full_name='CMsgPracticeLobbySetTeamSlot.bot_difficulty', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=4483,
-  serialized_end=4648,
-)
-
-
-_CMSGPRACTICELOBBYSETCOACH = _descriptor.Descriptor(
-  name='CMsgPracticeLobbySetCoach',
-  full_name='CMsgPracticeLobbySetCoach',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='team', full_name='CMsgPracticeLobbySetCoach.team', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=4650,
-  serialized_end=4730,
-)
-
-
-_CMSGPRACTICELOBBYJOINBROADCASTCHANNEL = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyJoinBroadcastChannel',
-  full_name='CMsgPracticeLobbyJoinBroadcastChannel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel', full_name='CMsgPracticeLobbyJoinBroadcastChannel.channel', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='preferred_description', full_name='CMsgPracticeLobbyJoinBroadcastChannel.preferred_description', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='preferred_country_code', full_name='CMsgPracticeLobbyJoinBroadcastChannel.preferred_country_code', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='preferred_language_code', full_name='CMsgPracticeLobbyJoinBroadcastChannel.preferred_language_code', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=4733,
-  serialized_end=4885,
-)
-
-
-_CMSGPRACTICELOBBYCLOSEBROADCASTCHANNEL = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyCloseBroadcastChannel',
-  full_name='CMsgPracticeLobbyCloseBroadcastChannel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel', full_name='CMsgPracticeLobbyCloseBroadcastChannel.channel', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=4887,
-  serialized_end=4944,
-)
-
-
-_CMSGPRACTICELOBBYTOGGLEBROADCASTCHANNELCAMERAMANSTATUS = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus',
-  full_name='CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=4946,
-  serialized_end=5002,
-)
-
-
-_CMSGPRACTICELOBBYKICK = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyKick',
-  full_name='CMsgPracticeLobbyKick',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgPracticeLobbyKick.account_id', index=0,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5004,
-  serialized_end=5047,
-)
-
-
-_CMSGPRACTICELOBBYKICKFROMTEAM = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyKickFromTeam',
-  full_name='CMsgPracticeLobbyKickFromTeam',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgPracticeLobbyKickFromTeam.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5049,
-  serialized_end=5100,
-)
-
-
-_CMSGPRACTICELOBBYLEAVE = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyLeave',
-  full_name='CMsgPracticeLobbyLeave',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5102,
-  serialized_end=5126,
-)
-
-
-_CMSGPRACTICELOBBYLAUNCH = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyLaunch',
-  full_name='CMsgPracticeLobbyLaunch',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgPracticeLobbyLaunch.client_version', index=0,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5128,
-  serialized_end=5177,
-)
-
-
-_CMSGAPPLYTEAMTOPRACTICELOBBY = _descriptor.Descriptor(
-  name='CMsgApplyTeamToPracticeLobby',
-  full_name='CMsgApplyTeamToPracticeLobby',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgApplyTeamToPracticeLobby.team_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5179,
-  serialized_end=5226,
-)
-
-
-_CMSGCLEARPRACTICELOBBYTEAM = _descriptor.Descriptor(
-  name='CMsgClearPracticeLobbyTeam',
-  full_name='CMsgClearPracticeLobbyTeam',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5228,
-  serialized_end=5256,
-)
-
-
-_CMSGPRACTICELOBBYLIST = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyList',
-  full_name='CMsgPracticeLobbyList',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='tournament_games', full_name='CMsgPracticeLobbyList.tournament_games', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pass_key', full_name='CMsgPracticeLobbyList.pass_key', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='region', full_name='CMsgPracticeLobbyList.region', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgPracticeLobbyList.game_mode', index=3,
-      number=4, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5259,
-  serialized_end=5397,
-)
-
-
-_CMSGPRACTICELOBBYLISTRESPONSEENTRY_CLOBBYMEMBER = _descriptor.Descriptor(
-  name='CLobbyMember',
-  full_name='CMsgPracticeLobbyListResponseEntry.CLobbyMember',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgPracticeLobbyListResponseEntry.CLobbyMember.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_name', full_name='CMsgPracticeLobbyListResponseEntry.CLobbyMember.player_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5935,
-  serialized_end=5990,
-)
-
-_CMSGPRACTICELOBBYLISTRESPONSEENTRY = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyListResponseEntry',
-  full_name='CMsgPracticeLobbyListResponseEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='CMsgPracticeLobbyListResponseEntry.id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')),
-    _descriptor.FieldDescriptor(
-      name='tournament_id', full_name='CMsgPracticeLobbyListResponseEntry.tournament_id', index=1,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tournament_game_id', full_name='CMsgPracticeLobbyListResponseEntry.tournament_game_id', index=2,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgPracticeLobbyListResponseEntry.members', index=3,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='requires_pass_key', full_name='CMsgPracticeLobbyListResponseEntry.requires_pass_key', index=4,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='leader_account_id', full_name='CMsgPracticeLobbyListResponseEntry.leader_account_id', index=5,
-      number=7, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgPracticeLobbyListResponseEntry.guild_id', index=6,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='guild_logo', full_name='CMsgPracticeLobbyListResponseEntry.guild_logo', index=7,
-      number=9, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgPracticeLobbyListResponseEntry.name', index=8,
-      number=10, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_mode', full_name='CMsgPracticeLobbyListResponseEntry.custom_game_mode', index=9,
-      number=11, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgPracticeLobbyListResponseEntry.game_mode', index=10,
-      number=12, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='friend_present', full_name='CMsgPracticeLobbyListResponseEntry.friend_present', index=11,
-      number=13, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='players', full_name='CMsgPracticeLobbyListResponseEntry.players', index=12,
-      number=14, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_map_name', full_name='CMsgPracticeLobbyListResponseEntry.custom_map_name', index=13,
-      number=15, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_player_count', full_name='CMsgPracticeLobbyListResponseEntry.max_player_count', index=14,
-      number=16, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='server_region', full_name='CMsgPracticeLobbyListResponseEntry.server_region', index=15,
-      number=17, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lan_host_ping_to_server_region', full_name='CMsgPracticeLobbyListResponseEntry.lan_host_ping_to_server_region', index=16,
-      number=18, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgPracticeLobbyListResponseEntry.league_id', index=17,
-      number=19, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGPRACTICELOBBYLISTRESPONSEENTRY_CLOBBYMEMBER, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5400,
-  serialized_end=5990,
-)
-
-
-_CMSGPRACTICELOBBYLISTRESPONSE = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyListResponse',
-  full_name='CMsgPracticeLobbyListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='tournament_games', full_name='CMsgPracticeLobbyListResponse.tournament_games', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobbies', full_name='CMsgPracticeLobbyListResponse.lobbies', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=5992,
-  serialized_end=6103,
-)
-
-
-_CMSGLOBBYLIST = _descriptor.Descriptor(
-  name='CMsgLobbyList',
-  full_name='CMsgLobbyList',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='server_region', full_name='CMsgLobbyList.server_region', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgLobbyList.game_mode', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6105,
-  serialized_end=6201,
-)
-
-
-_CMSGLOBBYLISTRESPONSE = _descriptor.Descriptor(
-  name='CMsgLobbyListResponse',
-  full_name='CMsgLobbyListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='lobbies', full_name='CMsgLobbyListResponse.lobbies', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6203,
-  serialized_end=6280,
-)
-
-
-_CMSGPRACTICELOBBYJOIN = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyJoin',
-  full_name='CMsgPracticeLobbyJoin',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CMsgPracticeLobbyJoin.lobby_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgPracticeLobbyJoin.client_version', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pass_key', full_name='CMsgPracticeLobbyJoin.pass_key', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_crc', full_name='CMsgPracticeLobbyJoin.custom_game_crc', index=3,
-      number=4, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_timestamp', full_name='CMsgPracticeLobbyJoin.custom_game_timestamp', index=4,
-      number=5, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6283,
-  serialized_end=6422,
-)
-
-
-_CMSGPRACTICELOBBYJOINRESPONSE = _descriptor.Descriptor(
-  name='CMsgPracticeLobbyJoinResponse',
-  full_name='CMsgPracticeLobbyJoinResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgPracticeLobbyJoinResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6424,
-  serialized_end=6519,
-)
-
-
-_CMSGFRIENDPRACTICELOBBYLISTREQUEST = _descriptor.Descriptor(
-  name='CMsgFriendPracticeLobbyListRequest',
-  full_name='CMsgFriendPracticeLobbyListRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='friends', full_name='CMsgFriendPracticeLobbyListRequest.friends', index=0,
-      number=1, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6521,
-  serialized_end=6574,
-)
-
-
-_CMSGFRIENDPRACTICELOBBYLISTRESPONSE = _descriptor.Descriptor(
-  name='CMsgFriendPracticeLobbyListResponse',
-  full_name='CMsgFriendPracticeLobbyListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='lobbies', full_name='CMsgFriendPracticeLobbyListResponse.lobbies', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6576,
-  serialized_end=6667,
-)
-
-
-_CMSGGUILDMATEPRACTICELOBBYLISTREQUEST = _descriptor.Descriptor(
-  name='CMsgGuildmatePracticeLobbyListRequest',
-  full_name='CMsgGuildmatePracticeLobbyListRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guilds', full_name='CMsgGuildmatePracticeLobbyListRequest.guilds', index=0,
-      number=1, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6669,
-  serialized_end=6724,
-)
-
-
-_CMSGGUILDMATEPRACTICELOBBYLISTRESPONSE = _descriptor.Descriptor(
-  name='CMsgGuildmatePracticeLobbyListResponse',
-  full_name='CMsgGuildmatePracticeLobbyListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='lobbies', full_name='CMsgGuildmatePracticeLobbyListResponse.lobbies', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6726,
-  serialized_end=6820,
-)
-
-
-_CMSGJOINABLECUSTOMGAMEMODESREQUEST = _descriptor.Descriptor(
-  name='CMsgJoinableCustomGameModesRequest',
-  full_name='CMsgJoinableCustomGameModesRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='server_region', full_name='CMsgJoinableCustomGameModesRequest.server_region', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6822,
-  serialized_end=6881,
-)
-
-
-_CMSGJOINABLECUSTOMGAMEMODESRESPONSEENTRY = _descriptor.Descriptor(
-  name='CMsgJoinableCustomGameModesResponseEntry',
-  full_name='CMsgJoinableCustomGameModesResponseEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='custom_game_id', full_name='CMsgJoinableCustomGameModesResponseEntry.custom_game_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobby_count', full_name='CMsgJoinableCustomGameModesResponseEntry.lobby_count', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_count', full_name='CMsgJoinableCustomGameModesResponseEntry.player_count', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6883,
-  serialized_end=6992,
-)
-
-
-_CMSGJOINABLECUSTOMGAMEMODESRESPONSE = _descriptor.Descriptor(
-  name='CMsgJoinableCustomGameModesResponse',
-  full_name='CMsgJoinableCustomGameModesResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='game_modes', full_name='CMsgJoinableCustomGameModesResponse.game_modes', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=6994,
-  serialized_end=7094,
-)
-
-
-_CMSGJOINABLECUSTOMLOBBIESREQUEST = _descriptor.Descriptor(
-  name='CMsgJoinableCustomLobbiesRequest',
-  full_name='CMsgJoinableCustomLobbiesRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='server_region', full_name='CMsgJoinableCustomLobbiesRequest.server_region', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_id', full_name='CMsgJoinableCustomLobbiesRequest.custom_game_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=7096,
-  serialized_end=7177,
-)
-
-
-_CMSGJOINABLECUSTOMLOBBIESRESPONSEENTRY = _descriptor.Descriptor(
-  name='CMsgJoinableCustomLobbiesResponseEntry',
-  full_name='CMsgJoinableCustomLobbiesResponseEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CMsgJoinableCustomLobbiesResponseEntry.lobby_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_id', full_name='CMsgJoinableCustomLobbiesResponseEntry.custom_game_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobby_name', full_name='CMsgJoinableCustomLobbiesResponseEntry.lobby_name', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member_count', full_name='CMsgJoinableCustomLobbiesResponseEntry.member_count', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='leader_account_id', full_name='CMsgJoinableCustomLobbiesResponseEntry.leader_account_id', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='leader_name', full_name='CMsgJoinableCustomLobbiesResponseEntry.leader_name', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_map_name', full_name='CMsgJoinableCustomLobbiesResponseEntry.custom_map_name', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_player_count', full_name='CMsgJoinableCustomLobbiesResponseEntry.max_player_count', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='server_region', full_name='CMsgJoinableCustomLobbiesResponseEntry.server_region', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lan_host_ping_to_server_region', full_name='CMsgJoinableCustomLobbiesResponseEntry.lan_host_ping_to_server_region', index=9,
-      number=10, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='has_pass_key', full_name='CMsgJoinableCustomLobbiesResponseEntry.has_pass_key', index=10,
-      number=11, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=7180,
-  serialized_end=7488,
-)
-
-
-_CMSGJOINABLECUSTOMLOBBIESRESPONSE = _descriptor.Descriptor(
-  name='CMsgJoinableCustomLobbiesResponse',
-  full_name='CMsgJoinableCustomLobbiesResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='lobbies', full_name='CMsgJoinableCustomLobbiesResponse.lobbies', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=7490,
-  serialized_end=7583,
-)
-
-
-_CMSGQUICKJOINCUSTOMLOBBY_LEGACYREGIONPING = _descriptor.Descriptor(
-  name='LegacyRegionPing',
-  full_name='CMsgQuickJoinCustomLobby.LegacyRegionPing',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='server_region', full_name='CMsgQuickJoinCustomLobby.LegacyRegionPing.server_region', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='ping', full_name='CMsgQuickJoinCustomLobby.LegacyRegionPing.ping', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='region_code', full_name='CMsgQuickJoinCustomLobby.LegacyRegionPing.region_code', index=2,
-      number=3, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=7888,
-  serialized_end=7964,
-)
-
-_CMSGQUICKJOINCUSTOMLOBBY = _descriptor.Descriptor(
-  name='CMsgQuickJoinCustomLobby',
-  full_name='CMsgQuickJoinCustomLobby',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='legacy_server_region', full_name='CMsgQuickJoinCustomLobby.legacy_server_region', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_id', full_name='CMsgQuickJoinCustomLobby.custom_game_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgQuickJoinCustomLobby.client_version', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='create_lobby_details', full_name='CMsgQuickJoinCustomLobby.create_lobby_details', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='allow_any_map', full_name='CMsgQuickJoinCustomLobby.allow_any_map', index=4,
-      number=5, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='legacy_region_pings', full_name='CMsgQuickJoinCustomLobby.legacy_region_pings', index=5,
-      number=6, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='ping_data', full_name='CMsgQuickJoinCustomLobby.ping_data', index=6,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGQUICKJOINCUSTOMLOBBY_LEGACYREGIONPING, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=7586,
-  serialized_end=7964,
-)
-
-
-_CMSGQUICKJOINCUSTOMLOBBYRESPONSE = _descriptor.Descriptor(
-  name='CMsgQuickJoinCustomLobbyResponse',
-  full_name='CMsgQuickJoinCustomLobbyResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgQuickJoinCustomLobbyResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=7966,
-  serialized_end=8064,
-)
-
-
-_CMSGBOTGAMECREATE = _descriptor.Descriptor(
-  name='CMsgBotGameCreate',
-  full_name='CMsgBotGameCreate',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='search_key', full_name='CMsgBotGameCreate.search_key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgBotGameCreate.client_version', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='difficulty', full_name='CMsgBotGameCreate.difficulty', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team', full_name='CMsgBotGameCreate.team', index=3,
-      number=4, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgBotGameCreate.game_mode', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=8067,
-  serialized_end=8266,
-)
-
-
-_CMSGCUSTOMGAMECREATE = _descriptor.Descriptor(
-  name='CMsgCustomGameCreate',
-  full_name='CMsgCustomGameCreate',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='search_key', full_name='CMsgCustomGameCreate.search_key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgCustomGameCreate.client_version', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='difficulty', full_name='CMsgCustomGameCreate.difficulty', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgCustomGameCreate.game_mode', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='map', full_name='CMsgCustomGameCreate.map', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_id', full_name='CMsgCustomGameCreate.custom_game_id', index=5,
-      number=7, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=8269,
-  serialized_end=8411,
-)
-
-
-_CMSGEVENTGAMECREATE = _descriptor.Descriptor(
-  name='CMsgEventGameCreate',
-  full_name='CMsgEventGameCreate',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='search_key', full_name='CMsgEventGameCreate.search_key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgEventGameCreate.client_version', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='difficulty', full_name='CMsgEventGameCreate.difficulty', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgEventGameCreate.game_mode', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='map', full_name='CMsgEventGameCreate.map', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_id', full_name='CMsgEventGameCreate.custom_game_id', index=5,
-      number=7, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=8414,
-  serialized_end=8555,
+  serialized_start=179,
+  serialized_end=218,
 )
 
 
@@ -4497,8 +845,8 @@ _CMSGREQUESTINTERNATIONALTICKET = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=8557,
-  serialized_end=8589,
+  serialized_start=220,
+  serialized_end=252,
 )
 
 
@@ -4518,8 +866,8 @@ _CMSGBALANCEDSHUFFLELOBBY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=8591,
-  serialized_end=8617,
+  serialized_start=254,
+  serialized_end=280,
 )
 
 
@@ -4546,858 +894,8 @@ _CMSGINITIALQUESTIONNAIRERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=8619,
-  serialized_end=8676,
-)
-
-
-_CMSGDOTAMATCH_PLAYER_CUSTOMGAMEDATA = _descriptor.Descriptor(
-  name='CustomGameData',
-  full_name='CMsgDOTAMatch.Player.CustomGameData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='dota_team', full_name='CMsgDOTAMatch.Player.CustomGameData.dota_team', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='winner', full_name='CMsgDOTAMatch.Player.CustomGameData.winner', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=11094,
-  serialized_end=11145,
-)
-
-_CMSGDOTAMATCH_PLAYER = _descriptor.Descriptor(
-  name='Player',
-  full_name='CMsgDOTAMatch.Player',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAMatch.Player.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_slot', full_name='CMsgDOTAMatch.Player.player_slot', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='CMsgDOTAMatch.Player.hero_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='item_0', full_name='CMsgDOTAMatch.Player.item_0', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='item_1', full_name='CMsgDOTAMatch.Player.item_1', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='item_2', full_name='CMsgDOTAMatch.Player.item_2', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='item_3', full_name='CMsgDOTAMatch.Player.item_3', index=6,
-      number=7, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='item_4', full_name='CMsgDOTAMatch.Player.item_4', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='item_5', full_name='CMsgDOTAMatch.Player.item_5', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='expected_team_contribution', full_name='CMsgDOTAMatch.Player.expected_team_contribution', index=9,
-      number=10, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='scaled_metric', full_name='CMsgDOTAMatch.Player.scaled_metric', index=10,
-      number=11, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='previous_rank', full_name='CMsgDOTAMatch.Player.previous_rank', index=11,
-      number=12, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='rank_change', full_name='CMsgDOTAMatch.Player.rank_change', index=12,
-      number=13, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='solo_rank', full_name='CMsgDOTAMatch.Player.solo_rank', index=13,
-      number=49, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='kills', full_name='CMsgDOTAMatch.Player.kills', index=14,
-      number=14, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='deaths', full_name='CMsgDOTAMatch.Player.deaths', index=15,
-      number=15, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='assists', full_name='CMsgDOTAMatch.Player.assists', index=16,
-      number=16, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='leaver_status', full_name='CMsgDOTAMatch.Player.leaver_status', index=17,
-      number=17, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gold', full_name='CMsgDOTAMatch.Player.gold', index=18,
-      number=18, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='last_hits', full_name='CMsgDOTAMatch.Player.last_hits', index=19,
-      number=19, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='denies', full_name='CMsgDOTAMatch.Player.denies', index=20,
-      number=20, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gold_per_min', full_name='CMsgDOTAMatch.Player.gold_per_min', index=21,
-      number=21, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='XP_per_min', full_name='CMsgDOTAMatch.Player.XP_per_min', index=22,
-      number=22, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gold_spent', full_name='CMsgDOTAMatch.Player.gold_spent', index=23,
-      number=23, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_damage', full_name='CMsgDOTAMatch.Player.hero_damage', index=24,
-      number=24, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tower_damage', full_name='CMsgDOTAMatch.Player.tower_damage', index=25,
-      number=25, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_healing', full_name='CMsgDOTAMatch.Player.hero_healing', index=26,
-      number=26, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='level', full_name='CMsgDOTAMatch.Player.level', index=27,
-      number=27, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_last_seen', full_name='CMsgDOTAMatch.Player.time_last_seen', index=28,
-      number=28, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_name', full_name='CMsgDOTAMatch.Player.player_name', index=29,
-      number=29, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='support_ability_value', full_name='CMsgDOTAMatch.Player.support_ability_value', index=30,
-      number=30, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='feeding_detected', full_name='CMsgDOTAMatch.Player.feeding_detected', index=31,
-      number=32, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='search_rank', full_name='CMsgDOTAMatch.Player.search_rank', index=32,
-      number=34, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='search_rank_uncertainty', full_name='CMsgDOTAMatch.Player.search_rank_uncertainty', index=33,
-      number=35, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='rank_uncertainty_change', full_name='CMsgDOTAMatch.Player.rank_uncertainty_change', index=34,
-      number=36, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_play_count', full_name='CMsgDOTAMatch.Player.hero_play_count', index=35,
-      number=37, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='CMsgDOTAMatch.Player.party_id', index=36,
-      number=38, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='scaled_kills', full_name='CMsgDOTAMatch.Player.scaled_kills', index=37,
-      number=39, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='scaled_deaths', full_name='CMsgDOTAMatch.Player.scaled_deaths', index=38,
-      number=40, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='scaled_assists', full_name='CMsgDOTAMatch.Player.scaled_assists', index=39,
-      number=41, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='claimed_farm_gold', full_name='CMsgDOTAMatch.Player.claimed_farm_gold', index=40,
-      number=42, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='support_gold', full_name='CMsgDOTAMatch.Player.support_gold', index=41,
-      number=43, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='claimed_denies', full_name='CMsgDOTAMatch.Player.claimed_denies', index=42,
-      number=44, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='claimed_misses', full_name='CMsgDOTAMatch.Player.claimed_misses', index=43,
-      number=45, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='misses', full_name='CMsgDOTAMatch.Player.misses', index=44,
-      number=46, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='ability_upgrades', full_name='CMsgDOTAMatch.Player.ability_upgrades', index=45,
-      number=47, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='additional_units_inventory', full_name='CMsgDOTAMatch.Player.additional_units_inventory', index=46,
-      number=48, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_data', full_name='CMsgDOTAMatch.Player.custom_game_data', index=47,
-      number=50, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='active_battle_pass', full_name='CMsgDOTAMatch.Player.active_battle_pass', index=48,
-      number=51, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='net_worth', full_name='CMsgDOTAMatch.Player.net_worth', index=49,
-      number=52, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAMATCH_PLAYER_CUSTOMGAMEDATA, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=9898,
-  serialized_end=11145,
-)
-
-_CMSGDOTAMATCH_BROADCASTERINFO = _descriptor.Descriptor(
-  name='BroadcasterInfo',
-  full_name='CMsgDOTAMatch.BroadcasterInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAMatch.BroadcasterInfo.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgDOTAMatch.BroadcasterInfo.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=11147,
-  serialized_end=11198,
-)
-
-_CMSGDOTAMATCH_BROADCASTERCHANNEL = _descriptor.Descriptor(
-  name='BroadcasterChannel',
-  full_name='CMsgDOTAMatch.BroadcasterChannel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='country_code', full_name='CMsgDOTAMatch.BroadcasterChannel.country_code', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='CMsgDOTAMatch.BroadcasterChannel.description', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='broadcaster_infos', full_name='CMsgDOTAMatch.BroadcasterChannel.broadcaster_infos', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='language_code', full_name='CMsgDOTAMatch.BroadcasterChannel.language_code', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=11201,
-  serialized_end=11346,
-)
-
-_CMSGDOTAMATCH_CUSTOMGAMEDATA = _descriptor.Descriptor(
-  name='CustomGameData',
-  full_name='CMsgDOTAMatch.CustomGameData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='custom_game_id', full_name='CMsgDOTAMatch.CustomGameData.custom_game_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='map_name', full_name='CMsgDOTAMatch.CustomGameData.map_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=11348,
-  serialized_end=11406,
-)
-
-_CMSGDOTAMATCH = _descriptor.Descriptor(
-  name='CMsgDOTAMatch',
-  full_name='CMsgDOTAMatch',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='good_guys_win', full_name='CMsgDOTAMatch.good_guys_win', index=0,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='duration', full_name='CMsgDOTAMatch.duration', index=1,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='startTime', full_name='CMsgDOTAMatch.startTime', index=2,
-      number=4, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='players', full_name='CMsgDOTAMatch.players', index=3,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_id', full_name='CMsgDOTAMatch.match_id', index=4,
-      number=6, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tower_status', full_name='CMsgDOTAMatch.tower_status', index=5,
-      number=8, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='barracks_status', full_name='CMsgDOTAMatch.barracks_status', index=6,
-      number=9, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='cluster', full_name='CMsgDOTAMatch.cluster', index=7,
-      number=10, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='first_blood_time', full_name='CMsgDOTAMatch.first_blood_time', index=8,
-      number=12, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='replay_salt', full_name='CMsgDOTAMatch.replay_salt', index=9,
-      number=13, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='server_ip', full_name='CMsgDOTAMatch.server_ip', index=10,
-      number=14, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='server_port', full_name='CMsgDOTAMatch.server_port', index=11,
-      number=15, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobby_type', full_name='CMsgDOTAMatch.lobby_type', index=12,
-      number=16, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='human_players', full_name='CMsgDOTAMatch.human_players', index=13,
-      number=17, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='average_skill', full_name='CMsgDOTAMatch.average_skill', index=14,
-      number=18, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_balance', full_name='CMsgDOTAMatch.game_balance', index=15,
-      number=19, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_id', full_name='CMsgDOTAMatch.radiant_team_id', index=16,
-      number=20, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_id', full_name='CMsgDOTAMatch.dire_team_id', index=17,
-      number=21, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='leagueid', full_name='CMsgDOTAMatch.leagueid', index=18,
-      number=22, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_name', full_name='CMsgDOTAMatch.radiant_team_name', index=19,
-      number=23, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_name', full_name='CMsgDOTAMatch.dire_team_name', index=20,
-      number=24, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_logo', full_name='CMsgDOTAMatch.radiant_team_logo', index=21,
-      number=25, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_logo', full_name='CMsgDOTAMatch.dire_team_logo', index=22,
-      number=26, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_complete', full_name='CMsgDOTAMatch.radiant_team_complete', index=23,
-      number=27, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_complete', full_name='CMsgDOTAMatch.dire_team_complete', index=24,
-      number=28, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='positive_votes', full_name='CMsgDOTAMatch.positive_votes', index=25,
-      number=29, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='negative_votes', full_name='CMsgDOTAMatch.negative_votes', index=26,
-      number=30, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgDOTAMatch.game_mode', index=27,
-      number=31, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='picks_bans', full_name='CMsgDOTAMatch.picks_bans', index=28,
-      number=32, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_seq_num', full_name='CMsgDOTAMatch.match_seq_num', index=29,
-      number=33, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='replay_state', full_name='CMsgDOTAMatch.replay_state', index=30,
-      number=34, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_guild_id', full_name='CMsgDOTAMatch.radiant_guild_id', index=31,
-      number=35, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_guild_id', full_name='CMsgDOTAMatch.dire_guild_id', index=32,
-      number=36, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_tag', full_name='CMsgDOTAMatch.radiant_team_tag', index=33,
-      number=37, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_tag', full_name='CMsgDOTAMatch.dire_team_tag', index=34,
-      number=38, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='series_id', full_name='CMsgDOTAMatch.series_id', index=35,
-      number=39, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='series_type', full_name='CMsgDOTAMatch.series_type', index=36,
-      number=40, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='broadcaster_channels', full_name='CMsgDOTAMatch.broadcaster_channels', index=37,
-      number=43, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='engine', full_name='CMsgDOTAMatch.engine', index=38,
-      number=44, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='custom_game_data', full_name='CMsgDOTAMatch.custom_game_data', index=39,
-      number=45, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='match_flags', full_name='CMsgDOTAMatch.match_flags', index=40,
-      number=46, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='private_metadata_key', full_name='CMsgDOTAMatch.private_metadata_key', index=41,
-      number=47, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_score', full_name='CMsgDOTAMatch.radiant_team_score', index=42,
-      number=48, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_score', full_name='CMsgDOTAMatch.dire_team_score', index=43,
-      number=49, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAMATCH_PLAYER, _CMSGDOTAMATCH_BROADCASTERINFO, _CMSGDOTAMATCH_BROADCASTERCHANNEL, _CMSGDOTAMATCH_CUSTOMGAMEDATA, ],
-  enum_types=[
-    _CMSGDOTAMATCH_REPLAYSTATE,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=8679,
-  serialized_end=11488,
+  serialized_start=282,
+  serialized_end=339,
 )
 
 
@@ -5424,223 +922,8 @@ _CMSGDOTAPLAYERMATCHHISTORY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=11490,
-  serialized_end=11537,
-)
-
-
-_CMSGDOTAMATCHMINIMAL_PLAYER = _descriptor.Descriptor(
-  name='Player',
-  full_name='CMsgDOTAMatchMinimal.Player',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAMatchMinimal.Player.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='CMsgDOTAMatchMinimal.Player.hero_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='kills', full_name='CMsgDOTAMatchMinimal.Player.kills', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='deaths', full_name='CMsgDOTAMatchMinimal.Player.deaths', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='assists', full_name='CMsgDOTAMatchMinimal.Player.assists', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='items', full_name='CMsgDOTAMatchMinimal.Player.items', index=5,
-      number=6, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=11790,
-  serialized_end=11898,
-)
-
-_CMSGDOTAMATCHMINIMAL_LEAGUE = _descriptor.Descriptor(
-  name='League',
-  full_name='CMsgDOTAMatchMinimal.League',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgDOTAMatchMinimal.League.league_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_id', full_name='CMsgDOTAMatchMinimal.League.radiant_team_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_name', full_name='CMsgDOTAMatchMinimal.League.radiant_team_name', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='radiant_team_logo', full_name='CMsgDOTAMatchMinimal.League.radiant_team_logo', index=3,
-      number=4, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_id', full_name='CMsgDOTAMatchMinimal.League.dire_team_id', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_name', full_name='CMsgDOTAMatchMinimal.League.dire_team_name', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dire_team_logo', full_name='CMsgDOTAMatchMinimal.League.dire_team_logo', index=6,
-      number=7, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='series_type', full_name='CMsgDOTAMatchMinimal.League.series_type', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='series_game', full_name='CMsgDOTAMatchMinimal.League.series_game', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=11901,
-  serialized_end=12119,
-)
-
-_CMSGDOTAMATCHMINIMAL = _descriptor.Descriptor(
-  name='CMsgDOTAMatchMinimal',
-  full_name='CMsgDOTAMatchMinimal',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='match_id', full_name='CMsgDOTAMatchMinimal.match_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='start_time', full_name='CMsgDOTAMatchMinimal.start_time', index=1,
-      number=2, type=7, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='duration', full_name='CMsgDOTAMatchMinimal.duration', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_mode', full_name='CMsgDOTAMatchMinimal.game_mode', index=3,
-      number=4, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='winning_team', full_name='CMsgDOTAMatchMinimal.winning_team', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='players', full_name='CMsgDOTAMatchMinimal.players', index=5,
-      number=6, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='league', full_name='CMsgDOTAMatchMinimal.league', index=6,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAMATCHMINIMAL_PLAYER, _CMSGDOTAMATCHMINIMAL_LEAGUE, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=11540,
-  serialized_end=12119,
+  serialized_start=341,
+  serialized_end=388,
 )
 
 
@@ -5681,8 +964,8 @@ _CMSGDOTAMATCHHISTORYFILTER = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=12121,
-  serialized_end=12232,
+  serialized_start=390,
+  serialized_end=501,
 )
 
 
@@ -5801,8 +1084,8 @@ _CMSGDOTAREQUESTMATCHES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=12235,
-  serialized_end=12652,
+  serialized_start=504,
+  serialized_end=921,
 )
 
 
@@ -5843,8 +1126,8 @@ _CMSGDOTAREQUESTMATCHESRESPONSE_SERIES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=12848,
-  serialized_end=12929,
+  serialized_start=1117,
+  serialized_end=1198,
 )
 
 _CMSGDOTAREQUESTMATCHESRESPONSE = _descriptor.Descriptor(
@@ -5898,8 +1181,8 @@ _CMSGDOTAREQUESTMATCHESRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=12655,
-  serialized_end=12929,
+  serialized_start=924,
+  serialized_end=1198,
 )
 
 
@@ -5913,7 +1196,7 @@ _CMSGDOTAPOPUP = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='id', full_name='CMsgDOTAPopup.id', index=0,
       number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
+      has_default_value=True, default_value=-1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -5948,4007 +1231,8 @@ _CMSGDOTAPOPUP = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=12932,
-  serialized_end=15118,
-)
-
-
-_CMSGDOTATEAMMEMBERSDO = _descriptor.Descriptor(
-  name='CMsgDOTATeamMemberSDO',
-  full_name='CMsgDOTATeamMemberSDO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTATeamMemberSDO.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_ids', full_name='CMsgDOTATeamMemberSDO.team_ids', index=1,
-      number=2, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='profile_team_id', full_name='CMsgDOTATeamMemberSDO.profile_team_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=15120,
-  serialized_end=15206,
-)
-
-
-_CMSGDOTATEAMADMINSDO = _descriptor.Descriptor(
-  name='CMsgDOTATeamAdminSDO',
-  full_name='CMsgDOTATeamAdminSDO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTATeamAdminSDO.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_ids', full_name='CMsgDOTATeamAdminSDO.team_ids', index=1,
-      number=2, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=15208,
-  serialized_end=15268,
-)
-
-
-_CMSGDOTATEAMMEMBER = _descriptor.Descriptor(
-  name='CMsgDOTATeamMember',
-  full_name='CMsgDOTATeamMember',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTATeamMember.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_joined', full_name='CMsgDOTATeamMember.time_joined', index=1,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=15270,
-  serialized_end=15331,
-)
-
-
-_CMSGDOTATEAM = _descriptor.Descriptor(
-  name='CMsgDOTATeam',
-  full_name='CMsgDOTATeam',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTATeam.members', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTATeam.team_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgDOTATeam.name', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tag', full_name='CMsgDOTATeam.tag', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='admin_id', full_name='CMsgDOTATeam.admin_id', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_created', full_name='CMsgDOTATeam.time_created', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='disbanded', full_name='CMsgDOTATeam.disbanded', index=6,
-      number=7, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='wins', full_name='CMsgDOTATeam.wins', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='losses', full_name='CMsgDOTATeam.losses', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='rank', full_name='CMsgDOTATeam.rank', index=9,
-      number=10, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='calibration_games_remaining', full_name='CMsgDOTATeam.calibration_games_remaining', index=10,
-      number=24, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTATeam.logo', index=11,
-      number=11, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='CMsgDOTATeam.base_logo', index=12,
-      number=12, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='CMsgDOTATeam.banner_logo', index=13,
-      number=13, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sponsor_logo', full_name='CMsgDOTATeam.sponsor_logo', index=14,
-      number=14, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='country_code', full_name='CMsgDOTATeam.country_code', index=15,
-      number=15, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='url', full_name='CMsgDOTATeam.url', index=16,
-      number=16, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fullgamesplayed', full_name='CMsgDOTATeam.fullgamesplayed', index=17,
-      number=17, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='leagues', full_name='CMsgDOTATeam.leagues', index=18,
-      number=18, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gamesplayed', full_name='CMsgDOTATeam.gamesplayed', index=19,
-      number=19, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gamesplayedwithcurrentroster', full_name='CMsgDOTATeam.gamesplayedwithcurrentroster', index=20,
-      number=20, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='teammatchmakinggamesplayed', full_name='CMsgDOTATeam.teammatchmakinggamesplayed', index=21,
-      number=21, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lastplayedgametime', full_name='CMsgDOTATeam.lastplayedgametime', index=22,
-      number=22, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lastrenametime', full_name='CMsgDOTATeam.lastrenametime', index=23,
-      number=23, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='recent_match_ids', full_name='CMsgDOTATeam.recent_match_ids', index=24,
-      number=25, type=4, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='top_match_ids', full_name='CMsgDOTATeam.top_match_ids', index=25,
-      number=26, type=4, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=15334,
-  serialized_end=15919,
-)
-
-
-_CMSGDOTATEAMSINFO = _descriptor.Descriptor(
-  name='CMsgDOTATeamsInfo',
-  full_name='CMsgDOTATeamsInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgDOTATeamsInfo.league_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='teams', full_name='CMsgDOTATeamsInfo.teams', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=15921,
-  serialized_end=15989,
-)
-
-
-_CMSGDOTACREATETEAM = _descriptor.Descriptor(
-  name='CMsgDOTACreateTeam',
-  full_name='CMsgDOTACreateTeam',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgDOTACreateTeam.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tag', full_name='CMsgDOTACreateTeam.tag', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTACreateTeam.logo', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='CMsgDOTACreateTeam.base_logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='CMsgDOTACreateTeam.banner_logo', index=4,
-      number=5, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sponsor_logo', full_name='CMsgDOTACreateTeam.sponsor_logo', index=5,
-      number=6, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='country_code', full_name='CMsgDOTACreateTeam.country_code', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='url', full_name='CMsgDOTACreateTeam.url', index=7,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=15992,
-  serialized_end=16150,
-)
-
-
-_CMSGDOTACREATETEAMRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTACreateTeamResponse',
-  full_name='CMsgDOTACreateTeamResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='results', full_name='CMsgDOTACreateTeamResponse.results', index=0,
-      number=1, type=14, cpp_type=8, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTACreateTeamResponse.team_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='seconds_remaining', full_name='CMsgDOTACreateTeamResponse.seconds_remaining', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='required_level', full_name='CMsgDOTACreateTeamResponse.required_level', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTACREATETEAMRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=16153,
-  serialized_end=16705,
-)
-
-
-_CMSGDOTAEDITTEAM = _descriptor.Descriptor(
-  name='CMsgDOTAEditTeam',
-  full_name='CMsgDOTAEditTeam',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgDOTAEditTeam.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tag', full_name='CMsgDOTAEditTeam.tag', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAEditTeam.logo', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='CMsgDOTAEditTeam.base_logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='CMsgDOTAEditTeam.banner_logo', index=4,
-      number=5, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sponsor_logo', full_name='CMsgDOTAEditTeam.sponsor_logo', index=5,
-      number=6, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='country_code', full_name='CMsgDOTAEditTeam.country_code', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='url', full_name='CMsgDOTAEditTeam.url', index=7,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTAEditTeam.team_id', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=16708,
-  serialized_end=16881,
-)
-
-
-_CMSGDOTAEDITTEAMLOGO = _descriptor.Descriptor(
-  name='CMsgDOTAEditTeamLogo',
-  full_name='CMsgDOTAEditTeamLogo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAEditTeamLogo.logo', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='CMsgDOTAEditTeamLogo.base_logo', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='CMsgDOTAEditTeamLogo.banner_logo', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sponsor_logo', full_name='CMsgDOTAEditTeamLogo.sponsor_logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTAEditTeamLogo.team_id', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=16883,
-  serialized_end=16998,
-)
-
-
-_CMSGDOTAEDITTEAMLOGORESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAEditTeamLogoResponse',
-  full_name='CMsgDOTAEditTeamLogoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='results', full_name='CMsgDOTAEditTeamLogoResponse.results', index=0,
-      number=1, type=14, cpp_type=8, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAEDITTEAMLOGORESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17001,
-  serialized_end=17185,
-)
-
-
-_CMSGDOTAEDITTEAMDETAILS = _descriptor.Descriptor(
-  name='CMsgDOTAEditTeamDetails',
-  full_name='CMsgDOTAEditTeamDetails',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='country_code', full_name='CMsgDOTAEditTeamDetails.country_code', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='url', full_name='CMsgDOTAEditTeamDetails.url', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTAEditTeamDetails.team_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17187,
-  serialized_end=17264,
-)
-
-
-_CMSGDOTAEDITTEAMDETAILSRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAEditTeamDetailsResponse',
-  full_name='CMsgDOTAEditTeamDetailsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='results', full_name='CMsgDOTAEditTeamDetailsResponse.results', index=0,
-      number=1, type=14, cpp_type=8, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAEDITTEAMDETAILSRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17267,
-  serialized_end=17444,
-)
-
-
-_CMSGDOTADISBANDTEAM = _descriptor.Descriptor(
-  name='CMsgDOTADisbandTeam',
-  full_name='CMsgDOTADisbandTeam',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTADisbandTeam.team_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17446,
-  serialized_end=17484,
-)
-
-
-_CMSGDOTADISBANDTEAMRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTADisbandTeamResponse',
-  full_name='CMsgDOTADisbandTeamResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTADisbandTeamResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTADisbandTeamResponse.team_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTADISBANDTEAMRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17487,
-  serialized_end=17656,
-)
-
-
-_CMSGDOTAREQUESTTEAMDATA = _descriptor.Descriptor(
-  name='CMsgDOTARequestTeamData',
-  full_name='CMsgDOTARequestTeamData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17658,
-  serialized_end=17683,
-)
-
-
-_CMSGDOTAREQUESTTEAMDATARESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTARequestTeamDataResponse',
-  full_name='CMsgDOTARequestTeamDataResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTARequestTeamDataResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='data', full_name='CMsgDOTARequestTeamDataResponse.data', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAREQUESTTEAMDATARESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17686,
-  serialized_end=17854,
-)
-
-
-_CMSGDOTATEAMDATA = _descriptor.Descriptor(
-  name='CMsgDOTATeamData',
-  full_name='CMsgDOTATeamData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='on_team', full_name='CMsgDOTATeamData.on_team', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='profile_team', full_name='CMsgDOTATeamData.profile_team', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team', full_name='CMsgDOTATeamData.team', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17856,
-  serialized_end=17942,
-)
-
-
-_CMSGDOTATEAMPROFILEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTATeamProfileRequest',
-  full_name='CMsgDOTATeamProfileRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTATeamProfileRequest.team_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17944,
-  serialized_end=17989,
-)
-
-
-_CMSGDOTATEAMMEMBERPROFILEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTATeamMemberProfileRequest',
-  full_name='CMsgDOTATeamMemberProfileRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTATeamMemberProfileRequest.steam_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=17991,
-  serialized_end=18043,
-)
-
-
-_CMSGDOTATEAMIDBYNAMEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTATeamIDByNameRequest',
-  full_name='CMsgDOTATeamIDByNameRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgDOTATeamIDByNameRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18045,
-  serialized_end=18088,
-)
-
-
-_CMSGDOTATEAMIDBYNAMERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTATeamIDByNameResponse',
-  full_name='CMsgDOTATeamIDByNameResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='eresult', full_name='CMsgDOTATeamIDByNameResponse.eresult', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTATeamIDByNameResponse.team_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18090,
-  serialized_end=18154,
-)
-
-
-_CMSGDOTATEAMPROFILERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTATeamProfileResponse',
-  full_name='CMsgDOTATeamProfileResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='eresult', full_name='CMsgDOTATeamProfileResponse.eresult', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team', full_name='CMsgDOTATeamProfileResponse.team', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18156,
-  serialized_end=18231,
-)
-
-
-_CMSGDOTAPROTEAMLISTREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAProTeamListRequest',
-  full_name='CMsgDOTAProTeamListRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18233,
-  serialized_end=18261,
-)
-
-
-_CMSGDOTAPROTEAMLISTRESPONSE_TEAMENTRY = _descriptor.Descriptor(
-  name='TeamEntry',
-  full_name='CMsgDOTAProTeamListResponse.TeamEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTAProTeamListResponse.TeamEntry.team_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tag', full_name='CMsgDOTAProTeamListResponse.TeamEntry.tag', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_created', full_name='CMsgDOTAProTeamListResponse.TeamEntry.time_created', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAProTeamListResponse.TeamEntry.logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='country_code', full_name='CMsgDOTAProTeamListResponse.TeamEntry.country_code', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member_count', full_name='CMsgDOTAProTeamListResponse.TeamEntry.member_count', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18367,
-  serialized_end=18488,
-)
-
-_CMSGDOTAPROTEAMLISTRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAProTeamListResponse',
-  full_name='CMsgDOTAProTeamListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='teams', full_name='CMsgDOTAProTeamListResponse.teams', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='eresult', full_name='CMsgDOTAProTeamListResponse.eresult', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAPROTEAMLISTRESPONSE_TEAMENTRY, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18264,
-  serialized_end=18488,
-)
-
-
-_CMSGDOTATEAMINVITE_INVITERTOGC = _descriptor.Descriptor(
-  name='CMsgDOTATeamInvite_InviterToGC',
-  full_name='CMsgDOTATeamInvite_InviterToGC',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTATeamInvite_InviterToGC.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTATeamInvite_InviterToGC.team_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18490,
-  serialized_end=18559,
-)
-
-
-_CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER = _descriptor.Descriptor(
-  name='CMsgDOTATeamInvite_GCImmediateResponseToInviter',
-  full_name='CMsgDOTATeamInvite_GCImmediateResponseToInviter',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTATeamInvite_GCImmediateResponseToInviter.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitee_name', full_name='CMsgDOTATeamInvite_GCImmediateResponseToInviter.invitee_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='required_level', full_name='CMsgDOTATeamInvite_GCImmediateResponseToInviter.required_level', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18562,
-  serialized_end=18953,
-)
-
-
-_CMSGDOTATEAMINVITE_GCREQUESTTOINVITEE = _descriptor.Descriptor(
-  name='CMsgDOTATeamInvite_GCRequestToInvitee',
-  full_name='CMsgDOTATeamInvite_GCRequestToInvitee',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='inviter_account_id', full_name='CMsgDOTATeamInvite_GCRequestToInvitee.inviter_account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTATeamInvite_GCRequestToInvitee.team_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_tag', full_name='CMsgDOTATeamInvite_GCRequestToInvitee.team_tag', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTATeamInvite_GCRequestToInvitee.logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=18955,
-  serialized_end=19073,
-)
-
-
-_CMSGDOTATEAMINVITE_INVITEERESPONSETOGC = _descriptor.Descriptor(
-  name='CMsgDOTATeamInvite_InviteeResponseToGC',
-  full_name='CMsgDOTATeamInvite_InviteeResponseToGC',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTATeamInvite_InviteeResponseToGC.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTATEAMINVITE_INVITEERESPONSETOGC_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=19076,
-  serialized_end=19231,
-)
-
-
-_CMSGDOTATEAMINVITE_GCRESPONSETOINVITER = _descriptor.Descriptor(
-  name='CMsgDOTATeamInvite_GCResponseToInviter',
-  full_name='CMsgDOTATeamInvite_GCResponseToInviter',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTATeamInvite_GCResponseToInviter.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitee_name', full_name='CMsgDOTATeamInvite_GCResponseToInviter.invitee_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTATEAMINVITE_GCRESPONSETOINVITER_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=19234,
-  serialized_end=19441,
-)
-
-
-_CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE = _descriptor.Descriptor(
-  name='CMsgDOTATeamInvite_GCResponseToInvitee',
-  full_name='CMsgDOTATeamInvite_GCResponseToInvitee',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTATeamInvite_GCResponseToInvitee.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTATeamInvite_GCResponseToInvitee.team_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=19444,
-  serialized_end=19612,
-)
-
-
-_CMSGDOTATEAMONPROFILE = _descriptor.Descriptor(
-  name='CMsgDOTATeamOnProfile',
-  full_name='CMsgDOTATeamOnProfile',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTATeamOnProfile.team_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='enabled', full_name='CMsgDOTATeamOnProfile.enabled', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=19614,
-  serialized_end=19671,
-)
-
-
-_CMSGDOTAKICKTEAMMEMBER = _descriptor.Descriptor(
-  name='CMsgDOTAKickTeamMember',
-  full_name='CMsgDOTAKickTeamMember',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAKickTeamMember.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTAKickTeamMember.team_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=19673,
-  serialized_end=19734,
-)
-
-
-_CMSGDOTAKICKTEAMMEMBERRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAKickTeamMemberResponse',
-  full_name='CMsgDOTAKickTeamMemberResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAKickTeamMemberResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAKICKTEAMMEMBERRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=19737,
-  serialized_end=19870,
-)
-
-
-_CMSGDOTATRANSFERTEAMADMIN = _descriptor.Descriptor(
-  name='CMsgDOTATransferTeamAdmin',
-  full_name='CMsgDOTATransferTeamAdmin',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='new_admin_account_id', full_name='CMsgDOTATransferTeamAdmin.new_admin_account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTATransferTeamAdmin.team_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=19872,
-  serialized_end=19946,
-)
-
-
-_CMSGDOTATRANSFERTEAMADMINRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTATransferTeamAdminResponse',
-  full_name='CMsgDOTATransferTeamAdminResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTATransferTeamAdminResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitee_name', full_name='CMsgDOTATransferTeamAdminResponse.invitee_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTATRANSFERTEAMADMINRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=19949,
-  serialized_end=20179,
-)
-
-
-_CMSGDOTALEAVETEAM = _descriptor.Descriptor(
-  name='CMsgDOTALeaveTeam',
-  full_name='CMsgDOTALeaveTeam',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTALeaveTeam.team_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=20181,
-  serialized_end=20217,
-)
-
-
-_CMSGDOTALEAVETEAMRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTALeaveTeamResponse',
-  full_name='CMsgDOTALeaveTeamResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTALeaveTeamResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTALeaveTeamResponse.team_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTALEAVETEAMRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=20220,
-  serialized_end=20362,
-)
-
-
-_CMSGDOTABETAPARTICIPATION = _descriptor.Descriptor(
-  name='CMsgDOTABetaParticipation',
-  full_name='CMsgDOTABetaParticipation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='access_rights', full_name='CMsgDOTABetaParticipation.access_rights', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=20364,
-  serialized_end=20414,
-)
-
-
-_CMSGDOTAJOINCHATCHANNEL = _descriptor.Descriptor(
-  name='CMsgDOTAJoinChatChannel',
-  full_name='CMsgDOTAJoinChatChannel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTAJoinChatChannel.channel_name', index=0,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTAJoinChatChannel.channel_type', index=1,
-      number=4, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=20416,
-  serialized_end=20535,
-)
-
-
-_CMSGDOTALEAVECHATCHANNEL = _descriptor.Descriptor(
-  name='CMsgDOTALeaveChatChannel',
-  full_name='CMsgDOTALeaveChatChannel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTALeaveChatChannel.channel_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=20537,
-  serialized_end=20583,
-)
-
-
-_CMSGDOTACLIENTIGNOREDUSER = _descriptor.Descriptor(
-  name='CMsgDOTAClientIgnoredUser',
-  full_name='CMsgDOTAClientIgnoredUser',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='ignored_account_id', full_name='CMsgDOTAClientIgnoredUser.ignored_account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=20585,
-  serialized_end=20640,
-)
-
-
-_CMSGDOTACHATMESSAGE_DICEROLL = _descriptor.Descriptor(
-  name='DiceRoll',
-  full_name='CMsgDOTAChatMessage.DiceRoll',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='roll_min', full_name='CMsgDOTAChatMessage.DiceRoll.roll_min', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='roll_max', full_name='CMsgDOTAChatMessage.DiceRoll.roll_max', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAChatMessage.DiceRoll.result', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=21292,
-  serialized_end=21354,
-)
-
-_CMSGDOTACHATMESSAGE = _descriptor.Descriptor(
-  name='CMsgDOTAChatMessage',
-  full_name='CMsgDOTAChatMessage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAChatMessage.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatMessage.channel_id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAChatMessage.persona_name', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='text', full_name='CMsgDOTAChatMessage.text', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgDOTAChatMessage.timestamp', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='suggest_invite_account_id', full_name='CMsgDOTAChatMessage.suggest_invite_account_id', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='suggest_invite_name', full_name='CMsgDOTAChatMessage.suggest_invite_name', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fantasy_draft_owner_account_id', full_name='CMsgDOTAChatMessage.fantasy_draft_owner_account_id', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fantasy_draft_player_account_id', full_name='CMsgDOTAChatMessage.fantasy_draft_player_account_id', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='event_id', full_name='CMsgDOTAChatMessage.event_id', index=9,
-      number=10, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='suggest_invite_to_lobby', full_name='CMsgDOTAChatMessage.suggest_invite_to_lobby', index=10,
-      number=11, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='event_points', full_name='CMsgDOTAChatMessage.event_points', index=11,
-      number=12, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='coin_flip', full_name='CMsgDOTAChatMessage.coin_flip', index=12,
-      number=13, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='player_id', full_name='CMsgDOTAChatMessage.player_id', index=13,
-      number=14, type=5, cpp_type=1, label=1,
-      has_default_value=True, default_value=-1,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='share_profile_account_id', full_name='CMsgDOTAChatMessage.share_profile_account_id', index=14,
-      number=15, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAChatMessage.channel_user_id', index=15,
-      number=16, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='dice_roll', full_name='CMsgDOTAChatMessage.dice_roll', index=16,
-      number=17, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='share_party_id', full_name='CMsgDOTAChatMessage.share_party_id', index=17,
-      number=18, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='share_lobby_id', full_name='CMsgDOTAChatMessage.share_lobby_id', index=18,
-      number=19, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='share_lobby_custom_game_id', full_name='CMsgDOTAChatMessage.share_lobby_custom_game_id', index=19,
-      number=20, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='share_lobby_passkey', full_name='CMsgDOTAChatMessage.share_lobby_passkey', index=20,
-      number=21, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='private_chat_channel_id', full_name='CMsgDOTAChatMessage.private_chat_channel_id', index=21,
-      number=22, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAChatMessage.status', index=22,
-      number=23, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTACHATMESSAGE_DICEROLL, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=20643,
-  serialized_end=21354,
-)
-
-
-_CMSGDOTACHATMEMBER = _descriptor.Descriptor(
-  name='CMsgDOTAChatMember',
-  full_name='CMsgDOTAChatMember',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAChatMember.steam_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAChatMember.persona_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAChatMember.channel_user_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAChatMember.status', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=21356,
-  serialized_end=21457,
-)
-
-
-_CMSGDOTAJOINCHATCHANNELRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAJoinChatChannelResponse',
-  full_name='CMsgDOTAJoinChatChannelResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='response', full_name='CMsgDOTAJoinChatChannelResponse.response', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTAJoinChatChannelResponse.channel_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAJoinChatChannelResponse.channel_id', index=2,
-      number=3, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_members', full_name='CMsgDOTAJoinChatChannelResponse.max_members', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTAJoinChatChannelResponse.members', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTAJoinChatChannelResponse.channel_type', index=5,
-      number=6, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAJoinChatChannelResponse.result', index=6,
-      number=7, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gc_initiated_join', full_name='CMsgDOTAJoinChatChannelResponse.gc_initiated_join', index=7,
-      number=8, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAJoinChatChannelResponse.channel_user_id', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='welcome_message', full_name='CMsgDOTAJoinChatChannelResponse.welcome_message', index=9,
-      number=10, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=21460,
-  serialized_end=22206,
-)
-
-
-_CMSGDOTACHATCHANNELFULLUPDATE = _descriptor.Descriptor(
-  name='CMsgDOTAChatChannelFullUpdate',
-  full_name='CMsgDOTAChatChannelFullUpdate',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatChannelFullUpdate.channel_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTAChatChannelFullUpdate.members', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=22208,
-  serialized_end=22297,
-)
-
-
-_CMSGDOTAOTHERJOINEDCHATCHANNEL = _descriptor.Descriptor(
-  name='CMsgDOTAOtherJoinedChatChannel',
-  full_name='CMsgDOTAOtherJoinedChatChannel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAOtherJoinedChatChannel.channel_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAOtherJoinedChatChannel.persona_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAOtherJoinedChatChannel.steam_id', index=2,
-      number=3, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAOtherJoinedChatChannel.channel_user_id', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAOtherJoinedChatChannel.status', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=22300,
-  serialized_end=22433,
-)
-
-
-_CMSGDOTAOTHERLEFTCHATCHANNEL = _descriptor.Descriptor(
-  name='CMsgDOTAOtherLeftChatChannel',
-  full_name='CMsgDOTAOtherLeftChatChannel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAOtherLeftChatChannel.channel_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAOtherLeftChatChannel.steam_id', index=1,
-      number=2, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAOtherLeftChatChannel.channel_user_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=22435,
-  serialized_end=22528,
-)
-
-
-_CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER = _descriptor.Descriptor(
-  name='JoinedMember',
-  full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember.steam_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember.persona_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember.channel_user_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember.status', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=22681,
-  serialized_end=22776,
-)
-
-_CMSGDOTACHATCHANNELMEMBERUPDATE = _descriptor.Descriptor(
-  name='CMsgDOTAChatChannelMemberUpdate',
-  full_name='CMsgDOTAChatChannelMemberUpdate',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatChannelMemberUpdate.channel_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='left_steam_ids', full_name='CMsgDOTAChatChannelMemberUpdate.left_steam_ids', index=1,
-      number=2, type=6, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='joined_members', full_name='CMsgDOTAChatChannelMemberUpdate.joined_members', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=22531,
-  serialized_end=22776,
-)
-
-
-_CMSGDOTAREQUESTCHATCHANNELLIST = _descriptor.Descriptor(
-  name='CMsgDOTARequestChatChannelList',
-  full_name='CMsgDOTARequestChatChannelList',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=22778,
-  serialized_end=22810,
-)
-
-
-_CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL = _descriptor.Descriptor(
-  name='ChatChannel',
-  full_name='CMsgDOTARequestChatChannelListResponse.ChatChannel',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTARequestChatChannelListResponse.ChatChannel.channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='num_members', full_name='CMsgDOTARequestChatChannelListResponse.ChatChannel.num_members', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTARequestChatChannelListResponse.ChatChannel.channel_type', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=22927,
-  serialized_end=23055,
-)
-
-_CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTARequestChatChannelListResponse',
-  full_name='CMsgDOTARequestChatChannelListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channels', full_name='CMsgDOTARequestChatChannelListResponse.channels', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=22813,
-  serialized_end=23055,
-)
-
-
-_CMSGDOTACHATGETUSERLIST = _descriptor.Descriptor(
-  name='CMsgDOTAChatGetUserList',
-  full_name='CMsgDOTAChatGetUserList',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatGetUserList.channel_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=23057,
-  serialized_end=23102,
-)
-
-
-_CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER = _descriptor.Descriptor(
-  name='Member',
-  full_name='CMsgDOTAChatGetUserListResponse.Member',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAChatGetUserListResponse.Member.steam_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAChatGetUserListResponse.Member.persona_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAChatGetUserListResponse.Member.channel_user_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAChatGetUserListResponse.Member.status', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=23218,
-  serialized_end=23307,
-)
-
-_CMSGDOTACHATGETUSERLISTRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAChatGetUserListResponse',
-  full_name='CMsgDOTAChatGetUserListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatGetUserListResponse.channel_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTAChatGetUserListResponse.members', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=23105,
-  serialized_end=23307,
-)
-
-
-_CMSGDOTACHATGETMEMBERCOUNT = _descriptor.Descriptor(
-  name='CMsgDOTAChatGetMemberCount',
-  full_name='CMsgDOTAChatGetMemberCount',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTAChatGetMemberCount.channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTAChatGetMemberCount.channel_type', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=23309,
-  serialized_end=23431,
-)
-
-
-_CMSGDOTACHATGETMEMBERCOUNTRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAChatGetMemberCountResponse',
-  full_name='CMsgDOTAChatGetMemberCountResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTAChatGetMemberCountResponse.channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTAChatGetMemberCountResponse.channel_type', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member_count', full_name='CMsgDOTAChatGetMemberCountResponse.member_count', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=23434,
-  serialized_end=23586,
-)
-
-
-_CMSGDOTACHATREGIONSENABLED_REGION = _descriptor.Descriptor(
-  name='Region',
-  full_name='CMsgDOTAChatRegionsEnabled.Region',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='min_latitude', full_name='CMsgDOTAChatRegionsEnabled.Region.min_latitude', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_latitude', full_name='CMsgDOTAChatRegionsEnabled.Region.max_latitude', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='min_longitude', full_name='CMsgDOTAChatRegionsEnabled.Region.min_longitude', index=2,
-      number=3, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_longitude', full_name='CMsgDOTAChatRegionsEnabled.Region.max_longitude', index=3,
-      number=4, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=23708,
-  serialized_end=23806,
-)
-
-_CMSGDOTACHATREGIONSENABLED = _descriptor.Descriptor(
-  name='CMsgDOTAChatRegionsEnabled',
-  full_name='CMsgDOTAChatRegionsEnabled',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='enable_all_regions', full_name='CMsgDOTAChatRegionsEnabled.enable_all_regions', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='enabled_regions', full_name='CMsgDOTAChatRegionsEnabled.enabled_regions', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTACHATREGIONSENABLED_REGION, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=23589,
-  serialized_end=23806,
-)
-
-
-_CMSGDOTAGUILDSDO_MEMBER = _descriptor.Descriptor(
-  name='Member',
-  full_name='CMsgDOTAGuildSDO.Member',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAGuildSDO.Member.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_joined', full_name='CMsgDOTAGuildSDO.Member.time_joined', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='role', full_name='CMsgDOTAGuildSDO.Member.role', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24106,
-  serialized_end=24169,
-)
-
-_CMSGDOTAGUILDSDO_INVITATION = _descriptor.Descriptor(
-  name='Invitation',
-  full_name='CMsgDOTAGuildSDO.Invitation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAGuildSDO.Invitation.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_sent', full_name='CMsgDOTAGuildSDO.Invitation.time_sent', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='account_id_sender', full_name='CMsgDOTAGuildSDO.Invitation.account_id_sender', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24171,
-  serialized_end=24249,
-)
-
-_CMSGDOTAGUILDSDO = _descriptor.Descriptor(
-  name='CMsgDOTAGuildSDO',
-  full_name='CMsgDOTAGuildSDO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildSDO.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgDOTAGuildSDO.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tag', full_name='CMsgDOTAGuildSDO.tag', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_created', full_name='CMsgDOTAGuildSDO.time_created', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_disbanded', full_name='CMsgDOTAGuildSDO.time_disbanded', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAGuildSDO.logo', index=5,
-      number=6, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='CMsgDOTAGuildSDO.base_logo', index=6,
-      number=7, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='CMsgDOTAGuildSDO.banner_logo', index=7,
-      number=8, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTAGuildSDO.members', index=8,
-      number=9, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitations', full_name='CMsgDOTAGuildSDO.invitations', index=9,
-      number=10, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='message', full_name='CMsgDOTAGuildSDO.message', index=10,
-      number=11, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='incremental', full_name='CMsgDOTAGuildSDO.incremental', index=11,
-      number=12, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAGUILDSDO_MEMBER, _CMSGDOTAGUILDSDO_INVITATION, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=23809,
-  serialized_end=24249,
-)
-
-
-_CMSGDOTAGUILDAUDITSDO_ENTRY = _descriptor.Descriptor(
-  name='Entry',
-  full_name='CMsgDOTAGuildAuditSDO.Entry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='event_index', full_name='CMsgDOTAGuildAuditSDO.Entry.event_index', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgDOTAGuildAuditSDO.Entry.timestamp', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='action', full_name='CMsgDOTAGuildAuditSDO.Entry.action', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='account_id_requestor', full_name='CMsgDOTAGuildAuditSDO.Entry.account_id_requestor', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='account_id_target', full_name='CMsgDOTAGuildAuditSDO.Entry.account_id_target', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='reference_data_a', full_name='CMsgDOTAGuildAuditSDO.Entry.reference_data_a', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='reference_data_b', full_name='CMsgDOTAGuildAuditSDO.Entry.reference_data_b', index=6,
-      number=7, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24343,
-  serialized_end=24515,
-)
-
-_CMSGDOTAGUILDAUDITSDO = _descriptor.Descriptor(
-  name='CMsgDOTAGuildAuditSDO',
-  full_name='CMsgDOTAGuildAuditSDO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildAuditSDO.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='entries', full_name='CMsgDOTAGuildAuditSDO.entries', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAGUILDAUDITSDO_ENTRY, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24252,
-  serialized_end=24515,
-)
-
-
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP = _descriptor.Descriptor(
-  name='Membership',
-  full_name='CMsgDOTAAccountGuildMembershipsSDO.Membership',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAAccountGuildMembershipsSDO.Membership.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='role', full_name='CMsgDOTAAccountGuildMembershipsSDO.Membership.role', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24714,
-  serialized_end=24758,
-)
-
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION = _descriptor.Descriptor(
-  name='Invitation',
-  full_name='CMsgDOTAAccountGuildMembershipsSDO.Invitation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAAccountGuildMembershipsSDO.Invitation.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_sent', full_name='CMsgDOTAAccountGuildMembershipsSDO.Invitation.time_sent', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='account_id_sender', full_name='CMsgDOTAAccountGuildMembershipsSDO.Invitation.account_id_sender', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24760,
-  serialized_end=24836,
-)
-
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO = _descriptor.Descriptor(
-  name='CMsgDOTAAccountGuildMembershipsSDO',
-  full_name='CMsgDOTAAccountGuildMembershipsSDO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAAccountGuildMembershipsSDO.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='memberships', full_name='CMsgDOTAAccountGuildMembershipsSDO.memberships', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invitations', full_name='CMsgDOTAAccountGuildMembershipsSDO.invitations', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP, _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24518,
-  serialized_end=24836,
-)
-
-
-_CMSGDOTAGUILDCREATEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildCreateRequest',
-  full_name='CMsgDOTAGuildCreateRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgDOTAGuildCreateRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tag', full_name='CMsgDOTAGuildCreateRequest.tag', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAGuildCreateRequest.logo', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='CMsgDOTAGuildCreateRequest.base_logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='CMsgDOTAGuildCreateRequest.banner_logo', index=4,
-      number=5, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24838,
-  serialized_end=24947,
-)
-
-
-_CMSGDOTAGUILDCREATERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildCreateResponse',
-  full_name='CMsgDOTAGuildCreateResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildCreateResponse.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='errors', full_name='CMsgDOTAGuildCreateResponse.errors', index=1,
-      number=2, type=14, cpp_type=8, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDCREATERESPONSE_EERROR,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=24950,
-  serialized_end=25264,
-)
-
-
-_CMSGDOTAGUILDSETACCOUNTROLEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildSetAccountRoleRequest',
-  full_name='CMsgDOTAGuildSetAccountRoleRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildSetAccountRoleRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='target_account_id', full_name='CMsgDOTAGuildSetAccountRoleRequest.target_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='target_role', full_name='CMsgDOTAGuildSetAccountRoleRequest.target_role', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=25266,
-  serialized_end=25368,
-)
-
-
-_CMSGDOTAGUILDSETACCOUNTROLERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildSetAccountRoleResponse',
-  full_name='CMsgDOTAGuildSetAccountRoleResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAGuildSetAccountRoleResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=25371,
-  serialized_end=25648,
-)
-
-
-_CMSGDOTAGUILDINVITEACCOUNTREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildInviteAccountRequest',
-  full_name='CMsgDOTAGuildInviteAccountRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildInviteAccountRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='target_account_id', full_name='CMsgDOTAGuildInviteAccountRequest.target_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=25650,
-  serialized_end=25730,
-)
-
-
-_CMSGDOTAGUILDINVITEACCOUNTRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildInviteAccountResponse',
-  full_name='CMsgDOTAGuildInviteAccountResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAGuildInviteAccountResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=25733,
-  serialized_end=26088,
-)
-
-
-_CMSGDOTAGUILDCANCELINVITEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildCancelInviteRequest',
-  full_name='CMsgDOTAGuildCancelInviteRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildCancelInviteRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='target_account_id', full_name='CMsgDOTAGuildCancelInviteRequest.target_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26090,
-  serialized_end=26169,
-)
-
-
-_CMSGDOTAGUILDCANCELINVITERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildCancelInviteResponse',
-  full_name='CMsgDOTAGuildCancelInviteResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAGuildCancelInviteResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26172,
-  serialized_end=26348,
-)
-
-
-_CMSGDOTAGUILDUPDATEDETAILSREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildUpdateDetailsRequest',
-  full_name='CMsgDOTAGuildUpdateDetailsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildUpdateDetailsRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAGuildUpdateDetailsRequest.logo', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='CMsgDOTAGuildUpdateDetailsRequest.base_logo', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='CMsgDOTAGuildUpdateDetailsRequest.banner_logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26350,
-  serialized_end=26457,
-)
-
-
-_CMSGDOTAGUILDUPDATEDETAILSRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildUpdateDetailsResponse',
-  full_name='CMsgDOTAGuildUpdateDetailsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAGuildUpdateDetailsResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26460,
-  serialized_end=26638,
-)
-
-
-_CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGCToGCUpdateOpenGuildPartyRequest',
-  full_name='CMsgDOTAGCToGCUpdateOpenGuildPartyRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='CMsgDOTAGCToGCUpdateOpenGuildPartyRequest.party_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGCToGCUpdateOpenGuildPartyRequest.guild_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member_account_ids', full_name='CMsgDOTAGCToGCUpdateOpenGuildPartyRequest.member_account_ids', index=2,
-      number=3, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='CMsgDOTAGCToGCUpdateOpenGuildPartyRequest.description', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26641,
-  serialized_end=26769,
-)
-
-
-_CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGCToGCUpdateOpenGuildPartyResponse',
-  full_name='CMsgDOTAGCToGCUpdateOpenGuildPartyResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='maintain_association', full_name='CMsgDOTAGCToGCUpdateOpenGuildPartyResponse.maintain_association', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26771,
-  serialized_end=26845,
-)
-
-
-_CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGCToGCDestroyOpenGuildPartyRequest',
-  full_name='CMsgDOTAGCToGCDestroyOpenGuildPartyRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='CMsgDOTAGCToGCDestroyOpenGuildPartyRequest.party_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGCToGCDestroyOpenGuildPartyRequest.guild_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26847,
-  serialized_end=26927,
-)
-
-
-_CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGCToGCDestroyOpenGuildPartyResponse',
-  full_name='CMsgDOTAGCToGCDestroyOpenGuildPartyResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26929,
-  serialized_end=26974,
-)
-
-
-_CMSGDOTAPARTYSETOPENGUILDREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAPartySetOpenGuildRequest',
-  full_name='CMsgDOTAPartySetOpenGuildRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAPartySetOpenGuildRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='CMsgDOTAPartySetOpenGuildRequest.description', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=26976,
-  serialized_end=27049,
-)
-
-
-_CMSGDOTAPARTYSETOPENGUILDRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAPartySetOpenGuildResponse',
-  full_name='CMsgDOTAPartySetOpenGuildResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAPartySetOpenGuildResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27052,
-  serialized_end=27203,
-)
-
-
-_CMSGDOTAJOINOPENGUILDPARTYREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAJoinOpenGuildPartyRequest',
-  full_name='CMsgDOTAJoinOpenGuildPartyRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='CMsgDOTAJoinOpenGuildPartyRequest.party_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27205,
-  serialized_end=27258,
-)
-
-
-_CMSGDOTAJOINOPENGUILDPARTYRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAJoinOpenGuildPartyResponse',
-  full_name='CMsgDOTAJoinOpenGuildPartyResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAJoinOpenGuildPartyResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27261,
-  serialized_end=27414,
-)
-
-
-_CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY = _descriptor.Descriptor(
-  name='OpenParty',
-  full_name='CMsgDOTAGuildOpenPartyRefresh.OpenParty',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='CMsgDOTAGuildOpenPartyRefresh.OpenParty.party_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member_account_ids', full_name='CMsgDOTAGuildOpenPartyRefresh.OpenParty.member_account_ids', index=1,
-      number=2, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_created', full_name='CMsgDOTAGuildOpenPartyRefresh.OpenParty.time_created', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='CMsgDOTAGuildOpenPartyRefresh.OpenParty.description', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27532,
-  serialized_end=27632,
-)
-
-_CMSGDOTAGUILDOPENPARTYREFRESH = _descriptor.Descriptor(
-  name='CMsgDOTAGuildOpenPartyRefresh',
-  full_name='CMsgDOTAGuildOpenPartyRefresh',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildOpenPartyRefresh.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='open_parties', full_name='CMsgDOTAGuildOpenPartyRefresh.open_parties', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27417,
-  serialized_end=27632,
-)
-
-
-_CMSGDOTAREQUESTGUILDDATA = _descriptor.Descriptor(
-  name='CMsgDOTARequestGuildData',
-  full_name='CMsgDOTARequestGuildData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27634,
-  serialized_end=27660,
-)
-
-
-_CMSGDOTAGUILDINVITEDATA = _descriptor.Descriptor(
-  name='CMsgDOTAGuildInviteData',
-  full_name='CMsgDOTAGuildInviteData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='invited_to_guild', full_name='CMsgDOTAGuildInviteData.invited_to_guild', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildInviteData.guild_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='guild_name', full_name='CMsgDOTAGuildInviteData.guild_name', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='guild_tag', full_name='CMsgDOTAGuildInviteData.guild_tag', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAGuildInviteData.logo', index=4,
-      number=5, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='inviter', full_name='CMsgDOTAGuildInviteData.inviter', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='inviter_name', full_name='CMsgDOTAGuildInviteData.inviter_name', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='member_count', full_name='CMsgDOTAGuildInviteData.member_count', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27663,
-  serialized_end=27846,
-)
-
-
-_CMSGDOTAGUILDUPDATEMESSAGE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildUpdateMessage',
-  full_name='CMsgDOTAGuildUpdateMessage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='message', full_name='CMsgDOTAGuildUpdateMessage.message', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildUpdateMessage.guild_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27848,
-  serialized_end=27911,
-)
-
-
-_CMSGDOTAGUILDEDITLOGOREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildEditLogoRequest',
-  full_name='CMsgDOTAGuildEditLogoRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildEditLogoRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAGuildEditLogoRequest.logo', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27913,
-  serialized_end=27975,
-)
-
-
-_CMSGDOTAGUILDEDITLOGORESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildEditLogoResponse',
-  full_name='CMsgDOTAGuildEditLogoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='CMsgDOTAGuildEditLogoResponse.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAGuildEditLogoResponse.result', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=27978,
-  serialized_end=28182,
+  serialized_start=1201,
+  serialized_end=2810,
 )
 
 
@@ -9968,8 +1252,8 @@ _CMSGDOTAREPORTSREMAININGREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28184,
-  serialized_end=28217,
+  serialized_start=2812,
+  serialized_end=2845,
 )
 
 
@@ -10017,8 +1301,8 @@ _CMSGDOTAREPORTSREMAININGRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28220,
-  serialized_end=28406,
+  serialized_start=2848,
+  serialized_end=3034,
 )
 
 
@@ -10059,8 +1343,8 @@ _CMSGDOTASUBMITPLAYERREPORT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28408,
-  serialized_end=28502,
+  serialized_start=3036,
+  serialized_end=3130,
 )
 
 
@@ -10101,8 +1385,8 @@ _CMSGDOTASUBMITPLAYERREPORTRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28504,
-  serialized_end=28605,
+  serialized_start=3132,
+  serialized_end=3233,
 )
 
 
@@ -10129,8 +1413,8 @@ _CMSGDOTAREPORTCOUNTSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28607,
-  serialized_end=28663,
+  serialized_start=3235,
+  serialized_end=3291,
 )
 
 
@@ -10185,8 +1469,141 @@ _CMSGDOTAREPORTCOUNTSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28666,
-  serialized_end=28822,
+  serialized_start=3294,
+  serialized_end=3450,
+)
+
+
+_CMSGDOTASUBMITLOBBYMVPVOTE = _descriptor.Descriptor(
+  name='CMsgDOTASubmitLobbyMVPVote',
+  full_name='CMsgDOTASubmitLobbyMVPVote',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target_account_id', full_name='CMsgDOTASubmitLobbyMVPVote.target_account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=3452,
+  serialized_end=3507,
+)
+
+
+_CMSGDOTASUBMITLOBBYMVPVOTERESPONSE = _descriptor.Descriptor(
+  name='CMsgDOTASubmitLobbyMVPVoteResponse',
+  full_name='CMsgDOTASubmitLobbyMVPVoteResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target_account_id', full_name='CMsgDOTASubmitLobbyMVPVoteResponse.target_account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='eresult', full_name='CMsgDOTASubmitLobbyMVPVoteResponse.eresult', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=3509,
+  serialized_end=3589,
+)
+
+
+_CMSGDOTALOBBYMVPNOTIFYRECIPIENT = _descriptor.Descriptor(
+  name='CMsgDOTALobbyMVPNotifyRecipient',
+  full_name='CMsgDOTALobbyMVPNotifyRecipient',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='voter_account_id', full_name='CMsgDOTALobbyMVPNotifyRecipient.voter_account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='num_votes', full_name='CMsgDOTALobbyMVPNotifyRecipient.num_votes', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='voter_persona_name', full_name='CMsgDOTALobbyMVPNotifyRecipient.voter_persona_name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=3591,
+  serialized_end=3697,
+)
+
+
+_CMSGDOTALOBBYMVPAWARDED = _descriptor.Descriptor(
+  name='CMsgDOTALobbyMVPAwarded',
+  full_name='CMsgDOTALobbyMVPAwarded',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='mvp_account_id', full_name='CMsgDOTALobbyMVPAwarded.mvp_account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=3699,
+  serialized_end=3748,
 )
 
 
@@ -10213,8 +1630,8 @@ _CMSGDOTAKICKEDFROMMATCHMAKINGQUEUE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28824,
-  serialized_end=28911,
+  serialized_start=3750,
+  serialized_end=3837,
 )
 
 
@@ -10241,8 +1658,8 @@ _CMSGDOTAREQUESTSAVEGAMES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28913,
-  serialized_end=28962,
+  serialized_start=3839,
+  serialized_end=3888,
 )
 
 
@@ -10276,184 +1693,8 @@ _CMSGDOTAREQUESTSAVEGAMESRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28964,
-  serialized_end=29052,
-)
-
-
-_CMSGWATCHGAME = _descriptor.Descriptor(
-  name='CMsgWatchGame',
-  full_name='CMsgWatchGame',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='server_steamid', full_name='CMsgWatchGame.server_steamid', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgWatchGame.client_version', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='watch_server_steamid', full_name='CMsgWatchGame.watch_server_steamid', index=2,
-      number=3, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CMsgWatchGame.lobby_id', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='regions', full_name='CMsgWatchGame.regions', index=4,
-      number=5, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=29055,
-  serialized_end=29183,
-)
-
-
-_CMSGCANCELWATCHGAME = _descriptor.Descriptor(
-  name='CMsgCancelWatchGame',
-  full_name='CMsgCancelWatchGame',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=29185,
-  serialized_end=29206,
-)
-
-
-_CMSGWATCHGAMERESPONSE = _descriptor.Descriptor(
-  name='CMsgWatchGameResponse',
-  full_name='CMsgWatchGameResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='watch_game_result', full_name='CMsgWatchGameResponse.watch_game_result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='source_tv_public_addr', full_name='CMsgWatchGameResponse.source_tv_public_addr', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='source_tv_private_addr', full_name='CMsgWatchGameResponse.source_tv_private_addr', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='source_tv_port', full_name='CMsgWatchGameResponse.source_tv_port', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='game_server_steamid', full_name='CMsgWatchGameResponse.game_server_steamid', index=4,
-      number=5, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='watch_server_steamid', full_name='CMsgWatchGameResponse.watch_server_steamid', index=5,
-      number=6, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='watch_tv_unique_secret_code', full_name='CMsgWatchGameResponse.watch_tv_unique_secret_code', index=6,
-      number=7, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGWATCHGAMERESPONSE_WATCHGAMERESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=29209,
-  serialized_end=29666,
-)
-
-
-_CMSGPARTYLEADERWATCHGAMEPROMPT = _descriptor.Descriptor(
-  name='CMsgPartyLeaderWatchGamePrompt',
-  full_name='CMsgPartyLeaderWatchGamePrompt',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='game_server_steamid', full_name='CMsgPartyLeaderWatchGamePrompt.game_server_steamid', index=0,
-      number=5, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=29668,
-  serialized_end=29729,
+  serialized_start=3890,
+  serialized_end=3978,
 )
 
 
@@ -10480,8 +1721,8 @@ _CMSGGCMATCHDETAILSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29731,
-  serialized_end=29776,
+  serialized_start=3980,
+  serialized_end=4025,
 )
 
 
@@ -10522,8 +1763,8 @@ _CMSGGCMATCHDETAILSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29779,
-  serialized_end=29907,
+  serialized_start=4028,
+  serialized_end=4156,
 )
 
 
@@ -10550,8 +1791,8 @@ _CMSGSERVERTOGCMATCHDETAILSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29909,
-  serialized_end=29963,
+  serialized_start=4158,
+  serialized_end=4212,
 )
 
 
@@ -10578,8 +1819,8 @@ _CMSGGCTOSERVERMATCHDETAILSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29965,
-  serialized_end=30034,
+  serialized_start=4214,
+  serialized_end=4283,
 )
 
 
@@ -10620,8 +1861,8 @@ _CMSGDOTAPROFILEREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30036,
-  serialized_end=30149,
+  serialized_start=4285,
+  serialized_end=4398,
 )
 
 
@@ -10655,8 +1896,8 @@ _CMSGDOTAPROFILERESPONSE_PLAYEDHERO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30731,
-  serialized_end=30774,
+  serialized_start=4980,
+  serialized_end=5023,
 )
 
 _CMSGDOTAPROFILERESPONSE_SHOWCASEHERO = _descriptor.Descriptor(
@@ -10689,8 +1930,8 @@ _CMSGDOTAPROFILERESPONSE_SHOWCASEHERO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30776,
-  serialized_end=30828,
+  serialized_start=5025,
+  serialized_end=5077,
 )
 
 _CMSGDOTAPROFILERESPONSE_LEAGUEPASS = _descriptor.Descriptor(
@@ -10723,8 +1964,8 @@ _CMSGDOTAPROFILERESPONSE_LEAGUEPASS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30830,
-  serialized_end=30879,
+  serialized_start=5079,
+  serialized_end=5128,
 )
 
 _CMSGDOTAPROFILERESPONSE_EVENTTICKET = _descriptor.Descriptor(
@@ -10750,8 +1991,8 @@ _CMSGDOTAPROFILERESPONSE_EVENTTICKET = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30881,
-  serialized_end=30912,
+  serialized_start=5130,
+  serialized_end=5161,
 )
 
 _CMSGDOTAPROFILERESPONSE_FEATUREDITEM = _descriptor.Descriptor(
@@ -10791,8 +2032,8 @@ _CMSGDOTAPROFILERESPONSE_FEATUREDITEM = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30914,
-  serialized_end=30986,
+  serialized_start=5163,
+  serialized_end=5235,
 )
 
 _CMSGDOTAPROFILERESPONSE = _descriptor.Descriptor(
@@ -10916,8 +2157,8 @@ _CMSGDOTAPROFILERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30152,
-  serialized_end=30986,
+  serialized_start=4401,
+  serialized_end=5235,
 )
 
 
@@ -10951,8 +2192,8 @@ _CMSGDOTAPROFILETICKETS_LEAGUEPASS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30830,
-  serialized_end=30879,
+  serialized_start=5079,
+  serialized_end=5128,
 )
 
 _CMSGDOTAPROFILETICKETS_EVENTTICKET = _descriptor.Descriptor(
@@ -10978,8 +2219,8 @@ _CMSGDOTAPROFILETICKETS_EVENTTICKET = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30881,
-  serialized_end=30912,
+  serialized_start=5130,
+  serialized_end=5161,
 )
 
 _CMSGDOTAPROFILETICKETS = _descriptor.Descriptor(
@@ -11026,8 +2267,8 @@ _CMSGDOTAPROFILETICKETS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30989,
-  serialized_end=31252,
+  serialized_start=5238,
+  serialized_end=5501,
 )
 
 
@@ -11054,8 +2295,8 @@ _CMSGCLIENTTOGCGETPROFILETICKETS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31254,
-  serialized_end=31307,
+  serialized_start=5503,
+  serialized_end=5556,
 )
 
 
@@ -11082,8 +2323,8 @@ _CMSGGCSTEAMPROFILEREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31309,
-  serialized_end=31356,
+  serialized_start=5558,
+  serialized_end=5605,
 )
 
 
@@ -11110,8 +2351,8 @@ _CMSGGCSTEAMPROFILEREQUESTRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31358,
-  serialized_end=31409,
+  serialized_start=5607,
+  serialized_end=5658,
 )
 
 
@@ -11131,8 +2372,8 @@ _CMSGDOTACLEARNOTIFYSUCCESSFULREPORT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31411,
-  serialized_end=31448,
+  serialized_start=5660,
+  serialized_end=5697,
 )
 
 
@@ -11173,8 +2414,8 @@ _CMSGDOTAWELCOME_LOCALIZATIONDIGEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32201,
-  serialized_end=32343,
+  serialized_start=6450,
+  serialized_end=6592,
 )
 
 _CMSGDOTAWELCOME_CEXTRAMSG = _descriptor.Descriptor(
@@ -11207,8 +2448,8 @@ _CMSGDOTAWELCOME_CEXTRAMSG = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32345,
-  serialized_end=32386,
+  serialized_start=6594,
+  serialized_end=6635,
 )
 
 _CMSGDOTAWELCOME = _descriptor.Descriptor(
@@ -11374,8 +2615,8 @@ _CMSGDOTAWELCOME = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31451,
-  serialized_end=32386,
+  serialized_start=5700,
+  serialized_end=6635,
 )
 
 
@@ -11409,8 +2650,8 @@ _CSODOTAGAMEHEROFAVORITES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32388,
-  serialized_end=32463,
+  serialized_start=6637,
+  serialized_end=6712,
 )
 
 
@@ -11437,8 +2678,8 @@ _CMSGDOTAHEROFAVORITESADD = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32465,
-  serialized_end=32508,
+  serialized_start=6714,
+  serialized_end=6757,
 )
 
 
@@ -11465,8 +2706,8 @@ _CMSGDOTAHEROFAVORITESREMOVE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32510,
-  serialized_end=32556,
+  serialized_start=6759,
+  serialized_end=6805,
 )
 
 
@@ -11493,8 +2734,8 @@ _CMSGSETSHOWCASEHERO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32558,
-  serialized_end=32605,
+  serialized_start=6807,
+  serialized_end=6854,
 )
 
 
@@ -11521,8 +2762,8 @@ _CMSGSETFEATUREDITEMS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32607,
-  serialized_end=32655,
+  serialized_start=6856,
+  serialized_end=6904,
 )
 
 
@@ -11563,8 +2804,8 @@ _CMSGDOTAFEATUREDITEMS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32657,
-  serialized_end=32747,
+  serialized_start=6906,
+  serialized_end=6996,
 )
 
 
@@ -11584,8 +2825,8 @@ _CMSGREQUESTLEAGUEINFO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32749,
-  serialized_end=32772,
+  serialized_start=6998,
+  serialized_end=7021,
 )
 
 
@@ -11654,8 +2895,8 @@ _CDYNAMICLEAGUEDATA = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32775,
-  serialized_end=32983,
+  serialized_start=7024,
+  serialized_end=7232,
 )
 
 
@@ -11815,8 +3056,8 @@ _CSTATICLEAGUEDATA = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32986,
-  serialized_end=33424,
+  serialized_start=7235,
+  serialized_end=7673,
 )
 
 
@@ -11857,8 +3098,8 @@ _CLEAGUEDATA = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33426,
-  serialized_end=33541,
+  serialized_start=7675,
+  serialized_end=7790,
 )
 
 
@@ -11885,8 +3126,8 @@ _CMSGRESPONSELEAGUEINFO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33543,
-  serialized_end=33605,
+  serialized_start=7792,
+  serialized_end=7854,
 )
 
 
@@ -11920,8 +3161,8 @@ _CMSGDOTAMATCHVOTES_PLAYERVOTE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33695,
-  serialized_end=33741,
+  serialized_start=7944,
+  serialized_end=7990,
 )
 
 _CMSGDOTAMATCHVOTES = _descriptor.Descriptor(
@@ -11954,8 +3195,8 @@ _CMSGDOTAMATCHVOTES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33608,
-  serialized_end=33741,
+  serialized_start=7857,
+  serialized_end=7990,
 )
 
 
@@ -11989,8 +3230,8 @@ _CMSGCASTMATCHVOTE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33743,
-  serialized_end=33833,
+  serialized_start=7992,
+  serialized_end=8082,
 )
 
 
@@ -12024,8 +3265,8 @@ _CMSGRETRIEVEMATCHVOTE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33835,
-  serialized_end=33897,
+  serialized_start=8084,
+  serialized_end=8146,
 )
 
 
@@ -12073,8 +3314,8 @@ _CMSGMATCHVOTERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33900,
-  serialized_end=34044,
+  serialized_start=8149,
+  serialized_end=8293,
 )
 
 
@@ -12122,8 +3363,8 @@ _CMSGDOTAHALLOFFAME_FEATUREDPLAYER = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34206,
-  serialized_end=34309,
+  serialized_start=8455,
+  serialized_end=8558,
 )
 
 _CMSGDOTAHALLOFFAME_FEATUREDFARMER = _descriptor.Descriptor(
@@ -12170,8 +3411,8 @@ _CMSGDOTAHALLOFFAME_FEATUREDFARMER = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34311,
-  serialized_end=34404,
+  serialized_start=8560,
+  serialized_end=8653,
 )
 
 _CMSGDOTAHALLOFFAME = _descriptor.Descriptor(
@@ -12211,8 +3452,8 @@ _CMSGDOTAHALLOFFAME = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34047,
-  serialized_end=34404,
+  serialized_start=8296,
+  serialized_end=8653,
 )
 
 
@@ -12239,8 +3480,8 @@ _CMSGDOTAHALLOFFAMEREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34406,
-  serialized_end=34447,
+  serialized_start=8655,
+  serialized_end=8696,
 )
 
 
@@ -12274,8 +3515,8 @@ _CMSGDOTAHALLOFFAMERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34449,
-  serialized_end=34540,
+  serialized_start=8698,
+  serialized_end=8789,
 )
 
 
@@ -12302,8 +3543,8 @@ _CMSGDOTAHALLOWEENHIGHSCOREREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34542,
-  serialized_end=34596,
+  serialized_start=8791,
+  serialized_end=8845,
 )
 
 
@@ -12351,8 +3592,8 @@ _CMSGDOTAHALLOWEENHIGHSCORERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34598,
-  serialized_end=34712,
+  serialized_start=8847,
+  serialized_end=8961,
 )
 
 
@@ -12379,8 +3620,8 @@ _CMSGDOTASTOREPROMOPAGESREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34714,
-  serialized_end=34768,
+  serialized_start=8963,
+  serialized_end=9017,
 )
 
 
@@ -12421,8 +3662,8 @@ _CMSGDOTASTOREPROMOPAGESRESPONSE_PROMOPAGE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34865,
-  serialized_end=34922,
+  serialized_start=9114,
+  serialized_end=9171,
 )
 
 _CMSGDOTASTOREPROMOPAGESRESPONSE = _descriptor.Descriptor(
@@ -12448,8 +3689,8 @@ _CMSGDOTASTOREPROMOPAGESRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34771,
-  serialized_end=34922,
+  serialized_start=9020,
+  serialized_end=9171,
 )
 
 
@@ -12490,8 +3731,8 @@ _CMSGLEAGUESCHEDULEBLOCKTEAMINFO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34924,
-  serialized_end=35002,
+  serialized_start=9173,
+  serialized_end=9251,
 )
 
 
@@ -12546,8 +3787,8 @@ _CMSGLEAGUESCHEDULEBLOCK = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35005,
-  serialized_end=35150,
+  serialized_start=9254,
+  serialized_end=9399,
 )
 
 
@@ -12581,8 +3822,8 @@ _CMSGDOTALEAGUE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35152,
-  serialized_end=35231,
+  serialized_start=9401,
+  serialized_end=9480,
 )
 
 
@@ -12609,8 +3850,8 @@ _CMSGDOTALEAGUESCHEDULEREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35233,
-  serialized_end=35283,
+  serialized_start=9482,
+  serialized_end=9532,
 )
 
 
@@ -12644,8 +3885,8 @@ _CMSGDOTALEAGUESCHEDULERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35285,
-  serialized_end=35370,
+  serialized_start=9534,
+  serialized_end=9619,
 )
 
 
@@ -12686,8 +3927,8 @@ _CMSGDOTALEAGUESCHEDULEEDIT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35372,
-  serialized_end=35485,
+  serialized_start=9621,
+  serialized_end=9734,
 )
 
 
@@ -12721,8 +3962,8 @@ _CMSGDOTALEAGUESCHEDULEEDITRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35487,
-  serialized_end=35576,
+  serialized_start=9736,
+  serialized_end=9825,
 )
 
 
@@ -12763,8 +4004,8 @@ _CMSGDOTALEAGUESINMONTHREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35578,
-  serialized_end=35652,
+  serialized_start=9827,
+  serialized_end=9901,
 )
 
 
@@ -12812,8 +4053,8 @@ _CMSGDOTALEAGUESINMONTHRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35654,
-  serialized_end=35769,
+  serialized_start=9903,
+  serialized_end=10018,
 )
 
 
@@ -12854,8 +4095,8 @@ _CMSGMATCHMAKINGMATCHGROUPINFO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35772,
-  serialized_end=35943,
+  serialized_start=10021,
+  serialized_end=10192,
 )
 
 
@@ -12875,8 +4116,8 @@ _CMSGDOTAMATCHMAKINGSTATSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35945,
-  serialized_end=35978,
+  serialized_start=10194,
+  serialized_end=10227,
 )
 
 
@@ -12917,8 +4158,8 @@ _CMSGDOTAMATCHMAKINGSTATSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35981,
-  serialized_end=36149,
+  serialized_start=10230,
+  serialized_end=10398,
 )
 
 
@@ -12945,8 +4186,8 @@ _CMSGDOTASETMATCHHISTORYACCESS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36151,
-  serialized_end=36221,
+  serialized_start=10400,
+  serialized_end=10470,
 )
 
 
@@ -12973,8 +4214,8 @@ _CMSGDOTASETMATCHHISTORYACCESSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36223,
-  serialized_end=36282,
+  serialized_start=10472,
+  serialized_end=10531,
 )
 
 
@@ -13008,8 +4249,8 @@ _CMSGDOTANOTIFYACCOUNTFLAGSCHANGE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36284,
-  serialized_end=36360,
+  serialized_start=10533,
+  serialized_end=10609,
 )
 
 
@@ -13036,8 +4277,8 @@ _CMSGDOTASETPROFILEPRIVACY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36362,
-  serialized_end=36414,
+  serialized_start=10611,
+  serialized_end=10663,
 )
 
 
@@ -13064,8 +4305,8 @@ _CMSGDOTASETPROFILEPRIVACYRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36416,
-  serialized_end=36468,
+  serialized_start=10665,
+  serialized_end=10717,
 )
 
 
@@ -13099,8 +4340,8 @@ _CMSGUPGRADELEAGUEITEM = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36470,
-  serialized_end=36530,
+  serialized_start=10719,
+  serialized_end=10779,
 )
 
 
@@ -13120,8 +4361,8 @@ _CMSGUPGRADELEAGUEITEMRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36532,
-  serialized_end=36563,
+  serialized_start=10781,
+  serialized_end=10812,
 )
 
 
@@ -13155,8 +4396,8 @@ _CMSGGCWATCHDOWNLOADEDREPLAY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36565,
-  serialized_end=36681,
+  serialized_start=10814,
+  serialized_end=10930,
 )
 
 
@@ -13190,8 +4431,8 @@ _CMSGSETMAPLOCATIONSTATE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36683,
-  serialized_end=36748,
+  serialized_start=10932,
+  serialized_end=10997,
 )
 
 
@@ -13218,8 +4459,8 @@ _CMSGSETMAPLOCATIONSTATERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36750,
-  serialized_end=36803,
+  serialized_start=10999,
+  serialized_end=11052,
 )
 
 
@@ -13239,8 +4480,8 @@ _CMSGRESETMAPLOCATIONS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36805,
-  serialized_end=36828,
+  serialized_start=11054,
+  serialized_end=11077,
 )
 
 
@@ -13267,8 +4508,8 @@ _CMSGRESETMAPLOCATIONSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36830,
-  serialized_end=36881,
+  serialized_start=11079,
+  serialized_end=11130,
 )
 
 
@@ -13295,8 +4536,8 @@ _CMSGREFRESHPARTNERACCOUNTLINK = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36883,
-  serialized_end=36936,
+  serialized_start=11132,
+  serialized_end=11185,
 )
 
 
@@ -13316,8 +4557,8 @@ _CMSGCLIENTSREJOINCHATCHANNELS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36938,
-  serialized_end=36969,
+  serialized_start=11187,
+  serialized_end=11218,
 )
 
 
@@ -13344,8 +4585,8 @@ _CMSGDOTASENDFRIENDRECRUITS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36971,
-  serialized_end=37017,
+  serialized_start=11220,
+  serialized_end=11266,
 )
 
 
@@ -13372,8 +4613,8 @@ _CMSGDOTAFRIENDRECRUITSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37019,
-  serialized_end=37071,
+  serialized_start=11268,
+  serialized_end=11320,
 )
 
 
@@ -13421,8 +4662,8 @@ _CMSGDOTAFRIENDRECRUITSRESPONSE_FRIENDRECRUITSTATUS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37318,
-  serialized_end=37413,
+  serialized_start=11567,
+  serialized_end=11662,
 )
 
 _CMSGDOTAFRIENDRECRUITSRESPONSE = _descriptor.Descriptor(
@@ -13463,8 +4704,8 @@ _CMSGDOTAFRIENDRECRUITSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37074,
-  serialized_end=37460,
+  serialized_start=11323,
+  serialized_end=11709,
 )
 
 
@@ -13498,8 +4739,8 @@ _CMSGDOTAFRIENDRECRUITINVITEACCEPTDECLINE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37462,
-  serialized_end=37542,
+  serialized_start=11711,
+  serialized_end=11791,
 )
 
 
@@ -13526,8 +4767,8 @@ _CMSGREQUESTLEAGUEPRIZEPOOL = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37544,
-  serialized_end=37591,
+  serialized_start=11793,
+  serialized_end=11840,
 )
 
 
@@ -13561,8 +4802,8 @@ _CMSGREQUESTLEAGUEPRIZEPOOLRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37593,
-  serialized_end=37668,
+  serialized_start=11842,
+  serialized_end=11917,
 )
 
 
@@ -13582,8 +4823,8 @@ _CMSGGCGETHEROSTANDINGS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37670,
-  serialized_end=37694,
+  serialized_start=11919,
+  serialized_end=11943,
 )
 
 
@@ -13708,8 +4949,8 @@ _CMSGGCGETHEROSTANDINGSRESPONSE_HERO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37789,
-  serialized_end=38080,
+  serialized_start=12038,
+  serialized_end=12329,
 )
 
 _CMSGGCGETHEROSTANDINGSRESPONSE = _descriptor.Descriptor(
@@ -13735,8 +4976,8 @@ _CMSGGCGETHEROSTANDINGSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37697,
-  serialized_end=38080,
+  serialized_start=11946,
+  serialized_end=12329,
 )
 
 
@@ -13756,8 +4997,8 @@ _CMSGGCITEMEDITORRESERVATIONSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38082,
-  serialized_end=38119,
+  serialized_start=12331,
+  serialized_end=12368,
 )
 
 
@@ -13791,8 +5032,8 @@ _CMSGGCITEMEDITORRESERVATION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38121,
-  serialized_end=38183,
+  serialized_start=12370,
+  serialized_end=12432,
 )
 
 
@@ -13819,8 +5060,8 @@ _CMSGGCITEMEDITORRESERVATIONSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38185,
-  serialized_end=38275,
+  serialized_start=12434,
+  serialized_end=12524,
 )
 
 
@@ -13854,8 +5095,8 @@ _CMSGGCITEMEDITORRESERVEITEMDEF = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38277,
-  serialized_end=38346,
+  serialized_start=12526,
+  serialized_end=12595,
 )
 
 
@@ -13896,8 +5137,8 @@ _CMSGGCITEMEDITORRESERVEITEMDEFRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38348,
-  serialized_end=38441,
+  serialized_start=12597,
+  serialized_end=12690,
 )
 
 
@@ -13931,8 +5172,8 @@ _CMSGGCITEMEDITORRELEASERESERVATION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38443,
-  serialized_end=38516,
+  serialized_start=12692,
+  serialized_end=12765,
 )
 
 
@@ -13966,8 +5207,8 @@ _CMSGGCITEMEDITORRELEASERESERVATIONRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38518,
-  serialized_end=38599,
+  serialized_start=12767,
+  serialized_end=12848,
 )
 
 
@@ -13994,8 +5235,8 @@ _CMSGGCITEMEDITORREQUESTLEAGUEINFO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38601,
-  serialized_end=38655,
+  serialized_start=12850,
+  serialized_end=12904,
 )
 
 
@@ -14071,8 +5312,8 @@ _CMSGGCITEMEDITORLEAGUEINFORESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38658,
-  serialized_end=38844,
+  serialized_start=12907,
+  serialized_end=13093,
 )
 
 
@@ -14106,8 +5347,8 @@ _CMSGDOTAREWARDTUTORIALPRIZES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38846,
-  serialized_end=38920,
+  serialized_start=13095,
+  serialized_end=13169,
 )
 
 
@@ -14141,8 +5382,8 @@ _CMSGDOTALASTHITCHALLENGEHIGHSCOREPOST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=38922,
-  serialized_end=38998,
+  serialized_start=13171,
+  serialized_end=13247,
 )
 
 
@@ -14169,8 +5410,8 @@ _CMSGDOTALASTHITCHALLENGEHIGHSCOREREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39000,
-  serialized_end=39059,
+  serialized_start=13249,
+  serialized_end=13308,
 )
 
 
@@ -14204,8 +5445,8 @@ _CMSGDOTALASTHITCHALLENGEHIGHSCORERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39061,
-  serialized_end=39136,
+  serialized_start=13310,
+  serialized_end=13385,
 )
 
 
@@ -14225,8 +5466,8 @@ _CMSGFLIPLOBBYTEAMS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39138,
-  serialized_end=39158,
+  serialized_start=13387,
+  serialized_end=13407,
 )
 
 
@@ -14246,8 +5487,8 @@ _CMSGPRESENTEDCLIENTTERMINATEDLG = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39160,
-  serialized_end=39193,
+  serialized_start=13409,
+  serialized_end=13442,
 )
 
 
@@ -14295,8 +5536,8 @@ _CMSGGCLOBBYUPDATEBROADCASTCHANNELINFO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39195,
-  serialized_end=39320,
+  serialized_start=13444,
+  serialized_end=13569,
 )
 
 
@@ -14337,8 +5578,8 @@ _CMSGDOTAREDEEMEVENTPRIZE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39322,
-  serialized_end=39405,
+  serialized_start=13571,
+  serialized_end=13654,
 )
 
 
@@ -14387,8 +5628,8 @@ _CMSGDOTAREDEEMEVENTPRIZERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39408,
-  serialized_end=39675,
+  serialized_start=13657,
+  serialized_end=13924,
 )
 
 
@@ -14422,8 +5663,8 @@ _CMSGDOTAGETEVENTPOINTS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39677,
-  serialized_end=39739,
+  serialized_start=13926,
+  serialized_end=13988,
 )
 
 
@@ -14457,8 +5698,8 @@ _CMSGDOTAGETEVENTPOINTSRESPONSE_ACTION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40010,
-  serialized_end=40065,
+  serialized_start=14291,
+  serialized_end=14346,
 )
 
 _CMSGDOTAGETEVENTPOINTSRESPONSE = _descriptor.Descriptor(
@@ -14531,6 +5772,13 @@ _CMSGDOTAGETEVENTPOINTSRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='wager_tokens_remaining', full_name='CMsgDOTAGetEventPointsResponse.wager_tokens_remaining', index=9,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -14540,8 +5788,8 @@ _CMSGDOTAGETEVENTPOINTSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39742,
-  serialized_end=40065,
+  serialized_start=13991,
+  serialized_end=14346,
 )
 
 
@@ -14568,8 +5816,8 @@ _CMSGDOTALIVELEAGUEGAMEUPDATE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40067,
-  serialized_end=40124,
+  serialized_start=14348,
+  serialized_end=14405,
 )
 
 
@@ -14610,8 +5858,8 @@ _CMSGDOTACOMPENDIUMSELECTION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40126,
-  serialized_end=40217,
+  serialized_start=14407,
+  serialized_end=14498,
 )
 
 
@@ -14645,8 +5893,8 @@ _CMSGDOTACOMPENDIUMSELECTIONRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40219,
-  serialized_end=40332,
+  serialized_start=14500,
+  serialized_end=14613,
 )
 
 
@@ -14673,8 +5921,8 @@ _CMSGDOTACOMPENDIUMDATA = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40334,
-  serialized_end=40408,
+  serialized_start=14615,
+  serialized_end=14689,
 )
 
 
@@ -14708,8 +5956,8 @@ _CMSGDOTACOMPENDIUMDATAREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40410,
-  serialized_end=40479,
+  serialized_start=14691,
+  serialized_end=14760,
 )
 
 
@@ -14757,8 +6005,8 @@ _CMSGDOTACOMPENDIUMDATARESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40482,
-  serialized_end=40621,
+  serialized_start=14763,
+  serialized_end=14902,
 )
 
 
@@ -14827,8 +6075,8 @@ _CMSGDOTAGETPLAYERMATCHHISTORY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40624,
-  serialized_end=40830,
+  serialized_start=14905,
+  serialized_end=15111,
 )
 
 
@@ -14930,6 +6178,13 @@ _CMSGDOTAGETPLAYERMATCHHISTORYRESPONSE_MATCH = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='seasonal_rank', full_name='CMsgDOTAGetPlayerMatchHistoryResponse.Match.seasonal_rank', index=13,
+      number=14, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -14939,8 +6194,8 @@ _CMSGDOTAGETPLAYERMATCHHISTORYRESPONSE_MATCH = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40958,
-  serialized_end=41217,
+  serialized_start=15239,
+  serialized_end=15521,
 )
 
 _CMSGDOTAGETPLAYERMATCHHISTORYRESPONSE = _descriptor.Descriptor(
@@ -14973,8 +6228,8 @@ _CMSGDOTAGETPLAYERMATCHHISTORYRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=40833,
-  serialized_end=41217,
+  serialized_start=15114,
+  serialized_end=15521,
 )
 
 
@@ -14994,8 +6249,8 @@ _CMSGDOTASTARTDAILYHEROCHALLENGE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41219,
-  serialized_end=41252,
+  serialized_start=15523,
+  serialized_end=15556,
 )
 
 
@@ -15015,8 +6270,8 @@ _CMSGGCNOTIFICATIONSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41254,
-  serialized_end=41282,
+  serialized_start=15558,
+  serialized_end=15586,
 )
 
 
@@ -15092,8 +6347,8 @@ _CMSGGCNOTIFICATIONSRESPONSE_NOTIFICATION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41446,
-  serialized_end=41601,
+  serialized_start=15750,
+  serialized_end=15905,
 )
 
 _CMSGGCNOTIFICATIONSRESPONSE = _descriptor.Descriptor(
@@ -15127,8 +6382,8 @@ _CMSGGCNOTIFICATIONSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41285,
-  serialized_end=41648,
+  serialized_start=15589,
+  serialized_end=15952,
 )
 
 
@@ -15148,8 +6403,8 @@ _CMSGGCNOTIFICATIONSMARKREADREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41650,
-  serialized_end=41686,
+  serialized_start=15954,
+  serialized_end=15990,
 )
 
 
@@ -15176,8 +6431,8 @@ _CMSGCLIENTTOGCMARKNOTIFICATIONLISTREAD = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41688,
-  serialized_end=41754,
+  serialized_start=15992,
+  serialized_end=16058,
 )
 
 
@@ -15211,8 +6466,8 @@ _CMSGGCLEAGUEADMINSTATE_PRIVATELEAGUEKEYS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41857,
-  serialized_end=41914,
+  serialized_start=16161,
+  serialized_end=16218,
 )
 
 _CMSGGCLEAGUEADMINSTATE = _descriptor.Descriptor(
@@ -15245,22 +6500,29 @@ _CMSGGCLEAGUEADMINSTATE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41757,
-  serialized_end=41914,
+  serialized_start=16061,
+  serialized_end=16218,
 )
 
 
-_CMSGGCPLAYERINFOREQUEST = _descriptor.Descriptor(
-  name='CMsgGCPlayerInfoRequest',
-  full_name='CMsgGCPlayerInfoRequest',
+_CMSGGCPLAYERINFOREQUEST_PLAYERINFO = _descriptor.Descriptor(
+  name='PlayerInfo',
+  full_name='CMsgGCPlayerInfoRequest.PlayerInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_ids', full_name='CMsgGCPlayerInfoRequest.account_ids', index=0,
-      number=1, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
+      name='account_id', full_name='CMsgGCPlayerInfoRequest.PlayerInfo.account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='timestamp', full_name='CMsgGCPlayerInfoRequest.PlayerInfo.timestamp', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -15273,8 +6535,35 @@ _CMSGGCPLAYERINFOREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41916,
-  serialized_end=41962,
+  serialized_start=16307,
+  serialized_end=16358,
+)
+
+_CMSGGCPLAYERINFOREQUEST = _descriptor.Descriptor(
+  name='CMsgGCPlayerInfoRequest',
+  full_name='CMsgGCPlayerInfoRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='player_infos', full_name='CMsgGCPlayerInfoRequest.player_infos', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGGCPLAYERINFOREQUEST_PLAYERINFO, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=16221,
+  serialized_end=16358,
 )
 
 
@@ -15329,8 +6618,8 @@ _CMSGGCPLAYERINFOSUBMIT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41964,
-  serialized_end=42080,
+  serialized_start=16360,
+  serialized_end=16476,
 )
 
 
@@ -15358,263 +6647,8 @@ _CMSGGCPLAYERINFOSUBMITRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=42083,
-  serialized_end=42251,
-)
-
-
-_CMSGSERIALIZEDSOCACHE_TYPECACHE = _descriptor.Descriptor(
-  name='TypeCache',
-  full_name='CMsgSerializedSOCache.TypeCache',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='CMsgSerializedSOCache.TypeCache.type', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='objects', full_name='CMsgSerializedSOCache.TypeCache.objects', index=1,
-      number=2, type=12, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='service_id', full_name='CMsgSerializedSOCache.TypeCache.service_id', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=42380,
-  serialized_end=42442,
-)
-
-_CMSGSERIALIZEDSOCACHE_CACHE_VERSION = _descriptor.Descriptor(
-  name='Version',
-  full_name='CMsgSerializedSOCache.Cache.Version',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='service', full_name='CMsgSerializedSOCache.Cache.Version.service', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='version', full_name='CMsgSerializedSOCache.Cache.Version.version', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=42591,
-  serialized_end=42634,
-)
-
-_CMSGSERIALIZEDSOCACHE_CACHE = _descriptor.Descriptor(
-  name='Cache',
-  full_name='CMsgSerializedSOCache.Cache',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='CMsgSerializedSOCache.Cache.type', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='id', full_name='CMsgSerializedSOCache.Cache.id', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='versions', full_name='CMsgSerializedSOCache.Cache.versions', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='type_caches', full_name='CMsgSerializedSOCache.Cache.type_caches', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGSERIALIZEDSOCACHE_CACHE_VERSION, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=42445,
-  serialized_end=42634,
-)
-
-_CMSGSERIALIZEDSOCACHE = _descriptor.Descriptor(
-  name='CMsgSerializedSOCache',
-  full_name='CMsgSerializedSOCache',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='file_version', full_name='CMsgSerializedSOCache.file_version', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='caches', full_name='CMsgSerializedSOCache.caches', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gc_socache_file_version', full_name='CMsgSerializedSOCache.gc_socache_file_version', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGSERIALIZEDSOCACHE_TYPECACHE, _CMSGSERIALIZEDSOCACHE_CACHE, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=42254,
-  serialized_end=42634,
-)
-
-
-_CMSGREQUESTWEEKENDTOURNEYSCHEDULE = _descriptor.Descriptor(
-  name='CMsgRequestWeekendTourneySchedule',
-  full_name='CMsgRequestWeekendTourneySchedule',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=42636,
-  serialized_end=42671,
-)
-
-
-_CMSGWEEKENDTOURNEYSCHEDULE_DIVISION = _descriptor.Descriptor(
-  name='Division',
-  full_name='CMsgWeekendTourneySchedule.Division',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='division_code', full_name='CMsgWeekendTourneySchedule.Division.division_code', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_window_open', full_name='CMsgWeekendTourneySchedule.Division.time_window_open', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='time_window_close', full_name='CMsgWeekendTourneySchedule.Division.time_window_close', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=42761,
-  serialized_end=42847,
-)
-
-_CMSGWEEKENDTOURNEYSCHEDULE = _descriptor.Descriptor(
-  name='CMsgWeekendTourneySchedule',
-  full_name='CMsgWeekendTourneySchedule',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='divisions', full_name='CMsgWeekendTourneySchedule.divisions', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGWEEKENDTOURNEYSCHEDULE_DIVISION, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=42674,
-  serialized_end=42847,
+  serialized_start=16479,
+  serialized_end=16647,
 )
 
 
@@ -15648,8 +6682,8 @@ _CMSGCLIENTPROVIDESURVEYRESULT_RESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=42963,
-  serialized_end=43016,
+  serialized_start=16763,
+  serialized_end=16816,
 )
 
 _CMSGCLIENTPROVIDESURVEYRESULT = _descriptor.Descriptor(
@@ -15682,8 +6716,8 @@ _CMSGCLIENTPROVIDESURVEYRESULT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=42850,
-  serialized_end=43016,
+  serialized_start=16650,
+  serialized_end=16816,
 )
 
 
@@ -15717,8 +6751,8 @@ _CMSGDOTAEMOTICONACCESSSDO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43018,
-  serialized_end=43093,
+  serialized_start=16818,
+  serialized_end=16893,
 )
 
 
@@ -15738,8 +6772,8 @@ _CMSGCLIENTTOGCEMOTICONDATAREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43095,
-  serialized_end=43130,
+  serialized_start=16895,
+  serialized_end=16930,
 )
 
 
@@ -15766,8 +6800,8 @@ _CMSGGCTOCLIENTEMOTICONDATA = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43132,
-  serialized_end=43213,
+  serialized_start=16932,
+  serialized_end=17013,
 )
 
 
@@ -15801,8 +6835,8 @@ _CMSGCLIENTTOGCTRACKDIALOGRESULT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43215,
-  serialized_end=43282,
+  serialized_start=17015,
+  serialized_end=17082,
 )
 
 
@@ -15836,8 +6870,8 @@ _CMSGGCTOCLIENTTOURNAMENTITEMDROP = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43284,
-  serialized_end=43356,
+  serialized_start=17084,
+  serialized_end=17156,
 )
 
 
@@ -15864,8 +6898,8 @@ _CMSGCLIENTTOGCSETADDITIONALEQUIPS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43358,
-  serialized_end=43432,
+  serialized_start=17158,
+  serialized_end=17232,
 )
 
 
@@ -15885,8 +6919,8 @@ _CMSGCLIENTTOGCSETADDITIONALEQUIPSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43434,
-  serialized_end=43477,
+  serialized_start=17234,
+  serialized_end=17277,
 )
 
 
@@ -15906,8 +6940,8 @@ _CMSGCLIENTTOGCGETADDITIONALEQUIPS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43479,
-  serialized_end=43514,
+  serialized_start=17279,
+  serialized_end=17314,
 )
 
 
@@ -15934,8 +6968,8 @@ _CMSGCLIENTTOGCGETADDITIONALEQUIPSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43516,
-  serialized_end=43598,
+  serialized_start=17316,
+  serialized_end=17398,
 )
 
 
@@ -15955,8 +6989,8 @@ _CMSGCLIENTTOGCGETALLHEROORDER = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43600,
-  serialized_end=43631,
+  serialized_start=17400,
+  serialized_end=17431,
 )
 
 
@@ -15983,8 +7017,8 @@ _CMSGCLIENTTOGCGETALLHEROORDERRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43633,
-  serialized_end=43690,
+  serialized_start=17433,
+  serialized_end=17490,
 )
 
 
@@ -16011,8 +7045,8 @@ _CMSGCLIENTTOGCGETALLHEROPROGRESS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43692,
-  serialized_end=43746,
+  serialized_start=17492,
+  serialized_end=17546,
 )
 
 
@@ -16172,8 +7206,8 @@ _CMSGCLIENTTOGCGETALLHEROPROGRESSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=43749,
-  serialized_end=44286,
+  serialized_start=17549,
+  serialized_end=18086,
 )
 
 
@@ -16200,8 +7234,8 @@ _CMSGCLIENTTOGCGETTROPHYLIST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44288,
-  serialized_end=44337,
+  serialized_start=18088,
+  serialized_end=18137,
 )
 
 
@@ -16242,8 +7276,8 @@ _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE_TROPHY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44484,
-  serialized_end=44555,
+  serialized_start=18284,
+  serialized_end=18355,
 )
 
 _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE = _descriptor.Descriptor(
@@ -16283,8 +7317,8 @@ _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44340,
-  serialized_end=44555,
+  serialized_start=18140,
+  serialized_end=18355,
 )
 
 
@@ -16332,8 +7366,8 @@ _CMSGGCTOCLIENTTROPHYAWARDED = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44557,
-  serialized_end=44675,
+  serialized_start=18357,
+  serialized_end=18475,
 )
 
 
@@ -16360,8 +7394,8 @@ _CMSGCLIENTTOGCGETPROFILECARD = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44677,
-  serialized_end=44727,
+  serialized_start=18477,
+  serialized_end=18527,
 )
 
 
@@ -16402,8 +7436,8 @@ _CMSGCLIENTTOGCSETPROFILECARDSLOTS_CARDSLOT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44827,
-  serialized_end=44946,
+  serialized_start=18627,
+  serialized_end=18746,
 )
 
 _CMSGCLIENTTOGCSETPROFILECARDSLOTS = _descriptor.Descriptor(
@@ -16429,8 +7463,8 @@ _CMSGCLIENTTOGCSETPROFILECARDSLOTS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44730,
-  serialized_end=44946,
+  serialized_start=18530,
+  serialized_end=18746,
 )
 
 
@@ -16450,8 +7484,8 @@ _CMSGCLIENTTOGCGETPROFILECARDSTATS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44948,
-  serialized_end=44983,
+  serialized_start=18748,
+  serialized_end=18783,
 )
 
 
@@ -16534,8 +7568,8 @@ _CMSGCLIENTTOGCCREATEHEROSTATUE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44986,
-  serialized_end=45198,
+  serialized_start=18786,
+  serialized_end=18998,
 )
 
 
@@ -16604,8 +7638,8 @@ _CMSGCLIENTTOGCCREATETEAMSHOWCASE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=45201,
-  serialized_end=45367,
+  serialized_start=19001,
+  serialized_end=19167,
 )
 
 
@@ -16632,8 +7666,8 @@ _CMSGGCTOCLIENTHEROSTATUECREATERESULT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=45369,
-  serialized_end=45431,
+  serialized_start=19169,
+  serialized_end=19231,
 )
 
 
@@ -16660,8 +7694,8 @@ _CMSGGCTOCLIENTTEAMSHOWCASECREATERESULT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=45433,
-  serialized_end=45497,
+  serialized_start=19233,
+  serialized_end=19297,
 )
 
 
@@ -16716,8 +7750,8 @@ _CMSGCLIENTTOGCRECORDCOMPENDIUMSTATS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=45500,
-  serialized_end=45648,
+  serialized_start=19300,
+  serialized_end=19448,
 )
 
 
@@ -16744,8 +7778,8 @@ _CMSGGCTOCLIENTEVENTSTATUSCHANGED = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=45650,
-  serialized_end=45716,
+  serialized_start=19450,
+  serialized_end=19516,
 )
 
 
@@ -16772,8 +7806,8 @@ _CMSGCLIENTTOGCPLAYERSTATSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=45718,
-  serialized_end=45772,
+  serialized_start=19518,
+  serialized_end=19572,
 )
 
 
@@ -16926,8 +7960,8 @@ _CMSGGCTOCLIENTPLAYERSTATSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=45775,
-  serialized_end=46238,
+  serialized_start=19575,
+  serialized_end=20038,
 )
 
 
@@ -16954,8 +7988,8 @@ _CMSGCLIENTTOGCCUSTOMGAMEPLAYERCOUNTREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46240,
-  serialized_end=46308,
+  serialized_start=20040,
+  serialized_end=20108,
 )
 
 
@@ -16996,8 +8030,8 @@ _CMSGGCTOCLIENTCUSTOMGAMEPLAYERCOUNTRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46310,
-  serialized_end=46426,
+  serialized_start=20110,
+  serialized_end=20226,
 )
 
 
@@ -17017,8 +8051,8 @@ _CMSGCLIENTTOGCCUSTOMGAMESFRIENDSPLAYEDREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46428,
-  serialized_end=46475,
+  serialized_start=20228,
+  serialized_end=20275,
 )
 
 
@@ -17052,8 +8086,8 @@ _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE_CUSTOMGAME = _descriptor.Descrip
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46623,
-  serialized_end=46680,
+  serialized_start=20423,
+  serialized_end=20480,
 )
 
 _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE = _descriptor.Descriptor(
@@ -17086,8 +8120,8 @@ _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46478,
-  serialized_end=46680,
+  serialized_start=20278,
+  serialized_end=20480,
 )
 
 
@@ -17121,8 +8155,8 @@ _CMSGCLIENTTOGCSOCIALFEEDPOSTCOMMENTREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46682,
-  serialized_end=46761,
+  serialized_start=20482,
+  serialized_end=20561,
 )
 
 
@@ -17149,8 +8183,8 @@ _CMSGGCTOCLIENTSOCIALFEEDPOSTCOMMENTRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46763,
-  serialized_end=46825,
+  serialized_start=20563,
+  serialized_end=20625,
 )
 
 
@@ -17191,8 +8225,8 @@ _CMSGCLIENTTOGCSOCIALFEEDPOSTMESSAGEREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46827,
-  serialized_end=46931,
+  serialized_start=20627,
+  serialized_end=20731,
 )
 
 
@@ -17219,8 +8253,8 @@ _CMSGGCTOCLIENTSOCIALFEEDPOSTMESSAGERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46933,
-  serialized_end=46995,
+  serialized_start=20733,
+  serialized_end=20795,
 )
 
 
@@ -17247,8 +8281,8 @@ _CMSGCLIENTTOGCFRIENDSPLAYEDCUSTOMGAMEREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46997,
-  serialized_end=47067,
+  serialized_start=20797,
+  serialized_end=20867,
 )
 
 
@@ -17282,8 +8316,8 @@ _CMSGGCTOCLIENTFRIENDSPLAYEDCUSTOMGAMERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47069,
-  serialized_end=47161,
+  serialized_start=20869,
+  serialized_end=20961,
 )
 
 
@@ -17303,8 +8337,8 @@ _CMSGCLIENTTOGCFEATUREDHEROESREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47163,
-  serialized_end=47200,
+  serialized_start=20963,
+  serialized_end=21000,
 )
 
 
@@ -17359,8 +8393,8 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_DATAFIELD = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47312,
-  serialized_end=47485,
+  serialized_start=21112,
+  serialized_end=21285,
 )
 
 _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_FEATUREDHERO = _descriptor.Descriptor(
@@ -17386,8 +8420,8 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_FEATUREDHERO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47487,
-  serialized_end=47571,
+  serialized_start=21287,
+  serialized_end=21371,
 )
 
 _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_CATEGORY = _descriptor.Descriptor(
@@ -17427,8 +8461,8 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_CATEGORY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47574,
-  serialized_end=47732,
+  serialized_start=21374,
+  serialized_end=21532,
 )
 
 _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE = _descriptor.Descriptor(
@@ -17454,8 +8488,8 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47203,
-  serialized_end=47732,
+  serialized_start=21003,
+  serialized_end=21532,
 )
 
 
@@ -17489,8 +8523,8 @@ _CMSGCLIENTTOGCSOCIALMATCHPOSTCOMMENTREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47734,
-  serialized_end=47814,
+  serialized_start=21534,
+  serialized_end=21614,
 )
 
 
@@ -17517,8 +8551,8 @@ _CMSGGCTOCLIENTSOCIALMATCHPOSTCOMMENTRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47816,
-  serialized_end=47879,
+  serialized_start=21616,
+  serialized_end=21679,
 )
 
 
@@ -17552,8 +8586,8 @@ _CMSGCLIENTTOGCSOCIALMATCHDETAILSREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47881,
-  serialized_end=47970,
+  serialized_start=21681,
+  serialized_end=21770,
 )
 
 
@@ -17601,8 +8635,8 @@ _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE_COMMENT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=48103,
-  serialized_end=48190,
+  serialized_start=21903,
+  serialized_end=21990,
 )
 
 _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE = _descriptor.Descriptor(
@@ -17635,218 +8669,8 @@ _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=47973,
-  serialized_end=48190,
-)
-
-
-_CMSGDOTAPARTYMEMBERSETCOACH = _descriptor.Descriptor(
-  name='CMsgDOTAPartyMemberSetCoach',
-  full_name='CMsgDOTAPartyMemberSetCoach',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='wants_coach', full_name='CMsgDOTAPartyMemberSetCoach.wants_coach', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=48192,
-  serialized_end=48242,
-)
-
-
-_CMSGDOTASETGROUPLEADER = _descriptor.Descriptor(
-  name='CMsgDOTASetGroupLeader',
-  full_name='CMsgDOTASetGroupLeader',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='new_leader_steamid', full_name='CMsgDOTASetGroupLeader.new_leader_steamid', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=48244,
-  serialized_end=48296,
-)
-
-
-_CMSGDOTACANCELGROUPINVITES = _descriptor.Descriptor(
-  name='CMsgDOTACancelGroupInvites',
-  full_name='CMsgDOTACancelGroupInvites',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='invited_steamids', full_name='CMsgDOTACancelGroupInvites.invited_steamids', index=0,
-      number=1, type=6, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invited_groupids', full_name='CMsgDOTACancelGroupInvites.invited_groupids', index=1,
-      number=2, type=6, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=48298,
-  serialized_end=48378,
-)
-
-
-_CMSGDOTASETGROUPOPENSTATUS = _descriptor.Descriptor(
-  name='CMsgDOTASetGroupOpenStatus',
-  full_name='CMsgDOTASetGroupOpenStatus',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='open', full_name='CMsgDOTASetGroupOpenStatus.open', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=48380,
-  serialized_end=48422,
-)
-
-
-_CMSGDOTAGROUPMERGEINVITE = _descriptor.Descriptor(
-  name='CMsgDOTAGroupMergeInvite',
-  full_name='CMsgDOTAGroupMergeInvite',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='other_group_id', full_name='CMsgDOTAGroupMergeInvite.other_group_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=48424,
-  serialized_end=48474,
-)
-
-
-_CMSGDOTAGROUPMERGERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGroupMergeResponse',
-  full_name='CMsgDOTAGroupMergeResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='initiator_group_id', full_name='CMsgDOTAGroupMergeResponse.initiator_group_id', index=0,
-      number=1, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='accept', full_name='CMsgDOTAGroupMergeResponse.accept', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=48476,
-  serialized_end=48548,
-)
-
-
-_CMSGDOTAGROUPMERGEREPLY = _descriptor.Descriptor(
-  name='CMsgDOTAGroupMergeReply',
-  full_name='CMsgDOTAGroupMergeReply',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAGroupMergeReply.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=48550,
-  serialized_end=48643,
+  serialized_start=21773,
+  serialized_end=21990,
 )
 
 
@@ -17880,8 +8704,70 @@ _CMSGDOTAPARTYRICHPRESENCE_MEMBER = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=48827,
-  serialized_end=48868,
+  serialized_start=22304,
+  serialized_end=22345,
+)
+
+_CMSGDOTAPARTYRICHPRESENCE_WEEKENDTOURNEY = _descriptor.Descriptor(
+  name='WeekendTourney',
+  full_name='CMsgDOTAPartyRichPresence.WeekendTourney',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='division', full_name='CMsgDOTAPartyRichPresence.WeekendTourney.division', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='skill_level', full_name='CMsgDOTAPartyRichPresence.WeekendTourney.skill_level', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='round', full_name='CMsgDOTAPartyRichPresence.WeekendTourney.round', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tournament_id', full_name='CMsgDOTAPartyRichPresence.WeekendTourney.tournament_id', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='event', full_name='CMsgDOTAPartyRichPresence.WeekendTourney.event', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='event_round', full_name='CMsgDOTAPartyRichPresence.WeekendTourney.event_round', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=22348,
+  serialized_end=22553,
 )
 
 _CMSGDOTAPARTYRICHPRESENCE = _descriptor.Descriptor(
@@ -17920,23 +8806,51 @@ _CMSGDOTAPARTYRICHPRESENCE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTAPartyRichPresence.members', index=4,
+      name='team_id', full_name='CMsgDOTAPartyRichPresence.team_id', index=4,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='team_name', full_name='CMsgDOTAPartyRichPresence.team_name', index=5,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ugc_team_ui_logo', full_name='CMsgDOTAPartyRichPresence.ugc_team_ui_logo', index=6,
+      number=9, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='members', full_name='CMsgDOTAPartyRichPresence.members', index=7,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='weekend_tourney', full_name='CMsgDOTAPartyRichPresence.weekend_tourney', index=8,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[_CMSGDOTAPARTYRICHPRESENCE_MEMBER, ],
+  nested_types=[_CMSGDOTAPARTYRICHPRESENCE_MEMBER, _CMSGDOTAPARTYRICHPRESENCE_WEEKENDTOURNEY, ],
   enum_types=[
   ],
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=48646,
-  serialized_end=48868,
+  serialized_start=21993,
+  serialized_end=22553,
 )
 
 
@@ -18012,8 +8926,8 @@ _CMSGDOTALOBBYRICHPRESENCE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=48871,
-  serialized_end=49121,
+  serialized_start=22556,
+  serialized_end=22806,
 )
 
 
@@ -18061,8 +8975,8 @@ _CMSGDOTACUSTOMGAMELISTENSERVERSTARTEDLOADING = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=49124,
-  serialized_end=49255,
+  serialized_start=22809,
+  serialized_end=22940,
 )
 
 
@@ -18124,8 +9038,8 @@ _CMSGDOTACUSTOMGAMECLIENTFINISHEDLOADING = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=49258,
-  serialized_end=49427,
+  serialized_start=22943,
+  serialized_end=23112,
 )
 
 
@@ -18152,8 +9066,8 @@ _CMSGCLIENTTOGCGETLEAGUESERIES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=49429,
-  serialized_end=49479,
+  serialized_start=23114,
+  serialized_end=23164,
 )
 
 
@@ -18208,8 +9122,8 @@ _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES_TEAM = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=49817,
-  serialized_end=49916,
+  serialized_start=23502,
+  serialized_end=23601,
 )
 
 _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES = _descriptor.Descriptor(
@@ -18284,8 +9198,8 @@ _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=49587,
-  serialized_end=49916,
+  serialized_start=23272,
+  serialized_end=23601,
 )
 
 _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE = _descriptor.Descriptor(
@@ -18311,8 +9225,8 @@ _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=49482,
-  serialized_end=49916,
+  serialized_start=23167,
+  serialized_end=23601,
 )
 
 
@@ -18346,231 +9260,8 @@ _CMSGCLIENTTOGCAPPLYGEMCOMBINER = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=49918,
-  serialized_end=49988,
-)
-
-
-_CDUMMYUNBREAKMESSAGE = _descriptor.Descriptor(
-  name='CDummyUnbreakMessage',
-  full_name='CDummyUnbreakMessage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='dummy_field', full_name='CDummyUnbreakMessage.dummy_field', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='another_dummy_field', full_name='CDummyUnbreakMessage.another_dummy_field', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=49991,
-  serialized_end=50140,
-)
-
-
-_CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT = _descriptor.Descriptor(
-  name='Highlight',
-  full_name='CDOTAReplayDownloadInfo.Highlight',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CDOTAReplayDownloadInfo.Highlight.timestamp', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='CDOTAReplayDownloadInfo.Highlight.description', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=50296,
-  serialized_end=50347,
-)
-
-_CDOTAREPLAYDOWNLOADINFO = _descriptor.Descriptor(
-  name='CDOTAReplayDownloadInfo',
-  full_name='CDOTAReplayDownloadInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='match', full_name='CDOTAReplayDownloadInfo.match', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='title', full_name='CDOTAReplayDownloadInfo.title', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='CDOTAReplayDownloadInfo.description', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='size', full_name='CDOTAReplayDownloadInfo.size', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='tags', full_name='CDOTAReplayDownloadInfo.tags', index=4,
-      number=5, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='exists_on_disk', full_name='CDOTAReplayDownloadInfo.exists_on_disk', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=50143,
-  serialized_end=50347,
-)
-
-
-_CDOTABROADCASTERINFO = _descriptor.Descriptor(
-  name='CDOTABroadcasterInfo',
-  full_name='CDOTABroadcasterInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CDOTABroadcasterInfo.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='server_steam_id', full_name='CDOTABroadcasterInfo.server_steam_id', index=1,
-      number=2, type=6, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='live', full_name='CDOTABroadcasterInfo.live', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_name_radiant', full_name='CDOTABroadcasterInfo.team_name_radiant', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team_name_dire', full_name='CDOTABroadcasterInfo.team_name_dire', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='stage_name', full_name='CDOTABroadcasterInfo.stage_name', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='series_game', full_name='CDOTABroadcasterInfo.series_game', index=6,
-      number=7, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='series_type', full_name='CDOTABroadcasterInfo.series_type', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='upcoming_broadcast_timestamp', full_name='CDOTABroadcasterInfo.upcoming_broadcast_timestamp', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='allow_live_video', full_name='CDOTABroadcasterInfo.allow_live_video', index=9,
-      number=10, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=50350,
-  serialized_end=50608,
+  serialized_start=23603,
+  serialized_end=23673,
 )
 
 
@@ -18590,8 +9281,8 @@ _CMSGCLIENTTOGCH264UNSUPPORTED = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=50610,
-  serialized_end=50641,
+  serialized_start=23675,
+  serialized_end=23706,
 )
 
 
@@ -18611,8 +9302,8 @@ _CMSGCLIENTTOGCREQUESTH264SUPPORT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=50643,
-  serialized_end=50677,
+  serialized_start=23708,
+  serialized_end=23742,
 )
 
 
@@ -18639,8 +9330,8 @@ _CMSGCLIENTTOGCGETQUESTPROGRESS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=50679,
-  serialized_end=50730,
+  serialized_start=23744,
+  serialized_end=23795,
 )
 
 
@@ -18686,6 +9377,13 @@ _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_CHALLENGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='quest_rank', full_name='CMsgClientToGCGetQuestProgressResponse.Challenge.quest_rank', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -18695,8 +9393,8 @@ _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_CHALLENGE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=50855,
-  serialized_end=50971,
+  serialized_start=23921,
+  serialized_end=24057,
 )
 
 _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_QUEST = _descriptor.Descriptor(
@@ -18729,8 +9427,8 @@ _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_QUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=50973,
-  serialized_end=51079,
+  serialized_start=24059,
+  serialized_end=24165,
 )
 
 _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE = _descriptor.Descriptor(
@@ -18763,8 +9461,8 @@ _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=50733,
-  serialized_end=51079,
+  serialized_start=23798,
+  serialized_end=24165,
 )
 
 
@@ -18791,8 +9489,8 @@ _CMSGGCTOCLIENTMATCHSIGNEDOUT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=51081,
-  serialized_end=51129,
+  serialized_start=24167,
+  serialized_end=24215,
 )
 
 
@@ -18819,8 +9517,8 @@ _CMSGGCGETHEROSTATSHISTORY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=51131,
-  serialized_end=51175,
+  serialized_start=24217,
+  serialized_end=24261,
 )
 
 
@@ -18854,309 +9552,8 @@ _CMSGGCGETHEROSTATSHISTORYRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=51177,
-  serialized_end=51276,
-)
-
-
-_CMSGCLIENTTOGCPRIVATECHATINVITE = _descriptor.Descriptor(
-  name='CMsgClientToGCPrivateChatInvite',
-  full_name='CMsgClientToGCPrivateChatInvite',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatInvite.private_chat_channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='invited_account_id', full_name='CMsgClientToGCPrivateChatInvite.invited_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=51278,
-  serialized_end=51374,
-)
-
-
-_CMSGCLIENTTOGCPRIVATECHATKICK = _descriptor.Descriptor(
-  name='CMsgClientToGCPrivateChatKick',
-  full_name='CMsgClientToGCPrivateChatKick',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatKick.private_chat_channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='kick_account_id', full_name='CMsgClientToGCPrivateChatKick.kick_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=51376,
-  serialized_end=51467,
-)
-
-
-_CMSGCLIENTTOGCPRIVATECHATPROMOTE = _descriptor.Descriptor(
-  name='CMsgClientToGCPrivateChatPromote',
-  full_name='CMsgClientToGCPrivateChatPromote',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatPromote.private_chat_channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='promote_account_id', full_name='CMsgClientToGCPrivateChatPromote.promote_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=51469,
-  serialized_end=51566,
-)
-
-
-_CMSGCLIENTTOGCPRIVATECHATDEMOTE = _descriptor.Descriptor(
-  name='CMsgClientToGCPrivateChatDemote',
-  full_name='CMsgClientToGCPrivateChatDemote',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatDemote.private_chat_channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='demote_account_id', full_name='CMsgClientToGCPrivateChatDemote.demote_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=51568,
-  serialized_end=51663,
-)
-
-
-_CMSGGCTOCLIENTPRIVATECHATRESPONSE = _descriptor.Descriptor(
-  name='CMsgGCToClientPrivateChatResponse',
-  full_name='CMsgGCToClientPrivateChatResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgGCToClientPrivateChatResponse.private_chat_channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgGCToClientPrivateChatResponse.result', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='username', full_name='CMsgGCToClientPrivateChatResponse.username', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT,
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=51666,
-  serialized_end=52239,
-)
-
-
-_CMSGCLIENTTOGCPRIVATECHATINFOREQUEST = _descriptor.Descriptor(
-  name='CMsgClientToGCPrivateChatInfoRequest',
-  full_name='CMsgClientToGCPrivateChatInfoRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatInfoRequest.private_chat_channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=52241,
-  serialized_end=52314,
-)
-
-
-_CMSGGCTOCLIENTPRIVATECHATINFORESPONSE_MEMBER = _descriptor.Descriptor(
-  name='Member',
-  full_name='CMsgGCToClientPrivateChatInfoResponse.Member',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgGCToClientPrivateChatInfoResponse.Member.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgGCToClientPrivateChatInfoResponse.Member.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgGCToClientPrivateChatInfoResponse.Member.status', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=52497,
-  serialized_end=52555,
-)
-
-_CMSGGCTOCLIENTPRIVATECHATINFORESPONSE = _descriptor.Descriptor(
-  name='CMsgGCToClientPrivateChatInfoResponse',
-  full_name='CMsgGCToClientPrivateChatInfoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgGCToClientPrivateChatInfoResponse.private_chat_channel_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgGCToClientPrivateChatInfoResponse.members', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='creator', full_name='CMsgGCToClientPrivateChatInfoResponse.creator', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='creation_date', full_name='CMsgGCToClientPrivateChatInfoResponse.creation_date', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGGCTOCLIENTPRIVATECHATINFORESPONSE_MEMBER, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=52317,
-  serialized_end=52555,
+  serialized_start=24263,
+  serialized_end=24362,
 )
 
 
@@ -19176,8 +9573,8 @@ _CMSGPLAYERCONDUCTSCORECARDREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=52557,
-  serialized_end=52592,
+  serialized_start=24364,
+  serialized_end=24399,
 )
 
 
@@ -19288,8 +9685,8 @@ _CMSGPLAYERCONDUCTSCORECARD = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=52595,
-  serialized_end=52902,
+  serialized_start=24402,
+  serialized_end=24709,
 )
 
 
@@ -19316,8 +9713,8 @@ _CMSGCLIENTTOGCWAGERINGREQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=52904,
-  serialized_end=52953,
+  serialized_start=24711,
+  serialized_end=24760,
 )
 
 
@@ -19370,6 +9767,13 @@ _CMSGGCTOCLIENTWAGERINGRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='coins_max', full_name='CMsgGCToClientWageringResponse.coins_max', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -19379,8 +9783,78 @@ _CMSGGCTOCLIENTWAGERINGRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=52956,
-  serialized_end=53149,
+  serialized_start=24763,
+  serialized_end=24975,
+)
+
+
+_CMSGGCTOCLIENTWAGERINGUPDATE = _descriptor.Descriptor(
+  name='CMsgGCToClientWageringUpdate',
+  full_name='CMsgGCToClientWageringUpdate',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='event_id', full_name='CMsgGCToClientWageringUpdate.event_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wagering_info', full_name='CMsgGCToClientWageringUpdate.wagering_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=24977,
+  serialized_end=25081,
+)
+
+
+_CMSGGCTOCLIENTARCANAVOTESUPDATE = _descriptor.Descriptor(
+  name='CMsgGCToClientArcanaVotesUpdate',
+  full_name='CMsgGCToClientArcanaVotesUpdate',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='event_id', full_name='CMsgGCToClientArcanaVotesUpdate.event_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='arcana_votes', full_name='CMsgGCToClientArcanaVotesUpdate.arcana_votes', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=25083,
+  serialized_end=25208,
 )
 
 
@@ -19414,8 +9888,8 @@ _CMSGCLIENTTOGCMYSTERYITEM = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=53151,
-  serialized_end=53215,
+  serialized_start=25210,
+  serialized_end=25274,
 )
 
 
@@ -19457,8 +9931,8 @@ _CMSGGCTOCLIENTMYSTERYITEMRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=53218,
-  serialized_end=53623,
+  serialized_start=25277,
+  serialized_end=25682,
 )
 
 
@@ -19485,8 +9959,8 @@ _CMSGCLIENTTOGCGETEVENTGOALS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=53625,
-  serialized_end=53682,
+  serialized_start=25684,
+  serialized_end=25741,
 )
 
 
@@ -19527,8 +10001,8 @@ _CMSGEVENTGOALS_EVENTGOAL = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=53751,
-  serialized_end=53836,
+  serialized_start=25810,
+  serialized_end=25895,
 )
 
 _CMSGEVENTGOALS = _descriptor.Descriptor(
@@ -19554,8 +10028,8 @@ _CMSGEVENTGOALS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=53685,
-  serialized_end=53836,
+  serialized_start=25744,
+  serialized_end=25895,
 )
 
 
@@ -19582,8 +10056,8 @@ _CMSGGCTOGCLEAGUEPREDICTIONS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=53838,
-  serialized_end=53886,
+  serialized_start=25897,
+  serialized_end=25945,
 )
 
 
@@ -19631,8 +10105,8 @@ _CMSGPREDICTIONRANKINGS_PREDICTIONLINE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=53972,
-  serialized_end=54071,
+  serialized_start=26031,
+  serialized_end=26130,
 )
 
 _CMSGPREDICTIONRANKINGS_PREDICTION = _descriptor.Descriptor(
@@ -19665,8 +10139,8 @@ _CMSGPREDICTIONRANKINGS_PREDICTION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54073,
-  serialized_end=54173,
+  serialized_start=26132,
+  serialized_end=26232,
 )
 
 _CMSGPREDICTIONRANKINGS = _descriptor.Descriptor(
@@ -19692,8 +10166,8 @@ _CMSGPREDICTIONRANKINGS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=53889,
-  serialized_end=54173,
+  serialized_start=25948,
+  serialized_end=26232,
 )
 
 
@@ -19727,8 +10201,8 @@ _CMSGPREDICTIONRESULTS_RESULTBREAKDOWN = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54249,
-  serialized_end=54314,
+  serialized_start=26308,
+  serialized_end=26373,
 )
 
 _CMSGPREDICTIONRESULTS_RESULT = _descriptor.Descriptor(
@@ -19761,8 +10235,8 @@ _CMSGPREDICTIONRESULTS_RESULT = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54316,
-  serialized_end=54412,
+  serialized_start=26375,
+  serialized_end=26471,
 )
 
 _CMSGPREDICTIONRESULTS = _descriptor.Descriptor(
@@ -19788,8 +10262,8 @@ _CMSGPREDICTIONRESULTS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54176,
-  serialized_end=54412,
+  serialized_start=26235,
+  serialized_end=26471,
 )
 
 
@@ -19816,8 +10290,8 @@ _CMSGCLIENTTOGCSUSPICIOUSACTIVITY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54414,
-  serialized_end=54466,
+  serialized_start=26473,
+  serialized_end=26525,
 )
 
 
@@ -19844,8 +10318,8 @@ _CMSGCLIENTTOGCHASPLAYERVOTEDFORMVP = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54468,
-  serialized_end=54522,
+  serialized_start=26527,
+  serialized_end=26581,
 )
 
 
@@ -19872,8 +10346,8 @@ _CMSGCLIENTTOGCHASPLAYERVOTEDFORMVPRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54524,
-  serialized_end=54584,
+  serialized_start=26583,
+  serialized_end=26643,
 )
 
 
@@ -19907,8 +10381,8 @@ _CMSGCLIENTTOGCVOTEFORMVP = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54586,
-  serialized_end=54650,
+  serialized_start=26645,
+  serialized_end=26709,
 )
 
 
@@ -19935,8 +10409,8 @@ _CMSGCLIENTTOGCVOTEFORMVPRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54652,
-  serialized_end=54702,
+  serialized_start=26711,
+  serialized_end=26761,
 )
 
 
@@ -19970,8 +10444,8 @@ _CMSGMVPVOTESFORMATCH_PLAYER = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54775,
-  serialized_end=54823,
+  serialized_start=26834,
+  serialized_end=26882,
 )
 
 _CMSGMVPVOTESFORMATCH = _descriptor.Descriptor(
@@ -19997,171 +10471,1694 @@ _CMSGMVPVOTESFORMATCH = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=54704,
-  serialized_end=54823,
+  serialized_start=26763,
+  serialized_end=26882,
 )
 
-_CMSGSTARTFINDINGMATCH.fields_by_name['bot_difficulty'].enum_type = dota_gcmessages_common_pb2._DOTABOTDIFFICULTY
-_CMSGSTARTFINDINGMATCH.fields_by_name['match_type'].enum_type = dota_gcmessages_common_pb2._MATCHTYPE
-_CMSGSTARTFINDINGMATCH.fields_by_name['game_language_enum'].enum_type = dota_gcmessages_common_pb2._MATCHLANGUAGES
-_CMSGSTARTFINDINGMATCH.fields_by_name['ping_data'].message_type = base_gcmessages_pb2._CMSGCLIENTPINGDATA
-_CMSGREADYUP.fields_by_name['state'].enum_type = dota_gcmessages_common_pb2._DOTALOBBYREADYSTATE
-_CMSGREADYUP.fields_by_name['hardware_specs'].message_type = dota_gcmessages_common_pb2._CDOTACLIENTHARDWARESPECS
-_CSOURCETVGAMESMALL_PLAYER.containing_type = _CSOURCETVGAMESMALL;
-_CSOURCETVGAMESMALL.fields_by_name['players'].message_type = _CSOURCETVGAMESMALL_PLAYER
-_CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE.fields_by_name['game_list'].message_type = _CSOURCETVGAMESMALL
-_CMSGCLIENTTOGCMATCHESMINIMALRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCHMINIMAL
-_CMSGGCTOCLIENTTOPLEAGUEMATCHESRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCHMINIMAL
-_CMSGGCTOCLIENTTOPFRIENDMATCHESRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCHMINIMAL
-_CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCH
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['team_details'].message_type = dota_gcmessages_common_pb2._CLOBBYTEAMDETAILS
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['cm_pick'].enum_type = dota_gcmessages_common_pb2._DOTA_CM_PICK
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['bot_difficulty'].enum_type = dota_gcmessages_common_pb2._DOTABOTDIFFICULTY
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['game_version'].enum_type = dota_gcmessages_common_pb2._DOTAGAMEVERSION
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['dota_tv_delay'].enum_type = dota_gcmessages_common_pb2._LOBBYDOTATVDELAY
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['visibility'].enum_type = dota_gcmessages_common_pb2._DOTALOBBYVISIBILITY
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['league_selection_priority_choice'].enum_type = dota_gcmessages_common_pb2._SELECTIONPRIORITYTYPE
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['league_non_selection_priority_choice'].enum_type = dota_gcmessages_common_pb2._SELECTIONPRIORITYTYPE
-_CMSGPRACTICELOBBYSETDETAILS.fields_by_name['pause_setting'].enum_type = dota_gcmessages_common_pb2._LOBBYDOTAPAUSESETTING
-_CMSGPRACTICELOBBYCREATE_SAVEGAME.containing_type = _CMSGPRACTICELOBBYCREATE;
-_CMSGPRACTICELOBBYCREATE.fields_by_name['lobby_details'].message_type = _CMSGPRACTICELOBBYSETDETAILS
-_CMSGPRACTICELOBBYCREATE.fields_by_name['save_game'].message_type = _CMSGPRACTICELOBBYCREATE_SAVEGAME
-_CMSGPRACTICELOBBYSETTEAMSLOT.fields_by_name['team'].enum_type = dota_gcmessages_common_pb2._DOTA_GC_TEAM
-_CMSGPRACTICELOBBYSETTEAMSLOT.fields_by_name['bot_difficulty'].enum_type = dota_gcmessages_common_pb2._DOTABOTDIFFICULTY
-_CMSGPRACTICELOBBYSETCOACH.fields_by_name['team'].enum_type = dota_gcmessages_common_pb2._DOTA_GC_TEAM
-_CMSGPRACTICELOBBYLIST.fields_by_name['game_mode'].enum_type = dota_gcmessages_common_pb2._DOTA_GAMEMODE
-_CMSGPRACTICELOBBYLISTRESPONSEENTRY_CLOBBYMEMBER.containing_type = _CMSGPRACTICELOBBYLISTRESPONSEENTRY;
-_CMSGPRACTICELOBBYLISTRESPONSEENTRY.fields_by_name['members'].message_type = _CMSGPRACTICELOBBYLISTRESPONSEENTRY_CLOBBYMEMBER
-_CMSGPRACTICELOBBYLISTRESPONSEENTRY.fields_by_name['game_mode'].enum_type = dota_gcmessages_common_pb2._DOTA_GAMEMODE
-_CMSGPRACTICELOBBYLISTRESPONSE.fields_by_name['lobbies'].message_type = _CMSGPRACTICELOBBYLISTRESPONSEENTRY
-_CMSGLOBBYLIST.fields_by_name['game_mode'].enum_type = dota_gcmessages_common_pb2._DOTA_GAMEMODE
-_CMSGLOBBYLISTRESPONSE.fields_by_name['lobbies'].message_type = _CMSGPRACTICELOBBYLISTRESPONSEENTRY
-_CMSGPRACTICELOBBYJOINRESPONSE.fields_by_name['result'].enum_type = dota_gcmessages_common_pb2._DOTAJOINLOBBYRESULT
-_CMSGFRIENDPRACTICELOBBYLISTRESPONSE.fields_by_name['lobbies'].message_type = _CMSGPRACTICELOBBYLISTRESPONSEENTRY
-_CMSGGUILDMATEPRACTICELOBBYLISTRESPONSE.fields_by_name['lobbies'].message_type = _CMSGPRACTICELOBBYLISTRESPONSEENTRY
-_CMSGJOINABLECUSTOMGAMEMODESRESPONSE.fields_by_name['game_modes'].message_type = _CMSGJOINABLECUSTOMGAMEMODESRESPONSEENTRY
-_CMSGJOINABLECUSTOMLOBBIESRESPONSE.fields_by_name['lobbies'].message_type = _CMSGJOINABLECUSTOMLOBBIESRESPONSEENTRY
-_CMSGQUICKJOINCUSTOMLOBBY_LEGACYREGIONPING.containing_type = _CMSGQUICKJOINCUSTOMLOBBY;
-_CMSGQUICKJOINCUSTOMLOBBY.fields_by_name['create_lobby_details'].message_type = _CMSGPRACTICELOBBYSETDETAILS
-_CMSGQUICKJOINCUSTOMLOBBY.fields_by_name['legacy_region_pings'].message_type = _CMSGQUICKJOINCUSTOMLOBBY_LEGACYREGIONPING
-_CMSGQUICKJOINCUSTOMLOBBY.fields_by_name['ping_data'].message_type = base_gcmessages_pb2._CMSGCLIENTPINGDATA
-_CMSGQUICKJOINCUSTOMLOBBYRESPONSE.fields_by_name['result'].enum_type = dota_gcmessages_common_pb2._DOTAJOINLOBBYRESULT
-_CMSGBOTGAMECREATE.fields_by_name['difficulty'].enum_type = dota_gcmessages_common_pb2._DOTABOTDIFFICULTY
-_CMSGBOTGAMECREATE.fields_by_name['team'].enum_type = dota_gcmessages_common_pb2._DOTA_GC_TEAM
-_CMSGDOTAMATCH_PLAYER_CUSTOMGAMEDATA.containing_type = _CMSGDOTAMATCH_PLAYER;
-_CMSGDOTAMATCH_PLAYER.fields_by_name['ability_upgrades'].message_type = dota_gcmessages_common_pb2._CMATCHPLAYERABILITYUPGRADE
-_CMSGDOTAMATCH_PLAYER.fields_by_name['additional_units_inventory'].message_type = dota_gcmessages_common_pb2._CMATCHADDITIONALUNITINVENTORY
-_CMSGDOTAMATCH_PLAYER.fields_by_name['custom_game_data'].message_type = _CMSGDOTAMATCH_PLAYER_CUSTOMGAMEDATA
-_CMSGDOTAMATCH_PLAYER.containing_type = _CMSGDOTAMATCH;
-_CMSGDOTAMATCH_BROADCASTERINFO.containing_type = _CMSGDOTAMATCH;
-_CMSGDOTAMATCH_BROADCASTERCHANNEL.fields_by_name['broadcaster_infos'].message_type = _CMSGDOTAMATCH_BROADCASTERINFO
-_CMSGDOTAMATCH_BROADCASTERCHANNEL.containing_type = _CMSGDOTAMATCH;
-_CMSGDOTAMATCH_CUSTOMGAMEDATA.containing_type = _CMSGDOTAMATCH;
-_CMSGDOTAMATCH.fields_by_name['players'].message_type = _CMSGDOTAMATCH_PLAYER
-_CMSGDOTAMATCH.fields_by_name['game_mode'].enum_type = dota_gcmessages_common_pb2._DOTA_GAMEMODE
-_CMSGDOTAMATCH.fields_by_name['picks_bans'].message_type = dota_gcmessages_common_pb2._CMATCHHEROSELECTEVENT
-_CMSGDOTAMATCH.fields_by_name['replay_state'].enum_type = _CMSGDOTAMATCH_REPLAYSTATE
-_CMSGDOTAMATCH.fields_by_name['broadcaster_channels'].message_type = _CMSGDOTAMATCH_BROADCASTERCHANNEL
-_CMSGDOTAMATCH.fields_by_name['custom_game_data'].message_type = _CMSGDOTAMATCH_CUSTOMGAMEDATA
-_CMSGDOTAMATCH_REPLAYSTATE.containing_type = _CMSGDOTAMATCH;
-_CMSGDOTAMATCHMINIMAL_PLAYER.containing_type = _CMSGDOTAMATCHMINIMAL;
-_CMSGDOTAMATCHMINIMAL_LEAGUE.containing_type = _CMSGDOTAMATCHMINIMAL;
-_CMSGDOTAMATCHMINIMAL.fields_by_name['game_mode'].enum_type = dota_gcmessages_common_pb2._DOTA_GAMEMODE
-_CMSGDOTAMATCHMINIMAL.fields_by_name['players'].message_type = _CMSGDOTAMATCHMINIMAL_PLAYER
-_CMSGDOTAMATCHMINIMAL.fields_by_name['league'].message_type = _CMSGDOTAMATCHMINIMAL_LEAGUE
+
+_CMSGLEAGUEPRIZEPOOL = _descriptor.Descriptor(
+  name='CMsgLeaguePrizePool',
+  full_name='CMsgLeaguePrizePool',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='prize_pool', full_name='CMsgLeaguePrizePool.prize_pool', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='increment_per_second', full_name='CMsgLeaguePrizePool.increment_per_second', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=26884,
+  serialized_end=26955,
+)
+
+
+_CMSGCLIENTTOGCTEAMMATESTATSREQUEST = _descriptor.Descriptor(
+  name='CMsgClientToGCTeammateStatsRequest',
+  full_name='CMsgClientToGCTeammateStatsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=26957,
+  serialized_end=26993,
+)
+
+
+_CMSGCLIENTTOGCTEAMMATESTATSRESPONSE_TEAMMATESTAT = _descriptor.Descriptor(
+  name='TeammateStat',
+  full_name='CMsgClientToGCTeammateStatsResponse.TeammateStat',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='CMsgClientToGCTeammateStatsResponse.TeammateStat.account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='games', full_name='CMsgClientToGCTeammateStatsResponse.TeammateStat.games', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wins', full_name='CMsgClientToGCTeammateStatsResponse.TeammateStat.wins', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='most_recent_game_timestamp', full_name='CMsgClientToGCTeammateStatsResponse.TeammateStat.most_recent_game_timestamp', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='most_recent_game_match_id', full_name='CMsgClientToGCTeammateStatsResponse.TeammateStat.most_recent_game_match_id', index=4,
+      number=5, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='performance', full_name='CMsgClientToGCTeammateStatsResponse.TeammateStat.performance', index=5,
+      number=100, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=27128,
+  serialized_end=27283,
+)
+
+_CMSGCLIENTTOGCTEAMMATESTATSRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCTeammateStatsResponse',
+  full_name='CMsgClientToGCTeammateStatsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='success', full_name='CMsgClientToGCTeammateStatsResponse.success', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='teammate_stats', full_name='CMsgClientToGCTeammateStatsResponse.teammate_stats', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGCLIENTTOGCTEAMMATESTATSRESPONSE_TEAMMATESTAT, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=26996,
+  serialized_end=27283,
+)
+
+
+_CMSGCLIENTTOGCGETGIFTPERMISSIONS = _descriptor.Descriptor(
+  name='CMsgClientToGCGetGiftPermissions',
+  full_name='CMsgClientToGCGetGiftPermissions',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gift_item_def', full_name='CMsgClientToGCGetGiftPermissions.gift_item_def', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=27285,
+  serialized_end=27342,
+)
+
+
+_CMSGCLIENTTOGCGETGIFTPERMISSIONSRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCGetGiftPermissionsResponse',
+  full_name='CMsgClientToGCGetGiftPermissionsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='is_unlimited', full_name='CMsgClientToGCGetGiftPermissionsResponse.is_unlimited', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='allowed_account_ids', full_name='CMsgClientToGCGetGiftPermissionsResponse.allowed_account_ids', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='has_two_factor', full_name='CMsgClientToGCGetGiftPermissionsResponse.has_two_factor', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='item_def_limit_count', full_name='CMsgClientToGCGetGiftPermissionsResponse.item_def_limit_count', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='item_def_limit_period', full_name='CMsgClientToGCGetGiftPermissionsResponse.item_def_limit_period', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=27345,
+  serialized_end=27523,
+)
+
+
+_CMSGCLIENTTOGCVOTEFORARCANA_MATCHVOTE = _descriptor.Descriptor(
+  name='MatchVote',
+  full_name='CMsgClientToGCVoteForArcana.MatchVote',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='match_id', full_name='CMsgClientToGCVoteForArcana.MatchVote.match_id', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='CMsgClientToGCVoteForArcana.MatchVote.hero_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='vote_count', full_name='CMsgClientToGCVoteForArcana.MatchVote.vote_count', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=27614,
+  serialized_end=27680,
+)
+
+_CMSGCLIENTTOGCVOTEFORARCANA = _descriptor.Descriptor(
+  name='CMsgClientToGCVoteForArcana',
+  full_name='CMsgClientToGCVoteForArcana',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='matches', full_name='CMsgClientToGCVoteForArcana.matches', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGCLIENTTOGCVOTEFORARCANA_MATCHVOTE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=27526,
+  serialized_end=27680,
+)
+
+
+_CMSGCLIENTTOGCVOTEFORARCANARESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCVoteForArcanaResponse',
+  full_name='CMsgClientToGCVoteForArcanaResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='CMsgClientToGCVoteForArcanaResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCVOTEFORARCANARESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=27683,
+  serialized_end=27872,
+)
+
+
+_CMSGARCANAVOTES_MATCH = _descriptor.Descriptor(
+  name='Match',
+  full_name='CMsgArcanaVotes.Match',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='match_id', full_name='CMsgArcanaVotes.Match.match_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_id_0', full_name='CMsgArcanaVotes.Match.hero_id_0', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_id_1', full_name='CMsgArcanaVotes.Match.hero_id_1', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_seeding_0', full_name='CMsgArcanaVotes.Match.hero_seeding_0', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_seeding_1', full_name='CMsgArcanaVotes.Match.hero_seeding_1', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='vote_count_0', full_name='CMsgArcanaVotes.Match.vote_count_0', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='vote_count_1', full_name='CMsgArcanaVotes.Match.vote_count_1', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='voting_state', full_name='CMsgArcanaVotes.Match.voting_state', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='round_number', full_name='CMsgArcanaVotes.Match.round_number', index=8,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_votes_hidden', full_name='CMsgArcanaVotes.Match.is_votes_hidden', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='calibration_time_remaining', full_name='CMsgArcanaVotes.Match.calibration_time_remaining', index=10,
+      number=11, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=28048,
+  serialized_end=28308,
+)
+
+_CMSGARCANAVOTES = _descriptor.Descriptor(
+  name='CMsgArcanaVotes',
+  full_name='CMsgArcanaVotes',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='matches', full_name='CMsgArcanaVotes.matches', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='round_time_remaining', full_name='CMsgArcanaVotes.round_time_remaining', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='round_number', full_name='CMsgArcanaVotes.round_number', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='voting_state', full_name='CMsgArcanaVotes.voting_state', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_current_round_calibrating', full_name='CMsgArcanaVotes.is_current_round_calibrating', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGARCANAVOTES_MATCH, ],
+  enum_types=[
+    _CMSGARCANAVOTES_VOTINGSTATE,
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=27875,
+  serialized_end=28369,
+)
+
+
+_CMSGCLIENTTOGCREQUESTARCANAVOTESREMAINING = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestArcanaVotesRemaining',
+  full_name='CMsgClientToGCRequestArcanaVotesRemaining',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=28371,
+  serialized_end=28414,
+)
+
+
+_CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE_MATCHVOTE = _descriptor.Descriptor(
+  name='MatchVote',
+  full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse.MatchVote',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='match_id', full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse.MatchVote.match_id', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse.MatchVote.hero_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='vote_count', full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse.MatchVote.vote_count', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=27614,
+  serialized_end=27680,
+)
+
+_CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestArcanaVotesRemainingResponse',
+  full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse.result', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='votes_remaining', full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse.votes_remaining', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='votes_total', full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse.votes_total', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='matches_previously_voted_for', full_name='CMsgClientToGCRequestArcanaVotesRemainingResponse.matches_previously_voted_for', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE_MATCHVOTE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=28417,
+  serialized_end=28698,
+)
+
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOG = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestEventPointLog',
+  full_name='CMsgClientToGCRequestEventPointLog',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='event_id', full_name='CMsgClientToGCRequestEventPointLog.event_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=28700,
+  serialized_end=28754,
+)
+
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_QUESTCHALLENGEEVENT = _descriptor.Descriptor(
+  name='QuestChallengeEvent',
+  full_name='CMsgClientToGCRequestEventPointLogResponse.QuestChallengeEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='quest_id', full_name='CMsgClientToGCRequestEventPointLogResponse.QuestChallengeEvent.quest_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge_id', full_name='CMsgClientToGCRequestEventPointLogResponse.QuestChallengeEvent.challenge_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rank', full_name='CMsgClientToGCRequestEventPointLogResponse.QuestChallengeEvent.rank', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=28926,
+  serialized_end=29001,
+)
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WAGERWONEVENT = _descriptor.Descriptor(
+  name='WagerWonEvent',
+  full_name='CMsgClientToGCRequestEventPointLogResponse.WagerWonEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='match_id', full_name='CMsgClientToGCRequestEventPointLogResponse.WagerWonEvent.match_id', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=29003,
+  serialized_end=29036,
+)
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPGIVENEVENT = _descriptor.Descriptor(
+  name='TipGivenEvent',
+  full_name='CMsgClientToGCRequestEventPointLogResponse.TipGivenEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='recipient_account_id', full_name='CMsgClientToGCRequestEventPointLogResponse.TipGivenEvent.recipient_account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='recipient_name', full_name='CMsgClientToGCRequestEventPointLogResponse.TipGivenEvent.recipient_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=29038,
+  serialized_end=29107,
+)
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPRECEIVEDEVENT = _descriptor.Descriptor(
+  name='TipReceivedEvent',
+  full_name='CMsgClientToGCRequestEventPointLogResponse.TipReceivedEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='giver_account_id', full_name='CMsgClientToGCRequestEventPointLogResponse.TipReceivedEvent.giver_account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='giver_name', full_name='CMsgClientToGCRequestEventPointLogResponse.TipReceivedEvent.giver_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=29109,
+  serialized_end=29173,
+)
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_RECYCLEDITEMEVENT = _descriptor.Descriptor(
+  name='RecycledItemEvent',
+  full_name='CMsgClientToGCRequestEventPointLogResponse.RecycledItemEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='recipe_item_def_index', full_name='CMsgClientToGCRequestEventPointLogResponse.RecycledItemEvent.recipe_item_def_index', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=29175,
+  serialized_end=29225,
+)
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_ACHIEVEMENTEVENT = _descriptor.Descriptor(
+  name='AchievementEvent',
+  full_name='CMsgClientToGCRequestEventPointLogResponse.AchievementEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='action_id', full_name='CMsgClientToGCRequestEventPointLogResponse.AchievementEvent.action_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=29227,
+  serialized_end=29264,
+)
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_MYSTERYITEMRECEIVEDEVENT = _descriptor.Descriptor(
+  name='MysteryItemReceivedEvent',
+  full_name='CMsgClientToGCRequestEventPointLogResponse.MysteryItemReceivedEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='community_goal_item', full_name='CMsgClientToGCRequestEventPointLogResponse.MysteryItemReceivedEvent.community_goal_item', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=29266,
+  serialized_end=29321,
+)
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION = _descriptor.Descriptor(
+  name='EventPointTransaction',
+  full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.time', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='event_points', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.event_points', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='compendium_activated_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.compendium_activated_event', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='point_item_used_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.point_item_used_event', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wager_won_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.wager_won_event', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='mystery_item_received_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.mystery_item_received_event', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='quest_challenge_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.quest_challenge_event', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tip_given_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.tip_given_event', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tip_received_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.tip_received_event', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='recycled_item_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.recycled_item_event', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='achievement_event', full_name='CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction.achievement_event', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=29324,
+  serialized_end=30092,
+)
+
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestEventPointLogResponse',
+  full_name='CMsgClientToGCRequestEventPointLogResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='CMsgClientToGCRequestEventPointLogResponse.result', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='transactions', full_name='CMsgClientToGCRequestEventPointLogResponse.transactions', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='event_id', full_name='CMsgClientToGCRequestEventPointLogResponse.event_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_QUESTCHALLENGEEVENT, _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WAGERWONEVENT, _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPGIVENEVENT, _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPRECEIVEDEVENT, _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_RECYCLEDITEMEVENT, _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_ACHIEVEMENTEVENT, _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_MYSTERYITEMRECEIVEDEVENT, _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=28757,
+  serialized_end=30092,
+)
+
+
+_CMSGCLIENTTOGCPUBLISHUSERSTAT = _descriptor.Descriptor(
+  name='CMsgClientToGCPublishUserStat',
+  full_name='CMsgClientToGCPublishUserStat',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_stats_event', full_name='CMsgClientToGCPublishUserStat.user_stats_event', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reference_data', full_name='CMsgClientToGCPublishUserStat.reference_data', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=30094,
+  serialized_end=30175,
+)
+
+
+_CMSGCLIENTTOGCADDTI6TREEPROGRESS = _descriptor.Descriptor(
+  name='CMsgClientToGCAddTI6TreeProgress',
+  full_name='CMsgClientToGCAddTI6TreeProgress',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='trees', full_name='CMsgClientToGCAddTI6TreeProgress.trees', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=30177,
+  serialized_end=30226,
+)
+
+
+_CMSGCLIENTTOGCREDEEMREWARD = _descriptor.Descriptor(
+  name='CMsgClientToGCRedeemReward',
+  full_name='CMsgClientToGCRedeemReward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='event_id', full_name='CMsgClientToGCRedeemReward.event_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='action_id', full_name='CMsgClientToGCRedeemReward.action_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='base_action_id', full_name='CMsgClientToGCRedeemReward.base_action_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=30228,
+  serialized_end=30317,
+)
+
+
+_CMSGGCTOCLIENTREDEEMREWARDRESPONSE = _descriptor.Descriptor(
+  name='CMsgGCToClientRedeemRewardResponse',
+  full_name='CMsgGCToClientRedeemRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='CMsgGCToClientRedeemRewardResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGGCTOCLIENTREDEEMREWARDRESPONSE_RESULT,
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=30320,
+  serialized_end=30664,
+)
+
+
+_CMSGCLIENTTOGCREQUESTLINAPLAYSREMAINING = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestLinaPlaysRemaining',
+  full_name='CMsgClientToGCRequestLinaPlaysRemaining',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='event_id', full_name='CMsgClientToGCRequestLinaPlaysRemaining.event_id', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=30666,
+  serialized_end=30749,
+)
+
+
+_CMSGCLIENTTOGCREQUESTLINAPLAYSREMAININGRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestLinaPlaysRemainingResponse',
+  full_name='CMsgClientToGCRequestLinaPlaysRemainingResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='plays_remaining', full_name='CMsgClientToGCRequestLinaPlaysRemainingResponse.plays_remaining', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='plays_total', full_name='CMsgClientToGCRequestLinaPlaysRemainingResponse.plays_total', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=30751,
+  serialized_end=30846,
+)
+
+
+_CMSGCLIENTTOGCREQUESTLINAGAMERESULT = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestLinaGameResult',
+  full_name='CMsgClientToGCRequestLinaGameResult',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='event_id', full_name='CMsgClientToGCRequestLinaGameResult.event_id', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='slot_chosen', full_name='CMsgClientToGCRequestLinaGameResult.slot_chosen', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=30848,
+  serialized_end=30948,
+)
+
+
+_CMSGCLIENTTOGCREQUESTLINAGAMERESULTRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestLinaGameResultResponse',
+  full_name='CMsgClientToGCRequestLinaGameResultResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='CMsgClientToGCRequestLinaGameResultResponse.result', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=30950,
+  serialized_end=31011,
+)
+
+
+_CMSGGCTOCLIENTQUESTPROGRESSUPDATED_CHALLENGE = _descriptor.Descriptor(
+  name='Challenge',
+  full_name='CMsgGCToClientQuestProgressUpdated.Challenge',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='challenge_id', full_name='CMsgGCToClientQuestProgressUpdated.Challenge.challenge_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='time_completed', full_name='CMsgGCToClientQuestProgressUpdated.Challenge.time_completed', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attempts', full_name='CMsgGCToClientQuestProgressUpdated.Challenge.attempts', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='CMsgGCToClientQuestProgressUpdated.Challenge.hero_id', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge_type', full_name='CMsgGCToClientQuestProgressUpdated.Challenge.challenge_type', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='quest_rank', full_name='CMsgGCToClientQuestProgressUpdated.Challenge.quest_rank', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=23921,
+  serialized_end=24057,
+)
+
+_CMSGGCTOCLIENTQUESTPROGRESSUPDATED = _descriptor.Descriptor(
+  name='CMsgGCToClientQuestProgressUpdated',
+  full_name='CMsgGCToClientQuestProgressUpdated',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='quest_id', full_name='CMsgGCToClientQuestProgressUpdated.quest_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='completed_challenges', full_name='CMsgGCToClientQuestProgressUpdated.completed_challenges', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGGCTOCLIENTQUESTPROGRESSUPDATED_CHALLENGE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=31014,
+  serialized_end=31284,
+)
+
+
+_CMSGDOTAREDEEMITEM = _descriptor.Descriptor(
+  name='CMsgDOTARedeemItem',
+  full_name='CMsgDOTARedeemItem',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='currency_id', full_name='CMsgDOTARedeemItem.currency_id', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='purchase_def', full_name='CMsgDOTARedeemItem.purchase_def', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=31286,
+  serialized_end=31349,
+)
+
+
+_CMSGDOTAREDEEMITEMRESPONSE = _descriptor.Descriptor(
+  name='CMsgDOTARedeemItemResponse',
+  full_name='CMsgDOTARedeemItemResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='response', full_name='CMsgDOTARedeemItemResponse.response', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGDOTAREDEEMITEMRESPONSE_ERESULTCODE,
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=31352,
+  serialized_end=31498,
+)
+
+
+_CMSGPERFECTWORLDUSERLOOKUPREQUEST = _descriptor.Descriptor(
+  name='CMsgPerfectWorldUserLookupRequest',
+  full_name='CMsgPerfectWorldUserLookupRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_name', full_name='CMsgPerfectWorldUserLookupRequest.user_name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=31500,
+  serialized_end=31554,
+)
+
+
+_CMSGPERFECTWORLDUSERLOOKUPRESPONSE = _descriptor.Descriptor(
+  name='CMsgPerfectWorldUserLookupResponse',
+  full_name='CMsgPerfectWorldUserLookupResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result_code', full_name='CMsgPerfectWorldUserLookupResponse.result_code', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='CMsgPerfectWorldUserLookupResponse.account_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGPERFECTWORLDUSERLOOKUPRESPONSE_ERESULTCODE,
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=31557,
+  serialized_end=31885,
+)
+
+
+_CMSGNEXONPARTNERUPDATE = _descriptor.Descriptor(
+  name='CMsgNexonPartnerUpdate',
+  full_name='CMsgNexonPartnerUpdate',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='messagetype', full_name='CMsgNexonPartnerUpdate.messagetype', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='timeremaining', full_name='CMsgNexonPartnerUpdate.timeremaining', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='terminate', full_name='CMsgNexonPartnerUpdate.terminate', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=31887,
+  serialized_end=31974,
+)
+
+
+_CMSGMAKEOFFERING = _descriptor.Descriptor(
+  name='CMsgMakeOffering',
+  full_name='CMsgMakeOffering',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='item_id', full_name='CMsgMakeOffering.item_id', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=31976,
+  serialized_end=32011,
+)
+
+
+_CMSGREQUESTOFFERINGS = _descriptor.Descriptor(
+  name='CMsgRequestOfferings',
+  full_name='CMsgRequestOfferings',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=32013,
+  serialized_end=32035,
+)
+
+
+_CMSGREQUESTOFFERINGSRESPONSE_NEWYEARSOFFERING = _descriptor.Descriptor(
+  name='NewYearsOffering',
+  full_name='CMsgRequestOfferingsResponse.NewYearsOffering',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='def_index', full_name='CMsgRequestOfferingsResponse.NewYearsOffering.def_index', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='item_id', full_name='CMsgRequestOfferingsResponse.NewYearsOffering.item_id', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=32156,
+  serialized_end=32210,
+)
+
+_CMSGREQUESTOFFERINGSRESPONSE = _descriptor.Descriptor(
+  name='CMsgRequestOfferingsResponse',
+  full_name='CMsgRequestOfferingsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='offerings', full_name='CMsgRequestOfferingsResponse.offerings', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='completed', full_name='CMsgRequestOfferingsResponse.completed', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGREQUESTOFFERINGSRESPONSE_NEWYEARSOFFERING, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=32038,
+  serialized_end=32210,
+)
+
+
+_CMSGDOTAPCBANGTIMEDREWARD = _descriptor.Descriptor(
+  name='CMsgDOTAPCBangTimedReward',
+  full_name='CMsgDOTAPCBangTimedReward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='persona', full_name='CMsgDOTAPCBangTimedReward.persona', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='itemdef', full_name='CMsgDOTAPCBangTimedReward.itemdef', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pcbangname', full_name='CMsgDOTAPCBangTimedReward.pcbangname', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=32212,
+  serialized_end=32293,
+)
+
 _CMSGDOTAREQUESTMATCHES.fields_by_name['skill'].enum_type = _CMSGDOTAREQUESTMATCHES_SKILLLEVEL
 _CMSGDOTAREQUESTMATCHES_SKILLLEVEL.containing_type = _CMSGDOTAREQUESTMATCHES;
-_CMSGDOTAREQUESTMATCHESRESPONSE_SERIES.fields_by_name['matches'].message_type = _CMSGDOTAMATCH
+_CMSGDOTAREQUESTMATCHESRESPONSE_SERIES.fields_by_name['matches'].message_type = dota_gcmessages_common_pb2._CMSGDOTAMATCH
 _CMSGDOTAREQUESTMATCHESRESPONSE_SERIES.containing_type = _CMSGDOTAREQUESTMATCHESRESPONSE;
-_CMSGDOTAREQUESTMATCHESRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCH
+_CMSGDOTAREQUESTMATCHESRESPONSE.fields_by_name['matches'].message_type = dota_gcmessages_common_pb2._CMSGDOTAMATCH
 _CMSGDOTAREQUESTMATCHESRESPONSE.fields_by_name['series'].message_type = _CMSGDOTAREQUESTMATCHESRESPONSE_SERIES
 _CMSGDOTAPOPUP.fields_by_name['id'].enum_type = _CMSGDOTAPOPUP_POPUPID
 _CMSGDOTAPOPUP_POPUPID.containing_type = _CMSGDOTAPOPUP;
-_CMSGDOTATEAM.fields_by_name['members'].message_type = _CMSGDOTATEAMMEMBER
-_CMSGDOTATEAMSINFO.fields_by_name['teams'].message_type = _CMSGDOTATEAM
-_CMSGDOTACREATETEAMRESPONSE.fields_by_name['results'].enum_type = _CMSGDOTACREATETEAMRESPONSE_RESULT
-_CMSGDOTACREATETEAMRESPONSE_RESULT.containing_type = _CMSGDOTACREATETEAMRESPONSE;
-_CMSGDOTAEDITTEAMLOGORESPONSE.fields_by_name['results'].enum_type = _CMSGDOTAEDITTEAMLOGORESPONSE_RESULT
-_CMSGDOTAEDITTEAMLOGORESPONSE_RESULT.containing_type = _CMSGDOTAEDITTEAMLOGORESPONSE;
-_CMSGDOTAEDITTEAMDETAILSRESPONSE.fields_by_name['results'].enum_type = _CMSGDOTAEDITTEAMDETAILSRESPONSE_RESULT
-_CMSGDOTAEDITTEAMDETAILSRESPONSE_RESULT.containing_type = _CMSGDOTAEDITTEAMDETAILSRESPONSE;
-_CMSGDOTADISBANDTEAMRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTADISBANDTEAMRESPONSE_RESULT
-_CMSGDOTADISBANDTEAMRESPONSE_RESULT.containing_type = _CMSGDOTADISBANDTEAMRESPONSE;
-_CMSGDOTAREQUESTTEAMDATARESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAREQUESTTEAMDATARESPONSE_RESULT
-_CMSGDOTAREQUESTTEAMDATARESPONSE.fields_by_name['data'].message_type = _CMSGDOTATEAMDATA
-_CMSGDOTAREQUESTTEAMDATARESPONSE_RESULT.containing_type = _CMSGDOTAREQUESTTEAMDATARESPONSE;
-_CMSGDOTATEAMDATA.fields_by_name['team'].message_type = _CMSGDOTATEAM
-_CMSGDOTATEAMPROFILERESPONSE.fields_by_name['team'].message_type = _CMSGDOTATEAM
-_CMSGDOTAPROTEAMLISTRESPONSE_TEAMENTRY.containing_type = _CMSGDOTAPROTEAMLISTRESPONSE;
-_CMSGDOTAPROTEAMLISTRESPONSE.fields_by_name['teams'].message_type = _CMSGDOTAPROTEAMLISTRESPONSE_TEAMENTRY
-_CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER.fields_by_name['result'].enum_type = _CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER_RESULT
-_CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER_RESULT.containing_type = _CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER;
-_CMSGDOTATEAMINVITE_INVITEERESPONSETOGC.fields_by_name['result'].enum_type = _CMSGDOTATEAMINVITE_INVITEERESPONSETOGC_RESULT
-_CMSGDOTATEAMINVITE_INVITEERESPONSETOGC_RESULT.containing_type = _CMSGDOTATEAMINVITE_INVITEERESPONSETOGC;
-_CMSGDOTATEAMINVITE_GCRESPONSETOINVITER.fields_by_name['result'].enum_type = _CMSGDOTATEAMINVITE_GCRESPONSETOINVITER_RESULT
-_CMSGDOTATEAMINVITE_GCRESPONSETOINVITER_RESULT.containing_type = _CMSGDOTATEAMINVITE_GCRESPONSETOINVITER;
-_CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE.fields_by_name['result'].enum_type = _CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE_RESULT
-_CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE_RESULT.containing_type = _CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE;
-_CMSGDOTAKICKTEAMMEMBERRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAKICKTEAMMEMBERRESPONSE_RESULT
-_CMSGDOTAKICKTEAMMEMBERRESPONSE_RESULT.containing_type = _CMSGDOTAKICKTEAMMEMBERRESPONSE;
-_CMSGDOTATRANSFERTEAMADMINRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTATRANSFERTEAMADMINRESPONSE_RESULT
-_CMSGDOTATRANSFERTEAMADMINRESPONSE_RESULT.containing_type = _CMSGDOTATRANSFERTEAMADMINRESPONSE;
-_CMSGDOTALEAVETEAMRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTALEAVETEAMRESPONSE_RESULT
-_CMSGDOTALEAVETEAMRESPONSE_RESULT.containing_type = _CMSGDOTALEAVETEAMRESPONSE;
-_CMSGDOTAJOINCHATCHANNEL.fields_by_name['channel_type'].enum_type = dota_gcmessages_common_pb2._DOTACHATCHANNELTYPE_T
-_CMSGDOTACHATMESSAGE_DICEROLL.containing_type = _CMSGDOTACHATMESSAGE;
-_CMSGDOTACHATMESSAGE.fields_by_name['dice_roll'].message_type = _CMSGDOTACHATMESSAGE_DICEROLL
-_CMSGDOTAJOINCHATCHANNELRESPONSE.fields_by_name['members'].message_type = _CMSGDOTACHATMEMBER
-_CMSGDOTAJOINCHATCHANNELRESPONSE.fields_by_name['channel_type'].enum_type = dota_gcmessages_common_pb2._DOTACHATCHANNELTYPE_T
-_CMSGDOTAJOINCHATCHANNELRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT
-_CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT.containing_type = _CMSGDOTAJOINCHATCHANNELRESPONSE;
-_CMSGDOTACHATCHANNELFULLUPDATE.fields_by_name['members'].message_type = _CMSGDOTACHATMEMBER
-_CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER.containing_type = _CMSGDOTACHATCHANNELMEMBERUPDATE;
-_CMSGDOTACHATCHANNELMEMBERUPDATE.fields_by_name['joined_members'].message_type = _CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER
-_CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL.fields_by_name['channel_type'].enum_type = dota_gcmessages_common_pb2._DOTACHATCHANNELTYPE_T
-_CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL.containing_type = _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE;
-_CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE.fields_by_name['channels'].message_type = _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL
-_CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER.containing_type = _CMSGDOTACHATGETUSERLISTRESPONSE;
-_CMSGDOTACHATGETUSERLISTRESPONSE.fields_by_name['members'].message_type = _CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER
-_CMSGDOTACHATGETMEMBERCOUNT.fields_by_name['channel_type'].enum_type = dota_gcmessages_common_pb2._DOTACHATCHANNELTYPE_T
-_CMSGDOTACHATGETMEMBERCOUNTRESPONSE.fields_by_name['channel_type'].enum_type = dota_gcmessages_common_pb2._DOTACHATCHANNELTYPE_T
-_CMSGDOTACHATREGIONSENABLED_REGION.containing_type = _CMSGDOTACHATREGIONSENABLED;
-_CMSGDOTACHATREGIONSENABLED.fields_by_name['enabled_regions'].message_type = _CMSGDOTACHATREGIONSENABLED_REGION
-_CMSGDOTAGUILDSDO_MEMBER.containing_type = _CMSGDOTAGUILDSDO;
-_CMSGDOTAGUILDSDO_INVITATION.containing_type = _CMSGDOTAGUILDSDO;
-_CMSGDOTAGUILDSDO.fields_by_name['members'].message_type = _CMSGDOTAGUILDSDO_MEMBER
-_CMSGDOTAGUILDSDO.fields_by_name['invitations'].message_type = _CMSGDOTAGUILDSDO_INVITATION
-_CMSGDOTAGUILDAUDITSDO_ENTRY.containing_type = _CMSGDOTAGUILDAUDITSDO;
-_CMSGDOTAGUILDAUDITSDO.fields_by_name['entries'].message_type = _CMSGDOTAGUILDAUDITSDO_ENTRY
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP.containing_type = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO;
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION.containing_type = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO;
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO.fields_by_name['memberships'].message_type = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO.fields_by_name['invitations'].message_type = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION
-_CMSGDOTAGUILDCREATERESPONSE.fields_by_name['errors'].enum_type = _CMSGDOTAGUILDCREATERESPONSE_EERROR
-_CMSGDOTAGUILDCREATERESPONSE_EERROR.containing_type = _CMSGDOTAGUILDCREATERESPONSE;
-_CMSGDOTAGUILDSETACCOUNTROLERESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT
-_CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDSETACCOUNTROLERESPONSE;
-_CMSGDOTAGUILDINVITEACCOUNTRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT
-_CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDINVITEACCOUNTRESPONSE;
-_CMSGDOTAGUILDCANCELINVITERESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT
-_CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDCANCELINVITERESPONSE;
-_CMSGDOTAGUILDUPDATEDETAILSRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT
-_CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDUPDATEDETAILSRESPONSE;
-_CMSGDOTAPARTYSETOPENGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT
-_CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT.containing_type = _CMSGDOTAPARTYSETOPENGUILDRESPONSE;
-_CMSGDOTAJOINOPENGUILDPARTYRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT
-_CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT.containing_type = _CMSGDOTAJOINOPENGUILDPARTYRESPONSE;
-_CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY.containing_type = _CMSGDOTAGUILDOPENPARTYREFRESH;
-_CMSGDOTAGUILDOPENPARTYREFRESH.fields_by_name['open_parties'].message_type = _CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY
-_CMSGDOTAGUILDEDITLOGORESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT
-_CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDEDITLOGORESPONSE;
-_CMSGDOTAKICKEDFROMMATCHMAKINGQUEUE.fields_by_name['match_type'].enum_type = dota_gcmessages_common_pb2._MATCHTYPE
-_CMSGDOTAREQUESTSAVEGAMESRESPONSE.fields_by_name['save_games'].message_type = dota_gcmessages_common_pb2._CDOTASAVEGAME
-_CMSGWATCHGAMERESPONSE.fields_by_name['watch_game_result'].enum_type = _CMSGWATCHGAMERESPONSE_WATCHGAMERESULT
-_CMSGWATCHGAMERESPONSE_WATCHGAMERESULT.containing_type = _CMSGWATCHGAMERESPONSE;
-_CMSGGCMATCHDETAILSRESPONSE.fields_by_name['match'].message_type = _CMSGDOTAMATCH
-_CMSGGCMATCHDETAILSRESPONSE.fields_by_name['vote'].enum_type = dota_gcmessages_common_pb2._DOTAMATCHVOTE
-_CMSGGCTOSERVERMATCHDETAILSRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCH
+_CMSGDOTAKICKEDFROMMATCHMAKINGQUEUE.fields_by_name['match_type'].enum_type = dota_shared_enums_pb2._MATCHTYPE
+_CMSGDOTAREQUESTSAVEGAMESRESPONSE.fields_by_name['save_games'].message_type = dota_shared_enums_pb2._CDOTASAVEGAME
+_CMSGGCMATCHDETAILSRESPONSE.fields_by_name['match'].message_type = dota_gcmessages_common_pb2._CMSGDOTAMATCH
+_CMSGGCMATCHDETAILSRESPONSE.fields_by_name['vote'].enum_type = dota_shared_enums_pb2._DOTAMATCHVOTE
+_CMSGGCTOSERVERMATCHDETAILSRESPONSE.fields_by_name['matches'].message_type = dota_gcmessages_common_pb2._CMSGDOTAMATCH
 _CMSGDOTAPROFILEREQUEST.fields_by_name['engine'].enum_type = gcsdk_gcmessages_pb2._ESOURCEENGINE
 _CMSGDOTAPROFILERESPONSE_PLAYEDHERO.containing_type = _CMSGDOTAPROFILERESPONSE;
 _CMSGDOTAPROFILERESPONSE_SHOWCASEHERO.containing_type = _CMSGDOTAPROFILERESPONSE;
@@ -20169,7 +12166,7 @@ _CMSGDOTAPROFILERESPONSE_LEAGUEPASS.containing_type = _CMSGDOTAPROFILERESPONSE;
 _CMSGDOTAPROFILERESPONSE_EVENTTICKET.containing_type = _CMSGDOTAPROFILERESPONSE;
 _CMSGDOTAPROFILERESPONSE_FEATUREDITEM.containing_type = _CMSGDOTAPROFILERESPONSE;
 _CMSGDOTAPROFILERESPONSE.fields_by_name['game_account_client'].message_type = dota_gcmessages_common_pb2._CSODOTAGAMEACCOUNTCLIENT
-_CMSGDOTAPROFILERESPONSE.fields_by_name['latest_matches'].message_type = _CMSGDOTAMATCH
+_CMSGDOTAPROFILERESPONSE.fields_by_name['latest_matches'].message_type = dota_gcmessages_common_pb2._CMSGDOTAMATCH
 _CMSGDOTAPROFILERESPONSE.fields_by_name['heroes'].message_type = _CMSGDOTAPROFILERESPONSE_PLAYEDHERO
 _CMSGDOTAPROFILERESPONSE.fields_by_name['showcase_hero'].message_type = _CMSGDOTAPROFILERESPONSE_SHOWCASEHERO
 _CMSGDOTAPROFILERESPONSE.fields_by_name['league_passes'].message_type = _CMSGDOTAPROFILERESPONSE_LEAGUEPASS
@@ -20185,21 +12182,21 @@ _CMSGDOTAWELCOME_LOCALIZATIONDIGEST.containing_type = _CMSGDOTAWELCOME;
 _CMSGDOTAWELCOME_CEXTRAMSG.containing_type = _CMSGDOTAWELCOME;
 _CMSGDOTAWELCOME.fields_by_name['partner_account_type'].enum_type = gcsdk_gcmessages_pb2._PARTNERACCOUNTTYPE
 _CMSGDOTAWELCOME.fields_by_name['localization_digests'].message_type = _CMSGDOTAWELCOME_LOCALIZATIONDIGEST
-_CMSGDOTAWELCOME.fields_by_name['active_events'].enum_type = dota_gcmessages_common_pb2._EEVENT
+_CMSGDOTAWELCOME.fields_by_name['active_events'].enum_type = dota_shared_enums_pb2._EEVENT
 _CMSGDOTAWELCOME.fields_by_name['extra_messages'].message_type = _CMSGDOTAWELCOME_CEXTRAMSG
 _CLEAGUEDATA.fields_by_name['dynamic_data'].message_type = _CDYNAMICLEAGUEDATA
 _CLEAGUEDATA.fields_by_name['static_data'].message_type = _CSTATICLEAGUEDATA
 _CMSGRESPONSELEAGUEINFO.fields_by_name['leagues'].message_type = _CDYNAMICLEAGUEDATA
 _CMSGDOTAMATCHVOTES_PLAYERVOTE.containing_type = _CMSGDOTAMATCHVOTES;
 _CMSGDOTAMATCHVOTES.fields_by_name['votes'].message_type = _CMSGDOTAMATCHVOTES_PLAYERVOTE
-_CMSGCASTMATCHVOTE.fields_by_name['vote'].enum_type = dota_gcmessages_common_pb2._DOTAMATCHVOTE
-_CMSGMATCHVOTERESPONSE.fields_by_name['vote'].enum_type = dota_gcmessages_common_pb2._DOTAMATCHVOTE
+_CMSGCASTMATCHVOTE.fields_by_name['vote'].enum_type = dota_shared_enums_pb2._DOTAMATCHVOTE
+_CMSGMATCHVOTERESPONSE.fields_by_name['vote'].enum_type = dota_shared_enums_pb2._DOTAMATCHVOTE
 _CMSGDOTAHALLOFFAME_FEATUREDPLAYER.containing_type = _CMSGDOTAHALLOFFAME;
 _CMSGDOTAHALLOFFAME_FEATUREDFARMER.containing_type = _CMSGDOTAHALLOFFAME;
 _CMSGDOTAHALLOFFAME.fields_by_name['featured_players'].message_type = _CMSGDOTAHALLOFFAME_FEATUREDPLAYER
 _CMSGDOTAHALLOFFAME.fields_by_name['featured_farmer'].message_type = _CMSGDOTAHALLOFFAME_FEATUREDFARMER
 _CMSGDOTAHALLOFFAMERESPONSE.fields_by_name['hall_of_fame'].message_type = _CMSGDOTAHALLOFFAME
-_CMSGDOTAHALLOWEENHIGHSCORERESPONSE.fields_by_name['match'].message_type = _CMSGDOTAMATCH
+_CMSGDOTAHALLOWEENHIGHSCORERESPONSE.fields_by_name['match'].message_type = dota_gcmessages_common_pb2._CMSGDOTAMATCH
 _CMSGDOTASTOREPROMOPAGESRESPONSE_PROMOPAGE.containing_type = _CMSGDOTASTOREPROMOPAGESRESPONSE;
 _CMSGDOTASTOREPROMOPAGESRESPONSE.fields_by_name['pages'].message_type = _CMSGDOTASTOREPROMOPAGESRESPONSE_PROMOPAGE
 _CMSGLEAGUESCHEDULEBLOCK.fields_by_name['teams'].message_type = _CMSGLEAGUESCHEDULEBLOCKTEAMINFO
@@ -20208,7 +12205,7 @@ _CMSGDOTALEAGUESCHEDULERESPONSE.fields_by_name['league'].message_type = _CMSGDOT
 _CMSGDOTALEAGUESCHEDULEEDIT.fields_by_name['schedule'].message_type = _CMSGLEAGUESCHEDULEBLOCK
 _CMSGDOTALEAGUESCHEDULEEDITRESPONSE.fields_by_name['league'].message_type = _CMSGDOTALEAGUE
 _CMSGDOTALEAGUESINMONTHRESPONSE.fields_by_name['leagues'].message_type = _CMSGDOTALEAGUE
-_CMSGMATCHMAKINGMATCHGROUPINFO.fields_by_name['status'].enum_type = _EMATCHGROUPSERVERSTATUS
+_CMSGMATCHMAKINGMATCHGROUPINFO.fields_by_name['status'].enum_type = dota_shared_enums_pb2._EMATCHGROUPSERVERSTATUS
 _CMSGDOTAMATCHMAKINGSTATSRESPONSE.fields_by_name['match_groups'].message_type = _CMSGMATCHMAKINGMATCHGROUPINFO
 _CMSGGCWATCHDOWNLOADEDREPLAY.fields_by_name['watch_type'].enum_type = _DOTA_WATCHREPLAYTYPE
 _CMSGDOTAFRIENDRECRUITSRESPONSE_FRIENDRECRUITSTATUS.containing_type = _CMSGDOTAFRIENDRECRUITSRESPONSE;
@@ -20234,16 +12231,10 @@ _CMSGGCNOTIFICATIONSRESPONSE.fields_by_name['notifications'].message_type = _CMS
 _CMSGGCNOTIFICATIONSRESPONSE_ERESULT.containing_type = _CMSGGCNOTIFICATIONSRESPONSE;
 _CMSGGCLEAGUEADMINSTATE_PRIVATELEAGUEKEYS.containing_type = _CMSGGCLEAGUEADMINSTATE;
 _CMSGGCLEAGUEADMINSTATE.fields_by_name['keys'].message_type = _CMSGGCLEAGUEADMINSTATE_PRIVATELEAGUEKEYS
+_CMSGGCPLAYERINFOREQUEST_PLAYERINFO.containing_type = _CMSGGCPLAYERINFOREQUEST;
+_CMSGGCPLAYERINFOREQUEST.fields_by_name['player_infos'].message_type = _CMSGGCPLAYERINFOREQUEST_PLAYERINFO
 _CMSGGCPLAYERINFOSUBMITRESPONSE.fields_by_name['result'].enum_type = _CMSGGCPLAYERINFOSUBMITRESPONSE_ERESULT
 _CMSGGCPLAYERINFOSUBMITRESPONSE_ERESULT.containing_type = _CMSGGCPLAYERINFOSUBMITRESPONSE;
-_CMSGSERIALIZEDSOCACHE_TYPECACHE.containing_type = _CMSGSERIALIZEDSOCACHE;
-_CMSGSERIALIZEDSOCACHE_CACHE_VERSION.containing_type = _CMSGSERIALIZEDSOCACHE_CACHE;
-_CMSGSERIALIZEDSOCACHE_CACHE.fields_by_name['versions'].message_type = _CMSGSERIALIZEDSOCACHE_CACHE_VERSION
-_CMSGSERIALIZEDSOCACHE_CACHE.fields_by_name['type_caches'].message_type = _CMSGSERIALIZEDSOCACHE_TYPECACHE
-_CMSGSERIALIZEDSOCACHE_CACHE.containing_type = _CMSGSERIALIZEDSOCACHE;
-_CMSGSERIALIZEDSOCACHE.fields_by_name['caches'].message_type = _CMSGSERIALIZEDSOCACHE_CACHE
-_CMSGWEEKENDTOURNEYSCHEDULE_DIVISION.containing_type = _CMSGWEEKENDTOURNEYSCHEDULE;
-_CMSGWEEKENDTOURNEYSCHEDULE.fields_by_name['divisions'].message_type = _CMSGWEEKENDTOURNEYSCHEDULE_DIVISION
 _CMSGCLIENTPROVIDESURVEYRESULT_RESPONSE.containing_type = _CMSGCLIENTPROVIDESURVEYRESULT;
 _CMSGCLIENTPROVIDESURVEYRESULT.fields_by_name['responses'].message_type = _CMSGCLIENTPROVIDESURVEYRESULT_RESPONSE
 _CMSGGCTOCLIENTEMOTICONDATA.fields_by_name['emoticon_access'].message_type = _CMSGDOTAEMOTICONACCESSSDO
@@ -20251,10 +12242,10 @@ _CMSGCLIENTTOGCSETADDITIONALEQUIPS.fields_by_name['equips'].message_type = dota_
 _CMSGCLIENTTOGCGETADDITIONALEQUIPSRESPONSE.fields_by_name['equips'].message_type = dota_gcmessages_common_pb2._CADDITIONALEQUIPSLOT
 _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE_TROPHY.containing_type = _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE;
 _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE.fields_by_name['trophies'].message_type = _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE_TROPHY
-_CMSGCLIENTTOGCSETPROFILECARDSLOTS_CARDSLOT.fields_by_name['slot_type'].enum_type = _EPROFILECARDSLOTTYPE
+_CMSGCLIENTTOGCSETPROFILECARDSLOTS_CARDSLOT.fields_by_name['slot_type'].enum_type = dota_shared_enums_pb2._EPROFILECARDSLOTTYPE
 _CMSGCLIENTTOGCSETPROFILECARDSLOTS_CARDSLOT.containing_type = _CMSGCLIENTTOGCSETPROFILECARDSLOTS;
 _CMSGCLIENTTOGCSETPROFILECARDSLOTS.fields_by_name['slots'].message_type = _CMSGCLIENTTOGCSETPROFILECARDSLOTS_CARDSLOT
-_CMSGGCTOCLIENTEVENTSTATUSCHANGED.fields_by_name['active_events'].enum_type = dota_gcmessages_common_pb2._EEVENT
+_CMSGGCTOCLIENTEVENTSTATUSCHANGED.fields_by_name['active_events'].enum_type = dota_shared_enums_pb2._EEVENT
 _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE_CUSTOMGAME.containing_type = _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE;
 _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE.fields_by_name['games'].message_type = _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE_CUSTOMGAME
 _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_DATAFIELD.fields_by_name['data_type'].enum_type = _EFEATUREDHERODATATYPE
@@ -20267,33 +12258,29 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_CATEGORY.containing_type = _CMSGGCTOCLIENT
 _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE.fields_by_name['categories'].message_type = _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_CATEGORY
 _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE_COMMENT.containing_type = _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE;
 _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE.fields_by_name['comments'].message_type = _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE_COMMENT
-_CMSGDOTAGROUPMERGEREPLY.fields_by_name['result'].enum_type = _EDOTAGROUPMERGERESULT
 _CMSGDOTAPARTYRICHPRESENCE_MEMBER.containing_type = _CMSGDOTAPARTYRICHPRESENCE;
-_CMSGDOTAPARTYRICHPRESENCE.fields_by_name['party_state'].enum_type = dota_gcmessages_common_pb2._CSODOTAPARTY_STATE
+_CMSGDOTAPARTYRICHPRESENCE_WEEKENDTOURNEY.fields_by_name['event'].enum_type = _EWEEKENDTOURNEYRICHPRESENCEEVENT
+_CMSGDOTAPARTYRICHPRESENCE_WEEKENDTOURNEY.containing_type = _CMSGDOTAPARTYRICHPRESENCE;
+_CMSGDOTAPARTYRICHPRESENCE.fields_by_name['party_state'].enum_type = dota_gcmessages_common_match_management_pb2._CSODOTAPARTY_STATE
 _CMSGDOTAPARTYRICHPRESENCE.fields_by_name['members'].message_type = _CMSGDOTAPARTYRICHPRESENCE_MEMBER
-_CMSGDOTALOBBYRICHPRESENCE.fields_by_name['lobby_state'].enum_type = dota_gcmessages_common_pb2._CSODOTALOBBY_STATE
-_CMSGDOTALOBBYRICHPRESENCE.fields_by_name['game_mode'].enum_type = dota_gcmessages_common_pb2._DOTA_GAMEMODE
+_CMSGDOTAPARTYRICHPRESENCE.fields_by_name['weekend_tourney'].message_type = _CMSGDOTAPARTYRICHPRESENCE_WEEKENDTOURNEY
+_CMSGDOTALOBBYRICHPRESENCE.fields_by_name['lobby_state'].enum_type = dota_gcmessages_common_match_management_pb2._CSODOTALOBBY_STATE
+_CMSGDOTALOBBYRICHPRESENCE.fields_by_name['game_mode'].enum_type = dota_shared_enums_pb2._DOTA_GAMEMODE
 _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES_TEAM.containing_type = _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES;
 _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES.fields_by_name['teams'].message_type = _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES_TEAM
 _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES.containing_type = _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE;
 _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE.fields_by_name['series'].message_type = _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES
-_CDUMMYUNBREAKMESSAGE.fields_by_name['dummy_field'].message_type = dota_gcmessages_client_fantasy_pb2._CMSGDOTACLEARTOURNAMENTGAME
-_CDUMMYUNBREAKMESSAGE.fields_by_name['another_dummy_field'].enum_type = dota_gcmessages_client_fantasy_pb2._ETOURNAMENTSTATE
-_CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT.containing_type = _CDOTAREPLAYDOWNLOADINFO;
-_CDOTAREPLAYDOWNLOADINFO.fields_by_name['match'].message_type = _CMSGDOTAMATCHMINIMAL
 _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_CHALLENGE.containing_type = _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE;
 _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_QUEST.fields_by_name['completed_challenges'].message_type = _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_CHALLENGE
 _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_QUEST.containing_type = _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE;
 _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE.fields_by_name['quests'].message_type = _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_QUEST
 _CMSGGCGETHEROSTATSHISTORYRESPONSE.fields_by_name['records'].message_type = dota_gcmessages_common_pb2._CMSGDOTASDOHEROSTATSHISTORY
-_CMSGGCTOCLIENTPRIVATECHATRESPONSE.fields_by_name['result'].enum_type = _CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT
-_CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT.containing_type = _CMSGGCTOCLIENTPRIVATECHATRESPONSE;
-_CMSGGCTOCLIENTPRIVATECHATINFORESPONSE_MEMBER.containing_type = _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE;
-_CMSGGCTOCLIENTPRIVATECHATINFORESPONSE.fields_by_name['members'].message_type = _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE_MEMBER
+_CMSGGCTOCLIENTWAGERINGUPDATE.fields_by_name['wagering_info'].message_type = _CMSGGCTOCLIENTWAGERINGRESPONSE
+_CMSGGCTOCLIENTARCANAVOTESUPDATE.fields_by_name['arcana_votes'].message_type = _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE
 _CMSGGCTOCLIENTMYSTERYITEMRESPONSE.fields_by_name['result'].enum_type = _CMSGGCTOCLIENTMYSTERYITEMRESPONSE_RESULT
 _CMSGGCTOCLIENTMYSTERYITEMRESPONSE_RESULT.containing_type = _CMSGGCTOCLIENTMYSTERYITEMRESPONSE;
-_CMSGCLIENTTOGCGETEVENTGOALS.fields_by_name['event_ids'].enum_type = dota_gcmessages_common_pb2._EEVENT
-_CMSGEVENTGOALS_EVENTGOAL.fields_by_name['event_id'].enum_type = dota_gcmessages_common_pb2._EEVENT
+_CMSGCLIENTTOGCGETEVENTGOALS.fields_by_name['event_ids'].enum_type = dota_shared_enums_pb2._EEVENT
+_CMSGEVENTGOALS_EVENTGOAL.fields_by_name['event_id'].enum_type = dota_shared_enums_pb2._EEVENT
 _CMSGEVENTGOALS_EVENTGOAL.containing_type = _CMSGEVENTGOALS;
 _CMSGEVENTGOALS.fields_by_name['event_goals'].message_type = _CMSGEVENTGOALS_EVENTGOAL
 _CMSGPREDICTIONRANKINGS_PREDICTIONLINE.containing_type = _CMSGPREDICTIONRANKINGS;
@@ -20306,166 +12293,67 @@ _CMSGPREDICTIONRESULTS_RESULT.containing_type = _CMSGPREDICTIONRESULTS;
 _CMSGPREDICTIONRESULTS.fields_by_name['results'].message_type = _CMSGPREDICTIONRESULTS_RESULT
 _CMSGMVPVOTESFORMATCH_PLAYER.containing_type = _CMSGMVPVOTESFORMATCH;
 _CMSGMVPVOTESFORMATCH.fields_by_name['players'].message_type = _CMSGMVPVOTESFORMATCH_PLAYER
-DESCRIPTOR.message_types_by_name['CMsgStartFindingMatch'] = _CMSGSTARTFINDINGMATCH
-DESCRIPTOR.message_types_by_name['CMsgStopFindingMatch'] = _CMSGSTOPFINDINGMATCH
-DESCRIPTOR.message_types_by_name['CMsgReadyUp'] = _CMSGREADYUP
-DESCRIPTOR.message_types_by_name['CMsgReadyUpStatus'] = _CMSGREADYUPSTATUS
-DESCRIPTOR.message_types_by_name['CSourceTVGameSmall'] = _CSOURCETVGAMESMALL
-DESCRIPTOR.message_types_by_name['CMsgClientToGCFindTopSourceTVGames'] = _CMSGCLIENTTOGCFINDTOPSOURCETVGAMES
-DESCRIPTOR.message_types_by_name['CMsgGCToClientFindTopSourceTVGamesResponse'] = _CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgClientToGCTopMatchesRequest'] = _CMSGCLIENTTOGCTOPMATCHESREQUEST
-DESCRIPTOR.message_types_by_name['CMsgClientToGCTopLeagueMatchesRequest'] = _CMSGCLIENTTOGCTOPLEAGUEMATCHESREQUEST
-DESCRIPTOR.message_types_by_name['CMsgClientToGCTopFriendMatchesRequest'] = _CMSGCLIENTTOGCTOPFRIENDMATCHESREQUEST
-DESCRIPTOR.message_types_by_name['CMsgClientToGCMatchesMinimalRequest'] = _CMSGCLIENTTOGCMATCHESMINIMALREQUEST
-DESCRIPTOR.message_types_by_name['CMsgClientToGCMatchesMinimalResponse'] = _CMSGCLIENTTOGCMATCHESMINIMALRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgGCToClientTopLeagueMatchesResponse'] = _CMSGGCTOCLIENTTOPLEAGUEMATCHESRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgGCToClientTopFriendMatchesResponse'] = _CMSGGCTOCLIENTTOPFRIENDMATCHESRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgClientToGCFindTopMatches'] = _CMSGCLIENTTOGCFINDTOPMATCHES
-DESCRIPTOR.message_types_by_name['CMsgGCToClientFindTopLeagueMatchesResponse'] = _CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgSpectateFriendGame'] = _CMSGSPECTATEFRIENDGAME
-DESCRIPTOR.message_types_by_name['CMsgSpectateFriendGameResponse'] = _CMSGSPECTATEFRIENDGAMERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgAbandonCurrentGame'] = _CMSGABANDONCURRENTGAME
+_CMSGCLIENTTOGCTEAMMATESTATSRESPONSE_TEAMMATESTAT.containing_type = _CMSGCLIENTTOGCTEAMMATESTATSRESPONSE;
+_CMSGCLIENTTOGCTEAMMATESTATSRESPONSE.fields_by_name['teammate_stats'].message_type = _CMSGCLIENTTOGCTEAMMATESTATSRESPONSE_TEAMMATESTAT
+_CMSGCLIENTTOGCVOTEFORARCANA_MATCHVOTE.containing_type = _CMSGCLIENTTOGCVOTEFORARCANA;
+_CMSGCLIENTTOGCVOTEFORARCANA.fields_by_name['matches'].message_type = _CMSGCLIENTTOGCVOTEFORARCANA_MATCHVOTE
+_CMSGCLIENTTOGCVOTEFORARCANARESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCVOTEFORARCANARESPONSE_RESULT
+_CMSGCLIENTTOGCVOTEFORARCANARESPONSE_RESULT.containing_type = _CMSGCLIENTTOGCVOTEFORARCANARESPONSE;
+_CMSGARCANAVOTES_MATCH.containing_type = _CMSGARCANAVOTES;
+_CMSGARCANAVOTES.fields_by_name['matches'].message_type = _CMSGARCANAVOTES_MATCH
+_CMSGARCANAVOTES_VOTINGSTATE.containing_type = _CMSGARCANAVOTES;
+_CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE_MATCHVOTE.containing_type = _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE;
+_CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE.fields_by_name['matches_previously_voted_for'].message_type = _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE_MATCHVOTE
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_QUESTCHALLENGEEVENT.containing_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE;
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WAGERWONEVENT.containing_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE;
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPGIVENEVENT.containing_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE;
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPRECEIVEDEVENT.containing_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE;
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_RECYCLEDITEMEVENT.containing_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE;
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_ACHIEVEMENTEVENT.containing_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE;
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_MYSTERYITEMRECEIVEDEVENT.containing_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE;
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION.fields_by_name['wager_won_event'].message_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WAGERWONEVENT
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION.fields_by_name['mystery_item_received_event'].message_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_MYSTERYITEMRECEIVEDEVENT
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION.fields_by_name['quest_challenge_event'].message_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_QUESTCHALLENGEEVENT
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION.fields_by_name['tip_given_event'].message_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPGIVENEVENT
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION.fields_by_name['tip_received_event'].message_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPRECEIVEDEVENT
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION.fields_by_name['recycled_item_event'].message_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_RECYCLEDITEMEVENT
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION.fields_by_name['achievement_event'].message_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_ACHIEVEMENTEVENT
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION.containing_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE;
+_CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE.fields_by_name['transactions'].message_type = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION
+_CMSGGCTOCLIENTREDEEMREWARDRESPONSE.fields_by_name['result'].enum_type = _CMSGGCTOCLIENTREDEEMREWARDRESPONSE_RESULT
+_CMSGGCTOCLIENTREDEEMREWARDRESPONSE_RESULT.containing_type = _CMSGGCTOCLIENTREDEEMREWARDRESPONSE;
+_CMSGCLIENTTOGCREQUESTLINAPLAYSREMAINING.fields_by_name['event_id'].enum_type = dota_shared_enums_pb2._EEVENT
+_CMSGCLIENTTOGCREQUESTLINAGAMERESULT.fields_by_name['event_id'].enum_type = dota_shared_enums_pb2._EEVENT
+_CMSGGCTOCLIENTQUESTPROGRESSUPDATED_CHALLENGE.containing_type = _CMSGGCTOCLIENTQUESTPROGRESSUPDATED;
+_CMSGGCTOCLIENTQUESTPROGRESSUPDATED.fields_by_name['completed_challenges'].message_type = _CMSGGCTOCLIENTQUESTPROGRESSUPDATED_CHALLENGE
+_CMSGDOTAREDEEMITEMRESPONSE.fields_by_name['response'].enum_type = _CMSGDOTAREDEEMITEMRESPONSE_ERESULTCODE
+_CMSGDOTAREDEEMITEMRESPONSE_ERESULTCODE.containing_type = _CMSGDOTAREDEEMITEMRESPONSE;
+_CMSGPERFECTWORLDUSERLOOKUPRESPONSE.fields_by_name['result_code'].enum_type = _CMSGPERFECTWORLDUSERLOOKUPRESPONSE_ERESULTCODE
+_CMSGPERFECTWORLDUSERLOOKUPRESPONSE_ERESULTCODE.containing_type = _CMSGPERFECTWORLDUSERLOOKUPRESPONSE;
+_CMSGREQUESTOFFERINGSRESPONSE_NEWYEARSOFFERING.containing_type = _CMSGREQUESTOFFERINGSRESPONSE;
+_CMSGREQUESTOFFERINGSRESPONSE.fields_by_name['offerings'].message_type = _CMSGREQUESTOFFERINGSRESPONSE_NEWYEARSOFFERING
 DESCRIPTOR.message_types_by_name['CMsgClientSuspended'] = _CMSGCLIENTSUSPENDED
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbySetDetails'] = _CMSGPRACTICELOBBYSETDETAILS
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyCreate'] = _CMSGPRACTICELOBBYCREATE
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbySetTeamSlot'] = _CMSGPRACTICELOBBYSETTEAMSLOT
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbySetCoach'] = _CMSGPRACTICELOBBYSETCOACH
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyJoinBroadcastChannel'] = _CMSGPRACTICELOBBYJOINBROADCASTCHANNEL
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyCloseBroadcastChannel'] = _CMSGPRACTICELOBBYCLOSEBROADCASTCHANNEL
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus'] = _CMSGPRACTICELOBBYTOGGLEBROADCASTCHANNELCAMERAMANSTATUS
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyKick'] = _CMSGPRACTICELOBBYKICK
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyKickFromTeam'] = _CMSGPRACTICELOBBYKICKFROMTEAM
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyLeave'] = _CMSGPRACTICELOBBYLEAVE
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyLaunch'] = _CMSGPRACTICELOBBYLAUNCH
-DESCRIPTOR.message_types_by_name['CMsgApplyTeamToPracticeLobby'] = _CMSGAPPLYTEAMTOPRACTICELOBBY
-DESCRIPTOR.message_types_by_name['CMsgClearPracticeLobbyTeam'] = _CMSGCLEARPRACTICELOBBYTEAM
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyList'] = _CMSGPRACTICELOBBYLIST
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyListResponseEntry'] = _CMSGPRACTICELOBBYLISTRESPONSEENTRY
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyListResponse'] = _CMSGPRACTICELOBBYLISTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgLobbyList'] = _CMSGLOBBYLIST
-DESCRIPTOR.message_types_by_name['CMsgLobbyListResponse'] = _CMSGLOBBYLISTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyJoin'] = _CMSGPRACTICELOBBYJOIN
-DESCRIPTOR.message_types_by_name['CMsgPracticeLobbyJoinResponse'] = _CMSGPRACTICELOBBYJOINRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgFriendPracticeLobbyListRequest'] = _CMSGFRIENDPRACTICELOBBYLISTREQUEST
-DESCRIPTOR.message_types_by_name['CMsgFriendPracticeLobbyListResponse'] = _CMSGFRIENDPRACTICELOBBYLISTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgGuildmatePracticeLobbyListRequest'] = _CMSGGUILDMATEPRACTICELOBBYLISTREQUEST
-DESCRIPTOR.message_types_by_name['CMsgGuildmatePracticeLobbyListResponse'] = _CMSGGUILDMATEPRACTICELOBBYLISTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgJoinableCustomGameModesRequest'] = _CMSGJOINABLECUSTOMGAMEMODESREQUEST
-DESCRIPTOR.message_types_by_name['CMsgJoinableCustomGameModesResponseEntry'] = _CMSGJOINABLECUSTOMGAMEMODESRESPONSEENTRY
-DESCRIPTOR.message_types_by_name['CMsgJoinableCustomGameModesResponse'] = _CMSGJOINABLECUSTOMGAMEMODESRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgJoinableCustomLobbiesRequest'] = _CMSGJOINABLECUSTOMLOBBIESREQUEST
-DESCRIPTOR.message_types_by_name['CMsgJoinableCustomLobbiesResponseEntry'] = _CMSGJOINABLECUSTOMLOBBIESRESPONSEENTRY
-DESCRIPTOR.message_types_by_name['CMsgJoinableCustomLobbiesResponse'] = _CMSGJOINABLECUSTOMLOBBIESRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgQuickJoinCustomLobby'] = _CMSGQUICKJOINCUSTOMLOBBY
-DESCRIPTOR.message_types_by_name['CMsgQuickJoinCustomLobbyResponse'] = _CMSGQUICKJOINCUSTOMLOBBYRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgBotGameCreate'] = _CMSGBOTGAMECREATE
-DESCRIPTOR.message_types_by_name['CMsgCustomGameCreate'] = _CMSGCUSTOMGAMECREATE
-DESCRIPTOR.message_types_by_name['CMsgEventGameCreate'] = _CMSGEVENTGAMECREATE
 DESCRIPTOR.message_types_by_name['CMsgRequestInternationalTicket'] = _CMSGREQUESTINTERNATIONALTICKET
 DESCRIPTOR.message_types_by_name['CMsgBalancedShuffleLobby'] = _CMSGBALANCEDSHUFFLELOBBY
 DESCRIPTOR.message_types_by_name['CMsgInitialQuestionnaireResponse'] = _CMSGINITIALQUESTIONNAIRERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAMatch'] = _CMSGDOTAMATCH
 DESCRIPTOR.message_types_by_name['CMsgDOTAPlayerMatchHistory'] = _CMSGDOTAPLAYERMATCHHISTORY
-DESCRIPTOR.message_types_by_name['CMsgDOTAMatchMinimal'] = _CMSGDOTAMATCHMINIMAL
 DESCRIPTOR.message_types_by_name['CMsgDOTAMatchHistoryFilter'] = _CMSGDOTAMATCHHISTORYFILTER
 DESCRIPTOR.message_types_by_name['CMsgDOTARequestMatches'] = _CMSGDOTAREQUESTMATCHES
 DESCRIPTOR.message_types_by_name['CMsgDOTARequestMatchesResponse'] = _CMSGDOTAREQUESTMATCHESRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgDOTAPopup'] = _CMSGDOTAPOPUP
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamMemberSDO'] = _CMSGDOTATEAMMEMBERSDO
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamAdminSDO'] = _CMSGDOTATEAMADMINSDO
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamMember'] = _CMSGDOTATEAMMEMBER
-DESCRIPTOR.message_types_by_name['CMsgDOTATeam'] = _CMSGDOTATEAM
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamsInfo'] = _CMSGDOTATEAMSINFO
-DESCRIPTOR.message_types_by_name['CMsgDOTACreateTeam'] = _CMSGDOTACREATETEAM
-DESCRIPTOR.message_types_by_name['CMsgDOTACreateTeamResponse'] = _CMSGDOTACREATETEAMRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAEditTeam'] = _CMSGDOTAEDITTEAM
-DESCRIPTOR.message_types_by_name['CMsgDOTAEditTeamLogo'] = _CMSGDOTAEDITTEAMLOGO
-DESCRIPTOR.message_types_by_name['CMsgDOTAEditTeamLogoResponse'] = _CMSGDOTAEDITTEAMLOGORESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAEditTeamDetails'] = _CMSGDOTAEDITTEAMDETAILS
-DESCRIPTOR.message_types_by_name['CMsgDOTAEditTeamDetailsResponse'] = _CMSGDOTAEDITTEAMDETAILSRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTADisbandTeam'] = _CMSGDOTADISBANDTEAM
-DESCRIPTOR.message_types_by_name['CMsgDOTADisbandTeamResponse'] = _CMSGDOTADISBANDTEAMRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTARequestTeamData'] = _CMSGDOTAREQUESTTEAMDATA
-DESCRIPTOR.message_types_by_name['CMsgDOTARequestTeamDataResponse'] = _CMSGDOTAREQUESTTEAMDATARESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamData'] = _CMSGDOTATEAMDATA
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamProfileRequest'] = _CMSGDOTATEAMPROFILEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamMemberProfileRequest'] = _CMSGDOTATEAMMEMBERPROFILEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamIDByNameRequest'] = _CMSGDOTATEAMIDBYNAMEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamIDByNameResponse'] = _CMSGDOTATEAMIDBYNAMERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamProfileResponse'] = _CMSGDOTATEAMPROFILERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAProTeamListRequest'] = _CMSGDOTAPROTEAMLISTREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAProTeamListResponse'] = _CMSGDOTAPROTEAMLISTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamInvite_InviterToGC'] = _CMSGDOTATEAMINVITE_INVITERTOGC
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamInvite_GCImmediateResponseToInviter'] = _CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamInvite_GCRequestToInvitee'] = _CMSGDOTATEAMINVITE_GCREQUESTTOINVITEE
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamInvite_InviteeResponseToGC'] = _CMSGDOTATEAMINVITE_INVITEERESPONSETOGC
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamInvite_GCResponseToInviter'] = _CMSGDOTATEAMINVITE_GCRESPONSETOINVITER
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamInvite_GCResponseToInvitee'] = _CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE
-DESCRIPTOR.message_types_by_name['CMsgDOTATeamOnProfile'] = _CMSGDOTATEAMONPROFILE
-DESCRIPTOR.message_types_by_name['CMsgDOTAKickTeamMember'] = _CMSGDOTAKICKTEAMMEMBER
-DESCRIPTOR.message_types_by_name['CMsgDOTAKickTeamMemberResponse'] = _CMSGDOTAKICKTEAMMEMBERRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTATransferTeamAdmin'] = _CMSGDOTATRANSFERTEAMADMIN
-DESCRIPTOR.message_types_by_name['CMsgDOTATransferTeamAdminResponse'] = _CMSGDOTATRANSFERTEAMADMINRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTALeaveTeam'] = _CMSGDOTALEAVETEAM
-DESCRIPTOR.message_types_by_name['CMsgDOTALeaveTeamResponse'] = _CMSGDOTALEAVETEAMRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTABetaParticipation'] = _CMSGDOTABETAPARTICIPATION
-DESCRIPTOR.message_types_by_name['CMsgDOTAJoinChatChannel'] = _CMSGDOTAJOINCHATCHANNEL
-DESCRIPTOR.message_types_by_name['CMsgDOTALeaveChatChannel'] = _CMSGDOTALEAVECHATCHANNEL
-DESCRIPTOR.message_types_by_name['CMsgDOTAClientIgnoredUser'] = _CMSGDOTACLIENTIGNOREDUSER
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatMessage'] = _CMSGDOTACHATMESSAGE
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatMember'] = _CMSGDOTACHATMEMBER
-DESCRIPTOR.message_types_by_name['CMsgDOTAJoinChatChannelResponse'] = _CMSGDOTAJOINCHATCHANNELRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatChannelFullUpdate'] = _CMSGDOTACHATCHANNELFULLUPDATE
-DESCRIPTOR.message_types_by_name['CMsgDOTAOtherJoinedChatChannel'] = _CMSGDOTAOTHERJOINEDCHATCHANNEL
-DESCRIPTOR.message_types_by_name['CMsgDOTAOtherLeftChatChannel'] = _CMSGDOTAOTHERLEFTCHATCHANNEL
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatChannelMemberUpdate'] = _CMSGDOTACHATCHANNELMEMBERUPDATE
-DESCRIPTOR.message_types_by_name['CMsgDOTARequestChatChannelList'] = _CMSGDOTAREQUESTCHATCHANNELLIST
-DESCRIPTOR.message_types_by_name['CMsgDOTARequestChatChannelListResponse'] = _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatGetUserList'] = _CMSGDOTACHATGETUSERLIST
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatGetUserListResponse'] = _CMSGDOTACHATGETUSERLISTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatGetMemberCount'] = _CMSGDOTACHATGETMEMBERCOUNT
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatGetMemberCountResponse'] = _CMSGDOTACHATGETMEMBERCOUNTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAChatRegionsEnabled'] = _CMSGDOTACHATREGIONSENABLED
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildSDO'] = _CMSGDOTAGUILDSDO
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildAuditSDO'] = _CMSGDOTAGUILDAUDITSDO
-DESCRIPTOR.message_types_by_name['CMsgDOTAAccountGuildMembershipsSDO'] = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildCreateRequest'] = _CMSGDOTAGUILDCREATEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildCreateResponse'] = _CMSGDOTAGUILDCREATERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildSetAccountRoleRequest'] = _CMSGDOTAGUILDSETACCOUNTROLEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildSetAccountRoleResponse'] = _CMSGDOTAGUILDSETACCOUNTROLERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildInviteAccountRequest'] = _CMSGDOTAGUILDINVITEACCOUNTREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildInviteAccountResponse'] = _CMSGDOTAGUILDINVITEACCOUNTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildCancelInviteRequest'] = _CMSGDOTAGUILDCANCELINVITEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildCancelInviteResponse'] = _CMSGDOTAGUILDCANCELINVITERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildUpdateDetailsRequest'] = _CMSGDOTAGUILDUPDATEDETAILSREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildUpdateDetailsResponse'] = _CMSGDOTAGUILDUPDATEDETAILSRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGCToGCUpdateOpenGuildPartyRequest'] = _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGCToGCUpdateOpenGuildPartyResponse'] = _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGCToGCDestroyOpenGuildPartyRequest'] = _CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGCToGCDestroyOpenGuildPartyResponse'] = _CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAPartySetOpenGuildRequest'] = _CMSGDOTAPARTYSETOPENGUILDREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAPartySetOpenGuildResponse'] = _CMSGDOTAPARTYSETOPENGUILDRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAJoinOpenGuildPartyRequest'] = _CMSGDOTAJOINOPENGUILDPARTYREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAJoinOpenGuildPartyResponse'] = _CMSGDOTAJOINOPENGUILDPARTYRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildOpenPartyRefresh'] = _CMSGDOTAGUILDOPENPARTYREFRESH
-DESCRIPTOR.message_types_by_name['CMsgDOTARequestGuildData'] = _CMSGDOTAREQUESTGUILDDATA
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildInviteData'] = _CMSGDOTAGUILDINVITEDATA
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildUpdateMessage'] = _CMSGDOTAGUILDUPDATEMESSAGE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildEditLogoRequest'] = _CMSGDOTAGUILDEDITLOGOREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildEditLogoResponse'] = _CMSGDOTAGUILDEDITLOGORESPONSE
 DESCRIPTOR.message_types_by_name['CMsgDOTAReportsRemainingRequest'] = _CMSGDOTAREPORTSREMAININGREQUEST
 DESCRIPTOR.message_types_by_name['CMsgDOTAReportsRemainingResponse'] = _CMSGDOTAREPORTSREMAININGRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgDOTASubmitPlayerReport'] = _CMSGDOTASUBMITPLAYERREPORT
 DESCRIPTOR.message_types_by_name['CMsgDOTASubmitPlayerReportResponse'] = _CMSGDOTASUBMITPLAYERREPORTRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgDOTAReportCountsRequest'] = _CMSGDOTAREPORTCOUNTSREQUEST
 DESCRIPTOR.message_types_by_name['CMsgDOTAReportCountsResponse'] = _CMSGDOTAREPORTCOUNTSRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgDOTASubmitLobbyMVPVote'] = _CMSGDOTASUBMITLOBBYMVPVOTE
+DESCRIPTOR.message_types_by_name['CMsgDOTASubmitLobbyMVPVoteResponse'] = _CMSGDOTASUBMITLOBBYMVPVOTERESPONSE
+DESCRIPTOR.message_types_by_name['CMsgDOTALobbyMVPNotifyRecipient'] = _CMSGDOTALOBBYMVPNOTIFYRECIPIENT
+DESCRIPTOR.message_types_by_name['CMsgDOTALobbyMVPAwarded'] = _CMSGDOTALOBBYMVPAWARDED
 DESCRIPTOR.message_types_by_name['CMsgDOTAKickedFromMatchmakingQueue'] = _CMSGDOTAKICKEDFROMMATCHMAKINGQUEUE
 DESCRIPTOR.message_types_by_name['CMsgDOTARequestSaveGames'] = _CMSGDOTAREQUESTSAVEGAMES
 DESCRIPTOR.message_types_by_name['CMsgDOTARequestSaveGamesResponse'] = _CMSGDOTAREQUESTSAVEGAMESRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgWatchGame'] = _CMSGWATCHGAME
-DESCRIPTOR.message_types_by_name['CMsgCancelWatchGame'] = _CMSGCANCELWATCHGAME
-DESCRIPTOR.message_types_by_name['CMsgWatchGameResponse'] = _CMSGWATCHGAMERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgPartyLeaderWatchGamePrompt'] = _CMSGPARTYLEADERWATCHGAMEPROMPT
 DESCRIPTOR.message_types_by_name['CMsgGCMatchDetailsRequest'] = _CMSGGCMATCHDETAILSREQUEST
 DESCRIPTOR.message_types_by_name['CMsgGCMatchDetailsResponse'] = _CMSGGCMATCHDETAILSRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgServerToGCMatchDetailsRequest'] = _CMSGSERVERTOGCMATCHDETAILSREQUEST
@@ -20571,9 +12459,6 @@ DESCRIPTOR.message_types_by_name['CMsgGCLeagueAdminState'] = _CMSGGCLEAGUEADMINS
 DESCRIPTOR.message_types_by_name['CMsgGCPlayerInfoRequest'] = _CMSGGCPLAYERINFOREQUEST
 DESCRIPTOR.message_types_by_name['CMsgGCPlayerInfoSubmit'] = _CMSGGCPLAYERINFOSUBMIT
 DESCRIPTOR.message_types_by_name['CMsgGCPlayerInfoSubmitResponse'] = _CMSGGCPLAYERINFOSUBMITRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgSerializedSOCache'] = _CMSGSERIALIZEDSOCACHE
-DESCRIPTOR.message_types_by_name['CMsgRequestWeekendTourneySchedule'] = _CMSGREQUESTWEEKENDTOURNEYSCHEDULE
-DESCRIPTOR.message_types_by_name['CMsgWeekendTourneySchedule'] = _CMSGWEEKENDTOURNEYSCHEDULE
 DESCRIPTOR.message_types_by_name['CMsgClientProvideSurveyResult'] = _CMSGCLIENTPROVIDESURVEYRESULT
 DESCRIPTOR.message_types_by_name['CMsgDOTAEmoticonAccessSDO'] = _CMSGDOTAEMOTICONACCESSSDO
 DESCRIPTOR.message_types_by_name['CMsgClientToGCEmoticonDataRequest'] = _CMSGCLIENTTOGCEMOTICONDATAREQUEST
@@ -20618,13 +12503,6 @@ DESCRIPTOR.message_types_by_name['CMsgClientToGCSocialMatchPostCommentRequest'] 
 DESCRIPTOR.message_types_by_name['CMsgGCToClientSocialMatchPostCommentResponse'] = _CMSGGCTOCLIENTSOCIALMATCHPOSTCOMMENTRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgClientToGCSocialMatchDetailsRequest'] = _CMSGCLIENTTOGCSOCIALMATCHDETAILSREQUEST
 DESCRIPTOR.message_types_by_name['CMsgGCToClientSocialMatchDetailsResponse'] = _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAPartyMemberSetCoach'] = _CMSGDOTAPARTYMEMBERSETCOACH
-DESCRIPTOR.message_types_by_name['CMsgDOTASetGroupLeader'] = _CMSGDOTASETGROUPLEADER
-DESCRIPTOR.message_types_by_name['CMsgDOTACancelGroupInvites'] = _CMSGDOTACANCELGROUPINVITES
-DESCRIPTOR.message_types_by_name['CMsgDOTASetGroupOpenStatus'] = _CMSGDOTASETGROUPOPENSTATUS
-DESCRIPTOR.message_types_by_name['CMsgDOTAGroupMergeInvite'] = _CMSGDOTAGROUPMERGEINVITE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGroupMergeResponse'] = _CMSGDOTAGROUPMERGERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGroupMergeReply'] = _CMSGDOTAGROUPMERGEREPLY
 DESCRIPTOR.message_types_by_name['CMsgDOTAPartyRichPresence'] = _CMSGDOTAPARTYRICHPRESENCE
 DESCRIPTOR.message_types_by_name['CMsgDOTALobbyRichPresence'] = _CMSGDOTALOBBYRICHPRESENCE
 DESCRIPTOR.message_types_by_name['CMsgDOTACustomGameListenServerStartedLoading'] = _CMSGDOTACUSTOMGAMELISTENSERVERSTARTEDLOADING
@@ -20632,9 +12510,6 @@ DESCRIPTOR.message_types_by_name['CMsgDOTACustomGameClientFinishedLoading'] = _C
 DESCRIPTOR.message_types_by_name['CMsgClientToGCGetLeagueSeries'] = _CMSGCLIENTTOGCGETLEAGUESERIES
 DESCRIPTOR.message_types_by_name['CMsgClientToGCGetLeagueSeriesResponse'] = _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgClientToGCApplyGemCombiner'] = _CMSGCLIENTTOGCAPPLYGEMCOMBINER
-DESCRIPTOR.message_types_by_name['CDummyUnbreakMessage'] = _CDUMMYUNBREAKMESSAGE
-DESCRIPTOR.message_types_by_name['CDOTAReplayDownloadInfo'] = _CDOTAREPLAYDOWNLOADINFO
-DESCRIPTOR.message_types_by_name['CDOTABroadcasterInfo'] = _CDOTABROADCASTERINFO
 DESCRIPTOR.message_types_by_name['CMsgClientToGCH264Unsupported'] = _CMSGCLIENTTOGCH264UNSUPPORTED
 DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestH264Support'] = _CMSGCLIENTTOGCREQUESTH264SUPPORT
 DESCRIPTOR.message_types_by_name['CMsgClientToGCGetQuestProgress'] = _CMSGCLIENTTOGCGETQUESTPROGRESS
@@ -20642,17 +12517,12 @@ DESCRIPTOR.message_types_by_name['CMsgClientToGCGetQuestProgressResponse'] = _CM
 DESCRIPTOR.message_types_by_name['CMsgGCToClientMatchSignedOut'] = _CMSGGCTOCLIENTMATCHSIGNEDOUT
 DESCRIPTOR.message_types_by_name['CMsgGCGetHeroStatsHistory'] = _CMSGGCGETHEROSTATSHISTORY
 DESCRIPTOR.message_types_by_name['CMsgGCGetHeroStatsHistoryResponse'] = _CMSGGCGETHEROSTATSHISTORYRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgClientToGCPrivateChatInvite'] = _CMSGCLIENTTOGCPRIVATECHATINVITE
-DESCRIPTOR.message_types_by_name['CMsgClientToGCPrivateChatKick'] = _CMSGCLIENTTOGCPRIVATECHATKICK
-DESCRIPTOR.message_types_by_name['CMsgClientToGCPrivateChatPromote'] = _CMSGCLIENTTOGCPRIVATECHATPROMOTE
-DESCRIPTOR.message_types_by_name['CMsgClientToGCPrivateChatDemote'] = _CMSGCLIENTTOGCPRIVATECHATDEMOTE
-DESCRIPTOR.message_types_by_name['CMsgGCToClientPrivateChatResponse'] = _CMSGGCTOCLIENTPRIVATECHATRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgClientToGCPrivateChatInfoRequest'] = _CMSGCLIENTTOGCPRIVATECHATINFOREQUEST
-DESCRIPTOR.message_types_by_name['CMsgGCToClientPrivateChatInfoResponse'] = _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE
 DESCRIPTOR.message_types_by_name['CMsgPlayerConductScorecardRequest'] = _CMSGPLAYERCONDUCTSCORECARDREQUEST
 DESCRIPTOR.message_types_by_name['CMsgPlayerConductScorecard'] = _CMSGPLAYERCONDUCTSCORECARD
 DESCRIPTOR.message_types_by_name['CMsgClientToGCWageringRequest'] = _CMSGCLIENTTOGCWAGERINGREQUEST
 DESCRIPTOR.message_types_by_name['CMsgGCToClientWageringResponse'] = _CMSGGCTOCLIENTWAGERINGRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgGCToClientWageringUpdate'] = _CMSGGCTOCLIENTWAGERINGUPDATE
+DESCRIPTOR.message_types_by_name['CMsgGCToClientArcanaVotesUpdate'] = _CMSGGCTOCLIENTARCANAVOTESUPDATE
 DESCRIPTOR.message_types_by_name['CMsgClientToGCMysteryItem'] = _CMSGCLIENTTOGCMYSTERYITEM
 DESCRIPTOR.message_types_by_name['CMsgGCToClientMysteryItemResponse'] = _CMSGGCTOCLIENTMYSTERYITEMRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgClientToGCGetEventGoals'] = _CMSGCLIENTTOGCGETEVENTGOALS
@@ -20666,360 +12536,42 @@ DESCRIPTOR.message_types_by_name['CMsgClientToGCHasPlayerVotedForMVPResponse'] =
 DESCRIPTOR.message_types_by_name['CMsgClientToGCVoteForMVP'] = _CMSGCLIENTTOGCVOTEFORMVP
 DESCRIPTOR.message_types_by_name['CMsgClientToGCVoteForMVPResponse'] = _CMSGCLIENTTOGCVOTEFORMVPRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgMVPVotesForMatch'] = _CMSGMVPVOTESFORMATCH
-
-class CMsgStartFindingMatch(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGSTARTFINDINGMATCH
-
-  # @@protoc_insertion_point(class_scope:CMsgStartFindingMatch)
-
-class CMsgStopFindingMatch(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGSTOPFINDINGMATCH
-
-  # @@protoc_insertion_point(class_scope:CMsgStopFindingMatch)
-
-class CMsgReadyUp(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGREADYUP
-
-  # @@protoc_insertion_point(class_scope:CMsgReadyUp)
-
-class CMsgReadyUpStatus(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGREADYUPSTATUS
-
-  # @@protoc_insertion_point(class_scope:CMsgReadyUpStatus)
-
-class CSourceTVGameSmall(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Player(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CSOURCETVGAMESMALL_PLAYER
-
-    # @@protoc_insertion_point(class_scope:CSourceTVGameSmall.Player)
-  DESCRIPTOR = _CSOURCETVGAMESMALL
-
-  # @@protoc_insertion_point(class_scope:CSourceTVGameSmall)
-
-class CMsgClientToGCFindTopSourceTVGames(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCFINDTOPSOURCETVGAMES
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCFindTopSourceTVGames)
-
-class CMsgGCToClientFindTopSourceTVGamesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientFindTopSourceTVGamesResponse)
-
-class CMsgClientToGCTopMatchesRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCTOPMATCHESREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCTopMatchesRequest)
-
-class CMsgClientToGCTopLeagueMatchesRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCTOPLEAGUEMATCHESREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCTopLeagueMatchesRequest)
-
-class CMsgClientToGCTopFriendMatchesRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCTOPFRIENDMATCHESREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCTopFriendMatchesRequest)
-
-class CMsgClientToGCMatchesMinimalRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCMATCHESMINIMALREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCMatchesMinimalRequest)
-
-class CMsgClientToGCMatchesMinimalResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCMATCHESMINIMALRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCMatchesMinimalResponse)
-
-class CMsgGCToClientTopLeagueMatchesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTTOPLEAGUEMATCHESRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientTopLeagueMatchesResponse)
-
-class CMsgGCToClientTopFriendMatchesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTTOPFRIENDMATCHESRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientTopFriendMatchesResponse)
-
-class CMsgClientToGCFindTopMatches(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCFINDTOPMATCHES
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCFindTopMatches)
-
-class CMsgGCToClientFindTopLeagueMatchesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientFindTopLeagueMatchesResponse)
-
-class CMsgSpectateFriendGame(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGSPECTATEFRIENDGAME
-
-  # @@protoc_insertion_point(class_scope:CMsgSpectateFriendGame)
-
-class CMsgSpectateFriendGameResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGSPECTATEFRIENDGAMERESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgSpectateFriendGameResponse)
-
-class CMsgAbandonCurrentGame(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGABANDONCURRENTGAME
-
-  # @@protoc_insertion_point(class_scope:CMsgAbandonCurrentGame)
+DESCRIPTOR.message_types_by_name['CMsgLeaguePrizePool'] = _CMSGLEAGUEPRIZEPOOL
+DESCRIPTOR.message_types_by_name['CMsgClientToGCTeammateStatsRequest'] = _CMSGCLIENTTOGCTEAMMATESTATSREQUEST
+DESCRIPTOR.message_types_by_name['CMsgClientToGCTeammateStatsResponse'] = _CMSGCLIENTTOGCTEAMMATESTATSRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCGetGiftPermissions'] = _CMSGCLIENTTOGCGETGIFTPERMISSIONS
+DESCRIPTOR.message_types_by_name['CMsgClientToGCGetGiftPermissionsResponse'] = _CMSGCLIENTTOGCGETGIFTPERMISSIONSRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCVoteForArcana'] = _CMSGCLIENTTOGCVOTEFORARCANA
+DESCRIPTOR.message_types_by_name['CMsgClientToGCVoteForArcanaResponse'] = _CMSGCLIENTTOGCVOTEFORARCANARESPONSE
+DESCRIPTOR.message_types_by_name['CMsgArcanaVotes'] = _CMSGARCANAVOTES
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestArcanaVotesRemaining'] = _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAINING
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestArcanaVotesRemainingResponse'] = _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestEventPointLog'] = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOG
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestEventPointLogResponse'] = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCPublishUserStat'] = _CMSGCLIENTTOGCPUBLISHUSERSTAT
+DESCRIPTOR.message_types_by_name['CMsgClientToGCAddTI6TreeProgress'] = _CMSGCLIENTTOGCADDTI6TREEPROGRESS
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRedeemReward'] = _CMSGCLIENTTOGCREDEEMREWARD
+DESCRIPTOR.message_types_by_name['CMsgGCToClientRedeemRewardResponse'] = _CMSGGCTOCLIENTREDEEMREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestLinaPlaysRemaining'] = _CMSGCLIENTTOGCREQUESTLINAPLAYSREMAINING
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestLinaPlaysRemainingResponse'] = _CMSGCLIENTTOGCREQUESTLINAPLAYSREMAININGRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestLinaGameResult'] = _CMSGCLIENTTOGCREQUESTLINAGAMERESULT
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestLinaGameResultResponse'] = _CMSGCLIENTTOGCREQUESTLINAGAMERESULTRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgGCToClientQuestProgressUpdated'] = _CMSGGCTOCLIENTQUESTPROGRESSUPDATED
+DESCRIPTOR.message_types_by_name['CMsgDOTARedeemItem'] = _CMSGDOTAREDEEMITEM
+DESCRIPTOR.message_types_by_name['CMsgDOTARedeemItemResponse'] = _CMSGDOTAREDEEMITEMRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgPerfectWorldUserLookupRequest'] = _CMSGPERFECTWORLDUSERLOOKUPREQUEST
+DESCRIPTOR.message_types_by_name['CMsgPerfectWorldUserLookupResponse'] = _CMSGPERFECTWORLDUSERLOOKUPRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgNexonPartnerUpdate'] = _CMSGNEXONPARTNERUPDATE
+DESCRIPTOR.message_types_by_name['CMsgMakeOffering'] = _CMSGMAKEOFFERING
+DESCRIPTOR.message_types_by_name['CMsgRequestOfferings'] = _CMSGREQUESTOFFERINGS
+DESCRIPTOR.message_types_by_name['CMsgRequestOfferingsResponse'] = _CMSGREQUESTOFFERINGSRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgDOTAPCBangTimedReward'] = _CMSGDOTAPCBANGTIMEDREWARD
 
 class CMsgClientSuspended(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _CMSGCLIENTSUSPENDED
 
   # @@protoc_insertion_point(class_scope:CMsgClientSuspended)
-
-class CMsgPracticeLobbySetDetails(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYSETDETAILS
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbySetDetails)
-
-class CMsgPracticeLobbyCreate(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class SaveGame(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGPRACTICELOBBYCREATE_SAVEGAME
-
-    # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyCreate.SaveGame)
-  DESCRIPTOR = _CMSGPRACTICELOBBYCREATE
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyCreate)
-
-class CMsgPracticeLobbySetTeamSlot(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYSETTEAMSLOT
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbySetTeamSlot)
-
-class CMsgPracticeLobbySetCoach(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYSETCOACH
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbySetCoach)
-
-class CMsgPracticeLobbyJoinBroadcastChannel(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYJOINBROADCASTCHANNEL
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyJoinBroadcastChannel)
-
-class CMsgPracticeLobbyCloseBroadcastChannel(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYCLOSEBROADCASTCHANNEL
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyCloseBroadcastChannel)
-
-class CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYTOGGLEBROADCASTCHANNELCAMERAMANSTATUS
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus)
-
-class CMsgPracticeLobbyKick(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYKICK
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyKick)
-
-class CMsgPracticeLobbyKickFromTeam(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYKICKFROMTEAM
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyKickFromTeam)
-
-class CMsgPracticeLobbyLeave(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYLEAVE
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyLeave)
-
-class CMsgPracticeLobbyLaunch(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYLAUNCH
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyLaunch)
-
-class CMsgApplyTeamToPracticeLobby(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAPPLYTEAMTOPRACTICELOBBY
-
-  # @@protoc_insertion_point(class_scope:CMsgApplyTeamToPracticeLobby)
-
-class CMsgClearPracticeLobbyTeam(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLEARPRACTICELOBBYTEAM
-
-  # @@protoc_insertion_point(class_scope:CMsgClearPracticeLobbyTeam)
-
-class CMsgPracticeLobbyList(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYLIST
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyList)
-
-class CMsgPracticeLobbyListResponseEntry(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class CLobbyMember(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGPRACTICELOBBYLISTRESPONSEENTRY_CLOBBYMEMBER
-
-    # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyListResponseEntry.CLobbyMember)
-  DESCRIPTOR = _CMSGPRACTICELOBBYLISTRESPONSEENTRY
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyListResponseEntry)
-
-class CMsgPracticeLobbyListResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYLISTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyListResponse)
-
-class CMsgLobbyList(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGLOBBYLIST
-
-  # @@protoc_insertion_point(class_scope:CMsgLobbyList)
-
-class CMsgLobbyListResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGLOBBYLISTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgLobbyListResponse)
-
-class CMsgPracticeLobbyJoin(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYJOIN
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyJoin)
-
-class CMsgPracticeLobbyJoinResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPRACTICELOBBYJOINRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgPracticeLobbyJoinResponse)
-
-class CMsgFriendPracticeLobbyListRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGFRIENDPRACTICELOBBYLISTREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgFriendPracticeLobbyListRequest)
-
-class CMsgFriendPracticeLobbyListResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGFRIENDPRACTICELOBBYLISTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgFriendPracticeLobbyListResponse)
-
-class CMsgGuildmatePracticeLobbyListRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGUILDMATEPRACTICELOBBYLISTREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgGuildmatePracticeLobbyListRequest)
-
-class CMsgGuildmatePracticeLobbyListResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGUILDMATEPRACTICELOBBYLISTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgGuildmatePracticeLobbyListResponse)
-
-class CMsgJoinableCustomGameModesRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGJOINABLECUSTOMGAMEMODESREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgJoinableCustomGameModesRequest)
-
-class CMsgJoinableCustomGameModesResponseEntry(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGJOINABLECUSTOMGAMEMODESRESPONSEENTRY
-
-  # @@protoc_insertion_point(class_scope:CMsgJoinableCustomGameModesResponseEntry)
-
-class CMsgJoinableCustomGameModesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGJOINABLECUSTOMGAMEMODESRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgJoinableCustomGameModesResponse)
-
-class CMsgJoinableCustomLobbiesRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGJOINABLECUSTOMLOBBIESREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgJoinableCustomLobbiesRequest)
-
-class CMsgJoinableCustomLobbiesResponseEntry(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGJOINABLECUSTOMLOBBIESRESPONSEENTRY
-
-  # @@protoc_insertion_point(class_scope:CMsgJoinableCustomLobbiesResponseEntry)
-
-class CMsgJoinableCustomLobbiesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGJOINABLECUSTOMLOBBIESRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgJoinableCustomLobbiesResponse)
-
-class CMsgQuickJoinCustomLobby(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class LegacyRegionPing(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGQUICKJOINCUSTOMLOBBY_LEGACYREGIONPING
-
-    # @@protoc_insertion_point(class_scope:CMsgQuickJoinCustomLobby.LegacyRegionPing)
-  DESCRIPTOR = _CMSGQUICKJOINCUSTOMLOBBY
-
-  # @@protoc_insertion_point(class_scope:CMsgQuickJoinCustomLobby)
-
-class CMsgQuickJoinCustomLobbyResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGQUICKJOINCUSTOMLOBBYRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgQuickJoinCustomLobbyResponse)
-
-class CMsgBotGameCreate(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGBOTGAMECREATE
-
-  # @@protoc_insertion_point(class_scope:CMsgBotGameCreate)
-
-class CMsgCustomGameCreate(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCUSTOMGAMECREATE
-
-  # @@protoc_insertion_point(class_scope:CMsgCustomGameCreate)
-
-class CMsgEventGameCreate(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGEVENTGAMECREATE
-
-  # @@protoc_insertion_point(class_scope:CMsgEventGameCreate)
 
 class CMsgRequestInternationalTicket(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
@@ -21039,65 +12591,11 @@ class CMsgInitialQuestionnaireResponse(_message.Message):
 
   # @@protoc_insertion_point(class_scope:CMsgInitialQuestionnaireResponse)
 
-class CMsgDOTAMatch(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Player(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-    class CustomGameData(_message.Message):
-      __metaclass__ = _reflection.GeneratedProtocolMessageType
-      DESCRIPTOR = _CMSGDOTAMATCH_PLAYER_CUSTOMGAMEDATA
-
-      # @@protoc_insertion_point(class_scope:CMsgDOTAMatch.Player.CustomGameData)
-    DESCRIPTOR = _CMSGDOTAMATCH_PLAYER
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAMatch.Player)
-
-  class BroadcasterInfo(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAMATCH_BROADCASTERINFO
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAMatch.BroadcasterInfo)
-
-  class BroadcasterChannel(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAMATCH_BROADCASTERCHANNEL
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAMatch.BroadcasterChannel)
-
-  class CustomGameData(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAMATCH_CUSTOMGAMEDATA
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAMatch.CustomGameData)
-  DESCRIPTOR = _CMSGDOTAMATCH
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAMatch)
-
 class CMsgDOTAPlayerMatchHistory(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _CMSGDOTAPLAYERMATCHHISTORY
 
   # @@protoc_insertion_point(class_scope:CMsgDOTAPlayerMatchHistory)
-
-class CMsgDOTAMatchMinimal(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Player(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAMATCHMINIMAL_PLAYER
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAMatchMinimal.Player)
-
-  class League(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAMATCHMINIMAL_LEAGUE
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAMatchMinimal.League)
-  DESCRIPTOR = _CMSGDOTAMATCHMINIMAL
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAMatchMinimal)
 
 class CMsgDOTAMatchHistoryFilter(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
@@ -21128,570 +12626,6 @@ class CMsgDOTAPopup(_message.Message):
   DESCRIPTOR = _CMSGDOTAPOPUP
 
   # @@protoc_insertion_point(class_scope:CMsgDOTAPopup)
-
-class CMsgDOTATeamMemberSDO(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMMEMBERSDO
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamMemberSDO)
-
-class CMsgDOTATeamAdminSDO(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMADMINSDO
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamAdminSDO)
-
-class CMsgDOTATeamMember(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMMEMBER
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamMember)
-
-class CMsgDOTATeam(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAM
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeam)
-
-class CMsgDOTATeamsInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMSINFO
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamsInfo)
-
-class CMsgDOTACreateTeam(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACREATETEAM
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTACreateTeam)
-
-class CMsgDOTACreateTeamResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACREATETEAMRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTACreateTeamResponse)
-
-class CMsgDOTAEditTeam(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAEDITTEAM
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAEditTeam)
-
-class CMsgDOTAEditTeamLogo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAEDITTEAMLOGO
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAEditTeamLogo)
-
-class CMsgDOTAEditTeamLogoResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAEDITTEAMLOGORESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAEditTeamLogoResponse)
-
-class CMsgDOTAEditTeamDetails(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAEDITTEAMDETAILS
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAEditTeamDetails)
-
-class CMsgDOTAEditTeamDetailsResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAEDITTEAMDETAILSRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAEditTeamDetailsResponse)
-
-class CMsgDOTADisbandTeam(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTADISBANDTEAM
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTADisbandTeam)
-
-class CMsgDOTADisbandTeamResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTADISBANDTEAMRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTADisbandTeamResponse)
-
-class CMsgDOTARequestTeamData(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAREQUESTTEAMDATA
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTARequestTeamData)
-
-class CMsgDOTARequestTeamDataResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAREQUESTTEAMDATARESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTARequestTeamDataResponse)
-
-class CMsgDOTATeamData(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMDATA
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamData)
-
-class CMsgDOTATeamProfileRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMPROFILEREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamProfileRequest)
-
-class CMsgDOTATeamMemberProfileRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMMEMBERPROFILEREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamMemberProfileRequest)
-
-class CMsgDOTATeamIDByNameRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMIDBYNAMEREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamIDByNameRequest)
-
-class CMsgDOTATeamIDByNameResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMIDBYNAMERESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamIDByNameResponse)
-
-class CMsgDOTATeamProfileResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMPROFILERESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamProfileResponse)
-
-class CMsgDOTAProTeamListRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAPROTEAMLISTREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAProTeamListRequest)
-
-class CMsgDOTAProTeamListResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class TeamEntry(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAPROTEAMLISTRESPONSE_TEAMENTRY
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAProTeamListResponse.TeamEntry)
-  DESCRIPTOR = _CMSGDOTAPROTEAMLISTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAProTeamListResponse)
-
-class CMsgDOTATeamInvite_InviterToGC(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMINVITE_INVITERTOGC
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamInvite_InviterToGC)
-
-class CMsgDOTATeamInvite_GCImmediateResponseToInviter(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamInvite_GCImmediateResponseToInviter)
-
-class CMsgDOTATeamInvite_GCRequestToInvitee(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMINVITE_GCREQUESTTOINVITEE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamInvite_GCRequestToInvitee)
-
-class CMsgDOTATeamInvite_InviteeResponseToGC(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMINVITE_INVITEERESPONSETOGC
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamInvite_InviteeResponseToGC)
-
-class CMsgDOTATeamInvite_GCResponseToInviter(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMINVITE_GCRESPONSETOINVITER
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamInvite_GCResponseToInviter)
-
-class CMsgDOTATeamInvite_GCResponseToInvitee(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamInvite_GCResponseToInvitee)
-
-class CMsgDOTATeamOnProfile(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATEAMONPROFILE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATeamOnProfile)
-
-class CMsgDOTAKickTeamMember(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAKICKTEAMMEMBER
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAKickTeamMember)
-
-class CMsgDOTAKickTeamMemberResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAKICKTEAMMEMBERRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAKickTeamMemberResponse)
-
-class CMsgDOTATransferTeamAdmin(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATRANSFERTEAMADMIN
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATransferTeamAdmin)
-
-class CMsgDOTATransferTeamAdminResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTATRANSFERTEAMADMINRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTATransferTeamAdminResponse)
-
-class CMsgDOTALeaveTeam(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTALEAVETEAM
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTALeaveTeam)
-
-class CMsgDOTALeaveTeamResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTALEAVETEAMRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTALeaveTeamResponse)
-
-class CMsgDOTABetaParticipation(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTABETAPARTICIPATION
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTABetaParticipation)
-
-class CMsgDOTAJoinChatChannel(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAJOINCHATCHANNEL
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAJoinChatChannel)
-
-class CMsgDOTALeaveChatChannel(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTALEAVECHATCHANNEL
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTALeaveChatChannel)
-
-class CMsgDOTAClientIgnoredUser(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACLIENTIGNOREDUSER
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAClientIgnoredUser)
-
-class CMsgDOTAChatMessage(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class DiceRoll(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTACHATMESSAGE_DICEROLL
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAChatMessage.DiceRoll)
-  DESCRIPTOR = _CMSGDOTACHATMESSAGE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatMessage)
-
-class CMsgDOTAChatMember(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACHATMEMBER
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatMember)
-
-class CMsgDOTAJoinChatChannelResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAJOINCHATCHANNELRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAJoinChatChannelResponse)
-
-class CMsgDOTAChatChannelFullUpdate(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACHATCHANNELFULLUPDATE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatChannelFullUpdate)
-
-class CMsgDOTAOtherJoinedChatChannel(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAOTHERJOINEDCHATCHANNEL
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAOtherJoinedChatChannel)
-
-class CMsgDOTAOtherLeftChatChannel(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAOTHERLEFTCHATCHANNEL
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAOtherLeftChatChannel)
-
-class CMsgDOTAChatChannelMemberUpdate(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class JoinedMember(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAChatChannelMemberUpdate.JoinedMember)
-  DESCRIPTOR = _CMSGDOTACHATCHANNELMEMBERUPDATE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatChannelMemberUpdate)
-
-class CMsgDOTARequestChatChannelList(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAREQUESTCHATCHANNELLIST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTARequestChatChannelList)
-
-class CMsgDOTARequestChatChannelListResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class ChatChannel(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTARequestChatChannelListResponse.ChatChannel)
-  DESCRIPTOR = _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTARequestChatChannelListResponse)
-
-class CMsgDOTAChatGetUserList(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACHATGETUSERLIST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetUserList)
-
-class CMsgDOTAChatGetUserListResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Member(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetUserListResponse.Member)
-  DESCRIPTOR = _CMSGDOTACHATGETUSERLISTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetUserListResponse)
-
-class CMsgDOTAChatGetMemberCount(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACHATGETMEMBERCOUNT
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetMemberCount)
-
-class CMsgDOTAChatGetMemberCountResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACHATGETMEMBERCOUNTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetMemberCountResponse)
-
-class CMsgDOTAChatRegionsEnabled(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Region(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTACHATREGIONSENABLED_REGION
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAChatRegionsEnabled.Region)
-  DESCRIPTOR = _CMSGDOTACHATREGIONSENABLED
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatRegionsEnabled)
-
-class CMsgDOTAGuildSDO(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Member(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAGUILDSDO_MEMBER
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAGuildSDO.Member)
-
-  class Invitation(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAGUILDSDO_INVITATION
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAGuildSDO.Invitation)
-  DESCRIPTOR = _CMSGDOTAGUILDSDO
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildSDO)
-
-class CMsgDOTAGuildAuditSDO(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Entry(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAGUILDAUDITSDO_ENTRY
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAGuildAuditSDO.Entry)
-  DESCRIPTOR = _CMSGDOTAGUILDAUDITSDO
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildAuditSDO)
-
-class CMsgDOTAAccountGuildMembershipsSDO(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Membership(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAAccountGuildMembershipsSDO.Membership)
-
-  class Invitation(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAAccountGuildMembershipsSDO.Invitation)
-  DESCRIPTOR = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAAccountGuildMembershipsSDO)
-
-class CMsgDOTAGuildCreateRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDCREATEREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildCreateRequest)
-
-class CMsgDOTAGuildCreateResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDCREATERESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildCreateResponse)
-
-class CMsgDOTAGuildSetAccountRoleRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDSETACCOUNTROLEREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildSetAccountRoleRequest)
-
-class CMsgDOTAGuildSetAccountRoleResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDSETACCOUNTROLERESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildSetAccountRoleResponse)
-
-class CMsgDOTAGuildInviteAccountRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDINVITEACCOUNTREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildInviteAccountRequest)
-
-class CMsgDOTAGuildInviteAccountResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDINVITEACCOUNTRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildInviteAccountResponse)
-
-class CMsgDOTAGuildCancelInviteRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDCANCELINVITEREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildCancelInviteRequest)
-
-class CMsgDOTAGuildCancelInviteResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDCANCELINVITERESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildCancelInviteResponse)
-
-class CMsgDOTAGuildUpdateDetailsRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDUPDATEDETAILSREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildUpdateDetailsRequest)
-
-class CMsgDOTAGuildUpdateDetailsResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDUPDATEDETAILSRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildUpdateDetailsResponse)
-
-class CMsgDOTAGCToGCUpdateOpenGuildPartyRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGCToGCUpdateOpenGuildPartyRequest)
-
-class CMsgDOTAGCToGCUpdateOpenGuildPartyResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGCToGCUpdateOpenGuildPartyResponse)
-
-class CMsgDOTAGCToGCDestroyOpenGuildPartyRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGCToGCDestroyOpenGuildPartyRequest)
-
-class CMsgDOTAGCToGCDestroyOpenGuildPartyResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGCToGCDestroyOpenGuildPartyResponse)
-
-class CMsgDOTAPartySetOpenGuildRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAPARTYSETOPENGUILDREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAPartySetOpenGuildRequest)
-
-class CMsgDOTAPartySetOpenGuildResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAPARTYSETOPENGUILDRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAPartySetOpenGuildResponse)
-
-class CMsgDOTAJoinOpenGuildPartyRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAJOINOPENGUILDPARTYREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAJoinOpenGuildPartyRequest)
-
-class CMsgDOTAJoinOpenGuildPartyResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAJOINOPENGUILDPARTYRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAJoinOpenGuildPartyResponse)
-
-class CMsgDOTAGuildOpenPartyRefresh(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class OpenParty(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY
-
-    # @@protoc_insertion_point(class_scope:CMsgDOTAGuildOpenPartyRefresh.OpenParty)
-  DESCRIPTOR = _CMSGDOTAGUILDOPENPARTYREFRESH
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildOpenPartyRefresh)
-
-class CMsgDOTARequestGuildData(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAREQUESTGUILDDATA
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTARequestGuildData)
-
-class CMsgDOTAGuildInviteData(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDINVITEDATA
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildInviteData)
-
-class CMsgDOTAGuildUpdateMessage(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDUPDATEMESSAGE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildUpdateMessage)
-
-class CMsgDOTAGuildEditLogoRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDEDITLOGOREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildEditLogoRequest)
-
-class CMsgDOTAGuildEditLogoResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGUILDEDITLOGORESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGuildEditLogoResponse)
 
 class CMsgDOTAReportsRemainingRequest(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
@@ -21729,6 +12663,30 @@ class CMsgDOTAReportCountsResponse(_message.Message):
 
   # @@protoc_insertion_point(class_scope:CMsgDOTAReportCountsResponse)
 
+class CMsgDOTASubmitLobbyMVPVote(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGDOTASUBMITLOBBYMVPVOTE
+
+  # @@protoc_insertion_point(class_scope:CMsgDOTASubmitLobbyMVPVote)
+
+class CMsgDOTASubmitLobbyMVPVoteResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGDOTASUBMITLOBBYMVPVOTERESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgDOTASubmitLobbyMVPVoteResponse)
+
+class CMsgDOTALobbyMVPNotifyRecipient(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGDOTALOBBYMVPNOTIFYRECIPIENT
+
+  # @@protoc_insertion_point(class_scope:CMsgDOTALobbyMVPNotifyRecipient)
+
+class CMsgDOTALobbyMVPAwarded(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGDOTALOBBYMVPAWARDED
+
+  # @@protoc_insertion_point(class_scope:CMsgDOTALobbyMVPAwarded)
+
 class CMsgDOTAKickedFromMatchmakingQueue(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _CMSGDOTAKICKEDFROMMATCHMAKINGQUEUE
@@ -21746,30 +12704,6 @@ class CMsgDOTARequestSaveGamesResponse(_message.Message):
   DESCRIPTOR = _CMSGDOTAREQUESTSAVEGAMESRESPONSE
 
   # @@protoc_insertion_point(class_scope:CMsgDOTARequestSaveGamesResponse)
-
-class CMsgWatchGame(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGWATCHGAME
-
-  # @@protoc_insertion_point(class_scope:CMsgWatchGame)
-
-class CMsgCancelWatchGame(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCANCELWATCHGAME
-
-  # @@protoc_insertion_point(class_scope:CMsgCancelWatchGame)
-
-class CMsgWatchGameResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGWATCHGAMERESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgWatchGameResponse)
-
-class CMsgPartyLeaderWatchGamePrompt(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPARTYLEADERWATCHGAMEPROMPT
-
-  # @@protoc_insertion_point(class_scope:CMsgPartyLeaderWatchGamePrompt)
 
 class CMsgGCMatchDetailsRequest(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
@@ -22499,6 +13433,12 @@ class CMsgGCLeagueAdminState(_message.Message):
 
 class CMsgGCPlayerInfoRequest(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
+
+  class PlayerInfo(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGGCPLAYERINFOREQUEST_PLAYERINFO
+
+    # @@protoc_insertion_point(class_scope:CMsgGCPlayerInfoRequest.PlayerInfo)
   DESCRIPTOR = _CMSGGCPLAYERINFOREQUEST
 
   # @@protoc_insertion_point(class_scope:CMsgGCPlayerInfoRequest)
@@ -22514,48 +13454,6 @@ class CMsgGCPlayerInfoSubmitResponse(_message.Message):
   DESCRIPTOR = _CMSGGCPLAYERINFOSUBMITRESPONSE
 
   # @@protoc_insertion_point(class_scope:CMsgGCPlayerInfoSubmitResponse)
-
-class CMsgSerializedSOCache(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class TypeCache(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGSERIALIZEDSOCACHE_TYPECACHE
-
-    # @@protoc_insertion_point(class_scope:CMsgSerializedSOCache.TypeCache)
-
-  class Cache(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-    class Version(_message.Message):
-      __metaclass__ = _reflection.GeneratedProtocolMessageType
-      DESCRIPTOR = _CMSGSERIALIZEDSOCACHE_CACHE_VERSION
-
-      # @@protoc_insertion_point(class_scope:CMsgSerializedSOCache.Cache.Version)
-    DESCRIPTOR = _CMSGSERIALIZEDSOCACHE_CACHE
-
-    # @@protoc_insertion_point(class_scope:CMsgSerializedSOCache.Cache)
-  DESCRIPTOR = _CMSGSERIALIZEDSOCACHE
-
-  # @@protoc_insertion_point(class_scope:CMsgSerializedSOCache)
-
-class CMsgRequestWeekendTourneySchedule(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGREQUESTWEEKENDTOURNEYSCHEDULE
-
-  # @@protoc_insertion_point(class_scope:CMsgRequestWeekendTourneySchedule)
-
-class CMsgWeekendTourneySchedule(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Division(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGWEEKENDTOURNEYSCHEDULE_DIVISION
-
-    # @@protoc_insertion_point(class_scope:CMsgWeekendTourneySchedule.Division)
-  DESCRIPTOR = _CMSGWEEKENDTOURNEYSCHEDULE
-
-  # @@protoc_insertion_point(class_scope:CMsgWeekendTourneySchedule)
 
 class CMsgClientProvideSurveyResult(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
@@ -22869,48 +13767,6 @@ class CMsgGCToClientSocialMatchDetailsResponse(_message.Message):
 
   # @@protoc_insertion_point(class_scope:CMsgGCToClientSocialMatchDetailsResponse)
 
-class CMsgDOTAPartyMemberSetCoach(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAPARTYMEMBERSETCOACH
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAPartyMemberSetCoach)
-
-class CMsgDOTASetGroupLeader(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTASETGROUPLEADER
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTASetGroupLeader)
-
-class CMsgDOTACancelGroupInvites(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTACANCELGROUPINVITES
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTACancelGroupInvites)
-
-class CMsgDOTASetGroupOpenStatus(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTASETGROUPOPENSTATUS
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTASetGroupOpenStatus)
-
-class CMsgDOTAGroupMergeInvite(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGROUPMERGEINVITE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGroupMergeInvite)
-
-class CMsgDOTAGroupMergeResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGROUPMERGERESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGroupMergeResponse)
-
-class CMsgDOTAGroupMergeReply(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDOTAGROUPMERGEREPLY
-
-  # @@protoc_insertion_point(class_scope:CMsgDOTAGroupMergeReply)
-
 class CMsgDOTAPartyRichPresence(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
 
@@ -22919,6 +13775,12 @@ class CMsgDOTAPartyRichPresence(_message.Message):
     DESCRIPTOR = _CMSGDOTAPARTYRICHPRESENCE_MEMBER
 
     # @@protoc_insertion_point(class_scope:CMsgDOTAPartyRichPresence.Member)
+
+  class WeekendTourney(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGDOTAPARTYRICHPRESENCE_WEEKENDTOURNEY
+
+    # @@protoc_insertion_point(class_scope:CMsgDOTAPartyRichPresence.WeekendTourney)
   DESCRIPTOR = _CMSGDOTAPARTYRICHPRESENCE
 
   # @@protoc_insertion_point(class_scope:CMsgDOTAPartyRichPresence)
@@ -22970,30 +13832,6 @@ class CMsgClientToGCApplyGemCombiner(_message.Message):
   DESCRIPTOR = _CMSGCLIENTTOGCAPPLYGEMCOMBINER
 
   # @@protoc_insertion_point(class_scope:CMsgClientToGCApplyGemCombiner)
-
-class CDummyUnbreakMessage(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CDUMMYUNBREAKMESSAGE
-
-  # @@protoc_insertion_point(class_scope:CDummyUnbreakMessage)
-
-class CDOTAReplayDownloadInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Highlight(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT
-
-    # @@protoc_insertion_point(class_scope:CDOTAReplayDownloadInfo.Highlight)
-  DESCRIPTOR = _CDOTAREPLAYDOWNLOADINFO
-
-  # @@protoc_insertion_point(class_scope:CDOTAReplayDownloadInfo)
-
-class CDOTABroadcasterInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CDOTABROADCASTERINFO
-
-  # @@protoc_insertion_point(class_scope:CDOTABroadcasterInfo)
 
 class CMsgClientToGCH264Unsupported(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
@@ -23049,54 +13887,6 @@ class CMsgGCGetHeroStatsHistoryResponse(_message.Message):
 
   # @@protoc_insertion_point(class_scope:CMsgGCGetHeroStatsHistoryResponse)
 
-class CMsgClientToGCPrivateChatInvite(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATINVITE
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatInvite)
-
-class CMsgClientToGCPrivateChatKick(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATKICK
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatKick)
-
-class CMsgClientToGCPrivateChatPromote(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATPROMOTE
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatPromote)
-
-class CMsgClientToGCPrivateChatDemote(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATDEMOTE
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatDemote)
-
-class CMsgGCToClientPrivateChatResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTPRIVATECHATRESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientPrivateChatResponse)
-
-class CMsgClientToGCPrivateChatInfoRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATINFOREQUEST
-
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatInfoRequest)
-
-class CMsgGCToClientPrivateChatInfoResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-
-  class Member(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE_MEMBER
-
-    # @@protoc_insertion_point(class_scope:CMsgGCToClientPrivateChatInfoResponse.Member)
-  DESCRIPTOR = _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE
-
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientPrivateChatInfoResponse)
-
 class CMsgPlayerConductScorecardRequest(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _CMSGPLAYERCONDUCTSCORECARDREQUEST
@@ -23120,6 +13910,18 @@ class CMsgGCToClientWageringResponse(_message.Message):
   DESCRIPTOR = _CMSGGCTOCLIENTWAGERINGRESPONSE
 
   # @@protoc_insertion_point(class_scope:CMsgGCToClientWageringResponse)
+
+class CMsgGCToClientWageringUpdate(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGGCTOCLIENTWAGERINGUPDATE
+
+  # @@protoc_insertion_point(class_scope:CMsgGCToClientWageringUpdate)
+
+class CMsgGCToClientArcanaVotesUpdate(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGGCTOCLIENTARCANAVOTESUPDATE
+
+  # @@protoc_insertion_point(class_scope:CMsgGCToClientArcanaVotesUpdate)
 
 class CMsgClientToGCMysteryItem(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
@@ -23235,11 +14037,273 @@ class CMsgMVPVotesForMatch(_message.Message):
 
   # @@protoc_insertion_point(class_scope:CMsgMVPVotesForMatch)
 
+class CMsgLeaguePrizePool(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGLEAGUEPRIZEPOOL
+
+  # @@protoc_insertion_point(class_scope:CMsgLeaguePrizePool)
+
+class CMsgClientToGCTeammateStatsRequest(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCTEAMMATESTATSREQUEST
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCTeammateStatsRequest)
+
+class CMsgClientToGCTeammateStatsResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+
+  class TeammateStat(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCTEAMMATESTATSRESPONSE_TEAMMATESTAT
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCTeammateStatsResponse.TeammateStat)
+  DESCRIPTOR = _CMSGCLIENTTOGCTEAMMATESTATSRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCTeammateStatsResponse)
+
+class CMsgClientToGCGetGiftPermissions(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCGETGIFTPERMISSIONS
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCGetGiftPermissions)
+
+class CMsgClientToGCGetGiftPermissionsResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCGETGIFTPERMISSIONSRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCGetGiftPermissionsResponse)
+
+class CMsgClientToGCVoteForArcana(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+
+  class MatchVote(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCVOTEFORARCANA_MATCHVOTE
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCVoteForArcana.MatchVote)
+  DESCRIPTOR = _CMSGCLIENTTOGCVOTEFORARCANA
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCVoteForArcana)
+
+class CMsgClientToGCVoteForArcanaResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCVOTEFORARCANARESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCVoteForArcanaResponse)
+
+class CMsgArcanaVotes(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+
+  class Match(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGARCANAVOTES_MATCH
+
+    # @@protoc_insertion_point(class_scope:CMsgArcanaVotes.Match)
+  DESCRIPTOR = _CMSGARCANAVOTES
+
+  # @@protoc_insertion_point(class_scope:CMsgArcanaVotes)
+
+class CMsgClientToGCRequestArcanaVotesRemaining(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAINING
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestArcanaVotesRemaining)
+
+class CMsgClientToGCRequestArcanaVotesRemainingResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+
+  class MatchVote(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE_MATCHVOTE
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestArcanaVotesRemainingResponse.MatchVote)
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestArcanaVotesRemainingResponse)
+
+class CMsgClientToGCRequestEventPointLog(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOG
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLog)
+
+class CMsgClientToGCRequestEventPointLogResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+
+  class QuestChallengeEvent(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_QUESTCHALLENGEEVENT
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse.QuestChallengeEvent)
+
+  class WagerWonEvent(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WAGERWONEVENT
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse.WagerWonEvent)
+
+  class TipGivenEvent(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPGIVENEVENT
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse.TipGivenEvent)
+
+  class TipReceivedEvent(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPRECEIVEDEVENT
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse.TipReceivedEvent)
+
+  class RecycledItemEvent(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_RECYCLEDITEMEVENT
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse.RecycledItemEvent)
+
+  class AchievementEvent(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_ACHIEVEMENTEVENT
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse.AchievementEvent)
+
+  class MysteryItemReceivedEvent(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_MYSTERYITEMRECEIVEDEVENT
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse.MysteryItemReceivedEvent)
+
+  class EventPointTransaction(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION
+
+    # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction)
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestEventPointLogResponse)
+
+class CMsgClientToGCPublishUserStat(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCPUBLISHUSERSTAT
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCPublishUserStat)
+
+class CMsgClientToGCAddTI6TreeProgress(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCADDTI6TREEPROGRESS
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCAddTI6TreeProgress)
+
+class CMsgClientToGCRedeemReward(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCREDEEMREWARD
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRedeemReward)
+
+class CMsgGCToClientRedeemRewardResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGGCTOCLIENTREDEEMREWARDRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgGCToClientRedeemRewardResponse)
+
+class CMsgClientToGCRequestLinaPlaysRemaining(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTLINAPLAYSREMAINING
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestLinaPlaysRemaining)
+
+class CMsgClientToGCRequestLinaPlaysRemainingResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTLINAPLAYSREMAININGRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestLinaPlaysRemainingResponse)
+
+class CMsgClientToGCRequestLinaGameResult(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTLINAGAMERESULT
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestLinaGameResult)
+
+class CMsgClientToGCRequestLinaGameResultResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTLINAGAMERESULTRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgClientToGCRequestLinaGameResultResponse)
+
+class CMsgGCToClientQuestProgressUpdated(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+
+  class Challenge(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGGCTOCLIENTQUESTPROGRESSUPDATED_CHALLENGE
+
+    # @@protoc_insertion_point(class_scope:CMsgGCToClientQuestProgressUpdated.Challenge)
+  DESCRIPTOR = _CMSGGCTOCLIENTQUESTPROGRESSUPDATED
+
+  # @@protoc_insertion_point(class_scope:CMsgGCToClientQuestProgressUpdated)
+
+class CMsgDOTARedeemItem(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGDOTAREDEEMITEM
+
+  # @@protoc_insertion_point(class_scope:CMsgDOTARedeemItem)
+
+class CMsgDOTARedeemItemResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGDOTAREDEEMITEMRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgDOTARedeemItemResponse)
+
+class CMsgPerfectWorldUserLookupRequest(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGPERFECTWORLDUSERLOOKUPREQUEST
+
+  # @@protoc_insertion_point(class_scope:CMsgPerfectWorldUserLookupRequest)
+
+class CMsgPerfectWorldUserLookupResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGPERFECTWORLDUSERLOOKUPRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgPerfectWorldUserLookupResponse)
+
+class CMsgNexonPartnerUpdate(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGNEXONPARTNERUPDATE
+
+  # @@protoc_insertion_point(class_scope:CMsgNexonPartnerUpdate)
+
+class CMsgMakeOffering(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGMAKEOFFERING
+
+  # @@protoc_insertion_point(class_scope:CMsgMakeOffering)
+
+class CMsgRequestOfferings(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGREQUESTOFFERINGS
+
+  # @@protoc_insertion_point(class_scope:CMsgRequestOfferings)
+
+class CMsgRequestOfferingsResponse(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+
+  class NewYearsOffering(_message.Message):
+    __metaclass__ = _reflection.GeneratedProtocolMessageType
+    DESCRIPTOR = _CMSGREQUESTOFFERINGSRESPONSE_NEWYEARSOFFERING
+
+    # @@protoc_insertion_point(class_scope:CMsgRequestOfferingsResponse.NewYearsOffering)
+  DESCRIPTOR = _CMSGREQUESTOFFERINGSRESPONSE
+
+  # @@protoc_insertion_point(class_scope:CMsgRequestOfferingsResponse)
+
+class CMsgDOTAPCBangTimedReward(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _CMSGDOTAPCBANGTIMEDREWARD
+
+  # @@protoc_insertion_point(class_scope:CMsgDOTAPCBangTimedReward)
+
 
 DESCRIPTOR.has_options = True
 DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), 'H\001\200\001\000')
-_CMSGPRACTICELOBBYLISTRESPONSEENTRY.fields_by_name['id'].has_options = True
-_CMSGPRACTICELOBBYLISTRESPONSEENTRY.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')
 _CSODOTAGAMEHEROFAVORITES.fields_by_name['account_id'].has_options = True
 _CSODOTAGAMEHEROFAVORITES.fields_by_name['account_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')
 _CSODOTAGAMEHEROFAVORITES.fields_by_name['hero_id'].has_options = True

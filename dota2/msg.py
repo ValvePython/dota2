@@ -4,10 +4,18 @@ Various utility function for dealing with messages.
 """
 
 from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg, ESOMsg
-from dota2.protobufs import gcsdk_gcmessages_pb2
-from dota2.protobufs import dota_gcmessages_common_pb2
-from dota2.protobufs import dota_gcmessages_client_pb2
-from dota2.protobufs import dota_gcmessages_client_fantasy_pb2
+from dota2.protobufs import (
+    gcsdk_gcmessages_pb2,
+    dota_gcmessages_common_pb2,
+    dota_gcmessages_client_pb2,
+    dota_gcmessages_client_chat_pb2,
+    dota_gcmessages_client_fantasy_pb2,
+    dota_gcmessages_client_guild_pb2,
+    dota_gcmessages_client_match_management_pb2,
+    dota_gcmessages_client_team_pb2,
+    dota_gcmessages_client_tournament_pb2,
+    dota_gcmessages_client_watch_pb2,
+)
 
 
 def get_emsg_enum(emsg):
@@ -51,9 +59,14 @@ def find_proto(emsg):
         return getattr(gcsdk_gcmessages_pb2, "CMsgSO%s" % emsg.name, None)
 
     for module in (gcsdk_gcmessages_pb2,
-                   dota_gcmessages_common_pb2,
                    dota_gcmessages_client_pb2,
+                   dota_gcmessages_client_chat_pb2,
                    dota_gcmessages_client_fantasy_pb2,
+                   dota_gcmessages_client_guild_pb2,
+                   dota_gcmessages_client_match_management_pb2,
+                   dota_gcmessages_client_team_pb2,
+                   dota_gcmessages_client_tournament_pb2,
+                   dota_gcmessages_client_watch_pb2,
                   ):
 
         proto = getattr(module, emsg.name.replace("EMsg", "CMsg"), None)
@@ -83,4 +96,6 @@ _proto_map_why_cant_we_name_things_properly = {
     ESOMsg.Update: gcsdk_gcmessages_pb2.CMsgSOSingleObject,
     ESOMsg.Destroy: gcsdk_gcmessages_pb2.CMsgSOSingleObject,
     ESOMsg.UpdateMultiple: gcsdk_gcmessages_pb2.CMsgSOMultipleObjects,
+    EDOTAGCMsg.EMsgClientToGCEventGoalsRequest: dota_gcmessages_client_pb2.CMsgClientToGCGetEventGoals,
+    EDOTAGCMsg.EMsgClientToGCEventGoalsResponse: dota_gcmessages_client_pb2.CMsgEventGoals,
 }

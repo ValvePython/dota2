@@ -8,11 +8,22 @@ import re
 from enum import IntEnum
 from google.protobuf.internal.enum_type_wrapper import EnumTypeWrapper
 
-_proto_modules = ['gcsystemmsgs_pb2',
-                 'gcsdk_gcmessages_pb2',
-                 'dota_gcmessages_common_pb2',
-                 'dota_gcmessages_client_pb2',
-                  ]
+_proto_modules = [
+    'base_gcmessages_pb2',
+    'dota_client_enums_pb2',
+    'dota_gcmessages_client_pb2',
+    'dota_gcmessages_client_fantasy_pb2',
+    'dota_gcmessages_client_match_management_pb2',
+    'dota_gcmessages_client_team_pb2',
+    'dota_gcmessages_client_tournament_pb2',
+    'dota_gcmessages_common_pb2',
+    'dota_gcmessages_common_match_management_pb2',
+    'dota_gcmessages_msgid_pb2',
+    'dota_shared_enums_pb2',
+    'gcsdk_gcmessages_pb2',
+    'gcsystemmsgs_pb2',
+    'steammessages_pb2',
+]
 
 _proto_module = __import__("dota2.protobufs", globals(), locals(), _proto_modules, -1)
 
@@ -37,8 +48,8 @@ class ESOType(IntEnum):
     CSOEconItem = 1
     CSOItemRecipe = 5
     CSOEconGameAccountClient = 7
-    CSOSelectedItemPreset = 35
-    CSOEconItemPresetInstance = 36
+    CSOSelectedItemPreset = 35      # no longer exists in game files
+    CSOEconItemPresetInstance = 36  # no longer exists in game files
     CSOEconItemDropRateBonus = 38
     CSOEconItemLeagueViewPass = 39
     CSOEconItemEventTicket = 40
