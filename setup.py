@@ -12,9 +12,9 @@ with open(path.join(here, 'dota2/__init__.py'), encoding='utf-8') as f:
     __version__ = f.readline().split('"')[1]
 
 install_requires = [
-    'steam>=0.6.5',
-    'gevent-eventemitter>=1.2',
-    'gevent>=1.1rc3',
+    'steam>=0.7.5',
+    'gevent-eventemitter>=1.4',
+    'gevent>=1.1',
     'protobuf>=2.6.1',
 ]
 
@@ -31,7 +31,7 @@ setup(
     author_email='rossen@rgp.io',
     license='MIT',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Topic :: Software Development :: Libraries :: Python Modules',

@@ -1,5 +1,5 @@
-enum34==1.1.2
-gevent==1.1rc3
+enum34==1.1.2; python_version < '3.4'
+gevent==1.1
 protobuf==2.6.1
-steam==0.6.5
-gevent-eventemitter==1.2
+steam==0.7.5
+gevent-eventemitter==1.4
