@@ -38,7 +38,7 @@ class SOCache(EventEmitter, dict):
 
     def __init__(self, dota_client):
         self._dota = dota_client
-        self._logger = logging.getLogger("SOCache")
+        self._LOG = logging.getLogger("SOCache")
 
         # register our handlers
         dota_client.on(ESOMsg.CacheSubscribed, self._handle_cache_subscribed)
@@ -51,20 +51,20 @@ class SOCache(EventEmitter, dict):
 
     def emit(self, event, *args):
         if event is not None:
-            self._logger.debug("Emit event: %s" % repr(event))
+            self._LOG.debug("Emit event: %s" % repr(event))
         super(SOCache, self).emit(event, *args)
 
     def _update_cache(self, cache):
         try:
             type_id = ESOType(cache.type_id)
         except ValueError:
-            self._logger.error("Unsupported type: %d" % type_id)
+            self._LOG.error("Unsupported type: %d" % type_id)
             return
 
         proto = find_so_proto(type_id)
 
         if proto is None:
-            self._logger.error("Unable to locate proto for: %s" % repr(type_id))
+            self._LOG.error("Unable to locate proto for: %s" % repr(type_id))
             return
 
         self[type_id] = map(proto.FromString, cache.object_data)
