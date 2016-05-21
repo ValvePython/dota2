@@ -59,6 +59,7 @@ def find_proto(emsg):
         return getattr(gcsdk_gcmessages_pb2, "CMsgSO%s" % emsg.name, None)
 
     for module in (gcsdk_gcmessages_pb2,
+                   dota_gcmessages_common_pb2,
                    dota_gcmessages_client_pb2,
                    dota_gcmessages_client_chat_pb2,
                    dota_gcmessages_client_fantasy_pb2,
