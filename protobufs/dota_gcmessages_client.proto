@@ -1,3 +1,4 @@
+syntax = "proto2";
 import "steammessages.proto";
 import "dota_shared_enums.proto";
 import "dota_gcmessages_common.proto";
@@ -5,7 +6,7 @@ import "gcsdk_gcmessages.proto";
 import "dota_gcmessages_common_match_management.proto";
 
 option optimize_for = SPEED;
-option cc_generic_services = false;
+option py_generic_services = false;
 
 enum DOTA_WatchReplayType {
 	DOTA_WATCH_REPLAY_NORMAL = 0;

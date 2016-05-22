@@ -1,9 +1,10 @@
+syntax = "proto2";
 import "steammessages.proto";
 import "gcsdk_gcmessages.proto";
 import "dota_shared_enums.proto";
 
 option optimize_for = SPEED;
-option cc_generic_services = false;
+option py_generic_services = false;
 
 enum ESpecialPingValue {
 	k_ESpecialPingValue_NoData = 16382;

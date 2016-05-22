@@ -5,17 +5,24 @@ from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
+from google.protobuf import symbol_database as _symbol_database
 from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
+_sym_db = _symbol_database.Default()
 
-import google.protobuf.descriptor_pb2
+
+from google.protobuf import descriptor_pb2 as google_dot_protobuf_dot_descriptor__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages.proto',
   package='',
-  serialized_pb='\n\x13steammessages.proto\x1a google/protobuf/descriptor.proto\"\xed\x02\n\x12\x43MsgProtoBufHeader\x12\x17\n\x0f\x63lient_steam_id\x18\x01 \x01(\x06\x12\x19\n\x11\x63lient_session_id\x18\x02 \x01(\x05\x12\x15\n\rsource_app_id\x18\x03 \x01(\r\x12+\n\rjob_id_source\x18\n \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\x12+\n\rjob_id_target\x18\x0b \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\x12\x17\n\x0ftarget_job_name\x18\x0c \x01(\t\x12\x12\n\x07\x65result\x18\r \x01(\x05:\x01\x32\x12\x15\n\rerror_message\x18\x0e \x01(\t\x12\x44\n\ngc_msg_src\x18\xc8\x01 \x01(\x0e\x32\x11.GCProtoBufMsgSrc:\x1cGCProtoBufMsgSrc_Unspecified\x12\x1c\n\x13gc_dir_index_source\x18\xc9\x01 \x01(\r:\n\x80\xa6\x1d\x80\x02\x88\xa6\x1d\x80\x08\"z\n\rCMsgWebAPIKey\x12\x13\n\x06status\x18\x01 \x01(\r:\x03\x32\x35\x35\x12\x15\n\naccount_id\x18\x02 \x01(\r:\x01\x30\x12\x1d\n\x12publisher_group_id\x18\x03 \x01(\r:\x01\x30\x12\x0e\n\x06key_id\x18\x04 \x01(\r\x12\x0e\n\x06\x64omain\x18\x05 \x01(\t\"\xdd\x02\n\x0f\x43MsgHttpRequest\x12\x16\n\x0erequest_method\x18\x01 \x01(\r\x12\x10\n\x08hostname\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\x12/\n\x07headers\x18\x04 \x03(\x0b\x32\x1e.CMsgHttpRequest.RequestHeader\x12/\n\nget_params\x18\x05 \x03(\x0b\x32\x1b.CMsgHttpRequest.QueryParam\x12\x30\n\x0bpost_params\x18\x06 \x03(\x0b\x32\x1b.CMsgHttpRequest.QueryParam\x12\x0c\n\x04\x62ody\x18\x07 \x01(\x0c\x12\x18\n\x10\x61\x62solute_timeout\x18\x08 \x01(\r\x1a,\n\rRequestHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a)\n\nQueryParam\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\"\xc6\x01\n\x11\x43MsgWebAPIRequest\x12\x17\n\x0fUNUSED_job_name\x18\x01 \x01(\t\x12\x16\n\x0einterface_name\x18\x02 \x01(\t\x12\x13\n\x0bmethod_name\x18\x03 \x01(\t\x12\x0f\n\x07version\x18\x04 \x01(\r\x12\x1f\n\x07\x61pi_key\x18\x05 \x01(\x0b\x32\x0e.CMsgWebAPIKey\x12!\n\x07request\x18\x06 \x01(\x0b\x32\x10.CMsgHttpRequest\x12\x16\n\x0erouting_app_id\x18\x07 \x01(\r\"\x97\x01\n\x10\x43MsgHttpResponse\x12\x13\n\x0bstatus_code\x18\x01 \x01(\r\x12\x31\n\x07headers\x18\x02 \x03(\x0b\x32 .CMsgHttpResponse.ResponseHeader\x12\x0c\n\x04\x62ody\x18\x03 \x01(\x0c\x1a-\n\x0eResponseHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"@\n\x12\x43MsgAMFindAccounts\x12\x13\n\x0bsearch_type\x18\x01 \x01(\r\x12\x15\n\rsearch_string\x18\x02 \x01(\t\".\n\x1a\x43MsgAMFindAccountsResponse\x12\x10\n\x08steam_id\x18\x01 \x03(\x06\"\x90\x01\n\x12\x43MsgNotifyWatchdog\x12\x0e\n\x06source\x18\x01 \x01(\r\x12\x12\n\nalert_type\x18\x02 \x01(\r\x12\x19\n\x11\x61lert_destination\x18\x03 \x01(\r\x12\x10\n\x08\x63ritical\x18\x04 \x01(\x08\x12\x0c\n\x04time\x18\x05 \x01(\r\x12\r\n\x05\x61ppid\x18\x06 \x01(\r\x12\x0c\n\x04text\x18\x07 \x01(\t\"$\n\x11\x43MsgAMGetLicenses\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"P\n\x12\x43MsgPackageLicense\x12\x12\n\npackage_id\x18\x01 \x01(\r\x12\x14\n\x0ctime_created\x18\x02 \x01(\r\x12\x10\n\x08owner_id\x18\x03 \x01(\r\"Q\n\x19\x43MsgAMGetLicensesResponse\x12$\n\x07license\x18\x01 \x03(\x0b\x32\x13.CMsgPackageLicense\x12\x0e\n\x06result\x18\x02 \x01(\r\"J\n\x16\x43MsgAMGetUserGameStats\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\r\n\x05stats\x18\x03 \x03(\r\"\xea\x02\n\x1e\x43MsgAMGetUserGameStatsResponse\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\x12\x34\n\x05stats\x18\x04 \x03(\x0b\x32%.CMsgAMGetUserGameStatsResponse.Stats\x12N\n\x12\x61\x63hievement_blocks\x18\x05 \x03(\x0b\x32\x32.CMsgAMGetUserGameStatsResponse.Achievement_Blocks\x1a,\n\x05Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\x1a]\n\x12\x41\x63hievement_Blocks\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x1a\n\x12\x61\x63hievement_bit_id\x18\x02 \x01(\r\x12\x13\n\x0bunlock_time\x18\x03 \x01(\x07\">\n\x14\x43MsgGCGetCommandList\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63ommand_prefix\x18\x02 \x01(\t\"4\n\x1c\x43MsgGCGetCommandListResponse\x12\x14\n\x0c\x63ommand_name\x18\x01 \x03(\t\"\"\n\x12\x43GCMsgMemCachedGet\x12\x0c\n\x04keys\x18\x01 \x03(\t\"|\n\x1a\x43GCMsgMemCachedGetResponse\x12\x34\n\x06values\x18\x01 \x03(\x0b\x32$.CGCMsgMemCachedGetResponse.ValueTag\x1a(\n\x08ValueTag\x12\r\n\x05\x66ound\x18\x01 \x01(\x08\x12\r\n\x05value\x18\x02 \x01(\x0c\"g\n\x12\x43GCMsgMemCachedSet\x12)\n\x04keys\x18\x01 \x03(\x0b\x32\x1b.CGCMsgMemCachedSet.KeyPair\x1a&\n\x07KeyPair\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\"%\n\x15\x43GCMsgMemCachedDelete\x12\x0c\n\x04keys\x18\x01 \x03(\t\"\x16\n\x14\x43GCMsgMemCachedStats\"\xb8\x02\n\x1c\x43GCMsgMemCachedStatsResponse\x12\x18\n\x10\x63urr_connections\x18\x01 \x01(\x04\x12\x0f\n\x07\x63md_get\x18\x02 \x01(\x04\x12\x0f\n\x07\x63md_set\x18\x03 \x01(\x04\x12\x11\n\tcmd_flush\x18\x04 \x01(\x04\x12\x10\n\x08get_hits\x18\x05 \x01(\x04\x12\x12\n\nget_misses\x18\x06 \x01(\x04\x12\x13\n\x0b\x64\x65lete_hits\x18\x07 \x01(\x04\x12\x15\n\rdelete_misses\x18\x08 \x01(\x04\x12\x12\n\nbytes_read\x18\t \x01(\x04\x12\x15\n\rbytes_written\x18\n \x01(\x04\x12\x16\n\x0elimit_maxbytes\x18\x0b \x01(\x04\x12\x12\n\ncurr_items\x18\x0c \x01(\x04\x12\x11\n\tevictions\x18\r \x01(\x04\x12\r\n\x05\x62ytes\x18\x0e \x01(\x04\"(\n\x0e\x43GCMsgSQLStats\x12\x16\n\x0eschema_catalog\x18\x01 \x01(\r\"\x9b\x02\n\x16\x43GCMsgSQLStatsResponse\x12\x0f\n\x07threads\x18\x01 \x01(\r\x12\x19\n\x11threads_connected\x18\x02 \x01(\r\x12\x16\n\x0ethreads_active\x18\x03 \x01(\r\x12\x1c\n\x14operations_submitted\x18\x04 \x01(\r\x12$\n\x1cprepared_statements_executed\x18\x05 \x01(\r\x12(\n non_prepared_statements_executed\x18\x06 \x01(\r\x12\x18\n\x10\x64\x65\x61\x64lock_retries\x18\x07 \x01(\r\x12%\n\x1doperations_timed_out_in_queue\x18\x08 \x01(\r\x12\x0e\n\x06\x65rrors\x18\t \x01(\r\"i\n\x14\x43MsgAMAddFreeLicense\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x11\n\tip_public\x18\x02 \x01(\r\x12\x11\n\tpackageid\x18\x03 \x01(\r\x12\x1a\n\x12store_country_code\x18\x04 \x01(\t\"c\n\x1c\x43MsgAMAddFreeLicenseResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x1e\n\x16purchase_result_detail\x18\x02 \x01(\x05\x12\x0f\n\x07transid\x18\x03 \x01(\x06\"\"\n\x13\x43GCMsgGetIPLocation\x12\x0b\n\x03ips\x18\x01 \x03(\x07\"p\n\x0f\x43IPLocationInfo\x12\n\n\x02ip\x18\x01 \x01(\r\x12\x10\n\x08latitude\x18\x02 \x01(\x02\x12\x11\n\tlongitude\x18\x03 \x01(\x02\x12\x0f\n\x07\x63ountry\x18\x04 \x01(\t\x12\r\n\x05state\x18\x05 \x01(\t\x12\x0c\n\x04\x63ity\x18\x06 \x01(\t\">\n\x1b\x43GCMsgGetIPLocationResponse\x12\x1f\n\x05infos\x18\x01 \x03(\x0b\x32\x10.CIPLocationInfo\"\x1d\n\x0e\x43GCMsgGetIPASN\x12\x0b\n\x03ips\x18\x01 \x03(\x07\"%\n\nCIPASNInfo\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0b\n\x03\x61sn\x18\x02 \x01(\r\"4\n\x16\x43GCMsgGetIPASNResponse\x12\x1a\n\x05infos\x18\x01 \x03(\x0b\x32\x0b.CIPASNInfo\"?\n\x17\x43GCMsgSystemStatsSchema\x12\x11\n\tgc_app_id\x18\x01 \x01(\r\x12\x11\n\tschema_kv\x18\x02 \x01(\x0c\"\x16\n\x14\x43GCMsgGetSystemStats\"\xc5\x02\n\x1c\x43GCMsgGetSystemStatsResponse\x12\x11\n\tgc_app_id\x18\x01 \x01(\r\x12\x10\n\x08stats_kv\x18\x02 \x01(\x0c\x12\x13\n\x0b\x61\x63tive_jobs\x18\x03 \x01(\r\x12\x15\n\ryielding_jobs\x18\x04 \x01(\r\x12\x15\n\ruser_sessions\x18\x05 \x01(\r\x12\x1c\n\x14game_server_sessions\x18\x06 \x01(\r\x12\x10\n\x08socaches\x18\x07 \x01(\r\x12\x1a\n\x12socaches_to_unload\x18\x08 \x01(\r\x12\x18\n\x10socaches_loading\x18\t \x01(\r\x12\x17\n\x0fwriteback_queue\x18\n \x01(\r\x12\x15\n\rsteamid_locks\x18\x0b \x01(\r\x12\x13\n\x0blogon_queue\x18\x0c \x01(\r\x12\x12\n\nlogon_jobs\x18\r \x01(\r\"\xe2\x02\n\x0f\x43MsgAMSendEmail\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x65mail_msg_type\x18\x02 \x01(\r\x12\x14\n\x0c\x65mail_format\x18\x03 \x01(\r\x12I\n\x13persona_name_tokens\x18\x05 \x03(\x0b\x32,.CMsgAMSendEmail.PersonaNameReplacementToken\x12\x11\n\tsource_gc\x18\x06 \x01(\r\x12\x31\n\x06tokens\x18\x07 \x03(\x0b\x32!.CMsgAMSendEmail.ReplacementToken\x1a;\n\x10ReplacementToken\x12\x12\n\ntoken_name\x18\x01 \x01(\t\x12\x13\n\x0btoken_value\x18\x02 \x01(\t\x1a\x42\n\x1bPersonaNameReplacementToken\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x12\n\ntoken_name\x18\x02 \x01(\t\"-\n\x17\x43MsgAMSendEmailResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"j\n\x16\x43MsgGCGetEmailTemplate\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0e\x65mail_msg_type\x18\x02 \x01(\r\x12\x12\n\nemail_lang\x18\x03 \x01(\x05\x12\x14\n\x0c\x65mail_format\x18\x04 \x01(\x05\"_\n\x1e\x43MsgGCGetEmailTemplateResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x17\n\x0ftemplate_exists\x18\x02 \x01(\x08\x12\x10\n\x08template\x18\x03 \x01(\t\"\x84\x01\n\x17\x43MsgAMGrantGuestPasses2\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x12\n\npackage_id\x18\x02 \x01(\r\x12\x17\n\x0fpasses_to_grant\x18\x03 \x01(\x05\x12\x1a\n\x12\x64\x61ys_to_expiration\x18\x04 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x05 \x01(\x05\"P\n\x1f\x43MsgAMGrantGuestPasses2Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x19\n\x0epasses_granted\x18\x02 \x01(\x05:\x01\x30\"L\n\x1e\x43GCSystemMsg_GetAccountDetails\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r:\n\x80\xa6\x1d\x80\x01\x88\xa6\x1d\x80\x04\"\x80\x07\n\'CGCSystemMsg_GetAccountDetails_Response\x12\x1d\n\x12\x65result_deprecated\x18\x01 \x01(\r:\x01\x32\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x02 \x01(\t\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x1a\n\x12is_profile_created\x18\x1a \x01(\x08\x12\x19\n\x11is_profile_public\x18\x04 \x01(\x08\x12\x1b\n\x13is_inventory_public\x18\x05 \x01(\x08\x12\x15\n\ris_vac_banned\x18\x07 \x01(\x08\x12\x15\n\ris_cyber_cafe\x18\x08 \x01(\x08\x12\x19\n\x11is_school_account\x18\t \x01(\x08\x12\x12\n\nis_limited\x18\n \x01(\x08\x12\x15\n\ris_subscribed\x18\x0b \x01(\x08\x12\x0f\n\x07package\x18\x0c \x01(\r\x12\x1d\n\x15is_free_trial_account\x18\r \x01(\x08\x12\x1d\n\x15\x66ree_trial_expiration\x18\x0e \x01(\r\x12\x17\n\x0fis_low_violence\x18\x0f \x01(\x08\x12\x1e\n\x16is_account_locked_down\x18\x10 \x01(\x08\x12\x1b\n\x13is_community_banned\x18\x11 \x01(\x08\x12\x17\n\x0fis_trade_banned\x18\x12 \x01(\x08\x12\x1c\n\x14trade_ban_expiration\x18\x13 \x01(\r\x12\x11\n\taccountid\x18\x14 \x01(\r\x12\x1b\n\x13suspension_end_time\x18\x15 \x01(\r\x12\x10\n\x08\x63urrency\x18\x16 \x01(\t\x12\x13\n\x0bsteam_level\x18\x17 \x01(\r\x12\x14\n\x0c\x66riend_count\x18\x18 \x01(\r\x12\x1d\n\x15\x61\x63\x63ount_creation_time\x18\x19 \x01(\r\x12\x1d\n\x15is_steamguard_enabled\x18\x1b \x01(\x08\x12\x19\n\x11is_phone_verified\x18\x1c \x01(\x08\x12\"\n\x1ais_two_factor_auth_enabled\x18\x1d \x01(\x08\x12\x1f\n\x17two_factor_enabled_time\x18\x1e \x01(\r\x12\x1f\n\x17phone_verification_time\x18\x1f \x01(\r\x12\x10\n\x08phone_id\x18! \x01(\x04\x12\x1c\n\x14is_phone_identifying\x18\" \x01(\x08:\n\x80\xa6\x1d\x80\x01\x88\xa6\x1d\x80\x04\")\n\x15\x43MsgGCGetPersonaNames\x12\x10\n\x08steamids\x18\x01 \x03(\x06\"\xbe\x01\n\x1e\x43MsgGCGetPersonaNames_Response\x12\x46\n\x11succeeded_lookups\x18\x01 \x03(\x0b\x32+.CMsgGCGetPersonaNames_Response.PersonaName\x12\x1e\n\x16\x66\x61iled_lookup_steamids\x18\x02 \x03(\x06\x1a\x34\n\x0bPersonaName\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\"D\n\x15\x43MsgGCCheckFriendship\x12\x14\n\x0csteamid_left\x18\x01 \x01(\x06\x12\x15\n\rsteamid_right\x18\x02 \x01(\x06\"K\n\x1e\x43MsgGCCheckFriendship_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x18\n\x10\x66ound_friendship\x18\x02 \x01(\x08\"Q\n\x17\x43MsgGCGetAppFriendsList\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12%\n\x1dinclude_friendship_timestamps\x18\x02 \x01(\x08\"d\n CMsgGCGetAppFriendsList_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x10\n\x08steamids\x18\x02 \x03(\x06\x12\x1d\n\x15\x66riendship_timestamps\x18\x03 \x03(\x07\"\xc8\x01\n\x1b\x43MsgGCMsgMasterSetDirectory\x12\x18\n\x10master_dir_index\x18\x01 \x01(\r\x12/\n\x03\x64ir\x18\x02 \x03(\x0b\x32\".CMsgGCMsgMasterSetDirectory.SubGC\x1a^\n\x05SubGC\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x62ox\x18\x03 \x01(\t\x12\x14\n\x0c\x63ommand_line\x18\x04 \x01(\t\x12\x11\n\tgc_binary\x18\x05 \x01(\t\":\n$CMsgGCMsgMasterSetDirectory_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"=\n(CMsgGCMsgWebAPIJobRequestForwardResponse\x12\x11\n\tdir_index\x18\x01 \x01(\r\"8\n%CGCSystemMsg_GetPurchaseTrust_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"\xad\x01\n&CGCSystemMsg_GetPurchaseTrust_Response\x12\"\n\x1ahas_prior_purchase_history\x18\x01 \x01(\x08\x12%\n\x1dhas_no_recent_password_resets\x18\x02 \x01(\x08\x12\x1e\n\x16is_wallet_cash_trusted\x18\x03 \x01(\x08\x12\x18\n\x10time_all_trusted\x18\x04 \x01(\r\"\x8f\x01\n\x1d\x43MsgGCHAccountVacStatusChange\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x1b\n\x13rtime_vacban_starts\x18\x03 \x01(\r\x12\x15\n\ris_banned_now\x18\x04 \x01(\x08\x12\x18\n\x10is_banned_future\x18\x05 \x01(\x08\".\n\x1b\x43MsgGCGetPartnerAccountLink\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"E\n$CMsgGCGetPartnerAccountLink_Response\x12\x0c\n\x04pwid\x18\x01 \x01(\r\x12\x0f\n\x07nexonid\x18\x02 \x01(\r\"\xbd\x02\n\x11\x43MsgGCRoutingInfo\x12\x11\n\tdir_index\x18\x01 \x03(\r\x12\x38\n\x06method\x18\x02 \x01(\x0e\x32 .CMsgGCRoutingInfo.RoutingMethod:\x06RANDOM\x12;\n\x08\x66\x61llback\x18\x03 \x01(\x0e\x32 .CMsgGCRoutingInfo.RoutingMethod:\x07\x44ISCARD\x12\x16\n\x0eprotobuf_field\x18\x04 \x01(\r\x12\x14\n\x0cwebapi_param\x18\x05 \x01(\t\"p\n\rRoutingMethod\x12\n\n\x06RANDOM\x10\x00\x12\x0b\n\x07\x44ISCARD\x10\x01\x12\x12\n\x0e\x43LIENT_STEAMID\x10\x02\x12\x19\n\x15PROTOBUF_FIELD_UINT64\x10\x03\x12\x17\n\x13WEBAPI_PARAM_UINT64\x10\x04\"\xb5\x01\n\x1f\x43MsgGCMsgMasterSetWebAPIRouting\x12\x37\n\x07\x65ntries\x18\x01 \x03(\x0b\x32&.CMsgGCMsgMasterSetWebAPIRouting.Entry\x1aY\n\x05\x45ntry\x12\x16\n\x0einterface_name\x18\x01 \x01(\t\x12\x13\n\x0bmethod_name\x18\x02 \x01(\t\x12#\n\x07routing\x18\x03 \x01(\x0b\x32\x12.CMsgGCRoutingInfo\"\xa0\x01\n\"CMsgGCMsgMasterSetClientMsgRouting\x12:\n\x07\x65ntries\x18\x01 \x03(\x0b\x32).CMsgGCMsgMasterSetClientMsgRouting.Entry\x1a>\n\x05\x45ntry\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12#\n\x07routing\x18\x02 \x01(\x0b\x32\x12.CMsgGCRoutingInfo\">\n(CMsgGCMsgMasterSetWebAPIRouting_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"A\n+CMsgGCMsgMasterSetClientMsgRouting_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"\xb6\x03\n\x13\x43MsgGCMsgSetOptions\x12,\n\x07options\x18\x01 \x03(\x0e\x32\x1b.CMsgGCMsgSetOptions.Option\x12<\n\x11\x63lient_msg_ranges\x18\x02 \x03(\x0b\x32!.CMsgGCMsgSetOptions.MessageRange\x12P\n\rgcsql_version\x18\x03 \x01(\x0e\x32!.CMsgGCMsgSetOptions.GCSQLVersion:\x16GCSQL_VERSION_BASELINE\x1a)\n\x0cMessageRange\x12\x0b\n\x03low\x18\x01 \x02(\r\x12\x0c\n\x04high\x18\x02 \x02(\r\"n\n\x06Option\x12\x18\n\x14NOTIFY_USER_SESSIONS\x10\x00\x12\x1a\n\x16NOTIFY_SERVER_SESSIONS\x10\x01\x12\x17\n\x13NOTIFY_ACHIEVEMENTS\x10\x02\x12\x15\n\x11NOTIFY_VAC_ACTION\x10\x03\"F\n\x0cGCSQLVersion\x12\x1a\n\x16GCSQL_VERSION_BASELINE\x10\x01\x12\x1a\n\x16GCSQL_VERSION_BOOLTYPE\x10\x02\"\x94\x02\n\x14\x43MsgGCHUpdateSession\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x0e\n\x06online\x18\x03 \x01(\x08\x12\x17\n\x0fserver_steam_id\x18\x04 \x01(\x06\x12\x13\n\x0bserver_addr\x18\x05 \x01(\r\x12\x13\n\x0bserver_port\x18\x06 \x01(\r\x12\x0f\n\x07os_type\x18\x07 \x01(\r\x12\x13\n\x0b\x63lient_addr\x18\x08 \x01(\r\x12\x36\n\x0c\x65xtra_fields\x18\t \x03(\x0b\x32 .CMsgGCHUpdateSession.ExtraField\x1a)\n\nExtraField\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xec\x01\n$CMsgNotificationOfSuspiciousActivity\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12W\n\x12multiple_instances\x18\x03 \x01(\x0b\x32;.CMsgNotificationOfSuspiciousActivity.MultipleGameInstances\x1aK\n\x15MultipleGameInstances\x12\x1a\n\x12\x61pp_instance_count\x18\x01 \x01(\r\x12\x16\n\x0eother_steamids\x18\x02 \x03(\x06\"\xf2\x04\n\x16\x43MsgDPPartnerMicroTxns\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07gc_name\x18\x02 \x01(\t\x12\x34\n\x07partner\x18\x03 \x01(\x0b\x32#.CMsgDPPartnerMicroTxns.PartnerInfo\x12=\n\x0ctransactions\x18\x04 \x03(\x0b\x32\'.CMsgDPPartnerMicroTxns.PartnerMicroTxn\x1a\xdb\x02\n\x0fPartnerMicroTxn\x12\x11\n\tinit_time\x18\x01 \x01(\r\x12\x18\n\x10last_update_time\x18\x02 \x01(\r\x12\x0e\n\x06txn_id\x18\x03 \x01(\x04\x12\x12\n\naccount_id\x18\x04 \x01(\r\x12\x11\n\tline_item\x18\x05 \x01(\r\x12\x0f\n\x07item_id\x18\x06 \x01(\x04\x12\x11\n\tdef_index\x18\x07 \x01(\r\x12\r\n\x05price\x18\x08 \x01(\r\x12\x0b\n\x03tax\x18\t \x01(\r\x12\x11\n\tprice_usd\x18\n \x01(\r\x12\x0f\n\x07tax_usd\x18\x0b \x01(\r\x12\x15\n\rpurchase_type\x18\x0c \x01(\r\x12\x16\n\x0esteam_txn_type\x18\r \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x0e \x01(\t\x12\x13\n\x0bregion_code\x18\x0f \x01(\t\x12\x10\n\x08quantity\x18\x10 \x01(\x05\x12\x14\n\x0cref_trans_id\x18\x11 \x01(\x04\x1a\x65\n\x0bPartnerInfo\x12\x12\n\npartner_id\x18\x01 \x01(\r\x12\x14\n\x0cpartner_name\x18\x02 \x01(\t\x12\x15\n\rcurrency_code\x18\x03 \x01(\t\x12\x15\n\rcurrency_name\x18\x04 \x01(\t\"\xfe\x02\n\x1e\x43MsgDPPartnerMicroTxnsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12J\n\neerrorcode\x18\x02 \x01(\x0e\x32*.CMsgDPPartnerMicroTxnsResponse.EErrorCode:\nk_MsgValid\"\xfb\x01\n\nEErrorCode\x12\x0e\n\nk_MsgValid\x10\x00\x12\x15\n\x11k_MsgInvalidAppID\x10\x01\x12\x1b\n\x17k_MsgInvalidPartnerInfo\x10\x02\x12\x17\n\x13k_MsgNoTransactions\x10\x03\x12\x13\n\x0fk_MsgSQLFailure\x10\x04\x12\x1f\n\x1bk_MsgPartnerInfoDiscrepancy\x10\x05\x12 \n\x1ck_MsgTransactionInsertFailed\x10\x07\x12\x17\n\x13k_MsgAlreadyRunning\x10\x08\x12\x1f\n\x1bk_MsgInvalidTransactionData\x10\t\"S\n\x1c\x43MsgGCHVacVerificationChange\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\x13\n\x0bis_verified\x18\x03 \x01(\x08*\xdb\x01\n\x10GCProtoBufMsgSrc\x12 \n\x1cGCProtoBufMsgSrc_Unspecified\x10\x00\x12\x1f\n\x1bGCProtoBufMsgSrc_FromSystem\x10\x01\x12 \n\x1cGCProtoBufMsgSrc_FromSteamID\x10\x02\x12\x1b\n\x17GCProtoBufMsgSrc_FromGC\x10\x03\x12 \n\x1cGCProtoBufMsgSrc_ReplySystem\x10\x04\x12#\n\x1fGCProtoBufMsgSrc_SpoofedSteamID\x10\x05:9\n\tkey_field\x12\x1d.google.protobuf.FieldOptions\x18\xe0\xd4\x03 \x01(\x08:\x05\x66\x61lse:A\n\x12msgpool_soft_limit\x12\x1f.google.protobuf.MessageOptions\x18\xe0\xd4\x03 \x01(\x05:\x02\x33\x32:B\n\x12msgpool_hard_limit\x12\x1f.google.protobuf.MessageOptions\x18\xe1\xd4\x03 \x01(\x05:\x03\x33\x38\x34\x42\x05H\x01\x80\x01\x00')
+  syntax='proto2',
+  serialized_pb=b'\n\x13steammessages.proto\x1a google/protobuf/descriptor.proto\"\xed\x02\n\x12\x43MsgProtoBufHeader\x12\x17\n\x0f\x63lient_steam_id\x18\x01 \x01(\x06\x12\x19\n\x11\x63lient_session_id\x18\x02 \x01(\x05\x12\x15\n\rsource_app_id\x18\x03 \x01(\r\x12+\n\rjob_id_source\x18\n \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\x12+\n\rjob_id_target\x18\x0b \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\x12\x17\n\x0ftarget_job_name\x18\x0c \x01(\t\x12\x12\n\x07\x65result\x18\r \x01(\x05:\x01\x32\x12\x15\n\rerror_message\x18\x0e \x01(\t\x12\x44\n\ngc_msg_src\x18\xc8\x01 \x01(\x0e\x32\x11.GCProtoBufMsgSrc:\x1cGCProtoBufMsgSrc_Unspecified\x12\x1c\n\x13gc_dir_index_source\x18\xc9\x01 \x01(\r:\n\x80\xa6\x1d\x80\x02\x88\xa6\x1d\x80\x08\"z\n\rCMsgWebAPIKey\x12\x13\n\x06status\x18\x01 \x01(\r:\x03\x32\x35\x35\x12\x15\n\naccount_id\x18\x02 \x01(\r:\x01\x30\x12\x1d\n\x12publisher_group_id\x18\x03 \x01(\r:\x01\x30\x12\x0e\n\x06key_id\x18\x04 \x01(\r\x12\x0e\n\x06\x64omain\x18\x05 \x01(\t\"\xdd\x02\n\x0f\x43MsgHttpRequest\x12\x16\n\x0erequest_method\x18\x01 \x01(\r\x12\x10\n\x08hostname\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\x12/\n\x07headers\x18\x04 \x03(\x0b\x32\x1e.CMsgHttpRequest.RequestHeader\x12/\n\nget_params\x18\x05 \x03(\x0b\x32\x1b.CMsgHttpRequest.QueryParam\x12\x30\n\x0bpost_params\x18\x06 \x03(\x0b\x32\x1b.CMsgHttpRequest.QueryParam\x12\x0c\n\x04\x62ody\x18\x07 \x01(\x0c\x12\x18\n\x10\x61\x62solute_timeout\x18\x08 \x01(\r\x1a,\n\rRequestHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a)\n\nQueryParam\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\"\xc6\x01\n\x11\x43MsgWebAPIRequest\x12\x17\n\x0fUNUSED_job_name\x18\x01 \x01(\t\x12\x16\n\x0einterface_name\x18\x02 \x01(\t\x12\x13\n\x0bmethod_name\x18\x03 \x01(\t\x12\x0f\n\x07version\x18\x04 \x01(\r\x12\x1f\n\x07\x61pi_key\x18\x05 \x01(\x0b\x32\x0e.CMsgWebAPIKey\x12!\n\x07request\x18\x06 \x01(\x0b\x32\x10.CMsgHttpRequest\x12\x16\n\x0erouting_app_id\x18\x07 \x01(\r\"\x97\x01\n\x10\x43MsgHttpResponse\x12\x13\n\x0bstatus_code\x18\x01 \x01(\r\x12\x31\n\x07headers\x18\x02 \x03(\x0b\x32 .CMsgHttpResponse.ResponseHeader\x12\x0c\n\x04\x62ody\x18\x03 \x01(\x0c\x1a-\n\x0eResponseHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"@\n\x12\x43MsgAMFindAccounts\x12\x13\n\x0bsearch_type\x18\x01 \x01(\r\x12\x15\n\rsearch_string\x18\x02 \x01(\t\".\n\x1a\x43MsgAMFindAccountsResponse\x12\x10\n\x08steam_id\x18\x01 \x03(\x06\"\x90\x01\n\x12\x43MsgNotifyWatchdog\x12\x0e\n\x06source\x18\x01 \x01(\r\x12\x12\n\nalert_type\x18\x02 \x01(\r\x12\x19\n\x11\x61lert_destination\x18\x03 \x01(\r\x12\x10\n\x08\x63ritical\x18\x04 \x01(\x08\x12\x0c\n\x04time\x18\x05 \x01(\r\x12\r\n\x05\x61ppid\x18\x06 \x01(\r\x12\x0c\n\x04text\x18\x07 \x01(\t\"$\n\x11\x43MsgAMGetLicenses\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"P\n\x12\x43MsgPackageLicense\x12\x12\n\npackage_id\x18\x01 \x01(\r\x12\x14\n\x0ctime_created\x18\x02 \x01(\r\x12\x10\n\x08owner_id\x18\x03 \x01(\r\"Q\n\x19\x43MsgAMGetLicensesResponse\x12$\n\x07license\x18\x01 \x03(\x0b\x32\x13.CMsgPackageLicense\x12\x0e\n\x06result\x18\x02 \x01(\r\"J\n\x16\x43MsgAMGetUserGameStats\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\r\n\x05stats\x18\x03 \x03(\r\"\xea\x02\n\x1e\x43MsgAMGetUserGameStatsResponse\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\x12\x34\n\x05stats\x18\x04 \x03(\x0b\x32%.CMsgAMGetUserGameStatsResponse.Stats\x12N\n\x12\x61\x63hievement_blocks\x18\x05 \x03(\x0b\x32\x32.CMsgAMGetUserGameStatsResponse.Achievement_Blocks\x1a,\n\x05Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\x1a]\n\x12\x41\x63hievement_Blocks\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x1a\n\x12\x61\x63hievement_bit_id\x18\x02 \x01(\r\x12\x13\n\x0bunlock_time\x18\x03 \x01(\x07\">\n\x14\x43MsgGCGetCommandList\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63ommand_prefix\x18\x02 \x01(\t\"4\n\x1c\x43MsgGCGetCommandListResponse\x12\x14\n\x0c\x63ommand_name\x18\x01 \x03(\t\"\"\n\x12\x43GCMsgMemCachedGet\x12\x0c\n\x04keys\x18\x01 \x03(\t\"|\n\x1a\x43GCMsgMemCachedGetResponse\x12\x34\n\x06values\x18\x01 \x03(\x0b\x32$.CGCMsgMemCachedGetResponse.ValueTag\x1a(\n\x08ValueTag\x12\r\n\x05\x66ound\x18\x01 \x01(\x08\x12\r\n\x05value\x18\x02 \x01(\x0c\"g\n\x12\x43GCMsgMemCachedSet\x12)\n\x04keys\x18\x01 \x03(\x0b\x32\x1b.CGCMsgMemCachedSet.KeyPair\x1a&\n\x07KeyPair\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\"%\n\x15\x43GCMsgMemCachedDelete\x12\x0c\n\x04keys\x18\x01 \x03(\t\"\x16\n\x14\x43GCMsgMemCachedStats\"\xb8\x02\n\x1c\x43GCMsgMemCachedStatsResponse\x12\x18\n\x10\x63urr_connections\x18\x01 \x01(\x04\x12\x0f\n\x07\x63md_get\x18\x02 \x01(\x04\x12\x0f\n\x07\x63md_set\x18\x03 \x01(\x04\x12\x11\n\tcmd_flush\x18\x04 \x01(\x04\x12\x10\n\x08get_hits\x18\x05 \x01(\x04\x12\x12\n\nget_misses\x18\x06 \x01(\x04\x12\x13\n\x0b\x64\x65lete_hits\x18\x07 \x01(\x04\x12\x15\n\rdelete_misses\x18\x08 \x01(\x04\x12\x12\n\nbytes_read\x18\t \x01(\x04\x12\x15\n\rbytes_written\x18\n \x01(\x04\x12\x16\n\x0elimit_maxbytes\x18\x0b \x01(\x04\x12\x12\n\ncurr_items\x18\x0c \x01(\x04\x12\x11\n\tevictions\x18\r \x01(\x04\x12\r\n\x05\x62ytes\x18\x0e \x01(\x04\"(\n\x0e\x43GCMsgSQLStats\x12\x16\n\x0eschema_catalog\x18\x01 \x01(\r\"\x9b\x02\n\x16\x43GCMsgSQLStatsResponse\x12\x0f\n\x07threads\x18\x01 \x01(\r\x12\x19\n\x11threads_connected\x18\x02 \x01(\r\x12\x16\n\x0ethreads_active\x18\x03 \x01(\r\x12\x1c\n\x14operations_submitted\x18\x04 \x01(\r\x12$\n\x1cprepared_statements_executed\x18\x05 \x01(\r\x12(\n non_prepared_statements_executed\x18\x06 \x01(\r\x12\x18\n\x10\x64\x65\x61\x64lock_retries\x18\x07 \x01(\r\x12%\n\x1doperations_timed_out_in_queue\x18\x08 \x01(\r\x12\x0e\n\x06\x65rrors\x18\t \x01(\r\"i\n\x14\x43MsgAMAddFreeLicense\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x11\n\tip_public\x18\x02 \x01(\r\x12\x11\n\tpackageid\x18\x03 \x01(\r\x12\x1a\n\x12store_country_code\x18\x04 \x01(\t\"c\n\x1c\x43MsgAMAddFreeLicenseResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x1e\n\x16purchase_result_detail\x18\x02 \x01(\x05\x12\x0f\n\x07transid\x18\x03 \x01(\x06\"\"\n\x13\x43GCMsgGetIPLocation\x12\x0b\n\x03ips\x18\x01 \x03(\x07\"p\n\x0f\x43IPLocationInfo\x12\n\n\x02ip\x18\x01 \x01(\r\x12\x10\n\x08latitude\x18\x02 \x01(\x02\x12\x11\n\tlongitude\x18\x03 \x01(\x02\x12\x0f\n\x07\x63ountry\x18\x04 \x01(\t\x12\r\n\x05state\x18\x05 \x01(\t\x12\x0c\n\x04\x63ity\x18\x06 \x01(\t\">\n\x1b\x43GCMsgGetIPLocationResponse\x12\x1f\n\x05infos\x18\x01 \x03(\x0b\x32\x10.CIPLocationInfo\"\x1d\n\x0e\x43GCMsgGetIPASN\x12\x0b\n\x03ips\x18\x01 \x03(\x07\"%\n\nCIPASNInfo\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0b\n\x03\x61sn\x18\x02 \x01(\r\"4\n\x16\x43GCMsgGetIPASNResponse\x12\x1a\n\x05infos\x18\x01 \x03(\x0b\x32\x0b.CIPASNInfo\"?\n\x17\x43GCMsgSystemStatsSchema\x12\x11\n\tgc_app_id\x18\x01 \x01(\r\x12\x11\n\tschema_kv\x18\x02 \x01(\x0c\"\x16\n\x14\x43GCMsgGetSystemStats\"\xc5\x02\n\x1c\x43GCMsgGetSystemStatsResponse\x12\x11\n\tgc_app_id\x18\x01 \x01(\r\x12\x10\n\x08stats_kv\x18\x02 \x01(\x0c\x12\x13\n\x0b\x61\x63tive_jobs\x18\x03 \x01(\r\x12\x15\n\ryielding_jobs\x18\x04 \x01(\r\x12\x15\n\ruser_sessions\x18\x05 \x01(\r\x12\x1c\n\x14game_server_sessions\x18\x06 \x01(\r\x12\x10\n\x08socaches\x18\x07 \x01(\r\x12\x1a\n\x12socaches_to_unload\x18\x08 \x01(\r\x12\x18\n\x10socaches_loading\x18\t \x01(\r\x12\x17\n\x0fwriteback_queue\x18\n \x01(\r\x12\x15\n\rsteamid_locks\x18\x0b \x01(\r\x12\x13\n\x0blogon_queue\x18\x0c \x01(\r\x12\x12\n\nlogon_jobs\x18\r \x01(\r\"\xe2\x02\n\x0f\x43MsgAMSendEmail\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x65mail_msg_type\x18\x02 \x01(\r\x12\x14\n\x0c\x65mail_format\x18\x03 \x01(\r\x12I\n\x13persona_name_tokens\x18\x05 \x03(\x0b\x32,.CMsgAMSendEmail.PersonaNameReplacementToken\x12\x11\n\tsource_gc\x18\x06 \x01(\r\x12\x31\n\x06tokens\x18\x07 \x03(\x0b\x32!.CMsgAMSendEmail.ReplacementToken\x1a;\n\x10ReplacementToken\x12\x12\n\ntoken_name\x18\x01 \x01(\t\x12\x13\n\x0btoken_value\x18\x02 \x01(\t\x1a\x42\n\x1bPersonaNameReplacementToken\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x12\n\ntoken_name\x18\x02 \x01(\t\"-\n\x17\x43MsgAMSendEmailResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"j\n\x16\x43MsgGCGetEmailTemplate\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0e\x65mail_msg_type\x18\x02 \x01(\r\x12\x12\n\nemail_lang\x18\x03 \x01(\x05\x12\x14\n\x0c\x65mail_format\x18\x04 \x01(\x05\"_\n\x1e\x43MsgGCGetEmailTemplateResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x17\n\x0ftemplate_exists\x18\x02 \x01(\x08\x12\x10\n\x08template\x18\x03 \x01(\t\"\x84\x01\n\x17\x43MsgAMGrantGuestPasses2\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x12\n\npackage_id\x18\x02 \x01(\r\x12\x17\n\x0fpasses_to_grant\x18\x03 \x01(\x05\x12\x1a\n\x12\x64\x61ys_to_expiration\x18\x04 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x05 \x01(\x05\"P\n\x1f\x43MsgAMGrantGuestPasses2Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x19\n\x0epasses_granted\x18\x02 \x01(\x05:\x01\x30\"L\n\x1e\x43GCSystemMsg_GetAccountDetails\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r:\n\x80\xa6\x1d\x80\x01\x88\xa6\x1d\x80\x04\"\x80\x07\n\'CGCSystemMsg_GetAccountDetails_Response\x12\x1d\n\x12\x65result_deprecated\x18\x01 \x01(\r:\x01\x32\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x02 \x01(\t\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x1a\n\x12is_profile_created\x18\x1a \x01(\x08\x12\x19\n\x11is_profile_public\x18\x04 \x01(\x08\x12\x1b\n\x13is_inventory_public\x18\x05 \x01(\x08\x12\x15\n\ris_vac_banned\x18\x07 \x01(\x08\x12\x15\n\ris_cyber_cafe\x18\x08 \x01(\x08\x12\x19\n\x11is_school_account\x18\t \x01(\x08\x12\x12\n\nis_limited\x18\n \x01(\x08\x12\x15\n\ris_subscribed\x18\x0b \x01(\x08\x12\x0f\n\x07package\x18\x0c \x01(\r\x12\x1d\n\x15is_free_trial_account\x18\r \x01(\x08\x12\x1d\n\x15\x66ree_trial_expiration\x18\x0e \x01(\r\x12\x17\n\x0fis_low_violence\x18\x0f \x01(\x08\x12\x1e\n\x16is_account_locked_down\x18\x10 \x01(\x08\x12\x1b\n\x13is_community_banned\x18\x11 \x01(\x08\x12\x17\n\x0fis_trade_banned\x18\x12 \x01(\x08\x12\x1c\n\x14trade_ban_expiration\x18\x13 \x01(\r\x12\x11\n\taccountid\x18\x14 \x01(\r\x12\x1b\n\x13suspension_end_time\x18\x15 \x01(\r\x12\x10\n\x08\x63urrency\x18\x16 \x01(\t\x12\x13\n\x0bsteam_level\x18\x17 \x01(\r\x12\x14\n\x0c\x66riend_count\x18\x18 \x01(\r\x12\x1d\n\x15\x61\x63\x63ount_creation_time\x18\x19 \x01(\r\x12\x1d\n\x15is_steamguard_enabled\x18\x1b \x01(\x08\x12\x19\n\x11is_phone_verified\x18\x1c \x01(\x08\x12\"\n\x1ais_two_factor_auth_enabled\x18\x1d \x01(\x08\x12\x1f\n\x17two_factor_enabled_time\x18\x1e \x01(\r\x12\x1f\n\x17phone_verification_time\x18\x1f \x01(\r\x12\x10\n\x08phone_id\x18! \x01(\x04\x12\x1c\n\x14is_phone_identifying\x18\" \x01(\x08:\n\x80\xa6\x1d\x80\x01\x88\xa6\x1d\x80\x04\")\n\x15\x43MsgGCGetPersonaNames\x12\x10\n\x08steamids\x18\x01 \x03(\x06\"\xbe\x01\n\x1e\x43MsgGCGetPersonaNames_Response\x12\x46\n\x11succeeded_lookups\x18\x01 \x03(\x0b\x32+.CMsgGCGetPersonaNames_Response.PersonaName\x12\x1e\n\x16\x66\x61iled_lookup_steamids\x18\x02 \x03(\x06\x1a\x34\n\x0bPersonaName\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\"D\n\x15\x43MsgGCCheckFriendship\x12\x14\n\x0csteamid_left\x18\x01 \x01(\x06\x12\x15\n\rsteamid_right\x18\x02 \x01(\x06\"K\n\x1e\x43MsgGCCheckFriendship_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x18\n\x10\x66ound_friendship\x18\x02 \x01(\x08\"Q\n\x17\x43MsgGCGetAppFriendsList\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12%\n\x1dinclude_friendship_timestamps\x18\x02 \x01(\x08\"d\n CMsgGCGetAppFriendsList_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x10\n\x08steamids\x18\x02 \x03(\x06\x12\x1d\n\x15\x66riendship_timestamps\x18\x03 \x03(\x07\"\xc8\x01\n\x1b\x43MsgGCMsgMasterSetDirectory\x12\x18\n\x10master_dir_index\x18\x01 \x01(\r\x12/\n\x03\x64ir\x18\x02 \x03(\x0b\x32\".CMsgGCMsgMasterSetDirectory.SubGC\x1a^\n\x05SubGC\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x62ox\x18\x03 \x01(\t\x12\x14\n\x0c\x63ommand_line\x18\x04 \x01(\t\x12\x11\n\tgc_binary\x18\x05 \x01(\t\":\n$CMsgGCMsgMasterSetDirectory_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"=\n(CMsgGCMsgWebAPIJobRequestForwardResponse\x12\x11\n\tdir_index\x18\x01 \x01(\r\"8\n%CGCSystemMsg_GetPurchaseTrust_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"\xad\x01\n&CGCSystemMsg_GetPurchaseTrust_Response\x12\"\n\x1ahas_prior_purchase_history\x18\x01 \x01(\x08\x12%\n\x1dhas_no_recent_password_resets\x18\x02 \x01(\x08\x12\x1e\n\x16is_wallet_cash_trusted\x18\x03 \x01(\x08\x12\x18\n\x10time_all_trusted\x18\x04 \x01(\r\"\x8f\x01\n\x1d\x43MsgGCHAccountVacStatusChange\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x1b\n\x13rtime_vacban_starts\x18\x03 \x01(\r\x12\x15\n\ris_banned_now\x18\x04 \x01(\x08\x12\x18\n\x10is_banned_future\x18\x05 \x01(\x08\".\n\x1b\x43MsgGCGetPartnerAccountLink\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"E\n$CMsgGCGetPartnerAccountLink_Response\x12\x0c\n\x04pwid\x18\x01 \x01(\r\x12\x0f\n\x07nexonid\x18\x02 \x01(\r\"\xbd\x02\n\x11\x43MsgGCRoutingInfo\x12\x11\n\tdir_index\x18\x01 \x03(\r\x12\x38\n\x06method\x18\x02 \x01(\x0e\x32 .CMsgGCRoutingInfo.RoutingMethod:\x06RANDOM\x12;\n\x08\x66\x61llback\x18\x03 \x01(\x0e\x32 .CMsgGCRoutingInfo.RoutingMethod:\x07\x44ISCARD\x12\x16\n\x0eprotobuf_field\x18\x04 \x01(\r\x12\x14\n\x0cwebapi_param\x18\x05 \x01(\t\"p\n\rRoutingMethod\x12\n\n\x06RANDOM\x10\x00\x12\x0b\n\x07\x44ISCARD\x10\x01\x12\x12\n\x0e\x43LIENT_STEAMID\x10\x02\x12\x19\n\x15PROTOBUF_FIELD_UINT64\x10\x03\x12\x17\n\x13WEBAPI_PARAM_UINT64\x10\x04\"\xb5\x01\n\x1f\x43MsgGCMsgMasterSetWebAPIRouting\x12\x37\n\x07\x65ntries\x18\x01 \x03(\x0b\x32&.CMsgGCMsgMasterSetWebAPIRouting.Entry\x1aY\n\x05\x45ntry\x12\x16\n\x0einterface_name\x18\x01 \x01(\t\x12\x13\n\x0bmethod_name\x18\x02 \x01(\t\x12#\n\x07routing\x18\x03 \x01(\x0b\x32\x12.CMsgGCRoutingInfo\"\xa0\x01\n\"CMsgGCMsgMasterSetClientMsgRouting\x12:\n\x07\x65ntries\x18\x01 \x03(\x0b\x32).CMsgGCMsgMasterSetClientMsgRouting.Entry\x1a>\n\x05\x45ntry\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12#\n\x07routing\x18\x02 \x01(\x0b\x32\x12.CMsgGCRoutingInfo\">\n(CMsgGCMsgMasterSetWebAPIRouting_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"A\n+CMsgGCMsgMasterSetClientMsgRouting_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"\xb6\x03\n\x13\x43MsgGCMsgSetOptions\x12,\n\x07options\x18\x01 \x03(\x0e\x32\x1b.CMsgGCMsgSetOptions.Option\x12<\n\x11\x63lient_msg_ranges\x18\x02 \x03(\x0b\x32!.CMsgGCMsgSetOptions.MessageRange\x12P\n\rgcsql_version\x18\x03 \x01(\x0e\x32!.CMsgGCMsgSetOptions.GCSQLVersion:\x16GCSQL_VERSION_BASELINE\x1a)\n\x0cMessageRange\x12\x0b\n\x03low\x18\x01 \x02(\r\x12\x0c\n\x04high\x18\x02 \x02(\r\"n\n\x06Option\x12\x18\n\x14NOTIFY_USER_SESSIONS\x10\x00\x12\x1a\n\x16NOTIFY_SERVER_SESSIONS\x10\x01\x12\x17\n\x13NOTIFY_ACHIEVEMENTS\x10\x02\x12\x15\n\x11NOTIFY_VAC_ACTION\x10\x03\"F\n\x0cGCSQLVersion\x12\x1a\n\x16GCSQL_VERSION_BASELINE\x10\x01\x12\x1a\n\x16GCSQL_VERSION_BOOLTYPE\x10\x02\"\x94\x02\n\x14\x43MsgGCHUpdateSession\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x0e\n\x06online\x18\x03 \x01(\x08\x12\x17\n\x0fserver_steam_id\x18\x04 \x01(\x06\x12\x13\n\x0bserver_addr\x18\x05 \x01(\r\x12\x13\n\x0bserver_port\x18\x06 \x01(\r\x12\x0f\n\x07os_type\x18\x07 \x01(\r\x12\x13\n\x0b\x63lient_addr\x18\x08 \x01(\r\x12\x36\n\x0c\x65xtra_fields\x18\t \x03(\x0b\x32 .CMsgGCHUpdateSession.ExtraField\x1a)\n\nExtraField\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xec\x01\n$CMsgNotificationOfSuspiciousActivity\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12W\n\x12multiple_instances\x18\x03 \x01(\x0b\x32;.CMsgNotificationOfSuspiciousActivity.MultipleGameInstances\x1aK\n\x15MultipleGameInstances\x12\x1a\n\x12\x61pp_instance_count\x18\x01 \x01(\r\x12\x16\n\x0eother_steamids\x18\x02 \x03(\x06\"\xf2\x04\n\x16\x43MsgDPPartnerMicroTxns\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07gc_name\x18\x02 \x01(\t\x12\x34\n\x07partner\x18\x03 \x01(\x0b\x32#.CMsgDPPartnerMicroTxns.PartnerInfo\x12=\n\x0ctransactions\x18\x04 \x03(\x0b\x32\'.CMsgDPPartnerMicroTxns.PartnerMicroTxn\x1a\xdb\x02\n\x0fPartnerMicroTxn\x12\x11\n\tinit_time\x18\x01 \x01(\r\x12\x18\n\x10last_update_time\x18\x02 \x01(\r\x12\x0e\n\x06txn_id\x18\x03 \x01(\x04\x12\x12\n\naccount_id\x18\x04 \x01(\r\x12\x11\n\tline_item\x18\x05 \x01(\r\x12\x0f\n\x07item_id\x18\x06 \x01(\x04\x12\x11\n\tdef_index\x18\x07 \x01(\r\x12\r\n\x05price\x18\x08 \x01(\r\x12\x0b\n\x03tax\x18\t \x01(\r\x12\x11\n\tprice_usd\x18\n \x01(\r\x12\x0f\n\x07tax_usd\x18\x0b \x01(\r\x12\x15\n\rpurchase_type\x18\x0c \x01(\r\x12\x16\n\x0esteam_txn_type\x18\r \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x0e \x01(\t\x12\x13\n\x0bregion_code\x18\x0f \x01(\t\x12\x10\n\x08quantity\x18\x10 \x01(\x05\x12\x14\n\x0cref_trans_id\x18\x11 \x01(\x04\x1a\x65\n\x0bPartnerInfo\x12\x12\n\npartner_id\x18\x01 \x01(\r\x12\x14\n\x0cpartner_name\x18\x02 \x01(\t\x12\x15\n\rcurrency_code\x18\x03 \x01(\t\x12\x15\n\rcurrency_name\x18\x04 \x01(\t\"\xfe\x02\n\x1e\x43MsgDPPartnerMicroTxnsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12J\n\neerrorcode\x18\x02 \x01(\x0e\x32*.CMsgDPPartnerMicroTxnsResponse.EErrorCode:\nk_MsgValid\"\xfb\x01\n\nEErrorCode\x12\x0e\n\nk_MsgValid\x10\x00\x12\x15\n\x11k_MsgInvalidAppID\x10\x01\x12\x1b\n\x17k_MsgInvalidPartnerInfo\x10\x02\x12\x17\n\x13k_MsgNoTransactions\x10\x03\x12\x13\n\x0fk_MsgSQLFailure\x10\x04\x12\x1f\n\x1bk_MsgPartnerInfoDiscrepancy\x10\x05\x12 \n\x1ck_MsgTransactionInsertFailed\x10\x07\x12\x17\n\x13k_MsgAlreadyRunning\x10\x08\x12\x1f\n\x1bk_MsgInvalidTransactionData\x10\t\"S\n\x1c\x43MsgGCHVacVerificationChange\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\x13\n\x0bis_verified\x18\x03 \x01(\x08*\xdb\x01\n\x10GCProtoBufMsgSrc\x12 \n\x1cGCProtoBufMsgSrc_Unspecified\x10\x00\x12\x1f\n\x1bGCProtoBufMsgSrc_FromSystem\x10\x01\x12 \n\x1cGCProtoBufMsgSrc_FromSteamID\x10\x02\x12\x1b\n\x17GCProtoBufMsgSrc_FromGC\x10\x03\x12 \n\x1cGCProtoBufMsgSrc_ReplySystem\x10\x04\x12#\n\x1fGCProtoBufMsgSrc_SpoofedSteamID\x10\x05:9\n\tkey_field\x12\x1d.google.protobuf.FieldOptions\x18\xe0\xd4\x03 \x01(\x08:\x05\x66\x61lse:A\n\x12msgpool_soft_limit\x12\x1f.google.protobuf.MessageOptions\x18\xe0\xd4\x03 \x01(\x05:\x02\x33\x32:B\n\x12msgpool_hard_limit\x12\x1f.google.protobuf.MessageOptions\x18\xe1\xd4\x03 \x01(\x05:\x03\x33\x38\x34\x42\x05H\x01\x90\x01\x00'
+  ,
+  dependencies=[google_dot_protobuf_dot_descriptor__pb2.DESCRIPTOR,])
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _GCPROTOBUFMSGSRC = _descriptor.EnumDescriptor(
   name='GCProtoBufMsgSrc',
@@ -53,6 +60,7 @@ _GCPROTOBUFMSGSRC = _descriptor.EnumDescriptor(
   serialized_start=10268,
   serialized_end=10487,
 )
+_sym_db.RegisterEnumDescriptor(_GCPROTOBUFMSGSRC)
 
 GCProtoBufMsgSrc = enum_type_wrapper.EnumTypeWrapper(_GCPROTOBUFMSGSRC)
 GCProtoBufMsgSrc_Unspecified = 0
@@ -119,6 +127,7 @@ _CMSGGCROUTINGINFO_ROUTINGMETHOD = _descriptor.EnumDescriptor(
   serialized_start=7617,
   serialized_end=7729,
 )
+_sym_db.RegisterEnumDescriptor(_CMSGGCROUTINGINFO_ROUTINGMETHOD)
 
 _CMSGGCMSGSETOPTIONS_OPTION = _descriptor.EnumDescriptor(
   name='Option',
@@ -148,6 +157,7 @@ _CMSGGCMSGSETOPTIONS_OPTION = _descriptor.EnumDescriptor(
   serialized_start=8466,
   serialized_end=8576,
 )
+_sym_db.RegisterEnumDescriptor(_CMSGGCMSGSETOPTIONS_OPTION)
 
 _CMSGGCMSGSETOPTIONS_GCSQLVERSION = _descriptor.EnumDescriptor(
   name='GCSQLVersion',
@@ -169,6 +179,7 @@ _CMSGGCMSGSETOPTIONS_GCSQLVERSION = _descriptor.EnumDescriptor(
   serialized_start=8578,
   serialized_end=8648,
 )
+_sym_db.RegisterEnumDescriptor(_CMSGGCMSGSETOPTIONS_GCSQLVERSION)
 
 _CMSGDPPARTNERMICROTXNSRESPONSE_EERRORCODE = _descriptor.EnumDescriptor(
   name='EErrorCode',
@@ -218,6 +229,7 @@ _CMSGDPPARTNERMICROTXNSRESPONSE_EERRORCODE = _descriptor.EnumDescriptor(
   serialized_start=9929,
   serialized_end=10180,
 )
+_sym_db.RegisterEnumDescriptor(_CMSGDPPARTNERMICROTXNSRESPONSE_EERRORCODE)
 
 
 _CMSGPROTOBUFHEADER = _descriptor.Descriptor(
@@ -265,7 +277,7 @@ _CMSGPROTOBUFHEADER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='target_job_name', full_name='CMsgProtoBufHeader.target_job_name', index=5,
       number=12, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -279,7 +291,7 @@ _CMSGPROTOBUFHEADER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='error_message', full_name='CMsgProtoBufHeader.error_message', index=7,
       number=14, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -303,9 +315,12 @@ _CMSGPROTOBUFHEADER = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), '\200\246\035\200\002\210\246\035\200\010'),
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), b'\200\246\035\200\002\210\246\035\200\010'),
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=58,
   serialized_end=423,
 )
@@ -349,7 +364,7 @@ _CMSGWEBAPIKEY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='domain', full_name='CMsgWebAPIKey.domain', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -361,7 +376,10 @@ _CMSGWEBAPIKEY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=425,
   serialized_end=547,
 )
@@ -377,14 +395,14 @@ _CMSGHTTPREQUEST_REQUESTHEADER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CMsgHttpRequest.RequestHeader.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='CMsgHttpRequest.RequestHeader.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -396,7 +414,10 @@ _CMSGHTTPREQUEST_REQUESTHEADER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=812,
   serialized_end=856,
 )
@@ -411,14 +432,14 @@ _CMSGHTTPREQUEST_QUERYPARAM = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CMsgHttpRequest.QueryParam.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='CMsgHttpRequest.QueryParam.value', index=1,
       number=2, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -430,7 +451,10 @@ _CMSGHTTPREQUEST_QUERYPARAM = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=858,
   serialized_end=899,
 )
@@ -452,14 +476,14 @@ _CMSGHTTPREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='hostname', full_name='CMsgHttpRequest.hostname', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='url', full_name='CMsgHttpRequest.url', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -487,7 +511,7 @@ _CMSGHTTPREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='body', full_name='CMsgHttpRequest.body', index=6,
       number=7, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -506,7 +530,10 @@ _CMSGHTTPREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=550,
   serialized_end=899,
 )
@@ -522,21 +549,21 @@ _CMSGWEBAPIREQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='UNUSED_job_name', full_name='CMsgWebAPIRequest.UNUSED_job_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='interface_name', full_name='CMsgWebAPIRequest.interface_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='method_name', full_name='CMsgWebAPIRequest.method_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -576,7 +603,10 @@ _CMSGWEBAPIREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=902,
   serialized_end=1100,
 )
@@ -592,14 +622,14 @@ _CMSGHTTPRESPONSE_RESPONSEHEADER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CMsgHttpResponse.ResponseHeader.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='CMsgHttpResponse.ResponseHeader.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -611,7 +641,10 @@ _CMSGHTTPRESPONSE_RESPONSEHEADER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1209,
   serialized_end=1254,
 )
@@ -640,7 +673,7 @@ _CMSGHTTPRESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='body', full_name='CMsgHttpResponse.body', index=2,
       number=3, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -652,7 +685,10 @@ _CMSGHTTPRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1103,
   serialized_end=1254,
 )
@@ -675,7 +711,7 @@ _CMSGAMFINDACCOUNTS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='search_string', full_name='CMsgAMFindAccounts.search_string', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -687,7 +723,10 @@ _CMSGAMFINDACCOUNTS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1256,
   serialized_end=1320,
 )
@@ -715,7 +754,10 @@ _CMSGAMFINDACCOUNTSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1322,
   serialized_end=1368,
 )
@@ -773,7 +815,7 @@ _CMSGNOTIFYWATCHDOG = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='text', full_name='CMsgNotifyWatchdog.text', index=6,
       number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -785,7 +827,10 @@ _CMSGNOTIFYWATCHDOG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1371,
   serialized_end=1515,
 )
@@ -813,7 +858,10 @@ _CMSGAMGETLICENSES = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1517,
   serialized_end=1553,
 )
@@ -855,7 +903,10 @@ _CMSGPACKAGELICENSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1555,
   serialized_end=1635,
 )
@@ -890,7 +941,10 @@ _CMSGAMGETLICENSESRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1637,
   serialized_end=1718,
 )
@@ -932,7 +986,10 @@ _CMSGAMGETUSERGAMESTATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1720,
   serialized_end=1794,
 )
@@ -967,7 +1024,10 @@ _CMSGAMGETUSERGAMESTATSRESPONSE_STATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2020,
   serialized_end=2064,
 )
@@ -1008,7 +1068,10 @@ _CMSGAMGETUSERGAMESTATSRESPONSE_ACHIEVEMENT_BLOCKS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2066,
   serialized_end=2159,
 )
@@ -1063,7 +1126,10 @@ _CMSGAMGETUSERGAMESTATSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1797,
   serialized_end=2159,
 )
@@ -1086,7 +1152,7 @@ _CMSGGCGETCOMMANDLIST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='command_prefix', full_name='CMsgGCGetCommandList.command_prefix', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1098,7 +1164,10 @@ _CMSGGCGETCOMMANDLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2161,
   serialized_end=2223,
 )
@@ -1126,7 +1195,10 @@ _CMSGGCGETCOMMANDLISTRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2225,
   serialized_end=2277,
 )
@@ -1154,7 +1226,10 @@ _CGCMSGMEMCACHEDGET = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2279,
   serialized_end=2313,
 )
@@ -1177,7 +1252,7 @@ _CGCMSGMEMCACHEDGETRESPONSE_VALUETAG = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='value', full_name='CGCMsgMemCachedGetResponse.ValueTag.value', index=1,
       number=2, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1189,7 +1264,10 @@ _CGCMSGMEMCACHEDGETRESPONSE_VALUETAG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2399,
   serialized_end=2439,
 )
@@ -1216,7 +1294,10 @@ _CGCMSGMEMCACHEDGETRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2315,
   serialized_end=2439,
 )
@@ -1232,14 +1313,14 @@ _CGCMSGMEMCACHEDSET_KEYPAIR = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CGCMsgMemCachedSet.KeyPair.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='CGCMsgMemCachedSet.KeyPair.value', index=1,
       number=2, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1251,7 +1332,10 @@ _CGCMSGMEMCACHEDSET_KEYPAIR = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2506,
   serialized_end=2544,
 )
@@ -1278,7 +1362,10 @@ _CGCMSGMEMCACHEDSET = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2441,
   serialized_end=2544,
 )
@@ -1306,7 +1393,10 @@ _CGCMSGMEMCACHEDDELETE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2546,
   serialized_end=2583,
 )
@@ -1327,7 +1417,10 @@ _CGCMSGMEMCACHEDSTATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2585,
   serialized_end=2607,
 )
@@ -1446,7 +1539,10 @@ _CGCMSGMEMCACHEDSTATSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2610,
   serialized_end=2922,
 )
@@ -1474,7 +1570,10 @@ _CGCMSGSQLSTATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2924,
   serialized_end=2964,
 )
@@ -1558,7 +1657,10 @@ _CGCMSGSQLSTATSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2967,
   serialized_end=3250,
 )
@@ -1595,7 +1697,7 @@ _CMSGAMADDFREELICENSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='store_country_code', full_name='CMsgAMAddFreeLicense.store_country_code', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1607,7 +1709,10 @@ _CMSGAMADDFREELICENSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3252,
   serialized_end=3357,
 )
@@ -1649,7 +1754,10 @@ _CMSGAMADDFREELICENSERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3359,
   serialized_end=3458,
 )
@@ -1677,7 +1785,10 @@ _CGCMSGGETIPLOCATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3460,
   serialized_end=3494,
 )
@@ -1714,21 +1825,21 @@ _CIPLOCATIONINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='country', full_name='CIPLocationInfo.country', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='state', full_name='CIPLocationInfo.state', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='city', full_name='CIPLocationInfo.city', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1740,7 +1851,10 @@ _CIPLOCATIONINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3496,
   serialized_end=3608,
 )
@@ -1768,7 +1882,10 @@ _CGCMSGGETIPLOCATIONRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3610,
   serialized_end=3672,
 )
@@ -1796,7 +1913,10 @@ _CGCMSGGETIPASN = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3674,
   serialized_end=3703,
 )
@@ -1831,7 +1951,10 @@ _CIPASNINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3705,
   serialized_end=3742,
 )
@@ -1859,7 +1982,10 @@ _CGCMSGGETIPASNRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3744,
   serialized_end=3796,
 )
@@ -1882,7 +2008,7 @@ _CGCMSGSYSTEMSTATSSCHEMA = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='schema_kv', full_name='CGCMsgSystemStatsSchema.schema_kv', index=1,
       number=2, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1894,7 +2020,10 @@ _CGCMSGSYSTEMSTATSSCHEMA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3798,
   serialized_end=3861,
 )
@@ -1915,7 +2044,10 @@ _CGCMSGGETSYSTEMSTATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3863,
   serialized_end=3885,
 )
@@ -1938,7 +2070,7 @@ _CGCMSGGETSYSTEMSTATSRESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='stats_kv', full_name='CGCMsgGetSystemStatsResponse.stats_kv', index=1,
       number=2, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2027,7 +2159,10 @@ _CGCMSGGETSYSTEMSTATSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3888,
   serialized_end=4213,
 )
@@ -2043,14 +2178,14 @@ _CMSGAMSENDEMAIL_REPLACEMENTTOKEN = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='token_name', full_name='CMsgAMSendEmail.ReplacementToken.token_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='token_value', full_name='CMsgAMSendEmail.ReplacementToken.token_value', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2062,7 +2197,10 @@ _CMSGAMSENDEMAIL_REPLACEMENTTOKEN = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4443,
   serialized_end=4502,
 )
@@ -2084,7 +2222,7 @@ _CMSGAMSENDEMAIL_PERSONANAMEREPLACEMENTTOKEN = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='token_name', full_name='CMsgAMSendEmail.PersonaNameReplacementToken.token_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2096,7 +2234,10 @@ _CMSGAMSENDEMAIL_PERSONANAMEREPLACEMENTTOKEN = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4504,
   serialized_end=4570,
 )
@@ -2158,7 +2299,10 @@ _CMSGAMSENDEMAIL = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4216,
   serialized_end=4570,
 )
@@ -2186,7 +2330,10 @@ _CMSGAMSENDEMAILRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4572,
   serialized_end=4617,
 )
@@ -2235,7 +2382,10 @@ _CMSGGCGETEMAILTEMPLATE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4619,
   serialized_end=4725,
 )
@@ -2265,7 +2415,7 @@ _CMSGGCGETEMAILTEMPLATERESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='template', full_name='CMsgGCGetEmailTemplateResponse.template', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2277,7 +2427,10 @@ _CMSGGCGETEMAILTEMPLATERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4727,
   serialized_end=4822,
 )
@@ -2333,7 +2486,10 @@ _CMSGAMGRANTGUESTPASSES2 = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4825,
   serialized_end=4957,
 )
@@ -2368,7 +2524,10 @@ _CMSGAMGRANTGUESTPASSES2RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4959,
   serialized_end=5039,
 )
@@ -2401,9 +2560,12 @@ _CGCSYSTEMMSG_GETACCOUNTDETAILS = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), '\200\246\035\200\001\210\246\035\200\004'),
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), b'\200\246\035\200\001\210\246\035\200\004'),
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=5041,
   serialized_end=5117,
 )
@@ -2426,14 +2588,14 @@ _CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='account_name', full_name='CGCSystemMsg_GetAccountDetails_Response.account_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='persona_name', full_name='CGCSystemMsg_GetAccountDetails_Response.persona_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2566,7 +2728,7 @@ _CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='currency', full_name='CGCSystemMsg_GetAccountDetails_Response.currency', index=21,
       number=22, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2646,9 +2808,12 @@ _CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), '\200\246\035\200\001\210\246\035\200\004'),
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), b'\200\246\035\200\001\210\246\035\200\004'),
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=5120,
   serialized_end=6016,
 )
@@ -2676,7 +2841,10 @@ _CMSGGCGETPERSONANAMES = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6018,
   serialized_end=6059,
 )
@@ -2699,7 +2867,7 @@ _CMSGGCGETPERSONANAMES_RESPONSE_PERSONANAME = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='persona_name', full_name='CMsgGCGetPersonaNames_Response.PersonaName.persona_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2711,7 +2879,10 @@ _CMSGGCGETPERSONANAMES_RESPONSE_PERSONANAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6200,
   serialized_end=6252,
 )
@@ -2745,7 +2916,10 @@ _CMSGGCGETPERSONANAMES_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6062,
   serialized_end=6252,
 )
@@ -2780,7 +2954,10 @@ _CMSGGCCHECKFRIENDSHIP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6254,
   serialized_end=6322,
 )
@@ -2815,7 +2992,10 @@ _CMSGGCCHECKFRIENDSHIP_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6324,
   serialized_end=6399,
 )
@@ -2850,7 +3030,10 @@ _CMSGGCGETAPPFRIENDSLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6401,
   serialized_end=6482,
 )
@@ -2892,7 +3075,10 @@ _CMSGGCGETAPPFRIENDSLIST_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6484,
   serialized_end=6584,
 )
@@ -2915,28 +3101,28 @@ _CMSGGCMSGMASTERSETDIRECTORY_SUBGC = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CMsgGCMsgMasterSetDirectory.SubGC.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='box', full_name='CMsgGCMsgMasterSetDirectory.SubGC.box', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='command_line', full_name='CMsgGCMsgMasterSetDirectory.SubGC.command_line', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='gc_binary', full_name='CMsgGCMsgMasterSetDirectory.SubGC.gc_binary', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2948,7 +3134,10 @@ _CMSGGCMSGMASTERSETDIRECTORY_SUBGC = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6693,
   serialized_end=6787,
 )
@@ -2982,7 +3171,10 @@ _CMSGGCMSGMASTERSETDIRECTORY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6587,
   serialized_end=6787,
 )
@@ -3010,7 +3202,10 @@ _CMSGGCMSGMASTERSETDIRECTORY_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6789,
   serialized_end=6847,
 )
@@ -3038,7 +3233,10 @@ _CMSGGCMSGWEBAPIJOBREQUESTFORWARDRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6849,
   serialized_end=6910,
 )
@@ -3066,7 +3264,10 @@ _CGCSYSTEMMSG_GETPURCHASETRUST_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6912,
   serialized_end=6968,
 )
@@ -3115,7 +3316,10 @@ _CGCSYSTEMMSG_GETPURCHASETRUST_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6971,
   serialized_end=7144,
 )
@@ -3171,7 +3375,10 @@ _CMSGGCHACCOUNTVACSTATUSCHANGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=7147,
   serialized_end=7290,
 )
@@ -3199,7 +3406,10 @@ _CMSGGCGETPARTNERACCOUNTLINK = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=7292,
   serialized_end=7338,
 )
@@ -3234,7 +3444,10 @@ _CMSGGCGETPARTNERACCOUNTLINK_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=7340,
   serialized_end=7409,
 )
@@ -3278,7 +3491,7 @@ _CMSGGCROUTINGINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='webapi_param', full_name='CMsgGCRoutingInfo.webapi_param', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3291,7 +3504,10 @@ _CMSGGCROUTINGINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=7412,
   serialized_end=7729,
 )
@@ -3307,14 +3523,14 @@ _CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='interface_name', full_name='CMsgGCMsgMasterSetWebAPIRouting.Entry.interface_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='method_name', full_name='CMsgGCMsgMasterSetWebAPIRouting.Entry.method_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3333,7 +3549,10 @@ _CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=7824,
   serialized_end=7913,
 )
@@ -3360,7 +3579,10 @@ _CMSGGCMSGMASTERSETWEBAPIROUTING = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=7732,
   serialized_end=7913,
 )
@@ -3395,7 +3617,10 @@ _CMSGGCMSGMASTERSETCLIENTMSGROUTING_ENTRY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=8014,
   serialized_end=8076,
 )
@@ -3422,7 +3647,10 @@ _CMSGGCMSGMASTERSETCLIENTMSGROUTING = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=7916,
   serialized_end=8076,
 )
@@ -3450,7 +3678,10 @@ _CMSGGCMSGMASTERSETWEBAPIROUTING_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=8078,
   serialized_end=8140,
 )
@@ -3478,7 +3709,10 @@ _CMSGGCMSGMASTERSETCLIENTMSGROUTING_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=8142,
   serialized_end=8207,
 )
@@ -3513,7 +3747,10 @@ _CMSGGCMSGSETOPTIONS_MESSAGERANGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=8423,
   serialized_end=8464,
 )
@@ -3556,7 +3793,10 @@ _CMSGGCMSGSETOPTIONS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=8210,
   serialized_end=8648,
 )
@@ -3572,14 +3812,14 @@ _CMSGGCHUPDATESESSION_EXTRAFIELD = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CMsgGCHUpdateSession.ExtraField.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='value', full_name='CMsgGCHUpdateSession.ExtraField.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3591,7 +3831,10 @@ _CMSGGCHUPDATESESSION_EXTRAFIELD = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=8886,
   serialized_end=8927,
 )
@@ -3674,7 +3917,10 @@ _CMSGGCHUPDATESESSION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=8651,
   serialized_end=8927,
 )
@@ -3709,7 +3955,10 @@ _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY_MULTIPLEGAMEINSTANCES = _descriptor.Descri
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=9091,
   serialized_end=9166,
 )
@@ -3750,7 +3999,10 @@ _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=8930,
   serialized_end=9166,
 )
@@ -3857,14 +4109,14 @@ _CMSGDPPARTNERMICROTXNS_PARTNERMICROTXN = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='country_code', full_name='CMsgDPPartnerMicroTxns.PartnerMicroTxn.country_code', index=13,
       number=14, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='region_code', full_name='CMsgDPPartnerMicroTxns.PartnerMicroTxn.region_code', index=14,
       number=15, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3890,7 +4142,10 @@ _CMSGDPPARTNERMICROTXNS_PARTNERMICROTXN = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=9345,
   serialized_end=9692,
 )
@@ -3912,21 +4167,21 @@ _CMSGDPPARTNERMICROTXNS_PARTNERINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='partner_name', full_name='CMsgDPPartnerMicroTxns.PartnerInfo.partner_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='currency_code', full_name='CMsgDPPartnerMicroTxns.PartnerInfo.currency_code', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='currency_name', full_name='CMsgDPPartnerMicroTxns.PartnerInfo.currency_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3938,7 +4193,10 @@ _CMSGDPPARTNERMICROTXNS_PARTNERINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=9694,
   serialized_end=9795,
 )
@@ -3960,7 +4218,7 @@ _CMSGDPPARTNERMICROTXNS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='gc_name', full_name='CMsgDPPartnerMicroTxns.gc_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -3986,7 +4244,10 @@ _CMSGDPPARTNERMICROTXNS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=9169,
   serialized_end=9795,
 )
@@ -4022,7 +4283,10 @@ _CMSGDPPARTNERMICROTXNSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=9798,
   serialized_end=10180,
 )
@@ -4064,65 +4328,68 @@ _CMSGGCHVACVERIFICATIONCHANGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=10182,
   serialized_end=10265,
 )
 
 _CMSGPROTOBUFHEADER.fields_by_name['gc_msg_src'].enum_type = _GCPROTOBUFMSGSRC
-_CMSGHTTPREQUEST_REQUESTHEADER.containing_type = _CMSGHTTPREQUEST;
-_CMSGHTTPREQUEST_QUERYPARAM.containing_type = _CMSGHTTPREQUEST;
+_CMSGHTTPREQUEST_REQUESTHEADER.containing_type = _CMSGHTTPREQUEST
+_CMSGHTTPREQUEST_QUERYPARAM.containing_type = _CMSGHTTPREQUEST
 _CMSGHTTPREQUEST.fields_by_name['headers'].message_type = _CMSGHTTPREQUEST_REQUESTHEADER
 _CMSGHTTPREQUEST.fields_by_name['get_params'].message_type = _CMSGHTTPREQUEST_QUERYPARAM
 _CMSGHTTPREQUEST.fields_by_name['post_params'].message_type = _CMSGHTTPREQUEST_QUERYPARAM
 _CMSGWEBAPIREQUEST.fields_by_name['api_key'].message_type = _CMSGWEBAPIKEY
 _CMSGWEBAPIREQUEST.fields_by_name['request'].message_type = _CMSGHTTPREQUEST
-_CMSGHTTPRESPONSE_RESPONSEHEADER.containing_type = _CMSGHTTPRESPONSE;
+_CMSGHTTPRESPONSE_RESPONSEHEADER.containing_type = _CMSGHTTPRESPONSE
 _CMSGHTTPRESPONSE.fields_by_name['headers'].message_type = _CMSGHTTPRESPONSE_RESPONSEHEADER
 _CMSGAMGETLICENSESRESPONSE.fields_by_name['license'].message_type = _CMSGPACKAGELICENSE
-_CMSGAMGETUSERGAMESTATSRESPONSE_STATS.containing_type = _CMSGAMGETUSERGAMESTATSRESPONSE;
-_CMSGAMGETUSERGAMESTATSRESPONSE_ACHIEVEMENT_BLOCKS.containing_type = _CMSGAMGETUSERGAMESTATSRESPONSE;
+_CMSGAMGETUSERGAMESTATSRESPONSE_STATS.containing_type = _CMSGAMGETUSERGAMESTATSRESPONSE
+_CMSGAMGETUSERGAMESTATSRESPONSE_ACHIEVEMENT_BLOCKS.containing_type = _CMSGAMGETUSERGAMESTATSRESPONSE
 _CMSGAMGETUSERGAMESTATSRESPONSE.fields_by_name['stats'].message_type = _CMSGAMGETUSERGAMESTATSRESPONSE_STATS
 _CMSGAMGETUSERGAMESTATSRESPONSE.fields_by_name['achievement_blocks'].message_type = _CMSGAMGETUSERGAMESTATSRESPONSE_ACHIEVEMENT_BLOCKS
-_CGCMSGMEMCACHEDGETRESPONSE_VALUETAG.containing_type = _CGCMSGMEMCACHEDGETRESPONSE;
+_CGCMSGMEMCACHEDGETRESPONSE_VALUETAG.containing_type = _CGCMSGMEMCACHEDGETRESPONSE
 _CGCMSGMEMCACHEDGETRESPONSE.fields_by_name['values'].message_type = _CGCMSGMEMCACHEDGETRESPONSE_VALUETAG
-_CGCMSGMEMCACHEDSET_KEYPAIR.containing_type = _CGCMSGMEMCACHEDSET;
+_CGCMSGMEMCACHEDSET_KEYPAIR.containing_type = _CGCMSGMEMCACHEDSET
 _CGCMSGMEMCACHEDSET.fields_by_name['keys'].message_type = _CGCMSGMEMCACHEDSET_KEYPAIR
 _CGCMSGGETIPLOCATIONRESPONSE.fields_by_name['infos'].message_type = _CIPLOCATIONINFO
 _CGCMSGGETIPASNRESPONSE.fields_by_name['infos'].message_type = _CIPASNINFO
-_CMSGAMSENDEMAIL_REPLACEMENTTOKEN.containing_type = _CMSGAMSENDEMAIL;
-_CMSGAMSENDEMAIL_PERSONANAMEREPLACEMENTTOKEN.containing_type = _CMSGAMSENDEMAIL;
+_CMSGAMSENDEMAIL_REPLACEMENTTOKEN.containing_type = _CMSGAMSENDEMAIL
+_CMSGAMSENDEMAIL_PERSONANAMEREPLACEMENTTOKEN.containing_type = _CMSGAMSENDEMAIL
 _CMSGAMSENDEMAIL.fields_by_name['persona_name_tokens'].message_type = _CMSGAMSENDEMAIL_PERSONANAMEREPLACEMENTTOKEN
 _CMSGAMSENDEMAIL.fields_by_name['tokens'].message_type = _CMSGAMSENDEMAIL_REPLACEMENTTOKEN
-_CMSGGCGETPERSONANAMES_RESPONSE_PERSONANAME.containing_type = _CMSGGCGETPERSONANAMES_RESPONSE;
+_CMSGGCGETPERSONANAMES_RESPONSE_PERSONANAME.containing_type = _CMSGGCGETPERSONANAMES_RESPONSE
 _CMSGGCGETPERSONANAMES_RESPONSE.fields_by_name['succeeded_lookups'].message_type = _CMSGGCGETPERSONANAMES_RESPONSE_PERSONANAME
-_CMSGGCMSGMASTERSETDIRECTORY_SUBGC.containing_type = _CMSGGCMSGMASTERSETDIRECTORY;
+_CMSGGCMSGMASTERSETDIRECTORY_SUBGC.containing_type = _CMSGGCMSGMASTERSETDIRECTORY
 _CMSGGCMSGMASTERSETDIRECTORY.fields_by_name['dir'].message_type = _CMSGGCMSGMASTERSETDIRECTORY_SUBGC
 _CMSGGCROUTINGINFO.fields_by_name['method'].enum_type = _CMSGGCROUTINGINFO_ROUTINGMETHOD
 _CMSGGCROUTINGINFO.fields_by_name['fallback'].enum_type = _CMSGGCROUTINGINFO_ROUTINGMETHOD
-_CMSGGCROUTINGINFO_ROUTINGMETHOD.containing_type = _CMSGGCROUTINGINFO;
+_CMSGGCROUTINGINFO_ROUTINGMETHOD.containing_type = _CMSGGCROUTINGINFO
 _CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY.fields_by_name['routing'].message_type = _CMSGGCROUTINGINFO
-_CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY.containing_type = _CMSGGCMSGMASTERSETWEBAPIROUTING;
+_CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY.containing_type = _CMSGGCMSGMASTERSETWEBAPIROUTING
 _CMSGGCMSGMASTERSETWEBAPIROUTING.fields_by_name['entries'].message_type = _CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY
 _CMSGGCMSGMASTERSETCLIENTMSGROUTING_ENTRY.fields_by_name['routing'].message_type = _CMSGGCROUTINGINFO
-_CMSGGCMSGMASTERSETCLIENTMSGROUTING_ENTRY.containing_type = _CMSGGCMSGMASTERSETCLIENTMSGROUTING;
+_CMSGGCMSGMASTERSETCLIENTMSGROUTING_ENTRY.containing_type = _CMSGGCMSGMASTERSETCLIENTMSGROUTING
 _CMSGGCMSGMASTERSETCLIENTMSGROUTING.fields_by_name['entries'].message_type = _CMSGGCMSGMASTERSETCLIENTMSGROUTING_ENTRY
-_CMSGGCMSGSETOPTIONS_MESSAGERANGE.containing_type = _CMSGGCMSGSETOPTIONS;
+_CMSGGCMSGSETOPTIONS_MESSAGERANGE.containing_type = _CMSGGCMSGSETOPTIONS
 _CMSGGCMSGSETOPTIONS.fields_by_name['options'].enum_type = _CMSGGCMSGSETOPTIONS_OPTION
 _CMSGGCMSGSETOPTIONS.fields_by_name['client_msg_ranges'].message_type = _CMSGGCMSGSETOPTIONS_MESSAGERANGE
 _CMSGGCMSGSETOPTIONS.fields_by_name['gcsql_version'].enum_type = _CMSGGCMSGSETOPTIONS_GCSQLVERSION
-_CMSGGCMSGSETOPTIONS_OPTION.containing_type = _CMSGGCMSGSETOPTIONS;
-_CMSGGCMSGSETOPTIONS_GCSQLVERSION.containing_type = _CMSGGCMSGSETOPTIONS;
-_CMSGGCHUPDATESESSION_EXTRAFIELD.containing_type = _CMSGGCHUPDATESESSION;
+_CMSGGCMSGSETOPTIONS_OPTION.containing_type = _CMSGGCMSGSETOPTIONS
+_CMSGGCMSGSETOPTIONS_GCSQLVERSION.containing_type = _CMSGGCMSGSETOPTIONS
+_CMSGGCHUPDATESESSION_EXTRAFIELD.containing_type = _CMSGGCHUPDATESESSION
 _CMSGGCHUPDATESESSION.fields_by_name['extra_fields'].message_type = _CMSGGCHUPDATESESSION_EXTRAFIELD
-_CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY_MULTIPLEGAMEINSTANCES.containing_type = _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY;
+_CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY_MULTIPLEGAMEINSTANCES.containing_type = _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY
 _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY.fields_by_name['multiple_instances'].message_type = _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY_MULTIPLEGAMEINSTANCES
-_CMSGDPPARTNERMICROTXNS_PARTNERMICROTXN.containing_type = _CMSGDPPARTNERMICROTXNS;
-_CMSGDPPARTNERMICROTXNS_PARTNERINFO.containing_type = _CMSGDPPARTNERMICROTXNS;
+_CMSGDPPARTNERMICROTXNS_PARTNERMICROTXN.containing_type = _CMSGDPPARTNERMICROTXNS
+_CMSGDPPARTNERMICROTXNS_PARTNERINFO.containing_type = _CMSGDPPARTNERMICROTXNS
 _CMSGDPPARTNERMICROTXNS.fields_by_name['partner'].message_type = _CMSGDPPARTNERMICROTXNS_PARTNERINFO
 _CMSGDPPARTNERMICROTXNS.fields_by_name['transactions'].message_type = _CMSGDPPARTNERMICROTXNS_PARTNERMICROTXN
 _CMSGDPPARTNERMICROTXNSRESPONSE.fields_by_name['eerrorcode'].enum_type = _CMSGDPPARTNERMICROTXNSRESPONSE_EERRORCODE
-_CMSGDPPARTNERMICROTXNSRESPONSE_EERRORCODE.containing_type = _CMSGDPPARTNERMICROTXNSRESPONSE;
+_CMSGDPPARTNERMICROTXNSRESPONSE_EERRORCODE.containing_type = _CMSGDPPARTNERMICROTXNSRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgProtoBufHeader'] = _CMSGPROTOBUFHEADER
 DESCRIPTOR.message_types_by_name['CMsgWebAPIKey'] = _CMSGWEBAPIKEY
 DESCRIPTOR.message_types_by_name['CMsgHttpRequest'] = _CMSGHTTPREQUEST
@@ -4190,527 +4457,634 @@ DESCRIPTOR.message_types_by_name['CMsgNotificationOfSuspiciousActivity'] = _CMSG
 DESCRIPTOR.message_types_by_name['CMsgDPPartnerMicroTxns'] = _CMSGDPPARTNERMICROTXNS
 DESCRIPTOR.message_types_by_name['CMsgDPPartnerMicroTxnsResponse'] = _CMSGDPPARTNERMICROTXNSRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgGCHVacVerificationChange'] = _CMSGGCHVACVERIFICATIONCHANGE
+DESCRIPTOR.enum_types_by_name['GCProtoBufMsgSrc'] = _GCPROTOBUFMSGSRC
+DESCRIPTOR.extensions_by_name['key_field'] = key_field
+DESCRIPTOR.extensions_by_name['msgpool_soft_limit'] = msgpool_soft_limit
+DESCRIPTOR.extensions_by_name['msgpool_hard_limit'] = msgpool_hard_limit
 
-class CMsgProtoBufHeader(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPROTOBUFHEADER
-
+CMsgProtoBufHeader = _reflection.GeneratedProtocolMessageType('CMsgProtoBufHeader', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGPROTOBUFHEADER,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgProtoBufHeader)
+  ))
+_sym_db.RegisterMessage(CMsgProtoBufHeader)
 
-class CMsgWebAPIKey(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGWEBAPIKEY
-
+CMsgWebAPIKey = _reflection.GeneratedProtocolMessageType('CMsgWebAPIKey', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGWEBAPIKEY,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgWebAPIKey)
+  ))
+_sym_db.RegisterMessage(CMsgWebAPIKey)
 
-class CMsgHttpRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgHttpRequest = _reflection.GeneratedProtocolMessageType('CMsgHttpRequest', (_message.Message,), dict(
 
-  class RequestHeader(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGHTTPREQUEST_REQUESTHEADER
-
+  RequestHeader = _reflection.GeneratedProtocolMessageType('RequestHeader', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGHTTPREQUEST_REQUESTHEADER,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgHttpRequest.RequestHeader)
+    ))
+  ,
 
-  class QueryParam(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGHTTPREQUEST_QUERYPARAM
-
+  QueryParam = _reflection.GeneratedProtocolMessageType('QueryParam', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGHTTPREQUEST_QUERYPARAM,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgHttpRequest.QueryParam)
-  DESCRIPTOR = _CMSGHTTPREQUEST
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGHTTPREQUEST,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgHttpRequest)
+  ))
+_sym_db.RegisterMessage(CMsgHttpRequest)
+_sym_db.RegisterMessage(CMsgHttpRequest.RequestHeader)
+_sym_db.RegisterMessage(CMsgHttpRequest.QueryParam)
 
-class CMsgWebAPIRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGWEBAPIREQUEST
-
+CMsgWebAPIRequest = _reflection.GeneratedProtocolMessageType('CMsgWebAPIRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGWEBAPIREQUEST,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgWebAPIRequest)
+  ))
+_sym_db.RegisterMessage(CMsgWebAPIRequest)
 
-class CMsgHttpResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgHttpResponse = _reflection.GeneratedProtocolMessageType('CMsgHttpResponse', (_message.Message,), dict(
 
-  class ResponseHeader(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGHTTPRESPONSE_RESPONSEHEADER
-
+  ResponseHeader = _reflection.GeneratedProtocolMessageType('ResponseHeader', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGHTTPRESPONSE_RESPONSEHEADER,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgHttpResponse.ResponseHeader)
-  DESCRIPTOR = _CMSGHTTPRESPONSE
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGHTTPRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgHttpResponse)
+  ))
+_sym_db.RegisterMessage(CMsgHttpResponse)
+_sym_db.RegisterMessage(CMsgHttpResponse.ResponseHeader)
 
-class CMsgAMFindAccounts(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMFINDACCOUNTS
-
+CMsgAMFindAccounts = _reflection.GeneratedProtocolMessageType('CMsgAMFindAccounts', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMFINDACCOUNTS,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMFindAccounts)
+  ))
+_sym_db.RegisterMessage(CMsgAMFindAccounts)
 
-class CMsgAMFindAccountsResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMFINDACCOUNTSRESPONSE
-
+CMsgAMFindAccountsResponse = _reflection.GeneratedProtocolMessageType('CMsgAMFindAccountsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMFINDACCOUNTSRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMFindAccountsResponse)
+  ))
+_sym_db.RegisterMessage(CMsgAMFindAccountsResponse)
 
-class CMsgNotifyWatchdog(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGNOTIFYWATCHDOG
-
+CMsgNotifyWatchdog = _reflection.GeneratedProtocolMessageType('CMsgNotifyWatchdog', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGNOTIFYWATCHDOG,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgNotifyWatchdog)
+  ))
+_sym_db.RegisterMessage(CMsgNotifyWatchdog)
 
-class CMsgAMGetLicenses(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMGETLICENSES
-
+CMsgAMGetLicenses = _reflection.GeneratedProtocolMessageType('CMsgAMGetLicenses', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMGETLICENSES,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMGetLicenses)
+  ))
+_sym_db.RegisterMessage(CMsgAMGetLicenses)
 
-class CMsgPackageLicense(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPACKAGELICENSE
-
+CMsgPackageLicense = _reflection.GeneratedProtocolMessageType('CMsgPackageLicense', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGPACKAGELICENSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgPackageLicense)
+  ))
+_sym_db.RegisterMessage(CMsgPackageLicense)
 
-class CMsgAMGetLicensesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMGETLICENSESRESPONSE
-
+CMsgAMGetLicensesResponse = _reflection.GeneratedProtocolMessageType('CMsgAMGetLicensesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMGETLICENSESRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMGetLicensesResponse)
+  ))
+_sym_db.RegisterMessage(CMsgAMGetLicensesResponse)
 
-class CMsgAMGetUserGameStats(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMGETUSERGAMESTATS
-
+CMsgAMGetUserGameStats = _reflection.GeneratedProtocolMessageType('CMsgAMGetUserGameStats', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMGETUSERGAMESTATS,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMGetUserGameStats)
+  ))
+_sym_db.RegisterMessage(CMsgAMGetUserGameStats)
 
-class CMsgAMGetUserGameStatsResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgAMGetUserGameStatsResponse = _reflection.GeneratedProtocolMessageType('CMsgAMGetUserGameStatsResponse', (_message.Message,), dict(
 
-  class Stats(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGAMGETUSERGAMESTATSRESPONSE_STATS
-
+  Stats = _reflection.GeneratedProtocolMessageType('Stats', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGAMGETUSERGAMESTATSRESPONSE_STATS,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgAMGetUserGameStatsResponse.Stats)
+    ))
+  ,
 
-  class Achievement_Blocks(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGAMGETUSERGAMESTATSRESPONSE_ACHIEVEMENT_BLOCKS
-
+  Achievement_Blocks = _reflection.GeneratedProtocolMessageType('Achievement_Blocks', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGAMGETUSERGAMESTATSRESPONSE_ACHIEVEMENT_BLOCKS,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgAMGetUserGameStatsResponse.Achievement_Blocks)
-  DESCRIPTOR = _CMSGAMGETUSERGAMESTATSRESPONSE
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGAMGETUSERGAMESTATSRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMGetUserGameStatsResponse)
+  ))
+_sym_db.RegisterMessage(CMsgAMGetUserGameStatsResponse)
+_sym_db.RegisterMessage(CMsgAMGetUserGameStatsResponse.Stats)
+_sym_db.RegisterMessage(CMsgAMGetUserGameStatsResponse.Achievement_Blocks)
 
-class CMsgGCGetCommandList(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETCOMMANDLIST
-
+CMsgGCGetCommandList = _reflection.GeneratedProtocolMessageType('CMsgGCGetCommandList', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETCOMMANDLIST,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetCommandList)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetCommandList)
 
-class CMsgGCGetCommandListResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETCOMMANDLISTRESPONSE
-
+CMsgGCGetCommandListResponse = _reflection.GeneratedProtocolMessageType('CMsgGCGetCommandListResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETCOMMANDLISTRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetCommandListResponse)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetCommandListResponse)
 
-class CGCMsgMemCachedGet(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGMEMCACHEDGET
-
+CGCMsgMemCachedGet = _reflection.GeneratedProtocolMessageType('CGCMsgMemCachedGet', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGMEMCACHEDGET,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgMemCachedGet)
+  ))
+_sym_db.RegisterMessage(CGCMsgMemCachedGet)
 
-class CGCMsgMemCachedGetResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CGCMsgMemCachedGetResponse = _reflection.GeneratedProtocolMessageType('CGCMsgMemCachedGetResponse', (_message.Message,), dict(
 
-  class ValueTag(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CGCMSGMEMCACHEDGETRESPONSE_VALUETAG
-
+  ValueTag = _reflection.GeneratedProtocolMessageType('ValueTag', (_message.Message,), dict(
+    DESCRIPTOR = _CGCMSGMEMCACHEDGETRESPONSE_VALUETAG,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CGCMsgMemCachedGetResponse.ValueTag)
-  DESCRIPTOR = _CGCMSGMEMCACHEDGETRESPONSE
-
+    ))
+  ,
+  DESCRIPTOR = _CGCMSGMEMCACHEDGETRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgMemCachedGetResponse)
+  ))
+_sym_db.RegisterMessage(CGCMsgMemCachedGetResponse)
+_sym_db.RegisterMessage(CGCMsgMemCachedGetResponse.ValueTag)
 
-class CGCMsgMemCachedSet(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CGCMsgMemCachedSet = _reflection.GeneratedProtocolMessageType('CGCMsgMemCachedSet', (_message.Message,), dict(
 
-  class KeyPair(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CGCMSGMEMCACHEDSET_KEYPAIR
-
+  KeyPair = _reflection.GeneratedProtocolMessageType('KeyPair', (_message.Message,), dict(
+    DESCRIPTOR = _CGCMSGMEMCACHEDSET_KEYPAIR,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CGCMsgMemCachedSet.KeyPair)
-  DESCRIPTOR = _CGCMSGMEMCACHEDSET
-
+    ))
+  ,
+  DESCRIPTOR = _CGCMSGMEMCACHEDSET,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgMemCachedSet)
+  ))
+_sym_db.RegisterMessage(CGCMsgMemCachedSet)
+_sym_db.RegisterMessage(CGCMsgMemCachedSet.KeyPair)
 
-class CGCMsgMemCachedDelete(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGMEMCACHEDDELETE
-
+CGCMsgMemCachedDelete = _reflection.GeneratedProtocolMessageType('CGCMsgMemCachedDelete', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGMEMCACHEDDELETE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgMemCachedDelete)
+  ))
+_sym_db.RegisterMessage(CGCMsgMemCachedDelete)
 
-class CGCMsgMemCachedStats(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGMEMCACHEDSTATS
-
+CGCMsgMemCachedStats = _reflection.GeneratedProtocolMessageType('CGCMsgMemCachedStats', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGMEMCACHEDSTATS,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgMemCachedStats)
+  ))
+_sym_db.RegisterMessage(CGCMsgMemCachedStats)
 
-class CGCMsgMemCachedStatsResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGMEMCACHEDSTATSRESPONSE
-
+CGCMsgMemCachedStatsResponse = _reflection.GeneratedProtocolMessageType('CGCMsgMemCachedStatsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGMEMCACHEDSTATSRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgMemCachedStatsResponse)
+  ))
+_sym_db.RegisterMessage(CGCMsgMemCachedStatsResponse)
 
-class CGCMsgSQLStats(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGSQLSTATS
-
+CGCMsgSQLStats = _reflection.GeneratedProtocolMessageType('CGCMsgSQLStats', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGSQLSTATS,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgSQLStats)
+  ))
+_sym_db.RegisterMessage(CGCMsgSQLStats)
 
-class CGCMsgSQLStatsResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGSQLSTATSRESPONSE
-
+CGCMsgSQLStatsResponse = _reflection.GeneratedProtocolMessageType('CGCMsgSQLStatsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGSQLSTATSRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgSQLStatsResponse)
+  ))
+_sym_db.RegisterMessage(CGCMsgSQLStatsResponse)
 
-class CMsgAMAddFreeLicense(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMADDFREELICENSE
-
+CMsgAMAddFreeLicense = _reflection.GeneratedProtocolMessageType('CMsgAMAddFreeLicense', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMADDFREELICENSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMAddFreeLicense)
+  ))
+_sym_db.RegisterMessage(CMsgAMAddFreeLicense)
 
-class CMsgAMAddFreeLicenseResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMADDFREELICENSERESPONSE
-
+CMsgAMAddFreeLicenseResponse = _reflection.GeneratedProtocolMessageType('CMsgAMAddFreeLicenseResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMADDFREELICENSERESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMAddFreeLicenseResponse)
+  ))
+_sym_db.RegisterMessage(CMsgAMAddFreeLicenseResponse)
 
-class CGCMsgGetIPLocation(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGGETIPLOCATION
-
+CGCMsgGetIPLocation = _reflection.GeneratedProtocolMessageType('CGCMsgGetIPLocation', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGGETIPLOCATION,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgGetIPLocation)
+  ))
+_sym_db.RegisterMessage(CGCMsgGetIPLocation)
 
-class CIPLocationInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CIPLOCATIONINFO
-
+CIPLocationInfo = _reflection.GeneratedProtocolMessageType('CIPLocationInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CIPLOCATIONINFO,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CIPLocationInfo)
+  ))
+_sym_db.RegisterMessage(CIPLocationInfo)
 
-class CGCMsgGetIPLocationResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGGETIPLOCATIONRESPONSE
-
+CGCMsgGetIPLocationResponse = _reflection.GeneratedProtocolMessageType('CGCMsgGetIPLocationResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGGETIPLOCATIONRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgGetIPLocationResponse)
+  ))
+_sym_db.RegisterMessage(CGCMsgGetIPLocationResponse)
 
-class CGCMsgGetIPASN(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGGETIPASN
-
+CGCMsgGetIPASN = _reflection.GeneratedProtocolMessageType('CGCMsgGetIPASN', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGGETIPASN,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgGetIPASN)
+  ))
+_sym_db.RegisterMessage(CGCMsgGetIPASN)
 
-class CIPASNInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CIPASNINFO
-
+CIPASNInfo = _reflection.GeneratedProtocolMessageType('CIPASNInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CIPASNINFO,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CIPASNInfo)
+  ))
+_sym_db.RegisterMessage(CIPASNInfo)
 
-class CGCMsgGetIPASNResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGGETIPASNRESPONSE
-
+CGCMsgGetIPASNResponse = _reflection.GeneratedProtocolMessageType('CGCMsgGetIPASNResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGGETIPASNRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgGetIPASNResponse)
+  ))
+_sym_db.RegisterMessage(CGCMsgGetIPASNResponse)
 
-class CGCMsgSystemStatsSchema(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGSYSTEMSTATSSCHEMA
-
+CGCMsgSystemStatsSchema = _reflection.GeneratedProtocolMessageType('CGCMsgSystemStatsSchema', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGSYSTEMSTATSSCHEMA,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgSystemStatsSchema)
+  ))
+_sym_db.RegisterMessage(CGCMsgSystemStatsSchema)
 
-class CGCMsgGetSystemStats(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGGETSYSTEMSTATS
-
+CGCMsgGetSystemStats = _reflection.GeneratedProtocolMessageType('CGCMsgGetSystemStats', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGGETSYSTEMSTATS,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgGetSystemStats)
+  ))
+_sym_db.RegisterMessage(CGCMsgGetSystemStats)
 
-class CGCMsgGetSystemStatsResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCMSGGETSYSTEMSTATSRESPONSE
-
+CGCMsgGetSystemStatsResponse = _reflection.GeneratedProtocolMessageType('CGCMsgGetSystemStatsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CGCMSGGETSYSTEMSTATSRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCMsgGetSystemStatsResponse)
+  ))
+_sym_db.RegisterMessage(CGCMsgGetSystemStatsResponse)
 
-class CMsgAMSendEmail(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgAMSendEmail = _reflection.GeneratedProtocolMessageType('CMsgAMSendEmail', (_message.Message,), dict(
 
-  class ReplacementToken(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGAMSENDEMAIL_REPLACEMENTTOKEN
-
+  ReplacementToken = _reflection.GeneratedProtocolMessageType('ReplacementToken', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGAMSENDEMAIL_REPLACEMENTTOKEN,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgAMSendEmail.ReplacementToken)
+    ))
+  ,
 
-  class PersonaNameReplacementToken(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGAMSENDEMAIL_PERSONANAMEREPLACEMENTTOKEN
-
+  PersonaNameReplacementToken = _reflection.GeneratedProtocolMessageType('PersonaNameReplacementToken', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGAMSENDEMAIL_PERSONANAMEREPLACEMENTTOKEN,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgAMSendEmail.PersonaNameReplacementToken)
-  DESCRIPTOR = _CMSGAMSENDEMAIL
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGAMSENDEMAIL,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMSendEmail)
+  ))
+_sym_db.RegisterMessage(CMsgAMSendEmail)
+_sym_db.RegisterMessage(CMsgAMSendEmail.ReplacementToken)
+_sym_db.RegisterMessage(CMsgAMSendEmail.PersonaNameReplacementToken)
 
-class CMsgAMSendEmailResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMSENDEMAILRESPONSE
-
+CMsgAMSendEmailResponse = _reflection.GeneratedProtocolMessageType('CMsgAMSendEmailResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMSENDEMAILRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMSendEmailResponse)
+  ))
+_sym_db.RegisterMessage(CMsgAMSendEmailResponse)
 
-class CMsgGCGetEmailTemplate(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETEMAILTEMPLATE
-
+CMsgGCGetEmailTemplate = _reflection.GeneratedProtocolMessageType('CMsgGCGetEmailTemplate', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETEMAILTEMPLATE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetEmailTemplate)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetEmailTemplate)
 
-class CMsgGCGetEmailTemplateResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETEMAILTEMPLATERESPONSE
-
+CMsgGCGetEmailTemplateResponse = _reflection.GeneratedProtocolMessageType('CMsgGCGetEmailTemplateResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETEMAILTEMPLATERESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetEmailTemplateResponse)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetEmailTemplateResponse)
 
-class CMsgAMGrantGuestPasses2(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMGRANTGUESTPASSES2
-
+CMsgAMGrantGuestPasses2 = _reflection.GeneratedProtocolMessageType('CMsgAMGrantGuestPasses2', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMGRANTGUESTPASSES2,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMGrantGuestPasses2)
+  ))
+_sym_db.RegisterMessage(CMsgAMGrantGuestPasses2)
 
-class CMsgAMGrantGuestPasses2Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGAMGRANTGUESTPASSES2RESPONSE
-
+CMsgAMGrantGuestPasses2Response = _reflection.GeneratedProtocolMessageType('CMsgAMGrantGuestPasses2Response', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGAMGRANTGUESTPASSES2RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgAMGrantGuestPasses2Response)
+  ))
+_sym_db.RegisterMessage(CMsgAMGrantGuestPasses2Response)
 
-class CGCSystemMsg_GetAccountDetails(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCSYSTEMMSG_GETACCOUNTDETAILS
-
+CGCSystemMsg_GetAccountDetails = _reflection.GeneratedProtocolMessageType('CGCSystemMsg_GetAccountDetails', (_message.Message,), dict(
+  DESCRIPTOR = _CGCSYSTEMMSG_GETACCOUNTDETAILS,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCSystemMsg_GetAccountDetails)
+  ))
+_sym_db.RegisterMessage(CGCSystemMsg_GetAccountDetails)
 
-class CGCSystemMsg_GetAccountDetails_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE
-
+CGCSystemMsg_GetAccountDetails_Response = _reflection.GeneratedProtocolMessageType('CGCSystemMsg_GetAccountDetails_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCSystemMsg_GetAccountDetails_Response)
+  ))
+_sym_db.RegisterMessage(CGCSystemMsg_GetAccountDetails_Response)
 
-class CMsgGCGetPersonaNames(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETPERSONANAMES
-
+CMsgGCGetPersonaNames = _reflection.GeneratedProtocolMessageType('CMsgGCGetPersonaNames', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETPERSONANAMES,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetPersonaNames)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetPersonaNames)
 
-class CMsgGCGetPersonaNames_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgGCGetPersonaNames_Response = _reflection.GeneratedProtocolMessageType('CMsgGCGetPersonaNames_Response', (_message.Message,), dict(
 
-  class PersonaName(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGGCGETPERSONANAMES_RESPONSE_PERSONANAME
-
+  PersonaName = _reflection.GeneratedProtocolMessageType('PersonaName', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGGCGETPERSONANAMES_RESPONSE_PERSONANAME,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgGCGetPersonaNames_Response.PersonaName)
-  DESCRIPTOR = _CMSGGCGETPERSONANAMES_RESPONSE
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGGCGETPERSONANAMES_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetPersonaNames_Response)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetPersonaNames_Response)
+_sym_db.RegisterMessage(CMsgGCGetPersonaNames_Response.PersonaName)
 
-class CMsgGCCheckFriendship(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCCHECKFRIENDSHIP
-
+CMsgGCCheckFriendship = _reflection.GeneratedProtocolMessageType('CMsgGCCheckFriendship', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCCHECKFRIENDSHIP,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCCheckFriendship)
+  ))
+_sym_db.RegisterMessage(CMsgGCCheckFriendship)
 
-class CMsgGCCheckFriendship_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCCHECKFRIENDSHIP_RESPONSE
-
+CMsgGCCheckFriendship_Response = _reflection.GeneratedProtocolMessageType('CMsgGCCheckFriendship_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCCHECKFRIENDSHIP_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCCheckFriendship_Response)
+  ))
+_sym_db.RegisterMessage(CMsgGCCheckFriendship_Response)
 
-class CMsgGCGetAppFriendsList(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETAPPFRIENDSLIST
-
+CMsgGCGetAppFriendsList = _reflection.GeneratedProtocolMessageType('CMsgGCGetAppFriendsList', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETAPPFRIENDSLIST,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetAppFriendsList)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetAppFriendsList)
 
-class CMsgGCGetAppFriendsList_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETAPPFRIENDSLIST_RESPONSE
-
+CMsgGCGetAppFriendsList_Response = _reflection.GeneratedProtocolMessageType('CMsgGCGetAppFriendsList_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETAPPFRIENDSLIST_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetAppFriendsList_Response)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetAppFriendsList_Response)
 
-class CMsgGCMsgMasterSetDirectory(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgGCMsgMasterSetDirectory = _reflection.GeneratedProtocolMessageType('CMsgGCMsgMasterSetDirectory', (_message.Message,), dict(
 
-  class SubGC(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGGCMSGMASTERSETDIRECTORY_SUBGC
-
+  SubGC = _reflection.GeneratedProtocolMessageType('SubGC', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGGCMSGMASTERSETDIRECTORY_SUBGC,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetDirectory.SubGC)
-  DESCRIPTOR = _CMSGGCMSGMASTERSETDIRECTORY
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGGCMSGMASTERSETDIRECTORY,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetDirectory)
+  ))
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetDirectory)
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetDirectory.SubGC)
 
-class CMsgGCMsgMasterSetDirectory_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCMSGMASTERSETDIRECTORY_RESPONSE
-
+CMsgGCMsgMasterSetDirectory_Response = _reflection.GeneratedProtocolMessageType('CMsgGCMsgMasterSetDirectory_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCMSGMASTERSETDIRECTORY_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetDirectory_Response)
+  ))
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetDirectory_Response)
 
-class CMsgGCMsgWebAPIJobRequestForwardResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCMSGWEBAPIJOBREQUESTFORWARDRESPONSE
-
+CMsgGCMsgWebAPIJobRequestForwardResponse = _reflection.GeneratedProtocolMessageType('CMsgGCMsgWebAPIJobRequestForwardResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCMSGWEBAPIJOBREQUESTFORWARDRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCMsgWebAPIJobRequestForwardResponse)
+  ))
+_sym_db.RegisterMessage(CMsgGCMsgWebAPIJobRequestForwardResponse)
 
-class CGCSystemMsg_GetPurchaseTrust_Request(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCSYSTEMMSG_GETPURCHASETRUST_REQUEST
-
+CGCSystemMsg_GetPurchaseTrust_Request = _reflection.GeneratedProtocolMessageType('CGCSystemMsg_GetPurchaseTrust_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CGCSYSTEMMSG_GETPURCHASETRUST_REQUEST,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCSystemMsg_GetPurchaseTrust_Request)
+  ))
+_sym_db.RegisterMessage(CGCSystemMsg_GetPurchaseTrust_Request)
 
-class CGCSystemMsg_GetPurchaseTrust_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CGCSYSTEMMSG_GETPURCHASETRUST_RESPONSE
-
+CGCSystemMsg_GetPurchaseTrust_Response = _reflection.GeneratedProtocolMessageType('CGCSystemMsg_GetPurchaseTrust_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CGCSYSTEMMSG_GETPURCHASETRUST_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CGCSystemMsg_GetPurchaseTrust_Response)
+  ))
+_sym_db.RegisterMessage(CGCSystemMsg_GetPurchaseTrust_Response)
 
-class CMsgGCHAccountVacStatusChange(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCHACCOUNTVACSTATUSCHANGE
-
+CMsgGCHAccountVacStatusChange = _reflection.GeneratedProtocolMessageType('CMsgGCHAccountVacStatusChange', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCHACCOUNTVACSTATUSCHANGE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCHAccountVacStatusChange)
+  ))
+_sym_db.RegisterMessage(CMsgGCHAccountVacStatusChange)
 
-class CMsgGCGetPartnerAccountLink(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETPARTNERACCOUNTLINK
-
+CMsgGCGetPartnerAccountLink = _reflection.GeneratedProtocolMessageType('CMsgGCGetPartnerAccountLink', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETPARTNERACCOUNTLINK,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetPartnerAccountLink)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetPartnerAccountLink)
 
-class CMsgGCGetPartnerAccountLink_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCGETPARTNERACCOUNTLINK_RESPONSE
-
+CMsgGCGetPartnerAccountLink_Response = _reflection.GeneratedProtocolMessageType('CMsgGCGetPartnerAccountLink_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCGETPARTNERACCOUNTLINK_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCGetPartnerAccountLink_Response)
+  ))
+_sym_db.RegisterMessage(CMsgGCGetPartnerAccountLink_Response)
 
-class CMsgGCRoutingInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCROUTINGINFO
-
+CMsgGCRoutingInfo = _reflection.GeneratedProtocolMessageType('CMsgGCRoutingInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCROUTINGINFO,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCRoutingInfo)
+  ))
+_sym_db.RegisterMessage(CMsgGCRoutingInfo)
 
-class CMsgGCMsgMasterSetWebAPIRouting(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgGCMsgMasterSetWebAPIRouting = _reflection.GeneratedProtocolMessageType('CMsgGCMsgMasterSetWebAPIRouting', (_message.Message,), dict(
 
-  class Entry(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY
-
+  Entry = _reflection.GeneratedProtocolMessageType('Entry', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetWebAPIRouting.Entry)
-  DESCRIPTOR = _CMSGGCMSGMASTERSETWEBAPIROUTING
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGGCMSGMASTERSETWEBAPIROUTING,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetWebAPIRouting)
+  ))
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetWebAPIRouting)
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetWebAPIRouting.Entry)
 
-class CMsgGCMsgMasterSetClientMsgRouting(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgGCMsgMasterSetClientMsgRouting = _reflection.GeneratedProtocolMessageType('CMsgGCMsgMasterSetClientMsgRouting', (_message.Message,), dict(
 
-  class Entry(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGGCMSGMASTERSETCLIENTMSGROUTING_ENTRY
-
+  Entry = _reflection.GeneratedProtocolMessageType('Entry', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGGCMSGMASTERSETCLIENTMSGROUTING_ENTRY,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetClientMsgRouting.Entry)
-  DESCRIPTOR = _CMSGGCMSGMASTERSETCLIENTMSGROUTING
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGGCMSGMASTERSETCLIENTMSGROUTING,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetClientMsgRouting)
+  ))
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetClientMsgRouting)
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetClientMsgRouting.Entry)
 
-class CMsgGCMsgMasterSetWebAPIRouting_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCMSGMASTERSETWEBAPIROUTING_RESPONSE
-
+CMsgGCMsgMasterSetWebAPIRouting_Response = _reflection.GeneratedProtocolMessageType('CMsgGCMsgMasterSetWebAPIRouting_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCMSGMASTERSETWEBAPIROUTING_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetWebAPIRouting_Response)
+  ))
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetWebAPIRouting_Response)
 
-class CMsgGCMsgMasterSetClientMsgRouting_Response(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCMSGMASTERSETCLIENTMSGROUTING_RESPONSE
-
+CMsgGCMsgMasterSetClientMsgRouting_Response = _reflection.GeneratedProtocolMessageType('CMsgGCMsgMasterSetClientMsgRouting_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCMSGMASTERSETCLIENTMSGROUTING_RESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCMsgMasterSetClientMsgRouting_Response)
+  ))
+_sym_db.RegisterMessage(CMsgGCMsgMasterSetClientMsgRouting_Response)
 
-class CMsgGCMsgSetOptions(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgGCMsgSetOptions = _reflection.GeneratedProtocolMessageType('CMsgGCMsgSetOptions', (_message.Message,), dict(
 
-  class MessageRange(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGGCMSGSETOPTIONS_MESSAGERANGE
-
+  MessageRange = _reflection.GeneratedProtocolMessageType('MessageRange', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGGCMSGSETOPTIONS_MESSAGERANGE,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgGCMsgSetOptions.MessageRange)
-  DESCRIPTOR = _CMSGGCMSGSETOPTIONS
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGGCMSGSETOPTIONS,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCMsgSetOptions)
+  ))
+_sym_db.RegisterMessage(CMsgGCMsgSetOptions)
+_sym_db.RegisterMessage(CMsgGCMsgSetOptions.MessageRange)
 
-class CMsgGCHUpdateSession(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgGCHUpdateSession = _reflection.GeneratedProtocolMessageType('CMsgGCHUpdateSession', (_message.Message,), dict(
 
-  class ExtraField(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGGCHUPDATESESSION_EXTRAFIELD
-
+  ExtraField = _reflection.GeneratedProtocolMessageType('ExtraField', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGGCHUPDATESESSION_EXTRAFIELD,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgGCHUpdateSession.ExtraField)
-  DESCRIPTOR = _CMSGGCHUPDATESESSION
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGGCHUPDATESESSION,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCHUpdateSession)
+  ))
+_sym_db.RegisterMessage(CMsgGCHUpdateSession)
+_sym_db.RegisterMessage(CMsgGCHUpdateSession.ExtraField)
 
-class CMsgNotificationOfSuspiciousActivity(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgNotificationOfSuspiciousActivity = _reflection.GeneratedProtocolMessageType('CMsgNotificationOfSuspiciousActivity', (_message.Message,), dict(
 
-  class MultipleGameInstances(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY_MULTIPLEGAMEINSTANCES
-
+  MultipleGameInstances = _reflection.GeneratedProtocolMessageType('MultipleGameInstances', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY_MULTIPLEGAMEINSTANCES,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgNotificationOfSuspiciousActivity.MultipleGameInstances)
-  DESCRIPTOR = _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgNotificationOfSuspiciousActivity)
+  ))
+_sym_db.RegisterMessage(CMsgNotificationOfSuspiciousActivity)
+_sym_db.RegisterMessage(CMsgNotificationOfSuspiciousActivity.MultipleGameInstances)
 
-class CMsgDPPartnerMicroTxns(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgDPPartnerMicroTxns = _reflection.GeneratedProtocolMessageType('CMsgDPPartnerMicroTxns', (_message.Message,), dict(
 
-  class PartnerMicroTxn(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDPPARTNERMICROTXNS_PARTNERMICROTXN
-
+  PartnerMicroTxn = _reflection.GeneratedProtocolMessageType('PartnerMicroTxn', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGDPPARTNERMICROTXNS_PARTNERMICROTXN,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgDPPartnerMicroTxns.PartnerMicroTxn)
+    ))
+  ,
 
-  class PartnerInfo(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDPPARTNERMICROTXNS_PARTNERINFO
-
+  PartnerInfo = _reflection.GeneratedProtocolMessageType('PartnerInfo', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGDPPARTNERMICROTXNS_PARTNERINFO,
+    __module__ = 'steammessages_pb2'
     # @@protoc_insertion_point(class_scope:CMsgDPPartnerMicroTxns.PartnerInfo)
-  DESCRIPTOR = _CMSGDPPARTNERMICROTXNS
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGDPPARTNERMICROTXNS,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgDPPartnerMicroTxns)
+  ))
+_sym_db.RegisterMessage(CMsgDPPartnerMicroTxns)
+_sym_db.RegisterMessage(CMsgDPPartnerMicroTxns.PartnerMicroTxn)
+_sym_db.RegisterMessage(CMsgDPPartnerMicroTxns.PartnerInfo)
 
-class CMsgDPPartnerMicroTxnsResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGDPPARTNERMICROTXNSRESPONSE
-
+CMsgDPPartnerMicroTxnsResponse = _reflection.GeneratedProtocolMessageType('CMsgDPPartnerMicroTxnsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGDPPARTNERMICROTXNSRESPONSE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgDPPartnerMicroTxnsResponse)
+  ))
+_sym_db.RegisterMessage(CMsgDPPartnerMicroTxnsResponse)
 
-class CMsgGCHVacVerificationChange(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCHVACVERIFICATIONCHANGE
-
+CMsgGCHVacVerificationChange = _reflection.GeneratedProtocolMessageType('CMsgGCHVacVerificationChange', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCHVACVERIFICATIONCHANGE,
+  __module__ = 'steammessages_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCHVacVerificationChange)
+  ))
+_sym_db.RegisterMessage(CMsgGCHVacVerificationChange)
 
-google.protobuf.descriptor_pb2.FieldOptions.RegisterExtension(key_field)
-google.protobuf.descriptor_pb2.MessageOptions.RegisterExtension(msgpool_soft_limit)
-google.protobuf.descriptor_pb2.MessageOptions.RegisterExtension(msgpool_hard_limit)
+google_dot_protobuf_dot_descriptor__pb2.FieldOptions.RegisterExtension(key_field)
+google_dot_protobuf_dot_descriptor__pb2.MessageOptions.RegisterExtension(msgpool_soft_limit)
+google_dot_protobuf_dot_descriptor__pb2.MessageOptions.RegisterExtension(msgpool_hard_limit)
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), 'H\001\200\001\000')
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), b'H\001\220\001\000')
 _CMSGPROTOBUFHEADER.has_options = True
-_CMSGPROTOBUFHEADER._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), '\200\246\035\200\002\210\246\035\200\010')
+_CMSGPROTOBUFHEADER._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), b'\200\246\035\200\002\210\246\035\200\010')
 _CGCSYSTEMMSG_GETACCOUNTDETAILS.has_options = True
-_CGCSYSTEMMSG_GETACCOUNTDETAILS._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), '\200\246\035\200\001\210\246\035\200\004')
+_CGCSYSTEMMSG_GETACCOUNTDETAILS._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), b'\200\246\035\200\001\210\246\035\200\004')
 _CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE.has_options = True
-_CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), '\200\246\035\200\001\210\246\035\200\004')
+_CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), b'\200\246\035\200\001\210\246\035\200\004')
 # @@protoc_insertion_point(module_scope)

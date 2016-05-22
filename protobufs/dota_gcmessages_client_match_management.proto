@@ -1,3 +1,4 @@
+syntax = "proto2";
 import "steammessages.proto";
 import "dota_shared_enums.proto";
 import "dota_client_enums.proto";
@@ -5,7 +6,7 @@ import "base_gcmessages.proto";
 import "dota_gcmessages_common_match_management.proto";
 
 option optimize_for = SPEED;
-option cc_generic_services = false;
+option py_generic_services = false;
 
 enum EStartFindingMatchResult {
 	k_EStartFindingMatchResult_Invalid = 0;

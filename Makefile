@@ -54,13 +54,16 @@ upload: dist register
 
 pb_fetch:
 	wget -nv --show-progress -N -P ./protobufs/ -i protobuf_list.txt
+	sed -i '1s/^/syntax = "proto2"\;\n/' protobufs/*.proto
+	sed -i 's/cc_generic_services/py_generic_services/' protobufs/*.proto
 
 pb_compile:
 	for filepath in `ls ./protobufs/*.proto`; do \
-		protoc --python_out ./dota2/protobufs/ --proto_path=/usr/include --proto_path=./protobufs "$$filepath"; \
+		protoc3 --python_out ./dota2/protobufs/ --proto_path=./protobufs "$$filepath"; \
 	done;
+	sed -i 's/^import /import dota2.protobufs./' dota2/protobufs/*_pb2.py
 
 pb_clear:
-	rm -f ./protobufs/*.proto
+	rm -f ./protobufs/*.proto ./dota2/protobufs/*_pb2.py
 
 pb_update: pb_fetch pb_compile

@@ -25,7 +25,7 @@ _proto_modules = [
     'steammessages_pb2',
 ]
 
-_proto_module = __import__("dota2.protobufs", globals(), locals(), _proto_modules, -1)
+_proto_module = __import__("dota2.protobufs", globals(), locals(), _proto_modules, 0)
 
 for name in _proto_modules:
 

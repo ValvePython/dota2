@@ -1,5 +1,6 @@
+syntax = "proto2";
 option optimize_for = SPEED;
-option cc_generic_services = false;
+option py_generic_services = false;
 
 enum EGCSystemMsg {
 	k_EGCMsgInvalid = 0;

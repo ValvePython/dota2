@@ -4,18 +4,25 @@
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
+from google.protobuf import symbol_database as _symbol_database
 from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
+_sym_db = _symbol_database.Default()
 
-import dota_shared_enums_pb2
-import dota_gcmessages_common_pb2
+
+import dota2.protobufs.dota_shared_enums_pb2 as dota__shared__enums__pb2
+import dota2.protobufs.dota_gcmessages_common_pb2 as dota__gcmessages__common__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_watch.proto',
   package='',
-  serialized_pb='\n\"dota_gcmessages_client_watch.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x1c\x64ota_gcmessages_common.proto\"\x8a\x04\n\x12\x43SourceTVGameSmall\x12\x15\n\ractivate_time\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65\x61\x63tivate_time\x18\x02 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x03 \x01(\x04\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x11\n\tleague_id\x18\x05 \x01(\r\x12\x12\n\nlobby_type\x18\x06 \x01(\r\x12\x11\n\tgame_time\x18\x07 \x01(\x05\x12\r\n\x05\x64\x65lay\x18\x08 \x01(\r\x12\x12\n\nspectators\x18\t \x01(\r\x12\x11\n\tgame_mode\x18\n \x01(\r\x12\x13\n\x0b\x61verage_mmr\x18\x0b \x01(\r\x12\x19\n\x11team_name_radiant\x18\x0f \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x10 \x01(\t\x12\x12\n\nsort_score\x18\x11 \x01(\r\x12\x18\n\x10last_update_time\x18\x12 \x01(\x02\x12\x14\n\x0cradiant_lead\x18\x13 \x01(\x05\x12\x15\n\rradiant_score\x18\x14 \x01(\r\x12\x12\n\ndire_score\x18\x15 \x01(\r\x12+\n\x07players\x18\x16 \x03(\x0b\x32\x1a.CSourceTVGameSmall.Player\x12\x16\n\x0e\x62uilding_state\x18\x17 \x01(\x07\x1a-\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\x9c\x01\n\"CMsgClientToGCFindTopSourceTVGames\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x05 \x01(\r\x12\x11\n\tlobby_ids\x18\x06 \x03(\x04\"\xe4\x01\n*CMsgGCToClientFindTopSourceTVGamesResponse\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x11\n\tnum_games\x18\x05 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x06 \x01(\r\x12&\n\tgame_list\x18\x07 \x03(\x0b\x32\x13.CSourceTVGameSmall\x12\x16\n\x0especific_games\x18\x08 \x01(\x08\"^\n\x1f\x43MsgClientToGCTopMatchesRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\"\'\n%CMsgClientToGCTopLeagueMatchesRequest\"\'\n%CMsgClientToGCTopFriendMatchesRequest\"8\n#CMsgClientToGCMatchesMinimalRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"b\n$CMsgClientToGCMatchesMinimalResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\x12\n\nlast_match\x18\x02 \x01(\x08\"P\n&CMsgGCToClientTopLeagueMatchesResponse\x12&\n\x07matches\x18\x02 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"P\n&CMsgGCToClientTopFriendMatchesResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"\x93\x01\n\x1c\x43MsgClientToGCFindTopMatches\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tfriend_id\x18\x04 \x01(\r\x12\x13\n\x0b\x66riend_list\x18\x05 \x01(\x08\x12\x13\n\x0bleague_list\x18\x06 \x01(\x08\"\x98\x01\n*CMsgGCToClientFindTopLeagueMatchesResponse\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tmatch_ids\x18\x04 \x03(\r\x12\x1f\n\x07matches\x18\x05 \x03(\x0b\x32\x0e.CMsgDOTAMatch\"*\n\x16\x43MsgSpectateFriendGame\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"8\n\x1e\x43MsgSpectateFriendGameResponse\x12\x16\n\x0eserver_steamid\x18\x04 \x01(\x06\"\xd9\x04\n\x14\x43MsgDOTAMatchMinimal\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\x07\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x14\n\x0cwinning_team\x18\x05 \x01(\r\x12-\n\x07players\x18\x06 \x03(\x0b\x32\x1c.CMsgDOTAMatchMinimal.Player\x12,\n\x06league\x18\x07 \x01(\x0b\x32\x1c.CMsgDOTAMatchMinimal.League\x1a\x81\x01\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05items\x18\x06 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x07 \x01(\r\x1a\xda\x01\n\x06League\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fradiant_team_id\x18\x02 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x03 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x04 \x01(\x06\x12\x14\n\x0c\x64ire_team_id\x18\x05 \x01(\r\x12\x16\n\x0e\x64ire_team_name\x18\x06 \x01(\t\x12\x16\n\x0e\x64ire_team_logo\x18\x07 \x01(\x06\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\x13\n\x0bseries_game\x18\t \x01(\r\"\xcc\x01\n\x17\x43\x44OTAReplayDownloadInfo\x12$\n\x05match\x18\x01 \x01(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\r\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12\x16\n\x0e\x65xists_on_disk\x18\x06 \x01(\x08\x1a\x33\n\tHighlight\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x80\x01\n\rCMsgWatchGame\x12\x16\n\x0eserver_steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x1c\n\x14watch_server_steamid\x18\x03 \x01(\x06\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x0f\n\x07regions\x18\x05 \x03(\r\"\x15\n\x13\x43MsgCancelWatchGame\"\xc9\x03\n\x15\x43MsgWatchGameResponse\x12J\n\x11watch_game_result\x18\x01 \x01(\x0e\x32&.CMsgWatchGameResponse.WatchGameResult:\x07PENDING\x12\x1d\n\x15source_tv_public_addr\x18\x02 \x01(\r\x12\x1e\n\x16source_tv_private_addr\x18\x03 \x01(\r\x12\x16\n\x0esource_tv_port\x18\x04 \x01(\r\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\x12\x1c\n\x14watch_server_steamid\x18\x06 \x01(\x06\x12#\n\x1bwatch_tv_unique_secret_code\x18\x07 \x01(\x06\"\xac\x01\n\x0fWatchGameResult\x12\x0b\n\x07PENDING\x10\x00\x12\t\n\x05READY\x10\x01\x12\x16\n\x12GAMESERVERNOTFOUND\x10\x02\x12\x0f\n\x0bUNAVAILABLE\x10\x03\x12\r\n\tCANCELLED\x10\x04\x12\x17\n\x13INCOMPATIBLEVERSION\x10\x05\x12\x1d\n\x19MISSINGLEAGUESUBSCRIPTION\x10\x06\x12\x11\n\rLOBBYNOTFOUND\x10\x07\"=\n\x1e\x43MsgPartyLeaderWatchGamePrompt\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\"\x82\x02\n\x14\x43\x44OTABroadcasterInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x02 \x01(\x06\x12\x0c\n\x04live\x18\x03 \x01(\x08\x12\x19\n\x11team_name_radiant\x18\x04 \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x05 \x01(\t\x12\x12\n\nstage_name\x18\x06 \x01(\t\x12\x13\n\x0bseries_game\x18\x07 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12$\n\x1cupcoming_broadcast_timestamp\x18\t \x01(\r\x12\x18\n\x10\x61llow_live_video\x18\n \x01(\x08\x42\x05H\x01\x80\x01\x00')
+  syntax='proto2',
+  serialized_pb=b'\n\"dota_gcmessages_client_watch.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x1c\x64ota_gcmessages_common.proto\"\x8a\x04\n\x12\x43SourceTVGameSmall\x12\x15\n\ractivate_time\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65\x61\x63tivate_time\x18\x02 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x03 \x01(\x04\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x11\n\tleague_id\x18\x05 \x01(\r\x12\x12\n\nlobby_type\x18\x06 \x01(\r\x12\x11\n\tgame_time\x18\x07 \x01(\x05\x12\r\n\x05\x64\x65lay\x18\x08 \x01(\r\x12\x12\n\nspectators\x18\t \x01(\r\x12\x11\n\tgame_mode\x18\n \x01(\r\x12\x13\n\x0b\x61verage_mmr\x18\x0b \x01(\r\x12\x19\n\x11team_name_radiant\x18\x0f \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x10 \x01(\t\x12\x12\n\nsort_score\x18\x11 \x01(\r\x12\x18\n\x10last_update_time\x18\x12 \x01(\x02\x12\x14\n\x0cradiant_lead\x18\x13 \x01(\x05\x12\x15\n\rradiant_score\x18\x14 \x01(\r\x12\x12\n\ndire_score\x18\x15 \x01(\r\x12+\n\x07players\x18\x16 \x03(\x0b\x32\x1a.CSourceTVGameSmall.Player\x12\x16\n\x0e\x62uilding_state\x18\x17 \x01(\x07\x1a-\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\x9c\x01\n\"CMsgClientToGCFindTopSourceTVGames\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x05 \x01(\r\x12\x11\n\tlobby_ids\x18\x06 \x03(\x04\"\xe4\x01\n*CMsgGCToClientFindTopSourceTVGamesResponse\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x11\n\tnum_games\x18\x05 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x06 \x01(\r\x12&\n\tgame_list\x18\x07 \x03(\x0b\x32\x13.CSourceTVGameSmall\x12\x16\n\x0especific_games\x18\x08 \x01(\x08\"^\n\x1f\x43MsgClientToGCTopMatchesRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\"\'\n%CMsgClientToGCTopLeagueMatchesRequest\"\'\n%CMsgClientToGCTopFriendMatchesRequest\"8\n#CMsgClientToGCMatchesMinimalRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"b\n$CMsgClientToGCMatchesMinimalResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\x12\n\nlast_match\x18\x02 \x01(\x08\"P\n&CMsgGCToClientTopLeagueMatchesResponse\x12&\n\x07matches\x18\x02 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"P\n&CMsgGCToClientTopFriendMatchesResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"\x93\x01\n\x1c\x43MsgClientToGCFindTopMatches\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tfriend_id\x18\x04 \x01(\r\x12\x13\n\x0b\x66riend_list\x18\x05 \x01(\x08\x12\x13\n\x0bleague_list\x18\x06 \x01(\x08\"\x98\x01\n*CMsgGCToClientFindTopLeagueMatchesResponse\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tmatch_ids\x18\x04 \x03(\r\x12\x1f\n\x07matches\x18\x05 \x03(\x0b\x32\x0e.CMsgDOTAMatch\"*\n\x16\x43MsgSpectateFriendGame\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"8\n\x1e\x43MsgSpectateFriendGameResponse\x12\x16\n\x0eserver_steamid\x18\x04 \x01(\x06\"\xd9\x04\n\x14\x43MsgDOTAMatchMinimal\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\x07\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x14\n\x0cwinning_team\x18\x05 \x01(\r\x12-\n\x07players\x18\x06 \x03(\x0b\x32\x1c.CMsgDOTAMatchMinimal.Player\x12,\n\x06league\x18\x07 \x01(\x0b\x32\x1c.CMsgDOTAMatchMinimal.League\x1a\x81\x01\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05items\x18\x06 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x07 \x01(\r\x1a\xda\x01\n\x06League\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fradiant_team_id\x18\x02 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x03 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x04 \x01(\x06\x12\x14\n\x0c\x64ire_team_id\x18\x05 \x01(\r\x12\x16\n\x0e\x64ire_team_name\x18\x06 \x01(\t\x12\x16\n\x0e\x64ire_team_logo\x18\x07 \x01(\x06\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\x13\n\x0bseries_game\x18\t \x01(\r\"\xcc\x01\n\x17\x43\x44OTAReplayDownloadInfo\x12$\n\x05match\x18\x01 \x01(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\r\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12\x16\n\x0e\x65xists_on_disk\x18\x06 \x01(\x08\x1a\x33\n\tHighlight\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x80\x01\n\rCMsgWatchGame\x12\x16\n\x0eserver_steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x1c\n\x14watch_server_steamid\x18\x03 \x01(\x06\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x0f\n\x07regions\x18\x05 \x03(\r\"\x15\n\x13\x43MsgCancelWatchGame\"\xc9\x03\n\x15\x43MsgWatchGameResponse\x12J\n\x11watch_game_result\x18\x01 \x01(\x0e\x32&.CMsgWatchGameResponse.WatchGameResult:\x07PENDING\x12\x1d\n\x15source_tv_public_addr\x18\x02 \x01(\r\x12\x1e\n\x16source_tv_private_addr\x18\x03 \x01(\r\x12\x16\n\x0esource_tv_port\x18\x04 \x01(\r\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\x12\x1c\n\x14watch_server_steamid\x18\x06 \x01(\x06\x12#\n\x1bwatch_tv_unique_secret_code\x18\x07 \x01(\x06\"\xac\x01\n\x0fWatchGameResult\x12\x0b\n\x07PENDING\x10\x00\x12\t\n\x05READY\x10\x01\x12\x16\n\x12GAMESERVERNOTFOUND\x10\x02\x12\x0f\n\x0bUNAVAILABLE\x10\x03\x12\r\n\tCANCELLED\x10\x04\x12\x17\n\x13INCOMPATIBLEVERSION\x10\x05\x12\x1d\n\x19MISSINGLEAGUESUBSCRIPTION\x10\x06\x12\x11\n\rLOBBYNOTFOUND\x10\x07\"=\n\x1e\x43MsgPartyLeaderWatchGamePrompt\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\"\x82\x02\n\x14\x43\x44OTABroadcasterInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x02 \x01(\x06\x12\x0c\n\x04live\x18\x03 \x01(\x08\x12\x19\n\x11team_name_radiant\x18\x04 \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x05 \x01(\t\x12\x12\n\nstage_name\x18\x06 \x01(\t\x12\x13\n\x0bseries_game\x18\x07 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12$\n\x1cupcoming_broadcast_timestamp\x18\t \x01(\r\x12\x18\n\x10\x61llow_live_video\x18\n \x01(\x08\x42\x05H\x01\x90\x01\x00'
+  ,
+  dependencies=[dota__shared__enums__pb2.DESCRIPTOR,dota__gcmessages__common__pb2.DESCRIPTOR,])
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -63,6 +70,7 @@ _CMSGWATCHGAMERESPONSE_WATCHGAMERESULT = _descriptor.EnumDescriptor(
   serialized_start=3166,
   serialized_end=3338,
 )
+_sym_db.RegisterEnumDescriptor(_CMSGWATCHGAMERESPONSE_WATCHGAMERESULT)
 
 
 _CSOURCETVGAMESMALL_PLAYER = _descriptor.Descriptor(
@@ -94,7 +102,10 @@ _CSOURCETVGAMESMALL_PLAYER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=571,
   serialized_end=616,
 )
@@ -186,14 +197,14 @@ _CSOURCETVGAMESMALL = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='team_name_radiant', full_name='CSourceTVGameSmall.team_name_radiant', index=11,
       number=15, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='team_name_dire', full_name='CSourceTVGameSmall.team_name_dire', index=12,
       number=16, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -254,7 +265,10 @@ _CSOURCETVGAMESMALL = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=94,
   serialized_end=616,
 )
@@ -270,7 +284,7 @@ _CMSGCLIENTTOGCFINDTOPSOURCETVGAMES = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='search_key', full_name='CMsgClientToGCFindTopSourceTVGames.search_key', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -317,7 +331,10 @@ _CMSGCLIENTTOGCFINDTOPSOURCETVGAMES = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=619,
   serialized_end=775,
 )
@@ -333,7 +350,7 @@ _CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='search_key', full_name='CMsgGCToClientFindTopSourceTVGamesResponse.search_key', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -394,7 +411,10 @@ _CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=778,
   serialized_end=1006,
 )
@@ -436,7 +456,10 @@ _CMSGCLIENTTOGCTOPMATCHESREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1008,
   serialized_end=1102,
 )
@@ -457,7 +480,10 @@ _CMSGCLIENTTOGCTOPLEAGUEMATCHESREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1104,
   serialized_end=1143,
 )
@@ -478,7 +504,10 @@ _CMSGCLIENTTOGCTOPFRIENDMATCHESREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1145,
   serialized_end=1184,
 )
@@ -506,7 +535,10 @@ _CMSGCLIENTTOGCMATCHESMINIMALREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1186,
   serialized_end=1242,
 )
@@ -541,7 +573,10 @@ _CMSGCLIENTTOGCMATCHESMINIMALRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1244,
   serialized_end=1342,
 )
@@ -569,7 +604,10 @@ _CMSGGCTOCLIENTTOPLEAGUEMATCHESRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1344,
   serialized_end=1424,
 )
@@ -597,7 +635,10 @@ _CMSGGCTOCLIENTTOPFRIENDMATCHESRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1426,
   serialized_end=1506,
 )
@@ -660,7 +701,10 @@ _CMSGCLIENTTOGCFINDTOPMATCHES = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1509,
   serialized_end=1656,
 )
@@ -716,7 +760,10 @@ _CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1659,
   serialized_end=1811,
 )
@@ -744,7 +791,10 @@ _CMSGSPECTATEFRIENDGAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1813,
   serialized_end=1855,
 )
@@ -772,7 +822,10 @@ _CMSGSPECTATEFRIENDGAMERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1857,
   serialized_end=1913,
 )
@@ -842,7 +895,10 @@ _CMSGDOTAMATCHMINIMAL_PLAYER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2167,
   serialized_end=2296,
 )
@@ -871,7 +927,7 @@ _CMSGDOTAMATCHMINIMAL_LEAGUE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='radiant_team_name', full_name='CMsgDOTAMatchMinimal.League.radiant_team_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -892,7 +948,7 @@ _CMSGDOTAMATCHMINIMAL_LEAGUE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='dire_team_name', full_name='CMsgDOTAMatchMinimal.League.dire_team_name', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -925,7 +981,10 @@ _CMSGDOTAMATCHMINIMAL_LEAGUE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2299,
   serialized_end=2517,
 )
@@ -994,7 +1053,10 @@ _CMSGDOTAMATCHMINIMAL = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1916,
   serialized_end=2517,
 )
@@ -1017,7 +1079,7 @@ _CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='description', full_name='CDOTAReplayDownloadInfo.Highlight.description', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1029,7 +1091,10 @@ _CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2673,
   serialized_end=2724,
 )
@@ -1051,14 +1116,14 @@ _CDOTAREPLAYDOWNLOADINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='title', full_name='CDOTAReplayDownloadInfo.title', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='description', full_name='CDOTAReplayDownloadInfo.description', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1091,7 +1156,10 @@ _CDOTAREPLAYDOWNLOADINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2520,
   serialized_end=2724,
 )
@@ -1147,7 +1215,10 @@ _CMSGWATCHGAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2727,
   serialized_end=2855,
 )
@@ -1168,7 +1239,10 @@ _CMSGCANCELWATCHGAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2857,
   serialized_end=2878,
 )
@@ -1239,7 +1313,10 @@ _CMSGWATCHGAMERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2881,
   serialized_end=3338,
 )
@@ -1267,7 +1344,10 @@ _CMSGPARTYLEADERWATCHGAMEPROMPT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3340,
   serialized_end=3401,
 )
@@ -1304,21 +1384,21 @@ _CDOTABROADCASTERINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='team_name_radiant', full_name='CDOTABroadcasterInfo.team_name_radiant', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='team_name_dire', full_name='CDOTABroadcasterInfo.team_name_dire', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='stage_name', full_name='CDOTABroadcasterInfo.stage_name', index=5,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1358,27 +1438,30 @@ _CDOTABROADCASTERINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3404,
   serialized_end=3662,
 )
 
-_CSOURCETVGAMESMALL_PLAYER.containing_type = _CSOURCETVGAMESMALL;
+_CSOURCETVGAMESMALL_PLAYER.containing_type = _CSOURCETVGAMESMALL
 _CSOURCETVGAMESMALL.fields_by_name['players'].message_type = _CSOURCETVGAMESMALL_PLAYER
 _CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE.fields_by_name['game_list'].message_type = _CSOURCETVGAMESMALL
 _CMSGCLIENTTOGCMATCHESMINIMALRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCHMINIMAL
 _CMSGGCTOCLIENTTOPLEAGUEMATCHESRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCHMINIMAL
 _CMSGGCTOCLIENTTOPFRIENDMATCHESRESPONSE.fields_by_name['matches'].message_type = _CMSGDOTAMATCHMINIMAL
-_CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE.fields_by_name['matches'].message_type = dota_gcmessages_common_pb2._CMSGDOTAMATCH
-_CMSGDOTAMATCHMINIMAL_PLAYER.containing_type = _CMSGDOTAMATCHMINIMAL;
-_CMSGDOTAMATCHMINIMAL_LEAGUE.containing_type = _CMSGDOTAMATCHMINIMAL;
-_CMSGDOTAMATCHMINIMAL.fields_by_name['game_mode'].enum_type = dota_shared_enums_pb2._DOTA_GAMEMODE
+_CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE.fields_by_name['matches'].message_type = dota__gcmessages__common__pb2._CMSGDOTAMATCH
+_CMSGDOTAMATCHMINIMAL_PLAYER.containing_type = _CMSGDOTAMATCHMINIMAL
+_CMSGDOTAMATCHMINIMAL_LEAGUE.containing_type = _CMSGDOTAMATCHMINIMAL
+_CMSGDOTAMATCHMINIMAL.fields_by_name['game_mode'].enum_type = dota__shared__enums__pb2._DOTA_GAMEMODE
 _CMSGDOTAMATCHMINIMAL.fields_by_name['players'].message_type = _CMSGDOTAMATCHMINIMAL_PLAYER
 _CMSGDOTAMATCHMINIMAL.fields_by_name['league'].message_type = _CMSGDOTAMATCHMINIMAL_LEAGUE
-_CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT.containing_type = _CDOTAREPLAYDOWNLOADINFO;
+_CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT.containing_type = _CDOTAREPLAYDOWNLOADINFO
 _CDOTAREPLAYDOWNLOADINFO.fields_by_name['match'].message_type = _CMSGDOTAMATCHMINIMAL
 _CMSGWATCHGAMERESPONSE.fields_by_name['watch_game_result'].enum_type = _CMSGWATCHGAMERESPONSE_WATCHGAMERESULT
-_CMSGWATCHGAMERESPONSE_WATCHGAMERESULT.containing_type = _CMSGWATCHGAMERESPONSE;
+_CMSGWATCHGAMERESPONSE_WATCHGAMERESULT.containing_type = _CMSGWATCHGAMERESPONSE
 DESCRIPTOR.message_types_by_name['CSourceTVGameSmall'] = _CSOURCETVGAMESMALL
 DESCRIPTOR.message_types_by_name['CMsgClientToGCFindTopSourceTVGames'] = _CMSGCLIENTTOGCFINDTOPSOURCETVGAMES
 DESCRIPTOR.message_types_by_name['CMsgGCToClientFindTopSourceTVGamesResponse'] = _CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE
@@ -1401,157 +1484,186 @@ DESCRIPTOR.message_types_by_name['CMsgWatchGameResponse'] = _CMSGWATCHGAMERESPON
 DESCRIPTOR.message_types_by_name['CMsgPartyLeaderWatchGamePrompt'] = _CMSGPARTYLEADERWATCHGAMEPROMPT
 DESCRIPTOR.message_types_by_name['CDOTABroadcasterInfo'] = _CDOTABROADCASTERINFO
 
-class CSourceTVGameSmall(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CSourceTVGameSmall = _reflection.GeneratedProtocolMessageType('CSourceTVGameSmall', (_message.Message,), dict(
 
-  class Player(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CSOURCETVGAMESMALL_PLAYER
-
+  Player = _reflection.GeneratedProtocolMessageType('Player', (_message.Message,), dict(
+    DESCRIPTOR = _CSOURCETVGAMESMALL_PLAYER,
+    __module__ = 'dota_gcmessages_client_watch_pb2'
     # @@protoc_insertion_point(class_scope:CSourceTVGameSmall.Player)
-  DESCRIPTOR = _CSOURCETVGAMESMALL
-
+    ))
+  ,
+  DESCRIPTOR = _CSOURCETVGAMESMALL,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CSourceTVGameSmall)
+  ))
+_sym_db.RegisterMessage(CSourceTVGameSmall)
+_sym_db.RegisterMessage(CSourceTVGameSmall.Player)
 
-class CMsgClientToGCFindTopSourceTVGames(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCFINDTOPSOURCETVGAMES
-
+CMsgClientToGCFindTopSourceTVGames = _reflection.GeneratedProtocolMessageType('CMsgClientToGCFindTopSourceTVGames', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCFINDTOPSOURCETVGAMES,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgClientToGCFindTopSourceTVGames)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCFindTopSourceTVGames)
 
-class CMsgGCToClientFindTopSourceTVGamesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE
-
+CMsgGCToClientFindTopSourceTVGamesResponse = _reflection.GeneratedProtocolMessageType('CMsgGCToClientFindTopSourceTVGamesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOCLIENTFINDTOPSOURCETVGAMESRESPONSE,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCToClientFindTopSourceTVGamesResponse)
+  ))
+_sym_db.RegisterMessage(CMsgGCToClientFindTopSourceTVGamesResponse)
 
-class CMsgClientToGCTopMatchesRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCTOPMATCHESREQUEST
-
+CMsgClientToGCTopMatchesRequest = _reflection.GeneratedProtocolMessageType('CMsgClientToGCTopMatchesRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCTOPMATCHESREQUEST,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgClientToGCTopMatchesRequest)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCTopMatchesRequest)
 
-class CMsgClientToGCTopLeagueMatchesRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCTOPLEAGUEMATCHESREQUEST
-
+CMsgClientToGCTopLeagueMatchesRequest = _reflection.GeneratedProtocolMessageType('CMsgClientToGCTopLeagueMatchesRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCTOPLEAGUEMATCHESREQUEST,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgClientToGCTopLeagueMatchesRequest)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCTopLeagueMatchesRequest)
 
-class CMsgClientToGCTopFriendMatchesRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCTOPFRIENDMATCHESREQUEST
-
+CMsgClientToGCTopFriendMatchesRequest = _reflection.GeneratedProtocolMessageType('CMsgClientToGCTopFriendMatchesRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCTOPFRIENDMATCHESREQUEST,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgClientToGCTopFriendMatchesRequest)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCTopFriendMatchesRequest)
 
-class CMsgClientToGCMatchesMinimalRequest(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCMATCHESMINIMALREQUEST
-
+CMsgClientToGCMatchesMinimalRequest = _reflection.GeneratedProtocolMessageType('CMsgClientToGCMatchesMinimalRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCMATCHESMINIMALREQUEST,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgClientToGCMatchesMinimalRequest)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCMatchesMinimalRequest)
 
-class CMsgClientToGCMatchesMinimalResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCMATCHESMINIMALRESPONSE
-
+CMsgClientToGCMatchesMinimalResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCMatchesMinimalResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCMATCHESMINIMALRESPONSE,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgClientToGCMatchesMinimalResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCMatchesMinimalResponse)
 
-class CMsgGCToClientTopLeagueMatchesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTTOPLEAGUEMATCHESRESPONSE
-
+CMsgGCToClientTopLeagueMatchesResponse = _reflection.GeneratedProtocolMessageType('CMsgGCToClientTopLeagueMatchesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOCLIENTTOPLEAGUEMATCHESRESPONSE,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCToClientTopLeagueMatchesResponse)
+  ))
+_sym_db.RegisterMessage(CMsgGCToClientTopLeagueMatchesResponse)
 
-class CMsgGCToClientTopFriendMatchesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTTOPFRIENDMATCHESRESPONSE
-
+CMsgGCToClientTopFriendMatchesResponse = _reflection.GeneratedProtocolMessageType('CMsgGCToClientTopFriendMatchesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOCLIENTTOPFRIENDMATCHESRESPONSE,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCToClientTopFriendMatchesResponse)
+  ))
+_sym_db.RegisterMessage(CMsgGCToClientTopFriendMatchesResponse)
 
-class CMsgClientToGCFindTopMatches(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCLIENTTOGCFINDTOPMATCHES
-
+CMsgClientToGCFindTopMatches = _reflection.GeneratedProtocolMessageType('CMsgClientToGCFindTopMatches', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCFINDTOPMATCHES,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgClientToGCFindTopMatches)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCFindTopMatches)
 
-class CMsgGCToClientFindTopLeagueMatchesResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE
-
+CMsgGCToClientFindTopLeagueMatchesResponse = _reflection.GeneratedProtocolMessageType('CMsgGCToClientFindTopLeagueMatchesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOCLIENTFINDTOPLEAGUEMATCHESRESPONSE,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgGCToClientFindTopLeagueMatchesResponse)
+  ))
+_sym_db.RegisterMessage(CMsgGCToClientFindTopLeagueMatchesResponse)
 
-class CMsgSpectateFriendGame(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGSPECTATEFRIENDGAME
-
+CMsgSpectateFriendGame = _reflection.GeneratedProtocolMessageType('CMsgSpectateFriendGame', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGSPECTATEFRIENDGAME,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgSpectateFriendGame)
+  ))
+_sym_db.RegisterMessage(CMsgSpectateFriendGame)
 
-class CMsgSpectateFriendGameResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGSPECTATEFRIENDGAMERESPONSE
-
+CMsgSpectateFriendGameResponse = _reflection.GeneratedProtocolMessageType('CMsgSpectateFriendGameResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGSPECTATEFRIENDGAMERESPONSE,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgSpectateFriendGameResponse)
+  ))
+_sym_db.RegisterMessage(CMsgSpectateFriendGameResponse)
 
-class CMsgDOTAMatchMinimal(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CMsgDOTAMatchMinimal = _reflection.GeneratedProtocolMessageType('CMsgDOTAMatchMinimal', (_message.Message,), dict(
 
-  class Player(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAMATCHMINIMAL_PLAYER
-
+  Player = _reflection.GeneratedProtocolMessageType('Player', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGDOTAMATCHMINIMAL_PLAYER,
+    __module__ = 'dota_gcmessages_client_watch_pb2'
     # @@protoc_insertion_point(class_scope:CMsgDOTAMatchMinimal.Player)
+    ))
+  ,
 
-  class League(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CMSGDOTAMATCHMINIMAL_LEAGUE
-
+  League = _reflection.GeneratedProtocolMessageType('League', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGDOTAMATCHMINIMAL_LEAGUE,
+    __module__ = 'dota_gcmessages_client_watch_pb2'
     # @@protoc_insertion_point(class_scope:CMsgDOTAMatchMinimal.League)
-  DESCRIPTOR = _CMSGDOTAMATCHMINIMAL
-
+    ))
+  ,
+  DESCRIPTOR = _CMSGDOTAMATCHMINIMAL,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgDOTAMatchMinimal)
+  ))
+_sym_db.RegisterMessage(CMsgDOTAMatchMinimal)
+_sym_db.RegisterMessage(CMsgDOTAMatchMinimal.Player)
+_sym_db.RegisterMessage(CMsgDOTAMatchMinimal.League)
 
-class CDOTAReplayDownloadInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CDOTAReplayDownloadInfo = _reflection.GeneratedProtocolMessageType('CDOTAReplayDownloadInfo', (_message.Message,), dict(
 
-  class Highlight(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT
-
+  Highlight = _reflection.GeneratedProtocolMessageType('Highlight', (_message.Message,), dict(
+    DESCRIPTOR = _CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT,
+    __module__ = 'dota_gcmessages_client_watch_pb2'
     # @@protoc_insertion_point(class_scope:CDOTAReplayDownloadInfo.Highlight)
-  DESCRIPTOR = _CDOTAREPLAYDOWNLOADINFO
-
+    ))
+  ,
+  DESCRIPTOR = _CDOTAREPLAYDOWNLOADINFO,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CDOTAReplayDownloadInfo)
+  ))
+_sym_db.RegisterMessage(CDOTAReplayDownloadInfo)
+_sym_db.RegisterMessage(CDOTAReplayDownloadInfo.Highlight)
 
-class CMsgWatchGame(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGWATCHGAME
-
+CMsgWatchGame = _reflection.GeneratedProtocolMessageType('CMsgWatchGame', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGWATCHGAME,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgWatchGame)
+  ))
+_sym_db.RegisterMessage(CMsgWatchGame)
 
-class CMsgCancelWatchGame(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGCANCELWATCHGAME
-
+CMsgCancelWatchGame = _reflection.GeneratedProtocolMessageType('CMsgCancelWatchGame', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCANCELWATCHGAME,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgCancelWatchGame)
+  ))
+_sym_db.RegisterMessage(CMsgCancelWatchGame)
 
-class CMsgWatchGameResponse(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGWATCHGAMERESPONSE
-
+CMsgWatchGameResponse = _reflection.GeneratedProtocolMessageType('CMsgWatchGameResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGWATCHGAMERESPONSE,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgWatchGameResponse)
+  ))
+_sym_db.RegisterMessage(CMsgWatchGameResponse)
 
-class CMsgPartyLeaderWatchGamePrompt(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGPARTYLEADERWATCHGAMEPROMPT
-
+CMsgPartyLeaderWatchGamePrompt = _reflection.GeneratedProtocolMessageType('CMsgPartyLeaderWatchGamePrompt', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGPARTYLEADERWATCHGAMEPROMPT,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CMsgPartyLeaderWatchGamePrompt)
+  ))
+_sym_db.RegisterMessage(CMsgPartyLeaderWatchGamePrompt)
 
-class CDOTABroadcasterInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CDOTABROADCASTERINFO
-
+CDOTABroadcasterInfo = _reflection.GeneratedProtocolMessageType('CDOTABroadcasterInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CDOTABROADCASTERINFO,
+  __module__ = 'dota_gcmessages_client_watch_pb2'
   # @@protoc_insertion_point(class_scope:CDOTABroadcasterInfo)
+  ))
+_sym_db.RegisterMessage(CDOTABroadcasterInfo)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), 'H\001\200\001\000')
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), b'H\001\220\001\000')
 # @@protoc_insertion_point(module_scope)

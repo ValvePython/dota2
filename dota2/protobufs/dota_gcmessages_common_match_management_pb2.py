@@ -5,19 +5,26 @@ from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
+from google.protobuf import symbol_database as _symbol_database
 from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
+_sym_db = _symbol_database.Default()
 
-import steammessages_pb2
-import gcsdk_gcmessages_pb2
-import dota_shared_enums_pb2
+
+import dota2.protobufs.steammessages_pb2 as steammessages__pb2
+import dota2.protobufs.gcsdk_gcmessages_pb2 as gcsdk__gcmessages__pb2
+import dota2.protobufs.dota_shared_enums_pb2 as dota__shared__enums__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_common_match_management.proto',
   package='',
-  serialized_pb='\n-dota_gcmessages_common_match_management.proto\x1a\x13steammessages.proto\x1a\x16gcsdk_gcmessages.proto\x1a\x17\x64ota_shared_enums.proto\"\xf5\x01\n\x12\x43SODOTAPartyMember\x12\x37\n\x0cpartner_type\x18\x01 \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12\x10\n\x08is_coach\x18\x02 \x01(\x08\x12\x1d\n\x11region_ping_codes\x18\x04 \x03(\rB\x02\x10\x01\x12\x1d\n\x11region_ping_times\x18\x05 \x03(\rB\x02\x10\x01\x12\"\n\x1aregion_ping_failed_bitmask\x18\x06 \x01(\r\x12\x1b\n\x13tourney_skill_level\x18\x07 \x01(\r\x12\x15\n\rtourney_buyin\x18\x08 \x01(\r\"\xf1\n\n\x0c\x43SODOTAParty\x12\x16\n\x08party_id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\x11\n\tleader_id\x18\x02 \x01(\x06\x12\x12\n\nmember_ids\x18\x03 \x03(\x06\x12\x12\n\ngame_modes\x18\x04 \x01(\r\x12&\n\x05state\x18\x06 \x01(\x0e\x32\x13.CSODOTAParty.State:\x02UI\x12*\n\"effective_started_matchmaking_time\x18\x07 \x01(\r\x12$\n\x1craw_started_matchmaking_time\x18  \x01(\r\x12\x1a\n\x12\x61ttempt_start_time\x18! \x01(\r\x12\x13\n\x0b\x61ttempt_num\x18\" \x01(\r\x12\x13\n\x0bmatchgroups\x18\x0b \x01(\r\x12\x1f\n\x17low_priority_account_id\x18\x13 \x01(\r\x12\x31\n\nmatch_type\x18\x15 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x12\x42\n\x0e\x62ot_difficulty\x18\x16 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x0f\n\x07team_id\x18\x17 \x01(\r\x12\x11\n\tteam_name\x18\x33 \x01(\t\x12\x14\n\x0cteam_ui_logo\x18\x34 \x01(\x04\x12\x16\n\x0eteam_base_logo\x18\x35 \x01(\x04\x12!\n\x19match_disabled_until_date\x18\x18 \x01(\r\x12!\n\x19match_disabled_account_id\x18\x19 \x01(\r\x12%\n\x1dmatchmaking_max_range_minutes\x18\x1a \x01(\r\x12\x16\n\x0ematchlanguages\x18\x1b \x01(\r\x12\x16\n\x0emap_preference\x18& \x01(\r\x12$\n\x07members\x18\x1d \x03(\x0b\x32\x13.CSODOTAPartyMember\x12\x15\n\ropen_guild_id\x18\x1e \x01(\r\x12\x15\n\rcommon_guilds\x18\x1f \x03(\r\x12$\n\x1clow_priority_games_remaining\x18# \x01(\r\x12\x11\n\tmin_level\x18$ \x01(\r\x12\x11\n\tmax_level\x18% \x01(\r\x12%\n\x14\x61\x63tive_ingame_events\x18\' \x03(\x0e\x32\x07.EEvent\x12\x1e\n\x16open_for_join_requests\x18( \x01(\x08\x12)\n\x0csent_invites\x18) \x03(\x0b\x32\x13.CSODOTAPartyInvite\x12)\n\x0crecv_invites\x18* \x03(\x0b\x32\x13.CSODOTAPartyInvite\x12\x15\n\raccount_flags\x18+ \x01(\r\x12\x1b\n\x13region_select_flags\x18, \x01(\r\x12\x1f\n\x17\x65xclusive_tournament_id\x18- \x01(\r\x12\x1b\n\x13tourney_division_id\x18/ \x01(\r\x12\x1d\n\x15tourney_schedule_time\x18\x30 \x01(\r\x12\x1b\n\x13tourney_skill_level\x18\x31 \x01(\r\x12\x1d\n\x15tourney_bracket_round\x18\x32 \x01(\r\x12#\n\x1btourney_queue_deadline_time\x18\x36 \x01(\r\x12\x66\n\x1ctourney_queue_deadline_state\x18\x37 \x01(\x0e\x32\x1b.ETourneyQueueDeadlineState:#k_ETourneyQueueDeadlineState_Normal\"0\n\x05State\x12\x06\n\x02UI\x10\x00\x12\x11\n\rFINDING_MATCH\x10\x01\x12\x0c\n\x08IN_MATCH\x10\x02\"\x9b\x02\n\x12\x43SODOTAPartyInvite\x12\x16\n\x08group_id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x13\n\x0bsender_name\x18\x03 \x01(\t\x12\x30\n\x07members\x18\x04 \x03(\x0b\x32\x1f.CSODOTAPartyInvite.PartyMember\x12\x0f\n\x07team_id\x18\x05 \x01(\r\x12\x1b\n\x13low_priority_status\x18\x06 \x01(\x08\x12\x10\n\x08\x61s_coach\x18\x07 \x01(\x08\x12\x12\n\ninvite_gid\x18\x08 \x01(\x06\x1a?\n\x0bPartyMember\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x10\n\x08is_coach\x18\x04 \x01(\x08\"\x99\x02\n\x12\x43SODOTALobbyInvite\x12\x16\n\x08group_id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x13\n\x0bsender_name\x18\x03 \x01(\t\x12\x30\n\x07members\x18\x04 \x03(\x0b\x32\x1f.CSODOTALobbyInvite.LobbyMember\x12\x16\n\x0e\x63ustom_game_id\x18\x05 \x01(\x04\x12\x12\n\ninvite_gid\x18\x06 \x01(\x06\x12\x17\n\x0f\x63ustom_game_crc\x18\x07 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x08 \x01(\x07\x1a-\n\x0bLobbyMember\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\"\xd5\x01\n\x0f\x43MsgLeaverState\x12\x13\n\x0blobby_state\x18\x01 \x01(\r\x12>\n\ngame_state\x18\x02 \x01(\x0e\x32\x0f.DOTA_GameState:\x19\x44OTA_GAMERULES_STATE_INIT\x12\x17\n\x0fleaver_detected\x18\x03 \x01(\x08\x12\x1c\n\x14\x66irst_blood_happened\x18\x04 \x01(\x08\x12\x1d\n\x15\x64iscard_match_results\x18\x05 \x01(\x08\x12\x17\n\x0fmass_disconnect\x18\x06 \x01(\x08\"\xef\x06\n\x10\x43\x44OTALobbyMember\x12\x10\n\x02id\x18\x01 \x01(\x06\x42\x04\x80\xa6\x1d\x01\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x33\n\x04team\x18\x03 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x0c\n\x04slot\x18\x07 \x01(\r\x12\x10\n\x08party_id\x18\x0c \x01(\x04\x12\x12\n\nmeta_level\x18\r \x01(\r\x12\x0f\n\x07meta_xp\x18\x0e \x01(\r\x12\x17\n\x0fmeta_xp_awarded\x18\x0f \x01(\r\x12<\n\rleaver_status\x18\x10 \x01(\x0e\x32\x13.DOTALeaverStatus_t:\x10\x44OTA_LEAVER_NONE\x12\x16\n\x0eleaver_actions\x18\x1c \x01(\r\x12\x0f\n\x07\x63hannel\x18\x11 \x01(\r\x12\x17\n\x0fprize_def_index\x18\x12 \x01(\r\x12\x18\n\x10\x64isabled_hero_id\x18\x14 \x03(\r\x12?\n\x14partner_account_type\x18\x15 \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12\x17\n\x0f\x65nabled_hero_id\x18\x16 \x03(\r\x12\x39\n\ncoach_team\x18\x17 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x18\n\x10nexon_pc_bang_no\x18\x18 \x01(\r\x12\x1a\n\x12nexon_pc_bang_name\x18\x19 \x01(\t\x12=\n\nxp_bonuses\x18\x1b \x03(\x0b\x32).CDOTALobbyMember.CDOTALobbyMemberXPBonus\x12\x13\n\x0brank_change\x18\x1d \x01(\x11\x12\x11\n\tcameraman\x18\x1e \x01(\x08\x12\x1f\n\x17\x63ustom_game_product_ids\x18\x1f \x03(\r\x12!\n\x19lobby_mvp_vote_account_id\x18  \x01(\r\x12\x38\n\x11search_match_type\x18! \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x1aM\n\x17\x43\x44OTALobbyMemberXPBonus\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x10\n\x08xp_bonus\x18\x02 \x01(\x02\x12\x12\n\nsource_key\x18\x03 \x01(\x04\"\xdf\x02\n\x11\x43LobbyTeamDetails\x12\x11\n\tteam_name\x18\x01 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x11\n\tteam_logo\x18\x05 \x01(\x04\x12\x16\n\x0eteam_base_logo\x18\x06 \x01(\x04\x12\x18\n\x10team_banner_logo\x18\x07 \x01(\x04\x12\x15\n\rteam_complete\x18\x08 \x01(\x08\x12\x12\n\nguild_name\x18\t \x01(\t\x12\x11\n\tguild_tag\x18\n \x01(\t\x12\x10\n\x08guild_id\x18\x0b \x01(\r\x12\x12\n\nguild_logo\x18\x0c \x01(\x04\x12\x17\n\x0fguild_base_logo\x18\r \x01(\x04\x12\x19\n\x11guild_banner_logo\x18\x0e \x01(\x04\x12\x0c\n\x04rank\x18\x0f \x01(\r\x12\x13\n\x0brank_change\x18\x10 \x01(\x11\x12\x14\n\x0cis_home_team\x18\x11 \x01(\x08\"\x86\x01\n\x18\x43LobbyTimedRewardDetails\x12\x16\n\x0eitem_def_index\x18\x02 \x01(\r\x12\x17\n\x0fis_supply_crate\x18\x03 \x01(\x08\x12\x15\n\ris_timed_drop\x18\x04 \x01(\x08\x12\x12\n\naccount_id\x18\x05 \x01(\r\x12\x0e\n\x06origin\x18\x06 \x01(\r\"r\n\x1a\x43LobbyBroadcastChannelInfo\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\"\xb3\x17\n\x0c\x43SODOTALobby\x12\x16\n\x08lobby_id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\"\n\x07members\x18\x02 \x03(\x0b\x32\x11.CDOTALobbyMember\x12\'\n\x0cleft_members\x18\x07 \x03(\x0b\x32\x11.CDOTALobbyMember\x12\x11\n\tleader_id\x18\x0b \x01(\x06\x12\x14\n\tserver_id\x18\x06 \x01(\x06:\x01\x30\x12\x11\n\tgame_mode\x18\x03 \x01(\r\x12\x17\n\x0fpending_invites\x18\n \x03(\x06\x12&\n\x05state\x18\x04 \x01(\x0e\x32\x13.CSODOTALobby.State:\x02UI\x12\x0f\n\x07\x63onnect\x18\x05 \x01(\t\x12\x34\n\nlobby_type\x18\x0c \x01(\x0e\x32\x17.CSODOTALobby.LobbyType:\x07INVALID\x12\x14\n\x0c\x61llow_cheats\x18\r \x01(\x08\x12\x16\n\x0e\x66ill_with_bots\x18\x0e \x01(\x08\x12\x12\n\nintro_mode\x18\x0f \x01(\x08\x12\x11\n\tgame_name\x18\x10 \x01(\t\x12(\n\x0cteam_details\x18\x11 \x03(\x0b\x32\x12.CLobbyTeamDetails\x12\x17\n\x0ftutorial_lesson\x18\x12 \x01(\r\x12\x15\n\rtournament_id\x18\x13 \x01(\r\x12\x1a\n\x12tournament_game_id\x18\x14 \x01(\r\x12\x18\n\rserver_region\x18\x15 \x01(\r:\x01\x30\x12>\n\ngame_state\x18\x16 \x01(\x0e\x32\x0f.DOTA_GameState:\x19\x44OTA_GAMERULES_STATE_INIT\x12\x16\n\x0enum_spectators\x18\x17 \x01(\r\x12\x12\n\nmatchgroup\x18\x19 \x01(\r\x12.\n\x07\x63m_pick\x18\x1c \x01(\x0e\x32\r.DOTA_CM_PICK:\x0e\x44OTA_CM_RANDOM\x12\x10\n\x08match_id\x18\x1e \x01(\x04\x12\x1e\n\x10\x61llow_spectating\x18\x1f \x01(\x08:\x04true\x12?\n\x0e\x62ot_difficulty\x18$ \x01(\x0e\x32\x12.DOTABotDifficulty:\x13\x42OT_DIFFICULTY_HARD\x12<\n\x0cgame_version\x18% \x01(\x0e\x32\x10.DOTAGameVersion:\x14GAME_VERSION_CURRENT\x12\x37\n\x14timed_reward_details\x18& \x03(\x0b\x32\x19.CLobbyTimedRewardDetails\x12\x10\n\x08pass_key\x18\' \x01(\t\x12/\n\x13\x62ot_slot_difficulty\x18) \x03(\x0e\x32\x12.DOTABotDifficulty\x12\x10\n\x08leagueid\x18* \x01(\r\x12 \n\x15penalty_level_radiant\x18+ \x01(\r:\x01\x30\x12\x1d\n\x12penalty_level_dire\x18, \x01(\r:\x01\x30\x12\x14\n\x0cload_game_id\x18- \x01(\r\x12\x13\n\x0bseries_type\x18. \x01(\r\x12\x1b\n\x13radiant_series_wins\x18/ \x01(\r\x12\x18\n\x10\x64ire_series_wins\x18\x30 \x01(\r\x12\x16\n\x0eloot_generated\x18\x31 \x01(\r\x12\x14\n\x0cloot_awarded\x18\x32 \x01(\r\x12\x16\n\x07\x61llchat\x18\x33 \x01(\x08:\x05\x66\x61lse\x12\x38\n\rdota_tv_delay\x18\x35 \x01(\x0e\x32\x11.LobbyDotaTVDelay:\x0eLobbyDotaTV_10\x12\x18\n\x10\x63ustom_game_mode\x18\x36 \x01(\t\x12\x17\n\x0f\x63ustom_map_name\x18\x37 \x01(\t\x12\x19\n\x11\x63ustom_difficulty\x18\x38 \x01(\r\x12\x0b\n\x03lan\x18\x39 \x01(\x08\x12;\n\x16\x62roadcast_channel_info\x18: \x03(\x0b\x32\x1b.CLobbyBroadcastChannelInfo\x12\x1e\n\x16\x66irst_leaver_accountid\x18; \x01(\r\x12\x11\n\tseries_id\x18< \x01(\r\x12\x14\n\x0clow_priority\x18= \x01(\x08\x12/\n\x0e\x65xtra_messages\x18> \x03(\x0b\x32\x17.CSODOTALobby.CExtraMsg\x12!\n\tsave_game\x18? \x01(\x0b\x32\x0e.CDOTASaveGame\x12\x1c\n\x14\x66irst_blood_happened\x18\x41 \x01(\x08\x12>\n\rmatch_outcome\x18\x46 \x01(\x0e\x32\x0e.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x12\x17\n\x0fmass_disconnect\x18\x43 \x01(\x08\x12\x16\n\x0e\x63ustom_game_id\x18\x44 \x01(\x04\x12%\n\x14\x61\x63tive_ingame_events\x18\x45 \x03(\x0e\x32\x07.EEvent\x12\x1a\n\x12\x63ustom_min_players\x18G \x01(\r\x12\x1a\n\x12\x63ustom_max_players\x18H \x01(\r\x12\x37\n\x0cpartner_type\x18I \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12&\n\x1elan_host_ping_to_server_region\x18J \x01(\r\x12\x44\n\nvisibility\x18K \x01(\x0e\x32\x14.DOTALobbyVisibility:\x1a\x44OTALobbyVisibility_Public\x12\x17\n\x0f\x63ustom_game_crc\x18L \x01(\x06\x12&\n\x1e\x63ustom_game_auto_created_lobby\x18M \x01(\x08\x12\x18\n\x10league_series_id\x18N \x01(\r\x12\x16\n\x0eleague_game_id\x18O \x01(\r\x12\x1d\n\x15\x63ustom_game_timestamp\x18P \x01(\x07\x12\x1f\n\x17previous_series_matches\x18Q \x03(\x04\x12\x1f\n\x17previous_match_override\x18R \x01(\x04\x12(\n custom_game_uses_account_records\x18S \x01(\x08\x12&\n\x1eleague_selection_priority_team\x18T \x01(\r\x12K\n league_selection_priority_choice\x18U \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12O\n$league_non_selection_priority_choice\x18V \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12\x17\n\x0fgame_start_time\x18W \x01(\r\x12N\n\rpause_setting\x18X \x01(\x0e\x32\x16.LobbyDotaPauseSetting:\x1fLobbyDotaPauseSetting_Unlimited\x12\x1c\n\x14lobby_mvp_account_id\x18Y \x01(\r\x1a)\n\tCExtraMsg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63ontents\x18\x02 \x01(\x0c\"d\n\x05State\x12\x06\n\x02UI\x10\x00\x12\x0b\n\x07READYUP\x10\x04\x12\x0f\n\x0bSERVERSETUP\x10\x01\x12\x07\n\x03RUN\x10\x02\x12\x0c\n\x08POSTGAME\x10\x03\x12\x0c\n\x08NOTREADY\x10\x05\x12\x10\n\x0cSERVERASSIGN\x10\x06\"\xf0\x01\n\tLobbyType\x12\x14\n\x07INVALID\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x10\n\x0c\x43\x41SUAL_MATCH\x10\x00\x12\x0c\n\x08PRACTICE\x10\x01\x12\x0e\n\nTOURNAMENT\x10\x02\x12\x12\n\x0e\x43OOP_BOT_MATCH\x10\x04\x12\x15\n\x11LEGACY_TEAM_MATCH\x10\x05\x12\x1b\n\x17LEGACY_SOLO_QUEUE_MATCH\x10\x06\x12\x15\n\x11\x43OMPETITIVE_MATCH\x10\x07\x12\x14\n\x10\x43\x41SUAL_1V1_MATCH\x10\x08\x12\x13\n\x0fWEEKEND_TOURNEY\x10\t\x12\x13\n\x0fLOCAL_BOT_MATCH\x10\n*P\n\x10LobbyDotaTVDelay\x12\x12\n\x0eLobbyDotaTV_10\x10\x00\x12\x13\n\x0fLobbyDotaTV_120\x10\x01\x12\x13\n\x0fLobbyDotaTV_300\x10\x02*\x83\x01\n\x15LobbyDotaPauseSetting\x12#\n\x1fLobbyDotaPauseSetting_Unlimited\x10\x00\x12!\n\x1dLobbyDotaPauseSetting_Limited\x10\x01\x12\"\n\x1eLobbyDotaPauseSetting_Disabled\x10\x02*\x9f\x02\n\rEMatchOutcome\x12\x1b\n\x17k_EMatchOutcome_Unknown\x10\x00\x12\x1e\n\x1ak_EMatchOutcome_RadVictory\x10\x02\x12\x1f\n\x1bk_EMatchOutcome_DireVictory\x10\x03\x12\x33\n/k_EMatchOutcome_NotScored_PoorNetworkConditions\x10@\x12$\n k_EMatchOutcome_NotScored_Leaver\x10\x41\x12)\n%k_EMatchOutcome_NotScored_ServerCrash\x10\x42\x12*\n&k_EMatchOutcome_NotScored_NeverStarted\x10\x43\x42\x05H\x01\x80\x01\x00')
+  syntax='proto2',
+  serialized_pb=b'\n-dota_gcmessages_common_match_management.proto\x1a\x13steammessages.proto\x1a\x16gcsdk_gcmessages.proto\x1a\x17\x64ota_shared_enums.proto\"\xf5\x01\n\x12\x43SODOTAPartyMember\x12\x37\n\x0cpartner_type\x18\x01 \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12\x10\n\x08is_coach\x18\x02 \x01(\x08\x12\x1d\n\x11region_ping_codes\x18\x04 \x03(\rB\x02\x10\x01\x12\x1d\n\x11region_ping_times\x18\x05 \x03(\rB\x02\x10\x01\x12\"\n\x1aregion_ping_failed_bitmask\x18\x06 \x01(\r\x12\x1b\n\x13tourney_skill_level\x18\x07 \x01(\r\x12\x15\n\rtourney_buyin\x18\x08 \x01(\r\"\xf1\n\n\x0c\x43SODOTAParty\x12\x16\n\x08party_id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\x11\n\tleader_id\x18\x02 \x01(\x06\x12\x12\n\nmember_ids\x18\x03 \x03(\x06\x12\x12\n\ngame_modes\x18\x04 \x01(\r\x12&\n\x05state\x18\x06 \x01(\x0e\x32\x13.CSODOTAParty.State:\x02UI\x12*\n\"effective_started_matchmaking_time\x18\x07 \x01(\r\x12$\n\x1craw_started_matchmaking_time\x18  \x01(\r\x12\x1a\n\x12\x61ttempt_start_time\x18! \x01(\r\x12\x13\n\x0b\x61ttempt_num\x18\" \x01(\r\x12\x13\n\x0bmatchgroups\x18\x0b \x01(\r\x12\x1f\n\x17low_priority_account_id\x18\x13 \x01(\r\x12\x31\n\nmatch_type\x18\x15 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x12\x42\n\x0e\x62ot_difficulty\x18\x16 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x0f\n\x07team_id\x18\x17 \x01(\r\x12\x11\n\tteam_name\x18\x33 \x01(\t\x12\x14\n\x0cteam_ui_logo\x18\x34 \x01(\x04\x12\x16\n\x0eteam_base_logo\x18\x35 \x01(\x04\x12!\n\x19match_disabled_until_date\x18\x18 \x01(\r\x12!\n\x19match_disabled_account_id\x18\x19 \x01(\r\x12%\n\x1dmatchmaking_max_range_minutes\x18\x1a \x01(\r\x12\x16\n\x0ematchlanguages\x18\x1b \x01(\r\x12\x16\n\x0emap_preference\x18& \x01(\r\x12$\n\x07members\x18\x1d \x03(\x0b\x32\x13.CSODOTAPartyMember\x12\x15\n\ropen_guild_id\x18\x1e \x01(\r\x12\x15\n\rcommon_guilds\x18\x1f \x03(\r\x12$\n\x1clow_priority_games_remaining\x18# \x01(\r\x12\x11\n\tmin_level\x18$ \x01(\r\x12\x11\n\tmax_level\x18% \x01(\r\x12%\n\x14\x61\x63tive_ingame_events\x18\' \x03(\x0e\x32\x07.EEvent\x12\x1e\n\x16open_for_join_requests\x18( \x01(\x08\x12)\n\x0csent_invites\x18) \x03(\x0b\x32\x13.CSODOTAPartyInvite\x12)\n\x0crecv_invites\x18* \x03(\x0b\x32\x13.CSODOTAPartyInvite\x12\x15\n\raccount_flags\x18+ \x01(\r\x12\x1b\n\x13region_select_flags\x18, \x01(\r\x12\x1f\n\x17\x65xclusive_tournament_id\x18- \x01(\r\x12\x1b\n\x13tourney_division_id\x18/ \x01(\r\x12\x1d\n\x15tourney_schedule_time\x18\x30 \x01(\r\x12\x1b\n\x13tourney_skill_level\x18\x31 \x01(\r\x12\x1d\n\x15tourney_bracket_round\x18\x32 \x01(\r\x12#\n\x1btourney_queue_deadline_time\x18\x36 \x01(\r\x12\x66\n\x1ctourney_queue_deadline_state\x18\x37 \x01(\x0e\x32\x1b.ETourneyQueueDeadlineState:#k_ETourneyQueueDeadlineState_Normal\"0\n\x05State\x12\x06\n\x02UI\x10\x00\x12\x11\n\rFINDING_MATCH\x10\x01\x12\x0c\n\x08IN_MATCH\x10\x02\"\x9b\x02\n\x12\x43SODOTAPartyInvite\x12\x16\n\x08group_id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x13\n\x0bsender_name\x18\x03 \x01(\t\x12\x30\n\x07members\x18\x04 \x03(\x0b\x32\x1f.CSODOTAPartyInvite.PartyMember\x12\x0f\n\x07team_id\x18\x05 \x01(\r\x12\x1b\n\x13low_priority_status\x18\x06 \x01(\x08\x12\x10\n\x08\x61s_coach\x18\x07 \x01(\x08\x12\x12\n\ninvite_gid\x18\x08 \x01(\x06\x1a?\n\x0bPartyMember\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x10\n\x08is_coach\x18\x04 \x01(\x08\"\x99\x02\n\x12\x43SODOTALobbyInvite\x12\x16\n\x08group_id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x13\n\x0bsender_name\x18\x03 \x01(\t\x12\x30\n\x07members\x18\x04 \x03(\x0b\x32\x1f.CSODOTALobbyInvite.LobbyMember\x12\x16\n\x0e\x63ustom_game_id\x18\x05 \x01(\x04\x12\x12\n\ninvite_gid\x18\x06 \x01(\x06\x12\x17\n\x0f\x63ustom_game_crc\x18\x07 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x08 \x01(\x07\x1a-\n\x0bLobbyMember\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\"\xd5\x01\n\x0f\x43MsgLeaverState\x12\x13\n\x0blobby_state\x18\x01 \x01(\r\x12>\n\ngame_state\x18\x02 \x01(\x0e\x32\x0f.DOTA_GameState:\x19\x44OTA_GAMERULES_STATE_INIT\x12\x17\n\x0fleaver_detected\x18\x03 \x01(\x08\x12\x1c\n\x14\x66irst_blood_happened\x18\x04 \x01(\x08\x12\x1d\n\x15\x64iscard_match_results\x18\x05 \x01(\x08\x12\x17\n\x0fmass_disconnect\x18\x06 \x01(\x08\"\xef\x06\n\x10\x43\x44OTALobbyMember\x12\x10\n\x02id\x18\x01 \x01(\x06\x42\x04\x80\xa6\x1d\x01\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x33\n\x04team\x18\x03 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x0c\n\x04slot\x18\x07 \x01(\r\x12\x10\n\x08party_id\x18\x0c \x01(\x04\x12\x12\n\nmeta_level\x18\r \x01(\r\x12\x0f\n\x07meta_xp\x18\x0e \x01(\r\x12\x17\n\x0fmeta_xp_awarded\x18\x0f \x01(\r\x12<\n\rleaver_status\x18\x10 \x01(\x0e\x32\x13.DOTALeaverStatus_t:\x10\x44OTA_LEAVER_NONE\x12\x16\n\x0eleaver_actions\x18\x1c \x01(\r\x12\x0f\n\x07\x63hannel\x18\x11 \x01(\r\x12\x17\n\x0fprize_def_index\x18\x12 \x01(\r\x12\x18\n\x10\x64isabled_hero_id\x18\x14 \x03(\r\x12?\n\x14partner_account_type\x18\x15 \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12\x17\n\x0f\x65nabled_hero_id\x18\x16 \x03(\r\x12\x39\n\ncoach_team\x18\x17 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x18\n\x10nexon_pc_bang_no\x18\x18 \x01(\r\x12\x1a\n\x12nexon_pc_bang_name\x18\x19 \x01(\t\x12=\n\nxp_bonuses\x18\x1b \x03(\x0b\x32).CDOTALobbyMember.CDOTALobbyMemberXPBonus\x12\x13\n\x0brank_change\x18\x1d \x01(\x11\x12\x11\n\tcameraman\x18\x1e \x01(\x08\x12\x1f\n\x17\x63ustom_game_product_ids\x18\x1f \x03(\r\x12!\n\x19lobby_mvp_vote_account_id\x18  \x01(\r\x12\x38\n\x11search_match_type\x18! \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x1aM\n\x17\x43\x44OTALobbyMemberXPBonus\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x10\n\x08xp_bonus\x18\x02 \x01(\x02\x12\x12\n\nsource_key\x18\x03 \x01(\x04\"\xdf\x02\n\x11\x43LobbyTeamDetails\x12\x11\n\tteam_name\x18\x01 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x11\n\tteam_logo\x18\x05 \x01(\x04\x12\x16\n\x0eteam_base_logo\x18\x06 \x01(\x04\x12\x18\n\x10team_banner_logo\x18\x07 \x01(\x04\x12\x15\n\rteam_complete\x18\x08 \x01(\x08\x12\x12\n\nguild_name\x18\t \x01(\t\x12\x11\n\tguild_tag\x18\n \x01(\t\x12\x10\n\x08guild_id\x18\x0b \x01(\r\x12\x12\n\nguild_logo\x18\x0c \x01(\x04\x12\x17\n\x0fguild_base_logo\x18\r \x01(\x04\x12\x19\n\x11guild_banner_logo\x18\x0e \x01(\x04\x12\x0c\n\x04rank\x18\x0f \x01(\r\x12\x13\n\x0brank_change\x18\x10 \x01(\x11\x12\x14\n\x0cis_home_team\x18\x11 \x01(\x08\"\x86\x01\n\x18\x43LobbyTimedRewardDetails\x12\x16\n\x0eitem_def_index\x18\x02 \x01(\r\x12\x17\n\x0fis_supply_crate\x18\x03 \x01(\x08\x12\x15\n\ris_timed_drop\x18\x04 \x01(\x08\x12\x12\n\naccount_id\x18\x05 \x01(\r\x12\x0e\n\x06origin\x18\x06 \x01(\r\"r\n\x1a\x43LobbyBroadcastChannelInfo\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\"\xb3\x17\n\x0c\x43SODOTALobby\x12\x16\n\x08lobby_id\x18\x01 \x01(\x04\x42\x04\x80\xa6\x1d\x01\x12\"\n\x07members\x18\x02 \x03(\x0b\x32\x11.CDOTALobbyMember\x12\'\n\x0cleft_members\x18\x07 \x03(\x0b\x32\x11.CDOTALobbyMember\x12\x11\n\tleader_id\x18\x0b \x01(\x06\x12\x14\n\tserver_id\x18\x06 \x01(\x06:\x01\x30\x12\x11\n\tgame_mode\x18\x03 \x01(\r\x12\x17\n\x0fpending_invites\x18\n \x03(\x06\x12&\n\x05state\x18\x04 \x01(\x0e\x32\x13.CSODOTALobby.State:\x02UI\x12\x0f\n\x07\x63onnect\x18\x05 \x01(\t\x12\x34\n\nlobby_type\x18\x0c \x01(\x0e\x32\x17.CSODOTALobby.LobbyType:\x07INVALID\x12\x14\n\x0c\x61llow_cheats\x18\r \x01(\x08\x12\x16\n\x0e\x66ill_with_bots\x18\x0e \x01(\x08\x12\x12\n\nintro_mode\x18\x0f \x01(\x08\x12\x11\n\tgame_name\x18\x10 \x01(\t\x12(\n\x0cteam_details\x18\x11 \x03(\x0b\x32\x12.CLobbyTeamDetails\x12\x17\n\x0ftutorial_lesson\x18\x12 \x01(\r\x12\x15\n\rtournament_id\x18\x13 \x01(\r\x12\x1a\n\x12tournament_game_id\x18\x14 \x01(\r\x12\x18\n\rserver_region\x18\x15 \x01(\r:\x01\x30\x12>\n\ngame_state\x18\x16 \x01(\x0e\x32\x0f.DOTA_GameState:\x19\x44OTA_GAMERULES_STATE_INIT\x12\x16\n\x0enum_spectators\x18\x17 \x01(\r\x12\x12\n\nmatchgroup\x18\x19 \x01(\r\x12.\n\x07\x63m_pick\x18\x1c \x01(\x0e\x32\r.DOTA_CM_PICK:\x0e\x44OTA_CM_RANDOM\x12\x10\n\x08match_id\x18\x1e \x01(\x04\x12\x1e\n\x10\x61llow_spectating\x18\x1f \x01(\x08:\x04true\x12?\n\x0e\x62ot_difficulty\x18$ \x01(\x0e\x32\x12.DOTABotDifficulty:\x13\x42OT_DIFFICULTY_HARD\x12<\n\x0cgame_version\x18% \x01(\x0e\x32\x10.DOTAGameVersion:\x14GAME_VERSION_CURRENT\x12\x37\n\x14timed_reward_details\x18& \x03(\x0b\x32\x19.CLobbyTimedRewardDetails\x12\x10\n\x08pass_key\x18\' \x01(\t\x12/\n\x13\x62ot_slot_difficulty\x18) \x03(\x0e\x32\x12.DOTABotDifficulty\x12\x10\n\x08leagueid\x18* \x01(\r\x12 \n\x15penalty_level_radiant\x18+ \x01(\r:\x01\x30\x12\x1d\n\x12penalty_level_dire\x18, \x01(\r:\x01\x30\x12\x14\n\x0cload_game_id\x18- \x01(\r\x12\x13\n\x0bseries_type\x18. \x01(\r\x12\x1b\n\x13radiant_series_wins\x18/ \x01(\r\x12\x18\n\x10\x64ire_series_wins\x18\x30 \x01(\r\x12\x16\n\x0eloot_generated\x18\x31 \x01(\r\x12\x14\n\x0cloot_awarded\x18\x32 \x01(\r\x12\x16\n\x07\x61llchat\x18\x33 \x01(\x08:\x05\x66\x61lse\x12\x38\n\rdota_tv_delay\x18\x35 \x01(\x0e\x32\x11.LobbyDotaTVDelay:\x0eLobbyDotaTV_10\x12\x18\n\x10\x63ustom_game_mode\x18\x36 \x01(\t\x12\x17\n\x0f\x63ustom_map_name\x18\x37 \x01(\t\x12\x19\n\x11\x63ustom_difficulty\x18\x38 \x01(\r\x12\x0b\n\x03lan\x18\x39 \x01(\x08\x12;\n\x16\x62roadcast_channel_info\x18: \x03(\x0b\x32\x1b.CLobbyBroadcastChannelInfo\x12\x1e\n\x16\x66irst_leaver_accountid\x18; \x01(\r\x12\x11\n\tseries_id\x18< \x01(\r\x12\x14\n\x0clow_priority\x18= \x01(\x08\x12/\n\x0e\x65xtra_messages\x18> \x03(\x0b\x32\x17.CSODOTALobby.CExtraMsg\x12!\n\tsave_game\x18? \x01(\x0b\x32\x0e.CDOTASaveGame\x12\x1c\n\x14\x66irst_blood_happened\x18\x41 \x01(\x08\x12>\n\rmatch_outcome\x18\x46 \x01(\x0e\x32\x0e.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x12\x17\n\x0fmass_disconnect\x18\x43 \x01(\x08\x12\x16\n\x0e\x63ustom_game_id\x18\x44 \x01(\x04\x12%\n\x14\x61\x63tive_ingame_events\x18\x45 \x03(\x0e\x32\x07.EEvent\x12\x1a\n\x12\x63ustom_min_players\x18G \x01(\r\x12\x1a\n\x12\x63ustom_max_players\x18H \x01(\r\x12\x37\n\x0cpartner_type\x18I \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12&\n\x1elan_host_ping_to_server_region\x18J \x01(\r\x12\x44\n\nvisibility\x18K \x01(\x0e\x32\x14.DOTALobbyVisibility:\x1a\x44OTALobbyVisibility_Public\x12\x17\n\x0f\x63ustom_game_crc\x18L \x01(\x06\x12&\n\x1e\x63ustom_game_auto_created_lobby\x18M \x01(\x08\x12\x18\n\x10league_series_id\x18N \x01(\r\x12\x16\n\x0eleague_game_id\x18O \x01(\r\x12\x1d\n\x15\x63ustom_game_timestamp\x18P \x01(\x07\x12\x1f\n\x17previous_series_matches\x18Q \x03(\x04\x12\x1f\n\x17previous_match_override\x18R \x01(\x04\x12(\n custom_game_uses_account_records\x18S \x01(\x08\x12&\n\x1eleague_selection_priority_team\x18T \x01(\r\x12K\n league_selection_priority_choice\x18U \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12O\n$league_non_selection_priority_choice\x18V \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12\x17\n\x0fgame_start_time\x18W \x01(\r\x12N\n\rpause_setting\x18X \x01(\x0e\x32\x16.LobbyDotaPauseSetting:\x1fLobbyDotaPauseSetting_Unlimited\x12\x1c\n\x14lobby_mvp_account_id\x18Y \x01(\r\x1a)\n\tCExtraMsg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63ontents\x18\x02 \x01(\x0c\"d\n\x05State\x12\x06\n\x02UI\x10\x00\x12\x0b\n\x07READYUP\x10\x04\x12\x0f\n\x0bSERVERSETUP\x10\x01\x12\x07\n\x03RUN\x10\x02\x12\x0c\n\x08POSTGAME\x10\x03\x12\x0c\n\x08NOTREADY\x10\x05\x12\x10\n\x0cSERVERASSIGN\x10\x06\"\xf0\x01\n\tLobbyType\x12\x14\n\x07INVALID\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x10\n\x0c\x43\x41SUAL_MATCH\x10\x00\x12\x0c\n\x08PRACTICE\x10\x01\x12\x0e\n\nTOURNAMENT\x10\x02\x12\x12\n\x0e\x43OOP_BOT_MATCH\x10\x04\x12\x15\n\x11LEGACY_TEAM_MATCH\x10\x05\x12\x1b\n\x17LEGACY_SOLO_QUEUE_MATCH\x10\x06\x12\x15\n\x11\x43OMPETITIVE_MATCH\x10\x07\x12\x14\n\x10\x43\x41SUAL_1V1_MATCH\x10\x08\x12\x13\n\x0fWEEKEND_TOURNEY\x10\t\x12\x13\n\x0fLOCAL_BOT_MATCH\x10\n*P\n\x10LobbyDotaTVDelay\x12\x12\n\x0eLobbyDotaTV_10\x10\x00\x12\x13\n\x0fLobbyDotaTV_120\x10\x01\x12\x13\n\x0fLobbyDotaTV_300\x10\x02*\x83\x01\n\x15LobbyDotaPauseSetting\x12#\n\x1fLobbyDotaPauseSetting_Unlimited\x10\x00\x12!\n\x1dLobbyDotaPauseSetting_Limited\x10\x01\x12\"\n\x1eLobbyDotaPauseSetting_Disabled\x10\x02*\x9f\x02\n\rEMatchOutcome\x12\x1b\n\x17k_EMatchOutcome_Unknown\x10\x00\x12\x1e\n\x1ak_EMatchOutcome_RadVictory\x10\x02\x12\x1f\n\x1bk_EMatchOutcome_DireVictory\x10\x03\x12\x33\n/k_EMatchOutcome_NotScored_PoorNetworkConditions\x10@\x12$\n k_EMatchOutcome_NotScored_Leaver\x10\x41\x12)\n%k_EMatchOutcome_NotScored_ServerCrash\x10\x42\x12*\n&k_EMatchOutcome_NotScored_NeverStarted\x10\x43\x42\x05H\x01\x90\x01\x00'
+  ,
+  dependencies=[steammessages__pb2.DESCRIPTOR,gcsdk__gcmessages__pb2.DESCRIPTOR,dota__shared__enums__pb2.DESCRIPTOR,])
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _LOBBYDOTATVDELAY = _descriptor.EnumDescriptor(
   name='LobbyDotaTVDelay',
@@ -43,6 +50,7 @@ _LOBBYDOTATVDELAY = _descriptor.EnumDescriptor(
   serialized_start=7036,
   serialized_end=7116,
 )
+_sym_db.RegisterEnumDescriptor(_LOBBYDOTATVDELAY)
 
 LobbyDotaTVDelay = enum_type_wrapper.EnumTypeWrapper(_LOBBYDOTATVDELAY)
 _LOBBYDOTAPAUSESETTING = _descriptor.EnumDescriptor(
@@ -69,6 +77,7 @@ _LOBBYDOTAPAUSESETTING = _descriptor.EnumDescriptor(
   serialized_start=7119,
   serialized_end=7250,
 )
+_sym_db.RegisterEnumDescriptor(_LOBBYDOTAPAUSESETTING)
 
 LobbyDotaPauseSetting = enum_type_wrapper.EnumTypeWrapper(_LOBBYDOTAPAUSESETTING)
 _EMATCHOUTCOME = _descriptor.EnumDescriptor(
@@ -111,6 +120,7 @@ _EMATCHOUTCOME = _descriptor.EnumDescriptor(
   serialized_start=7253,
   serialized_end=7540,
 )
+_sym_db.RegisterEnumDescriptor(_EMATCHOUTCOME)
 
 EMatchOutcome = enum_type_wrapper.EnumTypeWrapper(_EMATCHOUTCOME)
 LobbyDotaTV_10 = 0
@@ -152,6 +162,7 @@ _CSODOTAPARTY_STATE = _descriptor.EnumDescriptor(
   serialized_start=1713,
   serialized_end=1761,
 )
+_sym_db.RegisterEnumDescriptor(_CSODOTAPARTY_STATE)
 
 _CSODOTALOBBY_STATE = _descriptor.EnumDescriptor(
   name='State',
@@ -193,6 +204,7 @@ _CSODOTALOBBY_STATE = _descriptor.EnumDescriptor(
   serialized_start=6691,
   serialized_end=6791,
 )
+_sym_db.RegisterEnumDescriptor(_CSODOTALOBBY_STATE)
 
 _CSODOTALOBBY_LOBBYTYPE = _descriptor.EnumDescriptor(
   name='LobbyType',
@@ -250,6 +262,7 @@ _CSODOTALOBBY_LOBBYTYPE = _descriptor.EnumDescriptor(
   serialized_start=6794,
   serialized_end=7034,
 )
+_sym_db.RegisterEnumDescriptor(_CSODOTALOBBY_LOBBYTYPE)
 
 
 _CSODOTAPARTYMEMBER = _descriptor.Descriptor(
@@ -279,14 +292,14 @@ _CSODOTAPARTYMEMBER = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\020\001')),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\020\001')),
     _descriptor.FieldDescriptor(
       name='region_ping_times', full_name='CSODOTAPartyMember.region_ping_times', index=3,
       number=5, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\020\001')),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\020\001')),
     _descriptor.FieldDescriptor(
       name='region_ping_failed_bitmask', full_name='CSODOTAPartyMember.region_ping_failed_bitmask', index=4,
       number=6, type=13, cpp_type=3, label=1,
@@ -316,7 +329,10 @@ _CSODOTAPARTYMEMBER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=120,
   serialized_end=365,
 )
@@ -335,7 +351,7 @@ _CSODOTAPARTY = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')),
     _descriptor.FieldDescriptor(
       name='leader_id', full_name='CSODOTAParty.leader_id', index=1,
       number=2, type=6, cpp_type=4, label=1,
@@ -430,7 +446,7 @@ _CSODOTAPARTY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='team_name', full_name='CSODOTAParty.team_name', index=14,
       number=51, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -625,7 +641,10 @@ _CSODOTAPARTY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=368,
   serialized_end=1761,
 )
@@ -641,7 +660,7 @@ _CSODOTAPARTYINVITE_PARTYMEMBER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CSODOTAPartyInvite.PartyMember.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -667,7 +686,10 @@ _CSODOTAPARTYINVITE_PARTYMEMBER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1984,
   serialized_end=2047,
 )
@@ -685,7 +707,7 @@ _CSODOTAPARTYINVITE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')),
     _descriptor.FieldDescriptor(
       name='sender_id', full_name='CSODOTAPartyInvite.sender_id', index=1,
       number=2, type=6, cpp_type=4, label=1,
@@ -696,7 +718,7 @@ _CSODOTAPARTYINVITE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='sender_name', full_name='CSODOTAPartyInvite.sender_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -743,7 +765,10 @@ _CSODOTAPARTYINVITE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=1764,
   serialized_end=2047,
 )
@@ -759,7 +784,7 @@ _CSODOTALOBBYINVITE_LOBBYMEMBER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CSODOTALobbyInvite.LobbyMember.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -778,7 +803,10 @@ _CSODOTALOBBYINVITE_LOBBYMEMBER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2286,
   serialized_end=2331,
 )
@@ -796,7 +824,7 @@ _CSODOTALOBBYINVITE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')),
     _descriptor.FieldDescriptor(
       name='sender_id', full_name='CSODOTALobbyInvite.sender_id', index=1,
       number=2, type=6, cpp_type=4, label=1,
@@ -807,7 +835,7 @@ _CSODOTALOBBYINVITE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='sender_name', full_name='CSODOTALobbyInvite.sender_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -854,7 +882,10 @@ _CSODOTALOBBYINVITE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2050,
   serialized_end=2331,
 )
@@ -917,7 +948,10 @@ _CMSGLEAVERSTATE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2334,
   serialized_end=2547,
 )
@@ -959,7 +993,10 @@ _CDOTALOBBYMEMBER_CDOTALOBBYMEMBERXPBONUS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3352,
   serialized_end=3429,
 )
@@ -977,7 +1014,7 @@ _CDOTALOBBYMEMBER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')),
     _descriptor.FieldDescriptor(
       name='hero_id', full_name='CDOTALobbyMember.hero_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
@@ -995,7 +1032,7 @@ _CDOTALOBBYMEMBER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='name', full_name='CDOTALobbyMember.name', index=3,
       number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1100,7 +1137,7 @@ _CDOTALOBBYMEMBER = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='nexon_pc_bang_name', full_name='CDOTALobbyMember.nexon_pc_bang_name', index=18,
       number=25, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1154,7 +1191,10 @@ _CDOTALOBBYMEMBER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=2550,
   serialized_end=3429,
 )
@@ -1170,14 +1210,14 @@ _CLOBBYTEAMDETAILS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='team_name', full_name='CLobbyTeamDetails.team_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='team_tag', full_name='CLobbyTeamDetails.team_tag', index=1,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1219,14 +1259,14 @@ _CLOBBYTEAMDETAILS = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='guild_name', full_name='CLobbyTeamDetails.guild_name', index=7,
       number=9, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='guild_tag', full_name='CLobbyTeamDetails.guild_tag', index=8,
       number=10, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1287,7 +1327,10 @@ _CLOBBYTEAMDETAILS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3432,
   serialized_end=3783,
 )
@@ -1343,7 +1386,10 @@ _CLOBBYTIMEDREWARDDETAILS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3786,
   serialized_end=3920,
 )
@@ -1366,21 +1412,21 @@ _CLOBBYBROADCASTCHANNELINFO = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='country_code', full_name='CLobbyBroadcastChannelInfo.country_code', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='description', full_name='CLobbyBroadcastChannelInfo.description', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='language_code', full_name='CLobbyBroadcastChannelInfo.language_code', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1392,7 +1438,10 @@ _CLOBBYBROADCASTCHANNELINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=3922,
   serialized_end=4036,
 )
@@ -1415,7 +1464,7 @@ _CSODOTALOBBY_CEXTRAMSG = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='contents', full_name='CSODOTALobby.CExtraMsg.contents', index=1,
       number=2, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value="",
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1427,7 +1476,10 @@ _CSODOTALOBBY_CEXTRAMSG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=6648,
   serialized_end=6689,
 )
@@ -1445,7 +1497,7 @@ _CSODOTALOBBY = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')),
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')),
     _descriptor.FieldDescriptor(
       name='members', full_name='CSODOTALobby.members', index=1,
       number=2, type=11, cpp_type=10, label=3,
@@ -1498,7 +1550,7 @@ _CSODOTALOBBY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='connect', full_name='CSODOTALobby.connect', index=8,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1533,7 +1585,7 @@ _CSODOTALOBBY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='game_name', full_name='CSODOTALobby.game_name', index=13,
       number=16, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1638,7 +1690,7 @@ _CSODOTALOBBY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='pass_key', full_name='CSODOTALobby.pass_key', index=28,
       number=39, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1729,14 +1781,14 @@ _CSODOTALOBBY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='custom_game_mode', full_name='CSODOTALobby.custom_game_mode', index=41,
       number=54, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='custom_map_name', full_name='CSODOTALobby.custom_map_name', index=42,
       number=55, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1974,58 +2026,61 @@ _CSODOTALOBBY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
+  oneofs=[
+  ],
   serialized_start=4039,
   serialized_end=7034,
 )
 
-_CSODOTAPARTYMEMBER.fields_by_name['partner_type'].enum_type = gcsdk_gcmessages_pb2._PARTNERACCOUNTTYPE
+_CSODOTAPARTYMEMBER.fields_by_name['partner_type'].enum_type = gcsdk__gcmessages__pb2._PARTNERACCOUNTTYPE
 _CSODOTAPARTY.fields_by_name['state'].enum_type = _CSODOTAPARTY_STATE
-_CSODOTAPARTY.fields_by_name['match_type'].enum_type = dota_shared_enums_pb2._MATCHTYPE
-_CSODOTAPARTY.fields_by_name['bot_difficulty'].enum_type = dota_shared_enums_pb2._DOTABOTDIFFICULTY
+_CSODOTAPARTY.fields_by_name['match_type'].enum_type = dota__shared__enums__pb2._MATCHTYPE
+_CSODOTAPARTY.fields_by_name['bot_difficulty'].enum_type = dota__shared__enums__pb2._DOTABOTDIFFICULTY
 _CSODOTAPARTY.fields_by_name['members'].message_type = _CSODOTAPARTYMEMBER
-_CSODOTAPARTY.fields_by_name['active_ingame_events'].enum_type = dota_shared_enums_pb2._EEVENT
+_CSODOTAPARTY.fields_by_name['active_ingame_events'].enum_type = dota__shared__enums__pb2._EEVENT
 _CSODOTAPARTY.fields_by_name['sent_invites'].message_type = _CSODOTAPARTYINVITE
 _CSODOTAPARTY.fields_by_name['recv_invites'].message_type = _CSODOTAPARTYINVITE
-_CSODOTAPARTY.fields_by_name['tourney_queue_deadline_state'].enum_type = dota_shared_enums_pb2._ETOURNEYQUEUEDEADLINESTATE
-_CSODOTAPARTY_STATE.containing_type = _CSODOTAPARTY;
-_CSODOTAPARTYINVITE_PARTYMEMBER.containing_type = _CSODOTAPARTYINVITE;
+_CSODOTAPARTY.fields_by_name['tourney_queue_deadline_state'].enum_type = dota__shared__enums__pb2._ETOURNEYQUEUEDEADLINESTATE
+_CSODOTAPARTY_STATE.containing_type = _CSODOTAPARTY
+_CSODOTAPARTYINVITE_PARTYMEMBER.containing_type = _CSODOTAPARTYINVITE
 _CSODOTAPARTYINVITE.fields_by_name['members'].message_type = _CSODOTAPARTYINVITE_PARTYMEMBER
-_CSODOTALOBBYINVITE_LOBBYMEMBER.containing_type = _CSODOTALOBBYINVITE;
+_CSODOTALOBBYINVITE_LOBBYMEMBER.containing_type = _CSODOTALOBBYINVITE
 _CSODOTALOBBYINVITE.fields_by_name['members'].message_type = _CSODOTALOBBYINVITE_LOBBYMEMBER
-_CMSGLEAVERSTATE.fields_by_name['game_state'].enum_type = dota_shared_enums_pb2._DOTA_GAMESTATE
-_CDOTALOBBYMEMBER_CDOTALOBBYMEMBERXPBONUS.containing_type = _CDOTALOBBYMEMBER;
-_CDOTALOBBYMEMBER.fields_by_name['team'].enum_type = dota_shared_enums_pb2._DOTA_GC_TEAM
-_CDOTALOBBYMEMBER.fields_by_name['leaver_status'].enum_type = dota_shared_enums_pb2._DOTALEAVERSTATUS_T
-_CDOTALOBBYMEMBER.fields_by_name['partner_account_type'].enum_type = gcsdk_gcmessages_pb2._PARTNERACCOUNTTYPE
-_CDOTALOBBYMEMBER.fields_by_name['coach_team'].enum_type = dota_shared_enums_pb2._DOTA_GC_TEAM
+_CMSGLEAVERSTATE.fields_by_name['game_state'].enum_type = dota__shared__enums__pb2._DOTA_GAMESTATE
+_CDOTALOBBYMEMBER_CDOTALOBBYMEMBERXPBONUS.containing_type = _CDOTALOBBYMEMBER
+_CDOTALOBBYMEMBER.fields_by_name['team'].enum_type = dota__shared__enums__pb2._DOTA_GC_TEAM
+_CDOTALOBBYMEMBER.fields_by_name['leaver_status'].enum_type = dota__shared__enums__pb2._DOTALEAVERSTATUS_T
+_CDOTALOBBYMEMBER.fields_by_name['partner_account_type'].enum_type = gcsdk__gcmessages__pb2._PARTNERACCOUNTTYPE
+_CDOTALOBBYMEMBER.fields_by_name['coach_team'].enum_type = dota__shared__enums__pb2._DOTA_GC_TEAM
 _CDOTALOBBYMEMBER.fields_by_name['xp_bonuses'].message_type = _CDOTALOBBYMEMBER_CDOTALOBBYMEMBERXPBONUS
-_CDOTALOBBYMEMBER.fields_by_name['search_match_type'].enum_type = dota_shared_enums_pb2._MATCHTYPE
-_CSODOTALOBBY_CEXTRAMSG.containing_type = _CSODOTALOBBY;
+_CDOTALOBBYMEMBER.fields_by_name['search_match_type'].enum_type = dota__shared__enums__pb2._MATCHTYPE
+_CSODOTALOBBY_CEXTRAMSG.containing_type = _CSODOTALOBBY
 _CSODOTALOBBY.fields_by_name['members'].message_type = _CDOTALOBBYMEMBER
 _CSODOTALOBBY.fields_by_name['left_members'].message_type = _CDOTALOBBYMEMBER
 _CSODOTALOBBY.fields_by_name['state'].enum_type = _CSODOTALOBBY_STATE
 _CSODOTALOBBY.fields_by_name['lobby_type'].enum_type = _CSODOTALOBBY_LOBBYTYPE
 _CSODOTALOBBY.fields_by_name['team_details'].message_type = _CLOBBYTEAMDETAILS
-_CSODOTALOBBY.fields_by_name['game_state'].enum_type = dota_shared_enums_pb2._DOTA_GAMESTATE
-_CSODOTALOBBY.fields_by_name['cm_pick'].enum_type = dota_shared_enums_pb2._DOTA_CM_PICK
-_CSODOTALOBBY.fields_by_name['bot_difficulty'].enum_type = dota_shared_enums_pb2._DOTABOTDIFFICULTY
-_CSODOTALOBBY.fields_by_name['game_version'].enum_type = dota_shared_enums_pb2._DOTAGAMEVERSION
+_CSODOTALOBBY.fields_by_name['game_state'].enum_type = dota__shared__enums__pb2._DOTA_GAMESTATE
+_CSODOTALOBBY.fields_by_name['cm_pick'].enum_type = dota__shared__enums__pb2._DOTA_CM_PICK
+_CSODOTALOBBY.fields_by_name['bot_difficulty'].enum_type = dota__shared__enums__pb2._DOTABOTDIFFICULTY
+_CSODOTALOBBY.fields_by_name['game_version'].enum_type = dota__shared__enums__pb2._DOTAGAMEVERSION
 _CSODOTALOBBY.fields_by_name['timed_reward_details'].message_type = _CLOBBYTIMEDREWARDDETAILS
-_CSODOTALOBBY.fields_by_name['bot_slot_difficulty'].enum_type = dota_shared_enums_pb2._DOTABOTDIFFICULTY
+_CSODOTALOBBY.fields_by_name['bot_slot_difficulty'].enum_type = dota__shared__enums__pb2._DOTABOTDIFFICULTY
 _CSODOTALOBBY.fields_by_name['dota_tv_delay'].enum_type = _LOBBYDOTATVDELAY
 _CSODOTALOBBY.fields_by_name['broadcast_channel_info'].message_type = _CLOBBYBROADCASTCHANNELINFO
 _CSODOTALOBBY.fields_by_name['extra_messages'].message_type = _CSODOTALOBBY_CEXTRAMSG
-_CSODOTALOBBY.fields_by_name['save_game'].message_type = dota_shared_enums_pb2._CDOTASAVEGAME
+_CSODOTALOBBY.fields_by_name['save_game'].message_type = dota__shared__enums__pb2._CDOTASAVEGAME
 _CSODOTALOBBY.fields_by_name['match_outcome'].enum_type = _EMATCHOUTCOME
-_CSODOTALOBBY.fields_by_name['active_ingame_events'].enum_type = dota_shared_enums_pb2._EEVENT
-_CSODOTALOBBY.fields_by_name['partner_type'].enum_type = gcsdk_gcmessages_pb2._PARTNERACCOUNTTYPE
-_CSODOTALOBBY.fields_by_name['visibility'].enum_type = dota_shared_enums_pb2._DOTALOBBYVISIBILITY
-_CSODOTALOBBY.fields_by_name['league_selection_priority_choice'].enum_type = dota_shared_enums_pb2._SELECTIONPRIORITYTYPE
-_CSODOTALOBBY.fields_by_name['league_non_selection_priority_choice'].enum_type = dota_shared_enums_pb2._SELECTIONPRIORITYTYPE
+_CSODOTALOBBY.fields_by_name['active_ingame_events'].enum_type = dota__shared__enums__pb2._EEVENT
+_CSODOTALOBBY.fields_by_name['partner_type'].enum_type = gcsdk__gcmessages__pb2._PARTNERACCOUNTTYPE
+_CSODOTALOBBY.fields_by_name['visibility'].enum_type = dota__shared__enums__pb2._DOTALOBBYVISIBILITY
+_CSODOTALOBBY.fields_by_name['league_selection_priority_choice'].enum_type = dota__shared__enums__pb2._SELECTIONPRIORITYTYPE
+_CSODOTALOBBY.fields_by_name['league_non_selection_priority_choice'].enum_type = dota__shared__enums__pb2._SELECTIONPRIORITYTYPE
 _CSODOTALOBBY.fields_by_name['pause_setting'].enum_type = _LOBBYDOTAPAUSESETTING
-_CSODOTALOBBY_STATE.containing_type = _CSODOTALOBBY;
-_CSODOTALOBBY_LOBBYTYPE.containing_type = _CSODOTALOBBY;
+_CSODOTALOBBY_STATE.containing_type = _CSODOTALOBBY
+_CSODOTALOBBY_LOBBYTYPE.containing_type = _CSODOTALOBBY
 DESCRIPTOR.message_types_by_name['CSODOTAPartyMember'] = _CSODOTAPARTYMEMBER
 DESCRIPTOR.message_types_by_name['CSODOTAParty'] = _CSODOTAPARTY
 DESCRIPTOR.message_types_by_name['CSODOTAPartyInvite'] = _CSODOTAPARTYINVITE
@@ -2036,106 +2091,127 @@ DESCRIPTOR.message_types_by_name['CLobbyTeamDetails'] = _CLOBBYTEAMDETAILS
 DESCRIPTOR.message_types_by_name['CLobbyTimedRewardDetails'] = _CLOBBYTIMEDREWARDDETAILS
 DESCRIPTOR.message_types_by_name['CLobbyBroadcastChannelInfo'] = _CLOBBYBROADCASTCHANNELINFO
 DESCRIPTOR.message_types_by_name['CSODOTALobby'] = _CSODOTALOBBY
+DESCRIPTOR.enum_types_by_name['LobbyDotaTVDelay'] = _LOBBYDOTATVDELAY
+DESCRIPTOR.enum_types_by_name['LobbyDotaPauseSetting'] = _LOBBYDOTAPAUSESETTING
+DESCRIPTOR.enum_types_by_name['EMatchOutcome'] = _EMATCHOUTCOME
 
-class CSODOTAPartyMember(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CSODOTAPARTYMEMBER
-
+CSODOTAPartyMember = _reflection.GeneratedProtocolMessageType('CSODOTAPartyMember', (_message.Message,), dict(
+  DESCRIPTOR = _CSODOTAPARTYMEMBER,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CSODOTAPartyMember)
+  ))
+_sym_db.RegisterMessage(CSODOTAPartyMember)
 
-class CSODOTAParty(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CSODOTAPARTY
-
+CSODOTAParty = _reflection.GeneratedProtocolMessageType('CSODOTAParty', (_message.Message,), dict(
+  DESCRIPTOR = _CSODOTAPARTY,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CSODOTAParty)
+  ))
+_sym_db.RegisterMessage(CSODOTAParty)
 
-class CSODOTAPartyInvite(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CSODOTAPartyInvite = _reflection.GeneratedProtocolMessageType('CSODOTAPartyInvite', (_message.Message,), dict(
 
-  class PartyMember(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CSODOTAPARTYINVITE_PARTYMEMBER
-
+  PartyMember = _reflection.GeneratedProtocolMessageType('PartyMember', (_message.Message,), dict(
+    DESCRIPTOR = _CSODOTAPARTYINVITE_PARTYMEMBER,
+    __module__ = 'dota_gcmessages_common_match_management_pb2'
     # @@protoc_insertion_point(class_scope:CSODOTAPartyInvite.PartyMember)
-  DESCRIPTOR = _CSODOTAPARTYINVITE
-
+    ))
+  ,
+  DESCRIPTOR = _CSODOTAPARTYINVITE,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CSODOTAPartyInvite)
+  ))
+_sym_db.RegisterMessage(CSODOTAPartyInvite)
+_sym_db.RegisterMessage(CSODOTAPartyInvite.PartyMember)
 
-class CSODOTALobbyInvite(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CSODOTALobbyInvite = _reflection.GeneratedProtocolMessageType('CSODOTALobbyInvite', (_message.Message,), dict(
 
-  class LobbyMember(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CSODOTALOBBYINVITE_LOBBYMEMBER
-
+  LobbyMember = _reflection.GeneratedProtocolMessageType('LobbyMember', (_message.Message,), dict(
+    DESCRIPTOR = _CSODOTALOBBYINVITE_LOBBYMEMBER,
+    __module__ = 'dota_gcmessages_common_match_management_pb2'
     # @@protoc_insertion_point(class_scope:CSODOTALobbyInvite.LobbyMember)
-  DESCRIPTOR = _CSODOTALOBBYINVITE
-
+    ))
+  ,
+  DESCRIPTOR = _CSODOTALOBBYINVITE,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CSODOTALobbyInvite)
+  ))
+_sym_db.RegisterMessage(CSODOTALobbyInvite)
+_sym_db.RegisterMessage(CSODOTALobbyInvite.LobbyMember)
 
-class CMsgLeaverState(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CMSGLEAVERSTATE
-
+CMsgLeaverState = _reflection.GeneratedProtocolMessageType('CMsgLeaverState', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGLEAVERSTATE,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CMsgLeaverState)
+  ))
+_sym_db.RegisterMessage(CMsgLeaverState)
 
-class CDOTALobbyMember(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CDOTALobbyMember = _reflection.GeneratedProtocolMessageType('CDOTALobbyMember', (_message.Message,), dict(
 
-  class CDOTALobbyMemberXPBonus(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CDOTALOBBYMEMBER_CDOTALOBBYMEMBERXPBONUS
-
+  CDOTALobbyMemberXPBonus = _reflection.GeneratedProtocolMessageType('CDOTALobbyMemberXPBonus', (_message.Message,), dict(
+    DESCRIPTOR = _CDOTALOBBYMEMBER_CDOTALOBBYMEMBERXPBONUS,
+    __module__ = 'dota_gcmessages_common_match_management_pb2'
     # @@protoc_insertion_point(class_scope:CDOTALobbyMember.CDOTALobbyMemberXPBonus)
-  DESCRIPTOR = _CDOTALOBBYMEMBER
-
+    ))
+  ,
+  DESCRIPTOR = _CDOTALOBBYMEMBER,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CDOTALobbyMember)
+  ))
+_sym_db.RegisterMessage(CDOTALobbyMember)
+_sym_db.RegisterMessage(CDOTALobbyMember.CDOTALobbyMemberXPBonus)
 
-class CLobbyTeamDetails(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CLOBBYTEAMDETAILS
-
+CLobbyTeamDetails = _reflection.GeneratedProtocolMessageType('CLobbyTeamDetails', (_message.Message,), dict(
+  DESCRIPTOR = _CLOBBYTEAMDETAILS,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CLobbyTeamDetails)
+  ))
+_sym_db.RegisterMessage(CLobbyTeamDetails)
 
-class CLobbyTimedRewardDetails(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CLOBBYTIMEDREWARDDETAILS
-
+CLobbyTimedRewardDetails = _reflection.GeneratedProtocolMessageType('CLobbyTimedRewardDetails', (_message.Message,), dict(
+  DESCRIPTOR = _CLOBBYTIMEDREWARDDETAILS,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CLobbyTimedRewardDetails)
+  ))
+_sym_db.RegisterMessage(CLobbyTimedRewardDetails)
 
-class CLobbyBroadcastChannelInfo(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _CLOBBYBROADCASTCHANNELINFO
-
+CLobbyBroadcastChannelInfo = _reflection.GeneratedProtocolMessageType('CLobbyBroadcastChannelInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CLOBBYBROADCASTCHANNELINFO,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CLobbyBroadcastChannelInfo)
+  ))
+_sym_db.RegisterMessage(CLobbyBroadcastChannelInfo)
 
-class CSODOTALobby(_message.Message):
-  __metaclass__ = _reflection.GeneratedProtocolMessageType
+CSODOTALobby = _reflection.GeneratedProtocolMessageType('CSODOTALobby', (_message.Message,), dict(
 
-  class CExtraMsg(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _CSODOTALOBBY_CEXTRAMSG
-
+  CExtraMsg = _reflection.GeneratedProtocolMessageType('CExtraMsg', (_message.Message,), dict(
+    DESCRIPTOR = _CSODOTALOBBY_CEXTRAMSG,
+    __module__ = 'dota_gcmessages_common_match_management_pb2'
     # @@protoc_insertion_point(class_scope:CSODOTALobby.CExtraMsg)
-  DESCRIPTOR = _CSODOTALOBBY
-
+    ))
+  ,
+  DESCRIPTOR = _CSODOTALOBBY,
+  __module__ = 'dota_gcmessages_common_match_management_pb2'
   # @@protoc_insertion_point(class_scope:CSODOTALobby)
+  ))
+_sym_db.RegisterMessage(CSODOTALobby)
+_sym_db.RegisterMessage(CSODOTALobby.CExtraMsg)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), 'H\001\200\001\000')
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), b'H\001\220\001\000')
 _CSODOTAPARTYMEMBER.fields_by_name['region_ping_codes'].has_options = True
-_CSODOTAPARTYMEMBER.fields_by_name['region_ping_codes']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\020\001')
+_CSODOTAPARTYMEMBER.fields_by_name['region_ping_codes']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\020\001')
 _CSODOTAPARTYMEMBER.fields_by_name['region_ping_times'].has_options = True
-_CSODOTAPARTYMEMBER.fields_by_name['region_ping_times']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\020\001')
+_CSODOTAPARTYMEMBER.fields_by_name['region_ping_times']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\020\001')
 _CSODOTAPARTY.fields_by_name['party_id'].has_options = True
-_CSODOTAPARTY.fields_by_name['party_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')
+_CSODOTAPARTY.fields_by_name['party_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')
 _CSODOTAPARTYINVITE.fields_by_name['group_id'].has_options = True
-_CSODOTAPARTYINVITE.fields_by_name['group_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')
+_CSODOTAPARTYINVITE.fields_by_name['group_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')
 _CSODOTALOBBYINVITE.fields_by_name['group_id'].has_options = True
-_CSODOTALOBBYINVITE.fields_by_name['group_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')
+_CSODOTALOBBYINVITE.fields_by_name['group_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')
 _CDOTALOBBYMEMBER.fields_by_name['id'].has_options = True
-_CDOTALOBBYMEMBER.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')
+_CDOTALOBBYMEMBER.fields_by_name['id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')
 _CSODOTALOBBY.fields_by_name['lobby_id'].has_options = True
-_CSODOTALOBBY.fields_by_name['lobby_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), '\200\246\035\001')
+_CSODOTALOBBY.fields_by_name['lobby_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), b'\200\246\035\001')
 # @@protoc_insertion_point(module_scope)
