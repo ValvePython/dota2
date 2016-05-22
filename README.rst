@@ -1,5 +1,7 @@
 |pypi| |license|
 
+Supports Python ``2.7+`` and ``3.4+``.
+
 Module based on `steam <https://github.com/ValvePython/steam/>`_
 for interacting with Dota2's Game Coordinator. If you've used
 `node-dota2 <https://github.com/RJacksonm1/node-dota2>`_ then
@@ -8,8 +10,7 @@ to get started.
 
 **Documentation**: http://valvepython.github.io/dota2/
 
-| Note that this module should be considered an alpha.
-| Contributions and suggestion are always welcome.
+Contributions and suggestion are always welcome.
 
 
 Installation

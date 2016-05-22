@@ -3,6 +3,8 @@ Welcome to dota2's documentation!
 
 |pypi| |license|
 
+Supports Python ``2.7+`` and ``3.4+``.
+
 | Module based on `steam <https://github.com/ValvePython/steam/>`_ for interacting with Dota 2's Game Coordinator.
 | If you've used `node-dota2 <https://github.com/RJacksonm1/node-dota2>`_ this module should feel familiar.
 
