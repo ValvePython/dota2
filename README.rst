@@ -1,4 +1,4 @@
-|pypi| |license|
+|pypi| |license| |docs|
 
 Supports Python ``2.7+`` and ``3.4+``.
 
@@ -33,3 +33,7 @@ Install the current dev version from ``github``::
 .. |license| image:: https://img.shields.io/pypi/l/dota2.svg?style=flat&label=license
     :target: https://pypi.python.org/pypi/dota2
     :alt: MIT License
+
+.. |docs| image:: https://readthedocs.org/projects/dota2/badge/?version=latest
+    :target: http://dota2.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation status
