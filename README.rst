@@ -8,7 +8,7 @@ for interacting with Dota2's Game Coordinator. If you've used
 this module should feel right at home. Check out the documentation
 to get started.
 
-**Documentation**: http://valvepython.github.io/dota2/
+**Documentation**: http://dota2.readthedocs.io
 
 Contributions and suggestion are always welcome.
 
