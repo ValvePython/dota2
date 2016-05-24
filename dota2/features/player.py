@@ -118,7 +118,7 @@ class Player(object):
             raise ValueError("Expected account_ids to be a list")
 
         self.send(EDOTAGCMsg.EMsgGCPlayerInfoRequest, {
-                  'account_ids': account_ids,
+                  'player_infos': map(lambda x: {'account_id': x}, account_ids),
                   })
 
     def __handle_player_info(self, message):
