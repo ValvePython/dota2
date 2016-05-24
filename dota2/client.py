@@ -166,7 +166,11 @@ class Dota2Client(GameCoordinator, FeatureBase):
 
         for key, value in data.items():
             if isinstance(value, list):
-                getattr(message, key).extend(value)
+                attr = getattr(message, key)
+                try:
+                    attr.extend(value)
+                except TypeError:
+                    map(lambda args: attr.add(**args), value)
             else:
                 setattr(message, key, value)
 
