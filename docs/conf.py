@@ -30,6 +30,7 @@ sys.path.insert(0, os.path.abspath('../'))
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
 #    'sphinx.ext.githubpages',
 ]
 
@@ -356,6 +357,14 @@ epub_exclude_files = ['search.html']
 
 # If false, no index is generated.
 #epub_use_index = True
+
+# LINK EXT DOCS
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3.4', None),
+    'gevent': ('http://www.gevent.org', None),
+    'requests': ('http://docs.python-requests.org/en/master', None),
+    'steam': ('http://steam.readthedocs.io/en/stable/', None),
+    }
 
 # AUTODOC
 autodoc_member_order = 'bysource'
