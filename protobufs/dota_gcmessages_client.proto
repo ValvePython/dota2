@@ -900,6 +900,8 @@ message CMsgDOTAGetPlayerMatchHistoryResponse {
 		optional uint32 engine = 12;
 		optional bool active_battle_pass = 13;
 		optional bool seasonal_rank = 14;
+		optional uint32 tournament_id = 15;
+		optional uint32 tournament_round = 16;
 	}
 
 	repeated .CMsgDOTAGetPlayerMatchHistoryResponse.Match matches = 1;
@@ -1561,18 +1563,6 @@ message CMsgClientToGCTeammateStatsResponse {
 	repeated .CMsgClientToGCTeammateStatsResponse.TeammateStat teammate_stats = 2;
 }
 
-message CMsgClientToGCGetGiftPermissions {
-	optional uint32 gift_item_def = 1;
-}
-
-message CMsgClientToGCGetGiftPermissionsResponse {
-	optional bool is_unlimited = 1;
-	repeated uint32 allowed_account_ids = 2;
-	optional bool has_two_factor = 3;
-	optional uint32 item_def_limit_count = 4;
-	optional uint32 item_def_limit_period = 5;
-}
-
 message CMsgClientToGCVoteForArcana {
 	message MatchVote {
 		optional uint64 match_id = 1;
@@ -1619,6 +1609,7 @@ message CMsgArcanaVotes {
 	optional uint32 round_number = 3;
 	optional uint32 voting_state = 4;
 	optional bool is_current_round_calibrating = 5;
+	optional uint32 closest_active_match_id = 6;
 }
 
 message CMsgClientToGCRequestArcanaVotesRemaining {
