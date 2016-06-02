@@ -8,7 +8,14 @@ interact with the game coordinator for Dota 2.
 Initialization
 ==============
 
-This is the minimal code we need to get a session with the game coordnator.
+Below is a example how to login and get a session with game coordinator.
+See `steam's docs <http://steam.readthedocs.io/en/stable/>`_ 
+for details about :class:`SteamClient <steam:steam.client.SteamClient>`.
+
+.. note::
+    You won't see any output running the code above.
+    In order to peek inside we need to setup debug logging.
+    See the :ref:`logging_config` section
 
 .. code:: python
 
@@ -18,6 +25,15 @@ This is the minimal code we need to get a session with the game coordnator.
     client = SteamClient()
     dota = Dota2Client(client)
 
+    @client.on('auth_code_required')
+    def auth_code_prompt(is_2fa, code_mismatch):
+        if is_2fa:
+            code = raw_input("Enter 2FA Code: ")
+            client.login(two_factor_code=code, **logOnDetails)
+        else:
+            code = raw_input("Enter Email Code: ")
+            client.login(auth_code=code, **logOnDetails)
+
     @client.on('connected')
     def login():
         client.login('steamuser', 'password')
@@ -26,19 +42,18 @@ This is the minimal code we need to get a session with the game coordnator.
     def start_dota():
         dota.launch()
 
+    @dota.on('ready'):
+    def do_dota_stuff():
+        # talk to GC
+
     client.connect()
     client.run_forever()
 
 
-| You won't see any output running the code above.
-| In order to peek inside we need to setup debug logging.
-
-See the :ref:`logging_config` section
-
 Working with events
 ===================
 
-This module makes use of `gevent <http://www.gevent.org/>`_ 
+This module makes use of `gevent <http://www.gevent.org/>`_
 and `gevent-eventemitter <https://github.com/rossengeorgiev/gevent-eventemitter>`_.
 Working with events is similiar to ``EventEmitter`` in javascript.
 Nevertheless, here is quick rundown.
