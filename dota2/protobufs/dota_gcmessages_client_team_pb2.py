@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_team.proto',
   package='',
   syntax='proto2',
-  serialized_pb=b'\n!dota_gcmessages_client_team.proto\"V\n\x15\x43MsgDOTATeamMemberSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\x12\x17\n\x0fprofile_team_id\x18\x03 \x01(\r\"<\n\x14\x43MsgDOTATeamAdminSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\"=\n\x12\x43MsgDOTATeamMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0btime_joined\x18\x04 \x01(\r\"\xde\x04\n\x0c\x43MsgDOTATeam\x12$\n\x07members\x18\x01 \x03(\x0b\x32\x13.CMsgDOTATeamMember\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0b\n\x03tag\x18\x04 \x01(\t\x12\x10\n\x08\x61\x64min_id\x18\x05 \x01(\r\x12\x14\n\x0ctime_created\x18\x06 \x01(\r\x12\x11\n\tdisbanded\x18\x07 \x01(\x08\x12\x0c\n\x04wins\x18\x08 \x01(\r\x12\x0e\n\x06losses\x18\t \x01(\r\x12\x0c\n\x04rank\x18\n \x01(\r\x12#\n\x1b\x63\x61libration_games_remaining\x18\x18 \x01(\r\x12\x0c\n\x04logo\x18\x0b \x01(\x04\x12\x11\n\tbase_logo\x18\x0c \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\r \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x0e \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x0f \x01(\t\x12\x0b\n\x03url\x18\x10 \x01(\t\x12\x17\n\x0f\x66ullgamesplayed\x18\x11 \x01(\r\x12\x0f\n\x07leagues\x18\x12 \x03(\r\x12\x13\n\x0bgamesplayed\x18\x13 \x01(\r\x12$\n\x1cgamesplayedwithcurrentroster\x18\x14 \x01(\r\x12\"\n\x1ateammatchmakinggamesplayed\x18\x15 \x01(\r\x12\x1a\n\x12lastplayedgametime\x18\x16 \x01(\r\x12\x16\n\x0elastrenametime\x18\x17 \x01(\r\x12\x18\n\x10recent_match_ids\x18\x19 \x03(\x04\x12\x15\n\rtop_match_ids\x18\x1a \x03(\x04\x12\x13\n\x0bpickup_team\x18\x1b \x01(\x08\"\xdd\x04\n\x10\x43MsgDOTATeamInfo\x12)\n\x07members\x18\x01 \x03(\x0b\x32\x18.CMsgDOTATeamInfo.Member\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0b\n\x03tag\x18\x04 \x01(\t\x12\x14\n\x0ctime_created\x18\x05 \x01(\r\x12\x0b\n\x03pro\x18\x06 \x01(\x08\x12\x0e\n\x06locked\x18\x07 \x01(\x08\x12\x13\n\x0bpickup_team\x18\x08 \x01(\x08\x12\x10\n\x08ugc_logo\x18\t \x01(\x04\x12\x15\n\rugc_base_logo\x18\n \x01(\x04\x12\x17\n\x0fugc_banner_logo\x18\x0b \x01(\x04\x12\x18\n\x10ugc_sponsor_logo\x18\x0c \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\r \x01(\t\x12\x0b\n\x03url\x18\x0e \x01(\t\x12\x0c\n\x04wins\x18\x0f \x01(\r\x12\x0e\n\x06losses\x18\x10 \x01(\r\x12\x0c\n\x04rank\x18\x11 \x01(\r\x12#\n\x1b\x63\x61libration_games_remaining\x18\x12 \x01(\r\x12\x1a\n\x12games_played_total\x18\x13 \x01(\r\x12 \n\x18games_played_matchmaking\x18\x14 \x01(\r\x12\x1c\n\x14leagues_participated\x18\x15 \x03(\r\x12\x15\n\rtop_match_ids\x18\x16 \x03(\x04\x12\x18\n\x10recent_match_ids\x18\x17 \x03(\x04\x1aM\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0btime_joined\x18\x02 \x01(\r\x12\r\n\x05\x61\x64min\x18\x03 \x01(\x08\x12\x0b\n\x03sub\x18\x04 \x01(\x08\"H\n\x11\x43MsgDOTATeamsInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12 \n\x05teams\x18\x02 \x03(\x0b\x32\x11.CMsgDOTATeamInfo\"\x1b\n\x19\x43MsgDOTAMyTeamInfoRequest\"\xb3\x01\n\x12\x43MsgDOTACreateTeam\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x0c\n\x04logo\x18\x03 \x01(\x04\x12\x11\n\tbase_logo\x18\x04 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x05 \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x06 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x07 \x01(\t\x12\x0b\n\x03url\x18\x08 \x01(\t\x12\x13\n\x0bpickup_team\x18\t \x01(\x08\"\x97\x04\n\x1a\x43MsgDOTACreateTeamResponse\x12;\n\x06result\x18\x01 \x01(\x0e\x32\".CMsgDOTACreateTeamResponse.Result:\x07INVALID\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\xaa\x03\n\x06Result\x12\x14\n\x07INVALID\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0e\n\nNAME_EMPTY\x10\x01\x12\x17\n\x13NAME_BAD_CHARACTERS\x10\x02\x12\x0e\n\nNAME_TAKEN\x10\x03\x12\x11\n\rNAME_TOO_LONG\x10\x04\x12\r\n\tTAG_EMPTY\x10\x05\x12\x16\n\x12TAG_BAD_CHARACTERS\x10\x06\x12\r\n\tTAG_TAKEN\x10\x07\x12\x10\n\x0cTAG_TOO_LONG\x10\x08\x12\x10\n\x0c\x43REATOR_BUSY\x10\t\x12\x15\n\x11UNSPECIFIED_ERROR\x10\n\x12\x1e\n\x1a\x43REATOR_TEAM_LIMIT_REACHED\x10\x0b\x12\x0b\n\x07NO_LOGO\x10\x0c\x12\"\n\x1e\x43REATOR_TEAM_CREATION_COOLDOWN\x10\r\x12\x16\n\x12LOGO_UPLOAD_FAILED\x10\x0e\x12\x1d\n\x19NAME_CHANGED_TOO_RECENTLY\x10\x0f\x12\x1e\n\x1a\x43REATOR_INSUFFICIENT_LEVEL\x10\x10\x12\x18\n\x14INVALID_ACCOUNT_TYPE\x10\x11\"\xcd\x01\n\x17\x43MsgDOTAEditTeamDetails\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03tag\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x11\n\tbase_logo\x18\x05 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x06 \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x07 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x08 \x01(\t\x12\x0b\n\x03url\x18\t \x01(\t\x12\x17\n\x0fin_use_by_party\x18\n \x01(\x08\"\xed\x01\n\x1f\x43MsgDOTAEditTeamDetailsResponse\x12@\n\x06result\x18\x01 \x01(\x0e\x32\'.CMsgDOTAEditTeamDetailsResponse.Result:\x07SUCCESS\"\x87\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12 \n\x1c\x46\x41ILURE_INVALID_ACCOUNT_TYPE\x10\x01\x12\x16\n\x12\x46\x41ILURE_NOT_MEMBER\x10\x02\x12\x17\n\x13\x46\x41ILURE_TEAM_LOCKED\x10\x03\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x04\"K\n\x1b\x43MsgDOTATeamProfileResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\x12\x1b\n\x04team\x18\x02 \x01(\x0b\x32\r.CMsgDOTATeam\"\x1c\n\x1a\x43MsgDOTAProTeamListRequest\"\xe0\x01\n\x1b\x43MsgDOTAProTeamListResponse\x12\x35\n\x05teams\x18\x01 \x03(\x0b\x32&.CMsgDOTAProTeamListResponse.TeamEntry\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\x1ay\n\tTeamEntry\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x14\n\x0ctime_created\x18\x03 \x01(\r\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x05 \x01(\t\x12\x14\n\x0cmember_count\x18\x06 \x01(\r\"E\n\x1e\x43MsgDOTATeamInvite_InviterToGC\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\x98\x01\n/CMsgDOTATeamInvite_GCImmediateResponseToInviter\x12\x37\n\x06result\x18\x01 \x01(\x0e\x32\x12.ETeamInviteResult:\x13TEAM_INVITE_SUCCESS\x12\x14\n\x0cinvitee_name\x18\x02 \x01(\t\x12\x16\n\x0erequired_level\x18\x03 \x01(\r\"v\n%CMsgDOTATeamInvite_GCRequestToInvitee\x12\x1a\n\x12inviter_account_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\"a\n&CMsgDOTATeamInvite_InviteeResponseToGC\x12\x37\n\x06result\x18\x01 \x01(\x0e\x32\x12.ETeamInviteResult:\x13TEAM_INVITE_SUCCESS\"w\n&CMsgDOTATeamInvite_GCResponseToInviter\x12\x37\n\x06result\x18\x01 \x01(\x0e\x32\x12.ETeamInviteResult:\x13TEAM_INVITE_SUCCESS\x12\x14\n\x0cinvitee_name\x18\x02 \x01(\t\"t\n&CMsgDOTATeamInvite_GCResponseToInvitee\x12\x37\n\x06result\x18\x01 \x01(\x0e\x32\x12.ETeamInviteResult:\x13TEAM_INVITE_SUCCESS\x12\x11\n\tteam_name\x18\x02 \x01(\t\"=\n\x16\x43MsgDOTAKickTeamMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\x90\x02\n\x1e\x43MsgDOTAKickTeamMemberResponse\x12?\n\x06result\x18\x01 \x01(\x0e\x32&.CMsgDOTAKickTeamMemberResponse.Result:\x07SUCCESS\"\xac\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12 \n\x1c\x46\x41ILURE_INVALID_ACCOUNT_TYPE\x10\x01\x12\x1c\n\x18\x46\x41ILURE_KICKER_NOT_ADMIN\x10\x02\x12\x1d\n\x19\x46\x41ILURE_KICKEE_NOT_MEMBER\x10\x03\x12\x17\n\x13\x46\x41ILURE_TEAM_LOCKED\x10\x04\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x05\"J\n\x19\x43MsgDOTATransferTeamAdmin\x12\x1c\n\x14new_admin_account_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\x89\x02\n!CMsgDOTATransferTeamAdminResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).CMsgDOTATransferTeamAdminResponse.Result:\x07SUCCESS\"\x9f\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12 \n\x1c\x46\x41ILURE_INVALID_ACCOUNT_TYPE\x10\x01\x12\x15\n\x11\x46\x41ILURE_NOT_ADMIN\x10\x02\x12\x18\n\x14\x46\x41ILURE_SAME_ACCOUNT\x10\x03\x12\x16\n\x12\x46\x41ILURE_NOT_MEMBER\x10\x04\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x05\"[\n\x15\x43MsgDOTAChangeTeamSub\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x19\n\x11member_account_id\x18\x02 \x01(\r\x12\x16\n\x0esub_account_id\x18\x03 \x01(\r\"\xaf\x02\n\x1d\x43MsgDOTAChangeTeamSubResponse\x12>\n\x06result\x18\x01 \x01(\x0e\x32%.CMsgDOTAChangeTeamSubResponse.Result:\x07SUCCESS\"\xcd\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12 \n\x1c\x46\x41ILURE_INVALID_ACCOUNT_TYPE\x10\x01\x12\x18\n\x14\x46\x41ILURE_SAME_ACCOUNT\x10\x02\x12\x15\n\x11\x46\x41ILURE_NOT_ADMIN\x10\x03\x12\x16\n\x12\x46\x41ILURE_NOT_MEMBER\x10\x04\x12\x13\n\x0f\x46\x41ILURE_NOT_SUB\x10\x05\x12\x17\n\x13\x46\x41ILURE_ALREADY_SUB\x10\x06\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x07\"$\n\x11\x43MsgDOTALeaveTeam\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\xbe\x01\n\x19\x43MsgDOTALeaveTeamResponse\x12:\n\x06result\x18\x01 \x01(\x0e\x32!.CMsgDOTALeaveTeamResponse.Result:\x07SUCCESS\"e\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x16\n\x12\x46\x41ILURE_NOT_MEMBER\x10\x01\x12\x17\n\x13\x46\x41ILURE_TEAM_LOCKED\x10\x02\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x03\"2\n\x19\x43MsgDOTABetaParticipation\x12\x15\n\raccess_rights\x18\x01 \x01(\r*\xda\x04\n\x11\x45TeamInviteResult\x12\x17\n\x13TEAM_INVITE_SUCCESS\x10\x00\x12\'\n#TEAM_INVITE_FAILURE_INVITE_REJECTED\x10\x01\x12&\n\"TEAM_INVITE_FAILURE_INVITE_TIMEOUT\x10\x02\x12*\n&TEAM_INVITE_ERROR_TEAM_AT_MEMBER_LIMIT\x10\x03\x12!\n\x1dTEAM_INVITE_ERROR_TEAM_LOCKED\x10\x04\x12+\n\'TEAM_INVITE_ERROR_INVITEE_NOT_AVAILABLE\x10\x05\x12\"\n\x1eTEAM_INVITE_ERROR_INVITEE_BUSY\x10\x06\x12,\n(TEAM_INVITE_ERROR_INVITEE_ALREADY_MEMBER\x10\x07\x12+\n\'TEAM_INVITE_ERROR_INVITEE_AT_TEAM_LIMIT\x10\x08\x12\x30\n,TEAM_INVITE_ERROR_INVITEE_INSUFFICIENT_LEVEL\x10\t\x12\x32\n.TEAM_INVITE_ERROR_INVITER_INVALID_ACCOUNT_TYPE\x10\n\x12\'\n#TEAM_INVITE_ERROR_INVITER_NOT_ADMIN\x10\x0b\x12.\n*TEAM_INVITE_ERROR_INCORRECT_USER_RESPONDED\x10\x0c\x12!\n\x1dTEAM_INVITE_ERROR_UNSPECIFIED\x10\rB\x05H\x01\x90\x01\x00'
+  serialized_pb=b'\n!dota_gcmessages_client_team.proto\"V\n\x15\x43MsgDOTATeamMemberSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\x12\x17\n\x0fprofile_team_id\x18\x03 \x01(\r\"<\n\x14\x43MsgDOTATeamAdminSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\"=\n\x12\x43MsgDOTATeamMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0btime_joined\x18\x04 \x01(\r\"\xde\x04\n\x0c\x43MsgDOTATeam\x12$\n\x07members\x18\x01 \x03(\x0b\x32\x13.CMsgDOTATeamMember\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0b\n\x03tag\x18\x04 \x01(\t\x12\x10\n\x08\x61\x64min_id\x18\x05 \x01(\r\x12\x14\n\x0ctime_created\x18\x06 \x01(\r\x12\x11\n\tdisbanded\x18\x07 \x01(\x08\x12\x0c\n\x04wins\x18\x08 \x01(\r\x12\x0e\n\x06losses\x18\t \x01(\r\x12\x0c\n\x04rank\x18\n \x01(\r\x12#\n\x1b\x63\x61libration_games_remaining\x18\x18 \x01(\r\x12\x0c\n\x04logo\x18\x0b \x01(\x04\x12\x11\n\tbase_logo\x18\x0c \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\r \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x0e \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x0f \x01(\t\x12\x0b\n\x03url\x18\x10 \x01(\t\x12\x17\n\x0f\x66ullgamesplayed\x18\x11 \x01(\r\x12\x0f\n\x07leagues\x18\x12 \x03(\r\x12\x13\n\x0bgamesplayed\x18\x13 \x01(\r\x12$\n\x1cgamesplayedwithcurrentroster\x18\x14 \x01(\r\x12\"\n\x1ateammatchmakinggamesplayed\x18\x15 \x01(\r\x12\x1a\n\x12lastplayedgametime\x18\x16 \x01(\r\x12\x16\n\x0elastrenametime\x18\x17 \x01(\r\x12\x18\n\x10recent_match_ids\x18\x19 \x03(\x04\x12\x15\n\rtop_match_ids\x18\x1a \x03(\x04\x12\x13\n\x0bpickup_team\x18\x1b \x01(\x08\"\xdd\x04\n\x10\x43MsgDOTATeamInfo\x12)\n\x07members\x18\x01 \x03(\x0b\x32\x18.CMsgDOTATeamInfo.Member\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0b\n\x03tag\x18\x04 \x01(\t\x12\x14\n\x0ctime_created\x18\x05 \x01(\r\x12\x0b\n\x03pro\x18\x06 \x01(\x08\x12\x0e\n\x06locked\x18\x07 \x01(\x08\x12\x13\n\x0bpickup_team\x18\x08 \x01(\x08\x12\x10\n\x08ugc_logo\x18\t \x01(\x04\x12\x15\n\rugc_base_logo\x18\n \x01(\x04\x12\x17\n\x0fugc_banner_logo\x18\x0b \x01(\x04\x12\x18\n\x10ugc_sponsor_logo\x18\x0c \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\r \x01(\t\x12\x0b\n\x03url\x18\x0e \x01(\t\x12\x0c\n\x04wins\x18\x0f \x01(\r\x12\x0e\n\x06losses\x18\x10 \x01(\r\x12\x0c\n\x04rank\x18\x11 \x01(\r\x12#\n\x1b\x63\x61libration_games_remaining\x18\x12 \x01(\r\x12\x1a\n\x12games_played_total\x18\x13 \x01(\r\x12 \n\x18games_played_matchmaking\x18\x14 \x01(\r\x12\x1c\n\x14leagues_participated\x18\x15 \x03(\r\x12\x15\n\rtop_match_ids\x18\x16 \x03(\x04\x12\x18\n\x10recent_match_ids\x18\x17 \x03(\x04\x1aM\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0btime_joined\x18\x02 \x01(\r\x12\r\n\x05\x61\x64min\x18\x03 \x01(\x08\x12\x0b\n\x03sub\x18\x04 \x01(\x08\"H\n\x11\x43MsgDOTATeamsInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12 \n\x05teams\x18\x02 \x03(\x0b\x32\x11.CMsgDOTATeamInfo\"\x1b\n\x19\x43MsgDOTAMyTeamInfoRequest\"\xb3\x01\n\x12\x43MsgDOTACreateTeam\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x0c\n\x04logo\x18\x03 \x01(\x04\x12\x11\n\tbase_logo\x18\x04 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x05 \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x06 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x07 \x01(\t\x12\x0b\n\x03url\x18\x08 \x01(\t\x12\x13\n\x0bpickup_team\x18\t \x01(\x08\"\x97\x04\n\x1a\x43MsgDOTACreateTeamResponse\x12;\n\x06result\x18\x01 \x01(\x0e\x32\".CMsgDOTACreateTeamResponse.Result:\x07INVALID\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\xaa\x03\n\x06Result\x12\x14\n\x07INVALID\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0e\n\nNAME_EMPTY\x10\x01\x12\x17\n\x13NAME_BAD_CHARACTERS\x10\x02\x12\x0e\n\nNAME_TAKEN\x10\x03\x12\x11\n\rNAME_TOO_LONG\x10\x04\x12\r\n\tTAG_EMPTY\x10\x05\x12\x16\n\x12TAG_BAD_CHARACTERS\x10\x06\x12\r\n\tTAG_TAKEN\x10\x07\x12\x10\n\x0cTAG_TOO_LONG\x10\x08\x12\x10\n\x0c\x43REATOR_BUSY\x10\t\x12\x15\n\x11UNSPECIFIED_ERROR\x10\n\x12\x1e\n\x1a\x43REATOR_TEAM_LIMIT_REACHED\x10\x0b\x12\x0b\n\x07NO_LOGO\x10\x0c\x12\"\n\x1e\x43REATOR_TEAM_CREATION_COOLDOWN\x10\r\x12\x16\n\x12LOGO_UPLOAD_FAILED\x10\x0e\x12\x1d\n\x19NAME_CHANGED_TOO_RECENTLY\x10\x0f\x12\x1e\n\x1a\x43REATOR_INSUFFICIENT_LEVEL\x10\x10\x12\x18\n\x14INVALID_ACCOUNT_TYPE\x10\x11\"\xcd\x01\n\x17\x43MsgDOTAEditTeamDetails\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03tag\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x11\n\tbase_logo\x18\x05 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x06 \x01(\x04\x12\x14\n\x0csponsor_logo\x18\x07 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x08 \x01(\t\x12\x0b\n\x03url\x18\t \x01(\t\x12\x17\n\x0fin_use_by_party\x18\n \x01(\x08\"\xed\x01\n\x1f\x43MsgDOTAEditTeamDetailsResponse\x12@\n\x06result\x18\x01 \x01(\x0e\x32\'.CMsgDOTAEditTeamDetailsResponse.Result:\x07SUCCESS\"\x87\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12 \n\x1c\x46\x41ILURE_INVALID_ACCOUNT_TYPE\x10\x01\x12\x16\n\x12\x46\x41ILURE_NOT_MEMBER\x10\x02\x12\x17\n\x13\x46\x41ILURE_TEAM_LOCKED\x10\x03\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x04\"K\n\x1b\x43MsgDOTATeamProfileResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\x12\x1b\n\x04team\x18\x02 \x01(\x0b\x32\r.CMsgDOTATeam\"\x1c\n\x1a\x43MsgDOTAProTeamListRequest\"\xe0\x01\n\x1b\x43MsgDOTAProTeamListResponse\x12\x35\n\x05teams\x18\x01 \x03(\x0b\x32&.CMsgDOTAProTeamListResponse.TeamEntry\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\x1ay\n\tTeamEntry\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x14\n\x0ctime_created\x18\x03 \x01(\r\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x14\n\x0c\x63ountry_code\x18\x05 \x01(\t\x12\x14\n\x0cmember_count\x18\x06 \x01(\r\"E\n\x1e\x43MsgDOTATeamInvite_InviterToGC\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\x9e\x01\n/CMsgDOTATeamInvite_GCImmediateResponseToInviter\x12\x37\n\x06result\x18\x01 \x01(\x0e\x32\x12.ETeamInviteResult:\x13TEAM_INVITE_SUCCESS\x12\x14\n\x0cinvitee_name\x18\x02 \x01(\t\x12\x1c\n\x14required_badge_level\x18\x03 \x01(\r\"v\n%CMsgDOTATeamInvite_GCRequestToInvitee\x12\x1a\n\x12inviter_account_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\"a\n&CMsgDOTATeamInvite_InviteeResponseToGC\x12\x37\n\x06result\x18\x01 \x01(\x0e\x32\x12.ETeamInviteResult:\x13TEAM_INVITE_SUCCESS\"w\n&CMsgDOTATeamInvite_GCResponseToInviter\x12\x37\n\x06result\x18\x01 \x01(\x0e\x32\x12.ETeamInviteResult:\x13TEAM_INVITE_SUCCESS\x12\x14\n\x0cinvitee_name\x18\x02 \x01(\t\"t\n&CMsgDOTATeamInvite_GCResponseToInvitee\x12\x37\n\x06result\x18\x01 \x01(\x0e\x32\x12.ETeamInviteResult:\x13TEAM_INVITE_SUCCESS\x12\x11\n\tteam_name\x18\x02 \x01(\t\"=\n\x16\x43MsgDOTAKickTeamMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\x90\x02\n\x1e\x43MsgDOTAKickTeamMemberResponse\x12?\n\x06result\x18\x01 \x01(\x0e\x32&.CMsgDOTAKickTeamMemberResponse.Result:\x07SUCCESS\"\xac\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12 \n\x1c\x46\x41ILURE_INVALID_ACCOUNT_TYPE\x10\x01\x12\x1c\n\x18\x46\x41ILURE_KICKER_NOT_ADMIN\x10\x02\x12\x1d\n\x19\x46\x41ILURE_KICKEE_NOT_MEMBER\x10\x03\x12\x17\n\x13\x46\x41ILURE_TEAM_LOCKED\x10\x04\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x05\"J\n\x19\x43MsgDOTATransferTeamAdmin\x12\x1c\n\x14new_admin_account_id\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\"\x89\x02\n!CMsgDOTATransferTeamAdminResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).CMsgDOTATransferTeamAdminResponse.Result:\x07SUCCESS\"\x9f\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12 \n\x1c\x46\x41ILURE_INVALID_ACCOUNT_TYPE\x10\x01\x12\x15\n\x11\x46\x41ILURE_NOT_ADMIN\x10\x02\x12\x18\n\x14\x46\x41ILURE_SAME_ACCOUNT\x10\x03\x12\x16\n\x12\x46\x41ILURE_NOT_MEMBER\x10\x04\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x05\"[\n\x15\x43MsgDOTAChangeTeamSub\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x19\n\x11member_account_id\x18\x02 \x01(\r\x12\x16\n\x0esub_account_id\x18\x03 \x01(\r\"\xaf\x02\n\x1d\x43MsgDOTAChangeTeamSubResponse\x12>\n\x06result\x18\x01 \x01(\x0e\x32%.CMsgDOTAChangeTeamSubResponse.Result:\x07SUCCESS\"\xcd\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12 \n\x1c\x46\x41ILURE_INVALID_ACCOUNT_TYPE\x10\x01\x12\x18\n\x14\x46\x41ILURE_SAME_ACCOUNT\x10\x02\x12\x15\n\x11\x46\x41ILURE_NOT_ADMIN\x10\x03\x12\x16\n\x12\x46\x41ILURE_NOT_MEMBER\x10\x04\x12\x13\n\x0f\x46\x41ILURE_NOT_SUB\x10\x05\x12\x17\n\x13\x46\x41ILURE_ALREADY_SUB\x10\x06\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x07\"$\n\x11\x43MsgDOTALeaveTeam\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\xbe\x01\n\x19\x43MsgDOTALeaveTeamResponse\x12:\n\x06result\x18\x01 \x01(\x0e\x32!.CMsgDOTALeaveTeamResponse.Result:\x07SUCCESS\"e\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x16\n\x12\x46\x41ILURE_NOT_MEMBER\x10\x01\x12\x17\n\x13\x46\x41ILURE_TEAM_LOCKED\x10\x02\x12\x1d\n\x19\x46\x41ILURE_UNSPECIFIED_ERROR\x10\x03\"2\n\x19\x43MsgDOTABetaParticipation\x12\x15\n\raccess_rights\x18\x01 \x01(\r*\xda\x04\n\x11\x45TeamInviteResult\x12\x17\n\x13TEAM_INVITE_SUCCESS\x10\x00\x12\'\n#TEAM_INVITE_FAILURE_INVITE_REJECTED\x10\x01\x12&\n\"TEAM_INVITE_FAILURE_INVITE_TIMEOUT\x10\x02\x12*\n&TEAM_INVITE_ERROR_TEAM_AT_MEMBER_LIMIT\x10\x03\x12!\n\x1dTEAM_INVITE_ERROR_TEAM_LOCKED\x10\x04\x12+\n\'TEAM_INVITE_ERROR_INVITEE_NOT_AVAILABLE\x10\x05\x12\"\n\x1eTEAM_INVITE_ERROR_INVITEE_BUSY\x10\x06\x12,\n(TEAM_INVITE_ERROR_INVITEE_ALREADY_MEMBER\x10\x07\x12+\n\'TEAM_INVITE_ERROR_INVITEE_AT_TEAM_LIMIT\x10\x08\x12\x30\n,TEAM_INVITE_ERROR_INVITEE_INSUFFICIENT_LEVEL\x10\t\x12\x32\n.TEAM_INVITE_ERROR_INVITER_INVALID_ACCOUNT_TYPE\x10\n\x12\'\n#TEAM_INVITE_ERROR_INVITER_NOT_ADMIN\x10\x0b\x12.\n*TEAM_INVITE_ERROR_INCORRECT_USER_RESPONDED\x10\x0c\x12!\n\x1dTEAM_INVITE_ERROR_UNSPECIFIED\x10\rB\x05H\x01\x90\x01\x00'
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -87,8 +87,8 @@ _ETEAMINVITERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5121,
-  serialized_end=5723,
+  serialized_start=5127,
+  serialized_end=5729,
 )
 _sym_db.RegisterEnumDescriptor(_ETEAMINVITERESULT)
 
@@ -266,8 +266,8 @@ _CMSGDOTAKICKTEAMMEMBERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3920,
-  serialized_end=4092,
+  serialized_start=3926,
+  serialized_end=4098,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAKICKTEAMMEMBERRESPONSE_RESULT)
 
@@ -304,8 +304,8 @@ _CMSGDOTATRANSFERTEAMADMINRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4277,
-  serialized_end=4436,
+  serialized_start=4283,
+  serialized_end=4442,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTATRANSFERTEAMADMINRESPONSE_RESULT)
 
@@ -350,8 +350,8 @@ _CMSGDOTACHANGETEAMSUBRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4630,
-  serialized_end=4835,
+  serialized_start=4636,
+  serialized_end=4841,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTACHANGETEAMSUBRESPONSE_RESULT)
 
@@ -380,8 +380,8 @@ _CMSGDOTALEAVETEAMRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4965,
-  serialized_end=5066,
+  serialized_start=4971,
+  serialized_end=5072,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTALEAVETEAMRESPONSE_RESULT)
 
@@ -1495,7 +1495,7 @@ _CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='required_level', full_name='CMsgDOTATeamInvite_GCImmediateResponseToInviter.required_level', index=2,
+      name='required_badge_level', full_name='CMsgDOTATeamInvite_GCImmediateResponseToInviter.required_badge_level', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1514,7 +1514,7 @@ _CMSGDOTATEAMINVITE_GCIMMEDIATERESPONSETOINVITER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=3144,
-  serialized_end=3296,
+  serialized_end=3302,
 )
 
 
@@ -1565,8 +1565,8 @@ _CMSGDOTATEAMINVITE_GCREQUESTTOINVITEE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3298,
-  serialized_end=3416,
+  serialized_start=3304,
+  serialized_end=3422,
 )
 
 
@@ -1596,8 +1596,8 @@ _CMSGDOTATEAMINVITE_INVITEERESPONSETOGC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3418,
-  serialized_end=3515,
+  serialized_start=3424,
+  serialized_end=3521,
 )
 
 
@@ -1634,8 +1634,8 @@ _CMSGDOTATEAMINVITE_GCRESPONSETOINVITER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3517,
-  serialized_end=3636,
+  serialized_start=3523,
+  serialized_end=3642,
 )
 
 
@@ -1672,8 +1672,8 @@ _CMSGDOTATEAMINVITE_GCRESPONSETOINVITEE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3638,
-  serialized_end=3754,
+  serialized_start=3644,
+  serialized_end=3760,
 )
 
 
@@ -1710,8 +1710,8 @@ _CMSGDOTAKICKTEAMMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3756,
-  serialized_end=3817,
+  serialized_start=3762,
+  serialized_end=3823,
 )
 
 
@@ -1742,8 +1742,8 @@ _CMSGDOTAKICKTEAMMEMBERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3820,
-  serialized_end=4092,
+  serialized_start=3826,
+  serialized_end=4098,
 )
 
 
@@ -1780,8 +1780,8 @@ _CMSGDOTATRANSFERTEAMADMIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4094,
-  serialized_end=4168,
+  serialized_start=4100,
+  serialized_end=4174,
 )
 
 
@@ -1812,8 +1812,8 @@ _CMSGDOTATRANSFERTEAMADMINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4171,
-  serialized_end=4436,
+  serialized_start=4177,
+  serialized_end=4442,
 )
 
 
@@ -1857,8 +1857,8 @@ _CMSGDOTACHANGETEAMSUB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4438,
-  serialized_end=4529,
+  serialized_start=4444,
+  serialized_end=4535,
 )
 
 
@@ -1889,8 +1889,8 @@ _CMSGDOTACHANGETEAMSUBRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4532,
-  serialized_end=4835,
+  serialized_start=4538,
+  serialized_end=4841,
 )
 
 
@@ -1920,8 +1920,8 @@ _CMSGDOTALEAVETEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4837,
-  serialized_end=4873,
+  serialized_start=4843,
+  serialized_end=4879,
 )
 
 
@@ -1952,8 +1952,8 @@ _CMSGDOTALEAVETEAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4876,
-  serialized_end=5066,
+  serialized_start=4882,
+  serialized_end=5072,
 )
 
 
@@ -1983,8 +1983,8 @@ _CMSGDOTABETAPARTICIPATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5068,
-  serialized_end=5118,
+  serialized_start=5074,
+  serialized_end=5124,
 )
 
 _CMSGDOTATEAM.fields_by_name['members'].message_type = _CMSGDOTATEAMMEMBER
