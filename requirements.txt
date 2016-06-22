@@ -1,5 +1,5 @@
 enum34==1.1.2; python_version < '3.4'
 gevent==1.1
 protobuf==3.0.0b2
-steam[client]==0.8.0
+steam[client]==0.8.3
 gevent-eventemitter==1.4
