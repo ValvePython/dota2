@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_client_enums.proto',
   package='',
   syntax='proto2',
-  serialized_pb=b'\n\x17\x64ota_client_enums.proto*^\n\x13\x45TournamentTemplate\x12\x1e\n\x1ak_ETournamentTemplate_None\x10\x00\x12\'\n#k_ETournamentTemplate_AutomatedWin3\x10\x01*\xa8\x03\n\x14\x45TournamentGameState\x12\"\n\x1ek_ETournamentGameState_Unknown\x10\x00\x12#\n\x1fk_ETournamentGameState_Canceled\x10\x01\x12$\n k_ETournamentGameState_Scheduled\x10\x02\x12!\n\x1dk_ETournamentGameState_Active\x10\x03\x12%\n!k_ETournamentGameState_RadVictory\x10\x14\x12&\n\"k_ETournamentGameState_DireVictory\x10\x15\x12.\n*k_ETournamentGameState_RadVictoryByForfeit\x10\x16\x12/\n+k_ETournamentGameState_DireVictoryByForfeit\x10\x17\x12(\n$k_ETournamentGameState_ServerFailure\x10(\x12$\n k_ETournamentGameState_NotNeeded\x10)*\x8d\x07\n\x14\x45TournamentTeamState\x12\"\n\x1ek_ETournamentTeamState_Unknown\x10\x00\x12 \n\x1ck_ETournamentTeamState_Node1\x10\x01\x12#\n\x1ek_ETournamentTeamState_NodeMax\x10\x80\x08\x12&\n!k_ETournamentTeamState_Eliminated\x10\xb3m\x12%\n k_ETournamentTeamState_Forfeited\x10\xb4m\x12$\n\x1fk_ETournamentTeamState_Refunded\x10\xb5m\x12\'\n\"k_ETournamentTeamState_Finished1st\x10\x99u\x12\'\n\"k_ETournamentTeamState_Finished2nd\x10\x9au\x12\'\n\"k_ETournamentTeamState_Finished3rd\x10\x9bu\x12\'\n\"k_ETournamentTeamState_Finished4th\x10\x9cu\x12\'\n\"k_ETournamentTeamState_Finished5th\x10\x9du\x12\'\n\"k_ETournamentTeamState_Finished6th\x10\x9eu\x12\'\n\"k_ETournamentTeamState_Finished7th\x10\x9fu\x12\'\n\"k_ETournamentTeamState_Finished8th\x10\xa0u\x12\'\n\"k_ETournamentTeamState_Finished9th\x10\xa1u\x12(\n#k_ETournamentTeamState_Finished10th\x10\xa2u\x12(\n#k_ETournamentTeamState_Finished11th\x10\xa3u\x12(\n#k_ETournamentTeamState_Finished12th\x10\xa4u\x12(\n#k_ETournamentTeamState_Finished13th\x10\xa5u\x12(\n#k_ETournamentTeamState_Finished14th\x10\xa6u\x12(\n#k_ETournamentTeamState_Finished15th\x10\xa7u\x12(\n#k_ETournamentTeamState_Finished16th\x10\xa8u*\x86\x03\n\x10\x45TournamentState\x12\x1e\n\x1ak_ETournamentState_Unknown\x10\x00\x12&\n\"k_ETournamentState_CanceledByAdmin\x10\x01\x12 \n\x1ck_ETournamentState_Completed\x10\x02\x12\x1d\n\x19k_ETournamentState_Merged\x10\x03\x12$\n k_ETournamentState_ServerFailure\x10\x04\x12$\n k_ETournamentState_TeamAbandoned\x10\x05\x12)\n%k_ETournamentState_TeamTimeoutForfeit\x10\x06\x12(\n$k_ETournamentState_TeamTimeoutRefund\x10\x07\x12!\n\x1dk_ETournamentState_InProgress\x10\x64\x12%\n!k_ETournamentState_WaitingToMerge\x10\x65*\xf1\x03\n\x14\x45TournamentNodeState\x12\"\n\x1ek_ETournamentNodeState_Unknown\x10\x00\x12#\n\x1fk_ETournamentNodeState_Canceled\x10\x01\x12.\n*k_ETournamentNodeState_TeamsNotYetAssigned\x10\x02\x12)\n%k_ETournamentNodeState_InBetweenGames\x10\x03\x12)\n%k_ETournamentNodeState_GameInProgress\x10\x04\x12 \n\x1ck_ETournamentNodeState_A_Won\x10\x05\x12 \n\x1ck_ETournamentNodeState_B_Won\x10\x06\x12)\n%k_ETournamentNodeState_A_WonByForfeit\x10\x07\x12)\n%k_ETournamentNodeState_B_WonByForfeit\x10\x08\x12 \n\x1ck_ETournamentNodeState_A_Bye\x10\t\x12$\n k_ETournamentNodeState_A_Forfeit\x10\n\x12(\n$k_ETournamentNodeState_ServerFailure\x10\x0b*\xc7\x03\n\x15\x45\x44OTAGroupMergeResult\x12\x1e\n\x1ak_EDOTAGroupMergeResult_OK\x10\x00\x12*\n&k_EDOTAGroupMergeResult_FAILED_GENERIC\x10\x01\x12&\n\"k_EDOTAGroupMergeResult_NOT_LEADER\x10\x02\x12,\n(k_EDOTAGroupMergeResult_TOO_MANY_PLAYERS\x10\x03\x12,\n(k_EDOTAGroupMergeResult_TOO_MANY_COACHES\x10\x04\x12+\n\'k_EDOTAGroupMergeResult_ENGINE_MISMATCH\x10\x05\x12)\n%k_EDOTAGroupMergeResult_NO_SUCH_GROUP\x10\x06\x12\x30\n,k_EDOTAGroupMergeResult_OTHER_GROUP_NOT_OPEN\x10\x07\x12+\n\'k_EDOTAGroupMergeResult_ALREADY_INVITED\x10\x08\x12\'\n#k_EDOTAGroupMergeResult_NOT_INVITED\x10\tB\x05H\x01\x90\x01\x00'
+  serialized_pb=b'\n\x17\x64ota_client_enums.proto*^\n\x13\x45TournamentTemplate\x12\x1e\n\x1ak_ETournamentTemplate_None\x10\x00\x12\'\n#k_ETournamentTemplate_AutomatedWin3\x10\x01*\xa8\x03\n\x14\x45TournamentGameState\x12\"\n\x1ek_ETournamentGameState_Unknown\x10\x00\x12#\n\x1fk_ETournamentGameState_Canceled\x10\x01\x12$\n k_ETournamentGameState_Scheduled\x10\x02\x12!\n\x1dk_ETournamentGameState_Active\x10\x03\x12%\n!k_ETournamentGameState_RadVictory\x10\x14\x12&\n\"k_ETournamentGameState_DireVictory\x10\x15\x12.\n*k_ETournamentGameState_RadVictoryByForfeit\x10\x16\x12/\n+k_ETournamentGameState_DireVictoryByForfeit\x10\x17\x12(\n$k_ETournamentGameState_ServerFailure\x10(\x12$\n k_ETournamentGameState_NotNeeded\x10)*\xe7\x06\n\x14\x45TournamentTeamState\x12\"\n\x1ek_ETournamentTeamState_Unknown\x10\x00\x12 \n\x1ck_ETournamentTeamState_Node1\x10\x01\x12#\n\x1ek_ETournamentTeamState_NodeMax\x10\x80\x08\x12&\n!k_ETournamentTeamState_Eliminated\x10\xb3m\x12%\n k_ETournamentTeamState_Forfeited\x10\xb4m\x12\'\n\"k_ETournamentTeamState_Finished1st\x10\x99u\x12\'\n\"k_ETournamentTeamState_Finished2nd\x10\x9au\x12\'\n\"k_ETournamentTeamState_Finished3rd\x10\x9bu\x12\'\n\"k_ETournamentTeamState_Finished4th\x10\x9cu\x12\'\n\"k_ETournamentTeamState_Finished5th\x10\x9du\x12\'\n\"k_ETournamentTeamState_Finished6th\x10\x9eu\x12\'\n\"k_ETournamentTeamState_Finished7th\x10\x9fu\x12\'\n\"k_ETournamentTeamState_Finished8th\x10\xa0u\x12\'\n\"k_ETournamentTeamState_Finished9th\x10\xa1u\x12(\n#k_ETournamentTeamState_Finished10th\x10\xa2u\x12(\n#k_ETournamentTeamState_Finished11th\x10\xa3u\x12(\n#k_ETournamentTeamState_Finished12th\x10\xa4u\x12(\n#k_ETournamentTeamState_Finished13th\x10\xa5u\x12(\n#k_ETournamentTeamState_Finished14th\x10\xa6u\x12(\n#k_ETournamentTeamState_Finished15th\x10\xa7u\x12(\n#k_ETournamentTeamState_Finished16th\x10\xa8u*\x86\x03\n\x10\x45TournamentState\x12\x1e\n\x1ak_ETournamentState_Unknown\x10\x00\x12&\n\"k_ETournamentState_CanceledByAdmin\x10\x01\x12 \n\x1ck_ETournamentState_Completed\x10\x02\x12\x1d\n\x19k_ETournamentState_Merged\x10\x03\x12$\n k_ETournamentState_ServerFailure\x10\x04\x12$\n k_ETournamentState_TeamAbandoned\x10\x05\x12)\n%k_ETournamentState_TeamTimeoutForfeit\x10\x06\x12(\n$k_ETournamentState_TeamTimeoutRefund\x10\x07\x12!\n\x1dk_ETournamentState_InProgress\x10\x64\x12%\n!k_ETournamentState_WaitingToMerge\x10\x65*\xcc\x04\n\x14\x45TournamentNodeState\x12\"\n\x1ek_ETournamentNodeState_Unknown\x10\x00\x12#\n\x1fk_ETournamentNodeState_Canceled\x10\x01\x12.\n*k_ETournamentNodeState_TeamsNotYetAssigned\x10\x02\x12)\n%k_ETournamentNodeState_InBetweenGames\x10\x03\x12)\n%k_ETournamentNodeState_GameInProgress\x10\x04\x12 \n\x1ck_ETournamentNodeState_A_Won\x10\x05\x12 \n\x1ck_ETournamentNodeState_B_Won\x10\x06\x12)\n%k_ETournamentNodeState_A_WonByForfeit\x10\x07\x12)\n%k_ETournamentNodeState_B_WonByForfeit\x10\x08\x12 \n\x1ck_ETournamentNodeState_A_Bye\x10\t\x12&\n\"k_ETournamentNodeState_A_Abandoned\x10\n\x12(\n$k_ETournamentNodeState_ServerFailure\x10\x0b\x12+\n\'k_ETournamentNodeState_A_TimeoutForfeit\x10\x0c\x12*\n&k_ETournamentNodeState_A_TimeoutRefund\x10\r*\xc7\x03\n\x15\x45\x44OTAGroupMergeResult\x12\x1e\n\x1ak_EDOTAGroupMergeResult_OK\x10\x00\x12*\n&k_EDOTAGroupMergeResult_FAILED_GENERIC\x10\x01\x12&\n\"k_EDOTAGroupMergeResult_NOT_LEADER\x10\x02\x12,\n(k_EDOTAGroupMergeResult_TOO_MANY_PLAYERS\x10\x03\x12,\n(k_EDOTAGroupMergeResult_TOO_MANY_COACHES\x10\x04\x12+\n\'k_EDOTAGroupMergeResult_ENGINE_MISMATCH\x10\x05\x12)\n%k_EDOTAGroupMergeResult_NO_SUCH_GROUP\x10\x06\x12\x30\n,k_EDOTAGroupMergeResult_OTHER_GROUP_NOT_OPEN\x10\x07\x12+\n\'k_EDOTAGroupMergeResult_ALREADY_INVITED\x10\x08\x12\'\n#k_EDOTAGroupMergeResult_NOT_INVITED\x10\tB\x05H\x01\x90\x01\x00'
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -127,78 +127,74 @@ _ETOURNAMENTTEAMSTATE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Refunded', index=5, number=14005,
+      name='k_ETournamentTeamState_Finished1st', index=5, number=15001,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished1st', index=6, number=15001,
+      name='k_ETournamentTeamState_Finished2nd', index=6, number=15002,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished2nd', index=7, number=15002,
+      name='k_ETournamentTeamState_Finished3rd', index=7, number=15003,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished3rd', index=8, number=15003,
+      name='k_ETournamentTeamState_Finished4th', index=8, number=15004,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished4th', index=9, number=15004,
+      name='k_ETournamentTeamState_Finished5th', index=9, number=15005,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished5th', index=10, number=15005,
+      name='k_ETournamentTeamState_Finished6th', index=10, number=15006,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished6th', index=11, number=15006,
+      name='k_ETournamentTeamState_Finished7th', index=11, number=15007,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished7th', index=12, number=15007,
+      name='k_ETournamentTeamState_Finished8th', index=12, number=15008,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished8th', index=13, number=15008,
+      name='k_ETournamentTeamState_Finished9th', index=13, number=15009,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished9th', index=14, number=15009,
+      name='k_ETournamentTeamState_Finished10th', index=14, number=15010,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished10th', index=15, number=15010,
+      name='k_ETournamentTeamState_Finished11th', index=15, number=15011,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished11th', index=16, number=15011,
+      name='k_ETournamentTeamState_Finished12th', index=16, number=15012,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished12th', index=17, number=15012,
+      name='k_ETournamentTeamState_Finished13th', index=17, number=15013,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished13th', index=18, number=15013,
+      name='k_ETournamentTeamState_Finished14th', index=18, number=15014,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished14th', index=19, number=15014,
+      name='k_ETournamentTeamState_Finished15th', index=19, number=15015,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished15th', index=20, number=15015,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='k_ETournamentTeamState_Finished16th', index=21, number=15016,
+      name='k_ETournamentTeamState_Finished16th', index=20, number=15016,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=551,
-  serialized_end=1460,
+  serialized_end=1422,
 )
 _sym_db.RegisterEnumDescriptor(_ETOURNAMENTTEAMSTATE)
 
@@ -252,8 +248,8 @@ _ETOURNAMENTSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1463,
-  serialized_end=1853,
+  serialized_start=1425,
+  serialized_end=1815,
 )
 _sym_db.RegisterEnumDescriptor(_ETOURNAMENTSTATE)
 
@@ -305,18 +301,26 @@ _ETOURNAMENTNODESTATE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_ETournamentNodeState_A_Forfeit', index=10, number=10,
+      name='k_ETournamentNodeState_A_Abandoned', index=10, number=10,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='k_ETournamentNodeState_ServerFailure', index=11, number=11,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_ETournamentNodeState_A_TimeoutForfeit', index=12, number=12,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_ETournamentNodeState_A_TimeoutRefund', index=13, number=13,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=1856,
-  serialized_end=2353,
+  serialized_start=1818,
+  serialized_end=2406,
 )
 _sym_db.RegisterEnumDescriptor(_ETOURNAMENTNODESTATE)
 
@@ -370,8 +374,8 @@ _EDOTAGROUPMERGERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2356,
-  serialized_end=2811,
+  serialized_start=2409,
+  serialized_end=2864,
 )
 _sym_db.RegisterEnumDescriptor(_EDOTAGROUPMERGERESULT)
 
@@ -393,7 +397,6 @@ k_ETournamentTeamState_Node1 = 1
 k_ETournamentTeamState_NodeMax = 1024
 k_ETournamentTeamState_Eliminated = 14003
 k_ETournamentTeamState_Forfeited = 14004
-k_ETournamentTeamState_Refunded = 14005
 k_ETournamentTeamState_Finished1st = 15001
 k_ETournamentTeamState_Finished2nd = 15002
 k_ETournamentTeamState_Finished3rd = 15003
@@ -430,8 +433,10 @@ k_ETournamentNodeState_B_Won = 6
 k_ETournamentNodeState_A_WonByForfeit = 7
 k_ETournamentNodeState_B_WonByForfeit = 8
 k_ETournamentNodeState_A_Bye = 9
-k_ETournamentNodeState_A_Forfeit = 10
+k_ETournamentNodeState_A_Abandoned = 10
 k_ETournamentNodeState_ServerFailure = 11
+k_ETournamentNodeState_A_TimeoutForfeit = 12
+k_ETournamentNodeState_A_TimeoutRefund = 13
 k_EDOTAGroupMergeResult_OK = 0
 k_EDOTAGroupMergeResult_FAILED_GENERIC = 1
 k_EDOTAGroupMergeResult_NOT_LEADER = 2

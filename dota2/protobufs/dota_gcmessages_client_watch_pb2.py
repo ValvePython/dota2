@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_watch.proto',
   package='',
   syntax='proto2',
-  serialized_pb=b'\n\"dota_gcmessages_client_watch.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x1c\x64ota_gcmessages_common.proto\"\x8a\x04\n\x12\x43SourceTVGameSmall\x12\x15\n\ractivate_time\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65\x61\x63tivate_time\x18\x02 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x03 \x01(\x04\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x11\n\tleague_id\x18\x05 \x01(\r\x12\x12\n\nlobby_type\x18\x06 \x01(\r\x12\x11\n\tgame_time\x18\x07 \x01(\x05\x12\r\n\x05\x64\x65lay\x18\x08 \x01(\r\x12\x12\n\nspectators\x18\t \x01(\r\x12\x11\n\tgame_mode\x18\n \x01(\r\x12\x13\n\x0b\x61verage_mmr\x18\x0b \x01(\r\x12\x19\n\x11team_name_radiant\x18\x0f \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x10 \x01(\t\x12\x12\n\nsort_score\x18\x11 \x01(\r\x12\x18\n\x10last_update_time\x18\x12 \x01(\x02\x12\x14\n\x0cradiant_lead\x18\x13 \x01(\x05\x12\x15\n\rradiant_score\x18\x14 \x01(\r\x12\x12\n\ndire_score\x18\x15 \x01(\r\x12+\n\x07players\x18\x16 \x03(\x0b\x32\x1a.CSourceTVGameSmall.Player\x12\x16\n\x0e\x62uilding_state\x18\x17 \x01(\x07\x1a-\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\x9c\x01\n\"CMsgClientToGCFindTopSourceTVGames\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x05 \x01(\r\x12\x11\n\tlobby_ids\x18\x06 \x03(\x04\"\xe4\x01\n*CMsgGCToClientFindTopSourceTVGamesResponse\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x11\n\tnum_games\x18\x05 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x06 \x01(\r\x12&\n\tgame_list\x18\x07 \x03(\x0b\x32\x13.CSourceTVGameSmall\x12\x16\n\x0especific_games\x18\x08 \x01(\x08\"^\n\x1f\x43MsgClientToGCTopMatchesRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\"\'\n%CMsgClientToGCTopLeagueMatchesRequest\"\'\n%CMsgClientToGCTopFriendMatchesRequest\"8\n#CMsgClientToGCMatchesMinimalRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"b\n$CMsgClientToGCMatchesMinimalResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\x12\n\nlast_match\x18\x02 \x01(\x08\"P\n&CMsgGCToClientTopLeagueMatchesResponse\x12&\n\x07matches\x18\x02 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"P\n&CMsgGCToClientTopFriendMatchesResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"\x93\x01\n\x1c\x43MsgClientToGCFindTopMatches\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tfriend_id\x18\x04 \x01(\r\x12\x13\n\x0b\x66riend_list\x18\x05 \x01(\x08\x12\x13\n\x0bleague_list\x18\x06 \x01(\x08\"\x98\x01\n*CMsgGCToClientFindTopLeagueMatchesResponse\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tmatch_ids\x18\x04 \x03(\r\x12\x1f\n\x07matches\x18\x05 \x03(\x0b\x32\x0e.CMsgDOTAMatch\"*\n\x16\x43MsgSpectateFriendGame\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"8\n\x1e\x43MsgSpectateFriendGameResponse\x12\x16\n\x0eserver_steamid\x18\x04 \x01(\x06\"\xd9\x04\n\x14\x43MsgDOTAMatchMinimal\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\x07\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x14\n\x0cwinning_team\x18\x05 \x01(\r\x12-\n\x07players\x18\x06 \x03(\x0b\x32\x1c.CMsgDOTAMatchMinimal.Player\x12,\n\x06league\x18\x07 \x01(\x0b\x32\x1c.CMsgDOTAMatchMinimal.League\x1a\x81\x01\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05items\x18\x06 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x07 \x01(\r\x1a\xda\x01\n\x06League\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fradiant_team_id\x18\x02 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x03 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x04 \x01(\x06\x12\x14\n\x0c\x64ire_team_id\x18\x05 \x01(\r\x12\x16\n\x0e\x64ire_team_name\x18\x06 \x01(\t\x12\x16\n\x0e\x64ire_team_logo\x18\x07 \x01(\x06\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\x13\n\x0bseries_game\x18\t \x01(\r\"\xcc\x01\n\x17\x43\x44OTAReplayDownloadInfo\x12$\n\x05match\x18\x01 \x01(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\r\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12\x16\n\x0e\x65xists_on_disk\x18\x06 \x01(\x08\x1a\x33\n\tHighlight\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x80\x01\n\rCMsgWatchGame\x12\x16\n\x0eserver_steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x1c\n\x14watch_server_steamid\x18\x03 \x01(\x06\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x0f\n\x07regions\x18\x05 \x03(\r\"\x15\n\x13\x43MsgCancelWatchGame\"\xc9\x03\n\x15\x43MsgWatchGameResponse\x12J\n\x11watch_game_result\x18\x01 \x01(\x0e\x32&.CMsgWatchGameResponse.WatchGameResult:\x07PENDING\x12\x1d\n\x15source_tv_public_addr\x18\x02 \x01(\r\x12\x1e\n\x16source_tv_private_addr\x18\x03 \x01(\r\x12\x16\n\x0esource_tv_port\x18\x04 \x01(\r\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\x12\x1c\n\x14watch_server_steamid\x18\x06 \x01(\x06\x12#\n\x1bwatch_tv_unique_secret_code\x18\x07 \x01(\x06\"\xac\x01\n\x0fWatchGameResult\x12\x0b\n\x07PENDING\x10\x00\x12\t\n\x05READY\x10\x01\x12\x16\n\x12GAMESERVERNOTFOUND\x10\x02\x12\x0f\n\x0bUNAVAILABLE\x10\x03\x12\r\n\tCANCELLED\x10\x04\x12\x17\n\x13INCOMPATIBLEVERSION\x10\x05\x12\x1d\n\x19MISSINGLEAGUESUBSCRIPTION\x10\x06\x12\x11\n\rLOBBYNOTFOUND\x10\x07\"=\n\x1e\x43MsgPartyLeaderWatchGamePrompt\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\"\x82\x02\n\x14\x43\x44OTABroadcasterInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x02 \x01(\x06\x12\x0c\n\x04live\x18\x03 \x01(\x08\x12\x19\n\x11team_name_radiant\x18\x04 \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x05 \x01(\t\x12\x12\n\nstage_name\x18\x06 \x01(\t\x12\x13\n\x0bseries_game\x18\x07 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12$\n\x1cupcoming_broadcast_timestamp\x18\t \x01(\r\x12\x18\n\x10\x61llow_live_video\x18\n \x01(\x08\x42\x05H\x01\x90\x01\x00'
+  serialized_pb=b'\n\"dota_gcmessages_client_watch.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x1c\x64ota_gcmessages_common.proto\"\x8a\x04\n\x12\x43SourceTVGameSmall\x12\x15\n\ractivate_time\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65\x61\x63tivate_time\x18\x02 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x03 \x01(\x04\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x11\n\tleague_id\x18\x05 \x01(\r\x12\x12\n\nlobby_type\x18\x06 \x01(\r\x12\x11\n\tgame_time\x18\x07 \x01(\x05\x12\r\n\x05\x64\x65lay\x18\x08 \x01(\r\x12\x12\n\nspectators\x18\t \x01(\r\x12\x11\n\tgame_mode\x18\n \x01(\r\x12\x13\n\x0b\x61verage_mmr\x18\x0b \x01(\r\x12\x19\n\x11team_name_radiant\x18\x0f \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x10 \x01(\t\x12\x12\n\nsort_score\x18\x11 \x01(\r\x12\x18\n\x10last_update_time\x18\x12 \x01(\x02\x12\x14\n\x0cradiant_lead\x18\x13 \x01(\x05\x12\x15\n\rradiant_score\x18\x14 \x01(\r\x12\x12\n\ndire_score\x18\x15 \x01(\r\x12+\n\x07players\x18\x16 \x03(\x0b\x32\x1a.CSourceTVGameSmall.Player\x12\x16\n\x0e\x62uilding_state\x18\x17 \x01(\x07\x1a-\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\x9c\x01\n\"CMsgClientToGCFindTopSourceTVGames\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x05 \x01(\r\x12\x11\n\tlobby_ids\x18\x06 \x03(\x04\"\xe4\x01\n*CMsgGCToClientFindTopSourceTVGamesResponse\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nstart_game\x18\x04 \x01(\r\x12\x11\n\tnum_games\x18\x05 \x01(\r\x12\x17\n\x0fgame_list_index\x18\x06 \x01(\r\x12&\n\tgame_list\x18\x07 \x03(\x0b\x32\x13.CSourceTVGameSmall\x12\x16\n\x0especific_games\x18\x08 \x01(\x08\"^\n\x1f\x43MsgClientToGCTopMatchesRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\"\'\n%CMsgClientToGCTopLeagueMatchesRequest\"\'\n%CMsgClientToGCTopFriendMatchesRequest\"8\n#CMsgClientToGCMatchesMinimalRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"b\n$CMsgClientToGCMatchesMinimalResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\x12\n\nlast_match\x18\x02 \x01(\x08\"P\n&CMsgGCToClientTopLeagueMatchesResponse\x12&\n\x07matches\x18\x02 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"P\n&CMsgGCToClientTopFriendMatchesResponse\x12&\n\x07matches\x18\x01 \x03(\x0b\x32\x15.CMsgDOTAMatchMinimal\"\x93\x01\n\x1c\x43MsgClientToGCFindTopMatches\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tfriend_id\x18\x04 \x01(\r\x12\x13\n\x0b\x66riend_list\x18\x05 \x01(\x08\x12\x13\n\x0bleague_list\x18\x06 \x01(\x08\"\x98\x01\n*CMsgGCToClientFindTopLeagueMatchesResponse\x12\x12\n\nstart_game\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x11\n\tmatch_ids\x18\x04 \x03(\r\x12\x1f\n\x07matches\x18\x05 \x03(\x0b\x32\x0e.CMsgDOTAMatch\"*\n\x16\x43MsgSpectateFriendGame\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"8\n\x1e\x43MsgSpectateFriendGameResponse\x12\x16\n\x0eserver_steamid\x18\x04 \x01(\x06\"\x83\x05\n\x14\x43MsgDOTAMatchMinimal\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\x07\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12-\n\x07players\x18\x06 \x03(\x0b\x32\x1c.CMsgDOTAMatchMinimal.Player\x12,\n\x06league\x18\x07 \x01(\x0b\x32\x1c.CMsgDOTAMatchMinimal.League\x12>\n\rmatch_outcome\x18\x08 \x01(\x0e\x32\x0e.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x1a\x81\x01\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05items\x18\x06 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x07 \x01(\r\x1a\xda\x01\n\x06League\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fradiant_team_id\x18\x02 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x03 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x04 \x01(\x06\x12\x14\n\x0c\x64ire_team_id\x18\x05 \x01(\r\x12\x16\n\x0e\x64ire_team_name\x18\x06 \x01(\t\x12\x16\n\x0e\x64ire_team_logo\x18\x07 \x01(\x06\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\x13\n\x0bseries_game\x18\t \x01(\r\"\xcc\x01\n\x17\x43\x44OTAReplayDownloadInfo\x12$\n\x05match\x18\x01 \x01(\x0b\x32\x15.CMsgDOTAMatchMinimal\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\r\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12\x16\n\x0e\x65xists_on_disk\x18\x06 \x01(\x08\x1a\x33\n\tHighlight\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x80\x01\n\rCMsgWatchGame\x12\x16\n\x0eserver_steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x1c\n\x14watch_server_steamid\x18\x03 \x01(\x06\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x0f\n\x07regions\x18\x05 \x03(\r\"\x15\n\x13\x43MsgCancelWatchGame\"\xc9\x03\n\x15\x43MsgWatchGameResponse\x12J\n\x11watch_game_result\x18\x01 \x01(\x0e\x32&.CMsgWatchGameResponse.WatchGameResult:\x07PENDING\x12\x1d\n\x15source_tv_public_addr\x18\x02 \x01(\r\x12\x1e\n\x16source_tv_private_addr\x18\x03 \x01(\r\x12\x16\n\x0esource_tv_port\x18\x04 \x01(\r\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\x12\x1c\n\x14watch_server_steamid\x18\x06 \x01(\x06\x12#\n\x1bwatch_tv_unique_secret_code\x18\x07 \x01(\x06\"\xac\x01\n\x0fWatchGameResult\x12\x0b\n\x07PENDING\x10\x00\x12\t\n\x05READY\x10\x01\x12\x16\n\x12GAMESERVERNOTFOUND\x10\x02\x12\x0f\n\x0bUNAVAILABLE\x10\x03\x12\r\n\tCANCELLED\x10\x04\x12\x17\n\x13INCOMPATIBLEVERSION\x10\x05\x12\x1d\n\x19MISSINGLEAGUESUBSCRIPTION\x10\x06\x12\x11\n\rLOBBYNOTFOUND\x10\x07\"=\n\x1e\x43MsgPartyLeaderWatchGamePrompt\x12\x1b\n\x13game_server_steamid\x18\x05 \x01(\x06\"\x82\x02\n\x14\x43\x44OTABroadcasterInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0fserver_steam_id\x18\x02 \x01(\x06\x12\x0c\n\x04live\x18\x03 \x01(\x08\x12\x19\n\x11team_name_radiant\x18\x04 \x01(\t\x12\x16\n\x0eteam_name_dire\x18\x05 \x01(\t\x12\x12\n\nstage_name\x18\x06 \x01(\t\x12\x13\n\x0bseries_game\x18\x07 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12$\n\x1cupcoming_broadcast_timestamp\x18\t \x01(\r\x12\x18\n\x10\x61llow_live_video\x18\n \x01(\x08\x42\x05H\x01\x90\x01\x00'
   ,
   dependencies=[dota__shared__enums__pb2.DESCRIPTOR,dota__gcmessages__common__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -67,8 +67,8 @@ _CMSGWATCHGAMERESPONSE_WATCHGAMERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3166,
-  serialized_end=3338,
+  serialized_start=3208,
+  serialized_end=3380,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGWATCHGAMERESPONSE_WATCHGAMERESULT)
 
@@ -899,8 +899,8 @@ _CMSGDOTAMATCHMINIMAL_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2167,
-  serialized_end=2296,
+  serialized_start=2209,
+  serialized_end=2338,
 )
 
 _CMSGDOTAMATCHMINIMAL_LEAGUE = _descriptor.Descriptor(
@@ -985,8 +985,8 @@ _CMSGDOTAMATCHMINIMAL_LEAGUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2299,
-  serialized_end=2517,
+  serialized_start=2341,
+  serialized_end=2559,
 )
 
 _CMSGDOTAMATCHMINIMAL = _descriptor.Descriptor(
@@ -1025,23 +1025,23 @@ _CMSGDOTAMATCHMINIMAL = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='winning_team', full_name='CMsgDOTAMatchMinimal.winning_team', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='players', full_name='CMsgDOTAMatchMinimal.players', index=5,
+      name='players', full_name='CMsgDOTAMatchMinimal.players', index=4,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='league', full_name='CMsgDOTAMatchMinimal.league', index=6,
+      name='league', full_name='CMsgDOTAMatchMinimal.league', index=5,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='match_outcome', full_name='CMsgDOTAMatchMinimal.match_outcome', index=6,
+      number=8, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1058,7 +1058,7 @@ _CMSGDOTAMATCHMINIMAL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1916,
-  serialized_end=2517,
+  serialized_end=2559,
 )
 
 
@@ -1095,8 +1095,8 @@ _CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2673,
-  serialized_end=2724,
+  serialized_start=2715,
+  serialized_end=2766,
 )
 
 _CDOTAREPLAYDOWNLOADINFO = _descriptor.Descriptor(
@@ -1160,8 +1160,8 @@ _CDOTAREPLAYDOWNLOADINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2520,
-  serialized_end=2724,
+  serialized_start=2562,
+  serialized_end=2766,
 )
 
 
@@ -1219,8 +1219,8 @@ _CMSGWATCHGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2727,
-  serialized_end=2855,
+  serialized_start=2769,
+  serialized_end=2897,
 )
 
 
@@ -1243,8 +1243,8 @@ _CMSGCANCELWATCHGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2857,
-  serialized_end=2878,
+  serialized_start=2899,
+  serialized_end=2920,
 )
 
 
@@ -1317,8 +1317,8 @@ _CMSGWATCHGAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2881,
-  serialized_end=3338,
+  serialized_start=2923,
+  serialized_end=3380,
 )
 
 
@@ -1348,8 +1348,8 @@ _CMSGPARTYLEADERWATCHGAMEPROMPT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3340,
-  serialized_end=3401,
+  serialized_start=3382,
+  serialized_end=3443,
 )
 
 
@@ -1442,8 +1442,8 @@ _CDOTABROADCASTERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3404,
-  serialized_end=3662,
+  serialized_start=3446,
+  serialized_end=3704,
 )
 
 _CSOURCETVGAMESMALL_PLAYER.containing_type = _CSOURCETVGAMESMALL
@@ -1458,6 +1458,7 @@ _CMSGDOTAMATCHMINIMAL_LEAGUE.containing_type = _CMSGDOTAMATCHMINIMAL
 _CMSGDOTAMATCHMINIMAL.fields_by_name['game_mode'].enum_type = dota__shared__enums__pb2._DOTA_GAMEMODE
 _CMSGDOTAMATCHMINIMAL.fields_by_name['players'].message_type = _CMSGDOTAMATCHMINIMAL_PLAYER
 _CMSGDOTAMATCHMINIMAL.fields_by_name['league'].message_type = _CMSGDOTAMATCHMINIMAL_LEAGUE
+_CMSGDOTAMATCHMINIMAL.fields_by_name['match_outcome'].enum_type = dota__shared__enums__pb2._EMATCHOUTCOME
 _CDOTAREPLAYDOWNLOADINFO_HIGHLIGHT.containing_type = _CDOTAREPLAYDOWNLOADINFO
 _CDOTAREPLAYDOWNLOADINFO.fields_by_name['match'].message_type = _CMSGDOTAMATCHMINIMAL
 _CMSGWATCHGAMERESPONSE.fields_by_name['watch_game_result'].enum_type = _CMSGWATCHGAMERESPONSE_WATCHGAMERESULT
