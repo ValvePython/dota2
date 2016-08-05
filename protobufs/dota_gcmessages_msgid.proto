@@ -501,8 +501,6 @@ enum EDOTAGCMsg {
 	k_EMsgGCToGCCheckOwnsEntireEmoticonRange = 7611;
 	k_EMsgGCToGCCheckOwnsEntireEmoticonRangeResponse = 7612;
 	k_EMsgGCDev_GrantWarKill = 8001;
-	k_EMsgClientToGCCreateTeamShowcase = 8002;
-	k_EMsgGCToClientTeamShowcaseCreateResult = 8003;
 	k_EMsgServerToGCLockCharmTrading = 8004;
 	k_EMsgClientToGCPlayerStatsRequest = 8006;
 	k_EMsgGCToClientPlayerStatsResponse = 8007;
@@ -672,5 +670,10 @@ enum EDOTAGCMsg {
 	k_EMsgServerToGCCloseCompendiumInGamePredictionVotingResponse = 8183;
 	k_EMsgServerToGCEndCompendiumInGamePredictionsResponse = 8184;
 	k_EMsgServerToGCCompendiumInGamePredictionResultsResponse = 8185;
+	k_EMsgLobbyBattleCupVictory = 8186;
+	k_EMsgGCGetPlayerCardItemInfo = 8187;
+	k_EMsgGCGetPlayerCardItemInfoResponse = 8188;
+	k_EMsgClientToGCRequestSteamDatagramTicket = 8189;
+	k_EMsgClientToGCRequestSteamDatagramTicketResponse = 8190;
 }
 

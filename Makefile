@@ -61,7 +61,7 @@ pb_compile:
 	for filepath in `ls ./protobufs/*.proto`; do \
 		protoc3 --python_out ./dota2/protobufs/ --proto_path=./protobufs "$$filepath"; \
 	done;
-	sed -i 's/^import /import dota2.protobufs./' dota2/protobufs/*_pb2.py
+	sed -i '/^import sys/! s/^import /import dota2.protobufs./' dota2/protobufs/*_pb2.py
 
 pb_clear:
 	rm -f ./protobufs/*.proto ./dota2/protobufs/*_pb2.py
