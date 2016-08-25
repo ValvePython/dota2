@@ -1,9 +1,12 @@
 import logging
 from eventemitter import EventEmitter
-from dota2.enums import  EGCBaseClientMsg, ESOMsg, ESOType
+from dota2.enums import EGCBaseClientMsg, ESOMsg, ESOType
 from dota2.protobufs import base_gcmessages_pb2 as _gc_base
 from dota2.protobufs import dota_gcmessages_client_pb2 as _gc_client
 from dota2.protobufs import dota_gcmessages_common_pb2 as _gc_common
+from dota2.protobufs import dota_gcmessages_common_match_management_pb2 as  \
+    _gc_common_match_management
+
 
 def find_so_proto(type_id):
     """Resolves proto massage for given type_id
@@ -20,6 +23,8 @@ def find_so_proto(type_id):
         proto = getattr(_gc_client, type_id.name, None)
     if proto is None:
         proto = getattr(_gc_common, type_id.name, None)
+    if proto is None:
+        proto = getattr(_gc_common_match_management, type_id.name, None)
 
     return proto
 
@@ -42,6 +47,7 @@ class SOCache(EventEmitter, dict):
 
         # register our handlers
         dota_client.on(ESOMsg.CacheSubscribed, self._handle_cache_subscribed)
+        dota_client.on(ESOMsg.UpdateMultiple, self._handle_update_multiple)
         dota_client.on(EGCBaseClientMsg.EMsgGCClientWelcome, self._handle_client_welcome)
 
     def __hash__(self):
@@ -68,8 +74,30 @@ class SOCache(EventEmitter, dict):
             return
 
         self[type_id] = map(proto.FromString, cache.object_data)
+        self._handle_subscribed_type(type_id)
 
         self.emit("cache_updated", type_id)
+
+    def _handle_subscribed_type(self, type_id):
+        try:
+            unpacked_data = self[type_id][0]
+        except (KeyError, IndexError):
+            return
+
+        if type_id == ESOType.CSODOTAParty:
+            self._dota.party = unpacked_data
+            if self._dota.verbose_debug:
+                self._LOG.debug(
+                    "Received party snapshot for party ID %s." %
+                    self._dota.party.party_id)
+            self._dota.emit('party_update', self._dota.party)
+        elif type_id == ESOType.CSODOTAPartyInvite:
+            self._dota.party_invite = unpacked_data
+            if self._dota.verbose_debug:
+                self._LOG.debug(
+                    "Received party invite snapshot for group ID %s." %
+                    self._dota.party_invite.group_id)
+            self._dota.emit('party_update_invite', self._dota.party_invite)
 
     def _handle_client_welcome(self, message):
         for one in message.outofdate_subscribed_caches:
@@ -78,3 +106,7 @@ class SOCache(EventEmitter, dict):
     def _handle_cache_subscribed(self, message):
         for cache in message.objects:
             self._update_cache(cache)
+
+    def _handle_update_multiple(self, message):
+        # TODO: Implement multiple proto update
+        pass
