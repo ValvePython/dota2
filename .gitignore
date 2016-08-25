@@ -5,3 +5,5 @@ dist
 *.swp
 
 dota2/protobufs/*.proto
+build
+venv

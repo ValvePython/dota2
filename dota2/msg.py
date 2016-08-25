@@ -5,6 +5,7 @@ Various utility function for dealing with messages.
 
 from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg, ESOMsg
 from dota2.protobufs import (
+    base_gcmessages_pb2,
     gcsdk_gcmessages_pb2,
     dota_gcmessages_common_pb2,
     dota_gcmessages_client_pb2,
@@ -58,7 +59,8 @@ def find_proto(emsg):
     if isinstance(emsg, ESOMsg):
         return getattr(gcsdk_gcmessages_pb2, "CMsgSO%s" % emsg.name, None)
 
-    for module in (gcsdk_gcmessages_pb2,
+    for module in (base_gcmessages_pb2,
+                   gcsdk_gcmessages_pb2,
                    dota_gcmessages_common_pb2,
                    dota_gcmessages_client_pb2,
                    dota_gcmessages_client_chat_pb2,
