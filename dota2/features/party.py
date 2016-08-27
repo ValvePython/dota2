@@ -5,6 +5,7 @@ class Party(object):
 
     def __init__(self):
         super(Party, self).__init__()
+        self.party = None
 
     def response_party_invite(self, party_id=None, accept=False, **kwargs):
         """
@@ -44,6 +45,34 @@ class Party(object):
         def wrap_response_party_invite(message):
             self.emit('response_party_invite', message)
         self.once(jobid, wrap_response_party_invite)
+
+    def leave_party(self):
+        """
+        Leaves the current party.
+
+        :return: job event id
+        :rtype: str
+
+        Response event: ``leave_party``
+
+        TODO: add response params
+        """
+        if self.verbose_debug:
+            self._LOG.info("Leaving party.")
+
+        self.party = None
+
+        jobid = self.send_job(EGCBaseMsg.EMsgGCLeaveParty, {})
+
+        def wrap_leave_party(message):
+            self.emit('leave_party', message)
+        self.once(jobid, wrap_leave_party)
+
+    def set_party_leader(self, steam_id=None):
+        raise NotImplementedError()
+
+    def set_party_coach(self, coach=False):
+        raise NotImplementedError()
 
     def invite_to_party(self, steam_id=None):
         """
