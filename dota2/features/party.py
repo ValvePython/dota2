@@ -1,4 +1,4 @@
-from dota2.enums import EGCBaseMsg
+from dota2.enums import EGCBaseMsg, EDOTAGCMsg
 
 
 class Party(object):
@@ -25,11 +25,12 @@ class Party(object):
         TODO: add response params
         """
         if not party_id:
-            self._LOG.debug("Party ID required to respond to an invite.")
+            if self.verbose_debug:
+                self._LOG.debug("Party ID required to respond to an invite.")
             return False
 
         if self.verbose_debug:
-            self._LOG.info(
+            self._LOG.debug(
                 "Responding to party invite %s, accept: %s" %
                 (party_id, accept))
 
@@ -42,9 +43,11 @@ class Party(object):
             "game_language_name": kwargs.pop('game_language_name', "english")
         })
 
+        @self.once(jobid)
         def wrap_response_party_invite(message):
             self.emit('response_party_invite', message)
-        self.once(jobid, wrap_response_party_invite)
+
+        return jobid
 
     def leave_party(self):
         """
@@ -58,21 +61,86 @@ class Party(object):
         TODO: add response params
         """
         if self.verbose_debug:
-            self._LOG.info("Leaving party.")
+            self._LOG.debug("Leaving party.")
 
         self.party = None
 
         jobid = self.send_job(EGCBaseMsg.EMsgGCLeaveParty, {})
 
+        @self.once(jobid)
         def wrap_leave_party(message):
             self.emit('leave_party', message)
-        self.once(jobid, wrap_leave_party)
+
+        return jobid
 
     def set_party_leader(self, steam_id=None):
-        raise NotImplementedError()
+        """
+        Set the new party leader.
+        :param steam_id: steam_id
+        :return: job event id
+        :rtype: str
+
+        Response event: ``set_party_leader``
+
+        :param steam_id: steam_id for response
+        :type steam_id: :class:`int`
+
+        TODO: add response params
+        """
+        # if not self.party:
+        #     if self.verbose_debug:
+        #         self._LOG.debug(
+        #             "set_party_leader called when not in a party!.")
+        #     return False
+
+        if not steam_id:
+            if self.verbose_debug:
+                self._LOG.debug("Steam ID required to set party leader.")
+            return False
+
+        if self.verbose_debug:
+            self._LOG.debug("Setting party leader: %s" % steam_id)
+
+        jobid = self.send_job(EDOTAGCMsg.EMsgClientToGCSetPartyLeader, {
+            "new_leader_steamid": steam_id
+        })
+
+        @self.once(jobid)
+        def wrap_set_party_leader(message):
+            self.emit('set_party_leader', message)
+
+        return jobid
 
     def set_party_coach(self, coach=False):
-        raise NotImplementedError()
+        """
+        Set the bot's status as a coach.
+        :param coach: bool
+        :return: job event id
+        :rtype: str
+
+        Response event: ``party_coach``
+
+        :param steam_id: steam_id for response
+        :type steam_id: :class:`int`
+
+        TODO: add response params
+        """
+        # if not self.party:
+        #     if self.verbose_debug:
+        #         self._LOG.debug("set_party_coach called when not in a party!")
+        # return False
+        if self.verbose_debug:
+            self._LOG.debug("Setting coach slot: %s" % coach)
+
+        jobid = self.send_job(EDOTAGCMsg.EMsgGCPartyMemberSetCoach, {
+            "wants_coach": coach
+        })
+
+        @self.once(jobid)
+        def wrap_party_coach(message):
+            self.emit('party_coach', message)
+
+        return jobid
 
     def invite_to_party(self, steam_id=None):
         """
@@ -91,19 +159,20 @@ class Party(object):
         TODO: add response params
         """
         if not steam_id:
-            self._LOG.debug("Steam ID required to create a party invite.")
+            if self.verbose_debug:
+                self._LOG.debug("Steam ID required to create a party invite.")
             return False
 
         if self.verbose_debug:
-            self._LOG.info("Inviting %s to a party." % steam_id)
+            self._LOG.debug("Inviting %s to a party." % steam_id)
 
         jobid = self.send_job(EGCBaseMsg.EMsgGCInviteToParty, {
             "steam_id": steam_id
         })
 
+        @self.once(jobid)
         def wrap_invite_to_party(message):
             self.emit('invite_to_party', message)
-        self.once(jobid, wrap_invite_to_party)
 
         return jobid
 
@@ -124,18 +193,19 @@ class Party(object):
         TODO: add response params
         """
         if not steam_id:
-            self._LOG.debug("Steam ID required to kick from the party.")
+            if self.verbose_debug:
+                self._LOG.debug("Steam ID required to kick from the party.")
             return False
 
         if self.verbose_debug:
-            self._LOG.info("Kicking %s from the party." % steam_id)
+            self._LOG.debug("Kicking %s from the party." % steam_id)
 
         jobid = self.send_job(EGCBaseMsg.EMsgGCKickFromParty, {
             "steam_id": steam_id
         })
 
+        @self.once(jobid)
         def wrap_kick_from_party(message):
             self.emit('kick_from_party', message)
-        self.once(jobid, wrap_kick_from_party)
 
         return jobid
