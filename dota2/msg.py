@@ -71,8 +71,7 @@ def find_proto(emsg):
                    dota_gcmessages_client_match_management_pb2,
                    dota_gcmessages_client_team_pb2,
                    dota_gcmessages_client_tournament_pb2,
-                   dota_gcmessages_client_watch_pb2,
-                   dota_gcmessages_msgid_pb2):
+                   dota_gcmessages_client_watch_pb2):
 
         proto = getattr(module, emsg.name.replace("EMsg", "CMsg"), None)
 
@@ -105,4 +104,5 @@ _proto_map_why_cant_we_name_things_properly = {
     ESOMsg.UpdateMultiple: gcsdk_gcmessages_pb2.CMsgSOMultipleObjects,
     EDOTAGCMsg.EMsgClientToGCEventGoalsRequest: dota_gcmessages_client_pb2.CMsgClientToGCGetEventGoals,
     EDOTAGCMsg.EMsgClientToGCEventGoalsResponse: dota_gcmessages_client_pb2.CMsgEventGoals,
+    EDOTAGCMsg.EMsgClientToGCSetPartyLeader: dota_gcmessages_client_match_management_pb2.CMsgDOTASetGroupLeader,
 }
