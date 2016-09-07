@@ -6,8 +6,13 @@ class Party(object):
     def __init__(self):
         super(Party, self).__init__()
         self.party = None
+        self.on(EGCBaseMsg.EMsgGCInvitationCreated,
+                self.__handle_invitation_created)
 
-    def response_party_invite(self, party_id=None, accept=False, **kwargs):
+    def __handle_invitation_created(self, message):
+        self.emit('invitation_created', message)
+
+    def response_party_invite(self, party_id=None, accept=False):
         """
         Responds to an incoming party invite.
 
@@ -36,11 +41,7 @@ class Party(object):
 
         jobid = self.send_job(EGCBaseMsg.EMsgGCPartyInviteResponse, {
             "party_id": party_id,
-            "accept": accept,
-            "as_coach": False,
-            "team_id": kwargs.pop('team_id', 0),
-            "game_language_enum": kwargs.pop('game_language_enum', 1),
-            "game_language_name": kwargs.pop('game_language_name', "english")
+            "accept": accept
         })
 
         @self.once(jobid)

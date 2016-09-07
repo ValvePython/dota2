@@ -7,3 +7,4 @@ dist
 dota2/protobufs/*.proto
 build
 venv
+*.log
