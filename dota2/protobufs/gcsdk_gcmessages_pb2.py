@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='gcsdk_gcmessages.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x16gcsdk_gcmessages.proto\x1a\x13steammessages.proto\"@\n\x0e\x43MsgSHA1Digest\x12\x0e\n\x06\x62lock1\x18\x01 \x02(\x06\x12\x0e\n\x06\x62lock2\x18\x02 \x02(\x06\x12\x0e\n\x06\x62lock3\x18\x03 \x02(\x07\")\n\rCMsgSOIDOwner\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\"\x83\x01\n\x12\x43MsgSOSingleObject\x12\x0f\n\x07type_id\x18\x02 \x01(\x05\x12\x13\n\x0bobject_data\x18\x03 \x01(\x0c\x12\x0f\n\x07version\x18\x04 \x01(\x06\x12\"\n\nowner_soid\x18\x05 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x06 \x01(\r\"\xdb\x02\n\x15\x43MsgSOMultipleObjects\x12=\n\x10objects_modified\x18\x02 \x03(\x0b\x32#.CMsgSOMultipleObjects.SingleObject\x12\x0f\n\x07version\x18\x03 \x01(\x06\x12:\n\robjects_added\x18\x04 \x03(\x0b\x32#.CMsgSOMultipleObjects.SingleObject\x12<\n\x0fobjects_removed\x18\x05 \x03(\x0b\x32#.CMsgSOMultipleObjects.SingleObject\x12\"\n\nowner_soid\x18\x06 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x07 \x01(\r\x1a@\n\x0cSingleObject\x12\x0f\n\x07type_id\x18\x01 \x01(\x05\x12\x13\n\x0bobject_data\x18\x02 \x01(\x0c:\n\x80\xa6\x1d\x80\x02\x88\xa6\x1d\x80\x08\"\xfc\x01\n\x15\x43MsgSOCacheSubscribed\x12\x36\n\x07objects\x18\x02 \x03(\x0b\x32%.CMsgSOCacheSubscribed.SubscribedType\x12\x0f\n\x07version\x18\x03 \x01(\x06\x12\"\n\nowner_soid\x18\x04 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x05 \x01(\r\x12\x14\n\x0cservice_list\x18\x06 \x03(\r\x12\x14\n\x0csync_version\x18\x07 \x01(\x06\x1a\x36\n\x0eSubscribedType\x12\x0f\n\x07type_id\x18\x01 \x01(\x05\x12\x13\n\x0bobject_data\x18\x02 \x03(\x0c\"\x94\x01\n\x1d\x43MsgSOCacheSubscribedUpToDate\x12\x0f\n\x07version\x18\x01 \x01(\x06\x12\"\n\nowner_soid\x18\x02 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x03 \x01(\r\x12\x14\n\x0cservice_list\x18\x04 \x03(\r\x12\x14\n\x0csync_version\x18\x05 \x01(\x06\"=\n\x17\x43MsgSOCacheUnsubscribed\x12\"\n\nowner_soid\x18\x02 \x01(\x0b\x32\x0e.CMsgSOIDOwner\"\x93\x01\n\x1c\x43MsgSOCacheSubscriptionCheck\x12\x0f\n\x07version\x18\x02 \x01(\x06\x12\"\n\nowner_soid\x18\x03 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x04 \x01(\r\x12\x14\n\x0cservice_list\x18\x05 \x03(\r\x12\x14\n\x0csync_version\x18\x06 \x01(\x06\"D\n\x1e\x43MsgSOCacheSubscriptionRefresh\x12\"\n\nowner_soid\x18\x02 \x01(\x0b\x32\x0e.CMsgSOIDOwner\"%\n\x12\x43MsgSOCacheVersion\x12\x0f\n\x07version\x18\x01 \x01(\x06\"L\n\x16\x43MsgGCMultiplexMessage\x12\x0f\n\x07msgtype\x18\x01 \x01(\r\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\x12\x10\n\x08steamids\x18\x03 \x03(\x06\"\xbb\x01\n\x13\x43GCToGCMsgMasterAck\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x14\n\x0cmachine_name\x18\x03 \x01(\t\x12\x14\n\x0cprocess_name\x18\x04 \x01(\t\x12/\n\tdirectory\x18\x06 \x03(\x0b\x32\x1c.CGCToGCMsgMasterAck.Process\x1a\x34\n\x07Process\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x16\n\x0etype_instances\x18\x02 \x03(\r\"2\n\x1c\x43GCToGCMsgMasterAck_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"7\n\x19\x43MsgGCToGCUniverseStartup\x12\x1a\n\x12is_initial_startup\x18\x01 \x01(\x08\"4\n!CMsgGCToGCUniverseStartupResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\x05\"\x8e\x01\n\x1f\x43GCToGCMsgMasterStartupComplete\x12\x38\n\x07gc_info\x18\x01 \x03(\x0b\x32\'.CGCToGCMsgMasterStartupComplete.GCInfo\x1a\x31\n\x06GCInfo\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x14\n\x0cmachine_name\x18\x02 \x01(\t\"L\n\x10\x43GCToGCMsgRouted\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x13\n\x0bnet_message\x18\x03 \x01(\x0c\">\n\x15\x43GCToGCMsgRoutedReply\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x13\n\x0bnet_message\x18\x02 \x01(\x0c\"\x95\x01\n\x1c\x43MsgGCUpdateSubGCSessionInfo\x12\x39\n\x07updates\x18\x01 \x03(\x0b\x32(.CMsgGCUpdateSubGCSessionInfo.CMsgUpdate\x1a:\n\nCMsgUpdate\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\n\n\x02ip\x18\x02 \x01(\x07\x12\x0f\n\x07trusted\x18\x03 \x01(\x08\"0\n\x1d\x43MsgGCRequestSubGCSessionInfo\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"c\n%CMsgGCRequestSubGCSessionInfoResponse\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0f\n\x07trusted\x18\x02 \x01(\x08\x12\x0c\n\x04port\x18\x03 \x01(\r\x12\x0f\n\x07success\x18\x04 \x01(\x08\"x\n\x16\x43MsgSOCacheHaveVersion\x12\x1c\n\x04soid\x18\x01 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x0f\n\x07version\x18\x02 \x01(\x06\x12\x12\n\nservice_id\x18\x03 \x01(\r\x12\x1b\n\x13\x63\x61\x63hed_file_version\x18\x04 \x01(\r\"\x8f\x02\n\x0f\x43MsgClientHello\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x36\n\x15socache_have_versions\x18\x02 \x03(\x0b\x32\x17.CMsgSOCacheHaveVersion\x12\x1b\n\x13\x63lient_session_need\x18\x03 \x01(\r\x12:\n\x0f\x63lient_launcher\x18\x04 \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12\x12\n\nsecret_key\x18\x05 \x01(\t\x12\x17\n\x0f\x63lient_language\x18\x06 \x01(\r\x12-\n\x06\x65ngine\x18\x07 \x01(\x0e\x32\x0e.ESourceEngine:\rk_ESE_Source1\"\x91\x03\n\x11\x43MsgClientWelcome\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x11\n\tgame_data\x18\x02 \x01(\x0c\x12;\n\x1boutofdate_subscribed_caches\x18\x03 \x03(\x0b\x32\x16.CMsgSOCacheSubscribed\x12\x41\n\x1auptodate_subscribed_caches\x18\x04 \x03(\x0b\x32\x1d.CMsgSOCacheSubscriptionCheck\x12-\n\x08location\x18\x05 \x01(\x0b\x32\x1b.CMsgClientWelcome.Location\x12\x15\n\rsave_game_key\x18\x06 \x01(\x0c\x12\x17\n\x0fitem_schema_crc\x18\x07 \x01(\x07\x12\x16\n\x0eitems_game_url\x18\x08 \x01(\t\x12\x1f\n\x17gc_socache_file_version\x18\t \x01(\r\x1a@\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\"\xe5\x01\n\x14\x43MsgConnectionStatus\x12\x44\n\x06status\x18\x01 \x01(\x0e\x32\x13.GCConnectionStatus:\x1fGCConnectionStatus_HAVE_SESSION\x12\x1b\n\x13\x63lient_session_need\x18\x02 \x01(\r\x12\x16\n\x0equeue_position\x18\x03 \x01(\x05\x12\x12\n\nqueue_size\x18\x04 \x01(\x05\x12\x14\n\x0cwait_seconds\x18\x05 \x01(\x05\x12(\n estimated_wait_seconds_remaining\x18\x06 \x01(\x05\"\xf8\x01\n\x1a\x43MsgGCToGCSOCacheSubscribe\x12\x12\n\nsubscriber\x18\x01 \x01(\x06\x12\x17\n\x0fsubscribe_to_id\x18\x02 \x01(\x06\x12\x14\n\x0csync_version\x18\x03 \x01(\x06\x12\x43\n\rhave_versions\x18\x04 \x03(\x0b\x32,.CMsgGCToGCSOCacheSubscribe.CMsgHaveVersions\x12\x19\n\x11subscribe_to_type\x18\x05 \x01(\r\x1a\x37\n\x10\x43MsgHaveVersions\x12\x12\n\nservice_id\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"n\n\x1c\x43MsgGCToGCSOCacheUnsubscribe\x12\x12\n\nsubscriber\x18\x01 \x01(\x06\x12\x1b\n\x13unsubscribe_from_id\x18\x02 \x01(\x06\x12\x1d\n\x15unsubscribe_from_type\x18\x03 \x01(\r\"\x12\n\x10\x43MsgGCClientPing\"2\n\x1c\x43MsgGCToGCLoadSessionSOCache\x12\x12\n\naccount_id\x18\x01 \x01(\r\"&\n$CMsgGCToGCLoadSessionSOCacheResponse\"f\n\x1c\x43MsgGCToGCUpdateSessionStats\x12\x15\n\ruser_sessions\x18\x01 \x01(\r\x12\x17\n\x0fserver_sessions\x18\x02 \x01(\r\x12\x16\n\x0ein_logon_surge\x18\x03 \x01(\x08\"\xed\x02\n*CWorkshop_PopulateItemDescriptions_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\\\n\tlanguages\x18\x02 \x03(\x0b\x32I.CWorkshop_PopulateItemDescriptions_Request.ItemDescriptionsLanguageBlock\x1a\x45\n\x15SingleItemDescription\x12\x12\n\ngameitemid\x18\x01 \x01(\r\x12\x18\n\x10item_description\x18\x02 \x01(\t\x1a\x8a\x01\n\x1dItemDescriptionsLanguageBlock\x12\x10\n\x08language\x18\x01 \x01(\t\x12W\n\x0c\x64\x65scriptions\x18\x02 \x03(\x0b\x32\x41.CWorkshop_PopulateItemDescriptions_Request.SingleItemDescription\"F\n!CWorkshop_GetContributors_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\ngameitemid\x18\x02 \x01(\r\":\n\"CWorkshop_GetContributors_Response\x12\x14\n\x0c\x63ontributors\x18\x01 \x03(\x06\"\xd5\x03\n%CWorkshop_SetItemPaymentRules_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\ngameitemid\x18\x02 \x01(\r\x12\x61\n\x19\x61ssociated_workshop_files\x18\x03 \x03(\x0b\x32>.CWorkshop_SetItemPaymentRules_Request.WorkshopItemPaymentRule\x12W\n\x10partner_accounts\x18\x04 \x03(\x0b\x32=.CWorkshop_SetItemPaymentRules_Request.PartnerItemPaymentRule\x1ai\n\x17WorkshopItemPaymentRule\x12\x18\n\x10workshop_file_id\x18\x01 \x01(\x04\x12\x1a\n\x12revenue_percentage\x18\x02 \x01(\x02\x12\x18\n\x10rule_description\x18\x03 \x01(\t\x1a\x62\n\x16PartnerItemPaymentRule\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1a\n\x12revenue_percentage\x18\x02 \x01(\x02\x12\x18\n\x10rule_description\x18\x03 \x01(\t\"(\n&CWorkshop_SetItemPaymentRules_Response\"p\n$CBroadcast_PostGameDataFrame_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x06\x12\x14\n\x0c\x62roadcast_id\x18\x03 \x01(\x06\x12\x12\n\nframe_data\x18\x04 \x01(\x0c\"\xfc\x02\n\x15\x43MsgSerializedSOCache\x12\x14\n\x0c\x66ile_version\x18\x01 \x01(\r\x12,\n\x06\x63\x61\x63hes\x18\x02 \x03(\x0b\x32\x1c.CMsgSerializedSOCache.Cache\x12\x1f\n\x17gc_socache_file_version\x18\x03 \x01(\r\x1a>\n\tTypeCache\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07objects\x18\x02 \x03(\x0c\x12\x12\n\nservice_id\x18\x03 \x01(\r\x1a\xbd\x01\n\x05\x43\x61\x63he\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\x12\x36\n\x08versions\x18\x03 \x03(\x0b\x32$.CMsgSerializedSOCache.Cache.Version\x12\x35\n\x0btype_caches\x18\x04 \x03(\x0b\x32 .CMsgSerializedSOCache.TypeCache\x1a+\n\x07Version\x12\x0f\n\x07service\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"G\n\x1f\x43MsgGCToClientPollConvarRequest\x12\x13\n\x0b\x63onvar_name\x18\x01 \x01(\t\x12\x0f\n\x07poll_id\x18\x02 \x01(\r\"I\n CMsgGCToClientPollConvarResponse\x12\x0f\n\x07poll_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63onvar_value\x18\x02 \x01(\t*5\n\rESourceEngine\x12\x11\n\rk_ESE_Source1\x10\x00\x12\x11\n\rk_ESE_Source2\x10\x01*i\n\x12PartnerAccountType\x12\x10\n\x0cPARTNER_NONE\x10\x00\x12\x19\n\x15PARTNER_PERFECT_WORLD\x10\x01\x12\x11\n\rPARTNER_NEXON\x10\x02\x12\x13\n\x0fPARTNER_INVALID\x10\x03*\xa0\x02\n\x12GCConnectionStatus\x12#\n\x1fGCConnectionStatus_HAVE_SESSION\x10\x00\x12$\n GCConnectionStatus_GC_GOING_DOWN\x10\x01\x12!\n\x1dGCConnectionStatus_NO_SESSION\x10\x02\x12\x30\n,GCConnectionStatus_NO_SESSION_IN_LOGON_QUEUE\x10\x03\x12\x1f\n\x1bGCConnectionStatus_NO_STEAM\x10\x04\x12 \n\x1cGCConnectionStatus_SUSPENDED\x10\x05\x12\'\n#GCConnectionStatus_STEAM_GOING_DOWN\x10\x06\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x16gcsdk_gcmessages.proto\x1a\x13steammessages.proto\"@\n\x0e\x43MsgSHA1Digest\x12\x0e\n\x06\x62lock1\x18\x01 \x02(\x06\x12\x0e\n\x06\x62lock2\x18\x02 \x02(\x06\x12\x0e\n\x06\x62lock3\x18\x03 \x02(\x07\")\n\rCMsgSOIDOwner\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\"\x83\x01\n\x12\x43MsgSOSingleObject\x12\x0f\n\x07type_id\x18\x02 \x01(\x05\x12\x13\n\x0bobject_data\x18\x03 \x01(\x0c\x12\x0f\n\x07version\x18\x04 \x01(\x06\x12\"\n\nowner_soid\x18\x05 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x06 \x01(\r\"\xdb\x02\n\x15\x43MsgSOMultipleObjects\x12=\n\x10objects_modified\x18\x02 \x03(\x0b\x32#.CMsgSOMultipleObjects.SingleObject\x12\x0f\n\x07version\x18\x03 \x01(\x06\x12:\n\robjects_added\x18\x04 \x03(\x0b\x32#.CMsgSOMultipleObjects.SingleObject\x12<\n\x0fobjects_removed\x18\x05 \x03(\x0b\x32#.CMsgSOMultipleObjects.SingleObject\x12\"\n\nowner_soid\x18\x06 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x07 \x01(\r\x1a@\n\x0cSingleObject\x12\x0f\n\x07type_id\x18\x01 \x01(\x05\x12\x13\n\x0bobject_data\x18\x02 \x01(\x0c:\n\x80\xa6\x1d\x80\x02\x88\xa6\x1d\x80\x08\"\xfc\x01\n\x15\x43MsgSOCacheSubscribed\x12\x36\n\x07objects\x18\x02 \x03(\x0b\x32%.CMsgSOCacheSubscribed.SubscribedType\x12\x0f\n\x07version\x18\x03 \x01(\x06\x12\"\n\nowner_soid\x18\x04 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x05 \x01(\r\x12\x14\n\x0cservice_list\x18\x06 \x03(\r\x12\x14\n\x0csync_version\x18\x07 \x01(\x06\x1a\x36\n\x0eSubscribedType\x12\x0f\n\x07type_id\x18\x01 \x01(\x05\x12\x13\n\x0bobject_data\x18\x02 \x03(\x0c\"\x94\x01\n\x1d\x43MsgSOCacheSubscribedUpToDate\x12\x0f\n\x07version\x18\x01 \x01(\x06\x12\"\n\nowner_soid\x18\x02 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x03 \x01(\r\x12\x14\n\x0cservice_list\x18\x04 \x03(\r\x12\x14\n\x0csync_version\x18\x05 \x01(\x06\"=\n\x17\x43MsgSOCacheUnsubscribed\x12\"\n\nowner_soid\x18\x02 \x01(\x0b\x32\x0e.CMsgSOIDOwner\"\x93\x01\n\x1c\x43MsgSOCacheSubscriptionCheck\x12\x0f\n\x07version\x18\x02 \x01(\x06\x12\"\n\nowner_soid\x18\x03 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x04 \x01(\r\x12\x14\n\x0cservice_list\x18\x05 \x03(\r\x12\x14\n\x0csync_version\x18\x06 \x01(\x06\"D\n\x1e\x43MsgSOCacheSubscriptionRefresh\x12\"\n\nowner_soid\x18\x02 \x01(\x0b\x32\x0e.CMsgSOIDOwner\"%\n\x12\x43MsgSOCacheVersion\x12\x0f\n\x07version\x18\x01 \x01(\x06\"L\n\x16\x43MsgGCMultiplexMessage\x12\x0f\n\x07msgtype\x18\x01 \x01(\r\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\x12\x10\n\x08steamids\x18\x03 \x03(\x06\"\xbb\x01\n\x13\x43GCToGCMsgMasterAck\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x14\n\x0cmachine_name\x18\x03 \x01(\t\x12\x14\n\x0cprocess_name\x18\x04 \x01(\t\x12/\n\tdirectory\x18\x06 \x03(\x0b\x32\x1c.CGCToGCMsgMasterAck.Process\x1a\x34\n\x07Process\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x16\n\x0etype_instances\x18\x02 \x03(\r\"2\n\x1c\x43GCToGCMsgMasterAck_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"7\n\x19\x43MsgGCToGCUniverseStartup\x12\x1a\n\x12is_initial_startup\x18\x01 \x01(\x08\"4\n!CMsgGCToGCUniverseStartupResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\x05\"\x8e\x01\n\x1f\x43GCToGCMsgMasterStartupComplete\x12\x38\n\x07gc_info\x18\x01 \x03(\x0b\x32\'.CGCToGCMsgMasterStartupComplete.GCInfo\x1a\x31\n\x06GCInfo\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x14\n\x0cmachine_name\x18\x02 \x01(\t\"L\n\x10\x43GCToGCMsgRouted\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x13\n\x0bnet_message\x18\x03 \x01(\x0c\">\n\x15\x43GCToGCMsgRoutedReply\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x13\n\x0bnet_message\x18\x02 \x01(\x0c\"\x95\x01\n\x1c\x43MsgGCUpdateSubGCSessionInfo\x12\x39\n\x07updates\x18\x01 \x03(\x0b\x32(.CMsgGCUpdateSubGCSessionInfo.CMsgUpdate\x1a:\n\nCMsgUpdate\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\n\n\x02ip\x18\x02 \x01(\x07\x12\x0f\n\x07trusted\x18\x03 \x01(\x08\"0\n\x1d\x43MsgGCRequestSubGCSessionInfo\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"c\n%CMsgGCRequestSubGCSessionInfoResponse\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0f\n\x07trusted\x18\x02 \x01(\x08\x12\x0c\n\x04port\x18\x03 \x01(\r\x12\x0f\n\x07success\x18\x04 \x01(\x08\"x\n\x16\x43MsgSOCacheHaveVersion\x12\x1c\n\x04soid\x18\x01 \x01(\x0b\x32\x0e.CMsgSOIDOwner\x12\x0f\n\x07version\x18\x02 \x01(\x06\x12\x12\n\nservice_id\x18\x03 \x01(\r\x12\x1b\n\x13\x63\x61\x63hed_file_version\x18\x04 \x01(\r\"\x8f\x02\n\x0f\x43MsgClientHello\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x36\n\x15socache_have_versions\x18\x02 \x03(\x0b\x32\x17.CMsgSOCacheHaveVersion\x12\x1b\n\x13\x63lient_session_need\x18\x03 \x01(\r\x12:\n\x0f\x63lient_launcher\x18\x04 \x01(\x0e\x32\x13.PartnerAccountType:\x0cPARTNER_NONE\x12\x12\n\nsecret_key\x18\x05 \x01(\t\x12\x17\n\x0f\x63lient_language\x18\x06 \x01(\r\x12-\n\x06\x65ngine\x18\x07 \x01(\x0e\x32\x0e.ESourceEngine:\rk_ESE_Source1\"\x91\x03\n\x11\x43MsgClientWelcome\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x11\n\tgame_data\x18\x02 \x01(\x0c\x12;\n\x1boutofdate_subscribed_caches\x18\x03 \x03(\x0b\x32\x16.CMsgSOCacheSubscribed\x12\x41\n\x1auptodate_subscribed_caches\x18\x04 \x03(\x0b\x32\x1d.CMsgSOCacheSubscriptionCheck\x12-\n\x08location\x18\x05 \x01(\x0b\x32\x1b.CMsgClientWelcome.Location\x12\x15\n\rsave_game_key\x18\x06 \x01(\x0c\x12\x17\n\x0fitem_schema_crc\x18\x07 \x01(\x07\x12\x16\n\x0eitems_game_url\x18\x08 \x01(\t\x12\x1f\n\x17gc_socache_file_version\x18\t \x01(\r\x1a@\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\"\xe5\x01\n\x14\x43MsgConnectionStatus\x12\x44\n\x06status\x18\x01 \x01(\x0e\x32\x13.GCConnectionStatus:\x1fGCConnectionStatus_HAVE_SESSION\x12\x1b\n\x13\x63lient_session_need\x18\x02 \x01(\r\x12\x16\n\x0equeue_position\x18\x03 \x01(\x05\x12\x12\n\nqueue_size\x18\x04 \x01(\x05\x12\x14\n\x0cwait_seconds\x18\x05 \x01(\x05\x12(\n estimated_wait_seconds_remaining\x18\x06 \x01(\x05\"\xf8\x01\n\x1a\x43MsgGCToGCSOCacheSubscribe\x12\x12\n\nsubscriber\x18\x01 \x01(\x06\x12\x17\n\x0fsubscribe_to_id\x18\x02 \x01(\x06\x12\x14\n\x0csync_version\x18\x03 \x01(\x06\x12\x43\n\rhave_versions\x18\x04 \x03(\x0b\x32,.CMsgGCToGCSOCacheSubscribe.CMsgHaveVersions\x12\x19\n\x11subscribe_to_type\x18\x05 \x01(\r\x1a\x37\n\x10\x43MsgHaveVersions\x12\x12\n\nservice_id\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"n\n\x1c\x43MsgGCToGCSOCacheUnsubscribe\x12\x12\n\nsubscriber\x18\x01 \x01(\x06\x12\x1b\n\x13unsubscribe_from_id\x18\x02 \x01(\x06\x12\x1d\n\x15unsubscribe_from_type\x18\x03 \x01(\r\"\x12\n\x10\x43MsgGCClientPing\"\x8a\x01\n\x1f\x43MsgGCToGCForwardAccountDetails\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x41\n\x0f\x61\x63\x63ount_details\x18\x02 \x01(\x0b\x32(.CGCSystemMsg_GetAccountDetails_Response\x12\x13\n\x0b\x61ge_seconds\x18\x03 \x01(\r\"u\n\x1c\x43MsgGCToGCLoadSessionSOCache\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x41\n\x17\x66orward_account_details\x18\x02 \x01(\x0b\x32 .CMsgGCToGCForwardAccountDetails\"&\n$CMsgGCToGCLoadSessionSOCacheResponse\"f\n\x1c\x43MsgGCToGCUpdateSessionStats\x12\x15\n\ruser_sessions\x18\x01 \x01(\r\x12\x17\n\x0fserver_sessions\x18\x02 \x01(\r\x12\x16\n\x0ein_logon_surge\x18\x03 \x01(\x08\"\xed\x02\n*CWorkshop_PopulateItemDescriptions_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\\\n\tlanguages\x18\x02 \x03(\x0b\x32I.CWorkshop_PopulateItemDescriptions_Request.ItemDescriptionsLanguageBlock\x1a\x45\n\x15SingleItemDescription\x12\x12\n\ngameitemid\x18\x01 \x01(\r\x12\x18\n\x10item_description\x18\x02 \x01(\t\x1a\x8a\x01\n\x1dItemDescriptionsLanguageBlock\x12\x10\n\x08language\x18\x01 \x01(\t\x12W\n\x0c\x64\x65scriptions\x18\x02 \x03(\x0b\x32\x41.CWorkshop_PopulateItemDescriptions_Request.SingleItemDescription\"F\n!CWorkshop_GetContributors_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\ngameitemid\x18\x02 \x01(\r\":\n\"CWorkshop_GetContributors_Response\x12\x14\n\x0c\x63ontributors\x18\x01 \x03(\x06\"\xd5\x03\n%CWorkshop_SetItemPaymentRules_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\ngameitemid\x18\x02 \x01(\r\x12\x61\n\x19\x61ssociated_workshop_files\x18\x03 \x03(\x0b\x32>.CWorkshop_SetItemPaymentRules_Request.WorkshopItemPaymentRule\x12W\n\x10partner_accounts\x18\x04 \x03(\x0b\x32=.CWorkshop_SetItemPaymentRules_Request.PartnerItemPaymentRule\x1ai\n\x17WorkshopItemPaymentRule\x12\x18\n\x10workshop_file_id\x18\x01 \x01(\x04\x12\x1a\n\x12revenue_percentage\x18\x02 \x01(\x02\x12\x18\n\x10rule_description\x18\x03 \x01(\t\x1a\x62\n\x16PartnerItemPaymentRule\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1a\n\x12revenue_percentage\x18\x02 \x01(\x02\x12\x18\n\x10rule_description\x18\x03 \x01(\t\"(\n&CWorkshop_SetItemPaymentRules_Response\"p\n$CBroadcast_PostGameDataFrame_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x06\x12\x14\n\x0c\x62roadcast_id\x18\x03 \x01(\x06\x12\x12\n\nframe_data\x18\x04 \x01(\x0c\"\xfc\x02\n\x15\x43MsgSerializedSOCache\x12\x14\n\x0c\x66ile_version\x18\x01 \x01(\r\x12,\n\x06\x63\x61\x63hes\x18\x02 \x03(\x0b\x32\x1c.CMsgSerializedSOCache.Cache\x12\x1f\n\x17gc_socache_file_version\x18\x03 \x01(\r\x1a>\n\tTypeCache\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07objects\x18\x02 \x03(\x0c\x12\x12\n\nservice_id\x18\x03 \x01(\r\x1a\xbd\x01\n\x05\x43\x61\x63he\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\x12\x36\n\x08versions\x18\x03 \x03(\x0b\x32$.CMsgSerializedSOCache.Cache.Version\x12\x35\n\x0btype_caches\x18\x04 \x03(\x0b\x32 .CMsgSerializedSOCache.TypeCache\x1a+\n\x07Version\x12\x0f\n\x07service\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"G\n\x1f\x43MsgGCToClientPollConvarRequest\x12\x13\n\x0b\x63onvar_name\x18\x01 \x01(\t\x12\x0f\n\x07poll_id\x18\x02 \x01(\r\"I\n CMsgGCToClientPollConvarResponse\x12\x0f\n\x07poll_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63onvar_value\x18\x02 \x01(\t*5\n\rESourceEngine\x12\x11\n\rk_ESE_Source1\x10\x00\x12\x11\n\rk_ESE_Source2\x10\x01*i\n\x12PartnerAccountType\x12\x10\n\x0cPARTNER_NONE\x10\x00\x12\x19\n\x15PARTNER_PERFECT_WORLD\x10\x01\x12\x11\n\rPARTNER_NEXON\x10\x02\x12\x13\n\x0fPARTNER_INVALID\x10\x03*\xa0\x02\n\x12GCConnectionStatus\x12#\n\x1fGCConnectionStatus_HAVE_SESSION\x10\x00\x12$\n GCConnectionStatus_GC_GOING_DOWN\x10\x01\x12!\n\x1dGCConnectionStatus_NO_SESSION\x10\x02\x12\x30\n,GCConnectionStatus_NO_SESSION_IN_LOGON_QUEUE\x10\x03\x12\x1f\n\x1bGCConnectionStatus_NO_STEAM\x10\x04\x12 \n\x1cGCConnectionStatus_SUSPENDED\x10\x05\x12\'\n#GCConnectionStatus_STEAM_GOING_DOWN\x10\x06\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[steammessages__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -43,8 +43,8 @@ _ESOURCEENGINE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5659,
-  serialized_end=5712,
+  serialized_start=5867,
+  serialized_end=5920,
 )
 _sym_db.RegisterEnumDescriptor(_ESOURCEENGINE)
 
@@ -74,8 +74,8 @@ _PARTNERACCOUNTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5714,
-  serialized_end=5819,
+  serialized_start=5922,
+  serialized_end=6027,
 )
 _sym_db.RegisterEnumDescriptor(_PARTNERACCOUNTTYPE)
 
@@ -117,8 +117,8 @@ _GCCONNECTIONSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5822,
-  serialized_end=6110,
+  serialized_start=6030,
+  serialized_end=6318,
 )
 _sym_db.RegisterEnumDescriptor(_GCCONNECTIONSTATUS)
 
@@ -1721,16 +1721,30 @@ _CMSGGCCLIENTPING = _descriptor.Descriptor(
 )
 
 
-_CMSGGCTOGCLOADSESSIONSOCACHE = _descriptor.Descriptor(
-  name='CMsgGCToGCLoadSessionSOCache',
-  full_name='CMsgGCToGCLoadSessionSOCache',
+_CMSGGCTOGCFORWARDACCOUNTDETAILS = _descriptor.Descriptor(
+  name='CMsgGCToGCForwardAccountDetails',
+  full_name='CMsgGCToGCForwardAccountDetails',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgGCToGCLoadSessionSOCache.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      name='steamid', full_name='CMsgGCToGCForwardAccountDetails.steamid', index=0,
+      number=1, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='account_details', full_name='CMsgGCToGCForwardAccountDetails.account_details', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='age_seconds', full_name='CMsgGCToGCForwardAccountDetails.age_seconds', index=2,
+      number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1747,8 +1761,46 @@ _CMSGGCTOGCLOADSESSIONSOCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3804,
-  serialized_end=3854,
+  serialized_start=3805,
+  serialized_end=3943,
+)
+
+
+_CMSGGCTOGCLOADSESSIONSOCACHE = _descriptor.Descriptor(
+  name='CMsgGCToGCLoadSessionSOCache',
+  full_name='CMsgGCToGCLoadSessionSOCache',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='CMsgGCToGCLoadSessionSOCache.account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='forward_account_details', full_name='CMsgGCToGCLoadSessionSOCache.forward_account_details', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3945,
+  serialized_end=4062,
 )
 
 
@@ -1771,8 +1823,8 @@ _CMSGGCTOGCLOADSESSIONSOCACHERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3856,
-  serialized_end=3894,
+  serialized_start=4064,
+  serialized_end=4102,
 )
 
 
@@ -1816,8 +1868,8 @@ _CMSGGCTOGCUPDATESESSIONSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3896,
-  serialized_end=3998,
+  serialized_start=4104,
+  serialized_end=4206,
 )
 
 
@@ -1854,8 +1906,8 @@ _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_SINGLEITEMDESCRIPTION = _descriptor.
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4156,
-  serialized_end=4225,
+  serialized_start=4364,
+  serialized_end=4433,
 )
 
 _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_ITEMDESCRIPTIONSLANGUAGEBLOCK = _descriptor.Descriptor(
@@ -1891,8 +1943,8 @@ _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_ITEMDESCRIPTIONSLANGUAGEBLOCK = _des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4228,
-  serialized_end=4366,
+  serialized_start=4436,
+  serialized_end=4574,
 )
 
 _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST = _descriptor.Descriptor(
@@ -1928,8 +1980,8 @@ _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4001,
-  serialized_end=4366,
+  serialized_start=4209,
+  serialized_end=4574,
 )
 
 
@@ -1966,8 +2018,8 @@ _CWORKSHOP_GETCONTRIBUTORS_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4368,
-  serialized_end=4438,
+  serialized_start=4576,
+  serialized_end=4646,
 )
 
 
@@ -1997,8 +2049,8 @@ _CWORKSHOP_GETCONTRIBUTORS_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4440,
-  serialized_end=4498,
+  serialized_start=4648,
+  serialized_end=4706,
 )
 
 
@@ -2042,8 +2094,8 @@ _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST_WORKSHOPITEMPAYMENTRULE = _descriptor.Des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4765,
-  serialized_end=4870,
+  serialized_start=4973,
+  serialized_end=5078,
 )
 
 _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST_PARTNERITEMPAYMENTRULE = _descriptor.Descriptor(
@@ -2086,8 +2138,8 @@ _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST_PARTNERITEMPAYMENTRULE = _descriptor.Desc
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4872,
-  serialized_end=4970,
+  serialized_start=5080,
+  serialized_end=5178,
 )
 
 _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST = _descriptor.Descriptor(
@@ -2137,8 +2189,8 @@ _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4501,
-  serialized_end=4970,
+  serialized_start=4709,
+  serialized_end=5178,
 )
 
 
@@ -2161,8 +2213,8 @@ _CWORKSHOP_SETITEMPAYMENTRULES_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4972,
-  serialized_end=5012,
+  serialized_start=5180,
+  serialized_end=5220,
 )
 
 
@@ -2213,8 +2265,8 @@ _CBROADCAST_POSTGAMEDATAFRAME_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5014,
-  serialized_end=5126,
+  serialized_start=5222,
+  serialized_end=5334,
 )
 
 
@@ -2258,8 +2310,8 @@ _CMSGSERIALIZEDSOCACHE_TYPECACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5255,
-  serialized_end=5317,
+  serialized_start=5463,
+  serialized_end=5525,
 )
 
 _CMSGSERIALIZEDSOCACHE_CACHE_VERSION = _descriptor.Descriptor(
@@ -2295,8 +2347,8 @@ _CMSGSERIALIZEDSOCACHE_CACHE_VERSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5466,
-  serialized_end=5509,
+  serialized_start=5674,
+  serialized_end=5717,
 )
 
 _CMSGSERIALIZEDSOCACHE_CACHE = _descriptor.Descriptor(
@@ -2346,8 +2398,8 @@ _CMSGSERIALIZEDSOCACHE_CACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5320,
-  serialized_end=5509,
+  serialized_start=5528,
+  serialized_end=5717,
 )
 
 _CMSGSERIALIZEDSOCACHE = _descriptor.Descriptor(
@@ -2390,8 +2442,8 @@ _CMSGSERIALIZEDSOCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5129,
-  serialized_end=5509,
+  serialized_start=5337,
+  serialized_end=5717,
 )
 
 
@@ -2428,8 +2480,8 @@ _CMSGGCTOCLIENTPOLLCONVARREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5511,
-  serialized_end=5582,
+  serialized_start=5719,
+  serialized_end=5790,
 )
 
 
@@ -2466,8 +2518,8 @@ _CMSGGCTOCLIENTPOLLCONVARRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5584,
-  serialized_end=5657,
+  serialized_start=5792,
+  serialized_end=5865,
 )
 
 _CMSGSOSINGLEOBJECT.fields_by_name['owner_soid'].message_type = _CMSGSOIDOWNER
@@ -2500,6 +2552,8 @@ _CMSGCLIENTWELCOME.fields_by_name['location'].message_type = _CMSGCLIENTWELCOME_
 _CMSGCONNECTIONSTATUS.fields_by_name['status'].enum_type = _GCCONNECTIONSTATUS
 _CMSGGCTOGCSOCACHESUBSCRIBE_CMSGHAVEVERSIONS.containing_type = _CMSGGCTOGCSOCACHESUBSCRIBE
 _CMSGGCTOGCSOCACHESUBSCRIBE.fields_by_name['have_versions'].message_type = _CMSGGCTOGCSOCACHESUBSCRIBE_CMSGHAVEVERSIONS
+_CMSGGCTOGCFORWARDACCOUNTDETAILS.fields_by_name['account_details'].message_type = steammessages__pb2._CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE
+_CMSGGCTOGCLOADSESSIONSOCACHE.fields_by_name['forward_account_details'].message_type = _CMSGGCTOGCFORWARDACCOUNTDETAILS
 _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_SINGLEITEMDESCRIPTION.containing_type = _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST
 _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_ITEMDESCRIPTIONSLANGUAGEBLOCK.fields_by_name['descriptions'].message_type = _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_SINGLEITEMDESCRIPTION
 _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_ITEMDESCRIPTIONSLANGUAGEBLOCK.containing_type = _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST
@@ -2542,6 +2596,7 @@ DESCRIPTOR.message_types_by_name['CMsgConnectionStatus'] = _CMSGCONNECTIONSTATUS
 DESCRIPTOR.message_types_by_name['CMsgGCToGCSOCacheSubscribe'] = _CMSGGCTOGCSOCACHESUBSCRIBE
 DESCRIPTOR.message_types_by_name['CMsgGCToGCSOCacheUnsubscribe'] = _CMSGGCTOGCSOCACHEUNSUBSCRIBE
 DESCRIPTOR.message_types_by_name['CMsgGCClientPing'] = _CMSGGCCLIENTPING
+DESCRIPTOR.message_types_by_name['CMsgGCToGCForwardAccountDetails'] = _CMSGGCTOGCFORWARDACCOUNTDETAILS
 DESCRIPTOR.message_types_by_name['CMsgGCToGCLoadSessionSOCache'] = _CMSGGCTOGCLOADSESSIONSOCACHE
 DESCRIPTOR.message_types_by_name['CMsgGCToGCLoadSessionSOCacheResponse'] = _CMSGGCTOGCLOADSESSIONSOCACHERESPONSE
 DESCRIPTOR.message_types_by_name['CMsgGCToGCUpdateSessionStats'] = _CMSGGCTOGCUPDATESESSIONSTATS
@@ -2809,6 +2864,13 @@ CMsgGCClientPing = _reflection.GeneratedProtocolMessageType('CMsgGCClientPing', 
   # @@protoc_insertion_point(class_scope:CMsgGCClientPing)
   ))
 _sym_db.RegisterMessage(CMsgGCClientPing)
+
+CMsgGCToGCForwardAccountDetails = _reflection.GeneratedProtocolMessageType('CMsgGCToGCForwardAccountDetails', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOGCFORWARDACCOUNTDETAILS,
+  __module__ = 'gcsdk_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:CMsgGCToGCForwardAccountDetails)
+  ))
+_sym_db.RegisterMessage(CMsgGCToGCForwardAccountDetails)
 
 CMsgGCToGCLoadSessionSOCache = _reflection.GeneratedProtocolMessageType('CMsgGCToGCLoadSessionSOCache', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCLOADSESSIONSOCACHE,

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_chat.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n!dota_gcmessages_client_chat.proto\x1a\x17\x64ota_shared_enums.proto\"`\n\x1f\x43MsgClientToGCPrivateChatInvite\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12invited_account_id\x18\x02 \x01(\r\"[\n\x1d\x43MsgClientToGCPrivateChatKick\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x17\n\x0fkick_account_id\x18\x02 \x01(\r\"a\n CMsgClientToGCPrivateChatPromote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12promote_account_id\x18\x02 \x01(\r\"_\n\x1f\x43MsgClientToGCPrivateChatDemote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x19\n\x11\x64\x65mote_account_id\x18\x02 \x01(\r\"\xbd\x04\n!CMsgGCToClientPrivateChatResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x42\n\x06result\x18\x02 \x01(\x0e\x32).CMsgGCToClientPrivateChatResponse.Result:\x07SUCCESS\x12\x10\n\x08username\x18\x03 \x01(\t\"\x9e\x03\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x19\n\x15\x46\x41ILURE_CREATION_LOCK\x10\x01\x12\x1b\n\x17\x46\x41ILURE_SQL_TRANSACTION\x10\x02\x12\x14\n\x10\x46\x41ILURE_SDO_LOAD\x10\x03\x12\x19\n\x15\x46\x41ILURE_NO_PERMISSION\x10\x04\x12\x1a\n\x16\x46\x41ILURE_ALREADY_MEMBER\x10\x05\x12\x18\n\x14\x46\x41ILURE_NOT_A_MEMBER\x10\x07\x12\x1f\n\x1b\x46\x41ILURE_NO_REMAINING_ADMINS\x10\x08\x12\x13\n\x0f\x46\x41ILURE_NO_ROOM\x10\t\x12!\n\x1d\x46\x41ILURE_CREATION_RATE_LIMITED\x10\n\x12 \n\x1c\x46\x41ILURE_UNKNOWN_CHANNEL_NAME\x10\x0b\x12\x18\n\x14\x46\x41ILURE_UNKNOWN_USER\x10\x0c\x12\x19\n\x15\x46\x41ILURE_UNKNOWN_ERROR\x10\r\x12\x1d\n\x19\x46\x41ILURE_CANNOT_KICK_ADMIN\x10\x0e\x12\x19\n\x15\x46\x41ILURE_ALREADY_ADMIN\x10\x0f\"I\n$CMsgClientToGCPrivateChatInfoRequest\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\"\xee\x01\n%CMsgGCToClientPrivateChatInfoResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12>\n\x07members\x18\x02 \x03(\x0b\x32-.CMsgGCToClientPrivateChatInfoResponse.Member\x12\x0f\n\x07\x63reator\x18\x03 \x01(\r\x12\x15\n\rcreation_date\x18\x04 \x01(\r\x1a:\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\r\"w\n\x17\x43MsgDOTAJoinChatChannel\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x04 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\".\n\x18\x43MsgDOTALeaveChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x04\"7\n\x19\x43MsgDOTAClientIgnoredUser\x12\x1a\n\x12ignored_account_id\x18\x01 \x01(\r\"\xe3\x05\n\x13\x43MsgDOTAChatMessage\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nchannel_id\x18\x02 \x01(\x04\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x11\n\ttimestamp\x18\x05 \x01(\r\x12!\n\x19suggest_invite_account_id\x18\x06 \x01(\r\x12\x1b\n\x13suggest_invite_name\x18\x07 \x01(\t\x12&\n\x1e\x66\x61ntasy_draft_owner_account_id\x18\x08 \x01(\r\x12\'\n\x1f\x66\x61ntasy_draft_player_account_id\x18\t \x01(\r\x12\x10\n\x08\x65vent_id\x18\n \x01(\r\x12\x1f\n\x17suggest_invite_to_lobby\x18\x0b \x01(\x08\x12\x14\n\x0c\x65vent_points\x18\x0c \x01(\r\x12\x11\n\tcoin_flip\x18\r \x01(\x08\x12\x15\n\tplayer_id\x18\x0e \x01(\x05:\x02-1\x12 \n\x18share_profile_account_id\x18\x0f \x01(\r\x12\x17\n\x0f\x63hannel_user_id\x18\x10 \x01(\r\x12\x30\n\tdice_roll\x18\x11 \x01(\x0b\x32\x1d.CMsgDOTAChatMessage.DiceRoll\x12\x16\n\x0eshare_party_id\x18\x12 \x01(\x04\x12\x16\n\x0eshare_lobby_id\x18\x13 \x01(\x04\x12\"\n\x1ashare_lobby_custom_game_id\x18\x14 \x01(\x04\x12\x1b\n\x13share_lobby_passkey\x18\x15 \x01(\t\x12\x1f\n\x17private_chat_channel_id\x18\x16 \x01(\r\x12\x0e\n\x06status\x18\x17 \x01(\r\x12\x1a\n\x12\x62\x61ttle_cup_victory\x18\x18 \x01(\x08\x1a>\n\x08\x44iceRoll\x12\x10\n\x08roll_min\x18\x01 \x01(\x05\x12\x10\n\x08roll_max\x18\x02 \x01(\x05\x12\x0e\n\x06result\x18\x03 \x01(\x05\"e\n\x12\x43MsgDOTAChatMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"\xea\x05\n\x1f\x43MsgDOTAJoinChatChannelResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x12\n\nchannel_id\x18\x03 \x01(\x06\x12\x13\n\x0bmax_members\x18\x04 \x01(\r\x12$\n\x07members\x18\x05 \x03(\x0b\x32\x13.CMsgDOTAChatMember\x12\x46\n\x0c\x63hannel_type\x18\x06 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x45\n\x06result\x18\x07 \x01(\x0e\x32\'.CMsgDOTAJoinChatChannelResponse.Result:\x0cJOIN_SUCCESS\x12\x19\n\x11gc_initiated_join\x18\x08 \x01(\x08\x12\x17\n\x0f\x63hannel_user_id\x18\t \x01(\r\x12\x17\n\x0fwelcome_message\x18\n \x01(\t\"\xf3\x02\n\x06Result\x12\x10\n\x0cJOIN_SUCCESS\x10\x00\x12\x18\n\x14INVALID_CHANNEL_TYPE\x10\x01\x12\x15\n\x11\x41\x43\x43OUNT_NOT_FOUND\x10\x02\x12\x0e\n\nACH_FAILED\x10\x03\x12\x1d\n\x19USER_IN_TOO_MANY_CHANNELS\x10\x04\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x10\n\x0c\x43HANNEL_FULL\x10\x06\x12\x1b\n\x17\x43HANNEL_FULL_OVERFLOWED\x10\x07\x12\x16\n\x12\x46\x41ILED_TO_ADD_USER\x10\x08\x12\x19\n\x15\x43HANNEL_TYPE_DISABLED\x10\t\x12\x1e\n\x1aPRIVATE_CHAT_CREATE_FAILED\x10\n\x12\x1e\n\x1aPRIVATE_CHAT_NO_PERMISSION\x10\x0b\x12#\n\x1fPRIVATE_CHAT_CREATE_LOCK_FAILED\x10\x0c\x12\x17\n\x13PRIVATE_CHAT_KICKED\x10\r\"Y\n\x1d\x43MsgDOTAChatChannelFullUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12$\n\x07members\x18\x02 \x03(\x0b\x32\x13.CMsgDOTAChatMember\"\x85\x01\n\x1e\x43MsgDOTAOtherJoinedChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08steam_id\x18\x03 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x04 \x01(\r\x12\x0e\n\x06status\x18\x05 \x01(\r\"]\n\x1c\x43MsgDOTAOtherLeftChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\"\xf5\x01\n\x1f\x43MsgDOTAChatChannelMemberUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x16\n\x0eleft_steam_ids\x18\x02 \x03(\x06\x12\x45\n\x0ejoined_members\x18\x03 \x03(\x0b\x32-.CMsgDOTAChatChannelMemberUpdate.JoinedMember\x1a_\n\x0cJoinedMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\" \n\x1e\x43MsgDOTARequestChatChannelList\"\xf2\x01\n&CMsgDOTARequestChatChannelListResponse\x12\x45\n\x08\x63hannels\x18\x01 \x03(\x0b\x32\x33.CMsgDOTARequestChatChannelListResponse.ChatChannel\x1a\x80\x01\n\x0b\x43hatChannel\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x13\n\x0bnum_members\x18\x02 \x01(\r\x12\x46\n\x0c\x63hannel_type\x18\x03 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"-\n\x17\x43MsgDOTAChatGetUserList\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\"\xca\x01\n\x1f\x43MsgDOTAChatGetUserListResponse\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x38\n\x07members\x18\x02 \x03(\x0b\x32\'.CMsgDOTAChatGetUserListResponse.Member\x1aY\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"z\n\x1a\x43MsgDOTAChatGetMemberCount\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"\x98\x01\n\"CMsgDOTAChatGetMemberCountResponse\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x14\n\x0cmember_count\x18\x03 \x01(\r\"\xd9\x01\n\x1a\x43MsgDOTAChatRegionsEnabled\x12\x1a\n\x12\x65nable_all_regions\x18\x01 \x01(\x08\x12;\n\x0f\x65nabled_regions\x18\x02 \x03(\x0b\x32\".CMsgDOTAChatRegionsEnabled.Region\x1a\x62\n\x06Region\x12\x14\n\x0cmin_latitude\x18\x01 \x01(\x02\x12\x14\n\x0cmax_latitude\x18\x02 \x01(\x02\x12\x15\n\rmin_longitude\x18\x03 \x01(\x02\x12\x15\n\rmax_longitude\x18\x04 \x01(\x02\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n!dota_gcmessages_client_chat.proto\x1a\x17\x64ota_shared_enums.proto\"`\n\x1f\x43MsgClientToGCPrivateChatInvite\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12invited_account_id\x18\x02 \x01(\r\"[\n\x1d\x43MsgClientToGCPrivateChatKick\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x17\n\x0fkick_account_id\x18\x02 \x01(\r\"a\n CMsgClientToGCPrivateChatPromote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12promote_account_id\x18\x02 \x01(\r\"_\n\x1f\x43MsgClientToGCPrivateChatDemote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x19\n\x11\x64\x65mote_account_id\x18\x02 \x01(\r\"\xbd\x04\n!CMsgGCToClientPrivateChatResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x42\n\x06result\x18\x02 \x01(\x0e\x32).CMsgGCToClientPrivateChatResponse.Result:\x07SUCCESS\x12\x10\n\x08username\x18\x03 \x01(\t\"\x9e\x03\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x19\n\x15\x46\x41ILURE_CREATION_LOCK\x10\x01\x12\x1b\n\x17\x46\x41ILURE_SQL_TRANSACTION\x10\x02\x12\x14\n\x10\x46\x41ILURE_SDO_LOAD\x10\x03\x12\x19\n\x15\x46\x41ILURE_NO_PERMISSION\x10\x04\x12\x1a\n\x16\x46\x41ILURE_ALREADY_MEMBER\x10\x05\x12\x18\n\x14\x46\x41ILURE_NOT_A_MEMBER\x10\x07\x12\x1f\n\x1b\x46\x41ILURE_NO_REMAINING_ADMINS\x10\x08\x12\x13\n\x0f\x46\x41ILURE_NO_ROOM\x10\t\x12!\n\x1d\x46\x41ILURE_CREATION_RATE_LIMITED\x10\n\x12 \n\x1c\x46\x41ILURE_UNKNOWN_CHANNEL_NAME\x10\x0b\x12\x18\n\x14\x46\x41ILURE_UNKNOWN_USER\x10\x0c\x12\x19\n\x15\x46\x41ILURE_UNKNOWN_ERROR\x10\r\x12\x1d\n\x19\x46\x41ILURE_CANNOT_KICK_ADMIN\x10\x0e\x12\x19\n\x15\x46\x41ILURE_ALREADY_ADMIN\x10\x0f\"I\n$CMsgClientToGCPrivateChatInfoRequest\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\"\xee\x01\n%CMsgGCToClientPrivateChatInfoResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12>\n\x07members\x18\x02 \x03(\x0b\x32-.CMsgGCToClientPrivateChatInfoResponse.Member\x12\x0f\n\x07\x63reator\x18\x03 \x01(\r\x12\x15\n\rcreation_date\x18\x04 \x01(\r\x1a:\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\r\"w\n\x17\x43MsgDOTAJoinChatChannel\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x04 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\".\n\x18\x43MsgDOTALeaveChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x04\"I\n\x1a\x43MsgGCChatReportPublicSpam\x12\x12\n\nchannel_id\x18\x01 \x01(\x04\x12\x17\n\x0f\x63hannel_user_id\x18\x02 \x01(\r\"7\n\x19\x43MsgDOTAClientIgnoredUser\x12\x1a\n\x12ignored_account_id\x18\x01 \x01(\r\"\xf8\x05\n\x13\x43MsgDOTAChatMessage\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nchannel_id\x18\x02 \x01(\x04\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x11\n\ttimestamp\x18\x05 \x01(\r\x12!\n\x19suggest_invite_account_id\x18\x06 \x01(\r\x12\x1b\n\x13suggest_invite_name\x18\x07 \x01(\t\x12&\n\x1e\x66\x61ntasy_draft_owner_account_id\x18\x08 \x01(\r\x12\'\n\x1f\x66\x61ntasy_draft_player_account_id\x18\t \x01(\r\x12\x10\n\x08\x65vent_id\x18\n \x01(\r\x12\x1f\n\x17suggest_invite_to_lobby\x18\x0b \x01(\x08\x12\x14\n\x0c\x65vent_points\x18\x0c \x01(\r\x12\x11\n\tcoin_flip\x18\r \x01(\x08\x12\x15\n\tplayer_id\x18\x0e \x01(\x05:\x02-1\x12 \n\x18share_profile_account_id\x18\x0f \x01(\r\x12\x17\n\x0f\x63hannel_user_id\x18\x10 \x01(\r\x12\x30\n\tdice_roll\x18\x11 \x01(\x0b\x32\x1d.CMsgDOTAChatMessage.DiceRoll\x12\x16\n\x0eshare_party_id\x18\x12 \x01(\x04\x12\x16\n\x0eshare_lobby_id\x18\x13 \x01(\x04\x12\"\n\x1ashare_lobby_custom_game_id\x18\x14 \x01(\x04\x12\x1b\n\x13share_lobby_passkey\x18\x15 \x01(\t\x12\x1f\n\x17private_chat_channel_id\x18\x16 \x01(\r\x12\x0e\n\x06status\x18\x17 \x01(\r\x12\x1a\n\x12\x62\x61ttle_cup_victory\x18\x18 \x01(\x08\x12\x13\n\x0b\x62\x61\x64ge_level\x18\x19 \x01(\r\x1a>\n\x08\x44iceRoll\x12\x10\n\x08roll_min\x18\x01 \x01(\x05\x12\x10\n\x08roll_max\x18\x02 \x01(\x05\x12\x0e\n\x06result\x18\x03 \x01(\x05\"e\n\x12\x43MsgDOTAChatMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"\xea\x05\n\x1f\x43MsgDOTAJoinChatChannelResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x12\n\nchannel_id\x18\x03 \x01(\x06\x12\x13\n\x0bmax_members\x18\x04 \x01(\r\x12$\n\x07members\x18\x05 \x03(\x0b\x32\x13.CMsgDOTAChatMember\x12\x46\n\x0c\x63hannel_type\x18\x06 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x45\n\x06result\x18\x07 \x01(\x0e\x32\'.CMsgDOTAJoinChatChannelResponse.Result:\x0cJOIN_SUCCESS\x12\x19\n\x11gc_initiated_join\x18\x08 \x01(\x08\x12\x17\n\x0f\x63hannel_user_id\x18\t \x01(\r\x12\x17\n\x0fwelcome_message\x18\n \x01(\t\"\xf3\x02\n\x06Result\x12\x10\n\x0cJOIN_SUCCESS\x10\x00\x12\x18\n\x14INVALID_CHANNEL_TYPE\x10\x01\x12\x15\n\x11\x41\x43\x43OUNT_NOT_FOUND\x10\x02\x12\x0e\n\nACH_FAILED\x10\x03\x12\x1d\n\x19USER_IN_TOO_MANY_CHANNELS\x10\x04\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x10\n\x0c\x43HANNEL_FULL\x10\x06\x12\x1b\n\x17\x43HANNEL_FULL_OVERFLOWED\x10\x07\x12\x16\n\x12\x46\x41ILED_TO_ADD_USER\x10\x08\x12\x19\n\x15\x43HANNEL_TYPE_DISABLED\x10\t\x12\x1e\n\x1aPRIVATE_CHAT_CREATE_FAILED\x10\n\x12\x1e\n\x1aPRIVATE_CHAT_NO_PERMISSION\x10\x0b\x12#\n\x1fPRIVATE_CHAT_CREATE_LOCK_FAILED\x10\x0c\x12\x17\n\x13PRIVATE_CHAT_KICKED\x10\r\"Y\n\x1d\x43MsgDOTAChatChannelFullUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12$\n\x07members\x18\x02 \x03(\x0b\x32\x13.CMsgDOTAChatMember\"\x85\x01\n\x1e\x43MsgDOTAOtherJoinedChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08steam_id\x18\x03 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x04 \x01(\r\x12\x0e\n\x06status\x18\x05 \x01(\r\"]\n\x1c\x43MsgDOTAOtherLeftChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\"\xf5\x01\n\x1f\x43MsgDOTAChatChannelMemberUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x16\n\x0eleft_steam_ids\x18\x02 \x03(\x06\x12\x45\n\x0ejoined_members\x18\x03 \x03(\x0b\x32-.CMsgDOTAChatChannelMemberUpdate.JoinedMember\x1a_\n\x0cJoinedMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\" \n\x1e\x43MsgDOTARequestChatChannelList\"\xf2\x01\n&CMsgDOTARequestChatChannelListResponse\x12\x45\n\x08\x63hannels\x18\x01 \x03(\x0b\x32\x33.CMsgDOTARequestChatChannelListResponse.ChatChannel\x1a\x80\x01\n\x0b\x43hatChannel\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x13\n\x0bnum_members\x18\x02 \x01(\r\x12\x46\n\x0c\x63hannel_type\x18\x03 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"-\n\x17\x43MsgDOTAChatGetUserList\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\"\xca\x01\n\x1f\x43MsgDOTAChatGetUserListResponse\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x38\n\x07members\x18\x02 \x03(\x0b\x32\'.CMsgDOTAChatGetUserListResponse.Member\x1aY\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"z\n\x1a\x43MsgDOTAChatGetMemberCount\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"\x98\x01\n\"CMsgDOTAChatGetMemberCountResponse\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x14\n\x0cmember_count\x18\x03 \x01(\r\"\xd9\x01\n\x1a\x43MsgDOTAChatRegionsEnabled\x12\x1a\n\x12\x65nable_all_regions\x18\x01 \x01(\x08\x12;\n\x0f\x65nabled_regions\x18\x02 \x03(\x0b\x32\".CMsgDOTAChatRegionsEnabled.Region\x1a\x62\n\x06Region\x12\x14\n\x0cmin_latitude\x18\x01 \x01(\x02\x12\x14\n\x0cmax_latitude\x18\x02 \x01(\x02\x12\x15\n\rmin_longitude\x18\x03 \x01(\x02\x12\x15\n\rmax_longitude\x18\x04 \x01(\x02\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[dota__shared__enums__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -166,8 +166,8 @@ _CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2788,
-  serialized_end=3159,
+  serialized_start=2884,
+  serialized_end=3255,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT)
 
@@ -566,6 +566,44 @@ _CMSGDOTALEAVECHATCHANNEL = _descriptor.Descriptor(
 )
 
 
+_CMSGGCCHATREPORTPUBLICSPAM = _descriptor.Descriptor(
+  name='CMsgGCChatReportPublicSpam',
+  full_name='CMsgGCChatReportPublicSpam',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='channel_id', full_name='CMsgGCChatReportPublicSpam.channel_id', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='channel_user_id', full_name='CMsgGCChatReportPublicSpam.channel_user_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1510,
+  serialized_end=1583,
+)
+
+
 _CMSGDOTACLIENTIGNOREDUSER = _descriptor.Descriptor(
   name='CMsgDOTAClientIgnoredUser',
   full_name='CMsgDOTAClientIgnoredUser',
@@ -592,8 +630,8 @@ _CMSGDOTACLIENTIGNOREDUSER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1510,
-  serialized_end=1565,
+  serialized_start=1585,
+  serialized_end=1640,
 )
 
 
@@ -637,8 +675,8 @@ _CMSGDOTACHATMESSAGE_DICEROLL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2245,
-  serialized_end=2307,
+  serialized_start=2341,
+  serialized_end=2403,
 )
 
 _CMSGDOTACHATMESSAGE = _descriptor.Descriptor(
@@ -816,6 +854,13 @@ _CMSGDOTACHATMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='badge_level', full_name='CMsgDOTAChatMessage.badge_level', index=24,
+      number=25, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -828,8 +873,8 @@ _CMSGDOTACHATMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1568,
-  serialized_end=2307,
+  serialized_start=1643,
+  serialized_end=2403,
 )
 
 
@@ -880,8 +925,8 @@ _CMSGDOTACHATMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2309,
-  serialized_end=2410,
+  serialized_start=2405,
+  serialized_end=2506,
 )
 
 
@@ -975,8 +1020,8 @@ _CMSGDOTAJOINCHATCHANNELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2413,
-  serialized_end=3159,
+  serialized_start=2509,
+  serialized_end=3255,
 )
 
 
@@ -1013,8 +1058,8 @@ _CMSGDOTACHATCHANNELFULLUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3161,
-  serialized_end=3250,
+  serialized_start=3257,
+  serialized_end=3346,
 )
 
 
@@ -1072,8 +1117,8 @@ _CMSGDOTAOTHERJOINEDCHATCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3253,
-  serialized_end=3386,
+  serialized_start=3349,
+  serialized_end=3482,
 )
 
 
@@ -1117,8 +1162,8 @@ _CMSGDOTAOTHERLEFTCHATCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3388,
-  serialized_end=3481,
+  serialized_start=3484,
+  serialized_end=3577,
 )
 
 
@@ -1169,8 +1214,8 @@ _CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3634,
-  serialized_end=3729,
+  serialized_start=3730,
+  serialized_end=3825,
 )
 
 _CMSGDOTACHATCHANNELMEMBERUPDATE = _descriptor.Descriptor(
@@ -1213,8 +1258,8 @@ _CMSGDOTACHATCHANNELMEMBERUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3484,
-  serialized_end=3729,
+  serialized_start=3580,
+  serialized_end=3825,
 )
 
 
@@ -1237,8 +1282,8 @@ _CMSGDOTAREQUESTCHATCHANNELLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3731,
-  serialized_end=3763,
+  serialized_start=3827,
+  serialized_end=3859,
 )
 
 
@@ -1282,8 +1327,8 @@ _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3880,
-  serialized_end=4008,
+  serialized_start=3976,
+  serialized_end=4104,
 )
 
 _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE = _descriptor.Descriptor(
@@ -1312,8 +1357,8 @@ _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3766,
-  serialized_end=4008,
+  serialized_start=3862,
+  serialized_end=4104,
 )
 
 
@@ -1343,8 +1388,8 @@ _CMSGDOTACHATGETUSERLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4010,
-  serialized_end=4055,
+  serialized_start=4106,
+  serialized_end=4151,
 )
 
 
@@ -1395,8 +1440,8 @@ _CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4171,
-  serialized_end=4260,
+  serialized_start=4267,
+  serialized_end=4356,
 )
 
 _CMSGDOTACHATGETUSERLISTRESPONSE = _descriptor.Descriptor(
@@ -1432,8 +1477,8 @@ _CMSGDOTACHATGETUSERLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4058,
-  serialized_end=4260,
+  serialized_start=4154,
+  serialized_end=4356,
 )
 
 
@@ -1470,8 +1515,8 @@ _CMSGDOTACHATGETMEMBERCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4262,
-  serialized_end=4384,
+  serialized_start=4358,
+  serialized_end=4480,
 )
 
 
@@ -1515,8 +1560,8 @@ _CMSGDOTACHATGETMEMBERCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4387,
-  serialized_end=4539,
+  serialized_start=4483,
+  serialized_end=4635,
 )
 
 
@@ -1567,8 +1612,8 @@ _CMSGDOTACHATREGIONSENABLED_REGION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4661,
-  serialized_end=4759,
+  serialized_start=4757,
+  serialized_end=4855,
 )
 
 _CMSGDOTACHATREGIONSENABLED = _descriptor.Descriptor(
@@ -1604,8 +1649,8 @@ _CMSGDOTACHATREGIONSENABLED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4542,
-  serialized_end=4759,
+  serialized_start=4638,
+  serialized_end=4855,
 )
 
 _CMSGGCTOCLIENTPRIVATECHATRESPONSE.fields_by_name['result'].enum_type = _CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT
@@ -1640,6 +1685,7 @@ DESCRIPTOR.message_types_by_name['CMsgClientToGCPrivateChatInfoRequest'] = _CMSG
 DESCRIPTOR.message_types_by_name['CMsgGCToClientPrivateChatInfoResponse'] = _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE
 DESCRIPTOR.message_types_by_name['CMsgDOTAJoinChatChannel'] = _CMSGDOTAJOINCHATCHANNEL
 DESCRIPTOR.message_types_by_name['CMsgDOTALeaveChatChannel'] = _CMSGDOTALEAVECHATCHANNEL
+DESCRIPTOR.message_types_by_name['CMsgGCChatReportPublicSpam'] = _CMSGGCCHATREPORTPUBLICSPAM
 DESCRIPTOR.message_types_by_name['CMsgDOTAClientIgnoredUser'] = _CMSGDOTACLIENTIGNOREDUSER
 DESCRIPTOR.message_types_by_name['CMsgDOTAChatMessage'] = _CMSGDOTACHATMESSAGE
 DESCRIPTOR.message_types_by_name['CMsgDOTAChatMember'] = _CMSGDOTACHATMEMBER
@@ -1726,6 +1772,13 @@ CMsgDOTALeaveChatChannel = _reflection.GeneratedProtocolMessageType('CMsgDOTALea
   # @@protoc_insertion_point(class_scope:CMsgDOTALeaveChatChannel)
   ))
 _sym_db.RegisterMessage(CMsgDOTALeaveChatChannel)
+
+CMsgGCChatReportPublicSpam = _reflection.GeneratedProtocolMessageType('CMsgGCChatReportPublicSpam', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCCHATREPORTPUBLICSPAM,
+  __module__ = 'dota_gcmessages_client_chat_pb2'
+  # @@protoc_insertion_point(class_scope:CMsgGCChatReportPublicSpam)
+  ))
+_sym_db.RegisterMessage(CMsgGCChatReportPublicSpam)
 
 CMsgDOTAClientIgnoredUser = _reflection.GeneratedProtocolMessageType('CMsgDOTAClientIgnoredUser', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACLIENTIGNOREDUSER,
