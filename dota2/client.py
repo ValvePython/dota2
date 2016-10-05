@@ -144,7 +144,7 @@ class Dota2Client(GameCoordinator, FeatureBase):
 
         return "job_%d" % jobid
 
-    def send(self, emsg, data={}, proto=None):
+    def send(self, emsg, data=None, proto=None):
         """
         Send a message
 
@@ -153,9 +153,12 @@ class Dota2Client(GameCoordinator, FeatureBase):
         :type data: :class:`dict`
         :param proto: (optional) manually specify protobuf, other it's detected based on ``emsg``
         """
+        data = {} if data is None else data
         self._send(emsg, data, proto)
 
-    def _send(self, emsg, data={}, proto=None, jobid=None):
+    def _send(self, emsg, data=None, proto=None, jobid=None):
+        data = {} if data is None else data
+
         if not isinstance(data, dict):
             raise ValueError("data kwarg can only be a dict")
 
@@ -200,22 +203,22 @@ class Dota2Client(GameCoordinator, FeatureBase):
         GameCoordinator.send(self, header, message.SerializeToString())
 
     def _knock_on_gc(self):
-            n = 1
+        n = 1
 
-            while True:
-                if not self.ready:
-                    self.send(EGCBaseClientMsg.EMsgGCClientHello, {
-                        'client_session_need': EDOTAGCSessionNeed.UserInUINeverConnected,
-                        'engine': ESourceEngine.ESE_Source2,
-                    })
+        while True:
+            if not self.ready:
+                self.send(EGCBaseClientMsg.EMsgGCClientHello, {
+                    'client_session_need': EDOTAGCSessionNeed.UserInUINeverConnected,
+                    'engine': ESourceEngine.ESE_Source2,
+                })
 
-                    self.wait_event('ready', timeout=3 + (2**n))
-                    n = min(n + 1, 4)
+                self.wait_event('ready', timeout=3 + (2**n))
+                n = min(n + 1, 4)
 
-                else:
-                    self.wait_event('notready')
-                    n = 1
-                    gevent.sleep(1)
+            else:
+                self.wait_event('notready')
+                n = 1
+                gevent.sleep(1)
 
     def launch(self):
         """
