@@ -17,6 +17,7 @@ class Party(object):
         Responds to an incoming party invite.
 
         :param party_id: party id
+        :param accept: accept
         :return: job event id
         :rtype: str
 
@@ -27,7 +28,7 @@ class Party(object):
         :param accept: accept for response
         :type accept: :class:`bool`
 
-        :param match: `CMsgPartyInviteResponse <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L99>`_ proto message
+        :param message: `CMsgPartyInviteResponse <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L99>`_ proto message
         """
         if not party_id:
             if self.verbose_debug:
@@ -46,7 +47,7 @@ class Party(object):
 
         @self.once(jobid)
         def wrap_response_party_invite(message):
-            self.emit('response_party_invite', message)
+            self.emit('response_party_invite', party_id, accept, message)
 
         return jobid
 
@@ -59,7 +60,7 @@ class Party(object):
 
         Response event: ``leave_party``
 
-        :param match: `CMsgLeaveParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L118>`_ proto message
+        :param message: `CMsgLeaveParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L118>`_ proto message
         """
         if self.verbose_debug:
             self._LOG.debug("Leaving party.")
@@ -77,6 +78,7 @@ class Party(object):
     def set_party_leader(self, steam_id=None):
         """
         Set the new party leader.
+
         :param steam_id: steam_id
         :return: job event id
         :rtype: str
@@ -86,7 +88,7 @@ class Party(object):
         :param steam_id: steam_id for response
         :type steam_id: :class:`int`
 
-        :param match: `CMsgDOTASetGroupLeader <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client_match_management.proto#L345>`_ proto message
+        :param message: `CMsgDOTASetGroupLeader <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client_match_management.proto#L345>`_ proto message
         """
         if not self.party:
             if self.verbose_debug:
@@ -108,13 +110,14 @@ class Party(object):
 
         @self.once(jobid)
         def wrap_set_party_leader(message):
-            self.emit('set_party_leader', message)
+            self.emit('set_party_leader', steam_id, message)
 
         return jobid
 
     def set_party_coach(self, coach=False):
         """
         Set the bot's status as a coach.
+
         :param coach: bool
         :return: job event id
         :rtype: str
@@ -124,7 +127,7 @@ class Party(object):
         :param steam_id: steam_id for response
         :type steam_id: :class:`int`
 
-        :param match: `CMsgDOTAPartyMemberSetCoach <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client_match_management.proto#L341>`_ proto message
+        :param message: `CMsgDOTAPartyMemberSetCoach <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client_match_management.proto#L341>`_ proto message
         """
         if not self.party:
             if self.verbose_debug:
@@ -140,7 +143,7 @@ class Party(object):
 
         @self.once(jobid)
         def wrap_party_coach(message):
-            self.emit('party_coach', message)
+            self.emit('party_coach', coach, message)
 
         return jobid
 
@@ -158,7 +161,7 @@ class Party(object):
         :param steam_id: steam_id for response
         :type steam_id: :class:`int`
 
-        :param match: `CMsgInviteToParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L80>`_ proto message
+        :param message: `CMsgInviteToParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L80>`_ proto message
         """
         if not steam_id:
             if self.verbose_debug:
@@ -174,7 +177,7 @@ class Party(object):
 
         @self.once(jobid)
         def wrap_invite_to_party(message):
-            self.emit('invite_to_party', message)
+            self.emit('invite_to_party', steam_id, message)
 
         return jobid
 
@@ -192,7 +195,7 @@ class Party(object):
         :param steam_id: steam_id for response
         :type steam_id: :class:`int`
 
-        :param match: `CMsgKickFromParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L114>`_ proto message
+        :param message: `CMsgKickFromParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L114>`_ proto message
         """
         if not steam_id:
             if self.verbose_debug:
@@ -208,6 +211,6 @@ class Party(object):
 
         @self.once(jobid)
         def wrap_kick_from_party(message):
-            self.emit('kick_from_party', message)
+            self.emit('kick_from_party', steam_id, message)
 
         return jobid
