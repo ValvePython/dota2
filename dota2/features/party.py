@@ -12,7 +12,7 @@ class Party(object):
     def __handle_invitation_created(self, message):
         self.emit('invitation_created', message)
 
-    def response_party_invite(self, party_id=None, accept=False):
+    def response_party_invite(self, party_id, accept=False):
         """
         Responds to an incoming party invite.
 
@@ -28,13 +28,8 @@ class Party(object):
         :param accept: accept for response
         :type accept: :class:`bool`
 
-        :param message: `CMsgPartyInviteResponse <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L99>`_ proto message
+        :param message: `CMsgPartyInviteResponse <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/base_gcmessages.proto#L99>`_ proto message
         """
-        if not party_id:
-            if self.verbose_debug:
-                self._LOG.debug("Party ID required to respond to an invite.")
-            return False
-
         if self.verbose_debug:
             self._LOG.debug(
                 "Responding to party invite %s, accept: %s" %
@@ -60,7 +55,7 @@ class Party(object):
 
         Response event: ``leave_party``
 
-        :param message: `CMsgLeaveParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L118>`_ proto message
+        :param message: `CMsgLeaveParty <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/base_gcmessages.proto#L118>`_ proto message
         """
         if self.verbose_debug:
             self._LOG.debug("Leaving party.")
@@ -75,7 +70,7 @@ class Party(object):
 
         return jobid
 
-    def set_party_leader(self, steam_id=None):
+    def set_party_leader(self, steam_id):
         """
         Set the new party leader.
 
@@ -88,17 +83,12 @@ class Party(object):
         :param steam_id: steam_id for response
         :type steam_id: :class:`int`
 
-        :param message: `CMsgDOTASetGroupLeader <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client_match_management.proto#L345>`_ proto message
+        :param message: `CMsgDOTASetGroupLeader <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L358>`_ proto message
         """
         if not self.party:
             if self.verbose_debug:
                 self._LOG.debug(
                     "set_party_leader called when not in a party!.")
-            return False
-
-        if not steam_id:
-            if self.verbose_debug:
-                self._LOG.debug("Steam ID required to set party leader.")
             return False
 
         if self.verbose_debug:
@@ -127,7 +117,7 @@ class Party(object):
         :param steam_id: steam_id for response
         :type steam_id: :class:`int`
 
-        :param message: `CMsgDOTAPartyMemberSetCoach <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client_match_management.proto#L341>`_ proto message
+        :param message: `CMsgDOTAPartyMemberSetCoach <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L354>`_ proto message
         """
         if not self.party:
             if self.verbose_debug:
@@ -147,7 +137,7 @@ class Party(object):
 
         return jobid
 
-    def invite_to_party(self, steam_id=None):
+    def invite_to_party(self, steam_id):
         """
         Invites a player to a party. This will create a new party
         if you aren't in one.
@@ -161,13 +151,8 @@ class Party(object):
         :param steam_id: steam_id for response
         :type steam_id: :class:`int`
 
-        :param message: `CMsgInviteToParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L80>`_ proto message
+        :param message: `CMsgInviteToParty <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/base_gcmessages.proto#L80>`_ proto message
         """
-        if not steam_id:
-            if self.verbose_debug:
-                self._LOG.debug("Steam ID required to create a party invite.")
-            return False
-
         if self.verbose_debug:
             self._LOG.debug("Inviting %s to a party." % steam_id)
 
@@ -181,7 +166,7 @@ class Party(object):
 
         return jobid
 
-    def kick_from_party(self, steam_id=None):
+    def kick_from_party(self, steam_id):
         """
         Kicks a player from the party. This will create a new party
         if you aren't in one.
@@ -195,13 +180,8 @@ class Party(object):
         :param steam_id: steam_id for response
         :type steam_id: :class:`int`
 
-        :param message: `CMsgKickFromParty <https://github.com/ValvePython/dota2/blob/master/protobufs/base_gcmessages.proto#L114>`_ proto message
+        :param message: `CMsgKickFromParty <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/base_gcmessages.proto#L114>`_ proto message
         """
-        if not steam_id:
-            if self.verbose_debug:
-                self._LOG.debug("Steam ID required to kick from the party.")
-            return False
-
         if self.verbose_debug:
             self._LOG.debug("Kicking %s from the party." % steam_id)
 

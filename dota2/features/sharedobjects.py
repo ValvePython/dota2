@@ -46,12 +46,9 @@ class SOCache(EventEmitter, dict):
         self._LOG = logging.getLogger("SOCache")
 
         # register our handlers
-        dota_client.on(ESOMsg.CacheSubscribed,
-                       self._handle_cache_subscribed)
-        dota_client.on(ESOMsg.UpdateMultiple,
-                       self._handle_update_multiple)
-        dota_client.on(EGCBaseClientMsg.EMsgGCClientWelcome,
-                       self._handle_client_welcome)
+        dota_client.on(ESOMsg.CacheSubscribed, self._handle_cache_subscribed)
+        dota_client.on(ESOMsg.UpdateMultiple, self._handle_update_multiple)
+        dota_client.on(EGCBaseClientMsg.EMsgGCClientWelcome, self._handle_client_welcome)
 
     def __hash__(self):
         # pretend that we are a hashable dict, lol
