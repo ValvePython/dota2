@@ -3,8 +3,9 @@ Various utility function for dealing with messages.
 
 """
 
-from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg, ESOMsg
+from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg, ESOMsg, EGCBaseMsg
 from dota2.protobufs import (
+    base_gcmessages_pb2,
     gcsdk_gcmessages_pb2,
     dota_gcmessages_common_pb2,
     dota_gcmessages_client_pb2,
@@ -15,6 +16,7 @@ from dota2.protobufs import (
     dota_gcmessages_client_team_pb2,
     dota_gcmessages_client_tournament_pb2,
     dota_gcmessages_client_watch_pb2,
+    dota_gcmessages_msgid_pb2
 )
 
 
@@ -30,13 +32,14 @@ def get_emsg_enum(emsg):
     for enum in (EGCBaseClientMsg,
                  EDOTAGCMsg,
                  ESOMsg,
-                 ):
+                 EGCBaseMsg):
         try:
             return enum(emsg)
         except ValueError:
             pass
 
     return emsg
+
 
 def find_proto(emsg):
     """
@@ -58,7 +61,8 @@ def find_proto(emsg):
     if isinstance(emsg, ESOMsg):
         return getattr(gcsdk_gcmessages_pb2, "CMsgSO%s" % emsg.name, None)
 
-    for module in (gcsdk_gcmessages_pb2,
+    for module in (base_gcmessages_pb2,
+                   gcsdk_gcmessages_pb2,
                    dota_gcmessages_common_pb2,
                    dota_gcmessages_client_pb2,
                    dota_gcmessages_client_chat_pb2,
@@ -67,8 +71,7 @@ def find_proto(emsg):
                    dota_gcmessages_client_match_management_pb2,
                    dota_gcmessages_client_team_pb2,
                    dota_gcmessages_client_tournament_pb2,
-                   dota_gcmessages_client_watch_pb2,
-                  ):
+                   dota_gcmessages_client_watch_pb2):
 
         proto = getattr(module, emsg.name.replace("EMsg", "CMsg"), None)
 
@@ -80,7 +83,6 @@ def find_proto(emsg):
             proto = getattr(module, emsg.name.replace("EMsgGC", "CMsg"), None)
         if proto is None:
             proto = getattr(module, emsg.name.replace("EMsgDOTA", "CMsg"), None)
-
 
         if proto is not None:
             break
@@ -99,4 +101,5 @@ _proto_map_why_cant_we_name_things_properly = {
     ESOMsg.UpdateMultiple: gcsdk_gcmessages_pb2.CMsgSOMultipleObjects,
     EDOTAGCMsg.EMsgClientToGCEventGoalsRequest: dota_gcmessages_client_pb2.CMsgClientToGCGetEventGoals,
     EDOTAGCMsg.EMsgClientToGCEventGoalsResponse: dota_gcmessages_client_pb2.CMsgEventGoals,
+    EDOTAGCMsg.EMsgClientToGCSetPartyLeader: dota_gcmessages_client_match_management_pb2.CMsgDOTASetGroupLeader,
 }
