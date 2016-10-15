@@ -4,7 +4,7 @@ from dota2.features.sharedobjects import SOBase
 from dota2.features.party import Party
 
 
-class FeatureBase(Player, Match, SOBase, Party):
+class FeatureBase(Player, Match, Party, SOBase):
     """
     This object is used to all high level functionality to Dota2Client.
     The features are seperated into submodules with a single class.
