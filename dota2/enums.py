@@ -23,6 +23,8 @@ _proto_modules = [
     'gcsdk_gcmessages_pb2',
     'gcsystemmsgs_pb2',
     'steammessages_pb2',
+    'econ_gcmessages_pb2',
+    'econ_shared_enums_pb2',
 ]
 
 _proto_module = __import__("dota2.protobufs", globals(), locals(), _proto_modules, 0)

@@ -3,7 +3,7 @@ Various utility function for dealing with messages.
 
 """
 
-from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg, ESOMsg, EGCBaseMsg
+from dota2.enums import EGCBaseClientMsg, EDOTAGCMsg, ESOMsg, EGCItemMsg, EGCBaseMsg
 from dota2.protobufs import (
     base_gcmessages_pb2,
     gcsdk_gcmessages_pb2,
@@ -16,7 +16,7 @@ from dota2.protobufs import (
     dota_gcmessages_client_team_pb2,
     dota_gcmessages_client_tournament_pb2,
     dota_gcmessages_client_watch_pb2,
-    dota_gcmessages_msgid_pb2
+    econ_gcmessages_pb2,
 )
 
 
@@ -32,7 +32,9 @@ def get_emsg_enum(emsg):
     for enum in (EGCBaseClientMsg,
                  EDOTAGCMsg,
                  ESOMsg,
-                 EGCBaseMsg):
+                 EGCBaseMsg,
+                 EGCItemMsg,
+                 ):
         try:
             return enum(emsg)
         except ValueError:
@@ -71,7 +73,9 @@ def find_proto(emsg):
                    dota_gcmessages_client_match_management_pb2,
                    dota_gcmessages_client_team_pb2,
                    dota_gcmessages_client_tournament_pb2,
-                   dota_gcmessages_client_watch_pb2):
+                   dota_gcmessages_client_watch_pb2,
+                   econ_gcmessages_pb2,
+                  ):
 
         proto = getattr(module, emsg.name.replace("EMsg", "CMsg"), None)
 
@@ -79,6 +83,8 @@ def find_proto(emsg):
             proto = getattr(module, emsg.name.replace("EMsgGC", "CMsgDOTA"), None)
         if proto is None:
             proto = getattr(module, emsg.name.replace("EMsgGCToClient", "CMsgDOTA"), None)
+        if proto is None:
+            proto = getattr(module, emsg.name.replace("EMsgGCToClient", "CMsg"), None)
         if proto is None:
             proto = getattr(module, emsg.name.replace("EMsgGC", "CMsg"), None)
         if proto is None:
