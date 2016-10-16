@@ -1,3 +1,38 @@
+"""Essentially a :class:`dict` containing shared object caches.
+The objects are read-only, so don't change any values.
+The instance reference of individual objects will remain the same thought their lifetime.
+Individual objects can be accessed via their key, if they have one.
+
+.. note::
+    Some cache types don't have a key and only hold one object instance.
+    Then only the the cache type is needed to access it.
+    (e.g. ``CSOEconGameAccountClient``)
+
+.. code:: python
+
+    dota_client.socache[ESOType.CSOEconItem]          # dict with item objects, key = item id
+    dota_client.socache[ESOType.CSOEconItem][123456]  # item object
+
+    dota_client.socache[ESOType.CSOEconGameAccountClient]  # returns a CSOEconGameAccountClient object
+
+Events will be fired when individual objects are updated.
+Event key is a :class:`tuple`` in the following format: ``(event, cache_type)``.
+
+The available events are ``new``, ``updated``, and ``removed``.
+Each event has a single parameter, which is the object instance.
+Even when removed, there is object instance returned, usually only with the key field filled.
+
+.. code:: python
+
+    @dota_client.socache.on(('new', ESOType.CSOEconItem))
+    def got_a_new_item(obj):
+        print "Got a new item! Yay"
+        print obj
+
+    # access the item via socache at any time
+    print dota_client.socache[ESOType.CSOEconItem][obj.id]
+
+"""
 import logging
 from eventemitter import EventEmitter
 from dota2.enums import EGCBaseClientMsg, ESOMsg, ESOType
@@ -76,9 +111,7 @@ class SOBase(object):
 class SOCache(EventEmitter, dict):
     ESOType = ESOType   #: expose ESOType
 
-    file_version = None #: so file version
-    version = None      #: cache version
-    owner_soid = None   #: type and steamid, no clue what type represents
+    file_version = None  #: so file version
 
     def __init__(self, dota_client, logger_name):
         self._LOG = logging.getLogger(logger_name if logger_name else self.__class__.__name__)
