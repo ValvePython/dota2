@@ -27,8 +27,13 @@ def find_so_proto(type_id):
 
     return proto
 
+# hack to mark certain CSO as having no key
+class NO_KEY:
+    pass
+
 so_key_fields = {
     _gc_base.CSOEconItem.DESCRIPTOR: ['id'],
+    _gc_base.CSOEconGameAccountClient.DESCRIPTOR: NO_KEY,
 }
 
 # key is either one or a number of fields marked with option 'key_field'=true in protos
@@ -49,7 +54,9 @@ def get_so_key_fields(desc):
 def get_key_for_object(obj):
     key = get_so_key_fields(obj.DESCRIPTOR)
 
-    if not key:
+    if key is NO_KEY:
+        return NO_KEY
+    elif not key:
         return None
     elif len(key) == 1:
         return getattr(obj, key[0])
@@ -62,7 +69,8 @@ class SOBase(object):
         super(SOBase, self).__init__()
 
         #: Shared Object Caches
-        self.socache = SOCache(self)
+        name = "%s.socache" % self.__class__.__name__
+        self.socache = SOCache(self, name)
 
 
 class SOCache(EventEmitter, dict):
@@ -72,10 +80,10 @@ class SOCache(EventEmitter, dict):
     version = None      #: cache version
     owner_soid = None   #: type and steamid, no clue what type represents
 
-    def __init__(self, dota_client):
+    def __init__(self, dota_client, logger_name):
+        self._LOG = logging.getLogger(logger_name if logger_name else self.__class__.__name__)
         self._caches = {}
         self._dota = dota_client
-        self._LOG = logging.getLogger("SOCache")
 
         # register our handlers
         dota_client.on(ESOMsg.Create, self._handle_create)
@@ -111,11 +119,12 @@ class SOCache(EventEmitter, dict):
 
     def _handle_cleanup(self):
         for v in self.values():
-            v.clear()
+            if isinstance(v, dict):
+                v.clear()
         self.clear()
         self._caches.clear()
 
-    def get_proto_for_type(self, type_id):
+    def _get_proto_for_type(self, type_id):
         try:
             type_id = ESOType(type_id)
         except ValueError:
@@ -130,8 +139,8 @@ class SOCache(EventEmitter, dict):
 
         return proto
 
-    def parse_object_data(self, type_id, object_data):
-        proto = self.get_proto_for_type(type_id)
+    def _parse_object_data(self, type_id, object_data):
+        proto = self._get_proto_for_type(type_id)
 
         if proto is None:
             return
@@ -145,39 +154,54 @@ class SOCache(EventEmitter, dict):
 
         return key, obj
 
-    def update_object(self, so):
-        result = self.parse_object_data(so.type_id, so.object_data)
+    def _update_object(self, type_id, object_data):
+        result = self._parse_object_data(type_id, object_data)
 
         if result:
             key, obj = result
-            type_id = ESOType(so.type_id)
+            type_id = ESOType(type_id)
 
-            if key in self[type_id]:
-                self[type_id][key].CopyFrom(obj)
+            if key is NO_KEY:
+                if not isinstance(self[type_id], dict):
+                    self[type_id].CopyFrom(obj)
+                    obj = self[type_id]
+                else:
+                    self[type_id] = obj
             else:
-                self[type_id][key] = obj
+                if key in self[type_id]:
+                    self[type_id][key].CopyFrom(obj)
+                    obj = self[type_id][key]
+                else:
+                    self[type_id][key] = obj
 
-            return type_id, self[type_id][key]
+            return type_id, obj
 
     def _handle_create(self, message):
-        result = self.update_object(message)
+        result = self._update_object(message.type_id, message.object_data)
         if result:
             type_id, obj = result
             self.emit(('new', type_id), obj)
 
     def _handle_update(self, message):
-        result = self.update_object(message)
+        result = self._update_object(message.type_id, message.object_data)
         if result:
             type_id, obj = result
             self.emit(('updated', type_id), obj)
 
     def _handle_destroy(self, so):
-        result = self.parse_object_data(so.type_id, so.object_data)
+        result = self._parse_object_data(so.type_id, so.object_data)
         if result:
             key, obj = result
             type_id = ESOType(so.type_id)
-            current = self[type_id].pop(key, None)
+            current = None
+
+            if key is NO_KEY:
+                current = self.pop(type_id, None)
+            else:
+                current = self[type_id].pop(key, None)
+
             if current: current.CopyFrom(obj)
+
             self.emit(('removed', type_id), current or obj)
 
     def _handle_update_multiple(self, message):
@@ -202,22 +226,13 @@ class SOCache(EventEmitter, dict):
         cache['version'] = message.version
         cache.setdefault('type_ids', set()).update(map(lambda x: x.type_id, message.objects))
 
-
         for objects in message.objects:
             for object_bytes in objects.object_data:
-                result = self.parse_object_data(objects.type_id, object_bytes)
-
+                result = self._update_object(objects.type_id, object_bytes)
                 if not result: break
 
-                key, obj = result
-                type_id = ESOType(objects.type_id)
-
-                if key in self[type_id]:
-                    self[type_id][key].CopyFrom(obj)
-                else:
-                    self[type_id][key] = obj
-
-                self.emit(('new', type_id), self[type_id][key])
+                type_id, obj = result
+                self.emit(('new', type_id), obj)
 
     def _handle_cache_unsubscribed(self, message):
         cache_key = message.owner_soid.type, message.owner_soid.id
@@ -228,8 +243,13 @@ class SOCache(EventEmitter, dict):
         for type_id in cache['type_ids']:
             if type_id in self:
                 type_id = ESOType(type_id)
-                for key in list(self[type_id].keys()):
-                    self.emit(('removed', type_id), self[type_id].pop(key))
+
+                if isinstance(self[type_id], dict):
+                    for key in list(self[type_id].keys()):
+                        self.emit(('removed', type_id), self[type_id].pop(key))
+                else:
+                    self.emit(('removed', type_id), self.pop(type_id))
+
                 del self[type_id]
         del self._caches[cache_key]
 
