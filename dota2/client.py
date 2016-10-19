@@ -10,6 +10,7 @@ from eventemitter import EventEmitter
 from steam.core.msg import GCMsgHdrProto
 from steam.client.gc import GameCoordinator
 from steam.enums.emsg import EMsg
+from steam.util import proto_fill_from_dict
 from dota2.features import FeatureBase
 from dota2.enums import EGCBaseClientMsg, EDOTAGCSessionNeed, GCConnectionStatus, ESourceEngine
 from dota2.msg import get_emsg_enum, find_proto
@@ -36,6 +37,13 @@ class Dota2Client(GameCoordinator, FeatureBase):
         Account ID of the logged in user in the steam client
         """
         return self.steam.steam_id.id
+
+    @property
+    def steam_id(self):
+        """
+        :class:`steam.steamid.SteamID` of the logged-in user in the steam client
+        """
+        return self.steam.steam_id
 
     def __init__(self, steam_client):
         GameCoordinator.__init__(self, steam_client, self.app_id)
@@ -163,16 +171,7 @@ class Dota2Client(GameCoordinator, FeatureBase):
             raise ValueError("Unable to find proto for emsg, or proto kwarg is invalid")
 
         message = proto()
-
-        for key, value in data.items():
-            if isinstance(value, list):
-                attr = getattr(message, key)
-                try:
-                    attr.extend(value)
-                except TypeError:
-                    map(lambda args: attr.add(**args), value)
-            else:
-                setattr(message, key, value)
+        proto_fill_from_dict(message, data)
 
         header = GCMsgHdrProto(emsg)
 
