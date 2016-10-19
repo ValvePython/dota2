@@ -13,7 +13,7 @@ with open(path.join(here, 'dota2/__init__.py'), encoding='utf-8') as f:
 
 install_requires = [
     'steam[client]>=0.8.5',
-    'gevent-eventemitter>=1.4',
+    'gevent-eventemitter>=2.0',
     'gevent>=1.1',
     'protobuf>=3.0.0',
 ]
