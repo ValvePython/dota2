@@ -108,4 +108,6 @@ _proto_map_why_cant_we_name_things_properly = {
     EDOTAGCMsg.EMsgClientToGCEventGoalsRequest: dota_gcmessages_client_pb2.CMsgClientToGCGetEventGoals,
     EDOTAGCMsg.EMsgClientToGCEventGoalsResponse: dota_gcmessages_client_pb2.CMsgEventGoals,
     EDOTAGCMsg.EMsgClientToGCSetPartyLeader: dota_gcmessages_client_match_management_pb2.CMsgDOTASetGroupLeader,
+    EDOTAGCMsg.EMsgGCOtherJoinedChannel: dota_gcmessages_client_chat_pb2.CMsgDOTAOtherJoinedChatChannel,
+    EDOTAGCMsg.EMsgGCOtherLeftChannel: dota_gcmessages_client_chat_pb2.CMsgDOTAOtherLeftChatChannel,
 }
