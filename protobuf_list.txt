@@ -17,3 +17,4 @@ https://github.com/SteamDatabase/GameTracking/raw/master/Protobufs/dota/dota_gcm
 https://github.com/SteamDatabase/GameTracking/raw/master/Protobufs/dota/dota_shared_enums.proto
 https://github.com/SteamDatabase/GameTracking/raw/master/Protobufs/dota/econ_gcmessages.proto
 https://github.com/SteamDatabase/GameTracking/raw/master/Protobufs/dota/econ_shared_enums.proto
+https://github.com/SteamDatabase/GameTracking/raw/master/Protobufs/dota/dota_match_metadata.proto
