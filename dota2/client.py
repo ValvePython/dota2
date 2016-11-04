@@ -65,7 +65,7 @@ class Dota2Client(GameCoordinator, FeatureBase):
                                               )
 
     def _handle_play_sess_state(self, message):
-        if self.ready and message.playing_app != self.app_id:
+        if self.ready and message.body.playing_app != self.app_id:
             self._set_connection_status(GCConnectionStatus.NO_SESSION)
 
     def _handle_disconnect(self):
