@@ -6,8 +6,9 @@ class Match(object):
         super(Match, self).__init__()
 
         # register our handlers
-        self.on(EDOTAGCMsg.EMsgGCMatchmakingStatsResponse, self.__handle_mmstats)
+        self.on(EDOTAGCMsg.EMsgGCMatchmakingStatsResponse,             self.__handle_mmstats)
         self.on(EDOTAGCMsg.EMsgGCToClientFindTopSourceTVGamesResponse, self.__handle_top_source_tv)
+        self.on(EDOTAGCMsg.EMsgDOTAGetPlayerMatchHistoryResponse,      self.__handle_player_match_history)
 
     def request_matchmaking_stats(self):
         """
@@ -112,3 +113,35 @@ class Match(object):
 
     def __handle_top_source_tv(self, message):
         self.emit("top_source_tv_games", message)
+
+    def request_player_match_history(self, **kwargs):
+        """Request player match history
+
+        :param account_id: account id
+        :type  account_id: :class:`int`
+        :param start_at_match_id: matches from before this match id (``0`` for latest)
+        :type  start_at_match_id: :class:`int`
+        :param matches_requested: number of matches to return
+        :type  matches_requested: :class:`int`
+        :param hero_id: filter by hero id
+        :type  hero_id: :class:`int`
+        :param request_id: request id to match with the response with the request
+        :type  request_id: :class:`int`
+        :param include_practice_matches: whether to include practive matches
+        :type  include_practice_matches: :class:`bool`
+        :param include_custom_games: whether to include custom matches
+        :type  include_custom_games: :class:`bool`
+
+        Response event: ``player_match_history``
+
+        :param request_id: request id from the reuqest
+        :type  request_id: :class:`int`
+        :param matches: `CMsgDOTAGetPlayerMatchHistoryResponse.matches <https://github.com/ValvePython/dota2/blob/15729f58ac4ebbfad90414d43ef593eadd355b25/protobufs/dota_gcmessages_client.proto#L907-L934>`_
+        :type  matches: :class:`list`
+
+        """
+        self.send(EDOTAGCMsg.EMsgDOTAGetPlayerMatchHistory, kwargs)
+
+    def __handle_player_match_history(self, message):
+        self.emit('player_match_history', message.request_id, message.matches)
+
