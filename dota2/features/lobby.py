@@ -1,3 +1,5 @@
+import inspect
+
 from dota2.enums import ESOType, EGCBaseMsg, EDOTAGCMsg
 from dota2.enums import DOTA_GC_TEAM, DOTABotDifficulty
 
@@ -108,9 +110,42 @@ class Lobby(object):
 
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbyCreate, command)
 
-    def config_practice_lobby(self, lobby_id, options=None):
-        options = {} if options is None else options
-        raise NotImplementedError()
+    def config_practice_lobby(self, lobby_id, game_name=None, server_region=None, game_mode=None, game_version=None,
+                              cm_pick=None, allow_cheats=None, fill_with_bots=None, allow_spectating=None,
+                              pass_key=None, series_type=None, radiant_series_wins=None, dire_series_wins=None,
+                              allchat=None, leagueid=None, dota_tv_delay=None, custom_game_mode=None,
+                              custom_map_name=None, custom_difficulty=None, custom_game_id=None):
+        """
+        Change settings of the selected lobby.
+
+        :param lobby_id: target lobby
+        :type lobby_id: :class:`int`
+        :param game_name: name of the lobby
+        :type game_name: :class:`str`
+        :param server_region: region to host the game on
+        :type server_region: :class:`int`
+        :param game_mode: game mode of the region
+        :type server_region: :class:`DOTA_GameMode`
+        :param game_version: version to use in the lobby
+        :type game_version: :class:`DOTAGameVersion`
+        ...
+        """
+        options = {}
+
+        frame = inspect.currentframe()
+        args, _, _, values = inspect.getargvalues(frame)
+        for i in args:
+            if i == 'self':
+                continue
+            if values[i] is None:
+                continue
+            options[i] = values[i]
+
+        self._LOG.debug('%s', options)
+        if self.verbose_debug:
+            self._LOG.debug("Changing lobby options of lobby %s", lobby_id)
+
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbySetDetails, options)
 
     def request_practice_lobby_list(self):
         raise NotImplementedError()
@@ -184,13 +219,6 @@ class Lobby(object):
     def leave_practice_lobby(self):
         """
         Sends a message to the Game Coordinator requesting to leave the current lobby.
-
-        :return: job event id
-        :rtype: str
-
-        Response event: ``leave_practice_lobby``
-
-        :param message: `CMsgPracticeLobbyLeave <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L181>`_ proto message
         """
         if self.verbose_debug:
             self._LOG.debug("Sending match CMsgPracticeLobbyLeave request")
@@ -198,10 +226,22 @@ class Lobby(object):
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbyLeave, {})
 
     def abandon_current_game(self):
-        raise NotImplementedError()
+        """
+        Abandon the current game.
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Abandoning current game.")
+
+        self.send(EDOTAGCMsg.EMsgGCAbandonCurrentGame, {})
 
     def launch_practice_lobby(self):
-        raise NotImplementedError()
+        """
+        Launch the current lobby into a game.
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Starting current lobby.")
+
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbyLaunch, {})
 
     def join_practice_lobby_team(self, slot=1, team=DOTA_GC_TEAM.PLAYER_POOL):
         """
