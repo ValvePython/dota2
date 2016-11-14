@@ -1,4 +1,5 @@
 from dota2.enums import ESOType, EGCBaseMsg, EDOTAGCMsg
+from dota2.enums import DOTA_GC_TEAM, DOTABotDifficulty
 
 
 class Lobby(object):
@@ -202,14 +203,45 @@ class Lobby(object):
     def launch_practice_lobby(self):
         raise NotImplementedError()
 
-    def join_practice_lobby_team(self, slot, team):
-        raise NotImplementedError()
+    def join_practice_lobby_team(self, slot=1, team=DOTA_GC_TEAM.PLAYER_POOL):
+        """
+        Join on of the lobby team at the specified slot.
+
+        :param slot: slot to join into
+        :type slot: :class:`int`
+        :param team: team to join
+        :type team: :class:`DOTA_GC_TEAM`
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Joining slot %s of lobby team %s." % (slot, team))
+
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbySetTeamSlot, {
+            "team": team,
+            "slot": slot
+        })
 
     def join_practice_lobby_broadcast_channel(self, channel):
         raise NotImplementedError()
 
-    def add_bot_to_practice_lobby(self, slot, team, bot_difficulty):
-        raise NotImplementedError()
+    def add_bot_to_practice_lobby(self, slot=1, team=DOTA_GC_TEAM.GOOD_GUYS, bot_difficulty=DOTABotDifficulty.BOT_DIFFICULTY_PASSIVE):
+        """
+        Add a bot in the lobby.
+
+        :param slot: slot to join into
+        :type slot: :class:`int`
+        :param team: team to join
+        :type team: :class:`DOTA_GC_TEAM`
+        :param bot_difficulty: difficulty of the bot
+        :type bot_difficulty: :class:`DOTABotDifficulty`
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Adding a bot %s in slot %s of lobby team %s." % (bot_difficulty, slot, team))
+
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbySetTeamSlot, {
+            "team": team,
+            "slot": slot,
+            "bot_difficulty": bot_difficulty
+        })
 
     def respond_lobby_invite(self, id, accept=False):
         """
