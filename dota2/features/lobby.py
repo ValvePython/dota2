@@ -31,6 +31,8 @@ class Lobby(object):
     :type message: proto message
     """
 
+    lobby = None
+
     def __init__(self):
         super(Lobby, self).__init__()
         self.socache.on(('new', ESOType.CSODOTALobbyInvite), self.__handle_lobby_invite)
@@ -40,6 +42,9 @@ class Lobby(object):
         self.socache.on(('updated', ESOType.CSODOTALobby), self.__handle_lobby_changed)
         self.socache.on(('removed', ESOType.CSODOTALobby), self.__handle_lobby_removed)
 
+    def __lobby_cleanup(self):
+        self.lobby = None
+
     def __handle_lobby_invite(self, message):
         self.emit(self.EVENT_LOBBY_INVITE, message)
 
@@ -47,12 +52,15 @@ class Lobby(object):
         self.emit(self.EVENT_LOBBY_INVITE_REMOVED, message)
 
     def __handle_lobby_new(self, message):
+        self.lobby = message
         self.emit(self.EVENT_LOBBY_NEW, message)
 
     def __handle_lobby_changed(self, message):
+        self.lobby = message
         self.emit(self.EVENT_LOBBY_CHANGED, message)
 
     def __handle_lobby_removed(self, message):
+        self.lobby = None
         self.emit(self.EVENT_LOBBY_REMOVED, message)
 
     def create_practice_lobby(self, password="", options=None):
@@ -63,12 +71,6 @@ class Lobby(object):
         :type password: :class:`str`
         :param options: options
         :type options: :class:`dict`
-        :return: job event id
-        :rtype: str
-
-        Response event: ``create_tournament_lobby``
-
-        :param message: `CMsgPracticeLobbyCreate <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L134>`_ proto message
         """
         options = {} if options is None else options
         return self.create_tournament_lobby(password, options=options)
@@ -86,12 +88,6 @@ class Lobby(object):
         :type tournament_id: :class:`int`
         :param options: options
         :type options: :class:`dict`
-        :return: job event id
-        :rtype: str
-
-        Response event: ``create_tournament_lobby``
-
-        :param message: `CMsgPracticeLobbyCreate <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L134>`_ proto message
         """
         options = {} if options is None else options
         options["pass_key"] = password
@@ -122,10 +118,22 @@ class Lobby(object):
         raise NotImplementedError()
 
     def balanced_shuffle_lobby(self):
-        raise NotImplementedError()
+        """
+        Balance shuffle the the lobby.
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Balance shuffle the the lobby")
+
+        self.send(EDOTAGCMsg.EMsgGCBalancedShuffleLobby, {})
 
     def flip_lobby_teams(self):
-        raise NotImplementedError()
+        """
+        Flip both teams of the lobby.
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Flipping teams of the lobby")
+
+        self.send(EDOTAGCMsg.EMsgGCFlipLobbyTeams, {})
 
     def invite_to_lobby(self, steam_id):
         """
@@ -133,12 +141,6 @@ class Lobby(object):
 
         :param steam_id: steam_id
         :type steam_id: :class:`int`
-        :return: job event id
-        :rtype: str
-
-        Response event: ``create_invite_to_lobby``
-
-        :param message: `CMsgInviteToLobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/base_gcmessages.proto#L88>`_ proto message
         """
         if self.verbose_debug:
             self._LOG.debug("Inviting %s to a lobby." % steam_id)
@@ -148,10 +150,32 @@ class Lobby(object):
         })
 
     def practice_lobby_kick(self, account_id):
-        raise NotImplementedError()
+        """
+        Kick a player from the lobby.
+
+        :param account_id: steam_id
+        :type account_id: :class:`int`
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Kicking %s from the lobby." % account_id)
+
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbyKick, {
+            "account_id": account_id
+        })
 
     def practice_lobby_kick_from_team(self, account_id):
-        raise NotImplementedError()
+        """
+        Kick a player from the his current lobby team.
+
+        :param account_id: account_id
+        :type account_id: :class:`int`
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Kicking %s from his lobby team." % account_id)
+
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbyKickFromTeam, {
+            "account_id": account_id
+        })
 
     def join_practice_lobby(self, id, password):
         raise NotImplementedError()
