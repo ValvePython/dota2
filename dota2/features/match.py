@@ -25,8 +25,10 @@ class Match(object):
         self.emit("matchmaking_stats", message)
 
     def request_match_details(self, match_id):
-        """
-        Request match details for a specific match
+        """Request match details for a specific match
+
+        .. note::
+            Rate limited to 100 requests/day
 
         :param match_id: match id
         :return: job event id
@@ -55,8 +57,10 @@ class Match(object):
 
 
     def request_matches(self, **kwargs):
-        """
-        Request matches. For arguments see `CMsgDOTARequestMatches <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L658>`_
+        """Request matches. For arguments see `CMsgDOTARequestMatches <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L658>`_
+
+        .. note::
+            Rate limited to 50 requests/day
 
         .. warning::
             Some of the arguments don't work even if you set them. Ask Valve.
