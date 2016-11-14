@@ -7,33 +7,54 @@ class Lobby(object):
     :param message: `CSDOTALobbyInvite <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L100>`_
     :type message: proto message
     """
-    EVENT_NEW_LOBBY = 'new_lobby'
+    EVENT_LOBBY_INVITE_END = 'lobby_invite_end'
+    """When a lobby invite is no longer valid
+    :param message: `CSDOTALobbyInvite <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L100>`_
+    :type message: proto message
+    """
+    EVENT_LOBBY_NEW = 'lobby_new'
     """Entered a lobby, either by creating one or accepting an invite
+
+    :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
+    :type message: proto message
+    """
+    EVENT_LOBBY_CHANGED = 'lobby_changed'
+    """Anything changes to the lobby state, players, options, broadcasters...
 
     :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
     :type message: proto message
     """
 
     lobby = None
-    lobby_invite = None
+    lobby_invite = {}
 
     def __init__(self):
         super(Lobby, self).__init__()
-        self.on(EDOTAGCMsg.EMsgGCPracticeLobbyResponse, self.__handle_practice_lobby_response)
+        self.socache.on(('new', ESOType.CSODOTALobbyInvite), self.__handle_lobby_invite)
+        self.socache.on(('removed', ESOType.CSODOTALobbyInvite), self.__handle_lobby_invite_removed)
+
+        self.on(EDOTAGCMsg.EMsgGCPracticeLobbyResponse, self.__handle_lobby_new)
+        self.socache.on(('updated', ESOType.CSODOTALobby), self.__handle_lobby_changed)
 
     def __lobby_cleanup(self):
         self.lobby = None
-        self.lobby_invite = None
+        self.lobby_invite = {}
 
     def __handle_lobby_invite(self, message):
-        self.emit('lobby_invite', message)
+        self.lobby_invite[message.group_id] = message
+        self.emit(self.EVENT_LOBBY_INVITE, message)
+
+    def __handle_lobby_invite_removed(self, message):
+        del self.lobby_invite[message.group_id]
+        self.emit(self.EVENT_LOBBY_INVITE_END, message)
 
     def __handle_lobby_new(self, message):
         self.lobby = message
-        self.emit('new_lobby', message)
+        self.emit(self.EVENT_LOBBY_NEW, message)
 
-    def __handle_practice_lobby_response(self, message):
-        self.emit('practice_lobby_response', message)
+    def __handle_lobby_changed(self, message):
+        self.lobby = message
+        self.emit(self.EVENT_LOBBY_CHANGED, message)
 
     def create_practice_lobby(self, password="", options=None):
         """
