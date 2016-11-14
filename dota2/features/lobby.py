@@ -7,7 +7,7 @@ class Lobby(object):
     :param message: `CSDOTALobbyInvite <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L100>`_
     :type message: proto message
     """
-    EVENT_LOBBY_INVITE_END = 'lobby_invite_end'
+    EVENT_LOBBY_INVITE_REMOVED = 'lobby_invite_removed'
     """When a lobby invite is no longer valid
     :param message: `CSDOTALobbyInvite <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L100>`_
     :type message: proto message
@@ -24,37 +24,36 @@ class Lobby(object):
     :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
     :type message: proto message
     """
+    EVENT_LOBBY_REMOVED = 'lobby_removed'
+    """The lobby is not valid anymore, quit or kick.
 
-    lobby = None
-    lobby_invite = {}
+    :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
+    :type message: proto message
+    """
 
     def __init__(self):
         super(Lobby, self).__init__()
         self.socache.on(('new', ESOType.CSODOTALobbyInvite), self.__handle_lobby_invite)
         self.socache.on(('removed', ESOType.CSODOTALobbyInvite), self.__handle_lobby_invite_removed)
 
-        self.on(EDOTAGCMsg.EMsgGCPracticeLobbyResponse, self.__handle_lobby_new)
+        self.socache.on(('new', ESOType.CSODOTALobby), self.__handle_lobby_new)
         self.socache.on(('updated', ESOType.CSODOTALobby), self.__handle_lobby_changed)
-
-    def __lobby_cleanup(self):
-        self.lobby = None
-        self.lobby_invite = {}
+        self.socache.on(('removed', ESOType.CSODOTALobby), self.__handle_lobby_removed)
 
     def __handle_lobby_invite(self, message):
-        self.lobby_invite[message.group_id] = message
         self.emit(self.EVENT_LOBBY_INVITE, message)
 
     def __handle_lobby_invite_removed(self, message):
-        del self.lobby_invite[message.group_id]
-        self.emit(self.EVENT_LOBBY_INVITE_END, message)
+        self.emit(self.EVENT_LOBBY_INVITE_REMOVED, message)
 
     def __handle_lobby_new(self, message):
-        self.lobby = message
         self.emit(self.EVENT_LOBBY_NEW, message)
 
     def __handle_lobby_changed(self, message):
-        self.lobby = message
         self.emit(self.EVENT_LOBBY_CHANGED, message)
+
+    def __handle_lobby_removed(self, message):
+        self.emit(self.EVENT_LOBBY_REMOVED, message)
 
     def create_practice_lobby(self, password="", options=None):
         """
@@ -109,13 +108,8 @@ class Lobby(object):
                 "tournament_game_id": tournament_game_id,
                 "tournament_id": tournament_id
             })
-        jobid = self.send_job(EDOTAGCMsg.EMsgGCPracticeLobbyCreate, command)
 
-        @self.once(jobid)
-        def wrap_create_tournament_lobby(message):
-            self.emit('create_tournament_lobby', message)
-
-        return jobid
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbyCreate, command)
 
     def config_practice_lobby(self, lobby_id, options=None):
         options = {} if options is None else options
@@ -146,19 +140,12 @@ class Lobby(object):
 
         :param message: `CMsgInviteToLobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/base_gcmessages.proto#L88>`_ proto message
         """
-        import ipdb; ipdb.set_trace()
         if self.verbose_debug:
             self._LOG.debug("Inviting %s to a lobby." % steam_id)
 
-        jobid = self.send_job(EGCBaseMsg.EMsgGCInviteToLobby, {
+        self.send(EGCBaseMsg.EMsgGCInviteToLobby, {
             "steam_id": steam_id
         })
-
-        @self.once(jobid)
-        def wrap_create_invite_to_lobby(message):
-            self.emit('create_invite_to_lobby', message)
-
-        return jobid
 
     def practice_lobby_kick(self, account_id):
         raise NotImplementedError()
@@ -183,13 +170,7 @@ class Lobby(object):
         if self.verbose_debug:
             self._LOG.debug("Sending match CMsgPracticeLobbyLeave request")
 
-        jobid = self.send_job(EDOTAGCMsg.EMsgGCPracticeLobbyLeave, {})
-
-        @self.once(jobid)
-        def wrap_leave_practice_lobby(message):
-            self.emit('leave_practice_lobby', message)
-
-        return jobid
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbyLeave, {})
 
     def abandon_current_game(self):
         raise NotImplementedError()
