@@ -33,7 +33,24 @@ class Lobby(object):
     :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
     :type message: proto message
     """
+    EVENT_LOBBY_JOIN_ANSWER = 'lobby_join_answer'
+    """Answer to the join lobby request.
 
+    :param message: `EMsgGCPracticeLobbyJoinResponse <>`_
+    :type message: proto message
+    """
+    EVENT_LOBBY_LIST_ANSWER = 'lobby_list_answer'
+    """Answer to the request for lobby list
+
+    :param message: `EMsgGCPracticeLobbyListResponse <>`_
+    :type message: proto message
+    """
+    EVENT_LOBBY_FRIEND_LIST_ANSWER = 'lobby_friend_list_answer'
+    """Answer to the request for friend lobby list
+
+    :param message: `EMsgGCFriendPracticeLobbyListResponse <>`_
+    :type message: proto message
+    """
     lobby = None
 
     def __init__(self):
@@ -148,10 +165,34 @@ class Lobby(object):
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbySetDetails, options)
 
     def request_practice_lobby_list(self):
-        raise NotImplementedError()
+        """
+        Request a list of practice lobbies.
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Requesting practice lobby list.")
+
+        jobid = self.send_job(EDOTAGCMsg.EMsgGCPracticeLobbyList, {})
+
+        @self.once(jobid)
+        def wrap_lobby_list(message):
+            self.emit(self.EVENT_LOBBY_LIST_ANSWER, message)
+
+        return jobid
 
     def request_friend_practice_lobby_list(self):
-        raise NotImplementedError()
+        """
+        Request a list of friend practice lobbies.
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Requesting friend practice lobby list.")
+
+        jobid = self.send_job(EDOTAGCMsg.EMsgGCFriendPracticeLobbyListRequest, {})
+
+        @self.once(jobid)
+        def wrap_lobby_list(message):
+            self.emit(self.EVENT_LOBBY_FRIEND_LIST_ANSWER, message)
+
+        return jobid
 
     def balanced_shuffle_lobby(self):
         """
@@ -213,8 +254,26 @@ class Lobby(object):
             "account_id": account_id
         })
 
-    def join_practice_lobby(self, id, password):
-        raise NotImplementedError()
+    def join_practice_lobby(self, id, password=""):
+        """
+        Join the target practice lobby.
+
+        :param id: id of the lobby to join
+        :type password: :class:`str` pass phrase of the lobby to join
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Trying to join practice lobby %s using password %s" % (id, password))
+
+        jobid = self.send_job(EDOTAGCMsg.EMsgGCPracticeLobbyJoin, {
+            "lobby_id": id,
+            "pass_key": password
+        })
+
+        @self.once(jobid)
+        def wrap_join_lobby(message):
+            self.emit(self.EVENT_LOBBY_JOIN_ANSWER, message)
+
+        return jobid
 
     def leave_practice_lobby(self):
         """
@@ -260,8 +319,21 @@ class Lobby(object):
             "slot": slot
         })
 
-    def join_practice_lobby_broadcast_channel(self, channel):
-        raise NotImplementedError()
+    def join_practice_lobby_broadcast_channel(self, channel=1):
+        """
+        Join a specific channel of the broadcasters.
+
+        :param channel: channel to join into
+        :type channel: :class:`int`
+        :param team: team to join
+        :type team: :class:`DOTA_GC_TEAM`
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Joining channel %s of lobby broadcst." % channel)
+
+        self.send(EDOTAGCMsg.EMsgGCPracticeLobbyJoinBroadcastChannel, {
+            "channel": channel
+        })
 
     def add_bot_to_practice_lobby(self, slot=1, team=DOTA_GC_TEAM.GOOD_GUYS, bot_difficulty=DOTABotDifficulty.BOT_DIFFICULTY_PASSIVE):
         """
