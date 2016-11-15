@@ -117,10 +117,9 @@ However, we will not get the same parameters as from ``profile_card``
     @dota.on('ready')
     def fetch_profile_card():
         jobid = dota.request_profile_card(70388657)
-        resp = dota.wait_event(jobid, timeout=10)
+        profile_card = dota.wait_msg(jobid, timeout=10)
 
-        if resp:
-            profile_card, = resp
+        if profile_card:
             print str(profile_card)
 
 .. note::
