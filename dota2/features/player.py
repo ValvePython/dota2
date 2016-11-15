@@ -31,7 +31,8 @@ class Player(object):
         :type account_id: :class:`int`
         :param eresult: result enum
         :type eresult: :class:`steam.enums.EResult`
-        :param message: ``CMsgDOTAProfileResponse`` proto
+        :param message: `CMsgDOTAProfileResponse <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L282-L323>`_
+        :type  message: proto message
 
         """
         jobid = self.send_job(EDOTAGCMsg.EMsgGCProfileRequest, {
@@ -61,7 +62,8 @@ class Player(object):
 
         :param account_id: account_id from request
         :type account_id: :class:`int`
-        :param message: ``CMsgDOTAProfileCard`` proto
+        :param message: `CMsgDOTAProfileCard <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_common.proto#L375-L426>`_
+        :type  message: proto message
 
         """
         jobid = self.send_job(EDOTAGCMsg.EMsgClientToGCGetProfileCard, {
@@ -88,7 +90,8 @@ class Player(object):
 
         :param account_id: account_id from request
         :type account_id: :class:`int`
-        :param message: ``CMsgGCToClientPlayerStatsResponsed`` proto
+        :param message: `CMsgGCToClientPlayerStatsResponse <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L1159-L1179>`_
+        :type  message: proto message
 
         """
         jobid = self.send_job(EDOTAGCMsg.EMsgClientToGCPlayerStatsRequest, {
@@ -111,8 +114,8 @@ class Player(object):
 
         Response event: ``player_info``
 
-        :param message: ``CMsgGCPlayerInfo`` proto
-
+        :param message: `CMsgGCPlayerInfo <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client_fantasy.proto#L106-L129>`_
+        :type  message: proto message
         """
         if not isinstance(account_ids, list):
             raise ValueError("Expected account_ids to be a list")
@@ -133,7 +136,8 @@ class Player(object):
 
         Response event: ``conduct_scorecard``
 
-        :param message: ``CMsgPlayerConductScorecard`` proto
+        :param message: `CMsgPlayerConductScorecard <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L1415-L1429>`_
+        :type  message: proto message
         """
         return self.send_job(EDOTAGCMsg.EMsgClientToGCLatestConductScorecardRequest)
 
@@ -147,7 +151,8 @@ class Player(object):
 
         Response event: ``hero_standings``
 
-        :param message: ``CMsgGCGetHeroStandingsResponse`` proto
+        :param message: `CMsgGCGetHeroStandingsResponse <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L721-L741>`_
+        :type  message: proto message
         """
         return self.send_job(EDOTAGCMsg.EMsgGCGetHeroStandings)
 
