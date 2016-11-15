@@ -9,6 +9,8 @@ class Match(object):
         self.on(EDOTAGCMsg.EMsgGCMatchmakingStatsResponse,             self.__handle_mmstats)
         self.on(EDOTAGCMsg.EMsgGCToClientFindTopSourceTVGamesResponse, self.__handle_top_source_tv)
         self.on(EDOTAGCMsg.EMsgDOTAGetPlayerMatchHistoryResponse,      self.__handle_player_match_history)
+        self.on(EDOTAGCMsg.EMsgGCRequestMatches,                       self.__handle_matches)
+        self.on(EDOTAGCMsg.EMsgClientToGCMatchesMinimalResponse,       self.__handle_matches_minimal)
 
     def request_matchmaking_stats(self):
         """
@@ -16,8 +18,8 @@ class Match(object):
 
         Response event: ``matchmaking_stats``
 
-        :param message: `CMsgDOTAMatchmakingStatsResponse <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L1948>`_ proto message
-
+        :param message: `CMsgDOTAMatchmakingStatsResponse <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L607-L611>`_
+        :type  message: proto message
         """
         self.send(EDOTAGCMsg.EMsgGCMatchmakingStatsRequest)
 
@@ -31,16 +33,18 @@ class Match(object):
             Rate limited to 100 requests/day
 
         :param match_id: match id
+        :type  match_id: :class:`int`
         :return: job event id
-        :rtype: str
+        :rtype: :class:`str`
 
         Response event: ``match_details``
 
         :param match_id: match_id for response
-        :type match_id: :class:`int`
+        :type  match_id: :class:`int`
         :param eresult: result enum
-        :type eresult: :class:`steam.enums.EResult`
-        :param match: `CMsgDOTAMatch <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L489>`_ proto message
+        :type  eresult: :class:`steam.enums.EResult`
+        :param match: `CMsgDOTAMatch <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_common.proto#L866-L1001>`_
+        :type  match: proto message
         """
         jobid = self.send_job(EDOTAGCMsg.EMsgGCMatchDetailsRequest, {
                               'match_id': match_id,
@@ -57,61 +61,55 @@ class Match(object):
 
 
     def request_matches(self, **kwargs):
-        """Request matches. For arguments see `CMsgDOTARequestMatches <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L658>`_
+        """Request matches. For arguments see `CMsgDOTARequestMatches <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L81-L103>`_
 
         .. note::
             Rate limited to 50 requests/day
 
         .. warning::
-            Some of the arguments don't work even if you set them. Ask Valve.
+            Some of the arguments don't work. Ask Valve
 
         :return: job event id
-        :rtype: str
+        :rtype: :class:`str`
 
         Response event: ``matches``
 
-        :param message: `CMsgDOTARequestMatchesResponse <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L682>`_ proto message
+        :param message: `CMsgDOTARequestMatchesResponse <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L105-L117>`_
+        :type  message: proto message
         """
-        jobid = self.send_job(EDOTAGCMsg.EMsgGCRequestMatches, kwargs)
+        return self.send_job(EDOTAGCMsg.EMsgGCRequestMatches, kwargs)
 
-        def wrap_matches(message):
-            self.emit('matches', message)
-        self.once(jobid, wrap_matches)
-
-        return jobid
+    def __handle_matches(self, message):
+        self.emit('matches', message)
 
     def request_matches_minimal(self, match_ids):
         """
         Request matches with only minimal data.
 
         :param match_ids: match ids
-        :type match_ids: :class:`list`
+        :type  match_ids: :class:`list`
         :return: job event id
-        :rtype: str
+        :rtype: :class:`str`
 
         Response event: ``matches_minimal``
 
-        :param matches: list of `CMsgDOTAMatchMinimal <https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/dota/dota_gcmessages_client.proto#L621>`_ proto message
+        :param matches: list of `CMsgDOTAMatchMinimal <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_watch.proto#L120-L154>`_
         :type matches: :class:`list`
 
         """
-        jobid = self.send_job(EDOTAGCMsg.EMsgClientToGCMatchesMinimalRequest, {
-                              'match_ids': match_ids,
-                              })
+        return self.send_job(EDOTAGCMsg.EMsgClientToGCMatchesMinimalRequest, {'match_ids': match_ids})
 
-        def wrap_matches_minimal(message):
-            self.emit('matches_minimal', message.matches)
-        self.once(jobid, wrap_matches_minimal)
-
-        return jobid
+    def __handle_matches_minimal(self, message):
+        self.emit('matches_minimal', message.matches)
 
     def request_top_source_tv_games(self, **kwargs):
         """
-        Find top source TV games.
+        Find top source TV games. For arguments see `CMsgClientToGCFindTopSourceTVGames <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_watch.proto#L42-L49>`_
 
         Response event: ``top_source_tv_games``
 
-        :param response: `CMsgClientToGCFindTopSourceTVGames <https://github.com/ValvePython/dota2/blob/master/protobufs/dota_gcmessages_client.proto#L136>`_ proto message
+        :param response: `CMsgGCToClientFindTopSourceTVGamesResponse <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_watch.proto#L51-L60>`_
+        :type  response: proto message
         """
         self.send(EDOTAGCMsg.EMsgClientToGCFindTopSourceTVGames, kwargs)
 
