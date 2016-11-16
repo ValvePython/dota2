@@ -3,7 +3,6 @@ import inspect
 from dota2.enums import ESOType, EGCBaseMsg, EDOTAGCMsg
 from dota2.enums import DOTA_GC_TEAM, DOTABotDifficulty
 
-
 class Lobby(object):
     EVENT_LOBBY_INVITE = 'lobby_invite'
     """When a lobby invite is received
@@ -92,10 +91,9 @@ class Lobby(object):
         :param options: options
         :type options: :class:`dict`
         """
-        options = {} if options is None else options
-        return self.create_tournament_lobby(password, options=options)
+        return self.create_tournament_lobby(password=password, options=options)
 
-    def create_tournament_lobby(self, password="", tournament_game_id=0,
+    def create_tournament_lobby(self, password="", tournament_game_id=None,
                                 tournament_id=0, options=None):
         """
         Sends a message to the Game Coordinator requesting to create a tournament lobby.
@@ -111,54 +109,34 @@ class Lobby(object):
         """
         options = {} if options is None else options
         options["pass_key"] = password
-        if self.verbose_debug:
-            self._LOG.debug("Sending match CMsgPracticeLobbyCreate request")
 
         command = {
             "lobby_details": options,
             "pass_key": password
         }
-        if tournament_game_id > 0:
+        if tournament_game_id is not None:
             command.update({
                 "tournament_game": True,
                 "tournament_game_id": tournament_game_id,
                 "tournament_id": tournament_id
             })
 
+        if self.verbose_debug:
+            self._LOG.debug("Sending match CMsgPracticeLobbyCreate request")
+
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbyCreate, command)
 
-    def config_practice_lobby(self, lobby_id, game_name=None, server_region=None, game_mode=None, game_version=None,
-                              cm_pick=None, allow_cheats=None, fill_with_bots=None, allow_spectating=None,
-                              pass_key=None, series_type=None, radiant_series_wins=None, dire_series_wins=None,
-                              allchat=None, leagueid=None, dota_tv_delay=None, custom_game_mode=None,
-                              custom_map_name=None, custom_difficulty=None, custom_game_id=None):
+    def config_practice_lobby(self, lobby_id, options):
         """
         Change settings of the selected lobby.
 
         :param lobby_id: target lobby
         :type lobby_id: :class:`int`
-        :param game_name: name of the lobby
-        :type game_name: :class:`str`
-        :param server_region: region to host the game on
-        :type server_region: :class:`int`
-        :param game_mode: game mode of the region
-        :type server_region: :class:`DOTA_GameMode`
-        :param game_version: version to use in the lobby
-        :type game_version: :class:`DOTAGameVersion`
-        ...
+        :param options: options
+        :type options: :class:`dict`
         """
-        options = {}
+        options = {} if options is None else options
 
-        frame = inspect.currentframe()
-        args, _, _, values = inspect.getargvalues(frame)
-        for i in args:
-            if i == 'self':
-                continue
-            if values[i] is None:
-                continue
-            options[i] = values[i]
-
-        self._LOG.debug('%s', options)
         if self.verbose_debug:
             self._LOG.debug("Changing lobby options of lobby %s", lobby_id)
 
