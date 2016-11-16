@@ -111,6 +111,4 @@ _proto_map_why_cant_we_name_things_properly = {
     EDOTAGCMsg.EMsgGCOtherJoinedChannel: dota_gcmessages_client_chat_pb2.CMsgDOTAOtherJoinedChatChannel,
     EDOTAGCMsg.EMsgGCOtherLeftChannel: dota_gcmessages_client_chat_pb2.CMsgDOTAOtherLeftChatChannel,
     EDOTAGCMsg.EMsgGCPracticeLobbyResponse: base_gcmessages_pb2.CMsgLobbyInviteResponse,
-    EDOTAGCMsg.EMsgGCPracticeLobbyKick: dota_gcmessages_client_match_management_pb2.CMsgPracticeLobbyKick,
-    EDOTAGCMsg.EMsgGCPracticeLobbyKickFromTeam: dota_gcmessages_client_match_management_pb2.CMsgPracticeLobbyKickFromTeam,
 }
