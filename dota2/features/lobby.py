@@ -1,7 +1,8 @@
 import inspect
 
 from dota2.enums import ESOType, EGCBaseMsg, EDOTAGCMsg
-from dota2.enums import DOTA_GC_TEAM, DOTABotDifficulty
+from dota2.enums import DOTAJoinLobbyResult, DOTA_GC_TEAM, DOTABotDifficulty
+
 
 class Lobby(object):
     EVENT_LOBBY_INVITE = 'lobby_invite'
@@ -30,24 +31,6 @@ class Lobby(object):
     """The lobby is not valid anymore, quit or kick.
 
     :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
-    :type message: proto message
-    """
-    EVENT_LOBBY_JOIN_ANSWER = 'lobby_join_answer'
-    """Answer to the join lobby request.
-
-    :param message: `EMsgGCPracticeLobbyJoinResponse <>`_
-    :type message: proto message
-    """
-    EVENT_LOBBY_LIST_ANSWER = 'lobby_list_answer'
-    """Answer to the request for lobby list
-
-    :param message: `EMsgGCPracticeLobbyListResponse <>`_
-    :type message: proto message
-    """
-    EVENT_LOBBY_FRIEND_LIST_ANSWER = 'lobby_friend_list_answer'
-    """Answer to the request for friend lobby list
-
-    :param message: `EMsgGCFriendPracticeLobbyListResponse <>`_
     :type message: proto message
     """
     lobby = None
@@ -88,13 +71,12 @@ class Lobby(object):
 
         :param password: password of lobby
         :type password: :class:`str`
-        :param options: options
+        :param options: options to setup the lobby with
         :type options: :class:`dict`
         """
         return self.create_tournament_lobby(password=password, options=options)
 
-    def create_tournament_lobby(self, password="", tournament_game_id=None,
-                                tournament_id=0, options=None):
+    def create_tournament_lobby(self, password="", tournament_game_id=None, tournament_id=0, options=None):
         """
         Sends a message to the Game Coordinator requesting to create a tournament lobby.
 
@@ -104,7 +86,7 @@ class Lobby(object):
         :type tournament_game_id: :class:`int`
         :param tournament_id: tournament id
         :type tournament_id: :class:`int`
-        :param options: options
+        :param options: options to setup the lobby with
         :type options: :class:`dict`
         """
         options = {} if options is None else options
@@ -132,7 +114,7 @@ class Lobby(object):
 
         :param lobby_id: target lobby
         :type lobby_id: :class:`int`
-        :param options: options
+        :param options: options to change in the lobby
         :type options: :class:`dict`
         """
         options = {} if options is None else options
@@ -142,35 +124,35 @@ class Lobby(object):
 
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbySetDetails, options)
 
-    def request_practice_lobby_list(self):
+    def get_practice_lobby_list(self):
         """
         Request a list of practice lobbies.
+
+        :return: List of lobbies returned by the GC.
+        :rtype: message `EDOTAGCMsg.EMsgGCPracticeLobbyListResponse` or `None` if no answer or timeout
         """
         if self.verbose_debug:
             self._LOG.debug("Requesting practice lobby list.")
 
         jobid = self.send_job(EDOTAGCMsg.EMsgGCPracticeLobbyList, {})
+        resp = self.wait_msg(jobid, timeout=10)
 
-        @self.once(jobid)
-        def wrap_lobby_list(message):
-            self.emit(self.EVENT_LOBBY_LIST_ANSWER, message)
+        return resp
 
-        return jobid
-
-    def request_friend_practice_lobby_list(self):
+    def get_friend_practice_lobby_list(self):
         """
         Request a list of friend practice lobbies.
+
+        :return: List of friend lobbies returned by the GC.
+        :rtype: message `EDOTAGCMsg.EMsgGCFriendPracticeLobbyListResponse` or `None` if no answer or timeout
         """
         if self.verbose_debug:
             self._LOG.debug("Requesting friend practice lobby list.")
 
         jobid = self.send_job(EDOTAGCMsg.EMsgGCFriendPracticeLobbyListRequest, {})
+        resp = self.wait_msg(jobid, timeout=10)
 
-        @self.once(jobid)
-        def wrap_lobby_list(message):
-            self.emit(self.EVENT_LOBBY_FRIEND_LIST_ANSWER, message)
-
-        return jobid
+        return resp
 
     def balanced_shuffle_lobby(self):
         """
@@ -222,7 +204,7 @@ class Lobby(object):
         """
         Kick a player from the his current lobby team.
 
-        :param account_id: account_id
+        :param account_id: account_id 32-bit steam_id of the user to kick
         :type account_id: :class:`int`
         """
         if self.verbose_debug:
@@ -237,7 +219,11 @@ class Lobby(object):
         Join the target practice lobby.
 
         :param id: id of the lobby to join
-        :type password: :class:`str` pass phrase of the lobby to join
+        :type id: :class:`int`
+        :param password: password necessary to join the lobby
+        :type password: :class:`str`
+        :return: Result of the join command from the GC
+        :rtype: :class: `DOTAJoinLobbyResult`. `DOTAJoinLobbyResult.DOTA_JOIN_RESULT_TIMEOUT` if timeout
         """
         if self.verbose_debug:
             self._LOG.debug("Trying to join practice lobby %s using password %s" % (id, password))
@@ -246,12 +232,9 @@ class Lobby(object):
             "lobby_id": id,
             "pass_key": password
         })
+        resp = self.wait_msg(jobid, timeout=10)
 
-        @self.once(jobid)
-        def wrap_join_lobby(message):
-            self.emit(self.EVENT_LOBBY_JOIN_ANSWER, message)
-
-        return jobid
+        return DOTAJoinLobbyResult(resp.result) if resp else DOTAJoinLobbyResult.DOTA_JOIN_RESULT_TIMEOUT
 
     def leave_practice_lobby(self):
         """
@@ -303,8 +286,6 @@ class Lobby(object):
 
         :param channel: channel to join into
         :type channel: :class:`int`
-        :param team: team to join
-        :type team: :class:`DOTA_GC_TEAM`
         """
         if self.verbose_debug:
             self._LOG.debug("Joining channel %s of lobby broadcst." % channel)
@@ -337,7 +318,9 @@ class Lobby(object):
         """
         Answer to a lobby invite.
         :param id: lobby_id to answer to.
+        :type id: :class:`int`
         :param accept: answer to the lobby invite
+        :type accept: :class:`bool`
         """
         if self.verbose_debug:
             self._LOG.debug("Responding to lobby invite %s, accept: %s" % (id, accept))
