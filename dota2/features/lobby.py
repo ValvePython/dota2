@@ -116,6 +116,7 @@ class Lobby(object):
         :type options: :class:`dict`
         """
         options = {} if options is None else options
+        options['lobby_id'] = lobby_id
 
         if self.verbose_debug:
             self._LOG.debug("Changing lobby options of lobby %s", lobby_id)
