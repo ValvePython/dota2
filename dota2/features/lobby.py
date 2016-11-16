@@ -1,5 +1,3 @@
-import inspect
-
 from dota2.enums import ESOType, EGCBaseMsg, EDOTAGCMsg
 from dota2.enums import DOTAJoinLobbyResult, DOTA_GC_TEAM, DOTABotDifficulty
 
