@@ -113,6 +113,9 @@ class Lobby(object):
         :param options: options to change in the lobby
         :type options: :class:`dict`
         """
+        if self.lobby is None or not hasattr(self.lobby, 'lobby_id'):
+            return
+
         options = {} if options is None else options
         options['lobby_id'] = self.lobby.lobby_id
 
@@ -187,7 +190,7 @@ class Lobby(object):
         """
         Kick a player from the lobby.
 
-        :param account_id: steam_id
+        :param account_id: 32-bit steam_id of the user to kick from the lobby
         :type account_id: :class:`int`
         """
         if self.verbose_debug:
@@ -201,7 +204,7 @@ class Lobby(object):
         """
         Kick a player from the his current lobby team.
 
-        :param account_id: account_id 32-bit steam_id of the user to kick
+        :param account_id: 32-bit steam_id of the user to kick from a team
         :type account_id: :class:`int`
         """
         if self.verbose_debug:
