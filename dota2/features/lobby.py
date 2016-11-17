@@ -106,20 +106,18 @@ class Lobby(object):
 
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbyCreate, command)
 
-    def config_practice_lobby(self, lobby_id, options):
+    def config_practice_lobby(self, options):
         """
-        Change settings of the selected lobby.
+        Change settings of the current lobby.
 
-        :param lobby_id: target lobby
-        :type lobby_id: :class:`int`
         :param options: options to change in the lobby
         :type options: :class:`dict`
         """
         options = {} if options is None else options
-        options['lobby_id'] = lobby_id
+        options['lobby_id'] = self.lobby.lobby_id
 
         if self.verbose_debug:
-            self._LOG.debug("Changing lobby options of lobby %s", lobby_id)
+            self._LOG.debug("Changing lobby options of lobby %s", self.lobby.lobby_id)
 
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbySetDetails, options)
 
