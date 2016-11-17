@@ -113,7 +113,7 @@ class Lobby(object):
         :param options: options to change in the lobby
         :type options: :class:`dict`
         """
-        if self.lobby is None or not hasattr(self.lobby, 'lobby_id'):
+        if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
             return
 
         options = {} if options is None else options
@@ -158,6 +158,9 @@ class Lobby(object):
         """
         Balance shuffle the the lobby.
         """
+        if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Balance shuffle the the lobby")
 
@@ -167,6 +170,9 @@ class Lobby(object):
         """
         Flip both teams of the lobby.
         """
+        if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Flipping teams of the lobby")
 
@@ -179,6 +185,9 @@ class Lobby(object):
         :param steam_id: steam_id
         :type steam_id: :class:`int`
         """
+        if self.lobby is None:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Inviting %s to a lobby." % steam_id)
 
@@ -193,6 +202,9 @@ class Lobby(object):
         :param account_id: 32-bit steam_id of the user to kick from the lobby
         :type account_id: :class:`int`
         """
+        if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Kicking %s from the lobby." % account_id)
 
@@ -207,7 +219,10 @@ class Lobby(object):
         :param account_id: 32-bit steam_id of the user to kick from a team
         :type account_id: :class:`int`
         """
-        if self.verbose_debug:
+        if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
+            return
+
+        if self.verbose_debug or self.lobby.leader_id != self.steam.steam_id:
             self._LOG.debug("Kicking %s from his lobby team." % account_id)
 
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbyKickFromTeam, {
@@ -240,6 +255,9 @@ class Lobby(object):
         """
         Sends a message to the Game Coordinator requesting to leave the current lobby.
         """
+        if self.lobby is None:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Sending match CMsgPracticeLobbyLeave request")
 
@@ -249,6 +267,9 @@ class Lobby(object):
         """
         Abandon the current game.
         """
+        if self.lobby is None:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Abandoning current game.")
 
@@ -258,6 +279,9 @@ class Lobby(object):
         """
         Launch the current lobby into a game.
         """
+        if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Starting current lobby.")
 
@@ -272,6 +296,9 @@ class Lobby(object):
         :param team: team to join
         :type team: :class:`DOTA_GC_TEAM`
         """
+        if self.lobby is None:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Joining slot %s of lobby team %s." % (slot, team))
 
@@ -287,6 +314,9 @@ class Lobby(object):
         :param channel: channel to join into
         :type channel: :class:`int`
         """
+        if self.lobby is None:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Joining channel %s of lobby broadcst." % channel)
 
@@ -305,6 +335,9 @@ class Lobby(object):
         :param bot_difficulty: difficulty of the bot
         :type bot_difficulty: :class:`DOTABotDifficulty`
         """
+        if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
+            return
+
         if self.verbose_debug:
             self._LOG.debug("Adding a bot %s in slot %s of lobby team %s." % (bot_difficulty, slot, team))
 
