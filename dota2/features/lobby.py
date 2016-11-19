@@ -6,30 +6,30 @@ class Lobby(object):
     EVENT_LOBBY_INVITE = 'lobby_invite'
     """When a lobby invite is received
     :param message: `CSDOTALobbyInvite <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L100>`_
-    :type message: proto message
+    :type  message: proto message
     """
     EVENT_LOBBY_INVITE_REMOVED = 'lobby_invite_removed'
     """When a lobby invite is no longer valid
     :param message: `CSDOTALobbyInvite <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L100>`_
-    :type message: proto message
+    :type  message: proto message
     """
     EVENT_LOBBY_NEW = 'lobby_new'
     """Entered a lobby, either by creating one or accepting an invite
 
     :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
-    :type message: proto message
+    :type  message: proto message
     """
     EVENT_LOBBY_CHANGED = 'lobby_changed'
     """Anything changes to the lobby state, players, options, broadcasters...
 
     :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
-    :type message: proto message
+    :type  message: proto message
     """
     EVENT_LOBBY_REMOVED = 'lobby_removed'
     """The lobby is not valid anymore, quit or kick.
 
     :param message: `CSODOTALobby <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L193>`_
-    :type message: proto message
+    :type  message: proto message
     """
     lobby = None
 
@@ -68,9 +68,9 @@ class Lobby(object):
         Sends a message to the Game Coordinator requesting to create a lobby.
 
         :param password: password of lobby
-        :type password: :class:`str`
+        :type  password: :class:`str`
         :param options: options to setup the lobby with
-        :type options: :class:`dict`
+        :type  options: :class:`dict`
         """
         return self.create_tournament_lobby(password=password, options=options)
 
@@ -79,13 +79,13 @@ class Lobby(object):
         Sends a message to the Game Coordinator requesting to create a tournament lobby.
 
         :param password: password of lobby
-        :type password: :class:`str`
+        :type  password: :class:`str`
         :param tournament_game_id: tournament game id
-        :type tournament_game_id: :class:`int`
+        :type  tournament_game_id: :class:`int`
         :param tournament_id: tournament id
-        :type tournament_id: :class:`int`
+        :type  tournament_id: :class:`int`
         :param options: options to setup the lobby with
-        :type options: :class:`dict`
+        :type  options: :class:`dict`
         """
         options = {} if options is None else options
         options["pass_key"] = password
@@ -111,7 +111,7 @@ class Lobby(object):
         Change settings of the current lobby.
 
         :param options: options to change in the lobby
-        :type options: :class:`dict`
+        :type  options: :class:`dict`
         """
         if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
             return
@@ -183,7 +183,7 @@ class Lobby(object):
         Asks to invite a player to your lobby. This creates a new default lobby when you are not already in one.
 
         :param steam_id: steam_id
-        :type steam_id: :class:`int`
+        :type  steam_id: :class:`int`
         """
         if self.lobby is None:
             return
@@ -200,7 +200,7 @@ class Lobby(object):
         Kick a player from the lobby.
 
         :param account_id: 32-bit steam_id of the user to kick from the lobby
-        :type account_id: :class:`int`
+        :type  account_id: :class:`int`
         """
         if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
             return
@@ -217,7 +217,7 @@ class Lobby(object):
         Kick a player from the his current lobby team.
 
         :param account_id: 32-bit steam_id of the user to kick from a team
-        :type account_id: :class:`int`
+        :type  account_id: :class:`int`
         """
         if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
             return
@@ -234,9 +234,9 @@ class Lobby(object):
         Join the target practice lobby.
 
         :param id: id of the lobby to join
-        :type id: :class:`int`
+        :type  id: :class:`int`
         :param password: password necessary to join the lobby
-        :type password: :class:`str`
+        :type  password: :class:`str`
         :return: Result of the join command from the GC
         :rtype: :class: `DOTAJoinLobbyResult`. `DOTAJoinLobbyResult.DOTA_JOIN_RESULT_TIMEOUT` if timeout
         """
@@ -292,9 +292,9 @@ class Lobby(object):
         Join on of the lobby team at the specified slot.
 
         :param slot: slot to join into
-        :type slot: :class:`int`
+        :type  slot: :class:`int`
         :param team: team to join
-        :type team: :class:`DOTA_GC_TEAM`
+        :type  team: :class:`DOTA_GC_TEAM`
         """
         if self.lobby is None:
             return
@@ -312,7 +312,7 @@ class Lobby(object):
         Join a specific channel of the broadcasters.
 
         :param channel: channel to join into
-        :type channel: :class:`int`
+        :type  channel: :class:`int`
         """
         if self.lobby is None:
             return
@@ -329,11 +329,11 @@ class Lobby(object):
         Add a bot in the lobby.
 
         :param slot: slot to join into
-        :type slot: :class:`int`
+        :type  slot: :class:`int`
         :param team: team to join
-        :type team: :class:`DOTA_GC_TEAM`
+        :type  team: :class:`.DOTA_GC_TEAM`
         :param bot_difficulty: difficulty of the bot
-        :type bot_difficulty: :class:`DOTABotDifficulty`
+        :type  bot_difficulty: :class:`.DOTABotDifficulty`
         """
         if self.lobby is None or self.lobby.leader_id != self.steam.steam_id:
             return
@@ -350,10 +350,11 @@ class Lobby(object):
     def respond_lobby_invite(self, id, accept=False):
         """
         Answer to a lobby invite.
+
         :param id: lobby_id to answer to.
-        :type id: :class:`int`
+        :type  id: :class:`int`
         :param accept: answer to the lobby invite
-        :type accept: :class:`bool`
+        :type  accept: :class:`bool`
         """
         if self.verbose_debug:
             self._LOG.debug("Responding to lobby invite %s, accept: %s" % (id, accept))

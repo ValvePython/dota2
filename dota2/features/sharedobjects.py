@@ -46,7 +46,7 @@ def find_so_proto(type_id):
     """Resolves proto massage for given type_id
 
     :param type_id: SO type
-    :type type_id: :class:`dota2.enums.ESOType`
+    :type  type_id: :class:`dota2.enums.ESOType`
     :returns: proto message or `None`
     """
     if not isinstance(type_id, ESOType):

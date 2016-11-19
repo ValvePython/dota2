@@ -6,31 +6,31 @@ class Party(object):
     """When a party invite is receieved
 
     :param message: `CSODOTAPartyInvite <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L83>`_
-    :type message: proto message
+    :type  message: proto message
     """
     EVENT_NEW_PARTY = 'new_party'
     """Entered a party, either by inviting someone or accepting an invite
 
     :param message: `CSODOTAParty <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L32>`_
-    :type message: proto message
+    :type  message: proto message
     """
     EVENT_PARTY_CHANGED = 'party_changed'
     """Anything changes to the party state, leaving/entering/invites etc
 
     :param message: `CSODOTAParty <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L32>`_
-    :type message: proto message
+    :type  message: proto message
     """
     EVENT_PARTY_REMOVED = 'party_removed'
     """Left party, either left, kicked or disbanded
 
     :param message: `CSODOTAParty <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_common_match_management.proto#L32>`_
-    :type message: proto message
+    :type  message: proto message
     """
     EVENT_INVITATION_CREATED = 'invitation_created'
     """After inviting another user
 
     :param message: `CMsgInvitationCreated <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/base_gcmessages.proto#L93>`_
-    :type message: proto message
+    :type  message: proto message
     """
 
     party = None
@@ -121,7 +121,7 @@ class Party(object):
         Response event: ``party_coach``
 
         :param steam_id: steam_id for response
-        :type steam_id: :class:`int`
+        :type  steam_id: :class:`int`
 
         :param message: `CMsgDOTAPartyMemberSetCoach <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L354>`_ proto message
         """
@@ -173,7 +173,7 @@ class Party(object):
         Response event: ``kick_from_party``
 
         :param steam_id: steam_id for response
-        :type steam_id: :class:`int`
+        :type  steam_id: :class:`int`
 
         :param message: `CMsgKickFromParty <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/base_gcmessages.proto#L114>`_ proto message
         """

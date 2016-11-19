@@ -94,7 +94,7 @@ class Match(object):
         Response event: ``matches_minimal``
 
         :param matches: list of `CMsgDOTAMatchMinimal <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_watch.proto#L120-L154>`_
-        :type matches: :class:`list`
+        :type  matches: :class:`list`
 
         """
         return self.send_job(EDOTAGCMsg.EMsgClientToGCMatchesMinimalRequest, {'match_ids': match_ids})
