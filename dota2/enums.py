@@ -66,5 +66,30 @@ class ESOType(IntEnum):
     CSODOTAPlayerChallenge = 2010
     CSODOTALobbyInvite = 2011
 
+
+class ServerRegion(IntEnum):
+    UNSPECIFIED = 0
+    USWEST = 1
+    USEAST = 2
+    EUROPE = 3
+    KOREA = 4
+    SINGAPORE = 5
+    DUBAI = 6
+    AUSTRALIA = 7
+    STOCKHOLM = 8
+    AUSTRIA = 9
+    BRAZIL = 10
+    SOUTHAFRICA = 11
+    PWTELECOMSHANGHAI = 12
+    PWUNICOM = 13
+    CHILE = 14
+    PERU = 15
+    INDIA = 16
+    PWTELECOMGUANGZHOU = 17
+    PWTELECOMZHEJIANG = 18
+    JAPAN = 19
+    PWTELECOMWUHAN = 20
+
+
 del re, IntEnum, EnumTypeWrapper, _proto_modules, _proto_module, name, proto, gvars, key, value, items, ikey, ivalue
 
