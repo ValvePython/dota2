@@ -128,8 +128,8 @@ class Lobby(object):
         """
         Request a list of practice lobbies.
 
-        :return: List of lobbies returned by the GC.
-        :rtype: message `EDOTAGCMsg.EMsgGCPracticeLobbyListResponse` or `None` if no answer or timeout
+        :return: List of `CMsgPracticeLobbyListResponseEntry <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L202-L226>`_
+        :rtype: proto message, :class:`None`
         """
         if self.verbose_debug:
             self._LOG.debug("Requesting practice lobby list.")
@@ -137,14 +137,14 @@ class Lobby(object):
         jobid = self.send_job(EDOTAGCMsg.EMsgGCPracticeLobbyList, {})
         resp = self.wait_msg(jobid, timeout=10)
 
-        return resp
+        return resp.lobbies if resp else None
 
     def get_friend_practice_lobby_list(self):
         """
         Request a list of friend practice lobbies.
 
-        :return: List of friend lobbies returned by the GC.
-        :rtype: message `EDOTAGCMsg.EMsgGCFriendPracticeLobbyListResponse` or `None` if no answer or timeout
+        :return: List of `CMsgPracticeLobbyListResponseEntry <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L202-L226>`_
+        :rtype: proto message, :class:`None`
         """
         if self.verbose_debug:
             self._LOG.debug("Requesting friend practice lobby list.")
@@ -152,7 +152,7 @@ class Lobby(object):
         jobid = self.send_job(EDOTAGCMsg.EMsgGCFriendPracticeLobbyListRequest, {})
         resp = self.wait_msg(jobid, timeout=10)
 
-        return resp
+        return resp.lobbies if resp else None
 
     def balanced_shuffle_lobby(self):
         """
