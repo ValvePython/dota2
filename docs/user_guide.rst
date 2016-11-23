@@ -17,6 +17,7 @@ for details about :class:`SteamClient <steam:steam.client.SteamClient>`.
     In order to peek inside we need to setup debug logging.
     See the :ref:`logging_config` section
 
+
 .. code:: python
 
     from steam import SteamClient
@@ -25,28 +26,15 @@ for details about :class:`SteamClient <steam:steam.client.SteamClient>`.
     client = SteamClient()
     dota = Dota2Client(client)
 
-    @client.on('auth_code_required')
-    def auth_code_prompt(is_2fa, code_mismatch):
-        if is_2fa:
-            code = raw_input("Enter 2FA Code: ")
-            client.login(two_factor_code=code, **logOnDetails)
-        else:
-            code = raw_input("Enter Email Code: ")
-            client.login(auth_code=code, **logOnDetails)
-
-    @client.on('connected')
-    def login():
-        client.login('steamuser', 'password')
-
     @client.on('logged_on')
     def start_dota():
         dota.launch()
 
-    @dota.on('ready'):
+    @dota.on('ready')
     def do_dota_stuff():
         # talk to GC
 
-    client.connect()
+    client.cli_login()
     client.run_forever()
 
 
