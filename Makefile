@@ -53,9 +53,11 @@ upload: dist register
 	twine upload -r pypi dist/*
 
 pb_fetch:
-	wget -nv --show-progress -N -P ./protobufs/ -i protobuf_list.txt
+	wget -nv --backups=1 --show-progress -P ./protobufs/ -i protobuf_list.txt
+	rm -f ./protobufs/*.1
 	sed -i '1s/^/syntax = "proto2"\;\n/' protobufs/*.proto
 	sed -i 's/cc_generic_services/py_generic_services/' protobufs/*.proto
+	sed -i 's/ = 6000/ = 7000/' protobufs/steammessages.proto  # extentions hack
 
 pb_compile:
 	for filepath in `ls ./protobufs/*.proto`; do \
