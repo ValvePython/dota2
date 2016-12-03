@@ -252,7 +252,8 @@ class Dota2Client(GameCoordinator, FeatureBase):
         if self._retry_welcome_loop:
             self._retry_welcome_loop.kill()
 
-        self.steam.current_games_played.remove(self.app_id)
-        self.steam.games_played(self.steam.current_games_played)
+        if self.app_id in self.steam.current_games_played:
+            self.steam.current_games_played.remove(self.app_id)
+            self.steam.games_played(self.steam.current_games_played)
 
         self._set_connection_status(GCConnectionStatus.NO_SESSION)
