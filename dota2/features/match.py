@@ -80,7 +80,7 @@ class Match(object):
 
         :param match: `CMsgDOTAMatch <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_common.proto#L866-L1001>`_
         :type  match: proto message
-        :return url to download the replay of a specific match
+        :return url to download the replay of a specific match, None if match has not all the information
         :rtype :class: `str`
         """
         if match.match_id and match.cluster and match.replay_salt:
@@ -109,7 +109,7 @@ class Match(object):
 
         :param match: `CMsgDOTAMatch <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_common.proto#L866-L1001>`_
         :type  match: proto message
-        :return url to download the metadata of a specific match
+        :return url to download the metadata of a specific match, None if match has not all the information
         :rtype :class: `str`
         """
         if match.match_id and match.cluster and match.replay_salt:
