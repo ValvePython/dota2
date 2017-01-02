@@ -3,27 +3,26 @@ from dota2.enums import EDOTAGCMsg, DOTAChatChannelType_t
 
 
 class Chat(object):
-    """"""
 
     EVENT_CHANNEL_JOIN = 'channel_join'
     """When the client join a channel.
-    :param message:
-    :type  message:
+    :param message: result of the channel join request
+    :type  message: `EMsgGCJoinChatChannelResponse`
     """
     EVENT_CHANNEL_MESSAGE = 'channel_message'
     """When there is a new message in a channel.
-    :param message:
-    :type  message:
+    :param message: information about the new message in the channel
+    :type  message: `EMsgGCChatMessage`
     """
     EVENT_CHANNEL_MEMBER_JOIN = 'channel_member_join'
     """When a member joins a channel.
-    :param message:
-    :type  message:
+    :param message: details about the member join
+    :type  message: `EMsgGCOtherJoinedChannel`
     """
     EVENT_CHANNEL_MEMBER_LEAVE = 'channel_member_leave'
     """When a member leaves a channel.
-    :param message:
-    :type  message:
+    :param message: details about the member leave
+    :type  message: `EMsgGCOtherLeftChannel`
     """
 
     def __init__(self):
