@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_match_metadata.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x19\x64ota_match_metadata.proto\x1a\x15\x62\x61se_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"|\n\x16\x43\x44OTAMatchMetadataFile\x12\x0f\n\x07version\x18\x01 \x02(\x05\x12\x10\n\x08match_id\x18\x02 \x02(\x04\x12%\n\x08metadata\x18\x03 \x01(\x0b\x32\x13.CDOTAMatchMetadata\x12\x18\n\x10private_metadata\x18\x05 \x01(\x0c\"\xd0\n\n\x12\x43\x44OTAMatchMetadata\x12\'\n\x05teams\x18\x01 \x03(\x0b\x32\x18.CDOTAMatchMetadata.Team\x12/\n\x0citem_rewards\x18\x02 \x03(\x0b\x32\x19.CLobbyTimedRewardDetails\x12\x10\n\x08lobby_id\x18\x03 \x01(\x06\x12\x19\n\x11report_until_time\x18\x04 \x01(\x06\x1a\xb2\t\n\x04Team\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x30\n\x07players\x18\x02 \x03(\x0b\x32\x1f.CDOTAMatchMetadata.Team.Player\x12\x18\n\x10graph_experience\x18\x03 \x03(\x02\x12\x19\n\x11graph_gold_earned\x18\x04 \x03(\x02\x12\x17\n\x0fgraph_net_worth\x18\x05 \x03(\x02\x12\x15\n\rcm_first_pick\x18\x06 \x01(\x08\x12\x1c\n\x14\x63m_captain_player_id\x18\x07 \x01(\r\x12\x0f\n\x07\x63m_bans\x18\x08 \x03(\r\x12\x10\n\x08\x63m_picks\x18\t \x03(\r\x12\x12\n\ncm_penalty\x18\n \x01(\r\x1a\x30\n\nPlayerKill\x12\x13\n\x0bvictim_slot\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x1a\x36\n\x0cItemPurchase\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x15\n\rpurchase_time\x18\x02 \x01(\x05\x1av\n\x11InventorySnapshot\x12\x0f\n\x07item_id\x18\x01 \x03(\r\x12\x11\n\tgame_time\x18\x02 \x01(\x05\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05level\x18\x06 \x01(\r\x1a\xc8\x05\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10\x61\x62ility_upgrades\x18\x02 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x03 \x01(\r\x12)\n\x13\x65quipped_econ_items\x18\x04 \x03(\x0b\x32\x0c.CSOEconItem\x12\x32\n\x05kills\x18\x05 \x03(\x0b\x32#.CDOTAMatchMetadata.Team.PlayerKill\x12\x34\n\x05items\x18\x06 \x03(\x0b\x32%.CDOTAMatchMetadata.Team.ItemPurchase\x12\x15\n\ravg_kills_x16\x18\x07 \x01(\r\x12\x16\n\x0e\x61vg_deaths_x16\x18\x08 \x01(\r\x12\x17\n\x0f\x61vg_assists_x16\x18\t \x01(\r\x12\x13\n\x0b\x61vg_gpm_x16\x18\n \x01(\r\x12\x13\n\x0b\x61vg_xpm_x16\x18\x0b \x01(\r\x12\x16\n\x0e\x62\x65st_kills_x16\x18\x0c \x01(\r\x12\x18\n\x10\x62\x65st_assists_x16\x18\r \x01(\r\x12\x14\n\x0c\x62\x65st_gpm_x16\x18\x0e \x01(\r\x12\x14\n\x0c\x62\x65st_xpm_x16\x18\x0f \x01(\r\x12\x12\n\nwin_streak\x18\x10 \x01(\r\x12\x17\n\x0f\x62\x65st_win_streak\x18\x11 \x01(\r\x12\x13\n\x0b\x66ight_score\x18\x12 \x01(\x02\x12\x12\n\nfarm_score\x18\x13 \x01(\x02\x12\x15\n\rsupport_score\x18\x14 \x01(\x02\x12\x12\n\npush_score\x18\x15 \x01(\x02\x12\x16\n\x0elevel_up_times\x18\x16 \x03(\r\x12\x17\n\x0fgraph_net_worth\x18\x17 \x03(\x02\x12\x46\n\x12inventory_snapshot\x18\x18 \x03(\x0b\x32*.CDOTAMatchMetadata.Team.InventorySnapshot\x12\x1c\n\x14\x61vg_stats_calibrated\x18\x19 \x01(\x08\"\x90\x03\n\x19\x43\x44OTAMatchPrivateMetadata\x12.\n\x05teams\x18\x01 \x03(\x0b\x32\x1f.CDOTAMatchPrivateMetadata.Team\x1a\xc2\x02\n\x04Team\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x37\n\x07players\x18\x02 \x03(\x0b\x32&.CDOTAMatchPrivateMetadata.Team.Player\x12;\n\tbuildings\x18\x03 \x03(\x0b\x32(.CDOTAMatchPrivateMetadata.Team.Building\x1aJ\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x02 \x01(\r\x12\x17\n\x0fposition_stream\x18\x03 \x01(\x0c\x1a\x65\n\x08\x42uilding\x12\x11\n\tunit_name\x18\x01 \x01(\t\x12\x18\n\x10position_quant_x\x18\x02 \x01(\r\x12\x18\n\x10position_quant_y\x18\x03 \x01(\r\x12\x12\n\ndeath_time\x18\x04 \x01(\x02\x42\x03\x90\x01\x00')
+  serialized_pb=_b('\n\x19\x64ota_match_metadata.proto\x1a\x15\x62\x61se_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"|\n\x16\x43\x44OTAMatchMetadataFile\x12\x0f\n\x07version\x18\x01 \x02(\x05\x12\x10\n\x08match_id\x18\x02 \x02(\x04\x12%\n\x08metadata\x18\x03 \x01(\x0b\x32\x13.CDOTAMatchMetadata\x12\x18\n\x10private_metadata\x18\x05 \x01(\x0c\"\xd1\x0b\n\x12\x43\x44OTAMatchMetadata\x12\'\n\x05teams\x18\x01 \x03(\x0b\x32\x18.CDOTAMatchMetadata.Team\x12/\n\x0citem_rewards\x18\x02 \x03(\x0b\x32\x19.CLobbyTimedRewardDetails\x12\x10\n\x08lobby_id\x18\x03 \x01(\x06\x12\x19\n\x11report_until_time\x18\x04 \x01(\x06\x1a\xb3\n\n\x04Team\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x30\n\x07players\x18\x02 \x03(\x0b\x32\x1f.CDOTAMatchMetadata.Team.Player\x12\x18\n\x10graph_experience\x18\x03 \x03(\x02\x12\x19\n\x11graph_gold_earned\x18\x04 \x03(\x02\x12\x17\n\x0fgraph_net_worth\x18\x05 \x03(\x02\x12\x15\n\rcm_first_pick\x18\x06 \x01(\x08\x12\x1c\n\x14\x63m_captain_player_id\x18\x07 \x01(\r\x12\x0f\n\x07\x63m_bans\x18\x08 \x03(\r\x12\x10\n\x08\x63m_picks\x18\t \x03(\r\x12\x12\n\ncm_penalty\x18\n \x01(\r\x1a\x30\n\nPlayerKill\x12\x13\n\x0bvictim_slot\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x1a\x36\n\x0cItemPurchase\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x15\n\rpurchase_time\x18\x02 \x01(\x05\x1av\n\x11InventorySnapshot\x12\x0f\n\x07item_id\x18\x01 \x03(\r\x12\x11\n\tgame_time\x18\x02 \x01(\x05\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05level\x18\x06 \x01(\r\x1a\x36\n\x11\x41utoStyleCriteria\x12\x12\n\nname_token\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\x02\x1a\x91\x06\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10\x61\x62ility_upgrades\x18\x02 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x03 \x01(\r\x12)\n\x13\x65quipped_econ_items\x18\x04 \x03(\x0b\x32\x0c.CSOEconItem\x12\x32\n\x05kills\x18\x05 \x03(\x0b\x32#.CDOTAMatchMetadata.Team.PlayerKill\x12\x34\n\x05items\x18\x06 \x03(\x0b\x32%.CDOTAMatchMetadata.Team.ItemPurchase\x12\x15\n\ravg_kills_x16\x18\x07 \x01(\r\x12\x16\n\x0e\x61vg_deaths_x16\x18\x08 \x01(\r\x12\x17\n\x0f\x61vg_assists_x16\x18\t \x01(\r\x12\x13\n\x0b\x61vg_gpm_x16\x18\n \x01(\r\x12\x13\n\x0b\x61vg_xpm_x16\x18\x0b \x01(\r\x12\x16\n\x0e\x62\x65st_kills_x16\x18\x0c \x01(\r\x12\x18\n\x10\x62\x65st_assists_x16\x18\r \x01(\r\x12\x14\n\x0c\x62\x65st_gpm_x16\x18\x0e \x01(\r\x12\x14\n\x0c\x62\x65st_xpm_x16\x18\x0f \x01(\r\x12\x12\n\nwin_streak\x18\x10 \x01(\r\x12\x17\n\x0f\x62\x65st_win_streak\x18\x11 \x01(\r\x12\x13\n\x0b\x66ight_score\x18\x12 \x01(\x02\x12\x12\n\nfarm_score\x18\x13 \x01(\x02\x12\x15\n\rsupport_score\x18\x14 \x01(\x02\x12\x12\n\npush_score\x18\x15 \x01(\x02\x12\x16\n\x0elevel_up_times\x18\x16 \x03(\r\x12\x17\n\x0fgraph_net_worth\x18\x17 \x03(\x02\x12\x46\n\x12inventory_snapshot\x18\x18 \x03(\x0b\x32*.CDOTAMatchMetadata.Team.InventorySnapshot\x12\x1c\n\x14\x61vg_stats_calibrated\x18\x19 \x01(\x08\x12G\n\x13\x61uto_style_criteria\x18\x1a \x03(\x0b\x32*.CDOTAMatchMetadata.Team.AutoStyleCriteria\"\x90\x03\n\x19\x43\x44OTAMatchPrivateMetadata\x12.\n\x05teams\x18\x01 \x03(\x0b\x32\x1f.CDOTAMatchPrivateMetadata.Team\x1a\xc2\x02\n\x04Team\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x37\n\x07players\x18\x02 \x03(\x0b\x32&.CDOTAMatchPrivateMetadata.Team.Player\x12;\n\tbuildings\x18\x03 \x03(\x0b\x32(.CDOTAMatchPrivateMetadata.Team.Building\x1aJ\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x02 \x01(\r\x12\x17\n\x0fposition_stream\x18\x03 \x01(\x0c\x1a\x65\n\x08\x42uilding\x12\x11\n\tunit_name\x18\x01 \x01(\t\x12\x18\n\x10position_quant_x\x18\x02 \x01(\r\x12\x18\n\x10position_quant_y\x18\x03 \x01(\r\x12\x12\n\ndeath_time\x18\x04 \x01(\x02\x42\x03\x90\x01\x00')
   ,
   dependencies=[base__gcmessages__pb2.DESCRIPTOR,dota__gcmessages__common__match__management__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -220,6 +220,43 @@ _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT = _descriptor.Descriptor(
   serialized_end=871,
 )
 
+_CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA = _descriptor.Descriptor(
+  name='AutoStyleCriteria',
+  full_name='CDOTAMatchMetadata.Team.AutoStyleCriteria',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name_token', full_name='CDOTAMatchMetadata.Team.AutoStyleCriteria.name_token', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='CDOTAMatchMetadata.Team.AutoStyleCriteria.value', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=873,
+  serialized_end=927,
+)
+
 _CDOTAMATCHMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
   name='Player',
   full_name='CDOTAMatchMetadata.Team.Player',
@@ -402,6 +439,13 @@ _CDOTAMATCHMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='auto_style_criteria', full_name='CDOTAMatchMetadata.Team.Player.auto_style_criteria', index=25,
+      number=26, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -414,8 +458,8 @@ _CDOTAMATCHMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=874,
-  serialized_end=1586,
+  serialized_start=930,
+  serialized_end=1715,
 )
 
 _CDOTAMATCHMETADATA_TEAM = _descriptor.Descriptor(
@@ -498,7 +542,7 @@ _CDOTAMATCHMETADATA_TEAM = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CDOTAMATCHMETADATA_TEAM_PLAYERKILL, _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE, _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT, _CDOTAMATCHMETADATA_TEAM_PLAYER, ],
+  nested_types=[_CDOTAMATCHMETADATA_TEAM_PLAYERKILL, _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE, _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT, _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA, _CDOTAMATCHMETADATA_TEAM_PLAYER, ],
   enum_types=[
   ],
   options=None,
@@ -508,7 +552,7 @@ _CDOTAMATCHMETADATA_TEAM = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=384,
-  serialized_end=1586,
+  serialized_end=1715,
 )
 
 _CDOTAMATCHMETADATA = _descriptor.Descriptor(
@@ -559,7 +603,7 @@ _CDOTAMATCHMETADATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=226,
-  serialized_end=1586,
+  serialized_end=1715,
 )
 
 
@@ -603,8 +647,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1812,
-  serialized_end=1886,
+  serialized_start=1941,
+  serialized_end=2015,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM_BUILDING = _descriptor.Descriptor(
@@ -654,8 +698,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_BUILDING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1888,
-  serialized_end=1989,
+  serialized_start=2017,
+  serialized_end=2118,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM = _descriptor.Descriptor(
@@ -698,8 +742,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1667,
-  serialized_end=1989,
+  serialized_start=1796,
+  serialized_end=2118,
 )
 
 _CDOTAMATCHPRIVATEMETADATA = _descriptor.Descriptor(
@@ -728,18 +772,20 @@ _CDOTAMATCHPRIVATEMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1589,
-  serialized_end=1989,
+  serialized_start=1718,
+  serialized_end=2118,
 )
 
 _CDOTAMATCHMETADATAFILE.fields_by_name['metadata'].message_type = _CDOTAMATCHMETADATA
 _CDOTAMATCHMETADATA_TEAM_PLAYERKILL.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT.containing_type = _CDOTAMATCHMETADATA_TEAM
+_CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['equipped_econ_items'].message_type = base__gcmessages__pb2._CSOECONITEM
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['kills'].message_type = _CDOTAMATCHMETADATA_TEAM_PLAYERKILL
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['items'].message_type = _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['inventory_snapshot'].message_type = _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT
+_CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['auto_style_criteria'].message_type = _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA
 _CDOTAMATCHMETADATA_TEAM_PLAYER.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM.fields_by_name['players'].message_type = _CDOTAMATCHMETADATA_TEAM_PLAYER
 _CDOTAMATCHMETADATA_TEAM.containing_type = _CDOTAMATCHMETADATA
@@ -787,6 +833,13 @@ CDOTAMatchMetadata = _reflection.GeneratedProtocolMessageType('CDOTAMatchMetadat
       ))
     ,
 
+    AutoStyleCriteria = _reflection.GeneratedProtocolMessageType('AutoStyleCriteria', (_message.Message,), dict(
+      DESCRIPTOR = _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA,
+      __module__ = 'dota_match_metadata_pb2'
+      # @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.AutoStyleCriteria)
+      ))
+    ,
+
     Player = _reflection.GeneratedProtocolMessageType('Player', (_message.Message,), dict(
       DESCRIPTOR = _CDOTAMATCHMETADATA_TEAM_PLAYER,
       __module__ = 'dota_match_metadata_pb2'
@@ -807,6 +860,7 @@ _sym_db.RegisterMessage(CDOTAMatchMetadata.Team)
 _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.PlayerKill)
 _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.ItemPurchase)
 _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.InventorySnapshot)
+_sym_db.RegisterMessage(CDOTAMatchMetadata.Team.AutoStyleCriteria)
 _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.Player)
 
 CDOTAMatchPrivateMetadata = _reflection.GeneratedProtocolMessageType('CDOTAMatchPrivateMetadata', (_message.Message,), dict(

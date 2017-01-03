@@ -68,6 +68,7 @@ message CMsgDOTATournamentInfo {
 		optional uint32 phase_type = 23;
 		optional uint32 team1_score = 24;
 		optional uint32 team2_score = 25;
+		optional uint32 phase_id = 26;
 	}
 
 	message News {
@@ -93,6 +94,7 @@ message CMsgWeekendTourneySchedule {
 		optional uint32 time_window_open = 2;
 		optional uint32 time_window_close = 3;
 		optional uint32 time_window_open_next = 4;
+		optional uint32 trophy_id = 5;
 	}
 
 	repeated .CMsgWeekendTourneySchedule.Division divisions = 1;

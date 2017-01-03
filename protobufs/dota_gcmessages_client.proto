@@ -172,6 +172,7 @@ message CMsgDOTAPopup {
 		EVENT_PREMIUM_POINTS_EARNED = 67;
 		LOBBY_MVP_AWARDED = 68;
 		LOW_BADGE_LEVEL_CHAT = 71;
+		LOW_WINS_CHAT = 72;
 		GENERIC_INFO = 69;
 		GENERIC_ERROR = 70;
 	}
@@ -276,7 +277,6 @@ message CMsgGCToServerMatchDetailsResponse {
 message CMsgDOTAProfileRequest {
 	optional uint32 account_id = 1;
 	optional bool request_name = 2;
-	optional .ESourceEngine engine = 3 [default = k_ESE_Source1];
 }
 
 message CMsgDOTAProfileResponse {
@@ -2011,6 +2011,18 @@ message CMsgClientToGCTransferSeasonalMMRRequest {
 
 message CMsgClientToGCTransferSeasonalMMRResponse {
 	optional bool success = 1;
+}
+
+message CMsgGCToClientPlaytestStatus {
+	optional bool active = 1;
+}
+
+message CMsgClientToGCJoinPlaytest {
+	optional uint32 client_version = 1;
+}
+
+message CMsgClientToGCJoinPlaytestResponse {
+	optional string error = 1;
 }
 
 message CMsgDOTAEventInvite {
