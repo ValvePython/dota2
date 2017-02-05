@@ -1,219 +1,327 @@
-from steam.enums import EResult
+import logging
+import six
+from eventemitter import EventEmitter
 from dota2.enums import EDOTAGCMsg, DOTAChatChannelType_t
+from dota2.protobufs.dota_gcmessages_client_chat_pb2 import CMsgDOTAJoinChatChannelResponse,\
+                                                            CMsgDOTAChatChannelFullUpdate,\
+                                                            CMsgDOTAOtherJoinedChatChannel,\
+                                                            CMsgDOTAOtherLeftChatChannel,\
+                                                            CMsgDOTAChatChannelMemberUpdate
 
 
-class Chat(object):
-
-    EVENT_CHANNEL_JOIN = 'channel_join'
-    """When the client join a channel.
-    :param message: result of the channel join request
-    :type  message: `EMsgGCJoinChatChannelResponse`
-    """
-    EVENT_CHANNEL_MESSAGE = 'channel_message'
-    """When there is a new message in a channel.
-    :param message: information about the new message in the channel
-    :type  message: `EMsgGCChatMessage`
-    """
-    EVENT_CHANNEL_MEMBER_JOIN = 'channel_member_join'
-    """When a member joins a channel.
-    :param message: details about the member join
-    :type  message: `EMsgGCOtherJoinedChannel`
-    """
-    EVENT_CHANNEL_MEMBER_LEAVE = 'channel_member_leave'
-    """When a member leaves a channel.
-    :param message: details about the member leave
-    :type  message: `EMsgGCOtherLeftChannel`
-    """
-
+class ChatBase(object):
     def __init__(self):
-        super(Chat, self).__init__()
+        super(ChatBase, self).__init__()
+        name = "%s.channels" % self.__class__.__name__
+        self.channels = ChannelManager(self, name)
 
-        self.channels = {}
-        self.on('notready', self.__chat_cleanup)
+
+class ChannelManager(EventEmitter):
+    EVENT_JOINED_CHANNEL = 'channel_joined'
+    """When the client join a channel.
+
+    :param channel: channel instance
+    :type  channel: :class:`ChatChannel`
+    """
+    EVENT_LEFT_CHANNEL = 'channel_left'
+    """When the client leaves a channel.
+
+    :param channel: channel instance
+    :type  channel: :class:`ChatChannel`
+    """
+    EVENT_MESSAGE = 'message'
+    """On a new channel message
+
+    :param channel: channel instance
+    :type  channel: :class:`ChatChannel`
+    :param message: message data
+    :type  message: `CMsgDOTAChatMessage <https://github.com/ValvePython/dota2/blob/6cb1008f3070e008e9bed9521fad8d1438123aa1/protobufs/dota_gcmessages_client_chat.proto#L86-L122>`_
+    """
+    EVENT_CHANNEL_MEMBERS_UPDATE = 'members_update'
+    """When users join/leave a channel
+
+    :param channel: channel instance
+    :type  channel: :class:`ChatChannel`
+    :param joined: list of members who joined
+    :type  joined: list
+    :param left: list of members who left
+    :type  left: list
+    """
+
+    def emit(self, event, *args):
+        if event is not None:
+            self._LOG.debug("Emit event: %s" % repr(event))
+        EventEmitter.emit(self, event, *args)
+
+    def __init__(self, dota_client, logger_name):
+        super(ChannelManager, self).__init__()
+
+        self._LOG = logging.getLogger(logger_name if logger_name else self.__class__.__name__)
+        self._dota = dota_client
+        self._channels = {}
+        self._channels_by_name = {}
 
         # register our handlers
-        self.on(EDOTAGCMsg.EMsgGCJoinChatChannelResponse, self.__handle_channel_join)
-        self.on(EDOTAGCMsg.EMsgGCChatMessage, self.__handle_channel_message)
-        self.on(EDOTAGCMsg.EMsgGCOtherJoinedChannel, self.__handle_channel_member_join)
-        self.on(EDOTAGCMsg.EMsgGCOtherLeftChannel, self.__handle_channel_member_leave)
+        self._dota.on('notready', self._cleanup)
+        self._dota.on(EDOTAGCMsg.EMsgGCJoinChatChannelResponse, self._handle_join_response)
+        self._dota.on(EDOTAGCMsg.EMsgGCChatMessage, self._handle_message)
+        self._dota.on(EDOTAGCMsg.EMsgGCOtherJoinedChannel, self._handle_members_update)
+        self._dota.on(EDOTAGCMsg.EMsgGCOtherLeftChannel, self._handle_members_update)
+        self._dota.on(EDOTAGCMsg.EMsgDOTAChatChannelMemberUpdate, self._handle_members_update)
 
-    def __chat_cleanup(self):
-        self.channels = {}
+    def __repr__(self):
+        return "<ChannelManager(): %d channels>" % (
+                    len(self),
+                    )
 
-    def __handle_channel_join(self, channel_info):
-        self.channels[channel_info.channel_id] = channel_info
-        self.emit(self.EVENT_CHANNEL_JOIN, channel_info)
+    def _cleanup(self):
+        self._channels.clear()
+        self._channels_by_name.clear()
 
-    def __handle_channel_message(self, message_info):
-        self.emit(self.EVENT_CHANNEL_MESSAGE, message_info)
+    def _remove_channel(self, channel_id):
+        channel = self._channels.pop(channel_id, None)
+        self._channels_by_name.pop((channel.name, channel.type), None)
 
-    def __handle_channel_member_join(self, member_info):
-        self.emit(self.EVENT_CHANNEL_MEMBER_JOIN, member_info)
+    def __contains__(self, key):
+        return (key in self._channels) or (key in self._channels_by_name)
 
-    def __handle_channel_member_leave(self, member_info):
-        self.emit(self.EVENT_CHANNEL_MEMBER_LEAVE, member_info)
+    def __getitem__(self, key):
+        if isinstance(key, tuple):
+            return self._channels_by_name[key]
+        else:
+            return self._channels[key]
+
+    def __len__(self):
+        return len(self._channels)
+
+    def __iter__(self):
+        return six.itervalues(self._channels)
+
+    def _handle_join_response(self, message):
+        key = (message.channel_name, message.channel_type)
+        self.emit(('join_result',) + key, message.result)
+
+        if message.result == message.JOIN_SUCCESS:
+            if message.channel_id in self:
+                channel = self[message.channel_id]
+            else:
+                channel = ChatChannel(self, message)
+
+                self._channels[channel.id] = channel
+                self._channels_by_name[key] = channel
+
+            self.emit(self.EVENT_JOINED_CHANNEL, channel)
+
+    def _handle_message(self, message):
+        if message.channel_id in self:
+            self.emit(self.EVENT_MESSAGE, self[message.channel_id], message)
+
+    def _handle_members_update(self, message):
+        if message.channel_id in self:
+            channel = self[message.channel_id]
+            joined = []
+            left = []
+
+            if isinstance(message, CMsgDOTAOtherLeftChatChannel):
+                left.append(message.steam_id or message.channel_user_id)
+            elif isinstance(message, CMsgDOTAOtherJoinedChatChannel):
+                joined.append(message.steam_id or message.channel_user_id)
+            elif isinstance(message, CMsgDOTAChatChannelMemberUpdate):
+                left = list(message.left_steam_ids)
+                joined = list(map(lambda x: x.steam_id or x.channel_user_id, message.joined_members))
+            elif isinstance(message, CMsgDOTAChatChannelFullUpdate):
+                pass
+
+            channel._process_members_from_proto(message)
+
+            if joined or left:
+                self.emit(self.EVENT_CHANNEL_MEMBERS_UPDATE, joined, left)
 
     def join_channel(self, channel_name, channel_type=DOTAChatChannelType_t.DOTAChannelType_Custom):
+        """Join a chat channel
+
+        :param channel_name: channel name
+        :type  channel_name: str
+        :param channel_type: channel type
+        :type  channel_type: :class:`.DOTAChatChannelType_t`
+        :return: join result
+        :rtype: int
+
+        Response event: :attr:`EVENT_JOINED_CHANNEL`
         """
-        Send a join channel requests to the GC.
+        if self._dota.verbose_debug:
+            self._LOG.debug("Request to join chat channel: %s", channel_name)
 
-        :param channel_name: Name of the channel to join
-        :type channel_name: :class: `str`
-        :param channel_type: Type of channel to join
-        :type channel_type: :class: `DOTAChatChannelType_t`
-
-        Response event: ``channel_join``
-
-        :param message: `EMsgGCJoinChatChannelResponse`
-        :type  message: proto message
-        """
-        if self.verbose_debug:
-            self._LOG.debug("Joining chat channel: {0}".format(channel_name))
-
-        self.send(EDOTAGCMsg.EMsgGCJoinChatChannel, {
+        self._dota.send(EDOTAGCMsg.EMsgGCJoinChatChannel, {
             "channel_name": channel_name,
             "channel_type": channel_type
         })
+
+        resp = self.wait_event(('join_result', channel_name, channel_type), timeout=25)
+
+        if resp:
+            return resp[0]
+        else:
+            return None
 
     def join_lobby_channel(self):
         """
         Join the lobby channel if the client is in a lobby.
 
-        Response event: ``channel_join``
-
-        :param message: `EMsgGCJoinChatChannelResponse`
-        :type  message: proto message
+        Response event: :attr:`EVENT_JOINED_CHANNEL`
         """
-        if self.lobby is None:
-            if self.verbose_debug:
-                self._LOG.debug("Can't join lobby channel if you aren't in the lobby")
-            return
+        if self.lobby:
+            key = "Lobby_%s" % self.lobby.lobby_id, DOTAChatChannelType_t.DOTAChannelType_Lobby
+            return self.join_channel(*key)
 
-        self.join_channel("Lobby_%s" % self.lobby.lobby_id, DOTAChatChannelType_t.DOTAChannelType_Lobby)
+    @property
+    def lobby(self):
+        """References lobby channel if client has joined it
 
-    def leave_channel(self, channel_id):
+        :return: channel instance
+        :rtype: :class:`.ChatChannel`
         """
-        Send a leave channel requests to the GC.
+        if self.lobby:
+            key = "Lobby_%s" % self.lobby.lobby_id, DOTAChatChannelType_t.DOTAChannelType_Lobby
+            return self._channels_by_name.get(key, None)
 
-        :param channel_id: id of the channel to leave
-        :type channel_id: :class: `int`
+    def join_party_channel(self):
         """
-        channel = self.channels.get(channel_id)
-        if channel is None:
-            if self.verbose_debug:
-                self._LOG.debug("Impossible to leave a channel you are not member of.")
-            return
+        Join the lobby channel if the client is in a lobby.
 
-        if self.verbose_debug:
-            self._LOG.debug("Leaving chat channel: {0} {1}".format(channel_id, channel.channel_name))
-
-        self.send(EDOTAGCMsg.EMsgGCLeaveChatChannel,{
-            "channel_id": channel_id
-        })
-
-        del self.channels[channel_id]
-
-    def send_message(self, channel_id, message):
+        Response event: :attr:`EVENT_JOINED_CHANNEL`
         """
-        Send a message to a channel the client has joined.
+        if self.party:
+            key = "Party_%s" % self.party.party_id, DOTAChatChannelType_t.DOTAChannelType_Party
+            return self.join_channel(*key)
 
-        :param channel_id: id of the channel to send a message to
-        :type channel_id: :class: `int`
-        :param message: message to send in the channel
-        :type message: :class: `str`
+    @property
+    def party(self):
+        """References party channel if client has joined it
+
+        :return: channel instance
+        :rtype: :class:`.ChatChannel`
         """
-        channel = self.channels.get(channel_id)
-        if channel is None:
-            if self.verbose_debug:
-                self._LOG.debug("Impossible to send a message to a channel you have not joined.")
-            return
+        if self.party:
+            key = "Party_%s" % self.party.party_id, DOTAChatChannelType_t.DOTAChannelType_Party
+            return self._channels_by_name.get(key, None)
 
-        if self.verbose_debug:
-            self._LOG.debug("Send message to channel {0}: '{1}'".format(channel_id, message))
-
-        self.send(EDOTAGCMsg.EMsgGCChatMessage, {
-            "channel_id": channel_id,
-            "text": message
-        })
-
-    def share_lobby(self, channel_id):
-        """
-        Share user lobby in the target channel.
-
-        :param channel_id: id of the channel to share the lobby into
-        :type channel_id: :class: `int`
-        """
-        if self.lobby is None:
-            if self.verbose_debug:
-                self._LOG.debug("Impossible to share lobby if not inside a lobby.")
-            return
-
-        channel = self.channels.get(channel_id)
-        if channel is None:
-            if self.verbose_debug:
-                self._LOG.debug("Impossible to share lobby in a channel not joined.")
-            return
-
-        self.send(EDOTAGCMsg.EMsgGCChatMessage, {
-            "channel_id": channel_id,
-            "share_lobby_id": self.lobby.lobby_id,
-            "share_lobby_passkey": self.lobby.pass_key
-        })
-
-    def flip_coin(self, channel_id):
-        """
-        Flip a coin in the target lobby.
-
-        :param channel_id: id of the channel to share a coin into
-        :type channel_id: :class: `int`
-        """
-        channel = self.channels.get(channel_id)
-        if channel is None:
-            if self.verbose_debug:
-                self._LOG.debug("Impossible to flip a coin channel not joined.")
-            return
-
-        self.send(EDOTAGCMsg.EMsgGCChatMessage, {
-            "channel_id": channel_id,
-            "coin_flip": True
-        })
-
-    def roll_dice(self, channel_id, min=1, max=100):
-        """
-        Roll a dice in the target lobby.
-
-        :param channel_id: id of the channel to roll a dice into
-        :type channel_id: :class: `int`
-        :param min: dice starting value
-        :type min: :class: `int`
-        :param max: dice ending value
-        :type max: :class: `int`
-        """
-        channel = self.channels.get(channel_id)
-        if channel is None:
-            if self.verbose_debug:
-                self._LOG.debug("Impossible to roll a dice in a channel not joined.")
-            return
-
-        self.send(EDOTAGCMsg.EMsgGCChatMessage, {
-            "channel_id": channel_id,
-            "dice_roll": {
-                "roll_min": min,
-                "roll_max": max
-            }
-        })
-
-    def request_chat_channels(self):
+    def get_channel_list(self):
         """
         Requests a list of chat channels from the GC.
 
-        :return List of chat channels
-        :rtype `EMsgGCRequestChatChannelListResponse`
+        :return: List of chat channels
+        :rtype: `CMsgDOTAChatGetUserListResponse <https://github.com/ValvePython/dota2/blob/6cb1008f3070e008e9bed9521fad8d1438123aa1/protobufs/dota_gcmessages_client_chat.proto#L210-L220>`_, ``None``
         """
-        if self.verbose_debug:
+        if self._dota.verbose_debug:
             self._LOG.debug("Requesting channel list from GC.")
 
-        jobid = self.send_job(EDOTAGCMsg.EMsgGCRequestChatChannelList, {})
-        resp = self.wait_msg(jobid, timeout=10)
+        jobid = self._dota.send_job(EDOTAGCMsg.EMsgGCRequestChatChannelList, {})
+        resp = self._dota.wait_msg(jobid, timeout=25)
 
         return resp
+
+    def leave_channel(self, channel_id):
+        if channel_id in self:
+            channel = self[channel_id]
+
+            if self._dota.verbose_debug:
+                self._LOG.debug("Leaving chat channel: %s", repr(channel))
+
+            self._dota.send(EDOTAGCMsg.EMsgGCLeaveChatChannel, {
+                "channel_id": channel_id
+            })
+
+            self._remove_channel(channel_id)
+            self.emit(self.EVENT_LEFT_CHANNEL, channel)
+
+
+class ChatChannel(object):
+    def __init__(self, channel_manager, join_data):
+        self._manager = channel_manager
+        self._dota = self._manager._dota
+        self._LOG = self._manager._LOG
+
+        self.members = {}
+        self.id = join_data.channel_id
+        self.name = join_data.channel_name
+        self.type = join_data.channel_type
+        self.user_id = join_data.channel_user_id
+        self.max_members = join_data.max_members
+
+        self._process_members_from_proto(join_data)
+
+    def __repr__(self):
+        return "<ChatChannel(%s, %s, %s)>" % (
+                    self.id,
+                    repr(self.name),
+                    self.type,
+                    )
+
+    def _process_members_from_proto(self, data):
+        if isinstance(data, CMsgDOTAOtherLeftChatChannel):
+            self.members.pop(data.steam_id or data.channel_user_id, None)
+            return
+        elif isinstance(data, CMsgDOTAOtherJoinedChatChannel):
+            members = [data]
+        elif isinstance(data, CMsgDOTAJoinChatChannelResponse):
+            members = data.members
+        elif isinstance(data, CMsgDOTAChatChannelMemberUpdate):
+            for steam_id in data.left_steam_ids:
+                self.members.pop(steam_id, None)
+
+            members = data.joined_members
+
+        for member in members:
+            self.members[member.steam_id or member.channel_user_id] = (
+                member.persona_name,
+                member.status
+            )
+
+
+    def leave(self):
+        """Leave channel"""
+        self._manager.leave_channel(self.id)
+
+    def send(self, message):
+        """Send a message to the channel
+
+        :param message: message text
+        :type  message: str
+        """
+        self._dota.send(EDOTAGCMsg.EMsgGCChatMessage, {
+            "channel_id": self.id,
+            "text": message
+        })
+
+    def share_lobby(self):
+        """Share current lobby to the channel"""
+        if self._dota.lobby:
+            self._dota.send(EDOTAGCMsg.EMsgGCChatMessage, {
+                "channel_id": self.id,
+                "share_lobby_id": self._dota.lobby.lobby_id,
+                "share_lobby_passkey": self._dota.lobby.pass_key
+            })
+
+    def flip_coin(self):
+        """Flip a coin"""
+        self._dota.send(EDOTAGCMsg.EMsgGCChatMessage, {
+            "channel_id": self.id,
+            "coin_flip": True
+        })
+
+    def roll_dice(self, rollmin=1, rollmax=100):
+        """Roll a dice
+
+        :param rollmin: dice min value
+        :type  rollmin: int
+        :param rollmax: dice max value
+        :type  rollmax: int
+        """
+        self._dota.send(EDOTAGCMsg.EMsgGCChatMessage, {
+            "channel_id": self.id,
+            "dice_roll": {
+                "roll_min": dmin,
+                "roll_max": dmax
+            }
+        })
