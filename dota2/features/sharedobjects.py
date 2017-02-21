@@ -69,6 +69,7 @@ class NO_KEY:
 so_key_fields = {
     _gc_base.CSOEconItem.DESCRIPTOR: ['id'],
     _gc_base.CSOEconGameAccountClient.DESCRIPTOR: NO_KEY,
+    _gc_common.CSODOTAGameAccountClient.DESCRIPTOR: NO_KEY,
 }
 
 # key is either one or a number of fields marked with option 'key_field'=true in protos
