@@ -257,3 +257,11 @@ class Dota2Client(GameCoordinator, FeatureBase):
             self.steam.games_played(self.steam.current_games_played)
 
         self._set_connection_status(GCConnectionStatus.NO_SESSION)
+
+    def sleep(self, seconds):
+        """Yeild and sleep N seconds. Allows other greenlets to run"""
+        gevent.sleep(seconds)
+
+    def idle(self):
+        """Yeild in the current greenlet and let other greenlets run"""
+        gevent.idle()
