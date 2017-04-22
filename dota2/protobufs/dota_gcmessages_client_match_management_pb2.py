@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_match_management.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n-dota_gcmessages_client_match_management.proto\x1a\x13steammessages.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x17\x64ota_client_enums.proto\x1a\x15\x62\x61se_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"\xe4\x03\n\x15\x43MsgStartFindingMatch\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1f\n\x0bmatchgroups\x18\x02 \x01(\r:\n4294967295\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12\x1e\n\ngame_modes\x18\x04 \x01(\r:\n4294967295\x12?\n\x0e\x62ot_difficulty\x18\x05 \x01(\x0e\x32\x12.DOTABotDifficulty:\x13\x42OT_DIFFICULTY_HARD\x12\x31\n\nmatch_type\x18\x06 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x12\"\n\x0ematchlanguages\x18\x07 \x01(\r:\n4294967295\x12\x16\n\x0emap_preference\x18\t \x01(\r\x12\x0f\n\x07team_id\x18\x08 \x01(\r\x12\x43\n\x12game_language_enum\x18\n \x01(\x0e\x32\x0f.MatchLanguages:\x16MATCH_LANGUAGE_INVALID\x12\x1a\n\x12game_language_name\x18\x0b \x01(\t\x12&\n\tping_data\x18\x0c \x01(\x0b\x32\x13.CMsgClientPingData\x12\x1b\n\x13region_select_flags\x18\r \x01(\r\"\xde\x01\n\x1b\x43MsgStartFindingMatchResult\x12!\n\x16legacy_generic_eresult\x18\x01 \x01(\r:\x01\x32\x12M\n\x06result\x18\x02 \x01(\x0e\x32\x19.EStartFindingMatchResult:\"k_EStartFindingMatchResult_Invalid\x12\x13\n\x0b\x65rror_token\x18\x03 \x01(\t\x12\x15\n\rdebug_message\x18\x04 \x01(\t\x12!\n\x19responsible_party_members\x18\x05 \x03(\x06\"\x16\n\x14\x43MsgStopFindingMatch\"\xce\x01\n\x17\x43MsgPartyBuilderOptions\x12\x18\n\x10\x61\x64\x64itional_slots\x18\x01 \x01(\r\x12\x31\n\nmatch_type\x18\x02 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x12\x13\n\x0bmatchgroups\x18\x03 \x01(\r\x12\x16\n\x0e\x63lient_version\x18\x04 \x01(\r\x12\x39\n\x08language\x18\x05 \x01(\x0e\x32\x0f.MatchLanguages:\x16MATCH_LANGUAGE_INVALID\"\x9b\x01\n\x0b\x43MsgReadyUp\x12\x43\n\x05state\x18\x01 \x01(\x0e\x32\x14.DOTALobbyReadyState:\x1e\x44OTALobbyReadyState_UNDECLARED\x12\x14\n\x0cready_up_key\x18\x02 \x01(\x06\x12\x31\n\x0ehardware_specs\x18\x03 \x01(\x0b\x32\x19.CDOTAClientHardwareSpecs\"Q\n\x11\x43MsgReadyUpStatus\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x14\n\x0c\x61\x63\x63\x65pted_ids\x18\x02 \x03(\r\x12\x14\n\x0c\x64\x65\x63lined_ids\x18\x03 \x03(\r\"\x18\n\x16\x43MsgAbandonCurrentGame\"\xea\x0b\n\x1b\x43MsgPracticeLobbySetDetails\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x11\n\tgame_name\x18\x02 \x01(\t\x12(\n\x0cteam_details\x18\x03 \x03(\x0b\x32\x12.CLobbyTeamDetails\x12\x15\n\rserver_region\x18\x04 \x01(\r\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12.\n\x07\x63m_pick\x18\x06 \x01(\x0e\x32\r.DOTA_CM_PICK:\x0e\x44OTA_CM_RANDOM\x12J\n\x16\x62ot_difficulty_radiant\x18\t \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x14\n\x0c\x61llow_cheats\x18\n \x01(\x08\x12\x16\n\x0e\x66ill_with_bots\x18\x0b \x01(\x08\x12\x12\n\nintro_mode\x18\x0c \x01(\x08\x12\x18\n\x10\x61llow_spectating\x18\r \x01(\x08\x12<\n\x0cgame_version\x18\x0e \x01(\x0e\x32\x10.DOTAGameVersion:\x14GAME_VERSION_CURRENT\x12\x10\n\x08pass_key\x18\x0f \x01(\t\x12\x10\n\x08leagueid\x18\x10 \x01(\r\x12\x1d\n\x15penalty_level_radiant\x18\x11 \x01(\r\x12\x1a\n\x12penalty_level_dire\x18\x12 \x01(\r\x12\x14\n\x0cload_game_id\x18\x13 \x01(\r\x12\x13\n\x0bseries_type\x18\x14 \x01(\r\x12\x1b\n\x13radiant_series_wins\x18\x15 \x01(\r\x12\x18\n\x10\x64ire_series_wins\x18\x16 \x01(\r\x12\x16\n\x07\x61llchat\x18\x17 \x01(\x08:\x05\x66\x61lse\x12\x39\n\rdota_tv_delay\x18\x18 \x01(\x0e\x32\x11.LobbyDotaTVDelay:\x0fLobbyDotaTV_120\x12\x0b\n\x03lan\x18\x19 \x01(\x08\x12\x18\n\x10\x63ustom_game_mode\x18\x1a \x01(\t\x12\x17\n\x0f\x63ustom_map_name\x18\x1b \x01(\t\x12\x19\n\x11\x63ustom_difficulty\x18\x1c \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x1d \x01(\x04\x12\x1a\n\x12\x63ustom_min_players\x18\x1e \x01(\r\x12\x1a\n\x12\x63ustom_max_players\x18\x1f \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18  \x01(\r\x12\x44\n\nvisibility\x18! \x01(\x0e\x32\x14.DOTALobbyVisibility:\x1a\x44OTALobbyVisibility_Public\x12\x17\n\x0f\x63ustom_game_crc\x18\" \x01(\x06\x12\x18\n\x10league_series_id\x18# \x01(\r\x12\x16\n\x0eleague_game_id\x18$ \x01(\r\x12\x1d\n\x15\x63ustom_game_timestamp\x18% \x01(\x07\x12\x1f\n\x17previous_match_override\x18& \x01(\x04\x12&\n\x1eleague_selection_priority_team\x18\' \x01(\r\x12K\n league_selection_priority_choice\x18( \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12O\n$league_non_selection_priority_choice\x18) \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12N\n\rpause_setting\x18* \x01(\x0e\x32\x16.LobbyDotaPauseSetting:\x1fLobbyDotaPauseSetting_Unlimited\x12G\n\x13\x62ot_difficulty_dire\x18+ \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x13\n\x0b\x62ot_radiant\x18, \x01(\x04\x12\x10\n\x08\x62ot_dire\x18- \x01(\x04\"\x92\x02\n\x17\x43MsgPracticeLobbyCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x10\n\x08pass_key\x18\x05 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x06 \x01(\r\x12\x33\n\rlobby_details\x18\x07 \x01(\x0b\x32\x1c.CMsgPracticeLobbySetDetails\x12\x34\n\tsave_game\x18\x08 \x01(\x0b\x32!.CMsgPracticeLobbyCreate.SaveGame\x1aN\n\x08SaveGame\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x10\n\x08steam_id\x18\x03 \x01(\x06\x12\x11\n\tsignature\x18\x04 \x01(\x06\"\xa5\x01\n\x1c\x43MsgPracticeLobbySetTeamSlot\x12\x33\n\x04team\x18\x01 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x0c\n\x04slot\x18\x02 \x01(\r\x12\x42\n\x0e\x62ot_difficulty\x18\x03 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\"P\n\x19\x43MsgPracticeLobbySetCoach\x12\x33\n\x04team\x18\x01 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\"\x98\x01\n%CMsgPracticeLobbyJoinBroadcastChannel\x12\x0f\n\x07\x63hannel\x18\x01 \x01(\r\x12\x1d\n\x15preferred_description\x18\x02 \x01(\t\x12\x1e\n\x16preferred_country_code\x18\x03 \x01(\t\x12\x1f\n\x17preferred_language_code\x18\x04 \x01(\t\"9\n&CMsgPracticeLobbyCloseBroadcastChannel\x12\x0f\n\x07\x63hannel\x18\x01 \x01(\r\"8\n6CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus\"+\n\x15\x43MsgPracticeLobbyKick\x12\x12\n\naccount_id\x18\x03 \x01(\r\"3\n\x1d\x43MsgPracticeLobbyKickFromTeam\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\x18\n\x16\x43MsgPracticeLobbyLeave\"1\n\x17\x43MsgPracticeLobbyLaunch\x12\x16\n\x0e\x63lient_version\x18\x05 \x01(\r\"/\n\x1c\x43MsgApplyTeamToPracticeLobby\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\x1c\n\x1a\x43MsgClearPracticeLobbyTeam\"\x8a\x01\n\x15\x43MsgPracticeLobbyList\x12\x18\n\x10tournament_games\x18\x01 \x01(\x08\x12\x10\n\x08pass_key\x18\x02 \x01(\t\x12\x0e\n\x06region\x18\x03 \x01(\r\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\"\xce\x04\n\"CMsgPracticeLobbyListResponseEntry\x12\x10\n\x02id\x18\x01 \x01(\x04\x42\x04\x80\x97\"\x01\x12\x15\n\rtournament_id\x18\x03 \x01(\r\x12\x1a\n\x12tournament_game_id\x18\x04 \x01(\r\x12\x41\n\x07members\x18\x05 \x03(\x0b\x32\x30.CMsgPracticeLobbyListResponseEntry.CLobbyMember\x12\x19\n\x11requires_pass_key\x18\x06 \x01(\x08\x12\x19\n\x11leader_account_id\x18\x07 \x01(\r\x12\x10\n\x08guild_id\x18\x08 \x01(\r\x12\x12\n\nguild_logo\x18\t \x01(\x04\x12\x0c\n\x04name\x18\n \x01(\t\x12\x18\n\x10\x63ustom_game_mode\x18\x0b \x01(\t\x12\x35\n\tgame_mode\x18\x0c \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x16\n\x0e\x66riend_present\x18\r \x01(\x08\x12\x0f\n\x07players\x18\x0e \x01(\r\x12\x17\n\x0f\x63ustom_map_name\x18\x0f \x01(\t\x12\x18\n\x10max_player_count\x18\x10 \x01(\r\x12\x15\n\rserver_region\x18\x11 \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18\x12 \x01(\r\x12\x11\n\tleague_id\x18\x13 \x01(\r\x1a\x37\n\x0c\x43LobbyMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\"o\n\x1d\x43MsgPracticeLobbyListResponse\x12\x18\n\x10tournament_games\x18\x01 \x01(\x08\x12\x34\n\x07lobbies\x18\x02 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"`\n\rCMsgLobbyList\x12\x18\n\rserver_region\x18\x01 \x01(\r:\x01\x30\x12\x35\n\tgame_mode\x18\x02 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\"M\n\x15\x43MsgLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"\x8b\x01\n\x15\x43MsgPracticeLobbyJoin\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x10\n\x08pass_key\x18\x03 \x01(\t\x12\x17\n\x0f\x63ustom_game_crc\x18\x04 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x05 \x01(\x07\"_\n\x1d\x43MsgPracticeLobbyJoinResponse\x12>\n\x06result\x18\x01 \x01(\x0e\x32\x14.DOTAJoinLobbyResult:\x18\x44OTA_JOIN_RESULT_SUCCESS\"5\n\"CMsgFriendPracticeLobbyListRequest\x12\x0f\n\x07\x66riends\x18\x01 \x03(\r\"[\n#CMsgFriendPracticeLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"7\n%CMsgGuildmatePracticeLobbyListRequest\x12\x0e\n\x06guilds\x18\x01 \x03(\r\"^\n&CMsgGuildmatePracticeLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\";\n\"CMsgJoinableCustomGameModesRequest\x12\x15\n\rserver_region\x18\x01 \x01(\r\"m\n(CMsgJoinableCustomGameModesResponseEntry\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0blobby_count\x18\x02 \x01(\r\x12\x14\n\x0cplayer_count\x18\x03 \x01(\r\"d\n#CMsgJoinableCustomGameModesResponse\x12=\n\ngame_modes\x18\x01 \x03(\x0b\x32).CMsgJoinableCustomGameModesResponseEntry\"Q\n CMsgJoinableCustomLobbiesRequest\x12\x15\n\rserver_region\x18\x01 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\"\xb4\x02\n&CMsgJoinableCustomLobbiesResponseEntry\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x12\n\nlobby_name\x18\x03 \x01(\t\x12\x14\n\x0cmember_count\x18\x04 \x01(\r\x12\x19\n\x11leader_account_id\x18\x05 \x01(\r\x12\x13\n\x0bleader_name\x18\x06 \x01(\t\x12\x17\n\x0f\x63ustom_map_name\x18\x07 \x01(\t\x12\x18\n\x10max_player_count\x18\x08 \x01(\r\x12\x15\n\rserver_region\x18\t \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18\n \x01(\r\x12\x14\n\x0chas_pass_key\x18\x0b \x01(\x08\"]\n!CMsgJoinableCustomLobbiesResponse\x12\x38\n\x07lobbies\x18\x01 \x03(\x0b\x32\'.CMsgJoinableCustomLobbiesResponseEntry\"\xfa\x02\n\x18\x43MsgQuickJoinCustomLobby\x12\x1c\n\x14legacy_server_region\x18\x01 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12:\n\x14\x63reate_lobby_details\x18\x04 \x01(\x0b\x32\x1c.CMsgPracticeLobbySetDetails\x12\x15\n\rallow_any_map\x18\x05 \x01(\x08\x12G\n\x13legacy_region_pings\x18\x06 \x03(\x0b\x32*.CMsgQuickJoinCustomLobby.LegacyRegionPing\x12&\n\tping_data\x18\x07 \x01(\x0b\x32\x13.CMsgClientPingData\x1aL\n\x10LegacyRegionPing\x12\x15\n\rserver_region\x18\x01 \x01(\r\x12\x0c\n\x04ping\x18\x02 \x01(\r\x12\x13\n\x0bregion_code\x18\x03 \x01(\x07\"b\n CMsgQuickJoinCustomLobbyResponse\x12>\n\x06result\x18\x01 \x01(\x0e\x32\x14.DOTAJoinLobbyResult:\x18\x44OTA_JOIN_RESULT_SUCCESS\"\x94\x02\n\x11\x43MsgBotGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x46\n\x12\x64ifficulty_radiant\x18\x03 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x33\n\x04team\x18\x04 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12\x43\n\x0f\x64ifficulty_dire\x18\x06 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\"\x8e\x01\n\x14\x43MsgCustomGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x12\n\ndifficulty\x18\x03 \x01(\r\x12\x11\n\tgame_mode\x18\x04 \x01(\t\x12\x0b\n\x03map\x18\x05 \x01(\t\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x04\"\x8d\x01\n\x13\x43MsgEventGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x12\n\ndifficulty\x18\x03 \x01(\r\x12\x11\n\tgame_mode\x18\x04 \x01(\t\x12\x0b\n\x03map\x18\x05 \x01(\t\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x04\"2\n\x1b\x43MsgDOTAPartyMemberSetCoach\x12\x13\n\x0bwants_coach\x18\x01 \x01(\x08\"4\n\x16\x43MsgDOTASetGroupLeader\x12\x1a\n\x12new_leader_steamid\x18\x01 \x01(\x06\"P\n\x1a\x43MsgDOTACancelGroupInvites\x12\x18\n\x10invited_steamids\x18\x01 \x03(\x06\x12\x18\n\x10invited_groupids\x18\x02 \x03(\x06\"*\n\x1a\x43MsgDOTASetGroupOpenStatus\x12\x0c\n\x04open\x18\x01 \x01(\x08\"2\n\x18\x43MsgDOTAGroupMergeInvite\x12\x16\n\x0eother_group_id\x18\x01 \x01(\x06\"H\n\x1a\x43MsgDOTAGroupMergeResponse\x12\x1a\n\x12initiator_group_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\"]\n\x17\x43MsgDOTAGroupMergeReply\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32\x16.EDOTAGroupMergeResult:\x1ak_EDOTAGroupMergeResult_OK\"\xf4\x02\n\x1d\x43MsgSpectatorLobbyGameDetails\x12\x10\n\x08language\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x17\n\x0fserver_steam_id\x18\x03 \x01(\x06\x12\x12\n\nstream_url\x18\x04 \x01(\t\x12\x13\n\x0bstream_name\x18\x05 \x01(\t\x12\x11\n\tleague_id\x18\x06 \x01(\r\x12\x13\n\x0bseries_type\x18\x07 \x01(\r\x12\x13\n\x0bseries_game\x18\x08 \x01(\r\x12\x39\n\x0cradiant_team\x18\t \x01(\x0b\x32#.CMsgSpectatorLobbyGameDetails.Team\x12\x36\n\tdire_team\x18\n \x01(\x0b\x32#.CMsgSpectatorLobbyGameDetails.Team\x1a=\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x11\n\tteam_logo\x18\x03 \x01(\x06\"\x8c\x01\n\x1c\x43MsgSetSpectatorLobbyDetails\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x12\n\nlobby_name\x18\x02 \x01(\t\x12\x10\n\x08pass_key\x18\x03 \x01(\t\x12\x34\n\x0cgame_details\x18\x04 \x01(\x0b\x32\x1e.CMsgSpectatorLobbyGameDetails\"b\n\x18\x43MsgCreateSpectatorLobby\x12\x16\n\x0e\x63lient_version\x18\x01 \x01(\r\x12.\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\x1d.CMsgSetSpectatorLobbyDetails\"\x18\n\x16\x43MsgSpectatorLobbyList\"\x9b\x02\n\x1e\x43MsgSpectatorLobbyListResponse\x12?\n\x07lobbies\x18\x01 \x03(\x0b\x32..CMsgSpectatorLobbyListResponse.SpectatorLobby\x1a\xb7\x01\n\x0eSpectatorLobby\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x11\n\tgame_name\x18\x02 \x01(\t\x12\x19\n\x11requires_pass_key\x18\x03 \x01(\x08\x12\x19\n\x11leader_account_id\x18\x04 \x01(\r\x12\x14\n\x0cmember_count\x18\x05 \x01(\r\x12\x34\n\x0cgame_details\x18\x07 \x01(\x0b\x32\x1e.CMsgSpectatorLobbyGameDetails\"C\n(CMsgClientToGCRequestSteamDatagramTicket\x12\x17\n\x0fserver_steam_id\x18\x01 \x01(\x06\"^\n0CMsgClientToGCRequestSteamDatagramTicketResponse\x12\x19\n\x11serialized_ticket\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t*\xac\n\n\x18\x45StartFindingMatchResult\x12&\n\"k_EStartFindingMatchResult_Invalid\x10\x00\x12!\n\x1dk_EStartFindingMatchResult_OK\x10\x01\x12/\n+k_EStartFindingMatchResult_AlreadySearching\x10\x02\x12*\n&k_EStartFindingMatchResult_FailGeneric\x10\x64\x12+\n\'k_EStartFindingMatchResult_FailedIgnore\x10\x65\x12\x32\n.k_EStartFindingMatchResult_MatchmakingDisabled\x10\x66\x12,\n(k_EStartFindingMatchResult_RegionOffline\x10g\x12\x32\n.k_EStartFindingMatchResult_MatchmakingCooldown\x10h\x12.\n*k_EStartFindingMatchResult_ClientOutOfDate\x10i\x12\x37\n3k_EStartFindingMatchResult_CompetitiveNoLowPriority\x10j\x12\x35\n1k_EStartFindingMatchResult_CompetitiveNotUnlocked\x10k\x12\x32\n.k_EStartFindingMatchResult_GameModeNotUnlocked\x10l\x12<\n8k_EStartFindingMatchResult_CompetitiveNotEnoughSkillData\x10m\x12\x32\n.k_EStartFindingMatchResult_MissingInitialSkill\x10n\x12<\n8k_EStartFindingMatchResult_CompetitiveRankSpreadTooLarge\x10o\x12\x33\n/k_EStartFindingMatchResult_MemberAlreadyInLobby\x10p\x12\x33\n/k_EStartFindingMatchResult_MemberNotVACVerified\x10q\x12\x39\n5k_EStartFindingMatchResult_WeekendTourneyBadPartySize\x10r\x12>\n:k_EStartFindingMatchResult_WeekendTourneyTeamBuyInTooSmall\x10s\x12\x44\n@k_EStartFindingMatchResult_WeekendTourneyIndividualBuyInTooLarge\x10t\x12>\n:k_EStartFindingMatchResult_WeekendTourneyTeamBuyInTooLarge\x10u\x12:\n6k_EStartFindingMatchResult_MemberMissingEventOwnership\x10v\x12\x38\n4k_EStartFindingMatchResult_WeekendTourneyNotUnlocked\x10w\x12@\n<k_EStartFindingMatchResult_WeekendTourneyRecentParticipation\x10xB\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n-dota_gcmessages_client_match_management.proto\x1a\x13steammessages.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x17\x64ota_client_enums.proto\x1a\x15\x62\x61se_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"\xf8\x03\n\x15\x43MsgStartFindingMatch\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1f\n\x0bmatchgroups\x18\x02 \x01(\r:\n4294967295\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12\x1e\n\ngame_modes\x18\x04 \x01(\r:\n4294967295\x12?\n\x0e\x62ot_difficulty\x18\x05 \x01(\x0e\x32\x12.DOTABotDifficulty:\x13\x42OT_DIFFICULTY_HARD\x12\x31\n\nmatch_type\x18\x06 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x12\"\n\x0ematchlanguages\x18\x07 \x01(\r:\n4294967295\x12\x16\n\x0emap_preference\x18\t \x01(\r\x12\x0f\n\x07team_id\x18\x08 \x01(\r\x12\x43\n\x12game_language_enum\x18\n \x01(\x0e\x32\x0f.MatchLanguages:\x16MATCH_LANGUAGE_INVALID\x12\x1a\n\x12game_language_name\x18\x0b \x01(\t\x12&\n\tping_data\x18\x0c \x01(\x0b\x32\x13.CMsgClientPingData\x12\x1b\n\x13region_select_flags\x18\r \x01(\r\x12\x12\n\nsolo_queue\x18\x0e \x01(\x08\"\xde\x01\n\x1b\x43MsgStartFindingMatchResult\x12!\n\x16legacy_generic_eresult\x18\x01 \x01(\r:\x01\x32\x12M\n\x06result\x18\x02 \x01(\x0e\x32\x19.EStartFindingMatchResult:\"k_EStartFindingMatchResult_Invalid\x12\x13\n\x0b\x65rror_token\x18\x03 \x01(\t\x12\x15\n\rdebug_message\x18\x04 \x01(\t\x12!\n\x19responsible_party_members\x18\x05 \x03(\x06\"\x16\n\x14\x43MsgStopFindingMatch\"\xce\x01\n\x17\x43MsgPartyBuilderOptions\x12\x18\n\x10\x61\x64\x64itional_slots\x18\x01 \x01(\r\x12\x31\n\nmatch_type\x18\x02 \x01(\x0e\x32\n.MatchType:\x11MATCH_TYPE_CASUAL\x12\x13\n\x0bmatchgroups\x18\x03 \x01(\r\x12\x16\n\x0e\x63lient_version\x18\x04 \x01(\r\x12\x39\n\x08language\x18\x05 \x01(\x0e\x32\x0f.MatchLanguages:\x16MATCH_LANGUAGE_INVALID\"\x9b\x01\n\x0b\x43MsgReadyUp\x12\x43\n\x05state\x18\x01 \x01(\x0e\x32\x14.DOTALobbyReadyState:\x1e\x44OTALobbyReadyState_UNDECLARED\x12\x14\n\x0cready_up_key\x18\x02 \x01(\x06\x12\x31\n\x0ehardware_specs\x18\x03 \x01(\x0b\x32\x19.CDOTAClientHardwareSpecs\"Q\n\x11\x43MsgReadyUpStatus\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x14\n\x0c\x61\x63\x63\x65pted_ids\x18\x02 \x03(\r\x12\x14\n\x0c\x64\x65\x63lined_ids\x18\x03 \x03(\r\"\x18\n\x16\x43MsgAbandonCurrentGame\"\xea\x0b\n\x1b\x43MsgPracticeLobbySetDetails\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x11\n\tgame_name\x18\x02 \x01(\t\x12(\n\x0cteam_details\x18\x03 \x03(\x0b\x32\x12.CLobbyTeamDetails\x12\x15\n\rserver_region\x18\x04 \x01(\r\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12.\n\x07\x63m_pick\x18\x06 \x01(\x0e\x32\r.DOTA_CM_PICK:\x0e\x44OTA_CM_RANDOM\x12J\n\x16\x62ot_difficulty_radiant\x18\t \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x14\n\x0c\x61llow_cheats\x18\n \x01(\x08\x12\x16\n\x0e\x66ill_with_bots\x18\x0b \x01(\x08\x12\x12\n\nintro_mode\x18\x0c \x01(\x08\x12\x18\n\x10\x61llow_spectating\x18\r \x01(\x08\x12<\n\x0cgame_version\x18\x0e \x01(\x0e\x32\x10.DOTAGameVersion:\x14GAME_VERSION_CURRENT\x12\x10\n\x08pass_key\x18\x0f \x01(\t\x12\x10\n\x08leagueid\x18\x10 \x01(\r\x12\x1d\n\x15penalty_level_radiant\x18\x11 \x01(\r\x12\x1a\n\x12penalty_level_dire\x18\x12 \x01(\r\x12\x14\n\x0cload_game_id\x18\x13 \x01(\r\x12\x13\n\x0bseries_type\x18\x14 \x01(\r\x12\x1b\n\x13radiant_series_wins\x18\x15 \x01(\r\x12\x18\n\x10\x64ire_series_wins\x18\x16 \x01(\r\x12\x16\n\x07\x61llchat\x18\x17 \x01(\x08:\x05\x66\x61lse\x12\x39\n\rdota_tv_delay\x18\x18 \x01(\x0e\x32\x11.LobbyDotaTVDelay:\x0fLobbyDotaTV_120\x12\x0b\n\x03lan\x18\x19 \x01(\x08\x12\x18\n\x10\x63ustom_game_mode\x18\x1a \x01(\t\x12\x17\n\x0f\x63ustom_map_name\x18\x1b \x01(\t\x12\x19\n\x11\x63ustom_difficulty\x18\x1c \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x1d \x01(\x04\x12\x1a\n\x12\x63ustom_min_players\x18\x1e \x01(\r\x12\x1a\n\x12\x63ustom_max_players\x18\x1f \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18  \x01(\r\x12\x44\n\nvisibility\x18! \x01(\x0e\x32\x14.DOTALobbyVisibility:\x1a\x44OTALobbyVisibility_Public\x12\x17\n\x0f\x63ustom_game_crc\x18\" \x01(\x06\x12\x18\n\x10league_series_id\x18# \x01(\r\x12\x16\n\x0eleague_game_id\x18$ \x01(\r\x12\x1d\n\x15\x63ustom_game_timestamp\x18% \x01(\x07\x12\x1f\n\x17previous_match_override\x18& \x01(\x04\x12&\n\x1eleague_selection_priority_team\x18\' \x01(\r\x12K\n league_selection_priority_choice\x18( \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12O\n$league_non_selection_priority_choice\x18) \x01(\x0e\x32\x16.SelectionPriorityType:\tUNDEFINED\x12N\n\rpause_setting\x18* \x01(\x0e\x32\x16.LobbyDotaPauseSetting:\x1fLobbyDotaPauseSetting_Unlimited\x12G\n\x13\x62ot_difficulty_dire\x18+ \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x13\n\x0b\x62ot_radiant\x18, \x01(\x04\x12\x10\n\x08\x62ot_dire\x18- \x01(\x04\"\x92\x02\n\x17\x43MsgPracticeLobbyCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x10\n\x08pass_key\x18\x05 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x06 \x01(\r\x12\x33\n\rlobby_details\x18\x07 \x01(\x0b\x32\x1c.CMsgPracticeLobbySetDetails\x12\x34\n\tsave_game\x18\x08 \x01(\x0b\x32!.CMsgPracticeLobbyCreate.SaveGame\x1aN\n\x08SaveGame\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x10\n\x08steam_id\x18\x03 \x01(\x06\x12\x11\n\tsignature\x18\x04 \x01(\x06\"\xa5\x01\n\x1c\x43MsgPracticeLobbySetTeamSlot\x12\x33\n\x04team\x18\x01 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x0c\n\x04slot\x18\x02 \x01(\r\x12\x42\n\x0e\x62ot_difficulty\x18\x03 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\"P\n\x19\x43MsgPracticeLobbySetCoach\x12\x33\n\x04team\x18\x01 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\"\x98\x01\n%CMsgPracticeLobbyJoinBroadcastChannel\x12\x0f\n\x07\x63hannel\x18\x01 \x01(\r\x12\x1d\n\x15preferred_description\x18\x02 \x01(\t\x12\x1e\n\x16preferred_country_code\x18\x03 \x01(\t\x12\x1f\n\x17preferred_language_code\x18\x04 \x01(\t\"9\n&CMsgPracticeLobbyCloseBroadcastChannel\x12\x0f\n\x07\x63hannel\x18\x01 \x01(\r\"8\n6CMsgPracticeLobbyToggleBroadcastChannelCameramanStatus\"+\n\x15\x43MsgPracticeLobbyKick\x12\x12\n\naccount_id\x18\x03 \x01(\r\"3\n\x1d\x43MsgPracticeLobbyKickFromTeam\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\x18\n\x16\x43MsgPracticeLobbyLeave\"1\n\x17\x43MsgPracticeLobbyLaunch\x12\x16\n\x0e\x63lient_version\x18\x05 \x01(\r\"/\n\x1c\x43MsgApplyTeamToPracticeLobby\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\x1c\n\x1a\x43MsgClearPracticeLobbyTeam\"\x8a\x01\n\x15\x43MsgPracticeLobbyList\x12\x18\n\x10tournament_games\x18\x01 \x01(\x08\x12\x10\n\x08pass_key\x18\x02 \x01(\t\x12\x0e\n\x06region\x18\x03 \x01(\r\x12\x35\n\tgame_mode\x18\x04 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\"\xce\x04\n\"CMsgPracticeLobbyListResponseEntry\x12\x10\n\x02id\x18\x01 \x01(\x04\x42\x04\x80\x97\"\x01\x12\x15\n\rtournament_id\x18\x03 \x01(\r\x12\x1a\n\x12tournament_game_id\x18\x04 \x01(\r\x12\x41\n\x07members\x18\x05 \x03(\x0b\x32\x30.CMsgPracticeLobbyListResponseEntry.CLobbyMember\x12\x19\n\x11requires_pass_key\x18\x06 \x01(\x08\x12\x19\n\x11leader_account_id\x18\x07 \x01(\r\x12\x10\n\x08guild_id\x18\x08 \x01(\r\x12\x12\n\nguild_logo\x18\t \x01(\x04\x12\x0c\n\x04name\x18\n \x01(\t\x12\x18\n\x10\x63ustom_game_mode\x18\x0b \x01(\t\x12\x35\n\tgame_mode\x18\x0c \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x16\n\x0e\x66riend_present\x18\r \x01(\x08\x12\x0f\n\x07players\x18\x0e \x01(\r\x12\x17\n\x0f\x63ustom_map_name\x18\x0f \x01(\t\x12\x18\n\x10max_player_count\x18\x10 \x01(\r\x12\x15\n\rserver_region\x18\x11 \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18\x12 \x01(\r\x12\x11\n\tleague_id\x18\x13 \x01(\r\x1a\x37\n\x0c\x43LobbyMember\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\"o\n\x1d\x43MsgPracticeLobbyListResponse\x12\x18\n\x10tournament_games\x18\x01 \x01(\x08\x12\x34\n\x07lobbies\x18\x02 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"`\n\rCMsgLobbyList\x12\x18\n\rserver_region\x18\x01 \x01(\r:\x01\x30\x12\x35\n\tgame_mode\x18\x02 \x01(\x0e\x32\x0e.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\"M\n\x15\x43MsgLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"\x8b\x01\n\x15\x43MsgPracticeLobbyJoin\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x10\n\x08pass_key\x18\x03 \x01(\t\x12\x17\n\x0f\x63ustom_game_crc\x18\x04 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x05 \x01(\x07\"_\n\x1d\x43MsgPracticeLobbyJoinResponse\x12>\n\x06result\x18\x01 \x01(\x0e\x32\x14.DOTAJoinLobbyResult:\x18\x44OTA_JOIN_RESULT_SUCCESS\"5\n\"CMsgFriendPracticeLobbyListRequest\x12\x0f\n\x07\x66riends\x18\x01 \x03(\r\"[\n#CMsgFriendPracticeLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\"7\n%CMsgGuildmatePracticeLobbyListRequest\x12\x0e\n\x06guilds\x18\x01 \x03(\r\"^\n&CMsgGuildmatePracticeLobbyListResponse\x12\x34\n\x07lobbies\x18\x01 \x03(\x0b\x32#.CMsgPracticeLobbyListResponseEntry\";\n\"CMsgJoinableCustomGameModesRequest\x12\x15\n\rserver_region\x18\x01 \x01(\r\"m\n(CMsgJoinableCustomGameModesResponseEntry\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0blobby_count\x18\x02 \x01(\r\x12\x14\n\x0cplayer_count\x18\x03 \x01(\r\"d\n#CMsgJoinableCustomGameModesResponse\x12=\n\ngame_modes\x18\x01 \x03(\x0b\x32).CMsgJoinableCustomGameModesResponseEntry\"Q\n CMsgJoinableCustomLobbiesRequest\x12\x15\n\rserver_region\x18\x01 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\"\xb4\x02\n&CMsgJoinableCustomLobbiesResponseEntry\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x12\n\nlobby_name\x18\x03 \x01(\t\x12\x14\n\x0cmember_count\x18\x04 \x01(\r\x12\x19\n\x11leader_account_id\x18\x05 \x01(\r\x12\x13\n\x0bleader_name\x18\x06 \x01(\t\x12\x17\n\x0f\x63ustom_map_name\x18\x07 \x01(\t\x12\x18\n\x10max_player_count\x18\x08 \x01(\r\x12\x15\n\rserver_region\x18\t \x01(\r\x12&\n\x1elan_host_ping_to_server_region\x18\n \x01(\r\x12\x14\n\x0chas_pass_key\x18\x0b \x01(\x08\"]\n!CMsgJoinableCustomLobbiesResponse\x12\x38\n\x07lobbies\x18\x01 \x03(\x0b\x32\'.CMsgJoinableCustomLobbiesResponseEntry\"\xfa\x02\n\x18\x43MsgQuickJoinCustomLobby\x12\x1c\n\x14legacy_server_region\x18\x01 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12:\n\x14\x63reate_lobby_details\x18\x04 \x01(\x0b\x32\x1c.CMsgPracticeLobbySetDetails\x12\x15\n\rallow_any_map\x18\x05 \x01(\x08\x12G\n\x13legacy_region_pings\x18\x06 \x03(\x0b\x32*.CMsgQuickJoinCustomLobby.LegacyRegionPing\x12&\n\tping_data\x18\x07 \x01(\x0b\x32\x13.CMsgClientPingData\x1aL\n\x10LegacyRegionPing\x12\x15\n\rserver_region\x18\x01 \x01(\r\x12\x0c\n\x04ping\x18\x02 \x01(\r\x12\x13\n\x0bregion_code\x18\x03 \x01(\x07\"b\n CMsgQuickJoinCustomLobbyResponse\x12>\n\x06result\x18\x01 \x01(\x0e\x32\x14.DOTAJoinLobbyResult:\x18\x44OTA_JOIN_RESULT_SUCCESS\"\x94\x02\n\x11\x43MsgBotGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x46\n\x12\x64ifficulty_radiant\x18\x03 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\x12\x33\n\x04team\x18\x04 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12\x43\n\x0f\x64ifficulty_dire\x18\x06 \x01(\x0e\x32\x12.DOTABotDifficulty:\x16\x42OT_DIFFICULTY_PASSIVE\"\x8e\x01\n\x14\x43MsgCustomGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x12\n\ndifficulty\x18\x03 \x01(\r\x12\x11\n\tgame_mode\x18\x04 \x01(\t\x12\x0b\n\x03map\x18\x05 \x01(\t\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x04\"\x8d\x01\n\x13\x43MsgEventGameCreate\x12\x12\n\nsearch_key\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x12\n\ndifficulty\x18\x03 \x01(\r\x12\x11\n\tgame_mode\x18\x04 \x01(\t\x12\x0b\n\x03map\x18\x05 \x01(\t\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x04\"2\n\x1b\x43MsgDOTAPartyMemberSetCoach\x12\x13\n\x0bwants_coach\x18\x01 \x01(\x08\"4\n\x16\x43MsgDOTASetGroupLeader\x12\x1a\n\x12new_leader_steamid\x18\x01 \x01(\x06\"P\n\x1a\x43MsgDOTACancelGroupInvites\x12\x18\n\x10invited_steamids\x18\x01 \x03(\x06\x12\x18\n\x10invited_groupids\x18\x02 \x03(\x06\"*\n\x1a\x43MsgDOTASetGroupOpenStatus\x12\x0c\n\x04open\x18\x01 \x01(\x08\"2\n\x18\x43MsgDOTAGroupMergeInvite\x12\x16\n\x0eother_group_id\x18\x01 \x01(\x06\"H\n\x1a\x43MsgDOTAGroupMergeResponse\x12\x1a\n\x12initiator_group_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\"]\n\x17\x43MsgDOTAGroupMergeReply\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32\x16.EDOTAGroupMergeResult:\x1ak_EDOTAGroupMergeResult_OK\"\xf4\x02\n\x1d\x43MsgSpectatorLobbyGameDetails\x12\x10\n\x08language\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x17\n\x0fserver_steam_id\x18\x03 \x01(\x06\x12\x12\n\nstream_url\x18\x04 \x01(\t\x12\x13\n\x0bstream_name\x18\x05 \x01(\t\x12\x11\n\tleague_id\x18\x06 \x01(\r\x12\x13\n\x0bseries_type\x18\x07 \x01(\r\x12\x13\n\x0bseries_game\x18\x08 \x01(\r\x12\x39\n\x0cradiant_team\x18\t \x01(\x0b\x32#.CMsgSpectatorLobbyGameDetails.Team\x12\x36\n\tdire_team\x18\n \x01(\x0b\x32#.CMsgSpectatorLobbyGameDetails.Team\x1a=\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x11\n\tteam_logo\x18\x03 \x01(\x06\"\x8c\x01\n\x1c\x43MsgSetSpectatorLobbyDetails\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x12\n\nlobby_name\x18\x02 \x01(\t\x12\x10\n\x08pass_key\x18\x03 \x01(\t\x12\x34\n\x0cgame_details\x18\x04 \x01(\x0b\x32\x1e.CMsgSpectatorLobbyGameDetails\"b\n\x18\x43MsgCreateSpectatorLobby\x12\x16\n\x0e\x63lient_version\x18\x01 \x01(\r\x12.\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\x1d.CMsgSetSpectatorLobbyDetails\"\x18\n\x16\x43MsgSpectatorLobbyList\"\x9b\x02\n\x1e\x43MsgSpectatorLobbyListResponse\x12?\n\x07lobbies\x18\x01 \x03(\x0b\x32..CMsgSpectatorLobbyListResponse.SpectatorLobby\x1a\xb7\x01\n\x0eSpectatorLobby\x12\x10\n\x08lobby_id\x18\x01 \x01(\x04\x12\x11\n\tgame_name\x18\x02 \x01(\t\x12\x19\n\x11requires_pass_key\x18\x03 \x01(\x08\x12\x19\n\x11leader_account_id\x18\x04 \x01(\r\x12\x14\n\x0cmember_count\x18\x05 \x01(\r\x12\x34\n\x0cgame_details\x18\x07 \x01(\x0b\x32\x1e.CMsgSpectatorLobbyGameDetails\"C\n(CMsgClientToGCRequestSteamDatagramTicket\x12\x17\n\x0fserver_steam_id\x18\x01 \x01(\x06\"^\n0CMsgClientToGCRequestSteamDatagramTicketResponse\x12\x19\n\x11serialized_ticket\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t*\xac\n\n\x18\x45StartFindingMatchResult\x12&\n\"k_EStartFindingMatchResult_Invalid\x10\x00\x12!\n\x1dk_EStartFindingMatchResult_OK\x10\x01\x12/\n+k_EStartFindingMatchResult_AlreadySearching\x10\x02\x12*\n&k_EStartFindingMatchResult_FailGeneric\x10\x64\x12+\n\'k_EStartFindingMatchResult_FailedIgnore\x10\x65\x12\x32\n.k_EStartFindingMatchResult_MatchmakingDisabled\x10\x66\x12,\n(k_EStartFindingMatchResult_RegionOffline\x10g\x12\x32\n.k_EStartFindingMatchResult_MatchmakingCooldown\x10h\x12.\n*k_EStartFindingMatchResult_ClientOutOfDate\x10i\x12\x37\n3k_EStartFindingMatchResult_CompetitiveNoLowPriority\x10j\x12\x35\n1k_EStartFindingMatchResult_CompetitiveNotUnlocked\x10k\x12\x32\n.k_EStartFindingMatchResult_GameModeNotUnlocked\x10l\x12<\n8k_EStartFindingMatchResult_CompetitiveNotEnoughSkillData\x10m\x12\x32\n.k_EStartFindingMatchResult_MissingInitialSkill\x10n\x12<\n8k_EStartFindingMatchResult_CompetitiveRankSpreadTooLarge\x10o\x12\x33\n/k_EStartFindingMatchResult_MemberAlreadyInLobby\x10p\x12\x33\n/k_EStartFindingMatchResult_MemberNotVACVerified\x10q\x12\x39\n5k_EStartFindingMatchResult_WeekendTourneyBadPartySize\x10r\x12>\n:k_EStartFindingMatchResult_WeekendTourneyTeamBuyInTooSmall\x10s\x12\x44\n@k_EStartFindingMatchResult_WeekendTourneyIndividualBuyInTooLarge\x10t\x12>\n:k_EStartFindingMatchResult_WeekendTourneyTeamBuyInTooLarge\x10u\x12:\n6k_EStartFindingMatchResult_MemberMissingEventOwnership\x10v\x12\x38\n4k_EStartFindingMatchResult_WeekendTourneyNotUnlocked\x10w\x12@\n<k_EStartFindingMatchResult_WeekendTourneyRecentParticipation\x10xB\x05H\x01\x90\x01\x00')
   ,
   dependencies=[steammessages__pb2.DESCRIPTOR,dota__shared__enums__pb2.DESCRIPTOR,dota__client__enums__pb2.DESCRIPTOR,base__gcmessages__pb2.DESCRIPTOR,dota__gcmessages__common__match__management__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -135,8 +135,8 @@ _ESTARTFINDINGMATCHRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8897,
-  serialized_end=10221,
+  serialized_start=8917,
+  serialized_end=10241,
 )
 _sym_db.RegisterEnumDescriptor(_ESTARTFINDINGMATCHRESULT)
 
@@ -266,6 +266,13 @@ _CMSGSTARTFINDINGMATCH = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='solo_queue', full_name='CMsgStartFindingMatch.solo_queue', index=13,
+      number=14, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -279,7 +286,7 @@ _CMSGSTARTFINDINGMATCH = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=191,
-  serialized_end=675,
+  serialized_end=695,
 )
 
 
@@ -337,8 +344,8 @@ _CMSGSTARTFINDINGMATCHRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=678,
-  serialized_end=900,
+  serialized_start=698,
+  serialized_end=920,
 )
 
 
@@ -361,8 +368,8 @@ _CMSGSTOPFINDINGMATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=902,
-  serialized_end=924,
+  serialized_start=922,
+  serialized_end=944,
 )
 
 
@@ -420,8 +427,8 @@ _CMSGPARTYBUILDEROPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=927,
-  serialized_end=1133,
+  serialized_start=947,
+  serialized_end=1153,
 )
 
 
@@ -465,8 +472,8 @@ _CMSGREADYUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1136,
-  serialized_end=1291,
+  serialized_start=1156,
+  serialized_end=1311,
 )
 
 
@@ -510,8 +517,8 @@ _CMSGREADYUPSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1293,
-  serialized_end=1374,
+  serialized_start=1313,
+  serialized_end=1394,
 )
 
 
@@ -534,8 +541,8 @@ _CMSGABANDONCURRENTGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1376,
-  serialized_end=1400,
+  serialized_start=1396,
+  serialized_end=1420,
 )
 
 
@@ -859,8 +866,8 @@ _CMSGPRACTICELOBBYSETDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1403,
-  serialized_end=2917,
+  serialized_start=1423,
+  serialized_end=2937,
 )
 
 
@@ -911,8 +918,8 @@ _CMSGPRACTICELOBBYCREATE_SAVEGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3116,
-  serialized_end=3194,
+  serialized_start=3136,
+  serialized_end=3214,
 )
 
 _CMSGPRACTICELOBBYCREATE = _descriptor.Descriptor(
@@ -969,8 +976,8 @@ _CMSGPRACTICELOBBYCREATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2920,
-  serialized_end=3194,
+  serialized_start=2940,
+  serialized_end=3214,
 )
 
 
@@ -1014,8 +1021,8 @@ _CMSGPRACTICELOBBYSETTEAMSLOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3197,
-  serialized_end=3362,
+  serialized_start=3217,
+  serialized_end=3382,
 )
 
 
@@ -1045,8 +1052,8 @@ _CMSGPRACTICELOBBYSETCOACH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3364,
-  serialized_end=3444,
+  serialized_start=3384,
+  serialized_end=3464,
 )
 
 
@@ -1097,8 +1104,8 @@ _CMSGPRACTICELOBBYJOINBROADCASTCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3447,
-  serialized_end=3599,
+  serialized_start=3467,
+  serialized_end=3619,
 )
 
 
@@ -1128,8 +1135,8 @@ _CMSGPRACTICELOBBYCLOSEBROADCASTCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3601,
-  serialized_end=3658,
+  serialized_start=3621,
+  serialized_end=3678,
 )
 
 
@@ -1152,8 +1159,8 @@ _CMSGPRACTICELOBBYTOGGLEBROADCASTCHANNELCAMERAMANSTATUS = _descriptor.Descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3660,
-  serialized_end=3716,
+  serialized_start=3680,
+  serialized_end=3736,
 )
 
 
@@ -1183,8 +1190,8 @@ _CMSGPRACTICELOBBYKICK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3718,
-  serialized_end=3761,
+  serialized_start=3738,
+  serialized_end=3781,
 )
 
 
@@ -1214,8 +1221,8 @@ _CMSGPRACTICELOBBYKICKFROMTEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3763,
-  serialized_end=3814,
+  serialized_start=3783,
+  serialized_end=3834,
 )
 
 
@@ -1238,8 +1245,8 @@ _CMSGPRACTICELOBBYLEAVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3816,
-  serialized_end=3840,
+  serialized_start=3836,
+  serialized_end=3860,
 )
 
 
@@ -1269,8 +1276,8 @@ _CMSGPRACTICELOBBYLAUNCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3842,
-  serialized_end=3891,
+  serialized_start=3862,
+  serialized_end=3911,
 )
 
 
@@ -1300,8 +1307,8 @@ _CMSGAPPLYTEAMTOPRACTICELOBBY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3893,
-  serialized_end=3940,
+  serialized_start=3913,
+  serialized_end=3960,
 )
 
 
@@ -1324,8 +1331,8 @@ _CMSGCLEARPRACTICELOBBYTEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3942,
-  serialized_end=3970,
+  serialized_start=3962,
+  serialized_end=3990,
 )
 
 
@@ -1376,8 +1383,8 @@ _CMSGPRACTICELOBBYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3973,
-  serialized_end=4111,
+  serialized_start=3993,
+  serialized_end=4131,
 )
 
 
@@ -1414,8 +1421,8 @@ _CMSGPRACTICELOBBYLISTRESPONSEENTRY_CLOBBYMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4649,
-  serialized_end=4704,
+  serialized_start=4669,
+  serialized_end=4724,
 )
 
 _CMSGPRACTICELOBBYLISTRESPONSEENTRY = _descriptor.Descriptor(
@@ -1563,8 +1570,8 @@ _CMSGPRACTICELOBBYLISTRESPONSEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4114,
-  serialized_end=4704,
+  serialized_start=4134,
+  serialized_end=4724,
 )
 
 
@@ -1601,8 +1608,8 @@ _CMSGPRACTICELOBBYLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4706,
-  serialized_end=4817,
+  serialized_start=4726,
+  serialized_end=4837,
 )
 
 
@@ -1639,8 +1646,8 @@ _CMSGLOBBYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4819,
-  serialized_end=4915,
+  serialized_start=4839,
+  serialized_end=4935,
 )
 
 
@@ -1670,8 +1677,8 @@ _CMSGLOBBYLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4917,
-  serialized_end=4994,
+  serialized_start=4937,
+  serialized_end=5014,
 )
 
 
@@ -1729,8 +1736,8 @@ _CMSGPRACTICELOBBYJOIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4997,
-  serialized_end=5136,
+  serialized_start=5017,
+  serialized_end=5156,
 )
 
 
@@ -1760,8 +1767,8 @@ _CMSGPRACTICELOBBYJOINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5138,
-  serialized_end=5233,
+  serialized_start=5158,
+  serialized_end=5253,
 )
 
 
@@ -1791,8 +1798,8 @@ _CMSGFRIENDPRACTICELOBBYLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5235,
-  serialized_end=5288,
+  serialized_start=5255,
+  serialized_end=5308,
 )
 
 
@@ -1822,8 +1829,8 @@ _CMSGFRIENDPRACTICELOBBYLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5290,
-  serialized_end=5381,
+  serialized_start=5310,
+  serialized_end=5401,
 )
 
 
@@ -1853,8 +1860,8 @@ _CMSGGUILDMATEPRACTICELOBBYLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5383,
-  serialized_end=5438,
+  serialized_start=5403,
+  serialized_end=5458,
 )
 
 
@@ -1884,8 +1891,8 @@ _CMSGGUILDMATEPRACTICELOBBYLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5440,
-  serialized_end=5534,
+  serialized_start=5460,
+  serialized_end=5554,
 )
 
 
@@ -1915,8 +1922,8 @@ _CMSGJOINABLECUSTOMGAMEMODESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5536,
-  serialized_end=5595,
+  serialized_start=5556,
+  serialized_end=5615,
 )
 
 
@@ -1960,8 +1967,8 @@ _CMSGJOINABLECUSTOMGAMEMODESRESPONSEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5597,
-  serialized_end=5706,
+  serialized_start=5617,
+  serialized_end=5726,
 )
 
 
@@ -1991,8 +1998,8 @@ _CMSGJOINABLECUSTOMGAMEMODESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5708,
-  serialized_end=5808,
+  serialized_start=5728,
+  serialized_end=5828,
 )
 
 
@@ -2029,8 +2036,8 @@ _CMSGJOINABLECUSTOMLOBBIESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5810,
-  serialized_end=5891,
+  serialized_start=5830,
+  serialized_end=5911,
 )
 
 
@@ -2130,8 +2137,8 @@ _CMSGJOINABLECUSTOMLOBBIESRESPONSEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5894,
-  serialized_end=6202,
+  serialized_start=5914,
+  serialized_end=6222,
 )
 
 
@@ -2161,8 +2168,8 @@ _CMSGJOINABLECUSTOMLOBBIESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6204,
-  serialized_end=6297,
+  serialized_start=6224,
+  serialized_end=6317,
 )
 
 
@@ -2206,8 +2213,8 @@ _CMSGQUICKJOINCUSTOMLOBBY_LEGACYREGIONPING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6602,
-  serialized_end=6678,
+  serialized_start=6622,
+  serialized_end=6698,
 )
 
 _CMSGQUICKJOINCUSTOMLOBBY = _descriptor.Descriptor(
@@ -2278,8 +2285,8 @@ _CMSGQUICKJOINCUSTOMLOBBY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6300,
-  serialized_end=6678,
+  serialized_start=6320,
+  serialized_end=6698,
 )
 
 
@@ -2309,8 +2316,8 @@ _CMSGQUICKJOINCUSTOMLOBBYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6680,
-  serialized_end=6778,
+  serialized_start=6700,
+  serialized_end=6798,
 )
 
 
@@ -2375,8 +2382,8 @@ _CMSGBOTGAMECREATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6781,
-  serialized_end=7057,
+  serialized_start=6801,
+  serialized_end=7077,
 )
 
 
@@ -2441,8 +2448,8 @@ _CMSGCUSTOMGAMECREATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7060,
-  serialized_end=7202,
+  serialized_start=7080,
+  serialized_end=7222,
 )
 
 
@@ -2507,8 +2514,8 @@ _CMSGEVENTGAMECREATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7205,
-  serialized_end=7346,
+  serialized_start=7225,
+  serialized_end=7366,
 )
 
 
@@ -2538,8 +2545,8 @@ _CMSGDOTAPARTYMEMBERSETCOACH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7348,
-  serialized_end=7398,
+  serialized_start=7368,
+  serialized_end=7418,
 )
 
 
@@ -2569,8 +2576,8 @@ _CMSGDOTASETGROUPLEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7400,
-  serialized_end=7452,
+  serialized_start=7420,
+  serialized_end=7472,
 )
 
 
@@ -2607,8 +2614,8 @@ _CMSGDOTACANCELGROUPINVITES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7454,
-  serialized_end=7534,
+  serialized_start=7474,
+  serialized_end=7554,
 )
 
 
@@ -2638,8 +2645,8 @@ _CMSGDOTASETGROUPOPENSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7536,
-  serialized_end=7578,
+  serialized_start=7556,
+  serialized_end=7598,
 )
 
 
@@ -2669,8 +2676,8 @@ _CMSGDOTAGROUPMERGEINVITE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7580,
-  serialized_end=7630,
+  serialized_start=7600,
+  serialized_end=7650,
 )
 
 
@@ -2707,8 +2714,8 @@ _CMSGDOTAGROUPMERGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7632,
-  serialized_end=7704,
+  serialized_start=7652,
+  serialized_end=7724,
 )
 
 
@@ -2738,8 +2745,8 @@ _CMSGDOTAGROUPMERGEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7706,
-  serialized_end=7799,
+  serialized_start=7726,
+  serialized_end=7819,
 )
 
 
@@ -2783,8 +2790,8 @@ _CMSGSPECTATORLOBBYGAMEDETAILS_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8113,
-  serialized_end=8174,
+  serialized_start=8133,
+  serialized_end=8194,
 )
 
 _CMSGSPECTATORLOBBYGAMEDETAILS = _descriptor.Descriptor(
@@ -2876,8 +2883,8 @@ _CMSGSPECTATORLOBBYGAMEDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7802,
-  serialized_end=8174,
+  serialized_start=7822,
+  serialized_end=8194,
 )
 
 
@@ -2928,8 +2935,8 @@ _CMSGSETSPECTATORLOBBYDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8177,
-  serialized_end=8317,
+  serialized_start=8197,
+  serialized_end=8337,
 )
 
 
@@ -2966,8 +2973,8 @@ _CMSGCREATESPECTATORLOBBY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8319,
-  serialized_end=8417,
+  serialized_start=8339,
+  serialized_end=8437,
 )
 
 
@@ -2990,8 +2997,8 @@ _CMSGSPECTATORLOBBYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8419,
-  serialized_end=8443,
+  serialized_start=8439,
+  serialized_end=8463,
 )
 
 
@@ -3056,8 +3063,8 @@ _CMSGSPECTATORLOBBYLISTRESPONSE_SPECTATORLOBBY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8546,
-  serialized_end=8729,
+  serialized_start=8566,
+  serialized_end=8749,
 )
 
 _CMSGSPECTATORLOBBYLISTRESPONSE = _descriptor.Descriptor(
@@ -3086,8 +3093,8 @@ _CMSGSPECTATORLOBBYLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8446,
-  serialized_end=8729,
+  serialized_start=8466,
+  serialized_end=8749,
 )
 
 
@@ -3117,8 +3124,8 @@ _CMSGCLIENTTOGCREQUESTSTEAMDATAGRAMTICKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8731,
-  serialized_end=8798,
+  serialized_start=8751,
+  serialized_end=8818,
 )
 
 
@@ -3155,8 +3162,8 @@ _CMSGCLIENTTOGCREQUESTSTEAMDATAGRAMTICKETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8800,
-  serialized_end=8894,
+  serialized_start=8820,
+  serialized_end=8914,
 )
 
 _CMSGSTARTFINDINGMATCH.fields_by_name['bot_difficulty'].enum_type = dota__shared__enums__pb2._DOTABOTDIFFICULTY
