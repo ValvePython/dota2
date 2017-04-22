@@ -18,9 +18,9 @@ import dota2.protobufs.dota_shared_enums_pb2 as dota__shared__enums__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_chat.proto',
-  package='',
+  package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n!dota_gcmessages_client_chat.proto\x1a\x17\x64ota_shared_enums.proto\"`\n\x1f\x43MsgClientToGCPrivateChatInvite\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12invited_account_id\x18\x02 \x01(\r\"[\n\x1d\x43MsgClientToGCPrivateChatKick\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x17\n\x0fkick_account_id\x18\x02 \x01(\r\"a\n CMsgClientToGCPrivateChatPromote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12promote_account_id\x18\x02 \x01(\r\"_\n\x1f\x43MsgClientToGCPrivateChatDemote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x19\n\x11\x64\x65mote_account_id\x18\x02 \x01(\r\"\xbd\x04\n!CMsgGCToClientPrivateChatResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x42\n\x06result\x18\x02 \x01(\x0e\x32).CMsgGCToClientPrivateChatResponse.Result:\x07SUCCESS\x12\x10\n\x08username\x18\x03 \x01(\t\"\x9e\x03\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x19\n\x15\x46\x41ILURE_CREATION_LOCK\x10\x01\x12\x1b\n\x17\x46\x41ILURE_SQL_TRANSACTION\x10\x02\x12\x14\n\x10\x46\x41ILURE_SDO_LOAD\x10\x03\x12\x19\n\x15\x46\x41ILURE_NO_PERMISSION\x10\x04\x12\x1a\n\x16\x46\x41ILURE_ALREADY_MEMBER\x10\x05\x12\x18\n\x14\x46\x41ILURE_NOT_A_MEMBER\x10\x07\x12\x1f\n\x1b\x46\x41ILURE_NO_REMAINING_ADMINS\x10\x08\x12\x13\n\x0f\x46\x41ILURE_NO_ROOM\x10\t\x12!\n\x1d\x46\x41ILURE_CREATION_RATE_LIMITED\x10\n\x12 \n\x1c\x46\x41ILURE_UNKNOWN_CHANNEL_NAME\x10\x0b\x12\x18\n\x14\x46\x41ILURE_UNKNOWN_USER\x10\x0c\x12\x19\n\x15\x46\x41ILURE_UNKNOWN_ERROR\x10\r\x12\x1d\n\x19\x46\x41ILURE_CANNOT_KICK_ADMIN\x10\x0e\x12\x19\n\x15\x46\x41ILURE_ALREADY_ADMIN\x10\x0f\"I\n$CMsgClientToGCPrivateChatInfoRequest\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\"\xee\x01\n%CMsgGCToClientPrivateChatInfoResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12>\n\x07members\x18\x02 \x03(\x0b\x32-.CMsgGCToClientPrivateChatInfoResponse.Member\x12\x0f\n\x07\x63reator\x18\x03 \x01(\r\x12\x15\n\rcreation_date\x18\x04 \x01(\r\x1a:\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\r\"w\n\x17\x43MsgDOTAJoinChatChannel\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x04 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\".\n\x18\x43MsgDOTALeaveChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x04\"I\n\x1a\x43MsgGCChatReportPublicSpam\x12\x12\n\nchannel_id\x18\x01 \x01(\x04\x12\x17\n\x0f\x63hannel_user_id\x18\x02 \x01(\r\"7\n\x19\x43MsgDOTAClientIgnoredUser\x12\x1a\n\x12ignored_account_id\x18\x01 \x01(\r\"\x9a\x07\n\x13\x43MsgDOTAChatMessage\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nchannel_id\x18\x02 \x01(\x04\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x11\n\ttimestamp\x18\x05 \x01(\r\x12!\n\x19suggest_invite_account_id\x18\x06 \x01(\r\x12\x1b\n\x13suggest_invite_name\x18\x07 \x01(\t\x12&\n\x1e\x66\x61ntasy_draft_owner_account_id\x18\x08 \x01(\r\x12\'\n\x1f\x66\x61ntasy_draft_player_account_id\x18\t \x01(\r\x12\x10\n\x08\x65vent_id\x18\n \x01(\r\x12\x1f\n\x17suggest_invite_to_lobby\x18\x0b \x01(\x08\x12\x14\n\x0c\x65vent_points\x18\x0c \x01(\r\x12\x11\n\tcoin_flip\x18\r \x01(\x08\x12\x15\n\tplayer_id\x18\x0e \x01(\x05:\x02-1\x12 \n\x18share_profile_account_id\x18\x0f \x01(\r\x12\x17\n\x0f\x63hannel_user_id\x18\x10 \x01(\r\x12\x30\n\tdice_roll\x18\x11 \x01(\x0b\x32\x1d.CMsgDOTAChatMessage.DiceRoll\x12\x16\n\x0eshare_party_id\x18\x12 \x01(\x04\x12\x16\n\x0eshare_lobby_id\x18\x13 \x01(\x04\x12\"\n\x1ashare_lobby_custom_game_id\x18\x14 \x01(\x04\x12\x1b\n\x13share_lobby_passkey\x18\x15 \x01(\t\x12\x1f\n\x17private_chat_channel_id\x18\x16 \x01(\r\x12\x0e\n\x06status\x18\x17 \x01(\r\x12!\n\x19legacy_battle_cup_victory\x18\x18 \x01(\x08\x12\x19\n\x11\x62\x61ttle_cup_streak\x18\x1d \x01(\r\x12\x13\n\x0b\x62\x61\x64ge_level\x18\x19 \x01(\r\x12\x1c\n\x14suggest_pick_hero_id\x18\x1a \x01(\r\x12\x1e\n\x16suggest_pick_hero_role\x18\x1b \x01(\t\x12\x1b\n\x13suggest_ban_hero_id\x18\x1e \x01(\r\x12\r\n\x05terse\x18\x1c \x01(\x08\x12\x14\n\x0cignore_muted\x18\x1f \x01(\x08\x1a>\n\x08\x44iceRoll\x12\x10\n\x08roll_min\x18\x01 \x01(\x05\x12\x10\n\x08roll_max\x18\x02 \x01(\x05\x12\x0e\n\x06result\x18\x03 \x01(\x05\"e\n\x12\x43MsgDOTAChatMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"\xea\x05\n\x1f\x43MsgDOTAJoinChatChannelResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x12\n\nchannel_id\x18\x03 \x01(\x06\x12\x13\n\x0bmax_members\x18\x04 \x01(\r\x12$\n\x07members\x18\x05 \x03(\x0b\x32\x13.CMsgDOTAChatMember\x12\x46\n\x0c\x63hannel_type\x18\x06 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x45\n\x06result\x18\x07 \x01(\x0e\x32\'.CMsgDOTAJoinChatChannelResponse.Result:\x0cJOIN_SUCCESS\x12\x19\n\x11gc_initiated_join\x18\x08 \x01(\x08\x12\x17\n\x0f\x63hannel_user_id\x18\t \x01(\r\x12\x17\n\x0fwelcome_message\x18\n \x01(\t\"\xf3\x02\n\x06Result\x12\x10\n\x0cJOIN_SUCCESS\x10\x00\x12\x18\n\x14INVALID_CHANNEL_TYPE\x10\x01\x12\x15\n\x11\x41\x43\x43OUNT_NOT_FOUND\x10\x02\x12\x0e\n\nACH_FAILED\x10\x03\x12\x1d\n\x19USER_IN_TOO_MANY_CHANNELS\x10\x04\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x10\n\x0c\x43HANNEL_FULL\x10\x06\x12\x1b\n\x17\x43HANNEL_FULL_OVERFLOWED\x10\x07\x12\x16\n\x12\x46\x41ILED_TO_ADD_USER\x10\x08\x12\x19\n\x15\x43HANNEL_TYPE_DISABLED\x10\t\x12\x1e\n\x1aPRIVATE_CHAT_CREATE_FAILED\x10\n\x12\x1e\n\x1aPRIVATE_CHAT_NO_PERMISSION\x10\x0b\x12#\n\x1fPRIVATE_CHAT_CREATE_LOCK_FAILED\x10\x0c\x12\x17\n\x13PRIVATE_CHAT_KICKED\x10\r\"Y\n\x1d\x43MsgDOTAChatChannelFullUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12$\n\x07members\x18\x02 \x03(\x0b\x32\x13.CMsgDOTAChatMember\"\x85\x01\n\x1e\x43MsgDOTAOtherJoinedChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08steam_id\x18\x03 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x04 \x01(\r\x12\x0e\n\x06status\x18\x05 \x01(\r\"]\n\x1c\x43MsgDOTAOtherLeftChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\"\xf5\x01\n\x1f\x43MsgDOTAChatChannelMemberUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x16\n\x0eleft_steam_ids\x18\x02 \x03(\x06\x12\x45\n\x0ejoined_members\x18\x03 \x03(\x0b\x32-.CMsgDOTAChatChannelMemberUpdate.JoinedMember\x1a_\n\x0cJoinedMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\" \n\x1e\x43MsgDOTARequestChatChannelList\"\xf2\x01\n&CMsgDOTARequestChatChannelListResponse\x12\x45\n\x08\x63hannels\x18\x01 \x03(\x0b\x32\x33.CMsgDOTARequestChatChannelListResponse.ChatChannel\x1a\x80\x01\n\x0b\x43hatChannel\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x13\n\x0bnum_members\x18\x02 \x01(\r\x12\x46\n\x0c\x63hannel_type\x18\x03 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"-\n\x17\x43MsgDOTAChatGetUserList\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\"\xca\x01\n\x1f\x43MsgDOTAChatGetUserListResponse\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x38\n\x07members\x18\x02 \x03(\x0b\x32\'.CMsgDOTAChatGetUserListResponse.Member\x1aY\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"z\n\x1a\x43MsgDOTAChatGetMemberCount\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"\x98\x01\n\"CMsgDOTAChatGetMemberCountResponse\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x46\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x16.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x14\n\x0cmember_count\x18\x03 \x01(\r\"\xd9\x01\n\x1a\x43MsgDOTAChatRegionsEnabled\x12\x1a\n\x12\x65nable_all_regions\x18\x01 \x01(\x08\x12;\n\x0f\x65nabled_regions\x18\x02 \x03(\x0b\x32\".CMsgDOTAChatRegionsEnabled.Region\x1a\x62\n\x06Region\x12\x14\n\x0cmin_latitude\x18\x01 \x01(\x02\x12\x14\n\x0cmax_latitude\x18\x02 \x01(\x02\x12\x15\n\rmin_longitude\x18\x03 \x01(\x02\x12\x15\n\rmax_longitude\x18\x04 \x01(\x02\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n!dota_gcmessages_client_chat.proto\x12\x04\x64ota\x1a\x17\x64ota_shared_enums.proto\"`\n\x1f\x43MsgClientToGCPrivateChatInvite\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12invited_account_id\x18\x02 \x01(\r\"[\n\x1d\x43MsgClientToGCPrivateChatKick\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x17\n\x0fkick_account_id\x18\x02 \x01(\r\"a\n CMsgClientToGCPrivateChatPromote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x1a\n\x12promote_account_id\x18\x02 \x01(\r\"_\n\x1f\x43MsgClientToGCPrivateChatDemote\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x19\n\x11\x64\x65mote_account_id\x18\x02 \x01(\r\"\xc2\x04\n!CMsgGCToClientPrivateChatResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12G\n\x06result\x18\x02 \x01(\x0e\x32..dota.CMsgGCToClientPrivateChatResponse.Result:\x07SUCCESS\x12\x10\n\x08username\x18\x03 \x01(\t\"\x9e\x03\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x19\n\x15\x46\x41ILURE_CREATION_LOCK\x10\x01\x12\x1b\n\x17\x46\x41ILURE_SQL_TRANSACTION\x10\x02\x12\x14\n\x10\x46\x41ILURE_SDO_LOAD\x10\x03\x12\x19\n\x15\x46\x41ILURE_NO_PERMISSION\x10\x04\x12\x1a\n\x16\x46\x41ILURE_ALREADY_MEMBER\x10\x05\x12\x18\n\x14\x46\x41ILURE_NOT_A_MEMBER\x10\x07\x12\x1f\n\x1b\x46\x41ILURE_NO_REMAINING_ADMINS\x10\x08\x12\x13\n\x0f\x46\x41ILURE_NO_ROOM\x10\t\x12!\n\x1d\x46\x41ILURE_CREATION_RATE_LIMITED\x10\n\x12 \n\x1c\x46\x41ILURE_UNKNOWN_CHANNEL_NAME\x10\x0b\x12\x18\n\x14\x46\x41ILURE_UNKNOWN_USER\x10\x0c\x12\x19\n\x15\x46\x41ILURE_UNKNOWN_ERROR\x10\r\x12\x1d\n\x19\x46\x41ILURE_CANNOT_KICK_ADMIN\x10\x0e\x12\x19\n\x15\x46\x41ILURE_ALREADY_ADMIN\x10\x0f\"I\n$CMsgClientToGCPrivateChatInfoRequest\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\"\xf3\x01\n%CMsgGCToClientPrivateChatInfoResponse\x12!\n\x19private_chat_channel_name\x18\x01 \x01(\t\x12\x43\n\x07members\x18\x02 \x03(\x0b\x32\x32.dota.CMsgGCToClientPrivateChatInfoResponse.Member\x12\x0f\n\x07\x63reator\x18\x03 \x01(\r\x12\x15\n\rcreation_date\x18\x04 \x01(\r\x1a:\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\r\"|\n\x17\x43MsgDOTAJoinChatChannel\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12K\n\x0c\x63hannel_type\x18\x04 \x01(\x0e\x32\x1b.dota.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\".\n\x18\x43MsgDOTALeaveChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x04\"I\n\x1a\x43MsgGCChatReportPublicSpam\x12\x12\n\nchannel_id\x18\x01 \x01(\x04\x12\x17\n\x0f\x63hannel_user_id\x18\x02 \x01(\r\"7\n\x19\x43MsgDOTAClientIgnoredUser\x12\x1a\n\x12ignored_account_id\x18\x01 \x01(\r\"\x9f\x07\n\x13\x43MsgDOTAChatMessage\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nchannel_id\x18\x02 \x01(\x04\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x11\n\ttimestamp\x18\x05 \x01(\r\x12!\n\x19suggest_invite_account_id\x18\x06 \x01(\r\x12\x1b\n\x13suggest_invite_name\x18\x07 \x01(\t\x12&\n\x1e\x66\x61ntasy_draft_owner_account_id\x18\x08 \x01(\r\x12\'\n\x1f\x66\x61ntasy_draft_player_account_id\x18\t \x01(\r\x12\x10\n\x08\x65vent_id\x18\n \x01(\r\x12\x1f\n\x17suggest_invite_to_lobby\x18\x0b \x01(\x08\x12\x14\n\x0c\x65vent_points\x18\x0c \x01(\r\x12\x11\n\tcoin_flip\x18\r \x01(\x08\x12\x15\n\tplayer_id\x18\x0e \x01(\x05:\x02-1\x12 \n\x18share_profile_account_id\x18\x0f \x01(\r\x12\x17\n\x0f\x63hannel_user_id\x18\x10 \x01(\r\x12\x35\n\tdice_roll\x18\x11 \x01(\x0b\x32\".dota.CMsgDOTAChatMessage.DiceRoll\x12\x16\n\x0eshare_party_id\x18\x12 \x01(\x04\x12\x16\n\x0eshare_lobby_id\x18\x13 \x01(\x04\x12\"\n\x1ashare_lobby_custom_game_id\x18\x14 \x01(\x04\x12\x1b\n\x13share_lobby_passkey\x18\x15 \x01(\t\x12\x1f\n\x17private_chat_channel_id\x18\x16 \x01(\r\x12\x0e\n\x06status\x18\x17 \x01(\r\x12!\n\x19legacy_battle_cup_victory\x18\x18 \x01(\x08\x12\x19\n\x11\x62\x61ttle_cup_streak\x18\x1d \x01(\r\x12\x13\n\x0b\x62\x61\x64ge_level\x18\x19 \x01(\r\x12\x1c\n\x14suggest_pick_hero_id\x18\x1a \x01(\r\x12\x1e\n\x16suggest_pick_hero_role\x18\x1b \x01(\t\x12\x1b\n\x13suggest_ban_hero_id\x18\x1e \x01(\r\x12\r\n\x05terse\x18\x1c \x01(\x08\x12\x14\n\x0cignore_muted\x18\x1f \x01(\x08\x1a>\n\x08\x44iceRoll\x12\x10\n\x08roll_min\x18\x01 \x01(\x05\x12\x10\n\x08roll_max\x18\x02 \x01(\x05\x12\x0e\n\x06result\x18\x03 \x01(\x05\"e\n\x12\x43MsgDOTAChatMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"\xf9\x05\n\x1f\x43MsgDOTAJoinChatChannelResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x12\n\nchannel_id\x18\x03 \x01(\x06\x12\x13\n\x0bmax_members\x18\x04 \x01(\r\x12)\n\x07members\x18\x05 \x03(\x0b\x32\x18.dota.CMsgDOTAChatMember\x12K\n\x0c\x63hannel_type\x18\x06 \x01(\x0e\x32\x1b.dota.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12J\n\x06result\x18\x07 \x01(\x0e\x32,.dota.CMsgDOTAJoinChatChannelResponse.Result:\x0cJOIN_SUCCESS\x12\x19\n\x11gc_initiated_join\x18\x08 \x01(\x08\x12\x17\n\x0f\x63hannel_user_id\x18\t \x01(\r\x12\x17\n\x0fwelcome_message\x18\n \x01(\t\"\xf3\x02\n\x06Result\x12\x10\n\x0cJOIN_SUCCESS\x10\x00\x12\x18\n\x14INVALID_CHANNEL_TYPE\x10\x01\x12\x15\n\x11\x41\x43\x43OUNT_NOT_FOUND\x10\x02\x12\x0e\n\nACH_FAILED\x10\x03\x12\x1d\n\x19USER_IN_TOO_MANY_CHANNELS\x10\x04\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x10\n\x0c\x43HANNEL_FULL\x10\x06\x12\x1b\n\x17\x43HANNEL_FULL_OVERFLOWED\x10\x07\x12\x16\n\x12\x46\x41ILED_TO_ADD_USER\x10\x08\x12\x19\n\x15\x43HANNEL_TYPE_DISABLED\x10\t\x12\x1e\n\x1aPRIVATE_CHAT_CREATE_FAILED\x10\n\x12\x1e\n\x1aPRIVATE_CHAT_NO_PERMISSION\x10\x0b\x12#\n\x1fPRIVATE_CHAT_CREATE_LOCK_FAILED\x10\x0c\x12\x17\n\x13PRIVATE_CHAT_KICKED\x10\r\"^\n\x1d\x43MsgDOTAChatChannelFullUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12)\n\x07members\x18\x02 \x03(\x0b\x32\x18.dota.CMsgDOTAChatMember\"\x85\x01\n\x1e\x43MsgDOTAOtherJoinedChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08steam_id\x18\x03 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x04 \x01(\r\x12\x0e\n\x06status\x18\x05 \x01(\r\"]\n\x1c\x43MsgDOTAOtherLeftChatChannel\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\"\xfa\x01\n\x1f\x43MsgDOTAChatChannelMemberUpdate\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12\x16\n\x0eleft_steam_ids\x18\x02 \x03(\x06\x12J\n\x0ejoined_members\x18\x03 \x03(\x0b\x32\x32.dota.CMsgDOTAChatChannelMemberUpdate.JoinedMember\x1a_\n\x0cJoinedMember\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\" \n\x1e\x43MsgDOTARequestChatChannelList\"\xfc\x01\n&CMsgDOTARequestChatChannelListResponse\x12J\n\x08\x63hannels\x18\x01 \x03(\x0b\x32\x38.dota.CMsgDOTARequestChatChannelListResponse.ChatChannel\x1a\x85\x01\n\x0b\x43hatChannel\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12\x13\n\x0bnum_members\x18\x02 \x01(\r\x12K\n\x0c\x63hannel_type\x18\x03 \x01(\x0e\x32\x1b.dota.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"-\n\x17\x43MsgDOTAChatGetUserList\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\"\xcf\x01\n\x1f\x43MsgDOTAChatGetUserListResponse\x12\x12\n\nchannel_id\x18\x01 \x01(\x06\x12=\n\x07members\x18\x02 \x03(\x0b\x32,.dota.CMsgDOTAChatGetUserListResponse.Member\x1aY\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63hannel_user_id\x18\x03 \x01(\r\x12\x0e\n\x06status\x18\x04 \x01(\r\"\x7f\n\x1a\x43MsgDOTAChatGetMemberCount\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12K\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x1b.dota.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\"\x9d\x01\n\"CMsgDOTAChatGetMemberCountResponse\x12\x14\n\x0c\x63hannel_name\x18\x01 \x01(\t\x12K\n\x0c\x63hannel_type\x18\x02 \x01(\x0e\x32\x1b.dota.DOTAChatChannelType_t:\x18\x44OTAChannelType_Regional\x12\x14\n\x0cmember_count\x18\x03 \x01(\r\"\xde\x01\n\x1a\x43MsgDOTAChatRegionsEnabled\x12\x1a\n\x12\x65nable_all_regions\x18\x01 \x01(\x08\x12@\n\x0f\x65nabled_regions\x18\x02 \x03(\x0b\x32\'.dota.CMsgDOTAChatRegionsEnabled.Region\x1a\x62\n\x06Region\x12\x14\n\x0cmin_latitude\x18\x01 \x01(\x02\x12\x14\n\x0cmax_latitude\x18\x02 \x01(\x02\x12\x15\n\rmin_longitude\x18\x03 \x01(\x02\x12\x15\n\rmax_longitude\x18\x04 \x01(\x02\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[dota__shared__enums__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -29,7 +29,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
-  full_name='CMsgGCToClientPrivateChatResponse.Result',
+  full_name='dota.CMsgGCToClientPrivateChatResponse.Result',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -96,14 +96,14 @@ _CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=609,
-  serialized_end=1023,
+  serialized_start=620,
+  serialized_end=1034,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT)
 
 _CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
-  full_name='CMsgDOTAJoinChatChannelResponse.Result',
+  full_name='dota.CMsgDOTAJoinChatChannelResponse.Result',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -166,28 +166,28 @@ _CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3046,
-  serialized_end=3417,
+  serialized_start=3087,
+  serialized_end=3458,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAJOINCHATCHANNELRESPONSE_RESULT)
 
 
 _CMSGCLIENTTOGCPRIVATECHATINVITE = _descriptor.Descriptor(
   name='CMsgClientToGCPrivateChatInvite',
-  full_name='CMsgClientToGCPrivateChatInvite',
+  full_name='dota.CMsgClientToGCPrivateChatInvite',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatInvite.private_chat_channel_name', index=0,
+      name='private_chat_channel_name', full_name='dota.CMsgClientToGCPrivateChatInvite.private_chat_channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='invited_account_id', full_name='CMsgClientToGCPrivateChatInvite.invited_account_id', index=1,
+      name='invited_account_id', full_name='dota.CMsgClientToGCPrivateChatInvite.invited_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -205,27 +205,27 @@ _CMSGCLIENTTOGCPRIVATECHATINVITE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62,
-  serialized_end=158,
+  serialized_start=68,
+  serialized_end=164,
 )
 
 
 _CMSGCLIENTTOGCPRIVATECHATKICK = _descriptor.Descriptor(
   name='CMsgClientToGCPrivateChatKick',
-  full_name='CMsgClientToGCPrivateChatKick',
+  full_name='dota.CMsgClientToGCPrivateChatKick',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatKick.private_chat_channel_name', index=0,
+      name='private_chat_channel_name', full_name='dota.CMsgClientToGCPrivateChatKick.private_chat_channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='kick_account_id', full_name='CMsgClientToGCPrivateChatKick.kick_account_id', index=1,
+      name='kick_account_id', full_name='dota.CMsgClientToGCPrivateChatKick.kick_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -243,27 +243,27 @@ _CMSGCLIENTTOGCPRIVATECHATKICK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=160,
-  serialized_end=251,
+  serialized_start=166,
+  serialized_end=257,
 )
 
 
 _CMSGCLIENTTOGCPRIVATECHATPROMOTE = _descriptor.Descriptor(
   name='CMsgClientToGCPrivateChatPromote',
-  full_name='CMsgClientToGCPrivateChatPromote',
+  full_name='dota.CMsgClientToGCPrivateChatPromote',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatPromote.private_chat_channel_name', index=0,
+      name='private_chat_channel_name', full_name='dota.CMsgClientToGCPrivateChatPromote.private_chat_channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='promote_account_id', full_name='CMsgClientToGCPrivateChatPromote.promote_account_id', index=1,
+      name='promote_account_id', full_name='dota.CMsgClientToGCPrivateChatPromote.promote_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -281,27 +281,27 @@ _CMSGCLIENTTOGCPRIVATECHATPROMOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=350,
+  serialized_start=259,
+  serialized_end=356,
 )
 
 
 _CMSGCLIENTTOGCPRIVATECHATDEMOTE = _descriptor.Descriptor(
   name='CMsgClientToGCPrivateChatDemote',
-  full_name='CMsgClientToGCPrivateChatDemote',
+  full_name='dota.CMsgClientToGCPrivateChatDemote',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatDemote.private_chat_channel_name', index=0,
+      name='private_chat_channel_name', full_name='dota.CMsgClientToGCPrivateChatDemote.private_chat_channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='demote_account_id', full_name='CMsgClientToGCPrivateChatDemote.demote_account_id', index=1,
+      name='demote_account_id', full_name='dota.CMsgClientToGCPrivateChatDemote.demote_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -319,34 +319,34 @@ _CMSGCLIENTTOGCPRIVATECHATDEMOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=447,
+  serialized_start=358,
+  serialized_end=453,
 )
 
 
 _CMSGGCTOCLIENTPRIVATECHATRESPONSE = _descriptor.Descriptor(
   name='CMsgGCToClientPrivateChatResponse',
-  full_name='CMsgGCToClientPrivateChatResponse',
+  full_name='dota.CMsgGCToClientPrivateChatResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgGCToClientPrivateChatResponse.private_chat_channel_name', index=0,
+      name='private_chat_channel_name', full_name='dota.CMsgGCToClientPrivateChatResponse.private_chat_channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgGCToClientPrivateChatResponse.result', index=1,
+      name='result', full_name='dota.CMsgGCToClientPrivateChatResponse.result', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='username', full_name='CMsgGCToClientPrivateChatResponse.username', index=2,
+      name='username', full_name='dota.CMsgGCToClientPrivateChatResponse.username', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -365,20 +365,20 @@ _CMSGGCTOCLIENTPRIVATECHATRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=450,
-  serialized_end=1023,
+  serialized_start=456,
+  serialized_end=1034,
 )
 
 
 _CMSGCLIENTTOGCPRIVATECHATINFOREQUEST = _descriptor.Descriptor(
   name='CMsgClientToGCPrivateChatInfoRequest',
-  full_name='CMsgClientToGCPrivateChatInfoRequest',
+  full_name='dota.CMsgClientToGCPrivateChatInfoRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgClientToGCPrivateChatInfoRequest.private_chat_channel_name', index=0,
+      name='private_chat_channel_name', full_name='dota.CMsgClientToGCPrivateChatInfoRequest.private_chat_channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -396,34 +396,34 @@ _CMSGCLIENTTOGCPRIVATECHATINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1025,
-  serialized_end=1098,
+  serialized_start=1036,
+  serialized_end=1109,
 )
 
 
 _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE_MEMBER = _descriptor.Descriptor(
   name='Member',
-  full_name='CMsgGCToClientPrivateChatInfoResponse.Member',
+  full_name='dota.CMsgGCToClientPrivateChatInfoResponse.Member',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgGCToClientPrivateChatInfoResponse.Member.account_id', index=0,
+      name='account_id', full_name='dota.CMsgGCToClientPrivateChatInfoResponse.Member.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgGCToClientPrivateChatInfoResponse.Member.name', index=1,
+      name='name', full_name='dota.CMsgGCToClientPrivateChatInfoResponse.Member.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgGCToClientPrivateChatInfoResponse.Member.status', index=2,
+      name='status', full_name='dota.CMsgGCToClientPrivateChatInfoResponse.Member.status', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -441,40 +441,40 @@ _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE_MEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1281,
-  serialized_end=1339,
+  serialized_start=1297,
+  serialized_end=1355,
 )
 
 _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE = _descriptor.Descriptor(
   name='CMsgGCToClientPrivateChatInfoResponse',
-  full_name='CMsgGCToClientPrivateChatInfoResponse',
+  full_name='dota.CMsgGCToClientPrivateChatInfoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='private_chat_channel_name', full_name='CMsgGCToClientPrivateChatInfoResponse.private_chat_channel_name', index=0,
+      name='private_chat_channel_name', full_name='dota.CMsgGCToClientPrivateChatInfoResponse.private_chat_channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgGCToClientPrivateChatInfoResponse.members', index=1,
+      name='members', full_name='dota.CMsgGCToClientPrivateChatInfoResponse.members', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='creator', full_name='CMsgGCToClientPrivateChatInfoResponse.creator', index=2,
+      name='creator', full_name='dota.CMsgGCToClientPrivateChatInfoResponse.creator', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='creation_date', full_name='CMsgGCToClientPrivateChatInfoResponse.creation_date', index=3,
+      name='creation_date', full_name='dota.CMsgGCToClientPrivateChatInfoResponse.creation_date', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -492,27 +492,27 @@ _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1101,
-  serialized_end=1339,
+  serialized_start=1112,
+  serialized_end=1355,
 )
 
 
 _CMSGDOTAJOINCHATCHANNEL = _descriptor.Descriptor(
   name='CMsgDOTAJoinChatChannel',
-  full_name='CMsgDOTAJoinChatChannel',
+  full_name='dota.CMsgDOTAJoinChatChannel',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTAJoinChatChannel.channel_name', index=0,
+      name='channel_name', full_name='dota.CMsgDOTAJoinChatChannel.channel_name', index=0,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTAJoinChatChannel.channel_type', index=1,
+      name='channel_type', full_name='dota.CMsgDOTAJoinChatChannel.channel_type', index=1,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -530,20 +530,20 @@ _CMSGDOTAJOINCHATCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1341,
-  serialized_end=1460,
+  serialized_start=1357,
+  serialized_end=1481,
 )
 
 
 _CMSGDOTALEAVECHATCHANNEL = _descriptor.Descriptor(
   name='CMsgDOTALeaveChatChannel',
-  full_name='CMsgDOTALeaveChatChannel',
+  full_name='dota.CMsgDOTALeaveChatChannel',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTALeaveChatChannel.channel_id', index=0,
+      name='channel_id', full_name='dota.CMsgDOTALeaveChatChannel.channel_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -561,27 +561,27 @@ _CMSGDOTALEAVECHATCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1462,
-  serialized_end=1508,
+  serialized_start=1483,
+  serialized_end=1529,
 )
 
 
 _CMSGGCCHATREPORTPUBLICSPAM = _descriptor.Descriptor(
   name='CMsgGCChatReportPublicSpam',
-  full_name='CMsgGCChatReportPublicSpam',
+  full_name='dota.CMsgGCChatReportPublicSpam',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgGCChatReportPublicSpam.channel_id', index=0,
+      name='channel_id', full_name='dota.CMsgGCChatReportPublicSpam.channel_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgGCChatReportPublicSpam.channel_user_id', index=1,
+      name='channel_user_id', full_name='dota.CMsgGCChatReportPublicSpam.channel_user_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -599,20 +599,20 @@ _CMSGGCCHATREPORTPUBLICSPAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1510,
-  serialized_end=1583,
+  serialized_start=1531,
+  serialized_end=1604,
 )
 
 
 _CMSGDOTACLIENTIGNOREDUSER = _descriptor.Descriptor(
   name='CMsgDOTAClientIgnoredUser',
-  full_name='CMsgDOTAClientIgnoredUser',
+  full_name='dota.CMsgDOTAClientIgnoredUser',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ignored_account_id', full_name='CMsgDOTAClientIgnoredUser.ignored_account_id', index=0,
+      name='ignored_account_id', full_name='dota.CMsgDOTAClientIgnoredUser.ignored_account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -630,34 +630,34 @@ _CMSGDOTACLIENTIGNOREDUSER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1585,
-  serialized_end=1640,
+  serialized_start=1606,
+  serialized_end=1661,
 )
 
 
 _CMSGDOTACHATMESSAGE_DICEROLL = _descriptor.Descriptor(
   name='DiceRoll',
-  full_name='CMsgDOTAChatMessage.DiceRoll',
+  full_name='dota.CMsgDOTAChatMessage.DiceRoll',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='roll_min', full_name='CMsgDOTAChatMessage.DiceRoll.roll_min', index=0,
+      name='roll_min', full_name='dota.CMsgDOTAChatMessage.DiceRoll.roll_min', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='roll_max', full_name='CMsgDOTAChatMessage.DiceRoll.roll_max', index=1,
+      name='roll_max', full_name='dota.CMsgDOTAChatMessage.DiceRoll.roll_max', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAChatMessage.DiceRoll.result', index=2,
+      name='result', full_name='dota.CMsgDOTAChatMessage.DiceRoll.result', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -675,229 +675,229 @@ _CMSGDOTACHATMESSAGE_DICEROLL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2503,
-  serialized_end=2565,
+  serialized_start=2529,
+  serialized_end=2591,
 )
 
 _CMSGDOTACHATMESSAGE = _descriptor.Descriptor(
   name='CMsgDOTAChatMessage',
-  full_name='CMsgDOTAChatMessage',
+  full_name='dota.CMsgDOTAChatMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAChatMessage.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAChatMessage.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatMessage.channel_id', index=1,
+      name='channel_id', full_name='dota.CMsgDOTAChatMessage.channel_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAChatMessage.persona_name', index=2,
+      name='persona_name', full_name='dota.CMsgDOTAChatMessage.persona_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='text', full_name='CMsgDOTAChatMessage.text', index=3,
+      name='text', full_name='dota.CMsgDOTAChatMessage.text', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgDOTAChatMessage.timestamp', index=4,
+      name='timestamp', full_name='dota.CMsgDOTAChatMessage.timestamp', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='suggest_invite_account_id', full_name='CMsgDOTAChatMessage.suggest_invite_account_id', index=5,
+      name='suggest_invite_account_id', full_name='dota.CMsgDOTAChatMessage.suggest_invite_account_id', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='suggest_invite_name', full_name='CMsgDOTAChatMessage.suggest_invite_name', index=6,
+      name='suggest_invite_name', full_name='dota.CMsgDOTAChatMessage.suggest_invite_name', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_draft_owner_account_id', full_name='CMsgDOTAChatMessage.fantasy_draft_owner_account_id', index=7,
+      name='fantasy_draft_owner_account_id', full_name='dota.CMsgDOTAChatMessage.fantasy_draft_owner_account_id', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_draft_player_account_id', full_name='CMsgDOTAChatMessage.fantasy_draft_player_account_id', index=8,
+      name='fantasy_draft_player_account_id', full_name='dota.CMsgDOTAChatMessage.fantasy_draft_player_account_id', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='event_id', full_name='CMsgDOTAChatMessage.event_id', index=9,
+      name='event_id', full_name='dota.CMsgDOTAChatMessage.event_id', index=9,
       number=10, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='suggest_invite_to_lobby', full_name='CMsgDOTAChatMessage.suggest_invite_to_lobby', index=10,
+      name='suggest_invite_to_lobby', full_name='dota.CMsgDOTAChatMessage.suggest_invite_to_lobby', index=10,
       number=11, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='event_points', full_name='CMsgDOTAChatMessage.event_points', index=11,
+      name='event_points', full_name='dota.CMsgDOTAChatMessage.event_points', index=11,
       number=12, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='coin_flip', full_name='CMsgDOTAChatMessage.coin_flip', index=12,
+      name='coin_flip', full_name='dota.CMsgDOTAChatMessage.coin_flip', index=12,
       number=13, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_id', full_name='CMsgDOTAChatMessage.player_id', index=13,
+      name='player_id', full_name='dota.CMsgDOTAChatMessage.player_id', index=13,
       number=14, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=-1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='share_profile_account_id', full_name='CMsgDOTAChatMessage.share_profile_account_id', index=14,
+      name='share_profile_account_id', full_name='dota.CMsgDOTAChatMessage.share_profile_account_id', index=14,
       number=15, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAChatMessage.channel_user_id', index=15,
+      name='channel_user_id', full_name='dota.CMsgDOTAChatMessage.channel_user_id', index=15,
       number=16, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='dice_roll', full_name='CMsgDOTAChatMessage.dice_roll', index=16,
+      name='dice_roll', full_name='dota.CMsgDOTAChatMessage.dice_roll', index=16,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='share_party_id', full_name='CMsgDOTAChatMessage.share_party_id', index=17,
+      name='share_party_id', full_name='dota.CMsgDOTAChatMessage.share_party_id', index=17,
       number=18, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='share_lobby_id', full_name='CMsgDOTAChatMessage.share_lobby_id', index=18,
+      name='share_lobby_id', full_name='dota.CMsgDOTAChatMessage.share_lobby_id', index=18,
       number=19, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='share_lobby_custom_game_id', full_name='CMsgDOTAChatMessage.share_lobby_custom_game_id', index=19,
+      name='share_lobby_custom_game_id', full_name='dota.CMsgDOTAChatMessage.share_lobby_custom_game_id', index=19,
       number=20, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='share_lobby_passkey', full_name='CMsgDOTAChatMessage.share_lobby_passkey', index=20,
+      name='share_lobby_passkey', full_name='dota.CMsgDOTAChatMessage.share_lobby_passkey', index=20,
       number=21, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='private_chat_channel_id', full_name='CMsgDOTAChatMessage.private_chat_channel_id', index=21,
+      name='private_chat_channel_id', full_name='dota.CMsgDOTAChatMessage.private_chat_channel_id', index=21,
       number=22, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAChatMessage.status', index=22,
+      name='status', full_name='dota.CMsgDOTAChatMessage.status', index=22,
       number=23, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='legacy_battle_cup_victory', full_name='CMsgDOTAChatMessage.legacy_battle_cup_victory', index=23,
+      name='legacy_battle_cup_victory', full_name='dota.CMsgDOTAChatMessage.legacy_battle_cup_victory', index=23,
       number=24, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='battle_cup_streak', full_name='CMsgDOTAChatMessage.battle_cup_streak', index=24,
+      name='battle_cup_streak', full_name='dota.CMsgDOTAChatMessage.battle_cup_streak', index=24,
       number=29, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='badge_level', full_name='CMsgDOTAChatMessage.badge_level', index=25,
+      name='badge_level', full_name='dota.CMsgDOTAChatMessage.badge_level', index=25,
       number=25, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='suggest_pick_hero_id', full_name='CMsgDOTAChatMessage.suggest_pick_hero_id', index=26,
+      name='suggest_pick_hero_id', full_name='dota.CMsgDOTAChatMessage.suggest_pick_hero_id', index=26,
       number=26, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='suggest_pick_hero_role', full_name='CMsgDOTAChatMessage.suggest_pick_hero_role', index=27,
+      name='suggest_pick_hero_role', full_name='dota.CMsgDOTAChatMessage.suggest_pick_hero_role', index=27,
       number=27, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='suggest_ban_hero_id', full_name='CMsgDOTAChatMessage.suggest_ban_hero_id', index=28,
+      name='suggest_ban_hero_id', full_name='dota.CMsgDOTAChatMessage.suggest_ban_hero_id', index=28,
       number=30, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='terse', full_name='CMsgDOTAChatMessage.terse', index=29,
+      name='terse', full_name='dota.CMsgDOTAChatMessage.terse', index=29,
       number=28, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ignore_muted', full_name='CMsgDOTAChatMessage.ignore_muted', index=30,
+      name='ignore_muted', full_name='dota.CMsgDOTAChatMessage.ignore_muted', index=30,
       number=31, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -915,41 +915,41 @@ _CMSGDOTACHATMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1643,
-  serialized_end=2565,
+  serialized_start=1664,
+  serialized_end=2591,
 )
 
 
 _CMSGDOTACHATMEMBER = _descriptor.Descriptor(
   name='CMsgDOTAChatMember',
-  full_name='CMsgDOTAChatMember',
+  full_name='dota.CMsgDOTAChatMember',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAChatMember.steam_id', index=0,
+      name='steam_id', full_name='dota.CMsgDOTAChatMember.steam_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAChatMember.persona_name', index=1,
+      name='persona_name', full_name='dota.CMsgDOTAChatMember.persona_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAChatMember.channel_user_id', index=2,
+      name='channel_user_id', full_name='dota.CMsgDOTAChatMember.channel_user_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAChatMember.status', index=3,
+      name='status', full_name='dota.CMsgDOTAChatMember.status', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -967,83 +967,83 @@ _CMSGDOTACHATMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2567,
-  serialized_end=2668,
+  serialized_start=2593,
+  serialized_end=2694,
 )
 
 
 _CMSGDOTAJOINCHATCHANNELRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAJoinChatChannelResponse',
-  full_name='CMsgDOTAJoinChatChannelResponse',
+  full_name='dota.CMsgDOTAJoinChatChannelResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='response', full_name='CMsgDOTAJoinChatChannelResponse.response', index=0,
+      name='response', full_name='dota.CMsgDOTAJoinChatChannelResponse.response', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTAJoinChatChannelResponse.channel_name', index=1,
+      name='channel_name', full_name='dota.CMsgDOTAJoinChatChannelResponse.channel_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAJoinChatChannelResponse.channel_id', index=2,
+      name='channel_id', full_name='dota.CMsgDOTAJoinChatChannelResponse.channel_id', index=2,
       number=3, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='max_members', full_name='CMsgDOTAJoinChatChannelResponse.max_members', index=3,
+      name='max_members', full_name='dota.CMsgDOTAJoinChatChannelResponse.max_members', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTAJoinChatChannelResponse.members', index=4,
+      name='members', full_name='dota.CMsgDOTAJoinChatChannelResponse.members', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTAJoinChatChannelResponse.channel_type', index=5,
+      name='channel_type', full_name='dota.CMsgDOTAJoinChatChannelResponse.channel_type', index=5,
       number=6, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAJoinChatChannelResponse.result', index=6,
+      name='result', full_name='dota.CMsgDOTAJoinChatChannelResponse.result', index=6,
       number=7, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gc_initiated_join', full_name='CMsgDOTAJoinChatChannelResponse.gc_initiated_join', index=7,
+      name='gc_initiated_join', full_name='dota.CMsgDOTAJoinChatChannelResponse.gc_initiated_join', index=7,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAJoinChatChannelResponse.channel_user_id', index=8,
+      name='channel_user_id', full_name='dota.CMsgDOTAJoinChatChannelResponse.channel_user_id', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='welcome_message', full_name='CMsgDOTAJoinChatChannelResponse.welcome_message', index=9,
+      name='welcome_message', full_name='dota.CMsgDOTAJoinChatChannelResponse.welcome_message', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1062,27 +1062,27 @@ _CMSGDOTAJOINCHATCHANNELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2671,
-  serialized_end=3417,
+  serialized_start=2697,
+  serialized_end=3458,
 )
 
 
 _CMSGDOTACHATCHANNELFULLUPDATE = _descriptor.Descriptor(
   name='CMsgDOTAChatChannelFullUpdate',
-  full_name='CMsgDOTAChatChannelFullUpdate',
+  full_name='dota.CMsgDOTAChatChannelFullUpdate',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatChannelFullUpdate.channel_id', index=0,
+      name='channel_id', full_name='dota.CMsgDOTAChatChannelFullUpdate.channel_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTAChatChannelFullUpdate.members', index=1,
+      name='members', full_name='dota.CMsgDOTAChatChannelFullUpdate.members', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1100,48 +1100,48 @@ _CMSGDOTACHATCHANNELFULLUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3419,
-  serialized_end=3508,
+  serialized_start=3460,
+  serialized_end=3554,
 )
 
 
 _CMSGDOTAOTHERJOINEDCHATCHANNEL = _descriptor.Descriptor(
   name='CMsgDOTAOtherJoinedChatChannel',
-  full_name='CMsgDOTAOtherJoinedChatChannel',
+  full_name='dota.CMsgDOTAOtherJoinedChatChannel',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAOtherJoinedChatChannel.channel_id', index=0,
+      name='channel_id', full_name='dota.CMsgDOTAOtherJoinedChatChannel.channel_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAOtherJoinedChatChannel.persona_name', index=1,
+      name='persona_name', full_name='dota.CMsgDOTAOtherJoinedChatChannel.persona_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAOtherJoinedChatChannel.steam_id', index=2,
+      name='steam_id', full_name='dota.CMsgDOTAOtherJoinedChatChannel.steam_id', index=2,
       number=3, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAOtherJoinedChatChannel.channel_user_id', index=3,
+      name='channel_user_id', full_name='dota.CMsgDOTAOtherJoinedChatChannel.channel_user_id', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAOtherJoinedChatChannel.status', index=4,
+      name='status', full_name='dota.CMsgDOTAOtherJoinedChatChannel.status', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1159,34 +1159,34 @@ _CMSGDOTAOTHERJOINEDCHATCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3511,
-  serialized_end=3644,
+  serialized_start=3557,
+  serialized_end=3690,
 )
 
 
 _CMSGDOTAOTHERLEFTCHATCHANNEL = _descriptor.Descriptor(
   name='CMsgDOTAOtherLeftChatChannel',
-  full_name='CMsgDOTAOtherLeftChatChannel',
+  full_name='dota.CMsgDOTAOtherLeftChatChannel',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAOtherLeftChatChannel.channel_id', index=0,
+      name='channel_id', full_name='dota.CMsgDOTAOtherLeftChatChannel.channel_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAOtherLeftChatChannel.steam_id', index=1,
+      name='steam_id', full_name='dota.CMsgDOTAOtherLeftChatChannel.steam_id', index=1,
       number=2, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAOtherLeftChatChannel.channel_user_id', index=2,
+      name='channel_user_id', full_name='dota.CMsgDOTAOtherLeftChatChannel.channel_user_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1204,41 +1204,41 @@ _CMSGDOTAOTHERLEFTCHATCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3646,
-  serialized_end=3739,
+  serialized_start=3692,
+  serialized_end=3785,
 )
 
 
 _CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER = _descriptor.Descriptor(
   name='JoinedMember',
-  full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember',
+  full_name='dota.CMsgDOTAChatChannelMemberUpdate.JoinedMember',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember.steam_id', index=0,
+      name='steam_id', full_name='dota.CMsgDOTAChatChannelMemberUpdate.JoinedMember.steam_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember.persona_name', index=1,
+      name='persona_name', full_name='dota.CMsgDOTAChatChannelMemberUpdate.JoinedMember.persona_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember.channel_user_id', index=2,
+      name='channel_user_id', full_name='dota.CMsgDOTAChatChannelMemberUpdate.JoinedMember.channel_user_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAChatChannelMemberUpdate.JoinedMember.status', index=3,
+      name='status', full_name='dota.CMsgDOTAChatChannelMemberUpdate.JoinedMember.status', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1256,33 +1256,33 @@ _CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3892,
-  serialized_end=3987,
+  serialized_start=3943,
+  serialized_end=4038,
 )
 
 _CMSGDOTACHATCHANNELMEMBERUPDATE = _descriptor.Descriptor(
   name='CMsgDOTAChatChannelMemberUpdate',
-  full_name='CMsgDOTAChatChannelMemberUpdate',
+  full_name='dota.CMsgDOTAChatChannelMemberUpdate',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatChannelMemberUpdate.channel_id', index=0,
+      name='channel_id', full_name='dota.CMsgDOTAChatChannelMemberUpdate.channel_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='left_steam_ids', full_name='CMsgDOTAChatChannelMemberUpdate.left_steam_ids', index=1,
+      name='left_steam_ids', full_name='dota.CMsgDOTAChatChannelMemberUpdate.left_steam_ids', index=1,
       number=2, type=6, cpp_type=4, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='joined_members', full_name='CMsgDOTAChatChannelMemberUpdate.joined_members', index=2,
+      name='joined_members', full_name='dota.CMsgDOTAChatChannelMemberUpdate.joined_members', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1300,14 +1300,14 @@ _CMSGDOTACHATCHANNELMEMBERUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3742,
-  serialized_end=3987,
+  serialized_start=3788,
+  serialized_end=4038,
 )
 
 
 _CMSGDOTAREQUESTCHATCHANNELLIST = _descriptor.Descriptor(
   name='CMsgDOTARequestChatChannelList',
-  full_name='CMsgDOTARequestChatChannelList',
+  full_name='dota.CMsgDOTARequestChatChannelList',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -1324,34 +1324,34 @@ _CMSGDOTAREQUESTCHATCHANNELLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3989,
-  serialized_end=4021,
+  serialized_start=4040,
+  serialized_end=4072,
 )
 
 
 _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL = _descriptor.Descriptor(
   name='ChatChannel',
-  full_name='CMsgDOTARequestChatChannelListResponse.ChatChannel',
+  full_name='dota.CMsgDOTARequestChatChannelListResponse.ChatChannel',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTARequestChatChannelListResponse.ChatChannel.channel_name', index=0,
+      name='channel_name', full_name='dota.CMsgDOTARequestChatChannelListResponse.ChatChannel.channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='num_members', full_name='CMsgDOTARequestChatChannelListResponse.ChatChannel.num_members', index=1,
+      name='num_members', full_name='dota.CMsgDOTARequestChatChannelListResponse.ChatChannel.num_members', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTARequestChatChannelListResponse.ChatChannel.channel_type', index=2,
+      name='channel_type', full_name='dota.CMsgDOTARequestChatChannelListResponse.ChatChannel.channel_type', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1369,19 +1369,19 @@ _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4138,
-  serialized_end=4266,
+  serialized_start=4194,
+  serialized_end=4327,
 )
 
 _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTARequestChatChannelListResponse',
-  full_name='CMsgDOTARequestChatChannelListResponse',
+  full_name='dota.CMsgDOTARequestChatChannelListResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channels', full_name='CMsgDOTARequestChatChannelListResponse.channels', index=0,
+      name='channels', full_name='dota.CMsgDOTARequestChatChannelListResponse.channels', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1399,20 +1399,20 @@ _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4024,
-  serialized_end=4266,
+  serialized_start=4075,
+  serialized_end=4327,
 )
 
 
 _CMSGDOTACHATGETUSERLIST = _descriptor.Descriptor(
   name='CMsgDOTAChatGetUserList',
-  full_name='CMsgDOTAChatGetUserList',
+  full_name='dota.CMsgDOTAChatGetUserList',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatGetUserList.channel_id', index=0,
+      name='channel_id', full_name='dota.CMsgDOTAChatGetUserList.channel_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1430,41 +1430,41 @@ _CMSGDOTACHATGETUSERLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4268,
-  serialized_end=4313,
+  serialized_start=4329,
+  serialized_end=4374,
 )
 
 
 _CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER = _descriptor.Descriptor(
   name='Member',
-  full_name='CMsgDOTAChatGetUserListResponse.Member',
+  full_name='dota.CMsgDOTAChatGetUserListResponse.Member',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAChatGetUserListResponse.Member.steam_id', index=0,
+      name='steam_id', full_name='dota.CMsgDOTAChatGetUserListResponse.Member.steam_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='persona_name', full_name='CMsgDOTAChatGetUserListResponse.Member.persona_name', index=1,
+      name='persona_name', full_name='dota.CMsgDOTAChatGetUserListResponse.Member.persona_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_user_id', full_name='CMsgDOTAChatGetUserListResponse.Member.channel_user_id', index=2,
+      name='channel_user_id', full_name='dota.CMsgDOTAChatGetUserListResponse.Member.channel_user_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAChatGetUserListResponse.Member.status', index=3,
+      name='status', full_name='dota.CMsgDOTAChatGetUserListResponse.Member.status', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1482,26 +1482,26 @@ _CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4429,
-  serialized_end=4518,
+  serialized_start=4495,
+  serialized_end=4584,
 )
 
 _CMSGDOTACHATGETUSERLISTRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAChatGetUserListResponse',
-  full_name='CMsgDOTAChatGetUserListResponse',
+  full_name='dota.CMsgDOTAChatGetUserListResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_id', full_name='CMsgDOTAChatGetUserListResponse.channel_id', index=0,
+      name='channel_id', full_name='dota.CMsgDOTAChatGetUserListResponse.channel_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='members', full_name='CMsgDOTAChatGetUserListResponse.members', index=1,
+      name='members', full_name='dota.CMsgDOTAChatGetUserListResponse.members', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1519,27 +1519,27 @@ _CMSGDOTACHATGETUSERLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4316,
-  serialized_end=4518,
+  serialized_start=4377,
+  serialized_end=4584,
 )
 
 
 _CMSGDOTACHATGETMEMBERCOUNT = _descriptor.Descriptor(
   name='CMsgDOTAChatGetMemberCount',
-  full_name='CMsgDOTAChatGetMemberCount',
+  full_name='dota.CMsgDOTAChatGetMemberCount',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTAChatGetMemberCount.channel_name', index=0,
+      name='channel_name', full_name='dota.CMsgDOTAChatGetMemberCount.channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTAChatGetMemberCount.channel_type', index=1,
+      name='channel_type', full_name='dota.CMsgDOTAChatGetMemberCount.channel_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1557,34 +1557,34 @@ _CMSGDOTACHATGETMEMBERCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4520,
-  serialized_end=4642,
+  serialized_start=4586,
+  serialized_end=4713,
 )
 
 
 _CMSGDOTACHATGETMEMBERCOUNTRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAChatGetMemberCountResponse',
-  full_name='CMsgDOTAChatGetMemberCountResponse',
+  full_name='dota.CMsgDOTAChatGetMemberCountResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='channel_name', full_name='CMsgDOTAChatGetMemberCountResponse.channel_name', index=0,
+      name='channel_name', full_name='dota.CMsgDOTAChatGetMemberCountResponse.channel_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='channel_type', full_name='CMsgDOTAChatGetMemberCountResponse.channel_type', index=1,
+      name='channel_type', full_name='dota.CMsgDOTAChatGetMemberCountResponse.channel_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='member_count', full_name='CMsgDOTAChatGetMemberCountResponse.member_count', index=2,
+      name='member_count', full_name='dota.CMsgDOTAChatGetMemberCountResponse.member_count', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1602,41 +1602,41 @@ _CMSGDOTACHATGETMEMBERCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4645,
-  serialized_end=4797,
+  serialized_start=4716,
+  serialized_end=4873,
 )
 
 
 _CMSGDOTACHATREGIONSENABLED_REGION = _descriptor.Descriptor(
   name='Region',
-  full_name='CMsgDOTAChatRegionsEnabled.Region',
+  full_name='dota.CMsgDOTAChatRegionsEnabled.Region',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='min_latitude', full_name='CMsgDOTAChatRegionsEnabled.Region.min_latitude', index=0,
+      name='min_latitude', full_name='dota.CMsgDOTAChatRegionsEnabled.Region.min_latitude', index=0,
       number=1, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='max_latitude', full_name='CMsgDOTAChatRegionsEnabled.Region.max_latitude', index=1,
+      name='max_latitude', full_name='dota.CMsgDOTAChatRegionsEnabled.Region.max_latitude', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='min_longitude', full_name='CMsgDOTAChatRegionsEnabled.Region.min_longitude', index=2,
+      name='min_longitude', full_name='dota.CMsgDOTAChatRegionsEnabled.Region.min_longitude', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='max_longitude', full_name='CMsgDOTAChatRegionsEnabled.Region.max_longitude', index=3,
+      name='max_longitude', full_name='dota.CMsgDOTAChatRegionsEnabled.Region.max_longitude', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -1654,26 +1654,26 @@ _CMSGDOTACHATREGIONSENABLED_REGION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4919,
-  serialized_end=5017,
+  serialized_start=5000,
+  serialized_end=5098,
 )
 
 _CMSGDOTACHATREGIONSENABLED = _descriptor.Descriptor(
   name='CMsgDOTAChatRegionsEnabled',
-  full_name='CMsgDOTAChatRegionsEnabled',
+  full_name='dota.CMsgDOTAChatRegionsEnabled',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='enable_all_regions', full_name='CMsgDOTAChatRegionsEnabled.enable_all_regions', index=0,
+      name='enable_all_regions', full_name='dota.CMsgDOTAChatRegionsEnabled.enable_all_regions', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='enabled_regions', full_name='CMsgDOTAChatRegionsEnabled.enabled_regions', index=1,
+      name='enabled_regions', full_name='dota.CMsgDOTAChatRegionsEnabled.enabled_regions', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1691,8 +1691,8 @@ _CMSGDOTACHATREGIONSENABLED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4800,
-  serialized_end=5017,
+  serialized_start=4876,
+  serialized_end=5098,
 )
 
 _CMSGGCTOCLIENTPRIVATECHATRESPONSE.fields_by_name['result'].enum_type = _CMSGGCTOCLIENTPRIVATECHATRESPONSE_RESULT
@@ -1747,42 +1747,42 @@ DESCRIPTOR.message_types_by_name['CMsgDOTAChatRegionsEnabled'] = _CMSGDOTACHATRE
 CMsgClientToGCPrivateChatInvite = _reflection.GeneratedProtocolMessageType('CMsgClientToGCPrivateChatInvite', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATINVITE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatInvite)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCPrivateChatInvite)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCPrivateChatInvite)
 
 CMsgClientToGCPrivateChatKick = _reflection.GeneratedProtocolMessageType('CMsgClientToGCPrivateChatKick', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATKICK,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatKick)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCPrivateChatKick)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCPrivateChatKick)
 
 CMsgClientToGCPrivateChatPromote = _reflection.GeneratedProtocolMessageType('CMsgClientToGCPrivateChatPromote', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATPROMOTE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatPromote)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCPrivateChatPromote)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCPrivateChatPromote)
 
 CMsgClientToGCPrivateChatDemote = _reflection.GeneratedProtocolMessageType('CMsgClientToGCPrivateChatDemote', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATDEMOTE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatDemote)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCPrivateChatDemote)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCPrivateChatDemote)
 
 CMsgGCToClientPrivateChatResponse = _reflection.GeneratedProtocolMessageType('CMsgGCToClientPrivateChatResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOCLIENTPRIVATECHATRESPONSE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientPrivateChatResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientPrivateChatResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCToClientPrivateChatResponse)
 
 CMsgClientToGCPrivateChatInfoRequest = _reflection.GeneratedProtocolMessageType('CMsgClientToGCPrivateChatInfoRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCPRIVATECHATINFOREQUEST,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCPrivateChatInfoRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCPrivateChatInfoRequest)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCPrivateChatInfoRequest)
 
@@ -1791,12 +1791,12 @@ CMsgGCToClientPrivateChatInfoResponse = _reflection.GeneratedProtocolMessageType
   Member = _reflection.GeneratedProtocolMessageType('Member', (_message.Message,), dict(
     DESCRIPTOR = _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE_MEMBER,
     __module__ = 'dota_gcmessages_client_chat_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgGCToClientPrivateChatInfoResponse.Member)
+    # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientPrivateChatInfoResponse.Member)
     ))
   ,
   DESCRIPTOR = _CMSGGCTOCLIENTPRIVATECHATINFORESPONSE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientPrivateChatInfoResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientPrivateChatInfoResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCToClientPrivateChatInfoResponse)
 _sym_db.RegisterMessage(CMsgGCToClientPrivateChatInfoResponse.Member)
@@ -1804,28 +1804,28 @@ _sym_db.RegisterMessage(CMsgGCToClientPrivateChatInfoResponse.Member)
 CMsgDOTAJoinChatChannel = _reflection.GeneratedProtocolMessageType('CMsgDOTAJoinChatChannel', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAJOINCHATCHANNEL,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAJoinChatChannel)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAJoinChatChannel)
   ))
 _sym_db.RegisterMessage(CMsgDOTAJoinChatChannel)
 
 CMsgDOTALeaveChatChannel = _reflection.GeneratedProtocolMessageType('CMsgDOTALeaveChatChannel', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTALEAVECHATCHANNEL,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTALeaveChatChannel)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTALeaveChatChannel)
   ))
 _sym_db.RegisterMessage(CMsgDOTALeaveChatChannel)
 
 CMsgGCChatReportPublicSpam = _reflection.GeneratedProtocolMessageType('CMsgGCChatReportPublicSpam', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCCHATREPORTPUBLICSPAM,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCChatReportPublicSpam)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCChatReportPublicSpam)
   ))
 _sym_db.RegisterMessage(CMsgGCChatReportPublicSpam)
 
 CMsgDOTAClientIgnoredUser = _reflection.GeneratedProtocolMessageType('CMsgDOTAClientIgnoredUser', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACLIENTIGNOREDUSER,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAClientIgnoredUser)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAClientIgnoredUser)
   ))
 _sym_db.RegisterMessage(CMsgDOTAClientIgnoredUser)
 
@@ -1834,12 +1834,12 @@ CMsgDOTAChatMessage = _reflection.GeneratedProtocolMessageType('CMsgDOTAChatMess
   DiceRoll = _reflection.GeneratedProtocolMessageType('DiceRoll', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTACHATMESSAGE_DICEROLL,
     __module__ = 'dota_gcmessages_client_chat_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAChatMessage.DiceRoll)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatMessage.DiceRoll)
     ))
   ,
   DESCRIPTOR = _CMSGDOTACHATMESSAGE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatMessage)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatMessage)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatMessage)
 _sym_db.RegisterMessage(CMsgDOTAChatMessage.DiceRoll)
@@ -1847,35 +1847,35 @@ _sym_db.RegisterMessage(CMsgDOTAChatMessage.DiceRoll)
 CMsgDOTAChatMember = _reflection.GeneratedProtocolMessageType('CMsgDOTAChatMember', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACHATMEMBER,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatMember)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatMember)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatMember)
 
 CMsgDOTAJoinChatChannelResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAJoinChatChannelResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAJOINCHATCHANNELRESPONSE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAJoinChatChannelResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAJoinChatChannelResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAJoinChatChannelResponse)
 
 CMsgDOTAChatChannelFullUpdate = _reflection.GeneratedProtocolMessageType('CMsgDOTAChatChannelFullUpdate', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACHATCHANNELFULLUPDATE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatChannelFullUpdate)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatChannelFullUpdate)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatChannelFullUpdate)
 
 CMsgDOTAOtherJoinedChatChannel = _reflection.GeneratedProtocolMessageType('CMsgDOTAOtherJoinedChatChannel', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAOTHERJOINEDCHATCHANNEL,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAOtherJoinedChatChannel)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAOtherJoinedChatChannel)
   ))
 _sym_db.RegisterMessage(CMsgDOTAOtherJoinedChatChannel)
 
 CMsgDOTAOtherLeftChatChannel = _reflection.GeneratedProtocolMessageType('CMsgDOTAOtherLeftChatChannel', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAOTHERLEFTCHATCHANNEL,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAOtherLeftChatChannel)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAOtherLeftChatChannel)
   ))
 _sym_db.RegisterMessage(CMsgDOTAOtherLeftChatChannel)
 
@@ -1884,12 +1884,12 @@ CMsgDOTAChatChannelMemberUpdate = _reflection.GeneratedProtocolMessageType('CMsg
   JoinedMember = _reflection.GeneratedProtocolMessageType('JoinedMember', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTACHATCHANNELMEMBERUPDATE_JOINEDMEMBER,
     __module__ = 'dota_gcmessages_client_chat_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAChatChannelMemberUpdate.JoinedMember)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatChannelMemberUpdate.JoinedMember)
     ))
   ,
   DESCRIPTOR = _CMSGDOTACHATCHANNELMEMBERUPDATE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatChannelMemberUpdate)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatChannelMemberUpdate)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatChannelMemberUpdate)
 _sym_db.RegisterMessage(CMsgDOTAChatChannelMemberUpdate.JoinedMember)
@@ -1897,7 +1897,7 @@ _sym_db.RegisterMessage(CMsgDOTAChatChannelMemberUpdate.JoinedMember)
 CMsgDOTARequestChatChannelList = _reflection.GeneratedProtocolMessageType('CMsgDOTARequestChatChannelList', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAREQUESTCHATCHANNELLIST,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTARequestChatChannelList)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTARequestChatChannelList)
   ))
 _sym_db.RegisterMessage(CMsgDOTARequestChatChannelList)
 
@@ -1906,12 +1906,12 @@ CMsgDOTARequestChatChannelListResponse = _reflection.GeneratedProtocolMessageTyp
   ChatChannel = _reflection.GeneratedProtocolMessageType('ChatChannel', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE_CHATCHANNEL,
     __module__ = 'dota_gcmessages_client_chat_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTARequestChatChannelListResponse.ChatChannel)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTARequestChatChannelListResponse.ChatChannel)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAREQUESTCHATCHANNELLISTRESPONSE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTARequestChatChannelListResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTARequestChatChannelListResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTARequestChatChannelListResponse)
 _sym_db.RegisterMessage(CMsgDOTARequestChatChannelListResponse.ChatChannel)
@@ -1919,7 +1919,7 @@ _sym_db.RegisterMessage(CMsgDOTARequestChatChannelListResponse.ChatChannel)
 CMsgDOTAChatGetUserList = _reflection.GeneratedProtocolMessageType('CMsgDOTAChatGetUserList', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACHATGETUSERLIST,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetUserList)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatGetUserList)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatGetUserList)
 
@@ -1928,12 +1928,12 @@ CMsgDOTAChatGetUserListResponse = _reflection.GeneratedProtocolMessageType('CMsg
   Member = _reflection.GeneratedProtocolMessageType('Member', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTACHATGETUSERLISTRESPONSE_MEMBER,
     __module__ = 'dota_gcmessages_client_chat_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetUserListResponse.Member)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatGetUserListResponse.Member)
     ))
   ,
   DESCRIPTOR = _CMSGDOTACHATGETUSERLISTRESPONSE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetUserListResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatGetUserListResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatGetUserListResponse)
 _sym_db.RegisterMessage(CMsgDOTAChatGetUserListResponse.Member)
@@ -1941,14 +1941,14 @@ _sym_db.RegisterMessage(CMsgDOTAChatGetUserListResponse.Member)
 CMsgDOTAChatGetMemberCount = _reflection.GeneratedProtocolMessageType('CMsgDOTAChatGetMemberCount', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACHATGETMEMBERCOUNT,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetMemberCount)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatGetMemberCount)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatGetMemberCount)
 
 CMsgDOTAChatGetMemberCountResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAChatGetMemberCountResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACHATGETMEMBERCOUNTRESPONSE,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatGetMemberCountResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatGetMemberCountResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatGetMemberCountResponse)
 
@@ -1957,12 +1957,12 @@ CMsgDOTAChatRegionsEnabled = _reflection.GeneratedProtocolMessageType('CMsgDOTAC
   Region = _reflection.GeneratedProtocolMessageType('Region', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTACHATREGIONSENABLED_REGION,
     __module__ = 'dota_gcmessages_client_chat_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAChatRegionsEnabled.Region)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatRegionsEnabled.Region)
     ))
   ,
   DESCRIPTOR = _CMSGDOTACHATREGIONSENABLED,
   __module__ = 'dota_gcmessages_client_chat_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAChatRegionsEnabled)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAChatRegionsEnabled)
   ))
 _sym_db.RegisterMessage(CMsgDOTAChatRegionsEnabled)
 _sym_db.RegisterMessage(CMsgDOTAChatRegionsEnabled.Region)

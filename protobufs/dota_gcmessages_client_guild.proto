@@ -1,4 +1,5 @@
 syntax = "proto2";
+package dota;
 option optimize_for = SPEED;
 option py_generic_services = false;
 
@@ -23,8 +24,8 @@ message CMsgDOTAGuildSDO {
 	optional uint64 logo = 6;
 	optional uint64 base_logo = 7;
 	optional uint64 banner_logo = 8;
-	repeated .CMsgDOTAGuildSDO.Member members = 9;
-	repeated .CMsgDOTAGuildSDO.Invitation invitations = 10;
+	repeated dota.CMsgDOTAGuildSDO.Member members = 9;
+	repeated dota.CMsgDOTAGuildSDO.Invitation invitations = 10;
 	optional string message = 11;
 	optional bool incremental = 12;
 }
@@ -41,7 +42,7 @@ message CMsgDOTAGuildAuditSDO {
 	}
 
 	optional uint32 guild_id = 1;
-	repeated .CMsgDOTAGuildAuditSDO.Entry entries = 2;
+	repeated dota.CMsgDOTAGuildAuditSDO.Entry entries = 2;
 }
 
 message CMsgDOTAAccountGuildMembershipsSDO {
@@ -57,8 +58,8 @@ message CMsgDOTAAccountGuildMembershipsSDO {
 	}
 
 	optional uint32 account_id = 1;
-	repeated .CMsgDOTAAccountGuildMembershipsSDO.Membership memberships = 2;
-	repeated .CMsgDOTAAccountGuildMembershipsSDO.Invitation invitations = 3;
+	repeated dota.CMsgDOTAAccountGuildMembershipsSDO.Membership memberships = 2;
+	repeated dota.CMsgDOTAAccountGuildMembershipsSDO.Invitation invitations = 3;
 }
 
 message CMsgDOTAGuildCreateRequest {
@@ -84,7 +85,7 @@ message CMsgDOTAGuildCreateResponse {
 	}
 
 	optional uint32 guild_id = 1;
-	repeated .CMsgDOTAGuildCreateResponse.EError errors = 2;
+	repeated dota.CMsgDOTAGuildCreateResponse.EError errors = 2;
 }
 
 message CMsgDOTAGuildSetAccountRoleRequest {
@@ -103,7 +104,7 @@ message CMsgDOTAGuildSetAccountRoleResponse {
 		ERROR_GUILD_TOO_MANY_MEMBERS = 5;
 	}
 
-	optional .CMsgDOTAGuildSetAccountRoleResponse.EResult result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAGuildSetAccountRoleResponse.EResult result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTAGuildInviteAccountRequest {
@@ -123,7 +124,7 @@ message CMsgDOTAGuildInviteAccountResponse {
 		ERROR_ACCOUNT_TOO_MANY_GUILDS = 7;
 	}
 
-	optional .CMsgDOTAGuildInviteAccountResponse.EResult result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAGuildInviteAccountResponse.EResult result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTAGuildCancelInviteRequest {
@@ -138,7 +139,7 @@ message CMsgDOTAGuildCancelInviteResponse {
 		ERROR_NO_PERMISSION = 2;
 	}
 
-	optional .CMsgDOTAGuildCancelInviteResponse.EResult result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAGuildCancelInviteResponse.EResult result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTAGuildUpdateDetailsRequest {
@@ -155,7 +156,7 @@ message CMsgDOTAGuildUpdateDetailsResponse {
 		ERROR_NO_PERMISSION = 2;
 	}
 
-	optional .CMsgDOTAGuildUpdateDetailsResponse.EResult result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAGuildUpdateDetailsResponse.EResult result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTAGCToGCUpdateOpenGuildPartyRequest {
@@ -188,7 +189,7 @@ message CMsgDOTAPartySetOpenGuildResponse {
 		ERROR_UNSPECIFIED = 1;
 	}
 
-	optional .CMsgDOTAPartySetOpenGuildResponse.EResult result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAPartySetOpenGuildResponse.EResult result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTAJoinOpenGuildPartyRequest {
@@ -201,7 +202,7 @@ message CMsgDOTAJoinOpenGuildPartyResponse {
 		ERROR_UNSPECIFIED = 1;
 	}
 
-	optional .CMsgDOTAJoinOpenGuildPartyResponse.EResult result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAJoinOpenGuildPartyResponse.EResult result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTAGuildOpenPartyRefresh {
@@ -213,7 +214,7 @@ message CMsgDOTAGuildOpenPartyRefresh {
 	}
 
 	optional uint32 guild_id = 1;
-	repeated .CMsgDOTAGuildOpenPartyRefresh.OpenParty open_parties = 2;
+	repeated dota.CMsgDOTAGuildOpenPartyRefresh.OpenParty open_parties = 2;
 }
 
 message CMsgDOTARequestGuildData {
@@ -249,6 +250,6 @@ message CMsgDOTAGuildEditLogoResponse {
 	}
 
 	optional uint32 guild_id = 1;
-	optional .CMsgDOTAGuildEditLogoResponse.EResult result = 2 [default = SUCCESS];
+	optional dota.CMsgDOTAGuildEditLogoResponse.EResult result = 2 [default = SUCCESS];
 }
 

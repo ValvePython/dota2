@@ -19,16 +19,16 @@ import dota2.protobufs.dota_shared_enums_pb2 as dota__shared__enums__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_fantasy.proto',
-  package='',
+  package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n$dota_gcmessages_client_fantasy.proto\x1a\x17\x64ota_shared_enums.proto\"\xad\x03\n\x10\x43MsgGCPlayerInfo\x12\x32\n\x0cplayer_infos\x18\x01 \x03(\x0b\x32\x1c.CMsgGCPlayerInfo.PlayerInfo\x12\x39\n\x0cleaderboards\x18\x02 \x03(\x0b\x32#.CMsgGCPlayerInfo.RegionLeaderboard\x1a\xed\x01\n\nPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x03 \x01(\t\x12\x14\n\x0c\x66\x61ntasy_role\x18\x04 \x01(\r\x12\x0f\n\x07team_id\x18\x05 \x01(\r\x12\x11\n\tteam_name\x18\x06 \x01(\t\x12\x10\n\x08team_tag\x18\x07 \x01(\t\x12\x0f\n\x07sponsor\x18\x08 \x01(\t\x12\x11\n\tis_locked\x18\t \x01(\x08\x12\x0e\n\x06is_pro\x18\n \x01(\x08\x12\x14\n\x0clocked_until\x18\x0b \x01(\r\x12\x11\n\ttimestamp\x18\x0c \x01(\r\x1a:\n\x11RegionLeaderboard\x12\x10\n\x08\x64ivision\x18\x01 \x01(\r\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"\xae\x01\n\"CMsgDOTACreateFantasyLeagueRequest\x12\x13\n\x0bleague_name\x18\x01 \x01(\t\x12\x13\n\x0bleague_logo\x18\x02 \x01(\x04\x12J\n\x0eselection_mode\x18\x03 \x01(\x0e\x32\x17.Fantasy_Selection_Mode:\x19\x46\x41NTASY_SELECTION_INVALID\x12\x12\n\nteam_count\x18\x04 \x01(\r\"\xf3\x01\n#CMsgDOTACreateFantasyLeagueResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.CMsgDOTACreateFantasyLeagueResponse.EResult:\x07SUCCESS\"\x84\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1a\n\x16\x45RROR_TOO_MANY_LEAGUES\x10\x02\x12\x1c\n\x18\x45RROR_INVALID_TEAM_COUNT\x10\x03\x12\x1b\n\x17\x45RROR_CREATION_DISABLED\x10\x04\"\x9f\x02\n\x18\x43MsgFantasyLeagueScoring\x12\r\n\x05level\x18\x01 \x01(\x02\x12\r\n\x05kills\x18\x02 \x01(\x02\x12\x0e\n\x06\x64\x65\x61ths\x18\x03 \x01(\x02\x12\x0f\n\x07\x61ssists\x18\x04 \x01(\x02\x12\x11\n\tlast_hits\x18\x05 \x01(\x02\x12\x0e\n\x06\x64\x65nies\x18\x06 \x01(\x02\x12\x0b\n\x03gpm\x18\x07 \x01(\x02\x12\x0c\n\x04xppm\x18\x08 \x01(\x02\x12\r\n\x05stuns\x18\t \x01(\x02\x12\x0f\n\x07healing\x18\n \x01(\x02\x12\x13\n\x0btower_kills\x18\x0b \x01(\x02\x12\x14\n\x0croshan_kills\x18\x0c \x01(\x02\x12\x1a\n\x12multiplier_premium\x18\r \x01(\x02\x12\x1f\n\x17multiplier_professional\x18\x0e \x01(\x02\"\xce\x05\n\x19\x43MsgDOTAFantasyLeagueInfo\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x1f\n\x17\x63ommissioner_account_id\x18\x02 \x01(\r\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x03 \x01(\t\x12J\n\x0eselection_mode\x18\x04 \x01(\x0e\x32\x17.Fantasy_Selection_Mode:\x19\x46\x41NTASY_SELECTION_INVALID\x12\x12\n\nteam_count\x18\x05 \x01(\r\x12\x0c\n\x04logo\x18\x06 \x01(\x04\x12*\n\x07scoring\x18\x07 \x01(\x0b\x32\x19.CMsgFantasyLeagueScoring\x12\x12\n\ndraft_time\x18\x0c \x01(\r\x12\x17\n\x0f\x64raft_pick_time\x18\r \x01(\r\x12\x14\n\x0cseason_start\x18\x0f \x01(\r\x12\x15\n\rseason_length\x18\x10 \x01(\r\x12\x12\n\nveto_votes\x18\x11 \x01(\r\x12\x14\n\x0c\x61\x63quisitions\x18\x12 \x01(\r\x12\x0e\n\x06slot_1\x18\x13 \x01(\r\x12\x0e\n\x06slot_2\x18\x14 \x01(\r\x12\x0e\n\x06slot_3\x18\x15 \x01(\r\x12\x0e\n\x06slot_4\x18\x16 \x01(\r\x12\x0e\n\x06slot_5\x18\x17 \x01(\r\x12\x13\n\x0b\x62\x65nch_slots\x18\x18 \x01(\r\x12\x38\n\nowner_info\x18\x19 \x03(\x0b\x32$.CMsgDOTAFantasyLeagueInfo.OwnerInfo\x12\x0f\n\x07players\x18\x1a \x03(\r\x12\x11\n\ttime_zone\x18\x1b \x01(\r\x12\x0e\n\x06season\x18\x1c \x01(\r\x12\x10\n\x08password\x18\x1d \x01(\t\x1aU\n\tOwnerInfo\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\x12\x13\n\x0bleft_league\x18\x02 \x01(\x08\x12\x19\n\x11player_account_id\x18\x03 \x03(\r\"p\n$CMsgDOTAFantasyLeagueEditInfoRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12-\n\tedit_info\x18\x02 \x01(\x0b\x32\x1a.CMsgDOTAFantasyLeagueInfo\"\xb8\x01\n%CMsgDOTAFantasyLeagueEditInfoResponse\x12G\n\x06result\x18\x01 \x01(\x0e\x32..CMsgDOTAFantasyLeagueEditInfoResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"O\n CMsgDOTAFantasyLeagueFindRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\"\xc7\x02\n!CMsgDOTAFantasyLeagueFindResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.CMsgDOTAFantasyLeagueFindResponse.EResult:\x07SUCCESS\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x02 \x01(\t\x12\x19\n\x11\x63ommissioner_name\x18\x03 \x01(\t\"\xa4\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x1a\n\x16\x45RROR_LEAGUE_NOT_FOUND\x10\x01\x12\x16\n\x12\x45RROR_BAD_PASSWORD\x10\x02\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x03\x12\x0e\n\nERROR_FULL\x10\x04\x12\x18\n\x14\x45RROR_ALREADY_MEMBER\x10\x05\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\x06\"=\n CMsgDOTAFantasyLeagueInfoRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xb0\x01\n!CMsgDOTAFantasyLeagueInfoResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.CMsgDOTAFantasyLeagueInfoResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_BAD_LEAGUE_ID\x10\x02\"A\n$CMsgDOTAFantasyLeagueMatchupsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x9a\x04\n%CMsgDOTAFantasyLeagueMatchupsResponse\x12G\n\x06result\x18\x01 \x01(\x0e\x32..CMsgDOTAFantasyLeagueMatchupsResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12N\n\x0fweekly_matchups\x18\x03 \x03(\x0b\x32\x35.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups\x1a\x63\n\x07Matchup\x12\x1a\n\x12owner_account_id_1\x18\x01 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x02 \x01(\r\x12\x0f\n\x07score_1\x18\x03 \x01(\x02\x12\x0f\n\x07score_2\x18\x04 \x01(\x02\x1aw\n\x0eWeeklyMatchups\x12?\n\x07matchup\x18\x01 \x03(\x0b\x32..CMsgDOTAFantasyLeagueMatchupsResponse.Matchup\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x03 \x01(\r\"_\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_BAD_LEAGUE_ID\x10\x02\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x03\"u\n\x1e\x43MsgDOTAEditFantasyTeamRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x04\"\xe8\x01\n\x1f\x43MsgDOTAEditFantasyTeamResponse\x12\x41\n\x06result\x18\x01 \x01(\x0e\x32(.CMsgDOTAEditFantasyTeamResponse.EResult:\x07SUCCESS\"\x81\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_TEAM_INFO\x10\x02\x12\x1c\n\x18\x45RROR_NAME_ALREADY_TAKEN\x10\x03\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x04\"L\n/CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"J\n.CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\"L\n\x1f\x43MsgDOTAFantasyTeamInfoResponse\x12)\n\x07results\x18\x01 \x03(\x0b\x32\x18.CMsgDOTAFantasyTeamInfo\"\xc6\x01\n\x17\x43MsgDOTAFantasyTeamInfo\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x11\n\tteam_name\x18\x04 \x01(\t\x12\x11\n\tteam_logo\x18\x05 \x01(\x04\x12\x0c\n\x04wins\x18\x06 \x01(\r\x12\x0e\n\x06losses\x18\x07 \x01(\r\x12\x16\n\x0e\x63urrent_roster\x18\x08 \x03(\r\"\xd6\x01\n\x1f\x43MsgDOTAFantasyTeamScoreRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x04 \x01(\x04\x12\x19\n\x11\x66ilter_start_time\x18\x05 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x06 \x01(\r\x12\x15\n\rinclude_bench\x18\x07 \x01(\x08\"\xf0\x02\n CMsgDOTAFantasyTeamScoreResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).CMsgDOTAFantasyTeamScoreResponse.EResult:\x07SUCCESS\x12\x1a\n\x12\x66\x61ntasy_team_score\x18\x02 \x01(\x02\x12O\n\x14\x66\x61ntasy_player_score\x18\x03 \x03(\x0b\x32\x31.CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore\x1a\x34\n\x0f\x43MsgPlayerScore\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\x02\"e\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x03\"\xcf\x01\n#CMsgDOTAFantasyTeamStandingsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x05 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x06 \x01(\x08\x12\x16\n\x0e\x66ilter_in_hall\x18\x07 \x01(\x08\"\x81\x04\n$CMsgDOTAFantasyTeamStandingsResponse\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32-.CMsgDOTAFantasyTeamStandingsResponse.EResult:\x07SUCCESS\x12H\n\x0bteam_scores\x18\x03 \x03(\x0b\x32\x33.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore\x1a\xfe\x01\n\rCMsgTeamScore\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x19\n\x11\x66\x61ntasy_team_logo\x18\x04 \x01(\x04\x12\x12\n\nowner_name\x18\x05 \x01(\t\x12\x19\n\x11\x66\x61ntasy_team_name\x18\x06 \x01(\t\x12\r\n\x05score\x18\x07 \x01(\x02\x12\x15\n\rscore_against\x18\x08 \x01(\x02\x12\x0c\n\x04wins\x18\t \x01(\r\x12\x0e\n\x06losses\x18\n \x01(\r\x12\x0e\n\x06streak\x18\x0b \x01(\x05\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\xc1\x01\n!CMsgDOTAFantasyPlayerScoreRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x05 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x06 \x01(\x08\"\x8c\x02\n\"CMsgDOTAFantasyPlayerScoreResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32+.CMsgDOTAFantasyPlayerScoreResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12\x19\n\x11player_account_id\x18\x03 \x01(\r\x12\x13\n\x0bplayer_name\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x02\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\xc7\x01\n%CMsgDOTAFantasyPlayerStandingsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x05 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x06 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x07 \x01(\x08\"\x85\x03\n&CMsgDOTAFantasyPlayerStandingsResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.CMsgDOTAFantasyPlayerStandingsResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x12N\n\rplayer_scores\x18\x04 \x03(\x0b\x32\x37.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore\x1aP\n\x0f\x43MsgPlayerScore\x12\x19\n\x11player_account_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\x02\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\"\n CMsgDOTAFantasyPlayerInfoRequest\"C\n!CMsgDOTAFantasyPlayerInfoResponse\x12\x1e\n\x03msg\x18\x01 \x01(\x0b\x32\x11.CMsgGCPlayerInfo\"\x9f\x01\n\"CMsgDOTAFantasyLeagueCreateRequest\x12\x11\n\tseason_id\x18\x01 \x01(\r\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\x12\x11\n\tteam_name\x18\x04 \x01(\t\x12\x0c\n\x04logo\x18\x05 \x01(\x04\x12\x16\n\x0eticket_item_id\x18\x06 \x01(\x04\"\xd0\x02\n#CMsgDOTAFantasyLeagueCreateResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.CMsgDOTAFantasyLeagueCreateResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\"\xc6\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x01\x12\x17\n\x13\x45RROR_BAD_SEASON_ID\x10\x02\x12\x19\n\x15\x45RROR_BAD_LEAGUE_NAME\x10\x03\x12\x17\n\x13\x45RROR_BAD_TEAM_NAME\x10\x04\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x05\x12\x1c\n\x18\x45RROR_FAILED_LOGO_UPLOAD\x10\x06\x12\x13\n\x0f\x45RROR_NO_TICKET\x10\x07\"\x88\x01\n CMsgDOTAFantasyTeamCreateRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x16\n\x0eticket_item_id\x18\x05 \x01(\x04\"\x90\x03\n!CMsgDOTAFantasyTeamCreateResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.CMsgDOTAFantasyTeamCreateResponse.EResult:\x07SUCCESS\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x02 \x01(\r\"\x89\x02\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x01\x12\x1c\n\x18\x45RROR_FAILED_LOGO_UPLOAD\x10\x02\x12\x1f\n\x1b\x45RROR_BAD_FANTASY_LEAGUE_ID\x10\x03\x12\x12\n\x0e\x45RROR_BAD_NAME\x10\x04\x12\x0e\n\nERROR_FULL\x10\x05\x12\x18\n\x14\x45RROR_ALREADY_MEMBER\x10\x06\x12\x16\n\x12\x45RROR_BAD_PASSWORD\x10\x07\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x08\x12\x13\n\x0f\x45RROR_NO_TICKET\x10\t\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\n\"\xd9\x01\n\'CMsgDOTAFantasyLeagueEditInvitesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\x12L\n\rinvite_change\x18\x03 \x03(\x0b\x32\x35.CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange\x1a\x33\n\x0cInviteChange\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07invited\x18\x02 \x01(\x08\"\xa5\x01\n(CMsgDOTAFantasyLeagueEditInvitesResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.CMsgDOTAFantasyLeagueEditInvitesResponse.EResult:\x07SUCCESS\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"D\n\'CMsgDOTAFantasyLeagueDraftStatusRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xc6\x01\n CMsgDOTAFantasyLeagueDraftStatus\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x13\n\x0b\x64raft_order\x18\x02 \x03(\r\x12\x14\n\x0c\x63urrent_pick\x18\x03 \x01(\r\x12\x16\n\x0etime_remaining\x18\x04 \x01(\r\x12\x16\n\x0epending_resume\x18\x05 \x01(\x08\x12\x11\n\tcompleted\x18\x06 \x01(\x08\x12\x19\n\x11\x61vailable_players\x18\x07 \x03(\r\"s\n\'CMsgDOTAFantasyLeagueDraftPlayerRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x19\n\x11player_account_id\x18\x03 \x01(\r\"\x82\x03\n(CMsgDOTAFantasyLeagueDraftPlayerResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.CMsgDOTAFantasyLeagueDraftPlayerResponse.EResult:\x07SUCCESS\"\x89\x02\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12 \n\x1c\x45RROR_INVALID_FANTASY_LEAGUE\x10\x02\x12%\n!ERROR_FANTASY_LEAGUE_NOT_DRAFTING\x10\x03\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x04\x12\x19\n\x15\x45RROR_NOT_OWNERS_TURN\x10\x05\x12\x18\n\x14\x45RROR_PLAYER_INVALID\x10\x06\x12\x1c\n\x18\x45RROR_PLAYER_UNAVAILABLE\x10\x07\x12\x1f\n\x1b\x45RROR_PLAYER_NO_VALID_SLOTS\x10\x08\"\x88\x01\n$CMsgDOTAFantasyTeamRosterSwapRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x0e\n\x06slot_1\x18\x04 \x01(\r\x12\x0e\n\x06slot_2\x18\x05 \x01(\r\"\xee\x01\n%CMsgDOTAFantasyTeamRosterSwapResponse\x12G\n\x06result\x18\x01 \x01(\x0e\x32..CMsgDOTAFantasyTeamRosterSwapResponse.EResult:\x07SUCCESS\"|\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x02\x12\x17\n\x13\x45RROR_SLOTS_INVALID\x10\x03\x12\x15\n\x11\x45RROR_SLOT_LOCKED\x10\x04\"\x89\x01\n\'CMsgDOTAFantasyTeamRosterAddDropRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x16\n\x0e\x61\x64\x64_account_id\x18\x05 \x01(\r\x12\x17\n\x0f\x64rop_account_id\x18\x06 \x01(\r\"\xa4\x02\n(CMsgDOTAFantasyTeamRosterAddDropResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.CMsgDOTAFantasyTeamRosterAddDropResponse.EResult:\x07SUCCESS\"\xab\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x02\x12\x1e\n\x1a\x45RROR_PLAYER_NOT_AVAILABLE\x10\x03\x12\x1c\n\x18\x45RROR_PLAYER_NOT_ON_TEAM\x10\x04\x12\x1f\n\x1b\x45RROR_TRADE_ALREADY_PENDING\x10\x05\"=\n CMsgDOTAFantasyTeamTradesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x89\x03\n!CMsgDOTAFantasyTeamTradesResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.CMsgDOTAFantasyTeamTradesResponse.EResult:\x07SUCCESS\x12\x38\n\x06trades\x18\x02 \x03(\x0b\x32(.CMsgDOTAFantasyTeamTradesResponse.Trade\x1a\x9c\x01\n\x05Trade\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x1a\n\x12owner_account_id_1\x18\x02 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x03 \x01(\r\x12\x1b\n\x13player_account_id_1\x18\x04 \x01(\r\x12\x1b\n\x13player_account_id_2\x18\x05 \x01(\r\x12\x0e\n\x06status\x18\x06 \x01(\r\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\x8a\x01\n%CMsgDOTAFantasyTeamTradeCancelRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x14\n\x0cteam_index_1\x18\x03 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x04 \x01(\r\x12\x14\n\x0cteam_index_2\x18\x05 \x01(\r\"\xce\x01\n&CMsgDOTAFantasyTeamTradeCancelResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.CMsgDOTAFantasyTeamTradeCancelResponse.EResult:\x07SUCCESS\"Z\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x12\n\x0e\x45RROR_NO_TRADE\x10\x03\"~\n CMsgDOTAFantasyTeamRosterRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x18\n\x10owner_account_id\x18\x03 \x01(\r\x12\x11\n\ttimestamp\x18\x04 \x01(\r\"\x82\x02\n!CMsgDOTAFantasyTeamRosterResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.CMsgDOTAFantasyTeamRosterResponse.EResult:\x07SUCCESS\x12\x1a\n\x12player_account_ids\x18\x02 \x03(\r\x12\x15\n\rplayer_locked\x18\x03 \x03(\x08\"e\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x03\"G\n*CMsgDOTAFantasyPlayerHisoricalStatsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x81\x06\n+CMsgDOTAFantasyPlayerHisoricalStatsResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.CMsgDOTAFantasyPlayerHisoricalStatsResponse.EResult:\x07SUCCESS\x12G\n\x05stats\x18\x02 \x03(\x0b\x32\x38.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats\x1a\x81\x02\n\x16PlayerScoreAccumulator\x12\x0f\n\x07matches\x18\x01 \x01(\r\x12\x0e\n\x06levels\x18\x02 \x01(\x02\x12\r\n\x05kills\x18\x03 \x01(\x02\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\x02\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\x02\x12\x11\n\tlast_hits\x18\x06 \x01(\x02\x12\x0e\n\x06\x64\x65nies\x18\x07 \x01(\x02\x12\x0b\n\x03gpm\x18\x08 \x01(\x02\x12\x0c\n\x04xppm\x18\t \x01(\x02\x12\r\n\x05stuns\x18\n \x01(\x02\x12\x0f\n\x07healing\x18\x0b \x01(\x02\x12\x13\n\x0btower_kills\x18\x0c \x01(\x02\x12\x14\n\x0croshan_kills\x18\r \x01(\x02\x12\r\n\x05score\x18\x0e \x01(\x02\x1a\xed\x01\n\x0bPlayerStats\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05weeks\x18\x02 \x01(\r\x12Z\n\rstats_premium\x18\x04 \x01(\x0b\x32\x43.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator\x12_\n\x12stats_professional\x18\x05 \x01(\x0b\x32\x43.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"G\n\x19\x43MsgDOTAFantasyMessageAdd\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\"g\n\x1e\x43MsgDOTAFantasyMessagesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x15\n\rstart_message\x18\x02 \x01(\r\x12\x13\n\x0b\x65nd_message\x18\x03 \x01(\r\"\xdd\x02\n\x1f\x43MsgDOTAFantasyMessagesResponse\x12\x41\n\x06result\x18\x01 \x01(\x0e\x32(.CMsgDOTAFantasyMessagesResponse.EResult:\x07SUCCESS\x12:\n\x08messages\x18\x02 \x03(\x0b\x32(.CMsgDOTAFantasyMessagesResponse.Message\x12\x1a\n\x12num_total_messages\x18\x03 \x01(\r\x1aW\n\x07Message\x12\x12\n\nmessage_id\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x19\n\x11\x61uthor_account_id\x18\x03 \x01(\r\x12\x0c\n\x04time\x18\x04 \x01(\r\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"e\n\x1a\x43MsgDOTAFantasyRemoveOwner\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x12\n\nteam_index\x18\x03 \x01(\r\"\xe3\x01\n\"CMsgDOTAFantasyRemoveOwnerResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32+.CMsgDOTAFantasyRemoveOwnerResponse.EResult:\x07SUCCESS\"w\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\x03\x12\x16\n\x12\x45RROR_NOT_A_MEMBER\x10\x04\"C\n&CMsgDOTAFantasyScheduledMatchesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xcd\x02\n\'CMsgDOTAFantasyScheduledMatchesResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.CMsgDOTAFantasyScheduledMatchesResponse.EResult:\x07SUCCESS\x12Y\n\x14scheduled_match_days\x18\x02 \x03(\x0b\x32;.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays\x1aM\n\x12ScheduledMatchDays\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\x12\x12\n\nleague_ids\x18\x03 \x03(\r\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"Z\n!CMsgDOTAFantasyLeaveLeagueRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x02 \x01(\r\"\xe3\x01\n\"CMsgDOTAFantasyLeaveLeagueResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32+.CMsgDOTAFantasyLeaveLeagueResponse.EResult:\x07SUCCESS\"w\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x14\n\x10\x45RROR_NOT_MEMBER\x10\x02\x12\x1a\n\x16\x45RROR_LEAGUE_NOT_FOUND\x10\x03\x12\x16\n\x12\x45RROR_DRAFT_ACTIVE\x10\x04\"\x86\x01\n(CMsgDOTAFantasyPlayerScoreDetailsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x12\n\nstart_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\"\x86\x04\n)CMsgDOTAFantasyPlayerScoreDetailsResponse\x12K\n\x06result\x18\x01 \x01(\x0e\x32\x32.CMsgDOTAFantasyPlayerScoreDetailsResponse.EResult:\x07SUCCESS\x12H\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32:.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData\x1a\xfc\x01\n\x0fPlayerMatchData\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tseries_id\x18\x02 \x01(\r\x12\x12\n\nseries_num\x18\x03 \x01(\r\x12\x13\n\x0bseries_type\x18\x04 \x01(\r\x12\x13\n\x0bleague_tier\x18\x05 \x01(\r\x12\x11\n\tleague_id\x18\x06 \x01(\r\x12\x18\n\x10opposing_team_id\x18\x07 \x01(\r\x12\x1a\n\x12opposing_team_logo\x18\x08 \x01(\x04\x12\x1a\n\x12opposing_team_name\x18\t \x01(\t\x12\x10\n\x08owned_by\x18\x0b \x01(\r\x12\x0f\n\x07\x62\x65nched\x18\x0c \x01(\x08\"C\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x14\n\x10\x45RROR_NOT_MEMBER\x10\x02\"Z\n\x1d\x43MsgDOTAPassportVoteTeamGuess\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\twinner_id\x18\x02 \x01(\r\x12\x13\n\x0brunnerup_id\x18\x03 \x01(\r\"\x91\x01\n$CMsgDOTAPassportVoteGenericSelection\x12V\n\x0fselection_index\x18\x01 \x01(\x0e\x32\".DOTA_2013PassportSelectionIndices:\x19PP13_SEL_ALLSTAR_PLAYER_0\x12\x11\n\tselection\x18\x02 \x01(\r\"F\n\x1d\x43MsgDOTAPassportStampedPlayer\x12\x10\n\x08steam_id\x18\x01 \x01(\x04\x12\x13\n\x0bstamp_level\x18\x02 \x01(\r\";\n#CMsgDOTAPassportPlayerCardChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\"\x8c\x02\n\x14\x43MsgDOTAPassportVote\x12\x32\n\nteam_votes\x18\x01 \x03(\x0b\x32\x1e.CMsgDOTAPassportVoteTeamGuess\x12\x41\n\x12generic_selections\x18\x02 \x03(\x0b\x32%.CMsgDOTAPassportVoteGenericSelection\x12\x37\n\x0fstamped_players\x18\x03 \x03(\x0b\x32\x1e.CMsgDOTAPassportStampedPlayer\x12\x44\n\x16player_card_challenges\x18\x04 \x03(\x0b\x32$.CMsgDOTAPassportPlayerCardChallenge\"P\n(CMsgClientToGCGetPlayerCardRosterRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\"\xb2\x02\n)CMsgClientToGCGetPlayerCardRosterResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.CMsgClientToGCGetPlayerCardRosterResponse.Result:\x07SUCCESS\x12\x1b\n\x13player_card_item_id\x18\x02 \x03(\x04\x12\r\n\x05score\x18\x03 \x01(\x02\x12\x11\n\tfinalized\x18\x04 \x01(\x08\x12\x12\n\npercentile\x18\x05 \x01(\x02\"f\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_LEAGUE_ID\x10\x02\x12\x1b\n\x17\x45RROR_INVALID_TIMESTAMP\x10\x03\"{\n(CMsgClientToGCSetPlayerCardRosterRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x0c\n\x04slot\x18\x03 \x01(\r\x12\x1b\n\x13player_card_item_id\x18\x04 \x01(\x04\"\xee\x02\n)CMsgClientToGCSetPlayerCardRosterResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.CMsgClientToGCSetPlayerCardRosterResponse.Result:\x07SUCCESS\"\xf4\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_LEAGUE_ID\x10\x02\x12\x1b\n\x17\x45RROR_INVALID_TIMESTAMP\x10\x03\x12\x1f\n\x1b\x45RROR_PLAYER_CARD_NOT_OWNED\x10\x04\x12\x16\n\x12\x45RROR_INVALID_SLOT\x10\x05\x12\x1a\n\x16\x45RROR_FAILED_CARD_INFO\x10\x06\x12\x1b\n\x17\x45RROR_ACCOUNT_DUPLICATE\x10\x07\x12\x1a\n\x16\x45RROR_LOCKED_TIMESTAMP\x10\x08*\xa3\x15\n!DOTA_2013PassportSelectionIndices\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_0\x10\x00\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_1\x10\x01\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_2\x10\x02\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_3\x10\x03\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_4\x10\x04\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_5\x10\x05\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_6\x10\x06\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_7\x10\x07\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_8\x10\x08\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_9\x10\t\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_0\x10\n\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_1\x10\x0b\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_2\x10\x0c\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_3\x10\r\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_4\x10\x0e\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_5\x10\x0f\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_6\x10\x10\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_7\x10\x11\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_8\x10\x12\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_9\x10\x13\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_10\x10\x14\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_11\x10\x15\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_12\x10\x16\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_13\x10\x17\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_14\x10\x18\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_0\x10\x19\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_1\x10\x1a\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_2\x10\x1b\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_3\x10\x1c\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_4\x10\x1d\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_5\x10\x1e\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_6\x10\x1f\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_7\x10 \x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_8\x10!\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_9\x10\"\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_10\x10#\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_11\x10$\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_12\x10%\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_13\x10&\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_14\x10\'\x12\x19\n\x15PP13_SEL_TEAMCUP_TEAM\x10(\x12\x1b\n\x17PP13_SEL_TEAMCUP_PLAYER\x10)\x12\x1e\n\x1aPP13_SEL_TEAMCUP_TEAM_LOCK\x10*\x12 \n\x1cPP13_SEL_TEAMCUP_PLAYER_LOCK\x10+\x12\x18\n\x14PP13_SEL_EVENTPRED_0\x10,\x12\x18\n\x14PP13_SEL_EVENTPRED_1\x10-\x12\x18\n\x14PP13_SEL_EVENTPRED_2\x10.\x12\x18\n\x14PP13_SEL_EVENTPRED_3\x10/\x12\x18\n\x14PP13_SEL_EVENTPRED_4\x10\x30\x12\x18\n\x14PP13_SEL_EVENTPRED_5\x10\x31\x12\x18\n\x14PP13_SEL_EVENTPRED_6\x10\x32\x12\x18\n\x14PP13_SEL_EVENTPRED_7\x10\x33\x12\x18\n\x14PP13_SEL_EVENTPRED_8\x10\x34\x12\x18\n\x14PP13_SEL_EVENTPRED_9\x10\x35\x12\x19\n\x15PP13_SEL_EVENTPRED_10\x10\x36\x12\x19\n\x15PP13_SEL_EVENTPRED_11\x10\x37\x12\x19\n\x15PP13_SEL_EVENTPRED_12\x10\x38\x12\x19\n\x15PP13_SEL_EVENTPRED_13\x10\x39\x12\x19\n\x15PP13_SEL_EVENTPRED_14\x10:\x12\x19\n\x15PP13_SEL_EVENTPRED_15\x10;\x12\x19\n\x15PP13_SEL_EVENTPRED_16\x10<\x12\x19\n\x15PP13_SEL_EVENTPRED_17\x10=\x12\x19\n\x15PP13_SEL_EVENTPRED_18\x10>\x12\x19\n\x15PP13_SEL_EVENTPRED_19\x10?\x12\x19\n\x15PP13_SEL_EVENTPRED_20\x10@\x12\x19\n\x15PP13_SEL_EVENTPRED_21\x10\x41\x12\x19\n\x15PP13_SEL_EVENTPRED_22\x10\x42\x12\x19\n\x15PP13_SEL_EVENTPRED_23\x10\x43\x12\x19\n\x15PP13_SEL_EVENTPRED_24\x10\x44\x12\x19\n\x15PP13_SEL_EVENTPRED_25\x10\x45\x12\x19\n\x15PP13_SEL_EVENTPRED_26\x10\x46\x12\x19\n\x15PP13_SEL_EVENTPRED_27\x10G\x12\x19\n\x15PP13_SEL_EVENTPRED_28\x10H\x12\x19\n\x15PP13_SEL_EVENTPRED_29\x10I\x12\x19\n\x15PP13_SEL_EVENTPRED_30\x10J\x12\x19\n\x15PP13_SEL_EVENTPRED_31\x10K\x12\x19\n\x15PP13_SEL_EVENTPRED_32\x10L\x12\x19\n\x15PP13_SEL_EVENTPRED_33\x10M\x12\x19\n\x15PP13_SEL_EVENTPRED_34\x10N\x12\x19\n\x15PP13_SEL_EVENTPRED_35\x10O\x12\x19\n\x15PP13_SEL_EVENTPRED_36\x10P\x12\x19\n\x15PP13_SEL_EVENTPRED_37\x10Q\x12\x19\n\x15PP13_SEL_EVENTPRED_38\x10R\x12\x19\n\x15PP13_SEL_EVENTPRED_39\x10S\x12\x19\n\x15PP13_SEL_EVENTPRED_40\x10T\x12\x19\n\x15PP13_SEL_EVENTPRED_41\x10U\x12\x19\n\x15PP13_SEL_EVENTPRED_42\x10V\x12\x19\n\x15PP13_SEL_EVENTPRED_43\x10W\x12\x13\n\x0fPP13_SEL_SOLO_0\x10X\x12\x13\n\x0fPP13_SEL_SOLO_1\x10Y\x12\x13\n\x0fPP13_SEL_SOLO_2\x10Z\x12\x13\n\x0fPP13_SEL_SOLO_3\x10[\x12\x13\n\x0fPP13_SEL_SOLO_4\x10\\\x12\x13\n\x0fPP13_SEL_SOLO_5\x10]\x12\x13\n\x0fPP13_SEL_SOLO_6\x10^\x12\x13\n\x0fPP13_SEL_SOLO_7\x10_B\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n$dota_gcmessages_client_fantasy.proto\x12\x04\x64ota\x1a\x17\x64ota_shared_enums.proto\"\xb7\x03\n\x10\x43MsgGCPlayerInfo\x12\x37\n\x0cplayer_infos\x18\x01 \x03(\x0b\x32!.dota.CMsgGCPlayerInfo.PlayerInfo\x12>\n\x0cleaderboards\x18\x02 \x03(\x0b\x32(.dota.CMsgGCPlayerInfo.RegionLeaderboard\x1a\xed\x01\n\nPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x03 \x01(\t\x12\x14\n\x0c\x66\x61ntasy_role\x18\x04 \x01(\r\x12\x0f\n\x07team_id\x18\x05 \x01(\r\x12\x11\n\tteam_name\x18\x06 \x01(\t\x12\x10\n\x08team_tag\x18\x07 \x01(\t\x12\x0f\n\x07sponsor\x18\x08 \x01(\t\x12\x11\n\tis_locked\x18\t \x01(\x08\x12\x0e\n\x06is_pro\x18\n \x01(\x08\x12\x14\n\x0clocked_until\x18\x0b \x01(\r\x12\x11\n\ttimestamp\x18\x0c \x01(\r\x1a:\n\x11RegionLeaderboard\x12\x10\n\x08\x64ivision\x18\x01 \x01(\r\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"\xb3\x01\n\"CMsgDOTACreateFantasyLeagueRequest\x12\x13\n\x0bleague_name\x18\x01 \x01(\t\x12\x13\n\x0bleague_logo\x18\x02 \x01(\x04\x12O\n\x0eselection_mode\x18\x03 \x01(\x0e\x32\x1c.dota.Fantasy_Selection_Mode:\x19\x46\x41NTASY_SELECTION_INVALID\x12\x12\n\nteam_count\x18\x04 \x01(\r\"\xf8\x01\n#CMsgDOTACreateFantasyLeagueResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTACreateFantasyLeagueResponse.EResult:\x07SUCCESS\"\x84\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1a\n\x16\x45RROR_TOO_MANY_LEAGUES\x10\x02\x12\x1c\n\x18\x45RROR_INVALID_TEAM_COUNT\x10\x03\x12\x1b\n\x17\x45RROR_CREATION_DISABLED\x10\x04\"\x9f\x02\n\x18\x43MsgFantasyLeagueScoring\x12\r\n\x05level\x18\x01 \x01(\x02\x12\r\n\x05kills\x18\x02 \x01(\x02\x12\x0e\n\x06\x64\x65\x61ths\x18\x03 \x01(\x02\x12\x0f\n\x07\x61ssists\x18\x04 \x01(\x02\x12\x11\n\tlast_hits\x18\x05 \x01(\x02\x12\x0e\n\x06\x64\x65nies\x18\x06 \x01(\x02\x12\x0b\n\x03gpm\x18\x07 \x01(\x02\x12\x0c\n\x04xppm\x18\x08 \x01(\x02\x12\r\n\x05stuns\x18\t \x01(\x02\x12\x0f\n\x07healing\x18\n \x01(\x02\x12\x13\n\x0btower_kills\x18\x0b \x01(\x02\x12\x14\n\x0croshan_kills\x18\x0c \x01(\x02\x12\x1a\n\x12multiplier_premium\x18\r \x01(\x02\x12\x1f\n\x17multiplier_professional\x18\x0e \x01(\x02\"\xdd\x05\n\x19\x43MsgDOTAFantasyLeagueInfo\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x1f\n\x17\x63ommissioner_account_id\x18\x02 \x01(\r\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x03 \x01(\t\x12O\n\x0eselection_mode\x18\x04 \x01(\x0e\x32\x1c.dota.Fantasy_Selection_Mode:\x19\x46\x41NTASY_SELECTION_INVALID\x12\x12\n\nteam_count\x18\x05 \x01(\r\x12\x0c\n\x04logo\x18\x06 \x01(\x04\x12/\n\x07scoring\x18\x07 \x01(\x0b\x32\x1e.dota.CMsgFantasyLeagueScoring\x12\x12\n\ndraft_time\x18\x0c \x01(\r\x12\x17\n\x0f\x64raft_pick_time\x18\r \x01(\r\x12\x14\n\x0cseason_start\x18\x0f \x01(\r\x12\x15\n\rseason_length\x18\x10 \x01(\r\x12\x12\n\nveto_votes\x18\x11 \x01(\r\x12\x14\n\x0c\x61\x63quisitions\x18\x12 \x01(\r\x12\x0e\n\x06slot_1\x18\x13 \x01(\r\x12\x0e\n\x06slot_2\x18\x14 \x01(\r\x12\x0e\n\x06slot_3\x18\x15 \x01(\r\x12\x0e\n\x06slot_4\x18\x16 \x01(\r\x12\x0e\n\x06slot_5\x18\x17 \x01(\r\x12\x13\n\x0b\x62\x65nch_slots\x18\x18 \x01(\r\x12=\n\nowner_info\x18\x19 \x03(\x0b\x32).dota.CMsgDOTAFantasyLeagueInfo.OwnerInfo\x12\x0f\n\x07players\x18\x1a \x03(\r\x12\x11\n\ttime_zone\x18\x1b \x01(\r\x12\x0e\n\x06season\x18\x1c \x01(\r\x12\x10\n\x08password\x18\x1d \x01(\t\x1aU\n\tOwnerInfo\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\x12\x13\n\x0bleft_league\x18\x02 \x01(\x08\x12\x19\n\x11player_account_id\x18\x03 \x03(\r\"u\n$CMsgDOTAFantasyLeagueEditInfoRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x32\n\tedit_info\x18\x02 \x01(\x0b\x32\x1f.dota.CMsgDOTAFantasyLeagueInfo\"\xbd\x01\n%CMsgDOTAFantasyLeagueEditInfoResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyLeagueEditInfoResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"O\n CMsgDOTAFantasyLeagueFindRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\"\xcc\x02\n!CMsgDOTAFantasyLeagueFindResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyLeagueFindResponse.EResult:\x07SUCCESS\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x02 \x01(\t\x12\x19\n\x11\x63ommissioner_name\x18\x03 \x01(\t\"\xa4\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x1a\n\x16\x45RROR_LEAGUE_NOT_FOUND\x10\x01\x12\x16\n\x12\x45RROR_BAD_PASSWORD\x10\x02\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x03\x12\x0e\n\nERROR_FULL\x10\x04\x12\x18\n\x14\x45RROR_ALREADY_MEMBER\x10\x05\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\x06\"=\n CMsgDOTAFantasyLeagueInfoRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xb5\x01\n!CMsgDOTAFantasyLeagueInfoResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyLeagueInfoResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_BAD_LEAGUE_ID\x10\x02\"A\n$CMsgDOTAFantasyLeagueMatchupsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xa9\x04\n%CMsgDOTAFantasyLeagueMatchupsResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyLeagueMatchupsResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12S\n\x0fweekly_matchups\x18\x03 \x03(\x0b\x32:.dota.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups\x1a\x63\n\x07Matchup\x12\x1a\n\x12owner_account_id_1\x18\x01 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x02 \x01(\r\x12\x0f\n\x07score_1\x18\x03 \x01(\x02\x12\x0f\n\x07score_2\x18\x04 \x01(\x02\x1a|\n\x0eWeeklyMatchups\x12\x44\n\x07matchup\x18\x01 \x03(\x0b\x32\x33.dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x03 \x01(\r\"_\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_BAD_LEAGUE_ID\x10\x02\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x03\"u\n\x1e\x43MsgDOTAEditFantasyTeamRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x04\"\xed\x01\n\x1f\x43MsgDOTAEditFantasyTeamResponse\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32-.dota.CMsgDOTAEditFantasyTeamResponse.EResult:\x07SUCCESS\"\x81\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_TEAM_INFO\x10\x02\x12\x1c\n\x18\x45RROR_NAME_ALREADY_TAKEN\x10\x03\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x04\"L\n/CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"J\n.CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\"Q\n\x1f\x43MsgDOTAFantasyTeamInfoResponse\x12.\n\x07results\x18\x01 \x03(\x0b\x32\x1d.dota.CMsgDOTAFantasyTeamInfo\"\xc6\x01\n\x17\x43MsgDOTAFantasyTeamInfo\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x11\n\tteam_name\x18\x04 \x01(\t\x12\x11\n\tteam_logo\x18\x05 \x01(\x04\x12\x0c\n\x04wins\x18\x06 \x01(\r\x12\x0e\n\x06losses\x18\x07 \x01(\r\x12\x16\n\x0e\x63urrent_roster\x18\x08 \x03(\r\"\xd6\x01\n\x1f\x43MsgDOTAFantasyTeamScoreRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x04 \x01(\x04\x12\x19\n\x11\x66ilter_start_time\x18\x05 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x06 \x01(\r\x12\x15\n\rinclude_bench\x18\x07 \x01(\x08\"\xfa\x02\n CMsgDOTAFantasyTeamScoreResponse\x12G\n\x06result\x18\x01 \x01(\x0e\x32..dota.CMsgDOTAFantasyTeamScoreResponse.EResult:\x07SUCCESS\x12\x1a\n\x12\x66\x61ntasy_team_score\x18\x02 \x01(\x02\x12T\n\x14\x66\x61ntasy_player_score\x18\x03 \x03(\x0b\x32\x36.dota.CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore\x1a\x34\n\x0f\x43MsgPlayerScore\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\x02\"e\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x03\"\xcf\x01\n#CMsgDOTAFantasyTeamStandingsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x05 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x06 \x01(\x08\x12\x16\n\x0e\x66ilter_in_hall\x18\x07 \x01(\x08\"\x8b\x04\n$CMsgDOTAFantasyTeamStandingsResponse\x12K\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgDOTAFantasyTeamStandingsResponse.EResult:\x07SUCCESS\x12M\n\x0bteam_scores\x18\x03 \x03(\x0b\x32\x38.dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore\x1a\xfe\x01\n\rCMsgTeamScore\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x19\n\x11\x66\x61ntasy_team_logo\x18\x04 \x01(\x04\x12\x12\n\nowner_name\x18\x05 \x01(\t\x12\x19\n\x11\x66\x61ntasy_team_name\x18\x06 \x01(\t\x12\r\n\x05score\x18\x07 \x01(\x02\x12\x15\n\rscore_against\x18\x08 \x01(\x02\x12\x0c\n\x04wins\x18\t \x01(\r\x12\x0e\n\x06losses\x18\n \x01(\r\x12\x0e\n\x06streak\x18\x0b \x01(\x05\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\xc1\x01\n!CMsgDOTAFantasyPlayerScoreRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x05 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x06 \x01(\x08\"\x91\x02\n\"CMsgDOTAFantasyPlayerScoreResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyPlayerScoreResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12\x19\n\x11player_account_id\x18\x03 \x01(\r\x12\x13\n\x0bplayer_name\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x02\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\xc7\x01\n%CMsgDOTAFantasyPlayerStandingsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x05 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x06 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x07 \x01(\x08\"\x8f\x03\n&CMsgDOTAFantasyPlayerStandingsResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgDOTAFantasyPlayerStandingsResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x12S\n\rplayer_scores\x18\x04 \x03(\x0b\x32<.dota.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore\x1aP\n\x0f\x43MsgPlayerScore\x12\x19\n\x11player_account_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\x02\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\"\n CMsgDOTAFantasyPlayerInfoRequest\"H\n!CMsgDOTAFantasyPlayerInfoResponse\x12#\n\x03msg\x18\x01 \x01(\x0b\x32\x16.dota.CMsgGCPlayerInfo\"\x9f\x01\n\"CMsgDOTAFantasyLeagueCreateRequest\x12\x11\n\tseason_id\x18\x01 \x01(\r\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\x12\x11\n\tteam_name\x18\x04 \x01(\t\x12\x0c\n\x04logo\x18\x05 \x01(\x04\x12\x16\n\x0eticket_item_id\x18\x06 \x01(\x04\"\xd5\x02\n#CMsgDOTAFantasyLeagueCreateResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTAFantasyLeagueCreateResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\"\xc6\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x01\x12\x17\n\x13\x45RROR_BAD_SEASON_ID\x10\x02\x12\x19\n\x15\x45RROR_BAD_LEAGUE_NAME\x10\x03\x12\x17\n\x13\x45RROR_BAD_TEAM_NAME\x10\x04\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x05\x12\x1c\n\x18\x45RROR_FAILED_LOGO_UPLOAD\x10\x06\x12\x13\n\x0f\x45RROR_NO_TICKET\x10\x07\"\x88\x01\n CMsgDOTAFantasyTeamCreateRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x16\n\x0eticket_item_id\x18\x05 \x01(\x04\"\x95\x03\n!CMsgDOTAFantasyTeamCreateResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamCreateResponse.EResult:\x07SUCCESS\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x02 \x01(\r\"\x89\x02\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x01\x12\x1c\n\x18\x45RROR_FAILED_LOGO_UPLOAD\x10\x02\x12\x1f\n\x1b\x45RROR_BAD_FANTASY_LEAGUE_ID\x10\x03\x12\x12\n\x0e\x45RROR_BAD_NAME\x10\x04\x12\x0e\n\nERROR_FULL\x10\x05\x12\x18\n\x14\x45RROR_ALREADY_MEMBER\x10\x06\x12\x16\n\x12\x45RROR_BAD_PASSWORD\x10\x07\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x08\x12\x13\n\x0f\x45RROR_NO_TICKET\x10\t\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\n\"\xde\x01\n\'CMsgDOTAFantasyLeagueEditInvitesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\x12Q\n\rinvite_change\x18\x03 \x03(\x0b\x32:.dota.CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange\x1a\x33\n\x0cInviteChange\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07invited\x18\x02 \x01(\x08\"\xaa\x01\n(CMsgDOTAFantasyLeagueEditInvitesResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyLeagueEditInvitesResponse.EResult:\x07SUCCESS\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"D\n\'CMsgDOTAFantasyLeagueDraftStatusRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xc6\x01\n CMsgDOTAFantasyLeagueDraftStatus\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x13\n\x0b\x64raft_order\x18\x02 \x03(\r\x12\x14\n\x0c\x63urrent_pick\x18\x03 \x01(\r\x12\x16\n\x0etime_remaining\x18\x04 \x01(\r\x12\x16\n\x0epending_resume\x18\x05 \x01(\x08\x12\x11\n\tcompleted\x18\x06 \x01(\x08\x12\x19\n\x11\x61vailable_players\x18\x07 \x03(\r\"s\n\'CMsgDOTAFantasyLeagueDraftPlayerRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x19\n\x11player_account_id\x18\x03 \x01(\r\"\x87\x03\n(CMsgDOTAFantasyLeagueDraftPlayerResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyLeagueDraftPlayerResponse.EResult:\x07SUCCESS\"\x89\x02\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12 \n\x1c\x45RROR_INVALID_FANTASY_LEAGUE\x10\x02\x12%\n!ERROR_FANTASY_LEAGUE_NOT_DRAFTING\x10\x03\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x04\x12\x19\n\x15\x45RROR_NOT_OWNERS_TURN\x10\x05\x12\x18\n\x14\x45RROR_PLAYER_INVALID\x10\x06\x12\x1c\n\x18\x45RROR_PLAYER_UNAVAILABLE\x10\x07\x12\x1f\n\x1b\x45RROR_PLAYER_NO_VALID_SLOTS\x10\x08\"\x88\x01\n$CMsgDOTAFantasyTeamRosterSwapRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x0e\n\x06slot_1\x18\x04 \x01(\r\x12\x0e\n\x06slot_2\x18\x05 \x01(\r\"\xf3\x01\n%CMsgDOTAFantasyTeamRosterSwapResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyTeamRosterSwapResponse.EResult:\x07SUCCESS\"|\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x02\x12\x17\n\x13\x45RROR_SLOTS_INVALID\x10\x03\x12\x15\n\x11\x45RROR_SLOT_LOCKED\x10\x04\"\x89\x01\n\'CMsgDOTAFantasyTeamRosterAddDropRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x16\n\x0e\x61\x64\x64_account_id\x18\x05 \x01(\r\x12\x17\n\x0f\x64rop_account_id\x18\x06 \x01(\r\"\xa9\x02\n(CMsgDOTAFantasyTeamRosterAddDropResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyTeamRosterAddDropResponse.EResult:\x07SUCCESS\"\xab\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x02\x12\x1e\n\x1a\x45RROR_PLAYER_NOT_AVAILABLE\x10\x03\x12\x1c\n\x18\x45RROR_PLAYER_NOT_ON_TEAM\x10\x04\x12\x1f\n\x1b\x45RROR_TRADE_ALREADY_PENDING\x10\x05\"=\n CMsgDOTAFantasyTeamTradesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x93\x03\n!CMsgDOTAFantasyTeamTradesResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamTradesResponse.EResult:\x07SUCCESS\x12=\n\x06trades\x18\x02 \x03(\x0b\x32-.dota.CMsgDOTAFantasyTeamTradesResponse.Trade\x1a\x9c\x01\n\x05Trade\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x1a\n\x12owner_account_id_1\x18\x02 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x03 \x01(\r\x12\x1b\n\x13player_account_id_1\x18\x04 \x01(\r\x12\x1b\n\x13player_account_id_2\x18\x05 \x01(\r\x12\x0e\n\x06status\x18\x06 \x01(\r\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\x8a\x01\n%CMsgDOTAFantasyTeamTradeCancelRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x14\n\x0cteam_index_1\x18\x03 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x04 \x01(\r\x12\x14\n\x0cteam_index_2\x18\x05 \x01(\r\"\xd3\x01\n&CMsgDOTAFantasyTeamTradeCancelResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgDOTAFantasyTeamTradeCancelResponse.EResult:\x07SUCCESS\"Z\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x12\n\x0e\x45RROR_NO_TRADE\x10\x03\"~\n CMsgDOTAFantasyTeamRosterRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x18\n\x10owner_account_id\x18\x03 \x01(\r\x12\x11\n\ttimestamp\x18\x04 \x01(\r\"\x87\x02\n!CMsgDOTAFantasyTeamRosterResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamRosterResponse.EResult:\x07SUCCESS\x12\x1a\n\x12player_account_ids\x18\x02 \x03(\r\x12\x15\n\rplayer_locked\x18\x03 \x03(\x08\"e\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x03\"G\n*CMsgDOTAFantasyPlayerHisoricalStatsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x95\x06\n+CMsgDOTAFantasyPlayerHisoricalStatsResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.EResult:\x07SUCCESS\x12L\n\x05stats\x18\x02 \x03(\x0b\x32=.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats\x1a\x81\x02\n\x16PlayerScoreAccumulator\x12\x0f\n\x07matches\x18\x01 \x01(\r\x12\x0e\n\x06levels\x18\x02 \x01(\x02\x12\r\n\x05kills\x18\x03 \x01(\x02\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\x02\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\x02\x12\x11\n\tlast_hits\x18\x06 \x01(\x02\x12\x0e\n\x06\x64\x65nies\x18\x07 \x01(\x02\x12\x0b\n\x03gpm\x18\x08 \x01(\x02\x12\x0c\n\x04xppm\x18\t \x01(\x02\x12\r\n\x05stuns\x18\n \x01(\x02\x12\x0f\n\x07healing\x18\x0b \x01(\x02\x12\x13\n\x0btower_kills\x18\x0c \x01(\x02\x12\x14\n\x0croshan_kills\x18\r \x01(\x02\x12\r\n\x05score\x18\x0e \x01(\x02\x1a\xf7\x01\n\x0bPlayerStats\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05weeks\x18\x02 \x01(\r\x12_\n\rstats_premium\x18\x04 \x01(\x0b\x32H.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator\x12\x64\n\x12stats_professional\x18\x05 \x01(\x0b\x32H.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"G\n\x19\x43MsgDOTAFantasyMessageAdd\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\"g\n\x1e\x43MsgDOTAFantasyMessagesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x15\n\rstart_message\x18\x02 \x01(\r\x12\x13\n\x0b\x65nd_message\x18\x03 \x01(\r\"\xe7\x02\n\x1f\x43MsgDOTAFantasyMessagesResponse\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32-.dota.CMsgDOTAFantasyMessagesResponse.EResult:\x07SUCCESS\x12?\n\x08messages\x18\x02 \x03(\x0b\x32-.dota.CMsgDOTAFantasyMessagesResponse.Message\x12\x1a\n\x12num_total_messages\x18\x03 \x01(\r\x1aW\n\x07Message\x12\x12\n\nmessage_id\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x19\n\x11\x61uthor_account_id\x18\x03 \x01(\r\x12\x0c\n\x04time\x18\x04 \x01(\r\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"e\n\x1a\x43MsgDOTAFantasyRemoveOwner\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x12\n\nteam_index\x18\x03 \x01(\r\"\xe8\x01\n\"CMsgDOTAFantasyRemoveOwnerResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyRemoveOwnerResponse.EResult:\x07SUCCESS\"w\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\x03\x12\x16\n\x12\x45RROR_NOT_A_MEMBER\x10\x04\"C\n&CMsgDOTAFantasyScheduledMatchesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xd7\x02\n\'CMsgDOTAFantasyScheduledMatchesResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgDOTAFantasyScheduledMatchesResponse.EResult:\x07SUCCESS\x12^\n\x14scheduled_match_days\x18\x02 \x03(\x0b\x32@.dota.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays\x1aM\n\x12ScheduledMatchDays\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\x12\x12\n\nleague_ids\x18\x03 \x03(\r\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"Z\n!CMsgDOTAFantasyLeaveLeagueRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x02 \x01(\r\"\xe8\x01\n\"CMsgDOTAFantasyLeaveLeagueResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyLeaveLeagueResponse.EResult:\x07SUCCESS\"w\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x14\n\x10\x45RROR_NOT_MEMBER\x10\x02\x12\x1a\n\x16\x45RROR_LEAGUE_NOT_FOUND\x10\x03\x12\x16\n\x12\x45RROR_DRAFT_ACTIVE\x10\x04\"\x86\x01\n(CMsgDOTAFantasyPlayerScoreDetailsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x12\n\nstart_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\"\x90\x04\n)CMsgDOTAFantasyPlayerScoreDetailsResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.EResult:\x07SUCCESS\x12M\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32?.dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData\x1a\xfc\x01\n\x0fPlayerMatchData\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tseries_id\x18\x02 \x01(\r\x12\x12\n\nseries_num\x18\x03 \x01(\r\x12\x13\n\x0bseries_type\x18\x04 \x01(\r\x12\x13\n\x0bleague_tier\x18\x05 \x01(\r\x12\x11\n\tleague_id\x18\x06 \x01(\r\x12\x18\n\x10opposing_team_id\x18\x07 \x01(\r\x12\x1a\n\x12opposing_team_logo\x18\x08 \x01(\x04\x12\x1a\n\x12opposing_team_name\x18\t \x01(\t\x12\x10\n\x08owned_by\x18\x0b \x01(\r\x12\x0f\n\x07\x62\x65nched\x18\x0c \x01(\x08\"C\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x14\n\x10\x45RROR_NOT_MEMBER\x10\x02\"Z\n\x1d\x43MsgDOTAPassportVoteTeamGuess\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\twinner_id\x18\x02 \x01(\r\x12\x13\n\x0brunnerup_id\x18\x03 \x01(\r\"\x96\x01\n$CMsgDOTAPassportVoteGenericSelection\x12[\n\x0fselection_index\x18\x01 \x01(\x0e\x32\'.dota.DOTA_2013PassportSelectionIndices:\x19PP13_SEL_ALLSTAR_PLAYER_0\x12\x11\n\tselection\x18\x02 \x01(\r\"F\n\x1d\x43MsgDOTAPassportStampedPlayer\x12\x10\n\x08steam_id\x18\x01 \x01(\x04\x12\x13\n\x0bstamp_level\x18\x02 \x01(\r\";\n#CMsgDOTAPassportPlayerCardChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\"\xa0\x02\n\x14\x43MsgDOTAPassportVote\x12\x37\n\nteam_votes\x18\x01 \x03(\x0b\x32#.dota.CMsgDOTAPassportVoteTeamGuess\x12\x46\n\x12generic_selections\x18\x02 \x03(\x0b\x32*.dota.CMsgDOTAPassportVoteGenericSelection\x12<\n\x0fstamped_players\x18\x03 \x03(\x0b\x32#.dota.CMsgDOTAPassportStampedPlayer\x12I\n\x16player_card_challenges\x18\x04 \x03(\x0b\x32).dota.CMsgDOTAPassportPlayerCardChallenge\"P\n(CMsgClientToGCGetPlayerCardRosterRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\"\xb7\x02\n)CMsgClientToGCGetPlayerCardRosterResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCGetPlayerCardRosterResponse.Result:\x07SUCCESS\x12\x1b\n\x13player_card_item_id\x18\x02 \x03(\x04\x12\r\n\x05score\x18\x03 \x01(\x02\x12\x11\n\tfinalized\x18\x04 \x01(\x08\x12\x12\n\npercentile\x18\x05 \x01(\x02\"f\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_LEAGUE_ID\x10\x02\x12\x1b\n\x17\x45RROR_INVALID_TIMESTAMP\x10\x03\"{\n(CMsgClientToGCSetPlayerCardRosterRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x0c\n\x04slot\x18\x03 \x01(\r\x12\x1b\n\x13player_card_item_id\x18\x04 \x01(\x04\"\xf3\x02\n)CMsgClientToGCSetPlayerCardRosterResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCSetPlayerCardRosterResponse.Result:\x07SUCCESS\"\xf4\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_LEAGUE_ID\x10\x02\x12\x1b\n\x17\x45RROR_INVALID_TIMESTAMP\x10\x03\x12\x1f\n\x1b\x45RROR_PLAYER_CARD_NOT_OWNED\x10\x04\x12\x16\n\x12\x45RROR_INVALID_SLOT\x10\x05\x12\x1a\n\x16\x45RROR_FAILED_CARD_INFO\x10\x06\x12\x1b\n\x17\x45RROR_ACCOUNT_DUPLICATE\x10\x07\x12\x1a\n\x16\x45RROR_LOCKED_TIMESTAMP\x10\x08*\xa3\x15\n!DOTA_2013PassportSelectionIndices\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_0\x10\x00\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_1\x10\x01\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_2\x10\x02\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_3\x10\x03\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_4\x10\x04\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_5\x10\x05\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_6\x10\x06\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_7\x10\x07\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_8\x10\x08\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_9\x10\t\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_0\x10\n\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_1\x10\x0b\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_2\x10\x0c\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_3\x10\r\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_4\x10\x0e\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_5\x10\x0f\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_6\x10\x10\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_7\x10\x11\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_8\x10\x12\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_9\x10\x13\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_10\x10\x14\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_11\x10\x15\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_12\x10\x16\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_13\x10\x17\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_14\x10\x18\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_0\x10\x19\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_1\x10\x1a\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_2\x10\x1b\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_3\x10\x1c\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_4\x10\x1d\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_5\x10\x1e\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_6\x10\x1f\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_7\x10 \x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_8\x10!\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_9\x10\"\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_10\x10#\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_11\x10$\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_12\x10%\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_13\x10&\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_14\x10\'\x12\x19\n\x15PP13_SEL_TEAMCUP_TEAM\x10(\x12\x1b\n\x17PP13_SEL_TEAMCUP_PLAYER\x10)\x12\x1e\n\x1aPP13_SEL_TEAMCUP_TEAM_LOCK\x10*\x12 \n\x1cPP13_SEL_TEAMCUP_PLAYER_LOCK\x10+\x12\x18\n\x14PP13_SEL_EVENTPRED_0\x10,\x12\x18\n\x14PP13_SEL_EVENTPRED_1\x10-\x12\x18\n\x14PP13_SEL_EVENTPRED_2\x10.\x12\x18\n\x14PP13_SEL_EVENTPRED_3\x10/\x12\x18\n\x14PP13_SEL_EVENTPRED_4\x10\x30\x12\x18\n\x14PP13_SEL_EVENTPRED_5\x10\x31\x12\x18\n\x14PP13_SEL_EVENTPRED_6\x10\x32\x12\x18\n\x14PP13_SEL_EVENTPRED_7\x10\x33\x12\x18\n\x14PP13_SEL_EVENTPRED_8\x10\x34\x12\x18\n\x14PP13_SEL_EVENTPRED_9\x10\x35\x12\x19\n\x15PP13_SEL_EVENTPRED_10\x10\x36\x12\x19\n\x15PP13_SEL_EVENTPRED_11\x10\x37\x12\x19\n\x15PP13_SEL_EVENTPRED_12\x10\x38\x12\x19\n\x15PP13_SEL_EVENTPRED_13\x10\x39\x12\x19\n\x15PP13_SEL_EVENTPRED_14\x10:\x12\x19\n\x15PP13_SEL_EVENTPRED_15\x10;\x12\x19\n\x15PP13_SEL_EVENTPRED_16\x10<\x12\x19\n\x15PP13_SEL_EVENTPRED_17\x10=\x12\x19\n\x15PP13_SEL_EVENTPRED_18\x10>\x12\x19\n\x15PP13_SEL_EVENTPRED_19\x10?\x12\x19\n\x15PP13_SEL_EVENTPRED_20\x10@\x12\x19\n\x15PP13_SEL_EVENTPRED_21\x10\x41\x12\x19\n\x15PP13_SEL_EVENTPRED_22\x10\x42\x12\x19\n\x15PP13_SEL_EVENTPRED_23\x10\x43\x12\x19\n\x15PP13_SEL_EVENTPRED_24\x10\x44\x12\x19\n\x15PP13_SEL_EVENTPRED_25\x10\x45\x12\x19\n\x15PP13_SEL_EVENTPRED_26\x10\x46\x12\x19\n\x15PP13_SEL_EVENTPRED_27\x10G\x12\x19\n\x15PP13_SEL_EVENTPRED_28\x10H\x12\x19\n\x15PP13_SEL_EVENTPRED_29\x10I\x12\x19\n\x15PP13_SEL_EVENTPRED_30\x10J\x12\x19\n\x15PP13_SEL_EVENTPRED_31\x10K\x12\x19\n\x15PP13_SEL_EVENTPRED_32\x10L\x12\x19\n\x15PP13_SEL_EVENTPRED_33\x10M\x12\x19\n\x15PP13_SEL_EVENTPRED_34\x10N\x12\x19\n\x15PP13_SEL_EVENTPRED_35\x10O\x12\x19\n\x15PP13_SEL_EVENTPRED_36\x10P\x12\x19\n\x15PP13_SEL_EVENTPRED_37\x10Q\x12\x19\n\x15PP13_SEL_EVENTPRED_38\x10R\x12\x19\n\x15PP13_SEL_EVENTPRED_39\x10S\x12\x19\n\x15PP13_SEL_EVENTPRED_40\x10T\x12\x19\n\x15PP13_SEL_EVENTPRED_41\x10U\x12\x19\n\x15PP13_SEL_EVENTPRED_42\x10V\x12\x19\n\x15PP13_SEL_EVENTPRED_43\x10W\x12\x13\n\x0fPP13_SEL_SOLO_0\x10X\x12\x13\n\x0fPP13_SEL_SOLO_1\x10Y\x12\x13\n\x0fPP13_SEL_SOLO_2\x10Z\x12\x13\n\x0fPP13_SEL_SOLO_3\x10[\x12\x13\n\x0fPP13_SEL_SOLO_4\x10\\\x12\x13\n\x0fPP13_SEL_SOLO_5\x10]\x12\x13\n\x0fPP13_SEL_SOLO_6\x10^\x12\x13\n\x0fPP13_SEL_SOLO_7\x10_B\x05H\x01\x90\x01\x00')
   ,
   dependencies=[dota__shared__enums__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _DOTA_2013PASSPORTSELECTIONINDICES = _descriptor.EnumDescriptor(
   name='DOTA_2013PassportSelectionIndices',
-  full_name='DOTA_2013PassportSelectionIndices',
+  full_name='dota.DOTA_2013PassportSelectionIndices',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -419,8 +419,8 @@ _DOTA_2013PASSPORTSELECTIONINDICES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15604,
-  serialized_end=18327,
+  serialized_start=15880,
+  serialized_end=18603,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_2013PASSPORTSELECTIONINDICES)
 
@@ -525,7 +525,7 @@ PP13_SEL_SOLO_7 = 95
 
 _CMSGDOTACREATEFANTASYLEAGUERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTACreateFantasyLeagueResponse.EResult',
+  full_name='dota.CMsgDOTACreateFantasyLeagueResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -552,14 +552,14 @@ _CMSGDOTACREATEFANTASYLEAGUERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=786,
-  serialized_end=918,
+  serialized_start=812,
+  serialized_end=944,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTACREATEFANTASYLEAGUERESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyLeagueEditInfoResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyLeagueEditInfoResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -578,14 +578,14 @@ _CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2160,
-  serialized_end=2230,
+  serialized_start=2211,
+  serialized_end=2281,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYLEAGUEFINDRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyLeagueFindResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyLeagueFindResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -620,14 +620,14 @@ _CMSGDOTAFANTASYLEAGUEFINDRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2477,
-  serialized_end=2641,
+  serialized_start=2533,
+  serialized_end=2697,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEFINDRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYLEAGUEINFORESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyLeagueInfoResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyLeagueInfoResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -646,14 +646,14 @@ _CMSGDOTAFANTASYLEAGUEINFORESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2813,
-  serialized_end=2883,
+  serialized_start=2874,
+  serialized_end=2944,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEINFORESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyLeagueMatchupsResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -676,14 +676,14 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3396,
-  serialized_end=3491,
+  serialized_start=3472,
+  serialized_end=3567,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_ERESULT)
 
 _CMSGDOTAEDITFANTASYTEAMRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAEditFantasyTeamResponse.EResult',
+  full_name='dota.CMsgDOTAEditFantasyTeamResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -710,14 +710,14 @@ _CMSGDOTAEDITFANTASYTEAMRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3716,
-  serialized_end=3845,
+  serialized_start=3797,
+  serialized_end=3926,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAEDITFANTASYTEAMRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYTEAMSCORERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyTeamScoreResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyTeamScoreResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -740,14 +740,14 @@ _CMSGDOTAFANTASYTEAMSCORERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4765,
-  serialized_end=4866,
+  serialized_start=4861,
+  serialized_end=4962,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMSCORERESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyTeamStandingsResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -766,14 +766,14 @@ _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2160,
-  serialized_end=2230,
+  serialized_start=2211,
+  serialized_end=2281,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYPLAYERSCORERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyPlayerScoreResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyPlayerScoreResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -792,14 +792,14 @@ _CMSGDOTAFANTASYPLAYERSCORERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2160,
-  serialized_end=2230,
+  serialized_start=2211,
+  serialized_end=2281,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYPLAYERSCORERESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyPlayerStandingsResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -818,14 +818,14 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2160,
-  serialized_end=2230,
+  serialized_start=2211,
+  serialized_end=2281,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYLEAGUECREATERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyLeagueCreateResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyLeagueCreateResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -864,14 +864,14 @@ _CMSGDOTAFANTASYLEAGUECREATERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7061,
-  serialized_end=7259,
+  serialized_start=7192,
+  serialized_end=7390,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUECREATERESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYTEAMCREATERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyTeamCreateResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyTeamCreateResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -922,14 +922,14 @@ _CMSGDOTAFANTASYTEAMCREATERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7536,
-  serialized_end=7801,
+  serialized_start=7672,
+  serialized_end=7937,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMCREATERESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyLeagueEditInvitesResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyLeagueEditInvitesResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -944,14 +944,14 @@ _CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=786,
-  serialized_end=831,
+  serialized_start=812,
+  serialized_end=857,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyLeagueDraftPlayerResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyLeagueDraftPlayerResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -994,14 +994,14 @@ _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8701,
-  serialized_end=8966,
+  serialized_start=8852,
+  serialized_end=9117,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyTeamRosterSwapResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyTeamRosterSwapResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1028,14 +1028,14 @@ _CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9222,
-  serialized_end=9346,
+  serialized_start=9378,
+  serialized_end=9502,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyTeamRosterAddDropResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyTeamRosterAddDropResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1066,14 +1066,14 @@ _CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9610,
-  serialized_end=9781,
+  serialized_start=9771,
+  serialized_end=9942,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYTEAMTRADESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyTeamTradesResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyTeamTradesResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1092,14 +1092,14 @@ _CMSGDOTAFANTASYTEAMTRADESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2160,
-  serialized_end=2230,
+  serialized_start=2211,
+  serialized_end=2281,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMTRADESRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyTeamTradeCancelResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyTeamTradeCancelResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1122,14 +1122,14 @@ _CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10500,
-  serialized_end=10590,
+  serialized_start=10676,
+  serialized_end=10766,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYTEAMROSTERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyTeamRosterResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyTeamRosterResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1152,14 +1152,14 @@ _CMSGDOTAFANTASYTEAMROSTERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4765,
-  serialized_end=4866,
+  serialized_start=4861,
+  serialized_end=4962,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMROSTERRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1178,14 +1178,14 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_ERESULT = _descriptor.EnumDescripto
   ],
   containing_type=None,
   options=None,
-  serialized_start=2160,
-  serialized_end=2230,
+  serialized_start=2211,
+  serialized_end=2281,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYMESSAGESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyMessagesResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyMessagesResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1204,14 +1204,14 @@ _CMSGDOTAFANTASYMESSAGESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2160,
-  serialized_end=2230,
+  serialized_start=2211,
+  serialized_end=2281,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYMESSAGESRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYREMOVEOWNERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyRemoveOwnerResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyRemoveOwnerResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1238,14 +1238,14 @@ _CMSGDOTAFANTASYREMOVEOWNERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12568,
-  serialized_end=12687,
+  serialized_start=12784,
+  serialized_end=12903,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYREMOVEOWNERRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyScheduledMatchesResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyScheduledMatchesResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1260,14 +1260,14 @@ _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=786,
-  serialized_end=831,
+  serialized_start=812,
+  serialized_end=857,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYLEAVELEAGUERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyLeaveLeagueResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyLeaveLeagueResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1294,14 +1294,14 @@ _CMSGDOTAFANTASYLEAVELEAGUERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13295,
-  serialized_end=13414,
+  serialized_start=13526,
+  serialized_end=13645,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAVELEAGUERESPONSE_ERESULT)
 
 _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   name='EResult',
-  full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.EResult',
+  full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.EResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1320,14 +1320,14 @@ _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13295,
-  serialized_end=13362,
+  serialized_start=13526,
+  serialized_end=13593,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_ERESULT)
 
 _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
-  full_name='CMsgClientToGCGetPlayerCardRosterResponse.Result',
+  full_name='dota.CMsgClientToGCGetPlayerCardRosterResponse.Result',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1350,14 +1350,14 @@ _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15005,
-  serialized_end=15107,
+  serialized_start=15276,
+  serialized_end=15378,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE_RESULT)
 
 _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   name='Result',
-  full_name='CMsgClientToGCSetPlayerCardRosterResponse.Result',
+  full_name='dota.CMsgClientToGCSetPlayerCardRosterResponse.Result',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1400,98 +1400,98 @@ _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15357,
-  serialized_end=15601,
+  serialized_start=15633,
+  serialized_end=15877,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE_RESULT)
 
 
 _CMSGGCPLAYERINFO_PLAYERINFO = _descriptor.Descriptor(
   name='PlayerInfo',
-  full_name='CMsgGCPlayerInfo.PlayerInfo',
+  full_name='dota.CMsgGCPlayerInfo.PlayerInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgGCPlayerInfo.PlayerInfo.account_id', index=0,
+      name='account_id', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgGCPlayerInfo.PlayerInfo.name', index=1,
+      name='name', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='country_code', full_name='CMsgGCPlayerInfo.PlayerInfo.country_code', index=2,
+      name='country_code', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.country_code', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_role', full_name='CMsgGCPlayerInfo.PlayerInfo.fantasy_role', index=3,
+      name='fantasy_role', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.fantasy_role', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgGCPlayerInfo.PlayerInfo.team_id', index=4,
+      name='team_id', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.team_id', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgGCPlayerInfo.PlayerInfo.team_name', index=5,
+      name='team_name', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.team_name', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_tag', full_name='CMsgGCPlayerInfo.PlayerInfo.team_tag', index=6,
+      name='team_tag', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.team_tag', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sponsor', full_name='CMsgGCPlayerInfo.PlayerInfo.sponsor', index=7,
+      name='sponsor', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.sponsor', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_locked', full_name='CMsgGCPlayerInfo.PlayerInfo.is_locked', index=8,
+      name='is_locked', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.is_locked', index=8,
       number=9, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_pro', full_name='CMsgGCPlayerInfo.PlayerInfo.is_pro', index=9,
+      name='is_pro', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.is_pro', index=9,
       number=10, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='locked_until', full_name='CMsgGCPlayerInfo.PlayerInfo.locked_until', index=10,
+      name='locked_until', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.locked_until', index=10,
       number=11, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgGCPlayerInfo.PlayerInfo.timestamp', index=11,
+      name='timestamp', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.timestamp', index=11,
       number=12, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1509,26 +1509,26 @@ _CMSGGCPLAYERINFO_PLAYERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=198,
-  serialized_end=435,
+  serialized_start=214,
+  serialized_end=451,
 )
 
 _CMSGGCPLAYERINFO_REGIONLEADERBOARD = _descriptor.Descriptor(
   name='RegionLeaderboard',
-  full_name='CMsgGCPlayerInfo.RegionLeaderboard',
+  full_name='dota.CMsgGCPlayerInfo.RegionLeaderboard',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='division', full_name='CMsgGCPlayerInfo.RegionLeaderboard.division', index=0,
+      name='division', full_name='dota.CMsgGCPlayerInfo.RegionLeaderboard.division', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='account_ids', full_name='CMsgGCPlayerInfo.RegionLeaderboard.account_ids', index=1,
+      name='account_ids', full_name='dota.CMsgGCPlayerInfo.RegionLeaderboard.account_ids', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1546,26 +1546,26 @@ _CMSGGCPLAYERINFO_REGIONLEADERBOARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=437,
-  serialized_end=495,
+  serialized_start=453,
+  serialized_end=511,
 )
 
 _CMSGGCPLAYERINFO = _descriptor.Descriptor(
   name='CMsgGCPlayerInfo',
-  full_name='CMsgGCPlayerInfo',
+  full_name='dota.CMsgGCPlayerInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player_infos', full_name='CMsgGCPlayerInfo.player_infos', index=0,
+      name='player_infos', full_name='dota.CMsgGCPlayerInfo.player_infos', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='leaderboards', full_name='CMsgGCPlayerInfo.leaderboards', index=1,
+      name='leaderboards', full_name='dota.CMsgGCPlayerInfo.leaderboards', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1583,41 +1583,41 @@ _CMSGGCPLAYERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=66,
-  serialized_end=495,
+  serialized_start=72,
+  serialized_end=511,
 )
 
 
 _CMSGDOTACREATEFANTASYLEAGUEREQUEST = _descriptor.Descriptor(
   name='CMsgDOTACreateFantasyLeagueRequest',
-  full_name='CMsgDOTACreateFantasyLeagueRequest',
+  full_name='dota.CMsgDOTACreateFantasyLeagueRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='league_name', full_name='CMsgDOTACreateFantasyLeagueRequest.league_name', index=0,
+      name='league_name', full_name='dota.CMsgDOTACreateFantasyLeagueRequest.league_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='league_logo', full_name='CMsgDOTACreateFantasyLeagueRequest.league_logo', index=1,
+      name='league_logo', full_name='dota.CMsgDOTACreateFantasyLeagueRequest.league_logo', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='selection_mode', full_name='CMsgDOTACreateFantasyLeagueRequest.selection_mode', index=2,
+      name='selection_mode', full_name='dota.CMsgDOTACreateFantasyLeagueRequest.selection_mode', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_count', full_name='CMsgDOTACreateFantasyLeagueRequest.team_count', index=3,
+      name='team_count', full_name='dota.CMsgDOTACreateFantasyLeagueRequest.team_count', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1635,20 +1635,20 @@ _CMSGDOTACREATEFANTASYLEAGUEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=498,
-  serialized_end=672,
+  serialized_start=514,
+  serialized_end=693,
 )
 
 
 _CMSGDOTACREATEFANTASYLEAGUERESPONSE = _descriptor.Descriptor(
   name='CMsgDOTACreateFantasyLeagueResponse',
-  full_name='CMsgDOTACreateFantasyLeagueResponse',
+  full_name='dota.CMsgDOTACreateFantasyLeagueResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTACreateFantasyLeagueResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTACreateFantasyLeagueResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1667,111 +1667,111 @@ _CMSGDOTACREATEFANTASYLEAGUERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=675,
-  serialized_end=918,
+  serialized_start=696,
+  serialized_end=944,
 )
 
 
 _CMSGFANTASYLEAGUESCORING = _descriptor.Descriptor(
   name='CMsgFantasyLeagueScoring',
-  full_name='CMsgFantasyLeagueScoring',
+  full_name='dota.CMsgFantasyLeagueScoring',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='level', full_name='CMsgFantasyLeagueScoring.level', index=0,
+      name='level', full_name='dota.CMsgFantasyLeagueScoring.level', index=0,
       number=1, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='kills', full_name='CMsgFantasyLeagueScoring.kills', index=1,
+      name='kills', full_name='dota.CMsgFantasyLeagueScoring.kills', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='deaths', full_name='CMsgFantasyLeagueScoring.deaths', index=2,
+      name='deaths', full_name='dota.CMsgFantasyLeagueScoring.deaths', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='assists', full_name='CMsgFantasyLeagueScoring.assists', index=3,
+      name='assists', full_name='dota.CMsgFantasyLeagueScoring.assists', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='last_hits', full_name='CMsgFantasyLeagueScoring.last_hits', index=4,
+      name='last_hits', full_name='dota.CMsgFantasyLeagueScoring.last_hits', index=4,
       number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='denies', full_name='CMsgFantasyLeagueScoring.denies', index=5,
+      name='denies', full_name='dota.CMsgFantasyLeagueScoring.denies', index=5,
       number=6, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gpm', full_name='CMsgFantasyLeagueScoring.gpm', index=6,
+      name='gpm', full_name='dota.CMsgFantasyLeagueScoring.gpm', index=6,
       number=7, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='xppm', full_name='CMsgFantasyLeagueScoring.xppm', index=7,
+      name='xppm', full_name='dota.CMsgFantasyLeagueScoring.xppm', index=7,
       number=8, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stuns', full_name='CMsgFantasyLeagueScoring.stuns', index=8,
+      name='stuns', full_name='dota.CMsgFantasyLeagueScoring.stuns', index=8,
       number=9, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='healing', full_name='CMsgFantasyLeagueScoring.healing', index=9,
+      name='healing', full_name='dota.CMsgFantasyLeagueScoring.healing', index=9,
       number=10, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tower_kills', full_name='CMsgFantasyLeagueScoring.tower_kills', index=10,
+      name='tower_kills', full_name='dota.CMsgFantasyLeagueScoring.tower_kills', index=10,
       number=11, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='roshan_kills', full_name='CMsgFantasyLeagueScoring.roshan_kills', index=11,
+      name='roshan_kills', full_name='dota.CMsgFantasyLeagueScoring.roshan_kills', index=11,
       number=12, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='multiplier_premium', full_name='CMsgFantasyLeagueScoring.multiplier_premium', index=12,
+      name='multiplier_premium', full_name='dota.CMsgFantasyLeagueScoring.multiplier_premium', index=12,
       number=13, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='multiplier_professional', full_name='CMsgFantasyLeagueScoring.multiplier_professional', index=13,
+      name='multiplier_professional', full_name='dota.CMsgFantasyLeagueScoring.multiplier_professional', index=13,
       number=14, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -1789,34 +1789,34 @@ _CMSGFANTASYLEAGUESCORING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=921,
-  serialized_end=1208,
+  serialized_start=947,
+  serialized_end=1234,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEINFO_OWNERINFO = _descriptor.Descriptor(
   name='OwnerInfo',
-  full_name='CMsgDOTAFantasyLeagueInfo.OwnerInfo',
+  full_name='dota.CMsgDOTAFantasyLeagueInfo.OwnerInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='owner_account_id', full_name='CMsgDOTAFantasyLeagueInfo.OwnerInfo.owner_account_id', index=0,
+      name='owner_account_id', full_name='dota.CMsgDOTAFantasyLeagueInfo.OwnerInfo.owner_account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='left_league', full_name='CMsgDOTAFantasyLeagueInfo.OwnerInfo.left_league', index=1,
+      name='left_league', full_name='dota.CMsgDOTAFantasyLeagueInfo.OwnerInfo.left_league', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_account_id', full_name='CMsgDOTAFantasyLeagueInfo.OwnerInfo.player_account_id', index=2,
+      name='player_account_id', full_name='dota.CMsgDOTAFantasyLeagueInfo.OwnerInfo.player_account_id', index=2,
       number=3, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1834,180 +1834,180 @@ _CMSGDOTAFANTASYLEAGUEINFO_OWNERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1844,
-  serialized_end=1929,
+  serialized_start=1885,
+  serialized_end=1970,
 )
 
 _CMSGDOTAFANTASYLEAGUEINFO = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueInfo',
-  full_name='CMsgDOTAFantasyLeagueInfo',
+  full_name='dota.CMsgDOTAFantasyLeagueInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueInfo.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueInfo.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='commissioner_account_id', full_name='CMsgDOTAFantasyLeagueInfo.commissioner_account_id', index=1,
+      name='commissioner_account_id', full_name='dota.CMsgDOTAFantasyLeagueInfo.commissioner_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_league_name', full_name='CMsgDOTAFantasyLeagueInfo.fantasy_league_name', index=2,
+      name='fantasy_league_name', full_name='dota.CMsgDOTAFantasyLeagueInfo.fantasy_league_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='selection_mode', full_name='CMsgDOTAFantasyLeagueInfo.selection_mode', index=3,
+      name='selection_mode', full_name='dota.CMsgDOTAFantasyLeagueInfo.selection_mode', index=3,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_count', full_name='CMsgDOTAFantasyLeagueInfo.team_count', index=4,
+      name='team_count', full_name='dota.CMsgDOTAFantasyLeagueInfo.team_count', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAFantasyLeagueInfo.logo', index=5,
+      name='logo', full_name='dota.CMsgDOTAFantasyLeagueInfo.logo', index=5,
       number=6, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='scoring', full_name='CMsgDOTAFantasyLeagueInfo.scoring', index=6,
+      name='scoring', full_name='dota.CMsgDOTAFantasyLeagueInfo.scoring', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='draft_time', full_name='CMsgDOTAFantasyLeagueInfo.draft_time', index=7,
+      name='draft_time', full_name='dota.CMsgDOTAFantasyLeagueInfo.draft_time', index=7,
       number=12, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='draft_pick_time', full_name='CMsgDOTAFantasyLeagueInfo.draft_pick_time', index=8,
+      name='draft_pick_time', full_name='dota.CMsgDOTAFantasyLeagueInfo.draft_pick_time', index=8,
       number=13, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='season_start', full_name='CMsgDOTAFantasyLeagueInfo.season_start', index=9,
+      name='season_start', full_name='dota.CMsgDOTAFantasyLeagueInfo.season_start', index=9,
       number=15, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='season_length', full_name='CMsgDOTAFantasyLeagueInfo.season_length', index=10,
+      name='season_length', full_name='dota.CMsgDOTAFantasyLeagueInfo.season_length', index=10,
       number=16, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='veto_votes', full_name='CMsgDOTAFantasyLeagueInfo.veto_votes', index=11,
+      name='veto_votes', full_name='dota.CMsgDOTAFantasyLeagueInfo.veto_votes', index=11,
       number=17, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='acquisitions', full_name='CMsgDOTAFantasyLeagueInfo.acquisitions', index=12,
+      name='acquisitions', full_name='dota.CMsgDOTAFantasyLeagueInfo.acquisitions', index=12,
       number=18, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot_1', full_name='CMsgDOTAFantasyLeagueInfo.slot_1', index=13,
+      name='slot_1', full_name='dota.CMsgDOTAFantasyLeagueInfo.slot_1', index=13,
       number=19, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot_2', full_name='CMsgDOTAFantasyLeagueInfo.slot_2', index=14,
+      name='slot_2', full_name='dota.CMsgDOTAFantasyLeagueInfo.slot_2', index=14,
       number=20, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot_3', full_name='CMsgDOTAFantasyLeagueInfo.slot_3', index=15,
+      name='slot_3', full_name='dota.CMsgDOTAFantasyLeagueInfo.slot_3', index=15,
       number=21, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot_4', full_name='CMsgDOTAFantasyLeagueInfo.slot_4', index=16,
+      name='slot_4', full_name='dota.CMsgDOTAFantasyLeagueInfo.slot_4', index=16,
       number=22, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot_5', full_name='CMsgDOTAFantasyLeagueInfo.slot_5', index=17,
+      name='slot_5', full_name='dota.CMsgDOTAFantasyLeagueInfo.slot_5', index=17,
       number=23, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='bench_slots', full_name='CMsgDOTAFantasyLeagueInfo.bench_slots', index=18,
+      name='bench_slots', full_name='dota.CMsgDOTAFantasyLeagueInfo.bench_slots', index=18,
       number=24, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_info', full_name='CMsgDOTAFantasyLeagueInfo.owner_info', index=19,
+      name='owner_info', full_name='dota.CMsgDOTAFantasyLeagueInfo.owner_info', index=19,
       number=25, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='players', full_name='CMsgDOTAFantasyLeagueInfo.players', index=20,
+      name='players', full_name='dota.CMsgDOTAFantasyLeagueInfo.players', index=20,
       number=26, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_zone', full_name='CMsgDOTAFantasyLeagueInfo.time_zone', index=21,
+      name='time_zone', full_name='dota.CMsgDOTAFantasyLeagueInfo.time_zone', index=21,
       number=27, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='season', full_name='CMsgDOTAFantasyLeagueInfo.season', index=22,
+      name='season', full_name='dota.CMsgDOTAFantasyLeagueInfo.season', index=22,
       number=28, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='password', full_name='CMsgDOTAFantasyLeagueInfo.password', index=23,
+      name='password', full_name='dota.CMsgDOTAFantasyLeagueInfo.password', index=23,
       number=29, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -2025,27 +2025,27 @@ _CMSGDOTAFANTASYLEAGUEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1211,
-  serialized_end=1929,
+  serialized_start=1237,
+  serialized_end=1970,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEEDITINFOREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueEditInfoRequest',
-  full_name='CMsgDOTAFantasyLeagueEditInfoRequest',
+  full_name='dota.CMsgDOTAFantasyLeagueEditInfoRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueEditInfoRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueEditInfoRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='edit_info', full_name='CMsgDOTAFantasyLeagueEditInfoRequest.edit_info', index=1,
+      name='edit_info', full_name='dota.CMsgDOTAFantasyLeagueEditInfoRequest.edit_info', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -2063,20 +2063,20 @@ _CMSGDOTAFANTASYLEAGUEEDITINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1931,
-  serialized_end=2043,
+  serialized_start=1972,
+  serialized_end=2089,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueEditInfoResponse',
-  full_name='CMsgDOTAFantasyLeagueEditInfoResponse',
+  full_name='dota.CMsgDOTAFantasyLeagueEditInfoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyLeagueEditInfoResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyLeagueEditInfoResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2095,27 +2095,27 @@ _CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2046,
-  serialized_end=2230,
+  serialized_start=2092,
+  serialized_end=2281,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEFINDREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueFindRequest',
-  full_name='CMsgDOTAFantasyLeagueFindRequest',
+  full_name='dota.CMsgDOTAFantasyLeagueFindRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueFindRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueFindRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='password', full_name='CMsgDOTAFantasyLeagueFindRequest.password', index=1,
+      name='password', full_name='dota.CMsgDOTAFantasyLeagueFindRequest.password', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -2133,34 +2133,34 @@ _CMSGDOTAFANTASYLEAGUEFINDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2232,
-  serialized_end=2311,
+  serialized_start=2283,
+  serialized_end=2362,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEFINDRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueFindResponse',
-  full_name='CMsgDOTAFantasyLeagueFindResponse',
+  full_name='dota.CMsgDOTAFantasyLeagueFindResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyLeagueFindResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyLeagueFindResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_league_name', full_name='CMsgDOTAFantasyLeagueFindResponse.fantasy_league_name', index=1,
+      name='fantasy_league_name', full_name='dota.CMsgDOTAFantasyLeagueFindResponse.fantasy_league_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='commissioner_name', full_name='CMsgDOTAFantasyLeagueFindResponse.commissioner_name', index=2,
+      name='commissioner_name', full_name='dota.CMsgDOTAFantasyLeagueFindResponse.commissioner_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -2179,20 +2179,20 @@ _CMSGDOTAFANTASYLEAGUEFINDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2314,
-  serialized_end=2641,
+  serialized_start=2365,
+  serialized_end=2697,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEINFOREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueInfoRequest',
-  full_name='CMsgDOTAFantasyLeagueInfoRequest',
+  full_name='dota.CMsgDOTAFantasyLeagueInfoRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueInfoRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueInfoRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2210,20 +2210,20 @@ _CMSGDOTAFANTASYLEAGUEINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2643,
-  serialized_end=2704,
+  serialized_start=2699,
+  serialized_end=2760,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEINFORESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueInfoResponse',
-  full_name='CMsgDOTAFantasyLeagueInfoResponse',
+  full_name='dota.CMsgDOTAFantasyLeagueInfoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyLeagueInfoResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyLeagueInfoResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2242,20 +2242,20 @@ _CMSGDOTAFANTASYLEAGUEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2707,
-  serialized_end=2883,
+  serialized_start=2763,
+  serialized_end=2944,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEMATCHUPSREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueMatchupsRequest',
-  full_name='CMsgDOTAFantasyLeagueMatchupsRequest',
+  full_name='dota.CMsgDOTAFantasyLeagueMatchupsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueMatchupsRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueMatchupsRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2273,41 +2273,41 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2885,
-  serialized_end=2950,
+  serialized_start=2946,
+  serialized_end=3011,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_MATCHUP = _descriptor.Descriptor(
   name='Matchup',
-  full_name='CMsgDOTAFantasyLeagueMatchupsResponse.Matchup',
+  full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='owner_account_id_1', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.Matchup.owner_account_id_1', index=0,
+      name='owner_account_id_1', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup.owner_account_id_1', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id_2', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.Matchup.owner_account_id_2', index=1,
+      name='owner_account_id_2', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup.owner_account_id_2', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score_1', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.Matchup.score_1', index=2,
+      name='score_1', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup.score_1', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score_2', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.Matchup.score_2', index=3,
+      name='score_2', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup.score_2', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -2325,33 +2325,33 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_MATCHUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3174,
-  serialized_end=3273,
+  serialized_start=3245,
+  serialized_end=3344,
 )
 
 _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_WEEKLYMATCHUPS = _descriptor.Descriptor(
   name='WeeklyMatchups',
-  full_name='CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups',
+  full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='matchup', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups.matchup', index=0,
+      name='matchup', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups.matchup', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='start_time', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups.start_time', index=1,
+      name='start_time', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups.start_time', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='end_time', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups.end_time', index=2,
+      name='end_time', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups.end_time', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2369,33 +2369,33 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_WEEKLYMATCHUPS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3275,
-  serialized_end=3394,
+  serialized_start=3346,
+  serialized_end=3470,
 )
 
 _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueMatchupsResponse',
-  full_name='CMsgDOTAFantasyLeagueMatchupsResponse',
+  full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.fantasy_league_id', index=1,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.fantasy_league_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='weekly_matchups', full_name='CMsgDOTAFantasyLeagueMatchupsResponse.weekly_matchups', index=2,
+      name='weekly_matchups', full_name='dota.CMsgDOTAFantasyLeagueMatchupsResponse.weekly_matchups', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2414,41 +2414,41 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2953,
-  serialized_end=3491,
+  serialized_start=3014,
+  serialized_end=3567,
 )
 
 
 _CMSGDOTAEDITFANTASYTEAMREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAEditFantasyTeamRequest',
-  full_name='CMsgDOTAEditFantasyTeamRequest',
+  full_name='dota.CMsgDOTAEditFantasyTeamRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAEditFantasyTeamRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAEditFantasyTeamRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_index', full_name='CMsgDOTAEditFantasyTeamRequest.team_index', index=1,
+      name='team_index', full_name='dota.CMsgDOTAEditFantasyTeamRequest.team_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTAEditFantasyTeamRequest.team_name', index=2,
+      name='team_name', full_name='dota.CMsgDOTAEditFantasyTeamRequest.team_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_logo', full_name='CMsgDOTAEditFantasyTeamRequest.team_logo', index=3,
+      name='team_logo', full_name='dota.CMsgDOTAEditFantasyTeamRequest.team_logo', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2466,20 +2466,20 @@ _CMSGDOTAEDITFANTASYTEAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3493,
-  serialized_end=3610,
+  serialized_start=3569,
+  serialized_end=3686,
 )
 
 
 _CMSGDOTAEDITFANTASYTEAMRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAEditFantasyTeamResponse',
-  full_name='CMsgDOTAEditFantasyTeamResponse',
+  full_name='dota.CMsgDOTAEditFantasyTeamResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAEditFantasyTeamResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAEditFantasyTeamResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2498,20 +2498,20 @@ _CMSGDOTAEDITFANTASYTEAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3613,
-  serialized_end=3845,
+  serialized_start=3689,
+  serialized_end=3926,
 )
 
 
 _CMSGDOTAFANTASYTEAMINFOREQUESTBYFANTASYLEAGUEID = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID',
-  full_name='CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID',
+  full_name='dota.CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2529,20 +2529,20 @@ _CMSGDOTAFANTASYTEAMINFOREQUESTBYFANTASYLEAGUEID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3847,
-  serialized_end=3923,
+  serialized_start=3928,
+  serialized_end=4004,
 )
 
 
 _CMSGDOTAFANTASYTEAMINFOREQUESTBYOWNERACCOUNTID = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID',
-  full_name='CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID',
+  full_name='dota.CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='owner_account_id', full_name='CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID.owner_account_id', index=0,
+      name='owner_account_id', full_name='dota.CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID.owner_account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2560,20 +2560,20 @@ _CMSGDOTAFANTASYTEAMINFOREQUESTBYOWNERACCOUNTID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3925,
-  serialized_end=3999,
+  serialized_start=4006,
+  serialized_end=4080,
 )
 
 
 _CMSGDOTAFANTASYTEAMINFORESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamInfoResponse',
-  full_name='CMsgDOTAFantasyTeamInfoResponse',
+  full_name='dota.CMsgDOTAFantasyTeamInfoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='results', full_name='CMsgDOTAFantasyTeamInfoResponse.results', index=0,
+      name='results', full_name='dota.CMsgDOTAFantasyTeamInfoResponse.results', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2591,69 +2591,69 @@ _CMSGDOTAFANTASYTEAMINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4001,
-  serialized_end=4077,
+  serialized_start=4082,
+  serialized_end=4163,
 )
 
 
 _CMSGDOTAFANTASYTEAMINFO = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamInfo',
-  full_name='CMsgDOTAFantasyTeamInfo',
+  full_name='dota.CMsgDOTAFantasyTeamInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamInfo.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamInfo.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id', full_name='CMsgDOTAFantasyTeamInfo.owner_account_id', index=1,
+      name='owner_account_id', full_name='dota.CMsgDOTAFantasyTeamInfo.owner_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_team_index', full_name='CMsgDOTAFantasyTeamInfo.fantasy_team_index', index=2,
+      name='fantasy_team_index', full_name='dota.CMsgDOTAFantasyTeamInfo.fantasy_team_index', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTAFantasyTeamInfo.team_name', index=3,
+      name='team_name', full_name='dota.CMsgDOTAFantasyTeamInfo.team_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_logo', full_name='CMsgDOTAFantasyTeamInfo.team_logo', index=4,
+      name='team_logo', full_name='dota.CMsgDOTAFantasyTeamInfo.team_logo', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='wins', full_name='CMsgDOTAFantasyTeamInfo.wins', index=5,
+      name='wins', full_name='dota.CMsgDOTAFantasyTeamInfo.wins', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='losses', full_name='CMsgDOTAFantasyTeamInfo.losses', index=6,
+      name='losses', full_name='dota.CMsgDOTAFantasyTeamInfo.losses', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='current_roster', full_name='CMsgDOTAFantasyTeamInfo.current_roster', index=7,
+      name='current_roster', full_name='dota.CMsgDOTAFantasyTeamInfo.current_roster', index=7,
       number=8, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2671,62 +2671,62 @@ _CMSGDOTAFANTASYTEAMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4080,
-  serialized_end=4278,
+  serialized_start=4166,
+  serialized_end=4364,
 )
 
 
 _CMSGDOTAFANTASYTEAMSCOREREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamScoreRequest',
-  full_name='CMsgDOTAFantasyTeamScoreRequest',
+  full_name='dota.CMsgDOTAFantasyTeamScoreRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamScoreRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamScoreRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id', full_name='CMsgDOTAFantasyTeamScoreRequest.owner_account_id', index=1,
+      name='owner_account_id', full_name='dota.CMsgDOTAFantasyTeamScoreRequest.owner_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_team_index', full_name='CMsgDOTAFantasyTeamScoreRequest.fantasy_team_index', index=2,
+      name='fantasy_team_index', full_name='dota.CMsgDOTAFantasyTeamScoreRequest.fantasy_team_index', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_match_id', full_name='CMsgDOTAFantasyTeamScoreRequest.filter_match_id', index=3,
+      name='filter_match_id', full_name='dota.CMsgDOTAFantasyTeamScoreRequest.filter_match_id', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_start_time', full_name='CMsgDOTAFantasyTeamScoreRequest.filter_start_time', index=4,
+      name='filter_start_time', full_name='dota.CMsgDOTAFantasyTeamScoreRequest.filter_start_time', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_end_time', full_name='CMsgDOTAFantasyTeamScoreRequest.filter_end_time', index=5,
+      name='filter_end_time', full_name='dota.CMsgDOTAFantasyTeamScoreRequest.filter_end_time', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='include_bench', full_name='CMsgDOTAFantasyTeamScoreRequest.include_bench', index=6,
+      name='include_bench', full_name='dota.CMsgDOTAFantasyTeamScoreRequest.include_bench', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -2744,27 +2744,27 @@ _CMSGDOTAFANTASYTEAMSCOREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4281,
-  serialized_end=4495,
+  serialized_start=4367,
+  serialized_end=4581,
 )
 
 
 _CMSGDOTAFANTASYTEAMSCORERESPONSE_CMSGPLAYERSCORE = _descriptor.Descriptor(
   name='CMsgPlayerScore',
-  full_name='CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore',
+  full_name='dota.CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score', full_name='CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore.score', index=1,
+      name='score', full_name='dota.CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore.score', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -2782,33 +2782,33 @@ _CMSGDOTAFANTASYTEAMSCORERESPONSE_CMSGPLAYERSCORE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4711,
-  serialized_end=4763,
+  serialized_start=4807,
+  serialized_end=4859,
 )
 
 _CMSGDOTAFANTASYTEAMSCORERESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamScoreResponse',
-  full_name='CMsgDOTAFantasyTeamScoreResponse',
+  full_name='dota.CMsgDOTAFantasyTeamScoreResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyTeamScoreResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyTeamScoreResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_team_score', full_name='CMsgDOTAFantasyTeamScoreResponse.fantasy_team_score', index=1,
+      name='fantasy_team_score', full_name='dota.CMsgDOTAFantasyTeamScoreResponse.fantasy_team_score', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_player_score', full_name='CMsgDOTAFantasyTeamScoreResponse.fantasy_player_score', index=2,
+      name='fantasy_player_score', full_name='dota.CMsgDOTAFantasyTeamScoreResponse.fantasy_player_score', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2827,62 +2827,62 @@ _CMSGDOTAFANTASYTEAMSCORERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4498,
-  serialized_end=4866,
+  serialized_start=4584,
+  serialized_end=4962,
 )
 
 
 _CMSGDOTAFANTASYTEAMSTANDINGSREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamStandingsRequest',
-  full_name='CMsgDOTAFantasyTeamStandingsRequest',
+  full_name='dota.CMsgDOTAFantasyTeamStandingsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamStandingsRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamStandingsRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='count', full_name='CMsgDOTAFantasyTeamStandingsRequest.count', index=1,
+      name='count', full_name='dota.CMsgDOTAFantasyTeamStandingsRequest.count', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_start_time', full_name='CMsgDOTAFantasyTeamStandingsRequest.filter_start_time', index=2,
+      name='filter_start_time', full_name='dota.CMsgDOTAFantasyTeamStandingsRequest.filter_start_time', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_end_time', full_name='CMsgDOTAFantasyTeamStandingsRequest.filter_end_time', index=3,
+      name='filter_end_time', full_name='dota.CMsgDOTAFantasyTeamStandingsRequest.filter_end_time', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_match_id', full_name='CMsgDOTAFantasyTeamStandingsRequest.filter_match_id', index=4,
+      name='filter_match_id', full_name='dota.CMsgDOTAFantasyTeamStandingsRequest.filter_match_id', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_last_match', full_name='CMsgDOTAFantasyTeamStandingsRequest.filter_last_match', index=5,
+      name='filter_last_match', full_name='dota.CMsgDOTAFantasyTeamStandingsRequest.filter_last_match', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_in_hall', full_name='CMsgDOTAFantasyTeamStandingsRequest.filter_in_hall', index=6,
+      name='filter_in_hall', full_name='dota.CMsgDOTAFantasyTeamStandingsRequest.filter_in_hall', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -2900,90 +2900,90 @@ _CMSGDOTAFANTASYTEAMSTANDINGSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4869,
-  serialized_end=5076,
+  serialized_start=4965,
+  serialized_end=5172,
 )
 
 
 _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_CMSGTEAMSCORE = _descriptor.Descriptor(
   name='CMsgTeamScore',
-  full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore',
+  full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.owner_account_id', index=1,
+      name='owner_account_id', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.owner_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_team_index', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.fantasy_team_index', index=2,
+      name='fantasy_team_index', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.fantasy_team_index', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_team_logo', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.fantasy_team_logo', index=3,
+      name='fantasy_team_logo', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.fantasy_team_logo', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_name', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.owner_name', index=4,
+      name='owner_name', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.owner_name', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_team_name', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.fantasy_team_name', index=5,
+      name='fantasy_team_name', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.fantasy_team_name', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.score', index=6,
+      name='score', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.score', index=6,
       number=7, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score_against', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.score_against', index=7,
+      name='score_against', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.score_against', index=7,
       number=8, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='wins', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.wins', index=8,
+      name='wins', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.wins', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='losses', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.losses', index=9,
+      name='losses', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.losses', index=9,
       number=10, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='streak', full_name='CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.streak', index=10,
+      name='streak', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore.streak', index=10,
       number=11, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3001,26 +3001,26 @@ _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_CMSGTEAMSCORE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5266,
-  serialized_end=5520,
+  serialized_start=5372,
+  serialized_end=5626,
 )
 
 _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamStandingsResponse',
-  full_name='CMsgDOTAFantasyTeamStandingsResponse',
+  full_name='dota.CMsgDOTAFantasyTeamStandingsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyTeamStandingsResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_scores', full_name='CMsgDOTAFantasyTeamStandingsResponse.team_scores', index=1,
+      name='team_scores', full_name='dota.CMsgDOTAFantasyTeamStandingsResponse.team_scores', index=1,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -3039,55 +3039,55 @@ _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5079,
-  serialized_end=5592,
+  serialized_start=5175,
+  serialized_end=5698,
 )
 
 
 _CMSGDOTAFANTASYPLAYERSCOREREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerScoreRequest',
-  full_name='CMsgDOTAFantasyPlayerScoreRequest',
+  full_name='dota.CMsgDOTAFantasyPlayerScoreRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyPlayerScoreRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyPlayerScoreRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_account_id', full_name='CMsgDOTAFantasyPlayerScoreRequest.player_account_id', index=1,
+      name='player_account_id', full_name='dota.CMsgDOTAFantasyPlayerScoreRequest.player_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_start_time', full_name='CMsgDOTAFantasyPlayerScoreRequest.filter_start_time', index=2,
+      name='filter_start_time', full_name='dota.CMsgDOTAFantasyPlayerScoreRequest.filter_start_time', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_end_time', full_name='CMsgDOTAFantasyPlayerScoreRequest.filter_end_time', index=3,
+      name='filter_end_time', full_name='dota.CMsgDOTAFantasyPlayerScoreRequest.filter_end_time', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_match_id', full_name='CMsgDOTAFantasyPlayerScoreRequest.filter_match_id', index=4,
+      name='filter_match_id', full_name='dota.CMsgDOTAFantasyPlayerScoreRequest.filter_match_id', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_last_match', full_name='CMsgDOTAFantasyPlayerScoreRequest.filter_last_match', index=5,
+      name='filter_last_match', full_name='dota.CMsgDOTAFantasyPlayerScoreRequest.filter_last_match', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -3105,48 +3105,48 @@ _CMSGDOTAFANTASYPLAYERSCOREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5595,
-  serialized_end=5788,
+  serialized_start=5701,
+  serialized_end=5894,
 )
 
 
 _CMSGDOTAFANTASYPLAYERSCORERESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerScoreResponse',
-  full_name='CMsgDOTAFantasyPlayerScoreResponse',
+  full_name='dota.CMsgDOTAFantasyPlayerScoreResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyPlayerScoreResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyPlayerScoreResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyPlayerScoreResponse.fantasy_league_id', index=1,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyPlayerScoreResponse.fantasy_league_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_account_id', full_name='CMsgDOTAFantasyPlayerScoreResponse.player_account_id', index=2,
+      name='player_account_id', full_name='dota.CMsgDOTAFantasyPlayerScoreResponse.player_account_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_name', full_name='CMsgDOTAFantasyPlayerScoreResponse.player_name', index=3,
+      name='player_name', full_name='dota.CMsgDOTAFantasyPlayerScoreResponse.player_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score', full_name='CMsgDOTAFantasyPlayerScoreResponse.score', index=4,
+      name='score', full_name='dota.CMsgDOTAFantasyPlayerScoreResponse.score', index=4,
       number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -3165,62 +3165,62 @@ _CMSGDOTAFANTASYPLAYERSCORERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5791,
-  serialized_end=6059,
+  serialized_start=5897,
+  serialized_end=6170,
 )
 
 
 _CMSGDOTAFANTASYPLAYERSTANDINGSREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerStandingsRequest',
-  full_name='CMsgDOTAFantasyPlayerStandingsRequest',
+  full_name='dota.CMsgDOTAFantasyPlayerStandingsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyPlayerStandingsRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyPlayerStandingsRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='count', full_name='CMsgDOTAFantasyPlayerStandingsRequest.count', index=1,
+      name='count', full_name='dota.CMsgDOTAFantasyPlayerStandingsRequest.count', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='role', full_name='CMsgDOTAFantasyPlayerStandingsRequest.role', index=2,
+      name='role', full_name='dota.CMsgDOTAFantasyPlayerStandingsRequest.role', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_start_time', full_name='CMsgDOTAFantasyPlayerStandingsRequest.filter_start_time', index=3,
+      name='filter_start_time', full_name='dota.CMsgDOTAFantasyPlayerStandingsRequest.filter_start_time', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_end_time', full_name='CMsgDOTAFantasyPlayerStandingsRequest.filter_end_time', index=4,
+      name='filter_end_time', full_name='dota.CMsgDOTAFantasyPlayerStandingsRequest.filter_end_time', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_match_id', full_name='CMsgDOTAFantasyPlayerStandingsRequest.filter_match_id', index=5,
+      name='filter_match_id', full_name='dota.CMsgDOTAFantasyPlayerStandingsRequest.filter_match_id', index=5,
       number=6, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filter_last_match', full_name='CMsgDOTAFantasyPlayerStandingsRequest.filter_last_match', index=6,
+      name='filter_last_match', full_name='dota.CMsgDOTAFantasyPlayerStandingsRequest.filter_last_match', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -3238,34 +3238,34 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6062,
-  serialized_end=6261,
+  serialized_start=6173,
+  serialized_end=6372,
 )
 
 
 _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_CMSGPLAYERSCORE = _descriptor.Descriptor(
   name='CMsgPlayerScore',
-  full_name='CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore',
+  full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player_account_id', full_name='CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore.player_account_id', index=0,
+      name='player_account_id', full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore.player_account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_name', full_name='CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore.player_name', index=1,
+      name='player_name', full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore.player_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score', full_name='CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore.score', index=2,
+      name='score', full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore.score', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -3283,40 +3283,40 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_CMSGPLAYERSCORE = _descriptor.Descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6501,
-  serialized_end=6581,
+  serialized_start=6622,
+  serialized_end=6702,
 )
 
 _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerStandingsResponse',
-  full_name='CMsgDOTAFantasyPlayerStandingsResponse',
+  full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyPlayerStandingsResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyPlayerStandingsResponse.fantasy_league_id', index=1,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.fantasy_league_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='role', full_name='CMsgDOTAFantasyPlayerStandingsResponse.role', index=2,
+      name='role', full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.role', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_scores', full_name='CMsgDOTAFantasyPlayerStandingsResponse.player_scores', index=3,
+      name='player_scores', full_name='dota.CMsgDOTAFantasyPlayerStandingsResponse.player_scores', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -3335,14 +3335,14 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6264,
-  serialized_end=6653,
+  serialized_start=6375,
+  serialized_end=6774,
 )
 
 
 _CMSGDOTAFANTASYPLAYERINFOREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerInfoRequest',
-  full_name='CMsgDOTAFantasyPlayerInfoRequest',
+  full_name='dota.CMsgDOTAFantasyPlayerInfoRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -3359,20 +3359,20 @@ _CMSGDOTAFANTASYPLAYERINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6655,
-  serialized_end=6689,
+  serialized_start=6776,
+  serialized_end=6810,
 )
 
 
 _CMSGDOTAFANTASYPLAYERINFORESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerInfoResponse',
-  full_name='CMsgDOTAFantasyPlayerInfoResponse',
+  full_name='dota.CMsgDOTAFantasyPlayerInfoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='msg', full_name='CMsgDOTAFantasyPlayerInfoResponse.msg', index=0,
+      name='msg', full_name='dota.CMsgDOTAFantasyPlayerInfoResponse.msg', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -3390,55 +3390,55 @@ _CMSGDOTAFANTASYPLAYERINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6691,
-  serialized_end=6758,
+  serialized_start=6812,
+  serialized_end=6884,
 )
 
 
 _CMSGDOTAFANTASYLEAGUECREATEREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueCreateRequest',
-  full_name='CMsgDOTAFantasyLeagueCreateRequest',
+  full_name='dota.CMsgDOTAFantasyLeagueCreateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='season_id', full_name='CMsgDOTAFantasyLeagueCreateRequest.season_id', index=0,
+      name='season_id', full_name='dota.CMsgDOTAFantasyLeagueCreateRequest.season_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_league_name', full_name='CMsgDOTAFantasyLeagueCreateRequest.fantasy_league_name', index=1,
+      name='fantasy_league_name', full_name='dota.CMsgDOTAFantasyLeagueCreateRequest.fantasy_league_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='password', full_name='CMsgDOTAFantasyLeagueCreateRequest.password', index=2,
+      name='password', full_name='dota.CMsgDOTAFantasyLeagueCreateRequest.password', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTAFantasyLeagueCreateRequest.team_name', index=3,
+      name='team_name', full_name='dota.CMsgDOTAFantasyLeagueCreateRequest.team_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAFantasyLeagueCreateRequest.logo', index=4,
+      name='logo', full_name='dota.CMsgDOTAFantasyLeagueCreateRequest.logo', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ticket_item_id', full_name='CMsgDOTAFantasyLeagueCreateRequest.ticket_item_id', index=5,
+      name='ticket_item_id', full_name='dota.CMsgDOTAFantasyLeagueCreateRequest.ticket_item_id', index=5,
       number=6, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3456,27 +3456,27 @@ _CMSGDOTAFANTASYLEAGUECREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6761,
-  serialized_end=6920,
+  serialized_start=6887,
+  serialized_end=7046,
 )
 
 
 _CMSGDOTAFANTASYLEAGUECREATERESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueCreateResponse',
-  full_name='CMsgDOTAFantasyLeagueCreateResponse',
+  full_name='dota.CMsgDOTAFantasyLeagueCreateResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyLeagueCreateResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyLeagueCreateResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueCreateResponse.fantasy_league_id', index=1,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueCreateResponse.fantasy_league_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3495,48 +3495,48 @@ _CMSGDOTAFANTASYLEAGUECREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6923,
-  serialized_end=7259,
+  serialized_start=7049,
+  serialized_end=7390,
 )
 
 
 _CMSGDOTAFANTASYTEAMCREATEREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamCreateRequest',
-  full_name='CMsgDOTAFantasyTeamCreateRequest',
+  full_name='dota.CMsgDOTAFantasyTeamCreateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamCreateRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamCreateRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='password', full_name='CMsgDOTAFantasyTeamCreateRequest.password', index=1,
+      name='password', full_name='dota.CMsgDOTAFantasyTeamCreateRequest.password', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTAFantasyTeamCreateRequest.team_name', index=2,
+      name='team_name', full_name='dota.CMsgDOTAFantasyTeamCreateRequest.team_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='logo', full_name='CMsgDOTAFantasyTeamCreateRequest.logo', index=3,
+      name='logo', full_name='dota.CMsgDOTAFantasyTeamCreateRequest.logo', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ticket_item_id', full_name='CMsgDOTAFantasyTeamCreateRequest.ticket_item_id', index=4,
+      name='ticket_item_id', full_name='dota.CMsgDOTAFantasyTeamCreateRequest.ticket_item_id', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3554,27 +3554,27 @@ _CMSGDOTAFANTASYTEAMCREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7262,
-  serialized_end=7398,
+  serialized_start=7393,
+  serialized_end=7529,
 )
 
 
 _CMSGDOTAFANTASYTEAMCREATERESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamCreateResponse',
-  full_name='CMsgDOTAFantasyTeamCreateResponse',
+  full_name='dota.CMsgDOTAFantasyTeamCreateResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyTeamCreateResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyTeamCreateResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_team_index', full_name='CMsgDOTAFantasyTeamCreateResponse.fantasy_team_index', index=1,
+      name='fantasy_team_index', full_name='dota.CMsgDOTAFantasyTeamCreateResponse.fantasy_team_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3593,27 +3593,27 @@ _CMSGDOTAFANTASYTEAMCREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7401,
-  serialized_end=7801,
+  serialized_start=7532,
+  serialized_end=7937,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST_INVITECHANGE = _descriptor.Descriptor(
   name='InviteChange',
-  full_name='CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange',
+  full_name='dota.CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='invited', full_name='CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange.invited', index=1,
+      name='invited', full_name='dota.CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange.invited', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -3631,33 +3631,33 @@ _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST_INVITECHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7970,
-  serialized_end=8021,
+  serialized_start=8111,
+  serialized_end=8162,
 )
 
 _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueEditInvitesRequest',
-  full_name='CMsgDOTAFantasyLeagueEditInvitesRequest',
+  full_name='dota.CMsgDOTAFantasyLeagueEditInvitesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueEditInvitesRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueEditInvitesRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='password', full_name='CMsgDOTAFantasyLeagueEditInvitesRequest.password', index=1,
+      name='password', full_name='dota.CMsgDOTAFantasyLeagueEditInvitesRequest.password', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='invite_change', full_name='CMsgDOTAFantasyLeagueEditInvitesRequest.invite_change', index=2,
+      name='invite_change', full_name='dota.CMsgDOTAFantasyLeagueEditInvitesRequest.invite_change', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -3675,20 +3675,20 @@ _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7804,
-  serialized_end=8021,
+  serialized_start=7940,
+  serialized_end=8162,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueEditInvitesResponse',
-  full_name='CMsgDOTAFantasyLeagueEditInvitesResponse',
+  full_name='dota.CMsgDOTAFantasyLeagueEditInvitesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyLeagueEditInvitesResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyLeagueEditInvitesResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3707,20 +3707,20 @@ _CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8024,
-  serialized_end=8189,
+  serialized_start=8165,
+  serialized_end=8335,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEDRAFTSTATUSREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueDraftStatusRequest',
-  full_name='CMsgDOTAFantasyLeagueDraftStatusRequest',
+  full_name='dota.CMsgDOTAFantasyLeagueDraftStatusRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueDraftStatusRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueDraftStatusRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3738,62 +3738,62 @@ _CMSGDOTAFANTASYLEAGUEDRAFTSTATUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8191,
-  serialized_end=8259,
+  serialized_start=8337,
+  serialized_end=8405,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEDRAFTSTATUS = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueDraftStatus',
-  full_name='CMsgDOTAFantasyLeagueDraftStatus',
+  full_name='dota.CMsgDOTAFantasyLeagueDraftStatus',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueDraftStatus.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueDraftStatus.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='draft_order', full_name='CMsgDOTAFantasyLeagueDraftStatus.draft_order', index=1,
+      name='draft_order', full_name='dota.CMsgDOTAFantasyLeagueDraftStatus.draft_order', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='current_pick', full_name='CMsgDOTAFantasyLeagueDraftStatus.current_pick', index=2,
+      name='current_pick', full_name='dota.CMsgDOTAFantasyLeagueDraftStatus.current_pick', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_remaining', full_name='CMsgDOTAFantasyLeagueDraftStatus.time_remaining', index=3,
+      name='time_remaining', full_name='dota.CMsgDOTAFantasyLeagueDraftStatus.time_remaining', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pending_resume', full_name='CMsgDOTAFantasyLeagueDraftStatus.pending_resume', index=4,
+      name='pending_resume', full_name='dota.CMsgDOTAFantasyLeagueDraftStatus.pending_resume', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='completed', full_name='CMsgDOTAFantasyLeagueDraftStatus.completed', index=5,
+      name='completed', full_name='dota.CMsgDOTAFantasyLeagueDraftStatus.completed', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='available_players', full_name='CMsgDOTAFantasyLeagueDraftStatus.available_players', index=6,
+      name='available_players', full_name='dota.CMsgDOTAFantasyLeagueDraftStatus.available_players', index=6,
       number=7, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -3811,34 +3811,34 @@ _CMSGDOTAFANTASYLEAGUEDRAFTSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8262,
-  serialized_end=8460,
+  serialized_start=8408,
+  serialized_end=8606,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueDraftPlayerRequest',
-  full_name='CMsgDOTAFantasyLeagueDraftPlayerRequest',
+  full_name='dota.CMsgDOTAFantasyLeagueDraftPlayerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeagueDraftPlayerRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeagueDraftPlayerRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_index', full_name='CMsgDOTAFantasyLeagueDraftPlayerRequest.team_index', index=1,
+      name='team_index', full_name='dota.CMsgDOTAFantasyLeagueDraftPlayerRequest.team_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_account_id', full_name='CMsgDOTAFantasyLeagueDraftPlayerRequest.player_account_id', index=2,
+      name='player_account_id', full_name='dota.CMsgDOTAFantasyLeagueDraftPlayerRequest.player_account_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3856,20 +3856,20 @@ _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8462,
-  serialized_end=8577,
+  serialized_start=8608,
+  serialized_end=8723,
 )
 
 
 _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeagueDraftPlayerResponse',
-  full_name='CMsgDOTAFantasyLeagueDraftPlayerResponse',
+  full_name='dota.CMsgDOTAFantasyLeagueDraftPlayerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyLeagueDraftPlayerResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyLeagueDraftPlayerResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3888,48 +3888,48 @@ _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8580,
-  serialized_end=8966,
+  serialized_start=8726,
+  serialized_end=9117,
 )
 
 
 _CMSGDOTAFANTASYTEAMROSTERSWAPREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamRosterSwapRequest',
-  full_name='CMsgDOTAFantasyTeamRosterSwapRequest',
+  full_name='dota.CMsgDOTAFantasyTeamRosterSwapRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamRosterSwapRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamRosterSwapRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_index', full_name='CMsgDOTAFantasyTeamRosterSwapRequest.team_index', index=1,
+      name='team_index', full_name='dota.CMsgDOTAFantasyTeamRosterSwapRequest.team_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgDOTAFantasyTeamRosterSwapRequest.timestamp', index=2,
+      name='timestamp', full_name='dota.CMsgDOTAFantasyTeamRosterSwapRequest.timestamp', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot_1', full_name='CMsgDOTAFantasyTeamRosterSwapRequest.slot_1', index=3,
+      name='slot_1', full_name='dota.CMsgDOTAFantasyTeamRosterSwapRequest.slot_1', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot_2', full_name='CMsgDOTAFantasyTeamRosterSwapRequest.slot_2', index=4,
+      name='slot_2', full_name='dota.CMsgDOTAFantasyTeamRosterSwapRequest.slot_2', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3947,20 +3947,20 @@ _CMSGDOTAFANTASYTEAMROSTERSWAPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8969,
-  serialized_end=9105,
+  serialized_start=9120,
+  serialized_end=9256,
 )
 
 
 _CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamRosterSwapResponse',
-  full_name='CMsgDOTAFantasyTeamRosterSwapResponse',
+  full_name='dota.CMsgDOTAFantasyTeamRosterSwapResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyTeamRosterSwapResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyTeamRosterSwapResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3979,41 +3979,41 @@ _CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9108,
-  serialized_end=9346,
+  serialized_start=9259,
+  serialized_end=9502,
 )
 
 
 _CMSGDOTAFANTASYTEAMROSTERADDDROPREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamRosterAddDropRequest',
-  full_name='CMsgDOTAFantasyTeamRosterAddDropRequest',
+  full_name='dota.CMsgDOTAFantasyTeamRosterAddDropRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamRosterAddDropRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamRosterAddDropRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_index', full_name='CMsgDOTAFantasyTeamRosterAddDropRequest.team_index', index=1,
+      name='team_index', full_name='dota.CMsgDOTAFantasyTeamRosterAddDropRequest.team_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='add_account_id', full_name='CMsgDOTAFantasyTeamRosterAddDropRequest.add_account_id', index=2,
+      name='add_account_id', full_name='dota.CMsgDOTAFantasyTeamRosterAddDropRequest.add_account_id', index=2,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='drop_account_id', full_name='CMsgDOTAFantasyTeamRosterAddDropRequest.drop_account_id', index=3,
+      name='drop_account_id', full_name='dota.CMsgDOTAFantasyTeamRosterAddDropRequest.drop_account_id', index=3,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4031,20 +4031,20 @@ _CMSGDOTAFANTASYTEAMROSTERADDDROPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9349,
-  serialized_end=9486,
+  serialized_start=9505,
+  serialized_end=9642,
 )
 
 
 _CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamRosterAddDropResponse',
-  full_name='CMsgDOTAFantasyTeamRosterAddDropResponse',
+  full_name='dota.CMsgDOTAFantasyTeamRosterAddDropResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyTeamRosterAddDropResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyTeamRosterAddDropResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4063,20 +4063,20 @@ _CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9489,
-  serialized_end=9781,
+  serialized_start=9645,
+  serialized_end=9942,
 )
 
 
 _CMSGDOTAFANTASYTEAMTRADESREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamTradesRequest',
-  full_name='CMsgDOTAFantasyTeamTradesRequest',
+  full_name='dota.CMsgDOTAFantasyTeamTradesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamTradesRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamTradesRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4094,55 +4094,55 @@ _CMSGDOTAFANTASYTEAMTRADESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9783,
-  serialized_end=9844,
+  serialized_start=9944,
+  serialized_end=10005,
 )
 
 
 _CMSGDOTAFANTASYTEAMTRADESRESPONSE_TRADE = _descriptor.Descriptor(
   name='Trade',
-  full_name='CMsgDOTAFantasyTeamTradesResponse.Trade',
+  full_name='dota.CMsgDOTAFantasyTeamTradesResponse.Trade',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgDOTAFantasyTeamTradesResponse.Trade.timestamp', index=0,
+      name='timestamp', full_name='dota.CMsgDOTAFantasyTeamTradesResponse.Trade.timestamp', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id_1', full_name='CMsgDOTAFantasyTeamTradesResponse.Trade.owner_account_id_1', index=1,
+      name='owner_account_id_1', full_name='dota.CMsgDOTAFantasyTeamTradesResponse.Trade.owner_account_id_1', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id_2', full_name='CMsgDOTAFantasyTeamTradesResponse.Trade.owner_account_id_2', index=2,
+      name='owner_account_id_2', full_name='dota.CMsgDOTAFantasyTeamTradesResponse.Trade.owner_account_id_2', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_account_id_1', full_name='CMsgDOTAFantasyTeamTradesResponse.Trade.player_account_id_1', index=3,
+      name='player_account_id_1', full_name='dota.CMsgDOTAFantasyTeamTradesResponse.Trade.player_account_id_1', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_account_id_2', full_name='CMsgDOTAFantasyTeamTradesResponse.Trade.player_account_id_2', index=4,
+      name='player_account_id_2', full_name='dota.CMsgDOTAFantasyTeamTradesResponse.Trade.player_account_id_2', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgDOTAFantasyTeamTradesResponse.Trade.status', index=5,
+      name='status', full_name='dota.CMsgDOTAFantasyTeamTradesResponse.Trade.status', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4160,26 +4160,26 @@ _CMSGDOTAFANTASYTEAMTRADESRESPONSE_TRADE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10012,
-  serialized_end=10168,
+  serialized_start=10183,
+  serialized_end=10339,
 )
 
 _CMSGDOTAFANTASYTEAMTRADESRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamTradesResponse',
-  full_name='CMsgDOTAFantasyTeamTradesResponse',
+  full_name='dota.CMsgDOTAFantasyTeamTradesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyTeamTradesResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyTeamTradesResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='trades', full_name='CMsgDOTAFantasyTeamTradesResponse.trades', index=1,
+      name='trades', full_name='dota.CMsgDOTAFantasyTeamTradesResponse.trades', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -4198,41 +4198,41 @@ _CMSGDOTAFANTASYTEAMTRADESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9847,
-  serialized_end=10240,
+  serialized_start=10008,
+  serialized_end=10411,
 )
 
 
 _CMSGDOTAFANTASYTEAMTRADECANCELREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamTradeCancelRequest',
-  full_name='CMsgDOTAFantasyTeamTradeCancelRequest',
+  full_name='dota.CMsgDOTAFantasyTeamTradeCancelRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamTradeCancelRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamTradeCancelRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_index_1', full_name='CMsgDOTAFantasyTeamTradeCancelRequest.team_index_1', index=1,
+      name='team_index_1', full_name='dota.CMsgDOTAFantasyTeamTradeCancelRequest.team_index_1', index=1,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id_2', full_name='CMsgDOTAFantasyTeamTradeCancelRequest.owner_account_id_2', index=2,
+      name='owner_account_id_2', full_name='dota.CMsgDOTAFantasyTeamTradeCancelRequest.owner_account_id_2', index=2,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_index_2', full_name='CMsgDOTAFantasyTeamTradeCancelRequest.team_index_2', index=3,
+      name='team_index_2', full_name='dota.CMsgDOTAFantasyTeamTradeCancelRequest.team_index_2', index=3,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4250,20 +4250,20 @@ _CMSGDOTAFANTASYTEAMTRADECANCELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10243,
-  serialized_end=10381,
+  serialized_start=10414,
+  serialized_end=10552,
 )
 
 
 _CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamTradeCancelResponse',
-  full_name='CMsgDOTAFantasyTeamTradeCancelResponse',
+  full_name='dota.CMsgDOTAFantasyTeamTradeCancelResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyTeamTradeCancelResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyTeamTradeCancelResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4282,41 +4282,41 @@ _CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10384,
-  serialized_end=10590,
+  serialized_start=10555,
+  serialized_end=10766,
 )
 
 
 _CMSGDOTAFANTASYTEAMROSTERREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamRosterRequest',
-  full_name='CMsgDOTAFantasyTeamRosterRequest',
+  full_name='dota.CMsgDOTAFantasyTeamRosterRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyTeamRosterRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyTeamRosterRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_index', full_name='CMsgDOTAFantasyTeamRosterRequest.team_index', index=1,
+      name='team_index', full_name='dota.CMsgDOTAFantasyTeamRosterRequest.team_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id', full_name='CMsgDOTAFantasyTeamRosterRequest.owner_account_id', index=2,
+      name='owner_account_id', full_name='dota.CMsgDOTAFantasyTeamRosterRequest.owner_account_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgDOTAFantasyTeamRosterRequest.timestamp', index=3,
+      name='timestamp', full_name='dota.CMsgDOTAFantasyTeamRosterRequest.timestamp', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4334,34 +4334,34 @@ _CMSGDOTAFANTASYTEAMROSTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10592,
-  serialized_end=10718,
+  serialized_start=10768,
+  serialized_end=10894,
 )
 
 
 _CMSGDOTAFANTASYTEAMROSTERRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyTeamRosterResponse',
-  full_name='CMsgDOTAFantasyTeamRosterResponse',
+  full_name='dota.CMsgDOTAFantasyTeamRosterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyTeamRosterResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyTeamRosterResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_account_ids', full_name='CMsgDOTAFantasyTeamRosterResponse.player_account_ids', index=1,
+      name='player_account_ids', full_name='dota.CMsgDOTAFantasyTeamRosterResponse.player_account_ids', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_locked', full_name='CMsgDOTAFantasyTeamRosterResponse.player_locked', index=2,
+      name='player_locked', full_name='dota.CMsgDOTAFantasyTeamRosterResponse.player_locked', index=2,
       number=3, type=8, cpp_type=7, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -4380,20 +4380,20 @@ _CMSGDOTAFANTASYTEAMROSTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10721,
-  serialized_end=10979,
+  serialized_start=10897,
+  serialized_end=11160,
 )
 
 
 _CMSGDOTAFANTASYPLAYERHISORICALSTATSREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerHisoricalStatsRequest',
-  full_name='CMsgDOTAFantasyPlayerHisoricalStatsRequest',
+  full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyPlayerHisoricalStatsRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4411,111 +4411,111 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10981,
-  serialized_end=11052,
+  serialized_start=11162,
+  serialized_end=11233,
 )
 
 
 _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSCOREACCUMULATOR = _descriptor.Descriptor(
   name='PlayerScoreAccumulator',
-  full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator',
+  full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='matches', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.matches', index=0,
+      name='matches', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.matches', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='levels', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.levels', index=1,
+      name='levels', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.levels', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='kills', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.kills', index=2,
+      name='kills', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.kills', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='deaths', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.deaths', index=3,
+      name='deaths', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.deaths', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='assists', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.assists', index=4,
+      name='assists', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.assists', index=4,
       number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='last_hits', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.last_hits', index=5,
+      name='last_hits', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.last_hits', index=5,
       number=6, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='denies', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.denies', index=6,
+      name='denies', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.denies', index=6,
       number=7, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gpm', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.gpm', index=7,
+      name='gpm', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.gpm', index=7,
       number=8, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='xppm', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.xppm', index=8,
+      name='xppm', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.xppm', index=8,
       number=9, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stuns', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.stuns', index=9,
+      name='stuns', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.stuns', index=9,
       number=10, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='healing', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.healing', index=10,
+      name='healing', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.healing', index=10,
       number=11, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tower_kills', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.tower_kills', index=11,
+      name='tower_kills', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.tower_kills', index=11,
       number=12, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='roshan_kills', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.roshan_kills', index=12,
+      name='roshan_kills', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.roshan_kills', index=12,
       number=13, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.score', index=13,
+      name='score', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator.score', index=13,
       number=14, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -4533,40 +4533,40 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSCOREACCUMULATOR = _descripto
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11255,
-  serialized_end=11512,
+  serialized_start=11446,
+  serialized_end=11703,
 )
 
 _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSTATS = _descriptor.Descriptor(
   name='PlayerStats',
-  full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats',
+  full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='weeks', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats.weeks', index=1,
+      name='weeks', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats.weeks', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stats_premium', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats.stats_premium', index=2,
+      name='stats_premium', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats.stats_premium', index=2,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stats_professional', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats.stats_professional', index=3,
+      name='stats_professional', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats.stats_professional', index=3,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -4584,26 +4584,26 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSTATS = _descriptor.Descripto
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11515,
-  serialized_end=11752,
+  serialized_start=11706,
+  serialized_end=11953,
 )
 
 _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerHisoricalStatsResponse',
-  full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse',
+  full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stats', full_name='CMsgDOTAFantasyPlayerHisoricalStatsResponse.stats', index=1,
+      name='stats', full_name='dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.stats', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -4622,27 +4622,27 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11055,
-  serialized_end=11824,
+  serialized_start=11236,
+  serialized_end=12025,
 )
 
 
 _CMSGDOTAFANTASYMESSAGEADD = _descriptor.Descriptor(
   name='CMsgDOTAFantasyMessageAdd',
-  full_name='CMsgDOTAFantasyMessageAdd',
+  full_name='dota.CMsgDOTAFantasyMessageAdd',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyMessageAdd.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyMessageAdd.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='message', full_name='CMsgDOTAFantasyMessageAdd.message', index=1,
+      name='message', full_name='dota.CMsgDOTAFantasyMessageAdd.message', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -4660,34 +4660,34 @@ _CMSGDOTAFANTASYMESSAGEADD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11826,
-  serialized_end=11897,
+  serialized_start=12027,
+  serialized_end=12098,
 )
 
 
 _CMSGDOTAFANTASYMESSAGESREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyMessagesRequest',
-  full_name='CMsgDOTAFantasyMessagesRequest',
+  full_name='dota.CMsgDOTAFantasyMessagesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyMessagesRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyMessagesRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='start_message', full_name='CMsgDOTAFantasyMessagesRequest.start_message', index=1,
+      name='start_message', full_name='dota.CMsgDOTAFantasyMessagesRequest.start_message', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='end_message', full_name='CMsgDOTAFantasyMessagesRequest.end_message', index=2,
+      name='end_message', full_name='dota.CMsgDOTAFantasyMessagesRequest.end_message', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4705,41 +4705,41 @@ _CMSGDOTAFANTASYMESSAGESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11899,
-  serialized_end=12002,
+  serialized_start=12100,
+  serialized_end=12203,
 )
 
 
 _CMSGDOTAFANTASYMESSAGESRESPONSE_MESSAGE = _descriptor.Descriptor(
   name='Message',
-  full_name='CMsgDOTAFantasyMessagesResponse.Message',
+  full_name='dota.CMsgDOTAFantasyMessagesResponse.Message',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message_id', full_name='CMsgDOTAFantasyMessagesResponse.Message.message_id', index=0,
+      name='message_id', full_name='dota.CMsgDOTAFantasyMessagesResponse.Message.message_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='message', full_name='CMsgDOTAFantasyMessagesResponse.Message.message', index=1,
+      name='message', full_name='dota.CMsgDOTAFantasyMessagesResponse.Message.message', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='author_account_id', full_name='CMsgDOTAFantasyMessagesResponse.Message.author_account_id', index=2,
+      name='author_account_id', full_name='dota.CMsgDOTAFantasyMessagesResponse.Message.author_account_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time', full_name='CMsgDOTAFantasyMessagesResponse.Message.time', index=3,
+      name='time', full_name='dota.CMsgDOTAFantasyMessagesResponse.Message.time', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4757,33 +4757,33 @@ _CMSGDOTAFANTASYMESSAGESRESPONSE_MESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12195,
-  serialized_end=12282,
+  serialized_start=12406,
+  serialized_end=12493,
 )
 
 _CMSGDOTAFANTASYMESSAGESRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyMessagesResponse',
-  full_name='CMsgDOTAFantasyMessagesResponse',
+  full_name='dota.CMsgDOTAFantasyMessagesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyMessagesResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyMessagesResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='messages', full_name='CMsgDOTAFantasyMessagesResponse.messages', index=1,
+      name='messages', full_name='dota.CMsgDOTAFantasyMessagesResponse.messages', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='num_total_messages', full_name='CMsgDOTAFantasyMessagesResponse.num_total_messages', index=2,
+      name='num_total_messages', full_name='dota.CMsgDOTAFantasyMessagesResponse.num_total_messages', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4802,34 +4802,34 @@ _CMSGDOTAFANTASYMESSAGESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12005,
-  serialized_end=12354,
+  serialized_start=12206,
+  serialized_end=12565,
 )
 
 
 _CMSGDOTAFANTASYREMOVEOWNER = _descriptor.Descriptor(
   name='CMsgDOTAFantasyRemoveOwner',
-  full_name='CMsgDOTAFantasyRemoveOwner',
+  full_name='dota.CMsgDOTAFantasyRemoveOwner',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyRemoveOwner.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyRemoveOwner.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_account_id', full_name='CMsgDOTAFantasyRemoveOwner.owner_account_id', index=1,
+      name='owner_account_id', full_name='dota.CMsgDOTAFantasyRemoveOwner.owner_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_index', full_name='CMsgDOTAFantasyRemoveOwner.team_index', index=2,
+      name='team_index', full_name='dota.CMsgDOTAFantasyRemoveOwner.team_index', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4847,20 +4847,20 @@ _CMSGDOTAFANTASYREMOVEOWNER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12356,
-  serialized_end=12457,
+  serialized_start=12567,
+  serialized_end=12668,
 )
 
 
 _CMSGDOTAFANTASYREMOVEOWNERRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyRemoveOwnerResponse',
-  full_name='CMsgDOTAFantasyRemoveOwnerResponse',
+  full_name='dota.CMsgDOTAFantasyRemoveOwnerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyRemoveOwnerResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyRemoveOwnerResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4879,20 +4879,20 @@ _CMSGDOTAFANTASYREMOVEOWNERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12460,
-  serialized_end=12687,
+  serialized_start=12671,
+  serialized_end=12903,
 )
 
 
 _CMSGDOTAFANTASYSCHEDULEDMATCHESREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyScheduledMatchesRequest',
-  full_name='CMsgDOTAFantasyScheduledMatchesRequest',
+  full_name='dota.CMsgDOTAFantasyScheduledMatchesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyScheduledMatchesRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyScheduledMatchesRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4910,34 +4910,34 @@ _CMSGDOTAFANTASYSCHEDULEDMATCHESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12689,
-  serialized_end=12756,
+  serialized_start=12905,
+  serialized_end=12972,
 )
 
 
 _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_SCHEDULEDMATCHDAYS = _descriptor.Descriptor(
   name='ScheduledMatchDays',
-  full_name='CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays',
+  full_name='dota.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays.timestamp', index=0,
+      name='timestamp', full_name='dota.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays.timestamp', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_ids', full_name='CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays.team_ids', index=1,
+      name='team_ids', full_name='dota.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays.team_ids', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='league_ids', full_name='CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays.league_ids', index=2,
+      name='league_ids', full_name='dota.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays.league_ids', index=2,
       number=3, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -4955,26 +4955,26 @@ _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_SCHEDULEDMATCHDAYS = _descriptor.Descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12968,
-  serialized_end=13045,
+  serialized_start=13194,
+  serialized_end=13271,
 )
 
 _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyScheduledMatchesResponse',
-  full_name='CMsgDOTAFantasyScheduledMatchesResponse',
+  full_name='dota.CMsgDOTAFantasyScheduledMatchesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyScheduledMatchesResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyScheduledMatchesResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='scheduled_match_days', full_name='CMsgDOTAFantasyScheduledMatchesResponse.scheduled_match_days', index=1,
+      name='scheduled_match_days', full_name='dota.CMsgDOTAFantasyScheduledMatchesResponse.scheduled_match_days', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -4993,27 +4993,27 @@ _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12759,
-  serialized_end=13092,
+  serialized_start=12975,
+  serialized_end=13318,
 )
 
 
 _CMSGDOTAFANTASYLEAVELEAGUEREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeaveLeagueRequest',
-  full_name='CMsgDOTAFantasyLeaveLeagueRequest',
+  full_name='dota.CMsgDOTAFantasyLeaveLeagueRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyLeaveLeagueRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyLeaveLeagueRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_team_index', full_name='CMsgDOTAFantasyLeaveLeagueRequest.fantasy_team_index', index=1,
+      name='fantasy_team_index', full_name='dota.CMsgDOTAFantasyLeaveLeagueRequest.fantasy_team_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5031,20 +5031,20 @@ _CMSGDOTAFANTASYLEAVELEAGUEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13094,
-  serialized_end=13184,
+  serialized_start=13320,
+  serialized_end=13410,
 )
 
 
 _CMSGDOTAFANTASYLEAVELEAGUERESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyLeaveLeagueResponse',
-  full_name='CMsgDOTAFantasyLeaveLeagueResponse',
+  full_name='dota.CMsgDOTAFantasyLeaveLeagueResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyLeaveLeagueResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyLeaveLeagueResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5063,41 +5063,41 @@ _CMSGDOTAFANTASYLEAVELEAGUERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13187,
-  serialized_end=13414,
+  serialized_start=13413,
+  serialized_end=13645,
 )
 
 
 _CMSGDOTAFANTASYPLAYERSCOREDETAILSREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerScoreDetailsRequest',
-  full_name='CMsgDOTAFantasyPlayerScoreDetailsRequest',
+  full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='fantasy_league_id', full_name='CMsgDOTAFantasyPlayerScoreDetailsRequest.fantasy_league_id', index=0,
+      name='fantasy_league_id', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsRequest.fantasy_league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_account_id', full_name='CMsgDOTAFantasyPlayerScoreDetailsRequest.player_account_id', index=1,
+      name='player_account_id', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsRequest.player_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='start_time', full_name='CMsgDOTAFantasyPlayerScoreDetailsRequest.start_time', index=2,
+      name='start_time', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsRequest.start_time', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='end_time', full_name='CMsgDOTAFantasyPlayerScoreDetailsRequest.end_time', index=3,
+      name='end_time', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsRequest.end_time', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5115,90 +5115,90 @@ _CMSGDOTAFANTASYPLAYERSCOREDETAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13417,
-  serialized_end=13551,
+  serialized_start=13648,
+  serialized_end=13782,
 )
 
 
 _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_PLAYERMATCHDATA = _descriptor.Descriptor(
   name='PlayerMatchData',
-  full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData',
+  full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='match_id', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.match_id', index=0,
+      name='match_id', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.match_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='series_id', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.series_id', index=1,
+      name='series_id', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.series_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='series_num', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.series_num', index=2,
+      name='series_num', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.series_num', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='series_type', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.series_type', index=3,
+      name='series_type', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.series_type', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='league_tier', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.league_tier', index=4,
+      name='league_tier', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.league_tier', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.league_id', index=5,
+      name='league_id', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.league_id', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='opposing_team_id', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.opposing_team_id', index=6,
+      name='opposing_team_id', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.opposing_team_id', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='opposing_team_logo', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.opposing_team_logo', index=7,
+      name='opposing_team_logo', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.opposing_team_logo', index=7,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='opposing_team_name', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.opposing_team_name', index=8,
+      name='opposing_team_name', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.opposing_team_name', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owned_by', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.owned_by', index=9,
+      name='owned_by', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.owned_by', index=9,
       number=11, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='benched', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.benched', index=10,
+      name='benched', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData.benched', index=10,
       number=12, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -5216,26 +5216,26 @@ _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_PLAYERMATCHDATA = _descriptor.Descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13751,
-  serialized_end=14003,
+  serialized_start=13992,
+  serialized_end=14244,
 )
 
 _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTAFantasyPlayerScoreDetailsResponse',
-  full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse',
+  full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='data', full_name='CMsgDOTAFantasyPlayerScoreDetailsResponse.data', index=1,
+      name='data', full_name='dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.data', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -5254,34 +5254,34 @@ _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13554,
-  serialized_end=14072,
+  serialized_start=13785,
+  serialized_end=14313,
 )
 
 
 _CMSGDOTAPASSPORTVOTETEAMGUESS = _descriptor.Descriptor(
   name='CMsgDOTAPassportVoteTeamGuess',
-  full_name='CMsgDOTAPassportVoteTeamGuess',
+  full_name='dota.CMsgDOTAPassportVoteTeamGuess',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgDOTAPassportVoteTeamGuess.league_id', index=0,
+      name='league_id', full_name='dota.CMsgDOTAPassportVoteTeamGuess.league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='winner_id', full_name='CMsgDOTAPassportVoteTeamGuess.winner_id', index=1,
+      name='winner_id', full_name='dota.CMsgDOTAPassportVoteTeamGuess.winner_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='runnerup_id', full_name='CMsgDOTAPassportVoteTeamGuess.runnerup_id', index=2,
+      name='runnerup_id', full_name='dota.CMsgDOTAPassportVoteTeamGuess.runnerup_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5299,27 +5299,27 @@ _CMSGDOTAPASSPORTVOTETEAMGUESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14074,
-  serialized_end=14164,
+  serialized_start=14315,
+  serialized_end=14405,
 )
 
 
 _CMSGDOTAPASSPORTVOTEGENERICSELECTION = _descriptor.Descriptor(
   name='CMsgDOTAPassportVoteGenericSelection',
-  full_name='CMsgDOTAPassportVoteGenericSelection',
+  full_name='dota.CMsgDOTAPassportVoteGenericSelection',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='selection_index', full_name='CMsgDOTAPassportVoteGenericSelection.selection_index', index=0,
+      name='selection_index', full_name='dota.CMsgDOTAPassportVoteGenericSelection.selection_index', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='selection', full_name='CMsgDOTAPassportVoteGenericSelection.selection', index=1,
+      name='selection', full_name='dota.CMsgDOTAPassportVoteGenericSelection.selection', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5337,27 +5337,27 @@ _CMSGDOTAPASSPORTVOTEGENERICSELECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14167,
-  serialized_end=14312,
+  serialized_start=14408,
+  serialized_end=14558,
 )
 
 
 _CMSGDOTAPASSPORTSTAMPEDPLAYER = _descriptor.Descriptor(
   name='CMsgDOTAPassportStampedPlayer',
-  full_name='CMsgDOTAPassportStampedPlayer',
+  full_name='dota.CMsgDOTAPassportStampedPlayer',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgDOTAPassportStampedPlayer.steam_id', index=0,
+      name='steam_id', full_name='dota.CMsgDOTAPassportStampedPlayer.steam_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stamp_level', full_name='CMsgDOTAPassportStampedPlayer.stamp_level', index=1,
+      name='stamp_level', full_name='dota.CMsgDOTAPassportStampedPlayer.stamp_level', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5375,20 +5375,20 @@ _CMSGDOTAPASSPORTSTAMPEDPLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14314,
-  serialized_end=14384,
+  serialized_start=14560,
+  serialized_end=14630,
 )
 
 
 _CMSGDOTAPASSPORTPLAYERCARDCHALLENGE = _descriptor.Descriptor(
   name='CMsgDOTAPassportPlayerCardChallenge',
-  full_name='CMsgDOTAPassportPlayerCardChallenge',
+  full_name='dota.CMsgDOTAPassportPlayerCardChallenge',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='challenge_id', full_name='CMsgDOTAPassportPlayerCardChallenge.challenge_id', index=0,
+      name='challenge_id', full_name='dota.CMsgDOTAPassportPlayerCardChallenge.challenge_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5406,41 +5406,41 @@ _CMSGDOTAPASSPORTPLAYERCARDCHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14386,
-  serialized_end=14445,
+  serialized_start=14632,
+  serialized_end=14691,
 )
 
 
 _CMSGDOTAPASSPORTVOTE = _descriptor.Descriptor(
   name='CMsgDOTAPassportVote',
-  full_name='CMsgDOTAPassportVote',
+  full_name='dota.CMsgDOTAPassportVote',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='team_votes', full_name='CMsgDOTAPassportVote.team_votes', index=0,
+      name='team_votes', full_name='dota.CMsgDOTAPassportVote.team_votes', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='generic_selections', full_name='CMsgDOTAPassportVote.generic_selections', index=1,
+      name='generic_selections', full_name='dota.CMsgDOTAPassportVote.generic_selections', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stamped_players', full_name='CMsgDOTAPassportVote.stamped_players', index=2,
+      name='stamped_players', full_name='dota.CMsgDOTAPassportVote.stamped_players', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_card_challenges', full_name='CMsgDOTAPassportVote.player_card_challenges', index=3,
+      name='player_card_challenges', full_name='dota.CMsgDOTAPassportVote.player_card_challenges', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -5458,27 +5458,27 @@ _CMSGDOTAPASSPORTVOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14448,
-  serialized_end=14716,
+  serialized_start=14694,
+  serialized_end=14982,
 )
 
 
 _CMSGCLIENTTOGCGETPLAYERCARDROSTERREQUEST = _descriptor.Descriptor(
   name='CMsgClientToGCGetPlayerCardRosterRequest',
-  full_name='CMsgClientToGCGetPlayerCardRosterRequest',
+  full_name='dota.CMsgClientToGCGetPlayerCardRosterRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgClientToGCGetPlayerCardRosterRequest.league_id', index=0,
+      name='league_id', full_name='dota.CMsgClientToGCGetPlayerCardRosterRequest.league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgClientToGCGetPlayerCardRosterRequest.timestamp', index=1,
+      name='timestamp', full_name='dota.CMsgClientToGCGetPlayerCardRosterRequest.timestamp', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5496,48 +5496,48 @@ _CMSGCLIENTTOGCGETPLAYERCARDROSTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14718,
-  serialized_end=14798,
+  serialized_start=14984,
+  serialized_end=15064,
 )
 
 
 _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE = _descriptor.Descriptor(
   name='CMsgClientToGCGetPlayerCardRosterResponse',
-  full_name='CMsgClientToGCGetPlayerCardRosterResponse',
+  full_name='dota.CMsgClientToGCGetPlayerCardRosterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgClientToGCGetPlayerCardRosterResponse.result', index=0,
+      name='result', full_name='dota.CMsgClientToGCGetPlayerCardRosterResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_card_item_id', full_name='CMsgClientToGCGetPlayerCardRosterResponse.player_card_item_id', index=1,
+      name='player_card_item_id', full_name='dota.CMsgClientToGCGetPlayerCardRosterResponse.player_card_item_id', index=1,
       number=2, type=4, cpp_type=4, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score', full_name='CMsgClientToGCGetPlayerCardRosterResponse.score', index=2,
+      name='score', full_name='dota.CMsgClientToGCGetPlayerCardRosterResponse.score', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='finalized', full_name='CMsgClientToGCGetPlayerCardRosterResponse.finalized', index=3,
+      name='finalized', full_name='dota.CMsgClientToGCGetPlayerCardRosterResponse.finalized', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='percentile', full_name='CMsgClientToGCGetPlayerCardRosterResponse.percentile', index=4,
+      name='percentile', full_name='dota.CMsgClientToGCGetPlayerCardRosterResponse.percentile', index=4,
       number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -5556,41 +5556,41 @@ _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14801,
-  serialized_end=15107,
+  serialized_start=15067,
+  serialized_end=15378,
 )
 
 
 _CMSGCLIENTTOGCSETPLAYERCARDROSTERREQUEST = _descriptor.Descriptor(
   name='CMsgClientToGCSetPlayerCardRosterRequest',
-  full_name='CMsgClientToGCSetPlayerCardRosterRequest',
+  full_name='dota.CMsgClientToGCSetPlayerCardRosterRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgClientToGCSetPlayerCardRosterRequest.league_id', index=0,
+      name='league_id', full_name='dota.CMsgClientToGCSetPlayerCardRosterRequest.league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgClientToGCSetPlayerCardRosterRequest.timestamp', index=1,
+      name='timestamp', full_name='dota.CMsgClientToGCSetPlayerCardRosterRequest.timestamp', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot', full_name='CMsgClientToGCSetPlayerCardRosterRequest.slot', index=2,
+      name='slot', full_name='dota.CMsgClientToGCSetPlayerCardRosterRequest.slot', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_card_item_id', full_name='CMsgClientToGCSetPlayerCardRosterRequest.player_card_item_id', index=3,
+      name='player_card_item_id', full_name='dota.CMsgClientToGCSetPlayerCardRosterRequest.player_card_item_id', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5608,20 +5608,20 @@ _CMSGCLIENTTOGCSETPLAYERCARDROSTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15109,
-  serialized_end=15232,
+  serialized_start=15380,
+  serialized_end=15503,
 )
 
 
 _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE = _descriptor.Descriptor(
   name='CMsgClientToGCSetPlayerCardRosterResponse',
-  full_name='CMsgClientToGCSetPlayerCardRosterResponse',
+  full_name='dota.CMsgClientToGCSetPlayerCardRosterResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgClientToGCSetPlayerCardRosterResponse.result', index=0,
+      name='result', full_name='dota.CMsgClientToGCSetPlayerCardRosterResponse.result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -5640,8 +5640,8 @@ _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15235,
-  serialized_end=15601,
+  serialized_start=15506,
+  serialized_end=15877,
 )
 
 _CMSGGCPLAYERINFO_PLAYERINFO.containing_type = _CMSGGCPLAYERINFO
@@ -5818,19 +5818,19 @@ CMsgGCPlayerInfo = _reflection.GeneratedProtocolMessageType('CMsgGCPlayerInfo', 
   PlayerInfo = _reflection.GeneratedProtocolMessageType('PlayerInfo', (_message.Message,), dict(
     DESCRIPTOR = _CMSGGCPLAYERINFO_PLAYERINFO,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgGCPlayerInfo.PlayerInfo)
+    # @@protoc_insertion_point(class_scope:dota.CMsgGCPlayerInfo.PlayerInfo)
     ))
   ,
 
   RegionLeaderboard = _reflection.GeneratedProtocolMessageType('RegionLeaderboard', (_message.Message,), dict(
     DESCRIPTOR = _CMSGGCPLAYERINFO_REGIONLEADERBOARD,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgGCPlayerInfo.RegionLeaderboard)
+    # @@protoc_insertion_point(class_scope:dota.CMsgGCPlayerInfo.RegionLeaderboard)
     ))
   ,
   DESCRIPTOR = _CMSGGCPLAYERINFO,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCPlayerInfo)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCPlayerInfo)
   ))
 _sym_db.RegisterMessage(CMsgGCPlayerInfo)
 _sym_db.RegisterMessage(CMsgGCPlayerInfo.PlayerInfo)
@@ -5839,21 +5839,21 @@ _sym_db.RegisterMessage(CMsgGCPlayerInfo.RegionLeaderboard)
 CMsgDOTACreateFantasyLeagueRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTACreateFantasyLeagueRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACREATEFANTASYLEAGUEREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTACreateFantasyLeagueRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTACreateFantasyLeagueRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTACreateFantasyLeagueRequest)
 
 CMsgDOTACreateFantasyLeagueResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTACreateFantasyLeagueResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACREATEFANTASYLEAGUERESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTACreateFantasyLeagueResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTACreateFantasyLeagueResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTACreateFantasyLeagueResponse)
 
 CMsgFantasyLeagueScoring = _reflection.GeneratedProtocolMessageType('CMsgFantasyLeagueScoring', (_message.Message,), dict(
   DESCRIPTOR = _CMSGFANTASYLEAGUESCORING,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgFantasyLeagueScoring)
+  # @@protoc_insertion_point(class_scope:dota.CMsgFantasyLeagueScoring)
   ))
 _sym_db.RegisterMessage(CMsgFantasyLeagueScoring)
 
@@ -5862,12 +5862,12 @@ CMsgDOTAFantasyLeagueInfo = _reflection.GeneratedProtocolMessageType('CMsgDOTAFa
   OwnerInfo = _reflection.GeneratedProtocolMessageType('OwnerInfo', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEINFO_OWNERINFO,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueInfo.OwnerInfo)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueInfo.OwnerInfo)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEINFO,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueInfo)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueInfo)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueInfo)
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueInfo.OwnerInfo)
@@ -5875,49 +5875,49 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueInfo.OwnerInfo)
 CMsgDOTAFantasyLeagueEditInfoRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueEditInfoRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEEDITINFOREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueEditInfoRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueEditInfoRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueEditInfoRequest)
 
 CMsgDOTAFantasyLeagueEditInfoResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueEditInfoResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueEditInfoResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueEditInfoResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueEditInfoResponse)
 
 CMsgDOTAFantasyLeagueFindRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueFindRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEFINDREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueFindRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueFindRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueFindRequest)
 
 CMsgDOTAFantasyLeagueFindResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueFindResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEFINDRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueFindResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueFindResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueFindResponse)
 
 CMsgDOTAFantasyLeagueInfoRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueInfoRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEINFOREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueInfoRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueInfoRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueInfoRequest)
 
 CMsgDOTAFantasyLeagueInfoResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueInfoResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEINFORESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueInfoResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueInfoResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueInfoResponse)
 
 CMsgDOTAFantasyLeagueMatchupsRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueMatchupsRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEMATCHUPSREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueMatchupsRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueMatchupsRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueMatchupsRequest)
 
@@ -5926,19 +5926,19 @@ CMsgDOTAFantasyLeagueMatchupsResponse = _reflection.GeneratedProtocolMessageType
   Matchup = _reflection.GeneratedProtocolMessageType('Matchup', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_MATCHUP,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueMatchupsResponse.Matchup)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup)
     ))
   ,
 
   WeeklyMatchups = _reflection.GeneratedProtocolMessageType('WeeklyMatchups', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_WEEKLYMATCHUPS,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueMatchupsResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueMatchupsResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueMatchupsResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueMatchupsResponse.Matchup)
@@ -5947,49 +5947,49 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups)
 CMsgDOTAEditFantasyTeamRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAEditFantasyTeamRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAEDITFANTASYTEAMREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAEditFantasyTeamRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAEditFantasyTeamRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAEditFantasyTeamRequest)
 
 CMsgDOTAEditFantasyTeamResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAEditFantasyTeamResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAEDITFANTASYTEAMRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAEditFantasyTeamResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAEditFantasyTeamResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAEditFantasyTeamResponse)
 
 CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMINFOREQUESTBYFANTASYLEAGUEID,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID)
 
 CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMINFOREQUESTBYOWNERACCOUNTID,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID)
 
 CMsgDOTAFantasyTeamInfoResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamInfoResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMINFORESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamInfoResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamInfoResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamInfoResponse)
 
 CMsgDOTAFantasyTeamInfo = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamInfo', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMINFO,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamInfo)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamInfo)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamInfo)
 
 CMsgDOTAFantasyTeamScoreRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamScoreRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMSCOREREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamScoreRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamScoreRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamScoreRequest)
 
@@ -5998,12 +5998,12 @@ CMsgDOTAFantasyTeamScoreResponse = _reflection.GeneratedProtocolMessageType('CMs
   CMsgPlayerScore = _reflection.GeneratedProtocolMessageType('CMsgPlayerScore', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYTEAMSCORERESPONSE_CMSGPLAYERSCORE,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMSCORERESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamScoreResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamScoreResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamScoreResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore)
@@ -6011,7 +6011,7 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore)
 CMsgDOTAFantasyTeamStandingsRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamStandingsRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMSTANDINGSREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamStandingsRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamStandingsRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamStandingsRequest)
 
@@ -6020,12 +6020,12 @@ CMsgDOTAFantasyTeamStandingsResponse = _reflection.GeneratedProtocolMessageType(
   CMsgTeamScore = _reflection.GeneratedProtocolMessageType('CMsgTeamScore', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_CMSGTEAMSCORE,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamStandingsResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamStandingsResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamStandingsResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore)
@@ -6033,21 +6033,21 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore)
 CMsgDOTAFantasyPlayerScoreRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerScoreRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERSCOREREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerScoreRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerScoreRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerScoreRequest)
 
 CMsgDOTAFantasyPlayerScoreResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerScoreResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERSCORERESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerScoreResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerScoreResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerScoreResponse)
 
 CMsgDOTAFantasyPlayerStandingsRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerStandingsRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERSTANDINGSREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerStandingsRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerStandingsRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerStandingsRequest)
 
@@ -6056,12 +6056,12 @@ CMsgDOTAFantasyPlayerStandingsResponse = _reflection.GeneratedProtocolMessageTyp
   CMsgPlayerScore = _reflection.GeneratedProtocolMessageType('CMsgPlayerScore', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_CMSGPLAYERSCORE,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerStandingsResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerStandingsResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerStandingsResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore)
@@ -6069,42 +6069,42 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore)
 CMsgDOTAFantasyPlayerInfoRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerInfoRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERINFOREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerInfoRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerInfoRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerInfoRequest)
 
 CMsgDOTAFantasyPlayerInfoResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerInfoResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERINFORESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerInfoResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerInfoResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerInfoResponse)
 
 CMsgDOTAFantasyLeagueCreateRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueCreateRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUECREATEREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueCreateRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueCreateRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueCreateRequest)
 
 CMsgDOTAFantasyLeagueCreateResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueCreateResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUECREATERESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueCreateResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueCreateResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueCreateResponse)
 
 CMsgDOTAFantasyTeamCreateRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamCreateRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMCREATEREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamCreateRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamCreateRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamCreateRequest)
 
 CMsgDOTAFantasyTeamCreateResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamCreateResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMCREATERESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamCreateResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamCreateResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamCreateResponse)
 
@@ -6113,12 +6113,12 @@ CMsgDOTAFantasyLeagueEditInvitesRequest = _reflection.GeneratedProtocolMessageTy
   InviteChange = _reflection.GeneratedProtocolMessageType('InviteChange', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST_INVITECHANGE,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueEditInvitesRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueEditInvitesRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueEditInvitesRequest)
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange)
@@ -6126,70 +6126,70 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange)
 CMsgDOTAFantasyLeagueEditInvitesResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueEditInvitesResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueEditInvitesResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueEditInvitesResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueEditInvitesResponse)
 
 CMsgDOTAFantasyLeagueDraftStatusRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueDraftStatusRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEDRAFTSTATUSREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueDraftStatusRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueDraftStatusRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueDraftStatusRequest)
 
 CMsgDOTAFantasyLeagueDraftStatus = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueDraftStatus', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEDRAFTSTATUS,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueDraftStatus)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueDraftStatus)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueDraftStatus)
 
 CMsgDOTAFantasyLeagueDraftPlayerRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueDraftPlayerRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueDraftPlayerRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueDraftPlayerRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueDraftPlayerRequest)
 
 CMsgDOTAFantasyLeagueDraftPlayerResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueDraftPlayerResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeagueDraftPlayerResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeagueDraftPlayerResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeagueDraftPlayerResponse)
 
 CMsgDOTAFantasyTeamRosterSwapRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamRosterSwapRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMROSTERSWAPREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamRosterSwapRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamRosterSwapRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamRosterSwapRequest)
 
 CMsgDOTAFantasyTeamRosterSwapResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamRosterSwapResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamRosterSwapResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamRosterSwapResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamRosterSwapResponse)
 
 CMsgDOTAFantasyTeamRosterAddDropRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamRosterAddDropRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMROSTERADDDROPREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamRosterAddDropRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamRosterAddDropRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamRosterAddDropRequest)
 
 CMsgDOTAFantasyTeamRosterAddDropResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamRosterAddDropResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamRosterAddDropResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamRosterAddDropResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamRosterAddDropResponse)
 
 CMsgDOTAFantasyTeamTradesRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamTradesRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMTRADESREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamTradesRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamTradesRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamTradesRequest)
 
@@ -6198,12 +6198,12 @@ CMsgDOTAFantasyTeamTradesResponse = _reflection.GeneratedProtocolMessageType('CM
   Trade = _reflection.GeneratedProtocolMessageType('Trade', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYTEAMTRADESRESPONSE_TRADE,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamTradesResponse.Trade)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamTradesResponse.Trade)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMTRADESRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamTradesResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamTradesResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamTradesResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamTradesResponse.Trade)
@@ -6211,35 +6211,35 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyTeamTradesResponse.Trade)
 CMsgDOTAFantasyTeamTradeCancelRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamTradeCancelRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMTRADECANCELREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamTradeCancelRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamTradeCancelRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamTradeCancelRequest)
 
 CMsgDOTAFantasyTeamTradeCancelResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamTradeCancelResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamTradeCancelResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamTradeCancelResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamTradeCancelResponse)
 
 CMsgDOTAFantasyTeamRosterRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamRosterRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMROSTERREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamRosterRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamRosterRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamRosterRequest)
 
 CMsgDOTAFantasyTeamRosterResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyTeamRosterResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYTEAMROSTERRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyTeamRosterResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyTeamRosterResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyTeamRosterResponse)
 
 CMsgDOTAFantasyPlayerHisoricalStatsRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerHisoricalStatsRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERHISORICALSTATSREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerHisoricalStatsRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerHisoricalStatsRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerHisoricalStatsRequest)
 
@@ -6248,19 +6248,19 @@ CMsgDOTAFantasyPlayerHisoricalStatsResponse = _reflection.GeneratedProtocolMessa
   PlayerScoreAccumulator = _reflection.GeneratedProtocolMessageType('PlayerScoreAccumulator', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSCOREACCUMULATOR,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator)
     ))
   ,
 
   PlayerStats = _reflection.GeneratedProtocolMessageType('PlayerStats', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSTATS,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerHisoricalStatsResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerHisoricalStatsResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator)
@@ -6269,14 +6269,14 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats)
 CMsgDOTAFantasyMessageAdd = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyMessageAdd', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYMESSAGEADD,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyMessageAdd)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyMessageAdd)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyMessageAdd)
 
 CMsgDOTAFantasyMessagesRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyMessagesRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYMESSAGESREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyMessagesRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyMessagesRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyMessagesRequest)
 
@@ -6285,12 +6285,12 @@ CMsgDOTAFantasyMessagesResponse = _reflection.GeneratedProtocolMessageType('CMsg
   Message = _reflection.GeneratedProtocolMessageType('Message', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYMESSAGESRESPONSE_MESSAGE,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyMessagesResponse.Message)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyMessagesResponse.Message)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYMESSAGESRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyMessagesResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyMessagesResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyMessagesResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyMessagesResponse.Message)
@@ -6298,21 +6298,21 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyMessagesResponse.Message)
 CMsgDOTAFantasyRemoveOwner = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyRemoveOwner', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYREMOVEOWNER,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyRemoveOwner)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyRemoveOwner)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyRemoveOwner)
 
 CMsgDOTAFantasyRemoveOwnerResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyRemoveOwnerResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYREMOVEOWNERRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyRemoveOwnerResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyRemoveOwnerResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyRemoveOwnerResponse)
 
 CMsgDOTAFantasyScheduledMatchesRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyScheduledMatchesRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYSCHEDULEDMATCHESREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyScheduledMatchesRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyScheduledMatchesRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyScheduledMatchesRequest)
 
@@ -6321,12 +6321,12 @@ CMsgDOTAFantasyScheduledMatchesResponse = _reflection.GeneratedProtocolMessageTy
   ScheduledMatchDays = _reflection.GeneratedProtocolMessageType('ScheduledMatchDays', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_SCHEDULEDMATCHDAYS,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyScheduledMatchesResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyScheduledMatchesResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyScheduledMatchesResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays)
@@ -6334,21 +6334,21 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDa
 CMsgDOTAFantasyLeaveLeagueRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeaveLeagueRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAVELEAGUEREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeaveLeagueRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeaveLeagueRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeaveLeagueRequest)
 
 CMsgDOTAFantasyLeaveLeagueResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeaveLeagueResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAVELEAGUERESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyLeaveLeagueResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyLeaveLeagueResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyLeaveLeagueResponse)
 
 CMsgDOTAFantasyPlayerScoreDetailsRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerScoreDetailsRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERSCOREDETAILSREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerScoreDetailsRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerScoreDetailsRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerScoreDetailsRequest)
 
@@ -6357,12 +6357,12 @@ CMsgDOTAFantasyPlayerScoreDetailsResponse = _reflection.GeneratedProtocolMessage
   PlayerMatchData = _reflection.GeneratedProtocolMessageType('PlayerMatchData', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_PLAYERMATCHDATA,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAFantasyPlayerScoreDetailsResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerScoreDetailsResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerScoreDetailsResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData)
@@ -6370,63 +6370,63 @@ _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchDat
 CMsgDOTAPassportVoteTeamGuess = _reflection.GeneratedProtocolMessageType('CMsgDOTAPassportVoteTeamGuess', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAPASSPORTVOTETEAMGUESS,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAPassportVoteTeamGuess)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPassportVoteTeamGuess)
   ))
 _sym_db.RegisterMessage(CMsgDOTAPassportVoteTeamGuess)
 
 CMsgDOTAPassportVoteGenericSelection = _reflection.GeneratedProtocolMessageType('CMsgDOTAPassportVoteGenericSelection', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAPASSPORTVOTEGENERICSELECTION,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAPassportVoteGenericSelection)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPassportVoteGenericSelection)
   ))
 _sym_db.RegisterMessage(CMsgDOTAPassportVoteGenericSelection)
 
 CMsgDOTAPassportStampedPlayer = _reflection.GeneratedProtocolMessageType('CMsgDOTAPassportStampedPlayer', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAPASSPORTSTAMPEDPLAYER,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAPassportStampedPlayer)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPassportStampedPlayer)
   ))
 _sym_db.RegisterMessage(CMsgDOTAPassportStampedPlayer)
 
 CMsgDOTAPassportPlayerCardChallenge = _reflection.GeneratedProtocolMessageType('CMsgDOTAPassportPlayerCardChallenge', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAPASSPORTPLAYERCARDCHALLENGE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAPassportPlayerCardChallenge)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPassportPlayerCardChallenge)
   ))
 _sym_db.RegisterMessage(CMsgDOTAPassportPlayerCardChallenge)
 
 CMsgDOTAPassportVote = _reflection.GeneratedProtocolMessageType('CMsgDOTAPassportVote', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAPASSPORTVOTE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAPassportVote)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPassportVote)
   ))
 _sym_db.RegisterMessage(CMsgDOTAPassportVote)
 
 CMsgClientToGCGetPlayerCardRosterRequest = _reflection.GeneratedProtocolMessageType('CMsgClientToGCGetPlayerCardRosterRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCGETPLAYERCARDROSTERREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCGetPlayerCardRosterRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCGetPlayerCardRosterRequest)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCGetPlayerCardRosterRequest)
 
 CMsgClientToGCGetPlayerCardRosterResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCGetPlayerCardRosterResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCGetPlayerCardRosterResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCGetPlayerCardRosterResponse)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCGetPlayerCardRosterResponse)
 
 CMsgClientToGCSetPlayerCardRosterRequest = _reflection.GeneratedProtocolMessageType('CMsgClientToGCSetPlayerCardRosterRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCSETPLAYERCARDROSTERREQUEST,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCSetPlayerCardRosterRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCSetPlayerCardRosterRequest)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCSetPlayerCardRosterRequest)
 
 CMsgClientToGCSetPlayerCardRosterResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCSetPlayerCardRosterResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientToGCSetPlayerCardRosterResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCSetPlayerCardRosterResponse)
   ))
 _sym_db.RegisterMessage(CMsgClientToGCSetPlayerCardRosterResponse)
 

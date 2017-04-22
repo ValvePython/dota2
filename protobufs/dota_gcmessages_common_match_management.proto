@@ -1,4 +1,5 @@
 syntax = "proto2";
+package dota;
 import "steammessages.proto";
 import "gcsdk_gcmessages.proto";
 import "dota_shared_enums.proto";
@@ -19,7 +20,7 @@ enum LobbyDotaPauseSetting {
 }
 
 message CSODOTAPartyMember {
-	optional .PartnerAccountType partner_type = 1 [default = PARTNER_NONE];
+	optional dota.PartnerAccountType partner_type = 1 [default = PARTNER_NONE];
 	optional bool is_coach = 2;
 	repeated uint32 region_ping_codes = 4 [packed = true];
 	repeated uint32 region_ping_times = 5 [packed = true];
@@ -40,15 +41,15 @@ message CSODOTAParty {
 	optional fixed64 leader_id = 2;
 	repeated fixed64 member_ids = 3;
 	optional uint32 game_modes = 4;
-	optional .CSODOTAParty.State state = 6 [default = UI];
+	optional dota.CSODOTAParty.State state = 6 [default = UI];
 	optional uint32 effective_started_matchmaking_time = 7;
 	optional uint32 raw_started_matchmaking_time = 32;
 	optional uint32 attempt_start_time = 33;
 	optional uint32 attempt_num = 34;
 	optional uint32 matchgroups = 11;
 	optional uint32 low_priority_account_id = 19;
-	optional .MatchType match_type = 21 [default = MATCH_TYPE_CASUAL];
-	optional .DOTABotDifficulty bot_difficulty = 22 [default = BOT_DIFFICULTY_PASSIVE];
+	optional dota.MatchType match_type = 21 [default = MATCH_TYPE_CASUAL];
+	optional dota.DOTABotDifficulty bot_difficulty = 22 [default = BOT_DIFFICULTY_PASSIVE];
 	optional uint32 team_id = 23;
 	optional string team_name = 51;
 	optional uint64 team_ui_logo = 52;
@@ -58,14 +59,14 @@ message CSODOTAParty {
 	optional uint32 matchmaking_max_range_minutes = 26;
 	optional uint32 matchlanguages = 27;
 	optional uint32 map_preference = 38;
-	repeated .CSODOTAPartyMember members = 29;
+	repeated dota.CSODOTAPartyMember members = 29;
 	optional uint32 open_guild_id = 30;
 	repeated uint32 common_guilds = 31;
 	optional uint32 low_priority_games_remaining = 35;
-	repeated .EEvent active_ingame_events = 39;
+	repeated dota.EEvent active_ingame_events = 39;
 	optional bool open_for_join_requests = 40;
-	repeated .CSODOTAPartyInvite sent_invites = 41;
-	repeated .CSODOTAPartyInvite recv_invites = 42;
+	repeated dota.CSODOTAPartyInvite sent_invites = 41;
+	repeated dota.CSODOTAPartyInvite recv_invites = 42;
 	optional uint32 account_flags = 43;
 	optional uint32 region_select_flags = 44;
 	optional uint32 exclusive_tournament_id = 45;
@@ -74,7 +75,7 @@ message CSODOTAParty {
 	optional uint32 tourney_skill_level = 49;
 	optional uint32 tourney_bracket_round = 50;
 	optional uint32 tourney_queue_deadline_time = 54;
-	optional .ETourneyQueueDeadlineState tourney_queue_deadline_state = 55 [default = k_ETourneyQueueDeadlineState_Normal];
+	optional dota.ETourneyQueueDeadlineState tourney_queue_deadline_state = 55 [default = k_ETourneyQueueDeadlineState_Normal];
 	optional uint32 party_builder_slots_to_fill = 56;
 	optional uint32 party_builder_match_groups = 57;
 	optional uint32 party_builder_start_time = 58;
@@ -91,7 +92,7 @@ message CSODOTAPartyInvite {
 	optional uint64 group_id = 1 [(key_field) = true];
 	optional fixed64 sender_id = 2;
 	optional string sender_name = 3;
-	repeated .CSODOTAPartyInvite.PartyMember members = 4;
+	repeated dota.CSODOTAPartyInvite.PartyMember members = 4;
 	optional uint32 team_id = 5;
 	optional bool low_priority_status = 6;
 	optional bool as_coach = 7;
@@ -107,7 +108,7 @@ message CSODOTALobbyInvite {
 	optional uint64 group_id = 1 [(key_field) = true];
 	optional fixed64 sender_id = 2;
 	optional string sender_name = 3;
-	repeated .CSODOTALobbyInvite.LobbyMember members = 4;
+	repeated dota.CSODOTALobbyInvite.LobbyMember members = 4;
 	optional uint64 custom_game_id = 5;
 	optional fixed64 invite_gid = 6;
 	optional fixed64 custom_game_crc = 7;
@@ -116,7 +117,7 @@ message CSODOTALobbyInvite {
 
 message CMsgLeaverState {
 	optional uint32 lobby_state = 1;
-	optional .DOTA_GameState game_state = 2 [default = DOTA_GAMERULES_STATE_INIT];
+	optional dota.DOTA_GameState game_state = 2 [default = DOTA_GAMERULES_STATE_INIT];
 	optional bool leaver_detected = 3;
 	optional bool first_blood_happened = 4;
 	optional bool discard_match_results = 5;
@@ -132,29 +133,29 @@ message CDOTALobbyMember {
 
 	optional fixed64 id = 1 [(key_field) = true];
 	optional uint32 hero_id = 2;
-	optional .DOTA_GC_TEAM team = 3 [default = DOTA_GC_TEAM_GOOD_GUYS];
+	optional dota.DOTA_GC_TEAM team = 3 [default = DOTA_GC_TEAM_GOOD_GUYS];
 	optional string name = 6;
 	optional uint32 slot = 7;
 	optional uint64 party_id = 12;
 	optional uint32 meta_level = 13;
 	optional uint32 meta_xp = 14;
 	optional uint32 meta_xp_awarded = 15;
-	optional .DOTALeaverStatus_t leaver_status = 16 [default = DOTA_LEAVER_NONE];
+	optional dota.DOTALeaverStatus_t leaver_status = 16 [default = DOTA_LEAVER_NONE];
 	optional uint32 leaver_actions = 28;
 	optional uint32 channel = 17;
 	optional uint32 prize_def_index = 18;
 	repeated uint32 disabled_hero_id = 20;
-	optional .PartnerAccountType partner_account_type = 21 [default = PARTNER_NONE];
+	optional dota.PartnerAccountType partner_account_type = 21 [default = PARTNER_NONE];
 	repeated uint32 enabled_hero_id = 22;
-	optional .DOTA_GC_TEAM coach_team = 23 [default = DOTA_GC_TEAM_NOTEAM];
+	optional dota.DOTA_GC_TEAM coach_team = 23 [default = DOTA_GC_TEAM_NOTEAM];
 	optional uint32 nexon_pc_bang_no = 24;
 	optional string nexon_pc_bang_name = 25;
-	repeated .CDOTALobbyMember.CDOTALobbyMemberXPBonus xp_bonuses = 27;
+	repeated dota.CDOTALobbyMember.CDOTALobbyMemberXPBonus xp_bonuses = 27;
 	optional sint32 rank_change = 29;
 	optional bool cameraman = 30;
 	repeated uint32 custom_game_product_ids = 31;
 	optional uint32 lobby_mvp_vote_account_id = 32;
-	optional .MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
+	optional dota.MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
 	optional uint32 favorite_team_and_quality = 34;
 }
 
@@ -224,33 +225,33 @@ message CSODOTALobby {
 	}
 
 	optional uint64 lobby_id = 1 [(key_field) = true];
-	repeated .CDOTALobbyMember members = 2;
-	repeated .CDOTALobbyMember left_members = 7;
+	repeated dota.CDOTALobbyMember members = 2;
+	repeated dota.CDOTALobbyMember left_members = 7;
 	optional fixed64 leader_id = 11;
 	optional fixed64 server_id = 6 [default = 0];
 	optional uint32 game_mode = 3;
 	repeated fixed64 pending_invites = 10;
-	optional .CSODOTALobby.State state = 4 [default = UI];
+	optional dota.CSODOTALobby.State state = 4 [default = UI];
 	optional string connect = 5;
-	optional .CSODOTALobby.LobbyType lobby_type = 12 [default = INVALID];
+	optional dota.CSODOTALobby.LobbyType lobby_type = 12 [default = INVALID];
 	optional bool allow_cheats = 13;
 	optional bool fill_with_bots = 14;
 	optional bool intro_mode = 15;
 	optional string game_name = 16;
-	repeated .CLobbyTeamDetails team_details = 17;
+	repeated dota.CLobbyTeamDetails team_details = 17;
 	optional uint32 tutorial_lesson = 18;
 	optional uint32 tournament_id = 19;
 	optional uint32 tournament_game_id = 20;
 	optional uint32 server_region = 21 [default = 0];
-	optional .DOTA_GameState game_state = 22 [default = DOTA_GAMERULES_STATE_INIT];
+	optional dota.DOTA_GameState game_state = 22 [default = DOTA_GAMERULES_STATE_INIT];
 	optional uint32 num_spectators = 23;
 	optional uint32 matchgroup = 25;
-	optional .DOTA_CM_PICK cm_pick = 28 [default = DOTA_CM_RANDOM];
+	optional dota.DOTA_CM_PICK cm_pick = 28 [default = DOTA_CM_RANDOM];
 	optional uint64 match_id = 30;
 	optional bool allow_spectating = 31 [default = true];
-	optional .DOTABotDifficulty bot_difficulty_radiant = 36 [default = BOT_DIFFICULTY_HARD];
-	optional .DOTAGameVersion game_version = 37 [default = GAME_VERSION_CURRENT];
-	repeated .CLobbyTimedRewardDetails timed_reward_details = 38;
+	optional dota.DOTABotDifficulty bot_difficulty_radiant = 36 [default = BOT_DIFFICULTY_HARD];
+	optional dota.DOTAGameVersion game_version = 37 [default = GAME_VERSION_CURRENT];
+	repeated dota.CLobbyTimedRewardDetails timed_reward_details = 38;
 	optional string pass_key = 39;
 	optional uint32 leagueid = 42;
 	optional uint32 penalty_level_radiant = 43 [default = 0];
@@ -262,27 +263,27 @@ message CSODOTALobby {
 	optional uint32 loot_generated = 49;
 	optional uint32 loot_awarded = 50;
 	optional bool allchat = 51 [default = false];
-	optional .LobbyDotaTVDelay dota_tv_delay = 53 [default = LobbyDotaTV_10];
+	optional dota.LobbyDotaTVDelay dota_tv_delay = 53 [default = LobbyDotaTV_10];
 	optional string custom_game_mode = 54;
 	optional string custom_map_name = 55;
 	optional uint32 custom_difficulty = 56;
 	optional bool lan = 57;
-	repeated .CLobbyBroadcastChannelInfo broadcast_channel_info = 58;
+	repeated dota.CLobbyBroadcastChannelInfo broadcast_channel_info = 58;
 	optional uint32 first_leaver_accountid = 59;
 	optional uint32 series_id = 60;
 	optional bool low_priority = 61;
-	repeated .CSODOTALobby.CExtraMsg extra_messages = 62;
-	optional .CDOTASaveGame save_game = 63;
+	repeated dota.CSODOTALobby.CExtraMsg extra_messages = 62;
+	optional dota.CDOTASaveGame save_game = 63;
 	optional bool first_blood_happened = 65;
-	optional .EMatchOutcome match_outcome = 70 [default = k_EMatchOutcome_Unknown];
+	optional dota.EMatchOutcome match_outcome = 70 [default = k_EMatchOutcome_Unknown];
 	optional bool mass_disconnect = 67;
 	optional uint64 custom_game_id = 68;
-	repeated .EEvent active_ingame_events = 69;
+	repeated dota.EEvent active_ingame_events = 69;
 	optional uint32 custom_min_players = 71;
 	optional uint32 custom_max_players = 72;
-	optional .PartnerAccountType partner_type = 73 [default = PARTNER_NONE];
+	optional dota.PartnerAccountType partner_type = 73 [default = PARTNER_NONE];
 	optional uint32 lan_host_ping_to_server_region = 74;
-	optional .DOTALobbyVisibility visibility = 75 [default = DOTALobbyVisibility_Public];
+	optional dota.DOTALobbyVisibility visibility = 75 [default = DOTALobbyVisibility_Public];
 	optional fixed64 custom_game_crc = 76;
 	optional bool custom_game_auto_created_lobby = 77;
 	optional uint32 league_series_id = 78;
@@ -292,15 +293,15 @@ message CSODOTALobby {
 	optional uint64 previous_match_override = 82;
 	optional bool custom_game_uses_account_records = 83;
 	optional uint32 league_selection_priority_team = 84;
-	optional .SelectionPriorityType league_selection_priority_choice = 85 [default = UNDEFINED];
-	optional .SelectionPriorityType league_non_selection_priority_choice = 86 [default = UNDEFINED];
+	optional dota.SelectionPriorityType league_selection_priority_choice = 85 [default = UNDEFINED];
+	optional dota.SelectionPriorityType league_non_selection_priority_choice = 86 [default = UNDEFINED];
 	optional uint32 game_start_time = 87;
-	optional .LobbyDotaPauseSetting pause_setting = 88 [default = LobbyDotaPauseSetting_Unlimited];
+	optional dota.LobbyDotaPauseSetting pause_setting = 88 [default = LobbyDotaPauseSetting_Unlimited];
 	optional uint32 lobby_mvp_account_id = 89;
 	optional uint32 weekend_tourney_division_id = 90;
 	optional uint32 weekend_tourney_skill_level = 91;
 	optional uint32 weekend_tourney_bracket_round = 92;
-	optional .DOTABotDifficulty bot_difficulty_dire = 93 [default = BOT_DIFFICULTY_HARD];
+	optional dota.DOTABotDifficulty bot_difficulty_dire = 93 [default = BOT_DIFFICULTY_HARD];
 	optional uint64 bot_radiant = 94;
 	optional uint64 bot_dire = 95;
 }

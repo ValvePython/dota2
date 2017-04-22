@@ -1,4 +1,5 @@
 syntax = "proto2";
+package dota;
 option optimize_for = SPEED;
 option py_generic_services = false;
 
@@ -36,7 +37,7 @@ message CMsgDOTATeamMember {
 }
 
 message CMsgDOTATeam {
-	repeated .CMsgDOTATeamMember members = 1;
+	repeated dota.CMsgDOTATeamMember members = 1;
 	optional uint32 team_id = 2;
 	optional string name = 3;
 	optional string tag = 4;
@@ -73,7 +74,7 @@ message CMsgDOTATeamInfo {
 		optional bool sub = 4;
 	}
 
-	repeated .CMsgDOTATeamInfo.Member members = 1;
+	repeated dota.CMsgDOTATeamInfo.Member members = 1;
 	optional uint32 team_id = 2;
 	optional string name = 3;
 	optional string tag = 4;
@@ -100,7 +101,7 @@ message CMsgDOTATeamInfo {
 
 message CMsgDOTATeamsInfo {
 	optional uint32 league_id = 1;
-	repeated .CMsgDOTATeamInfo teams = 2;
+	repeated dota.CMsgDOTATeamInfo teams = 2;
 }
 
 message CMsgDOTAMyTeamInfoRequest {
@@ -141,7 +142,7 @@ message CMsgDOTACreateTeamResponse {
 		INVALID_ACCOUNT_TYPE = 17;
 	}
 
-	optional .CMsgDOTACreateTeamResponse.Result result = 1 [default = INVALID];
+	optional dota.CMsgDOTACreateTeamResponse.Result result = 1 [default = INVALID];
 	optional uint32 team_id = 2;
 }
 
@@ -167,12 +168,12 @@ message CMsgDOTAEditTeamDetailsResponse {
 		FAILURE_UNSPECIFIED_ERROR = 4;
 	}
 
-	optional .CMsgDOTAEditTeamDetailsResponse.Result result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAEditTeamDetailsResponse.Result result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTATeamProfileResponse {
 	optional uint32 eresult = 1;
-	optional .CMsgDOTATeam team = 2;
+	optional dota.CMsgDOTATeam team = 2;
 }
 
 message CMsgDOTAProTeamListRequest {
@@ -188,7 +189,7 @@ message CMsgDOTAProTeamListResponse {
 		optional uint32 member_count = 6;
 	}
 
-	repeated .CMsgDOTAProTeamListResponse.TeamEntry teams = 1;
+	repeated dota.CMsgDOTAProTeamListResponse.TeamEntry teams = 1;
 	optional uint32 eresult = 2;
 }
 
@@ -198,7 +199,7 @@ message CMsgDOTATeamInvite_InviterToGC {
 }
 
 message CMsgDOTATeamInvite_GCImmediateResponseToInviter {
-	optional .ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
+	optional dota.ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
 	optional string invitee_name = 2;
 	optional uint32 required_badge_level = 3;
 }
@@ -211,16 +212,16 @@ message CMsgDOTATeamInvite_GCRequestToInvitee {
 }
 
 message CMsgDOTATeamInvite_InviteeResponseToGC {
-	optional .ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
+	optional dota.ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
 }
 
 message CMsgDOTATeamInvite_GCResponseToInviter {
-	optional .ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
+	optional dota.ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
 	optional string invitee_name = 2;
 }
 
 message CMsgDOTATeamInvite_GCResponseToInvitee {
-	optional .ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
+	optional dota.ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
 	optional string team_name = 2;
 }
 
@@ -239,7 +240,7 @@ message CMsgDOTAKickTeamMemberResponse {
 		FAILURE_UNSPECIFIED_ERROR = 5;
 	}
 
-	optional .CMsgDOTAKickTeamMemberResponse.Result result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAKickTeamMemberResponse.Result result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTATransferTeamAdmin {
@@ -257,7 +258,7 @@ message CMsgDOTATransferTeamAdminResponse {
 		FAILURE_UNSPECIFIED_ERROR = 5;
 	}
 
-	optional .CMsgDOTATransferTeamAdminResponse.Result result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTATransferTeamAdminResponse.Result result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTAChangeTeamSub {
@@ -278,7 +279,7 @@ message CMsgDOTAChangeTeamSubResponse {
 		FAILURE_UNSPECIFIED_ERROR = 7;
 	}
 
-	optional .CMsgDOTAChangeTeamSubResponse.Result result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTAChangeTeamSubResponse.Result result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTALeaveTeam {
@@ -293,7 +294,7 @@ message CMsgDOTALeaveTeamResponse {
 		FAILURE_UNSPECIFIED_ERROR = 3;
 	}
 
-	optional .CMsgDOTALeaveTeamResponse.Result result = 1 [default = SUCCESS];
+	optional dota.CMsgDOTALeaveTeamResponse.Result result = 1 [default = SUCCESS];
 }
 
 message CMsgDOTABetaParticipation {

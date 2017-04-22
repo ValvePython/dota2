@@ -1,4 +1,5 @@
 syntax = "proto2";
+package dota;
 option optimize_for = SPEED;
 option py_generic_services = false;
 
@@ -338,7 +339,7 @@ message CDOTAClientHardwareSpecs {
 
 message CDOTASaveGame {
 	message Player {
-		optional .DOTA_GC_TEAM team = 1 [default = DOTA_GC_TEAM_GOOD_GUYS];
+		optional dota.DOTA_GC_TEAM team = 1 [default = DOTA_GC_TEAM_GOOD_GUYS];
 		optional string name = 2;
 		optional string hero = 3;
 	}
@@ -352,14 +353,14 @@ message CDOTASaveGame {
 		optional uint32 game_time = 2;
 		optional uint32 team1_score = 3;
 		optional uint32 team2_score = 4;
-		repeated .CDOTASaveGame.SaveInstance.PlayerPositions player_positions = 5;
+		repeated dota.CDOTASaveGame.SaveInstance.PlayerPositions player_positions = 5;
 		optional uint32 save_id = 6;
 		optional uint32 save_time = 7;
 	}
 
 	optional uint64 match_id = 5;
 	optional uint32 save_time = 2;
-	repeated .CDOTASaveGame.Player players = 3;
-	repeated .CDOTASaveGame.SaveInstance save_instances = 4;
+	repeated dota.CDOTASaveGame.Player players = 3;
+	repeated dota.CDOTASaveGame.SaveInstance save_instances = 4;
 }
 

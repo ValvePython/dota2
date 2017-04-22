@@ -19,16 +19,16 @@ import dota2.protobufs.steammessages_pb2 as steammessages__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='base_gcmessages.proto',
-  package='',
+  package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x15\x62\x61se_gcmessages.proto\x1a\x13steammessages.proto\"\x9a\x01\n\x1d\x43GCStorePurchaseInit_LineItem\x12\x13\n\x0bitem_def_id\x18\x01 \x01(\r\x12\x10\n\x08quantity\x18\x02 \x01(\r\x12\x1e\n\x16\x63ost_in_local_currency\x18\x03 \x01(\r\x12\x15\n\rpurchase_type\x18\x04 \x01(\r\x12\x1b\n\x13source_reference_id\x18\x05 \x01(\x04\"\x82\x01\n\x17\x43MsgGCStorePurchaseInit\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\x12\x32\n\nline_items\x18\x04 \x03(\x0b\x32\x1e.CGCStorePurchaseInit_LineItem\"A\n\x1f\x43MsgGCStorePurchaseInitResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06txn_id\x18\x02 \x01(\x04\"&\n\x13\x43MsgSystemBroadcast\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x9e\x01\n\x12\x43MsgClientPingData\x12\x17\n\x0brelay_codes\x18\x04 \x03(\x07\x42\x02\x10\x01\x12\x17\n\x0brelay_pings\x18\x05 \x03(\rB\x02\x10\x01\x12\x18\n\x0cregion_codes\x18\x08 \x03(\rB\x02\x10\x01\x12\x18\n\x0cregion_pings\x18\t \x03(\rB\x02\x10\x01\x12\"\n\x1aregion_ping_failed_bitmask\x18\n \x01(\r\"\x88\x01\n\x11\x43MsgInviteToParty\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\x12\x10\n\x08\x61s_coach\x18\x04 \x01(\x08\x12&\n\tping_data\x18\x05 \x01(\x0b\x32\x13.CMsgClientPingData\"=\n\x11\x43MsgInviteToLobby\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\"Q\n\x15\x43MsgInvitationCreated\x12\x10\n\x08group_id\x18\x01 \x01(\x04\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x14\n\x0cuser_offline\x18\x03 \x01(\x08\"{\n\x17\x43MsgPartyInviteResponse\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12&\n\tping_data\x18\x08 \x01(\x0b\x32\x13.CMsgClientPingData\"\x8b\x01\n\x17\x43MsgLobbyInviteResponse\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12\x17\n\x0f\x63ustom_game_crc\x18\x06 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x07 \x01(\x07\"%\n\x11\x43MsgKickFromParty\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"\x10\n\x0e\x43MsgLeaveParty\"\xa2\x01\n\x1b\x43MsgCustomGameInstallStatus\x12M\n\x06status\x18\x01 \x01(\x0e\x32\x19.ECustomGameInstallStatus:\"k_ECustomGameInstallStatus_Unknown\x12\x0f\n\x07message\x18\x02 \x01(\t\x12#\n\x1blatest_timestamp_from_steam\x18\x03 \x01(\x07\"W\n\x13\x43MsgServerAvailable\x12@\n\x1a\x63ustom_game_install_status\x18\x01 \x01(\x0b\x32\x1c.CMsgCustomGameInstallStatus\"*\n\x16\x43MsgLANServerAvailable\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\"\xaa\x02\n\x18\x43SOEconGameAccountClient\x12$\n\x19\x61\x64\x64itional_backpack_slots\x18\x01 \x01(\r:\x01\x30\x12\x1c\n\rtrial_account\x18\x02 \x01(\x08:\x05\x66\x61lse\x12&\n\x18\x65ligible_for_online_play\x18\x03 \x01(\x08:\x04true\x12*\n\"need_to_choose_most_helpful_friend\x18\x04 \x01(\x08\x12\x17\n\x0fin_coaches_list\x18\x05 \x01(\x08\x12\x1c\n\x14trade_ban_expiration\x18\x06 \x01(\x07\x12\x1b\n\x13\x64uel_ban_expiration\x18\x07 \x01(\x07\x12\"\n\x13made_first_purchase\x18\t \x01(\x08:\x05\x66\x61lse\"r\n\x18\x43SOItemCriteriaCondition\x12\n\n\x02op\x18\x01 \x01(\x05\x12\r\n\x05\x66ield\x18\x02 \x01(\t\x12\x10\n\x08required\x18\x03 \x01(\x08\x12\x13\n\x0b\x66loat_value\x18\x04 \x01(\x02\x12\x14\n\x0cstring_value\x18\x05 \x01(\t\"\x83\x02\n\x0f\x43SOItemCriteria\x12\x12\n\nitem_level\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\x05\x12\x16\n\x0eitem_level_set\x18\x03 \x01(\x08\x12\x18\n\x10item_quality_set\x18\x04 \x01(\x08\x12\x19\n\x11initial_inventory\x18\x05 \x01(\r\x12\x18\n\x10initial_quantity\x18\x06 \x01(\r\x12\x1b\n\x13ignore_enabled_flag\x18\x08 \x01(\x08\x12-\n\nconditions\x18\t \x03(\x0b\x32\x19.CSOItemCriteriaCondition\x12\x13\n\x0brecent_only\x18\n \x01(\x08\"\xd5\x03\n\rCSOItemRecipe\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03n_a\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65sc_inputs\x18\x04 \x01(\t\x12\x14\n\x0c\x64\x65sc_outputs\x18\x05 \x01(\t\x12\x0c\n\x04\x64i_a\x18\x06 \x01(\t\x12\x0c\n\x04\x64i_b\x18\x07 \x01(\t\x12\x0c\n\x04\x64i_c\x18\x08 \x01(\t\x12\x0c\n\x04\x64o_a\x18\t \x01(\t\x12\x0c\n\x04\x64o_b\x18\n \x01(\t\x12\x0c\n\x04\x64o_c\x18\x0b \x01(\t\x12\x1f\n\x17requires_all_same_class\x18\x0c \x01(\x08\x12\x1e\n\x16requires_all_same_slot\x18\r \x01(\x08\x12\x1e\n\x16\x63lass_usage_for_output\x18\x0e \x01(\x05\x12\x1d\n\x15slot_usage_for_output\x18\x0f \x01(\x05\x12\x16\n\x0eset_for_output\x18\x10 \x01(\x05\x12.\n\x14input_items_criteria\x18\x14 \x03(\x0b\x32\x10.CSOItemCriteria\x12/\n\x15output_items_criteria\x18\x15 \x03(\x0b\x32\x10.CSOItemCriteria\x12\x1e\n\x16input_item_dupe_counts\x18\x16 \x03(\r\"J\n\x14\x43MsgApplyStrangePart\x12\x1c\n\x14strange_part_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\"K\n\x17\x43MsgApplyPennantUpgrade\x12\x17\n\x0fupgrade_item_id\x18\x01 \x01(\x04\x12\x17\n\x0fpennant_item_id\x18\x02 \x01(\x04\"C\n\x13\x43MsgApplyEggEssence\x12\x17\n\x0f\x65ssence_item_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x65gg_item_id\x18\x02 \x01(\x04\"M\n\x14\x43SOEconItemAttribute\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\x12\x13\n\x0bvalue_bytes\x18\x03 \x01(\x0c\":\n\x13\x43SOEconItemEquipped\x12\x11\n\tnew_class\x18\x01 \x01(\r\x12\x10\n\x08new_slot\x18\x02 \x01(\r\"\xf1\x02\n\x0b\x43SOEconItem\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12\x11\n\tinventory\x18\x03 \x01(\r\x12\x11\n\tdef_index\x18\x04 \x01(\r\x12\x13\n\x08quantity\x18\x05 \x01(\r:\x01\x31\x12\x10\n\x05level\x18\x06 \x01(\r:\x01\x31\x12\x12\n\x07quality\x18\x07 \x01(\r:\x01\x34\x12\x10\n\x05\x66lags\x18\x08 \x01(\r:\x01\x30\x12\x11\n\x06origin\x18\t \x01(\r:\x01\x30\x12(\n\tattribute\x18\x0c \x03(\x0b\x32\x15.CSOEconItemAttribute\x12#\n\rinterior_item\x18\r \x01(\x0b\x32\x0c.CSOEconItem\x12\x15\n\x06in_use\x18\x0e \x01(\x08:\x05\x66\x61lse\x12\x10\n\x05style\x18\x0f \x01(\r:\x01\x30\x12\x16\n\x0boriginal_id\x18\x10 \x01(\x04:\x01\x30\x12,\n\x0e\x65quipped_state\x18\x12 \x03(\x0b\x32\x14.CSOEconItemEquipped\"\"\n\rCMsgSortItems\x12\x11\n\tsort_type\x18\x01 \x01(\r\"^\n\x10\x43SOEconClaimCode\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tcode_type\x18\x02 \x01(\r\x12\x15\n\rtime_acquired\x18\x03 \x01(\r\x12\x0c\n\x04\x63ode\x18\x04 \x01(\t\"3\n\x14\x43MsgStoreGetUserData\x12\x1b\n\x13price_sheet_version\x18\x01 \x01(\x07\"\x94\x02\n\x1c\x43MsgStoreGetUserDataResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x02 \x01(\x05\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\x12\x1b\n\x13price_sheet_version\x18\x04 \x01(\x07\x12\x1a\n\x0f\x65xperiment_data\x18\x05 \x01(\x04:\x01\x30\x12\x19\n\x11\x66\x65\x61tured_item_idx\x18\x06 \x01(\x05\x12#\n\x15show_hat_descriptions\x18\x07 \x01(\x08:\x04true\x12\x13\n\x0bprice_sheet\x18\x08 \x01(\x0c\x12\x1c\n\x11\x64\x65\x66\x61ult_item_sort\x18\t \x01(\x05:\x01\x30\x12\x15\n\rpopular_items\x18\n \x03(\r\"_\n\x14\x43MsgUpdateItemSchema\x12\x12\n\nitems_game\x18\x01 \x01(\x0c\x12\x1b\n\x13item_schema_version\x18\x02 \x01(\x07\x12\x16\n\x0eitems_game_url\x18\x03 \x01(\t\"!\n\x0b\x43MsgGCError\x12\x12\n\nerror_text\x18\x01 \x01(\t\"\x1d\n\x1b\x43MsgRequestInventoryRefresh\".\n\x0f\x43MsgConVarValue\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"9\n\x14\x43MsgReplicateConVars\x12!\n\x07\x63onvars\x18\x01 \x03(\x0b\x32\x10.CMsgConVarValue\".\n\x17\x43MsgConsumableExhausted\x12\x13\n\x0bitem_def_id\x18\x01 \x01(\x05\"\x81\x01\n\x14\x43MsgItemAcknowledged\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tinventory\x18\x02 \x01(\r\x12\x11\n\tdef_index\x18\x03 \x01(\r\x12\x0f\n\x07quality\x18\x04 \x01(\r\x12\x0e\n\x06rarity\x18\x05 \x01(\r\x12\x0e\n\x06origin\x18\x06 \x01(\r\"\x85\x01\n\x14\x43MsgSetItemPositions\x12:\n\x0eitem_positions\x18\x01 \x03(\x0b\x32\".CMsgSetItemPositions.ItemPosition\x1a\x31\n\x0cItemPosition\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x10\n\x08position\x18\x02 \x01(\r\"f\n\x1a\x43MsgGCNameItemNotification\x12\x16\n\x0eplayer_steamid\x18\x01 \x01(\x06\x12\x16\n\x0eitem_def_index\x18\x02 \x01(\r\x12\x18\n\x10item_name_custom\x18\x03 \x01(\t\"\xb6\x01\n\x1f\x43MsgGCClientDisplayNotification\x12+\n#notification_title_localization_key\x18\x01 \x01(\t\x12*\n\"notification_body_localization_key\x18\x02 \x01(\t\x12\x1b\n\x13\x62ody_substring_keys\x18\x03 \x03(\t\x12\x1d\n\x15\x62ody_substring_values\x18\x04 \x03(\t\"1\n\x17\x43MsgGCShowItemsPickedUp\x12\x16\n\x0eplayer_steamid\x18\x01 \x01(\x06\"|\n CMsgGCIncrementKillCountResponse\x12\x1f\n\x11killer_account_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x11\n\tnum_kills\x18\x02 \x01(\r\x12\x10\n\x08item_def\x18\x03 \x01(\r\x12\x12\n\nlevel_type\x18\x04 \x01(\r\"\xcd\x01\n\x18\x43SOEconItemDropRateBonus\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x17\n\x0f\x65xpiration_date\x18\x02 \x01(\x07\x12\x13\n\x05\x62onus\x18\x03 \x01(\x02\x42\x04\x80\x97\"\x01\x12\x13\n\x0b\x62onus_count\x18\x04 \x01(\r\x12\x0f\n\x07item_id\x18\x05 \x01(\x04\x12\x11\n\tdef_index\x18\x06 \x01(\r\x12\x14\n\x0cseconds_left\x18\x07 \x01(\r\x12\x1a\n\x0c\x62ooster_type\x18\x08 \x01(\rB\x04\x80\x97\"\x01\"w\n\x19\x43SOEconItemLeagueViewPass\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x17\n\tleague_id\x18\x02 \x01(\rB\x04\x80\x97\"\x01\x12\x11\n\titemindex\x18\x04 \x01(\r\x12\x14\n\x0cgrant_reason\x18\x05 \x01(\r\"O\n\x16\x43SOEconItemEventTicket\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\x04\"\xca\x01\n\x1d\x43SOEconItemTournamentPassport\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\x04\x12\x1d\n\x15original_purchaser_id\x18\x04 \x01(\r\x12\x18\n\x10passports_bought\x18\x05 \x01(\r\x12\x0f\n\x07version\x18\x06 \x01(\r\x12\x11\n\tdef_index\x18\x07 \x01(\r\x12\x14\n\x0creward_flags\x18\x08 \x01(\r\"+\n\x19\x43MsgGCStorePurchaseCancel\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\"3\n!CMsgGCStorePurchaseCancelResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"-\n\x1b\x43MsgGCStorePurchaseFinalize\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\"G\n#CMsgGCStorePurchaseFinalizeResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08item_ids\x18\x02 \x03(\x04\"I\n\x1b\x43MsgGCBannedWordListRequest\x12\x19\n\x11\x62\x61n_list_group_id\x18\x01 \x01(\r\x12\x0f\n\x07word_id\x18\x02 \x01(\r\"u\n\x10\x43MsgGCBannedWord\x12\x0f\n\x07word_id\x18\x01 \x01(\r\x12\x42\n\tword_type\x18\x02 \x01(\x0e\x32\x12.GC_BannedWordType:\x1bGC_BANNED_WORD_DISABLE_WORD\x12\x0c\n\x04word\x18\x03 \x01(\t\"_\n\x1c\x43MsgGCBannedWordListResponse\x12\x19\n\x11\x62\x61n_list_group_id\x18\x01 \x01(\r\x12$\n\tword_list\x18\x02 \x03(\x0b\x32\x11.CMsgGCBannedWord\"U\n!CMsgGCToGCBannedWordListBroadcast\x12\x30\n\tbroadcast\x18\x01 \x01(\x0b\x32\x1d.CMsgGCBannedWordListResponse\"3\n\x1f\x43MsgGCToGCBannedWordListUpdated\x12\x10\n\x08group_id\x18\x01 \x01(\r\"?\n\x17\x43MsgGCToGCDirtySDOCache\x12\x10\n\x08sdo_type\x18\x01 \x01(\r\x12\x12\n\nkey_uint64\x18\x02 \x01(\x04\"G\n\x1f\x43MsgGCToGCDirtyMultipleSDOCache\x12\x10\n\x08sdo_type\x18\x01 \x01(\r\x12\x12\n\nkey_uint64\x18\x02 \x03(\x04\"H\n\x1f\x43MsgGCToGCApplyLocalizationDiff\x12\x10\n\x08language\x18\x01 \x01(\r\x12\x13\n\x0bpacked_diff\x18\x02 \x01(\t\":\n\'CMsgGCToGCApplyLocalizationDiffResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"H\n\x11\x43MsgGCCollectItem\x12\x1a\n\x12\x63ollection_item_id\x18\x01 \x01(\x04\x12\x17\n\x0fsubject_item_id\x18\x02 \x01(\x04\"\x14\n\x12\x43MsgSDONoMemcached\"/\n\x1b\x43MsgGCToGCUpdateSQLKeyValue\x12\x10\n\x08key_name\x18\x01 \x01(\t\"4\n\x1a\x43MsgGCServerVersionUpdated\x12\x16\n\x0eserver_version\x18\x01 \x01(\r\"4\n\x1a\x43MsgGCClientVersionUpdated\x12\x16\n\x0e\x63lient_version\x18\x01 \x01(\r\" \n\x1e\x43MsgGCToGCWebAPIAccountChanged\"G\n\x13\x43MsgRecipeComponent\x12\x17\n\x0fsubject_item_id\x18\x01 \x01(\x04\x12\x17\n\x0f\x61ttribute_index\x18\x02 \x01(\x04\"o\n!CMsgFulfillDynamicRecipeComponent\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x34\n\x16\x63onsumption_components\x18\x02 \x03(\x0b\x32\x14.CMsgRecipeComponent\"6\n\x1d\x43MsgGCClientMarketDataRequest\x12\x15\n\ruser_currency\x18\x01 \x01(\r\"\x88\x01\n\x1b\x43MsgGCClientMarketDataEntry\x12\x16\n\x0eitem_def_index\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\r\x12\x1a\n\x12item_sell_listings\x18\x03 \x01(\r\x12\x1f\n\x17price_in_local_currency\x18\x04 \x01(\r\"G\n\x16\x43MsgGCClientMarketData\x12-\n\x07\x65ntries\x18\x01 \x03(\x0b\x32\x1c.CMsgGCClientMarketDataEntry\"\\\n\x0f\x43MsgExtractGems\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\x12\x1d\n\x0eitem_socket_id\x18\x03 \x01(\r:\x05\x36\x35\x35\x33\x35\"\xd4\x02\n\x17\x43MsgExtractGemsResponse\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12P\n\x08response\x18\x02 \x01(\x0e\x32%.CMsgExtractGemsResponse.EExtractGems:\x17k_ExtractGems_Succeeded\"\xd5\x01\n\x0c\x45\x45xtractGems\x12\x1b\n\x17k_ExtractGems_Succeeded\x10\x00\x12&\n\"k_ExtractGems_Failed_ToolIsInvalid\x10\x01\x12&\n\"k_ExtractGems_Failed_ItemIsInvalid\x10\x02\x12,\n(k_ExtractGems_Failed_ToolCannotRemoveGem\x10\x03\x12*\n&k_ExtractGems_Failed_FailedToRemoveGem\x10\x04\"L\n\rCMsgAddSocket\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\x12\x0f\n\x07unusual\x18\x03 \x01(\x08\"\xb9\x02\n\x15\x43MsgAddSocketResponse\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x1c\n\x14updated_socket_index\x18\x02 \x03(\r\x12J\n\x08response\x18\x03 \x01(\x0e\x32!.CMsgAddSocketResponse.EAddSocket:\x15k_AddSocket_Succeeded\"\xa4\x01\n\nEAddSocket\x12\x19\n\x15k_AddSocket_Succeeded\x10\x00\x12$\n k_AddSocket_Failed_ToolIsInvalid\x10\x01\x12+\n\'k_AddSocket_Failed_ItemCannotBeSocketed\x10\x02\x12(\n$k_AddSocket_Failed_FailedToAddSocket\x10\x03\"D\n\x17\x43MsgAddItemToSocketData\x12\x13\n\x0bgem_item_id\x18\x01 \x01(\x04\x12\x14\n\x0csocket_index\x18\x02 \x01(\r\"]\n\x13\x43MsgAddItemToSocket\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x30\n\x0egems_to_socket\x18\x02 \x03(\x0b\x32\x18.CMsgAddItemToSocketData\"\xdf\x03\n\x1b\x43MsgAddItemToSocketResponse\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x1c\n\x14updated_socket_index\x18\x02 \x03(\r\x12J\n\x08response\x18\x03 \x01(\x0e\x32$.CMsgAddItemToSocketResponse.EAddGem:\x12k_AddGem_Succeeded\"\xbf\x02\n\x07\x45\x41\x64\x64Gem\x12\x16\n\x12k_AddGem_Succeeded\x10\x00\x12 \n\x1ck_AddGem_Failed_GemIsInvalid\x10\x01\x12!\n\x1dk_AddGem_Failed_ItemIsInvalid\x10\x02\x12\"\n\x1ek_AddGem_Failed_FailedToAddGem\x10\x03\x12+\n\'k_AddGem_Failed_InvalidGemTypeForSocket\x10\x04\x12)\n%k_AddGem_Failed_InvalidGemTypeForHero\x10\x05\x12)\n%k_AddGem_Failed_InvalidGemTypeForSlot\x10\x06\x12\x30\n,k_AddGem_Failed_SocketContainsUnremovableGem\x10\x07\"F\n\x18\x43MsgResetStrangeGemCount\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x14\n\x0csocket_index\x18\x02 \x01(\r\"\xbe\x02\n CMsgResetStrangeGemCountResponse\x12S\n\x08response\x18\x01 \x01(\x0e\x32+.CMsgResetStrangeGemCountResponse.EResetGem:\x14k_ResetGem_Succeeded\"\xc4\x01\n\tEResetGem\x12\x18\n\x14k_ResetGem_Succeeded\x10\x00\x12&\n\"k_ResetGem_Failed_FailedToResetGem\x10\x01\x12#\n\x1fk_ResetGem_Failed_ItemIsInvalid\x10\x02\x12%\n!k_ResetGem_Failed_InvalidSocketId\x10\x03\x12)\n%k_ResetGem_Failed_SocketCannotBeReset\x10\x04\"[\n\x1d\x43MsgGCToClientPollFileRequest\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x0f\n\x07poll_id\x18\x03 \x01(\r\"D\n\x1e\x43MsgGCToClientPollFileResponse\x12\x0f\n\x07poll_id\x18\x01 \x01(\r\x12\x11\n\tfile_size\x18\x02 \x01(\r*\x95\x04\n\nEGCBaseMsg\x12\x1a\n\x15k_EMsgGCSystemMessage\x10\xa1\x1f\x12\x1d\n\x18k_EMsgGCReplicateConVars\x10\xa2\x1f\x12\x1a\n\x15k_EMsgGCConVarUpdated\x10\xa3\x1f\x12\x1a\n\x15k_EMsgGCInviteToParty\x10\x95#\x12\x1e\n\x19k_EMsgGCInvitationCreated\x10\x96#\x12 \n\x1bk_EMsgGCPartyInviteResponse\x10\x97#\x12\x1a\n\x15k_EMsgGCKickFromParty\x10\x98#\x12\x17\n\x12k_EMsgGCLeaveParty\x10\x99#\x12\x1c\n\x17k_EMsgGCServerAvailable\x10\x9a#\x12\"\n\x1dk_EMsgGCClientConnectToServer\x10\x9b#\x12\x1b\n\x16k_EMsgGCGameServerInfo\x10\x9c#\x12\x12\n\rk_EMsgGCError\x10\x9d#\x12\x1f\n\x1ak_EMsgGCLANServerAvailable\x10\x9f#\x12\x1a\n\x15k_EMsgGCInviteToLobby\x10\xa0#\x12 \n\x1bk_EMsgGCLobbyInviteResponse\x10\xa1#\x12$\n\x1fk_EMsgGCToClientPollFileRequest\x10\xa2#\x12%\n k_EMsgGCToClientPollFileResponse\x10\xa3#*Y\n\x17\x45GCBaseProtoObjectTypes\x12\x1e\n\x19k_EProtoObjectPartyInvite\x10\xe9\x07\x12\x1e\n\x19k_EProtoObjectLobbyInvite\x10\xea\x07*\xe8\x03\n\x18\x45\x43ustomGameInstallStatus\x12&\n\"k_ECustomGameInstallStatus_Unknown\x10\x00\x12$\n k_ECustomGameInstallStatus_Ready\x10\x01\x12#\n\x1fk_ECustomGameInstallStatus_Busy\x10\x02\x12,\n(k_ECustomGameInstallStatus_FailedGeneric\x10\x65\x12\x32\n.k_ECustomGameInstallStatus_FailedInternalError\x10\x66\x12\x37\n3k_ECustomGameInstallStatus_RequestedTimestampTooOld\x10g\x12\x37\n3k_ECustomGameInstallStatus_RequestedTimestampTooNew\x10h\x12*\n&k_ECustomGameInstallStatus_CRCMismatch\x10i\x12*\n&k_ECustomGameInstallStatus_FailedSteam\x10j\x12-\n)k_ECustomGameInstallStatus_FailedCanceled\x10k*T\n\x11GC_BannedWordType\x12\x1f\n\x1bGC_BANNED_WORD_DISABLE_WORD\x10\x00\x12\x1e\n\x1aGC_BANNED_WORD_ENABLE_WORD\x10\x01\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x15\x62\x61se_gcmessages.proto\x12\x04\x64ota\x1a\x13steammessages.proto\"\x9a\x01\n\x1d\x43GCStorePurchaseInit_LineItem\x12\x13\n\x0bitem_def_id\x18\x01 \x01(\r\x12\x10\n\x08quantity\x18\x02 \x01(\r\x12\x1e\n\x16\x63ost_in_local_currency\x18\x03 \x01(\r\x12\x15\n\rpurchase_type\x18\x04 \x01(\r\x12\x1b\n\x13source_reference_id\x18\x05 \x01(\x04\"\x87\x01\n\x17\x43MsgGCStorePurchaseInit\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\x12\x37\n\nline_items\x18\x04 \x03(\x0b\x32#.dota.CGCStorePurchaseInit_LineItem\"A\n\x1f\x43MsgGCStorePurchaseInitResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06txn_id\x18\x02 \x01(\x04\"&\n\x13\x43MsgSystemBroadcast\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x9e\x01\n\x12\x43MsgClientPingData\x12\x17\n\x0brelay_codes\x18\x04 \x03(\x07\x42\x02\x10\x01\x12\x17\n\x0brelay_pings\x18\x05 \x03(\rB\x02\x10\x01\x12\x18\n\x0cregion_codes\x18\x08 \x03(\rB\x02\x10\x01\x12\x18\n\x0cregion_pings\x18\t \x03(\rB\x02\x10\x01\x12\"\n\x1aregion_ping_failed_bitmask\x18\n \x01(\r\"\x8d\x01\n\x11\x43MsgInviteToParty\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\x12\x10\n\x08\x61s_coach\x18\x04 \x01(\x08\x12+\n\tping_data\x18\x05 \x01(\x0b\x32\x18.dota.CMsgClientPingData\"=\n\x11\x43MsgInviteToLobby\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\"Q\n\x15\x43MsgInvitationCreated\x12\x10\n\x08group_id\x18\x01 \x01(\x04\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x14\n\x0cuser_offline\x18\x03 \x01(\x08\"\x80\x01\n\x17\x43MsgPartyInviteResponse\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12+\n\tping_data\x18\x08 \x01(\x0b\x32\x18.dota.CMsgClientPingData\"\x8b\x01\n\x17\x43MsgLobbyInviteResponse\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12\x17\n\x0f\x63ustom_game_crc\x18\x06 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x07 \x01(\x07\"%\n\x11\x43MsgKickFromParty\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"\x10\n\x0e\x43MsgLeaveParty\"\xa7\x01\n\x1b\x43MsgCustomGameInstallStatus\x12R\n\x06status\x18\x01 \x01(\x0e\x32\x1e.dota.ECustomGameInstallStatus:\"k_ECustomGameInstallStatus_Unknown\x12\x0f\n\x07message\x18\x02 \x01(\t\x12#\n\x1blatest_timestamp_from_steam\x18\x03 \x01(\x07\"\\\n\x13\x43MsgServerAvailable\x12\x45\n\x1a\x63ustom_game_install_status\x18\x01 \x01(\x0b\x32!.dota.CMsgCustomGameInstallStatus\"*\n\x16\x43MsgLANServerAvailable\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\"\xaa\x02\n\x18\x43SOEconGameAccountClient\x12$\n\x19\x61\x64\x64itional_backpack_slots\x18\x01 \x01(\r:\x01\x30\x12\x1c\n\rtrial_account\x18\x02 \x01(\x08:\x05\x66\x61lse\x12&\n\x18\x65ligible_for_online_play\x18\x03 \x01(\x08:\x04true\x12*\n\"need_to_choose_most_helpful_friend\x18\x04 \x01(\x08\x12\x17\n\x0fin_coaches_list\x18\x05 \x01(\x08\x12\x1c\n\x14trade_ban_expiration\x18\x06 \x01(\x07\x12\x1b\n\x13\x64uel_ban_expiration\x18\x07 \x01(\x07\x12\"\n\x13made_first_purchase\x18\t \x01(\x08:\x05\x66\x61lse\"r\n\x18\x43SOItemCriteriaCondition\x12\n\n\x02op\x18\x01 \x01(\x05\x12\r\n\x05\x66ield\x18\x02 \x01(\t\x12\x10\n\x08required\x18\x03 \x01(\x08\x12\x13\n\x0b\x66loat_value\x18\x04 \x01(\x02\x12\x14\n\x0cstring_value\x18\x05 \x01(\t\"\x88\x02\n\x0f\x43SOItemCriteria\x12\x12\n\nitem_level\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\x05\x12\x16\n\x0eitem_level_set\x18\x03 \x01(\x08\x12\x18\n\x10item_quality_set\x18\x04 \x01(\x08\x12\x19\n\x11initial_inventory\x18\x05 \x01(\r\x12\x18\n\x10initial_quantity\x18\x06 \x01(\r\x12\x1b\n\x13ignore_enabled_flag\x18\x08 \x01(\x08\x12\x32\n\nconditions\x18\t \x03(\x0b\x32\x1e.dota.CSOItemCriteriaCondition\x12\x13\n\x0brecent_only\x18\n \x01(\x08\"\xdf\x03\n\rCSOItemRecipe\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03n_a\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65sc_inputs\x18\x04 \x01(\t\x12\x14\n\x0c\x64\x65sc_outputs\x18\x05 \x01(\t\x12\x0c\n\x04\x64i_a\x18\x06 \x01(\t\x12\x0c\n\x04\x64i_b\x18\x07 \x01(\t\x12\x0c\n\x04\x64i_c\x18\x08 \x01(\t\x12\x0c\n\x04\x64o_a\x18\t \x01(\t\x12\x0c\n\x04\x64o_b\x18\n \x01(\t\x12\x0c\n\x04\x64o_c\x18\x0b \x01(\t\x12\x1f\n\x17requires_all_same_class\x18\x0c \x01(\x08\x12\x1e\n\x16requires_all_same_slot\x18\r \x01(\x08\x12\x1e\n\x16\x63lass_usage_for_output\x18\x0e \x01(\x05\x12\x1d\n\x15slot_usage_for_output\x18\x0f \x01(\x05\x12\x16\n\x0eset_for_output\x18\x10 \x01(\x05\x12\x33\n\x14input_items_criteria\x18\x14 \x03(\x0b\x32\x15.dota.CSOItemCriteria\x12\x34\n\x15output_items_criteria\x18\x15 \x03(\x0b\x32\x15.dota.CSOItemCriteria\x12\x1e\n\x16input_item_dupe_counts\x18\x16 \x03(\r\"J\n\x14\x43MsgApplyStrangePart\x12\x1c\n\x14strange_part_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\"K\n\x17\x43MsgApplyPennantUpgrade\x12\x17\n\x0fupgrade_item_id\x18\x01 \x01(\x04\x12\x17\n\x0fpennant_item_id\x18\x02 \x01(\x04\"C\n\x13\x43MsgApplyEggEssence\x12\x17\n\x0f\x65ssence_item_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x65gg_item_id\x18\x02 \x01(\x04\"M\n\x14\x43SOEconItemAttribute\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\x12\x13\n\x0bvalue_bytes\x18\x03 \x01(\x0c\":\n\x13\x43SOEconItemEquipped\x12\x11\n\tnew_class\x18\x01 \x01(\r\x12\x10\n\x08new_slot\x18\x02 \x01(\r\"\x80\x03\n\x0b\x43SOEconItem\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12\x11\n\tinventory\x18\x03 \x01(\r\x12\x11\n\tdef_index\x18\x04 \x01(\r\x12\x13\n\x08quantity\x18\x05 \x01(\r:\x01\x31\x12\x10\n\x05level\x18\x06 \x01(\r:\x01\x31\x12\x12\n\x07quality\x18\x07 \x01(\r:\x01\x34\x12\x10\n\x05\x66lags\x18\x08 \x01(\r:\x01\x30\x12\x11\n\x06origin\x18\t \x01(\r:\x01\x30\x12-\n\tattribute\x18\x0c \x03(\x0b\x32\x1a.dota.CSOEconItemAttribute\x12(\n\rinterior_item\x18\r \x01(\x0b\x32\x11.dota.CSOEconItem\x12\x15\n\x06in_use\x18\x0e \x01(\x08:\x05\x66\x61lse\x12\x10\n\x05style\x18\x0f \x01(\r:\x01\x30\x12\x16\n\x0boriginal_id\x18\x10 \x01(\x04:\x01\x30\x12\x31\n\x0e\x65quipped_state\x18\x12 \x03(\x0b\x32\x19.dota.CSOEconItemEquipped\"\"\n\rCMsgSortItems\x12\x11\n\tsort_type\x18\x01 \x01(\r\"^\n\x10\x43SOEconClaimCode\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tcode_type\x18\x02 \x01(\r\x12\x15\n\rtime_acquired\x18\x03 \x01(\r\x12\x0c\n\x04\x63ode\x18\x04 \x01(\t\"3\n\x14\x43MsgStoreGetUserData\x12\x1b\n\x13price_sheet_version\x18\x01 \x01(\x07\"\x94\x02\n\x1c\x43MsgStoreGetUserDataResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x02 \x01(\x05\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\x12\x1b\n\x13price_sheet_version\x18\x04 \x01(\x07\x12\x1a\n\x0f\x65xperiment_data\x18\x05 \x01(\x04:\x01\x30\x12\x19\n\x11\x66\x65\x61tured_item_idx\x18\x06 \x01(\x05\x12#\n\x15show_hat_descriptions\x18\x07 \x01(\x08:\x04true\x12\x13\n\x0bprice_sheet\x18\x08 \x01(\x0c\x12\x1c\n\x11\x64\x65\x66\x61ult_item_sort\x18\t \x01(\x05:\x01\x30\x12\x15\n\rpopular_items\x18\n \x03(\r\"_\n\x14\x43MsgUpdateItemSchema\x12\x12\n\nitems_game\x18\x01 \x01(\x0c\x12\x1b\n\x13item_schema_version\x18\x02 \x01(\x07\x12\x16\n\x0eitems_game_url\x18\x03 \x01(\t\"!\n\x0b\x43MsgGCError\x12\x12\n\nerror_text\x18\x01 \x01(\t\"\x1d\n\x1b\x43MsgRequestInventoryRefresh\".\n\x0f\x43MsgConVarValue\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\">\n\x14\x43MsgReplicateConVars\x12&\n\x07\x63onvars\x18\x01 \x03(\x0b\x32\x15.dota.CMsgConVarValue\".\n\x17\x43MsgConsumableExhausted\x12\x13\n\x0bitem_def_id\x18\x01 \x01(\x05\"\x81\x01\n\x14\x43MsgItemAcknowledged\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tinventory\x18\x02 \x01(\r\x12\x11\n\tdef_index\x18\x03 \x01(\r\x12\x0f\n\x07quality\x18\x04 \x01(\r\x12\x0e\n\x06rarity\x18\x05 \x01(\r\x12\x0e\n\x06origin\x18\x06 \x01(\r\"\x8a\x01\n\x14\x43MsgSetItemPositions\x12?\n\x0eitem_positions\x18\x01 \x03(\x0b\x32\'.dota.CMsgSetItemPositions.ItemPosition\x1a\x31\n\x0cItemPosition\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x10\n\x08position\x18\x02 \x01(\r\"f\n\x1a\x43MsgGCNameItemNotification\x12\x16\n\x0eplayer_steamid\x18\x01 \x01(\x06\x12\x16\n\x0eitem_def_index\x18\x02 \x01(\r\x12\x18\n\x10item_name_custom\x18\x03 \x01(\t\"\xb6\x01\n\x1f\x43MsgGCClientDisplayNotification\x12+\n#notification_title_localization_key\x18\x01 \x01(\t\x12*\n\"notification_body_localization_key\x18\x02 \x01(\t\x12\x1b\n\x13\x62ody_substring_keys\x18\x03 \x03(\t\x12\x1d\n\x15\x62ody_substring_values\x18\x04 \x03(\t\"1\n\x17\x43MsgGCShowItemsPickedUp\x12\x16\n\x0eplayer_steamid\x18\x01 \x01(\x06\"|\n CMsgGCIncrementKillCountResponse\x12\x1f\n\x11killer_account_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x11\n\tnum_kills\x18\x02 \x01(\r\x12\x10\n\x08item_def\x18\x03 \x01(\r\x12\x12\n\nlevel_type\x18\x04 \x01(\r\"\xcd\x01\n\x18\x43SOEconItemDropRateBonus\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x17\n\x0f\x65xpiration_date\x18\x02 \x01(\x07\x12\x13\n\x05\x62onus\x18\x03 \x01(\x02\x42\x04\x80\x97\"\x01\x12\x13\n\x0b\x62onus_count\x18\x04 \x01(\r\x12\x0f\n\x07item_id\x18\x05 \x01(\x04\x12\x11\n\tdef_index\x18\x06 \x01(\r\x12\x14\n\x0cseconds_left\x18\x07 \x01(\r\x12\x1a\n\x0c\x62ooster_type\x18\x08 \x01(\rB\x04\x80\x97\"\x01\"w\n\x19\x43SOEconItemLeagueViewPass\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x17\n\tleague_id\x18\x02 \x01(\rB\x04\x80\x97\"\x01\x12\x11\n\titemindex\x18\x04 \x01(\r\x12\x14\n\x0cgrant_reason\x18\x05 \x01(\r\"O\n\x16\x43SOEconItemEventTicket\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\x04\"\xca\x01\n\x1d\x43SOEconItemTournamentPassport\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\x04\x12\x1d\n\x15original_purchaser_id\x18\x04 \x01(\r\x12\x18\n\x10passports_bought\x18\x05 \x01(\r\x12\x0f\n\x07version\x18\x06 \x01(\r\x12\x11\n\tdef_index\x18\x07 \x01(\r\x12\x14\n\x0creward_flags\x18\x08 \x01(\r\"+\n\x19\x43MsgGCStorePurchaseCancel\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\"3\n!CMsgGCStorePurchaseCancelResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"-\n\x1b\x43MsgGCStorePurchaseFinalize\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\"G\n#CMsgGCStorePurchaseFinalizeResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08item_ids\x18\x02 \x03(\x04\"I\n\x1b\x43MsgGCBannedWordListRequest\x12\x19\n\x11\x62\x61n_list_group_id\x18\x01 \x01(\r\x12\x0f\n\x07word_id\x18\x02 \x01(\r\"z\n\x10\x43MsgGCBannedWord\x12\x0f\n\x07word_id\x18\x01 \x01(\r\x12G\n\tword_type\x18\x02 \x01(\x0e\x32\x17.dota.GC_BannedWordType:\x1bGC_BANNED_WORD_DISABLE_WORD\x12\x0c\n\x04word\x18\x03 \x01(\t\"d\n\x1c\x43MsgGCBannedWordListResponse\x12\x19\n\x11\x62\x61n_list_group_id\x18\x01 \x01(\r\x12)\n\tword_list\x18\x02 \x03(\x0b\x32\x16.dota.CMsgGCBannedWord\"Z\n!CMsgGCToGCBannedWordListBroadcast\x12\x35\n\tbroadcast\x18\x01 \x01(\x0b\x32\".dota.CMsgGCBannedWordListResponse\"3\n\x1f\x43MsgGCToGCBannedWordListUpdated\x12\x10\n\x08group_id\x18\x01 \x01(\r\"?\n\x17\x43MsgGCToGCDirtySDOCache\x12\x10\n\x08sdo_type\x18\x01 \x01(\r\x12\x12\n\nkey_uint64\x18\x02 \x01(\x04\"G\n\x1f\x43MsgGCToGCDirtyMultipleSDOCache\x12\x10\n\x08sdo_type\x18\x01 \x01(\r\x12\x12\n\nkey_uint64\x18\x02 \x03(\x04\"H\n\x1f\x43MsgGCToGCApplyLocalizationDiff\x12\x10\n\x08language\x18\x01 \x01(\r\x12\x13\n\x0bpacked_diff\x18\x02 \x01(\t\":\n\'CMsgGCToGCApplyLocalizationDiffResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"H\n\x11\x43MsgGCCollectItem\x12\x1a\n\x12\x63ollection_item_id\x18\x01 \x01(\x04\x12\x17\n\x0fsubject_item_id\x18\x02 \x01(\x04\"\x14\n\x12\x43MsgSDONoMemcached\"/\n\x1b\x43MsgGCToGCUpdateSQLKeyValue\x12\x10\n\x08key_name\x18\x01 \x01(\t\"4\n\x1a\x43MsgGCServerVersionUpdated\x12\x16\n\x0eserver_version\x18\x01 \x01(\r\"4\n\x1a\x43MsgGCClientVersionUpdated\x12\x16\n\x0e\x63lient_version\x18\x01 \x01(\r\" \n\x1e\x43MsgGCToGCWebAPIAccountChanged\"G\n\x13\x43MsgRecipeComponent\x12\x17\n\x0fsubject_item_id\x18\x01 \x01(\x04\x12\x17\n\x0f\x61ttribute_index\x18\x02 \x01(\x04\"t\n!CMsgFulfillDynamicRecipeComponent\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x39\n\x16\x63onsumption_components\x18\x02 \x03(\x0b\x32\x19.dota.CMsgRecipeComponent\"6\n\x1d\x43MsgGCClientMarketDataRequest\x12\x15\n\ruser_currency\x18\x01 \x01(\r\"\x88\x01\n\x1b\x43MsgGCClientMarketDataEntry\x12\x16\n\x0eitem_def_index\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\r\x12\x1a\n\x12item_sell_listings\x18\x03 \x01(\r\x12\x1f\n\x17price_in_local_currency\x18\x04 \x01(\r\"L\n\x16\x43MsgGCClientMarketData\x12\x32\n\x07\x65ntries\x18\x01 \x03(\x0b\x32!.dota.CMsgGCClientMarketDataEntry\"\\\n\x0f\x43MsgExtractGems\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\x12\x1d\n\x0eitem_socket_id\x18\x03 \x01(\r:\x05\x36\x35\x35\x33\x35\"\xd9\x02\n\x17\x43MsgExtractGemsResponse\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12U\n\x08response\x18\x02 \x01(\x0e\x32*.dota.CMsgExtractGemsResponse.EExtractGems:\x17k_ExtractGems_Succeeded\"\xd5\x01\n\x0c\x45\x45xtractGems\x12\x1b\n\x17k_ExtractGems_Succeeded\x10\x00\x12&\n\"k_ExtractGems_Failed_ToolIsInvalid\x10\x01\x12&\n\"k_ExtractGems_Failed_ItemIsInvalid\x10\x02\x12,\n(k_ExtractGems_Failed_ToolCannotRemoveGem\x10\x03\x12*\n&k_ExtractGems_Failed_FailedToRemoveGem\x10\x04\"L\n\rCMsgAddSocket\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\x12\x0f\n\x07unusual\x18\x03 \x01(\x08\"\xbe\x02\n\x15\x43MsgAddSocketResponse\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x1c\n\x14updated_socket_index\x18\x02 \x03(\r\x12O\n\x08response\x18\x03 \x01(\x0e\x32&.dota.CMsgAddSocketResponse.EAddSocket:\x15k_AddSocket_Succeeded\"\xa4\x01\n\nEAddSocket\x12\x19\n\x15k_AddSocket_Succeeded\x10\x00\x12$\n k_AddSocket_Failed_ToolIsInvalid\x10\x01\x12+\n\'k_AddSocket_Failed_ItemCannotBeSocketed\x10\x02\x12(\n$k_AddSocket_Failed_FailedToAddSocket\x10\x03\"D\n\x17\x43MsgAddItemToSocketData\x12\x13\n\x0bgem_item_id\x18\x01 \x01(\x04\x12\x14\n\x0csocket_index\x18\x02 \x01(\r\"b\n\x13\x43MsgAddItemToSocket\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x35\n\x0egems_to_socket\x18\x02 \x03(\x0b\x32\x1d.dota.CMsgAddItemToSocketData\"\xe4\x03\n\x1b\x43MsgAddItemToSocketResponse\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x1c\n\x14updated_socket_index\x18\x02 \x03(\r\x12O\n\x08response\x18\x03 \x01(\x0e\x32).dota.CMsgAddItemToSocketResponse.EAddGem:\x12k_AddGem_Succeeded\"\xbf\x02\n\x07\x45\x41\x64\x64Gem\x12\x16\n\x12k_AddGem_Succeeded\x10\x00\x12 \n\x1ck_AddGem_Failed_GemIsInvalid\x10\x01\x12!\n\x1dk_AddGem_Failed_ItemIsInvalid\x10\x02\x12\"\n\x1ek_AddGem_Failed_FailedToAddGem\x10\x03\x12+\n\'k_AddGem_Failed_InvalidGemTypeForSocket\x10\x04\x12)\n%k_AddGem_Failed_InvalidGemTypeForHero\x10\x05\x12)\n%k_AddGem_Failed_InvalidGemTypeForSlot\x10\x06\x12\x30\n,k_AddGem_Failed_SocketContainsUnremovableGem\x10\x07\"F\n\x18\x43MsgResetStrangeGemCount\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x14\n\x0csocket_index\x18\x02 \x01(\r\"\xc3\x02\n CMsgResetStrangeGemCountResponse\x12X\n\x08response\x18\x01 \x01(\x0e\x32\x30.dota.CMsgResetStrangeGemCountResponse.EResetGem:\x14k_ResetGem_Succeeded\"\xc4\x01\n\tEResetGem\x12\x18\n\x14k_ResetGem_Succeeded\x10\x00\x12&\n\"k_ResetGem_Failed_FailedToResetGem\x10\x01\x12#\n\x1fk_ResetGem_Failed_ItemIsInvalid\x10\x02\x12%\n!k_ResetGem_Failed_InvalidSocketId\x10\x03\x12)\n%k_ResetGem_Failed_SocketCannotBeReset\x10\x04\"[\n\x1d\x43MsgGCToClientPollFileRequest\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x0f\n\x07poll_id\x18\x03 \x01(\r\"D\n\x1e\x43MsgGCToClientPollFileResponse\x12\x0f\n\x07poll_id\x18\x01 \x01(\r\x12\x11\n\tfile_size\x18\x02 \x01(\r*\x95\x04\n\nEGCBaseMsg\x12\x1a\n\x15k_EMsgGCSystemMessage\x10\xa1\x1f\x12\x1d\n\x18k_EMsgGCReplicateConVars\x10\xa2\x1f\x12\x1a\n\x15k_EMsgGCConVarUpdated\x10\xa3\x1f\x12\x1a\n\x15k_EMsgGCInviteToParty\x10\x95#\x12\x1e\n\x19k_EMsgGCInvitationCreated\x10\x96#\x12 \n\x1bk_EMsgGCPartyInviteResponse\x10\x97#\x12\x1a\n\x15k_EMsgGCKickFromParty\x10\x98#\x12\x17\n\x12k_EMsgGCLeaveParty\x10\x99#\x12\x1c\n\x17k_EMsgGCServerAvailable\x10\x9a#\x12\"\n\x1dk_EMsgGCClientConnectToServer\x10\x9b#\x12\x1b\n\x16k_EMsgGCGameServerInfo\x10\x9c#\x12\x12\n\rk_EMsgGCError\x10\x9d#\x12\x1f\n\x1ak_EMsgGCLANServerAvailable\x10\x9f#\x12\x1a\n\x15k_EMsgGCInviteToLobby\x10\xa0#\x12 \n\x1bk_EMsgGCLobbyInviteResponse\x10\xa1#\x12$\n\x1fk_EMsgGCToClientPollFileRequest\x10\xa2#\x12%\n k_EMsgGCToClientPollFileResponse\x10\xa3#*Y\n\x17\x45GCBaseProtoObjectTypes\x12\x1e\n\x19k_EProtoObjectPartyInvite\x10\xe9\x07\x12\x1e\n\x19k_EProtoObjectLobbyInvite\x10\xea\x07*\xe8\x03\n\x18\x45\x43ustomGameInstallStatus\x12&\n\"k_ECustomGameInstallStatus_Unknown\x10\x00\x12$\n k_ECustomGameInstallStatus_Ready\x10\x01\x12#\n\x1fk_ECustomGameInstallStatus_Busy\x10\x02\x12,\n(k_ECustomGameInstallStatus_FailedGeneric\x10\x65\x12\x32\n.k_ECustomGameInstallStatus_FailedInternalError\x10\x66\x12\x37\n3k_ECustomGameInstallStatus_RequestedTimestampTooOld\x10g\x12\x37\n3k_ECustomGameInstallStatus_RequestedTimestampTooNew\x10h\x12*\n&k_ECustomGameInstallStatus_CRCMismatch\x10i\x12*\n&k_ECustomGameInstallStatus_FailedSteam\x10j\x12-\n)k_ECustomGameInstallStatus_FailedCanceled\x10k*T\n\x11GC_BannedWordType\x12\x1f\n\x1bGC_BANNED_WORD_DISABLE_WORD\x10\x00\x12\x1e\n\x1aGC_BANNED_WORD_ENABLE_WORD\x10\x01\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[steammessages__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _EGCBASEMSG = _descriptor.EnumDescriptor(
   name='EGCBaseMsg',
-  full_name='EGCBaseMsg',
+  full_name='dota.EGCBaseMsg',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -103,15 +103,15 @@ _EGCBASEMSG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9223,
-  serialized_end=9756,
+  serialized_start=9345,
+  serialized_end=9878,
 )
 _sym_db.RegisterEnumDescriptor(_EGCBASEMSG)
 
 EGCBaseMsg = enum_type_wrapper.EnumTypeWrapper(_EGCBASEMSG)
 _EGCBASEPROTOOBJECTTYPES = _descriptor.EnumDescriptor(
   name='EGCBaseProtoObjectTypes',
-  full_name='EGCBaseProtoObjectTypes',
+  full_name='dota.EGCBaseProtoObjectTypes',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -126,15 +126,15 @@ _EGCBASEPROTOOBJECTTYPES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9758,
-  serialized_end=9847,
+  serialized_start=9880,
+  serialized_end=9969,
 )
 _sym_db.RegisterEnumDescriptor(_EGCBASEPROTOOBJECTTYPES)
 
 EGCBaseProtoObjectTypes = enum_type_wrapper.EnumTypeWrapper(_EGCBASEPROTOOBJECTTYPES)
 _ECUSTOMGAMEINSTALLSTATUS = _descriptor.EnumDescriptor(
   name='ECustomGameInstallStatus',
-  full_name='ECustomGameInstallStatus',
+  full_name='dota.ECustomGameInstallStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -181,15 +181,15 @@ _ECUSTOMGAMEINSTALLSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9850,
-  serialized_end=10338,
+  serialized_start=9972,
+  serialized_end=10460,
 )
 _sym_db.RegisterEnumDescriptor(_ECUSTOMGAMEINSTALLSTATUS)
 
 ECustomGameInstallStatus = enum_type_wrapper.EnumTypeWrapper(_ECUSTOMGAMEINSTALLSTATUS)
 _GC_BANNEDWORDTYPE = _descriptor.EnumDescriptor(
   name='GC_BannedWordType',
-  full_name='GC_BannedWordType',
+  full_name='dota.GC_BannedWordType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -204,8 +204,8 @@ _GC_BANNEDWORDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10340,
-  serialized_end=10424,
+  serialized_start=10462,
+  serialized_end=10546,
 )
 _sym_db.RegisterEnumDescriptor(_GC_BANNEDWORDTYPE)
 
@@ -245,7 +245,7 @@ GC_BANNED_WORD_ENABLE_WORD = 1
 
 _CMSGEXTRACTGEMSRESPONSE_EEXTRACTGEMS = _descriptor.EnumDescriptor(
   name='EExtractGems',
-  full_name='CMsgExtractGemsResponse.EExtractGems',
+  full_name='dota.CMsgExtractGemsResponse.EExtractGems',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -272,14 +272,14 @@ _CMSGEXTRACTGEMSRESPONSE_EEXTRACTGEMS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7410,
-  serialized_end=7623,
+  serialized_start=7512,
+  serialized_end=7725,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGEXTRACTGEMSRESPONSE_EEXTRACTGEMS)
 
 _CMSGADDSOCKETRESPONSE_EADDSOCKET = _descriptor.EnumDescriptor(
   name='EAddSocket',
-  full_name='CMsgAddSocketResponse.EAddSocket',
+  full_name='dota.CMsgAddSocketResponse.EAddSocket',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -302,14 +302,14 @@ _CMSGADDSOCKETRESPONSE_EADDSOCKET = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7853,
-  serialized_end=8017,
+  serialized_start=7960,
+  serialized_end=8124,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGADDSOCKETRESPONSE_EADDSOCKET)
 
 _CMSGADDITEMTOSOCKETRESPONSE_EADDGEM = _descriptor.EnumDescriptor(
   name='EAddGem',
-  full_name='CMsgAddItemToSocketResponse.EAddGem',
+  full_name='dota.CMsgAddItemToSocketResponse.EAddGem',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -348,14 +348,14 @@ _CMSGADDITEMTOSOCKETRESPONSE_EADDGEM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8345,
-  serialized_end=8664,
+  serialized_start=8462,
+  serialized_end=8781,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGADDITEMTOSOCKETRESPONSE_EADDGEM)
 
 _CMSGRESETSTRANGEGEMCOUNTRESPONSE_ERESETGEM = _descriptor.EnumDescriptor(
   name='EResetGem',
-  full_name='CMsgResetStrangeGemCountResponse.EResetGem',
+  full_name='dota.CMsgResetStrangeGemCountResponse.EResetGem',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -382,49 +382,49 @@ _CMSGRESETSTRANGEGEMCOUNTRESPONSE_ERESETGEM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8861,
-  serialized_end=9057,
+  serialized_start=8983,
+  serialized_end=9179,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGRESETSTRANGEGEMCOUNTRESPONSE_ERESETGEM)
 
 
 _CGCSTOREPURCHASEINIT_LINEITEM = _descriptor.Descriptor(
   name='CGCStorePurchaseInit_LineItem',
-  full_name='CGCStorePurchaseInit_LineItem',
+  full_name='dota.CGCStorePurchaseInit_LineItem',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_def_id', full_name='CGCStorePurchaseInit_LineItem.item_def_id', index=0,
+      name='item_def_id', full_name='dota.CGCStorePurchaseInit_LineItem.item_def_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='quantity', full_name='CGCStorePurchaseInit_LineItem.quantity', index=1,
+      name='quantity', full_name='dota.CGCStorePurchaseInit_LineItem.quantity', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='cost_in_local_currency', full_name='CGCStorePurchaseInit_LineItem.cost_in_local_currency', index=2,
+      name='cost_in_local_currency', full_name='dota.CGCStorePurchaseInit_LineItem.cost_in_local_currency', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='purchase_type', full_name='CGCStorePurchaseInit_LineItem.purchase_type', index=3,
+      name='purchase_type', full_name='dota.CGCStorePurchaseInit_LineItem.purchase_type', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='source_reference_id', full_name='CGCStorePurchaseInit_LineItem.source_reference_id', index=4,
+      name='source_reference_id', full_name='dota.CGCStorePurchaseInit_LineItem.source_reference_id', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -442,41 +442,41 @@ _CGCSTOREPURCHASEINIT_LINEITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47,
-  serialized_end=201,
+  serialized_start=53,
+  serialized_end=207,
 )
 
 
 _CMSGGCSTOREPURCHASEINIT = _descriptor.Descriptor(
   name='CMsgGCStorePurchaseInit',
-  full_name='CMsgGCStorePurchaseInit',
+  full_name='dota.CMsgGCStorePurchaseInit',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='country', full_name='CMsgGCStorePurchaseInit.country', index=0,
+      name='country', full_name='dota.CMsgGCStorePurchaseInit.country', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='language', full_name='CMsgGCStorePurchaseInit.language', index=1,
+      name='language', full_name='dota.CMsgGCStorePurchaseInit.language', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='currency', full_name='CMsgGCStorePurchaseInit.currency', index=2,
+      name='currency', full_name='dota.CMsgGCStorePurchaseInit.currency', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='line_items', full_name='CMsgGCStorePurchaseInit.line_items', index=3,
+      name='line_items', full_name='dota.CMsgGCStorePurchaseInit.line_items', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -494,27 +494,27 @@ _CMSGGCSTOREPURCHASEINIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=204,
-  serialized_end=334,
+  serialized_start=210,
+  serialized_end=345,
 )
 
 
 _CMSGGCSTOREPURCHASEINITRESPONSE = _descriptor.Descriptor(
   name='CMsgGCStorePurchaseInitResponse',
-  full_name='CMsgGCStorePurchaseInitResponse',
+  full_name='dota.CMsgGCStorePurchaseInitResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgGCStorePurchaseInitResponse.result', index=0,
+      name='result', full_name='dota.CMsgGCStorePurchaseInitResponse.result', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='txn_id', full_name='CMsgGCStorePurchaseInitResponse.txn_id', index=1,
+      name='txn_id', full_name='dota.CMsgGCStorePurchaseInitResponse.txn_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -532,20 +532,20 @@ _CMSGGCSTOREPURCHASEINITRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=336,
-  serialized_end=401,
+  serialized_start=347,
+  serialized_end=412,
 )
 
 
 _CMSGSYSTEMBROADCAST = _descriptor.Descriptor(
   name='CMsgSystemBroadcast',
-  full_name='CMsgSystemBroadcast',
+  full_name='dota.CMsgSystemBroadcast',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='CMsgSystemBroadcast.message', index=0,
+      name='message', full_name='dota.CMsgSystemBroadcast.message', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -563,48 +563,48 @@ _CMSGSYSTEMBROADCAST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=403,
-  serialized_end=441,
+  serialized_start=414,
+  serialized_end=452,
 )
 
 
 _CMSGCLIENTPINGDATA = _descriptor.Descriptor(
   name='CMsgClientPingData',
-  full_name='CMsgClientPingData',
+  full_name='dota.CMsgClientPingData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='relay_codes', full_name='CMsgClientPingData.relay_codes', index=0,
+      name='relay_codes', full_name='dota.CMsgClientPingData.relay_codes', index=0,
       number=4, type=7, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='relay_pings', full_name='CMsgClientPingData.relay_pings', index=1,
+      name='relay_pings', full_name='dota.CMsgClientPingData.relay_pings', index=1,
       number=5, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='region_codes', full_name='CMsgClientPingData.region_codes', index=2,
+      name='region_codes', full_name='dota.CMsgClientPingData.region_codes', index=2,
       number=8, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='region_pings', full_name='CMsgClientPingData.region_pings', index=3,
+      name='region_pings', full_name='dota.CMsgClientPingData.region_pings', index=3,
       number=9, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='region_ping_failed_bitmask', full_name='CMsgClientPingData.region_ping_failed_bitmask', index=4,
+      name='region_ping_failed_bitmask', full_name='dota.CMsgClientPingData.region_ping_failed_bitmask', index=4,
       number=10, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -622,48 +622,48 @@ _CMSGCLIENTPINGDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=444,
-  serialized_end=602,
+  serialized_start=455,
+  serialized_end=613,
 )
 
 
 _CMSGINVITETOPARTY = _descriptor.Descriptor(
   name='CMsgInviteToParty',
-  full_name='CMsgInviteToParty',
+  full_name='dota.CMsgInviteToParty',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgInviteToParty.steam_id', index=0,
+      name='steam_id', full_name='dota.CMsgInviteToParty.steam_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgInviteToParty.client_version', index=1,
+      name='client_version', full_name='dota.CMsgInviteToParty.client_version', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgInviteToParty.team_id', index=2,
+      name='team_id', full_name='dota.CMsgInviteToParty.team_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='as_coach', full_name='CMsgInviteToParty.as_coach', index=3,
+      name='as_coach', full_name='dota.CMsgInviteToParty.as_coach', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ping_data', full_name='CMsgInviteToParty.ping_data', index=4,
+      name='ping_data', full_name='dota.CMsgInviteToParty.ping_data', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -681,27 +681,27 @@ _CMSGINVITETOPARTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=605,
-  serialized_end=741,
+  serialized_start=616,
+  serialized_end=757,
 )
 
 
 _CMSGINVITETOLOBBY = _descriptor.Descriptor(
   name='CMsgInviteToLobby',
-  full_name='CMsgInviteToLobby',
+  full_name='dota.CMsgInviteToLobby',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgInviteToLobby.steam_id', index=0,
+      name='steam_id', full_name='dota.CMsgInviteToLobby.steam_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgInviteToLobby.client_version', index=1,
+      name='client_version', full_name='dota.CMsgInviteToLobby.client_version', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -719,34 +719,34 @@ _CMSGINVITETOLOBBY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=743,
-  serialized_end=804,
+  serialized_start=759,
+  serialized_end=820,
 )
 
 
 _CMSGINVITATIONCREATED = _descriptor.Descriptor(
   name='CMsgInvitationCreated',
-  full_name='CMsgInvitationCreated',
+  full_name='dota.CMsgInvitationCreated',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='CMsgInvitationCreated.group_id', index=0,
+      name='group_id', full_name='dota.CMsgInvitationCreated.group_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgInvitationCreated.steam_id', index=1,
+      name='steam_id', full_name='dota.CMsgInvitationCreated.steam_id', index=1,
       number=2, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='user_offline', full_name='CMsgInvitationCreated.user_offline', index=2,
+      name='user_offline', full_name='dota.CMsgInvitationCreated.user_offline', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -764,41 +764,41 @@ _CMSGINVITATIONCREATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=806,
-  serialized_end=887,
+  serialized_start=822,
+  serialized_end=903,
 )
 
 
 _CMSGPARTYINVITERESPONSE = _descriptor.Descriptor(
   name='CMsgPartyInviteResponse',
-  full_name='CMsgPartyInviteResponse',
+  full_name='dota.CMsgPartyInviteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='party_id', full_name='CMsgPartyInviteResponse.party_id', index=0,
+      name='party_id', full_name='dota.CMsgPartyInviteResponse.party_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='accept', full_name='CMsgPartyInviteResponse.accept', index=1,
+      name='accept', full_name='dota.CMsgPartyInviteResponse.accept', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgPartyInviteResponse.client_version', index=2,
+      name='client_version', full_name='dota.CMsgPartyInviteResponse.client_version', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ping_data', full_name='CMsgPartyInviteResponse.ping_data', index=3,
+      name='ping_data', full_name='dota.CMsgPartyInviteResponse.ping_data', index=3,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -816,48 +816,48 @@ _CMSGPARTYINVITERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=889,
-  serialized_end=1012,
+  serialized_start=906,
+  serialized_end=1034,
 )
 
 
 _CMSGLOBBYINVITERESPONSE = _descriptor.Descriptor(
   name='CMsgLobbyInviteResponse',
-  full_name='CMsgLobbyInviteResponse',
+  full_name='dota.CMsgLobbyInviteResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CMsgLobbyInviteResponse.lobby_id', index=0,
+      name='lobby_id', full_name='dota.CMsgLobbyInviteResponse.lobby_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='accept', full_name='CMsgLobbyInviteResponse.accept', index=1,
+      name='accept', full_name='dota.CMsgLobbyInviteResponse.accept', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgLobbyInviteResponse.client_version', index=2,
+      name='client_version', full_name='dota.CMsgLobbyInviteResponse.client_version', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='custom_game_crc', full_name='CMsgLobbyInviteResponse.custom_game_crc', index=3,
+      name='custom_game_crc', full_name='dota.CMsgLobbyInviteResponse.custom_game_crc', index=3,
       number=6, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='custom_game_timestamp', full_name='CMsgLobbyInviteResponse.custom_game_timestamp', index=4,
+      name='custom_game_timestamp', full_name='dota.CMsgLobbyInviteResponse.custom_game_timestamp', index=4,
       number=7, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -875,20 +875,20 @@ _CMSGLOBBYINVITERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1015,
-  serialized_end=1154,
+  serialized_start=1037,
+  serialized_end=1176,
 )
 
 
 _CMSGKICKFROMPARTY = _descriptor.Descriptor(
   name='CMsgKickFromParty',
-  full_name='CMsgKickFromParty',
+  full_name='dota.CMsgKickFromParty',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='steam_id', full_name='CMsgKickFromParty.steam_id', index=0,
+      name='steam_id', full_name='dota.CMsgKickFromParty.steam_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -906,14 +906,14 @@ _CMSGKICKFROMPARTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1156,
-  serialized_end=1193,
+  serialized_start=1178,
+  serialized_end=1215,
 )
 
 
 _CMSGLEAVEPARTY = _descriptor.Descriptor(
   name='CMsgLeaveParty',
-  full_name='CMsgLeaveParty',
+  full_name='dota.CMsgLeaveParty',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -930,34 +930,34 @@ _CMSGLEAVEPARTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1195,
-  serialized_end=1211,
+  serialized_start=1217,
+  serialized_end=1233,
 )
 
 
 _CMSGCUSTOMGAMEINSTALLSTATUS = _descriptor.Descriptor(
   name='CMsgCustomGameInstallStatus',
-  full_name='CMsgCustomGameInstallStatus',
+  full_name='dota.CMsgCustomGameInstallStatus',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='CMsgCustomGameInstallStatus.status', index=0,
+      name='status', full_name='dota.CMsgCustomGameInstallStatus.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='message', full_name='CMsgCustomGameInstallStatus.message', index=1,
+      name='message', full_name='dota.CMsgCustomGameInstallStatus.message', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='latest_timestamp_from_steam', full_name='CMsgCustomGameInstallStatus.latest_timestamp_from_steam', index=2,
+      name='latest_timestamp_from_steam', full_name='dota.CMsgCustomGameInstallStatus.latest_timestamp_from_steam', index=2,
       number=3, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -975,20 +975,20 @@ _CMSGCUSTOMGAMEINSTALLSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1214,
-  serialized_end=1376,
+  serialized_start=1236,
+  serialized_end=1403,
 )
 
 
 _CMSGSERVERAVAILABLE = _descriptor.Descriptor(
   name='CMsgServerAvailable',
-  full_name='CMsgServerAvailable',
+  full_name='dota.CMsgServerAvailable',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='custom_game_install_status', full_name='CMsgServerAvailable.custom_game_install_status', index=0,
+      name='custom_game_install_status', full_name='dota.CMsgServerAvailable.custom_game_install_status', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1006,20 +1006,20 @@ _CMSGSERVERAVAILABLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1378,
-  serialized_end=1465,
+  serialized_start=1405,
+  serialized_end=1497,
 )
 
 
 _CMSGLANSERVERAVAILABLE = _descriptor.Descriptor(
   name='CMsgLANServerAvailable',
-  full_name='CMsgLANServerAvailable',
+  full_name='dota.CMsgLANServerAvailable',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CMsgLANServerAvailable.lobby_id', index=0,
+      name='lobby_id', full_name='dota.CMsgLANServerAvailable.lobby_id', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1037,69 +1037,69 @@ _CMSGLANSERVERAVAILABLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1467,
-  serialized_end=1509,
+  serialized_start=1499,
+  serialized_end=1541,
 )
 
 
 _CSOECONGAMEACCOUNTCLIENT = _descriptor.Descriptor(
   name='CSOEconGameAccountClient',
-  full_name='CSOEconGameAccountClient',
+  full_name='dota.CSOEconGameAccountClient',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='additional_backpack_slots', full_name='CSOEconGameAccountClient.additional_backpack_slots', index=0,
+      name='additional_backpack_slots', full_name='dota.CSOEconGameAccountClient.additional_backpack_slots', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='trial_account', full_name='CSOEconGameAccountClient.trial_account', index=1,
+      name='trial_account', full_name='dota.CSOEconGameAccountClient.trial_account', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='eligible_for_online_play', full_name='CSOEconGameAccountClient.eligible_for_online_play', index=2,
+      name='eligible_for_online_play', full_name='dota.CSOEconGameAccountClient.eligible_for_online_play', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=True,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='need_to_choose_most_helpful_friend', full_name='CSOEconGameAccountClient.need_to_choose_most_helpful_friend', index=3,
+      name='need_to_choose_most_helpful_friend', full_name='dota.CSOEconGameAccountClient.need_to_choose_most_helpful_friend', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='in_coaches_list', full_name='CSOEconGameAccountClient.in_coaches_list', index=4,
+      name='in_coaches_list', full_name='dota.CSOEconGameAccountClient.in_coaches_list', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='trade_ban_expiration', full_name='CSOEconGameAccountClient.trade_ban_expiration', index=5,
+      name='trade_ban_expiration', full_name='dota.CSOEconGameAccountClient.trade_ban_expiration', index=5,
       number=6, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='duel_ban_expiration', full_name='CSOEconGameAccountClient.duel_ban_expiration', index=6,
+      name='duel_ban_expiration', full_name='dota.CSOEconGameAccountClient.duel_ban_expiration', index=6,
       number=7, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='made_first_purchase', full_name='CSOEconGameAccountClient.made_first_purchase', index=7,
+      name='made_first_purchase', full_name='dota.CSOEconGameAccountClient.made_first_purchase', index=7,
       number=9, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -1117,48 +1117,48 @@ _CSOECONGAMEACCOUNTCLIENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1512,
-  serialized_end=1810,
+  serialized_start=1544,
+  serialized_end=1842,
 )
 
 
 _CSOITEMCRITERIACONDITION = _descriptor.Descriptor(
   name='CSOItemCriteriaCondition',
-  full_name='CSOItemCriteriaCondition',
+  full_name='dota.CSOItemCriteriaCondition',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='op', full_name='CSOItemCriteriaCondition.op', index=0,
+      name='op', full_name='dota.CSOItemCriteriaCondition.op', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='field', full_name='CSOItemCriteriaCondition.field', index=1,
+      name='field', full_name='dota.CSOItemCriteriaCondition.field', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='required', full_name='CSOItemCriteriaCondition.required', index=2,
+      name='required', full_name='dota.CSOItemCriteriaCondition.required', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='float_value', full_name='CSOItemCriteriaCondition.float_value', index=3,
+      name='float_value', full_name='dota.CSOItemCriteriaCondition.float_value', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='string_value', full_name='CSOItemCriteriaCondition.string_value', index=4,
+      name='string_value', full_name='dota.CSOItemCriteriaCondition.string_value', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1176,76 +1176,76 @@ _CSOITEMCRITERIACONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1812,
-  serialized_end=1926,
+  serialized_start=1844,
+  serialized_end=1958,
 )
 
 
 _CSOITEMCRITERIA = _descriptor.Descriptor(
   name='CSOItemCriteria',
-  full_name='CSOItemCriteria',
+  full_name='dota.CSOItemCriteria',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_level', full_name='CSOItemCriteria.item_level', index=0,
+      name='item_level', full_name='dota.CSOItemCriteria.item_level', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_quality', full_name='CSOItemCriteria.item_quality', index=1,
+      name='item_quality', full_name='dota.CSOItemCriteria.item_quality', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_level_set', full_name='CSOItemCriteria.item_level_set', index=2,
+      name='item_level_set', full_name='dota.CSOItemCriteria.item_level_set', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_quality_set', full_name='CSOItemCriteria.item_quality_set', index=3,
+      name='item_quality_set', full_name='dota.CSOItemCriteria.item_quality_set', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='initial_inventory', full_name='CSOItemCriteria.initial_inventory', index=4,
+      name='initial_inventory', full_name='dota.CSOItemCriteria.initial_inventory', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='initial_quantity', full_name='CSOItemCriteria.initial_quantity', index=5,
+      name='initial_quantity', full_name='dota.CSOItemCriteria.initial_quantity', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ignore_enabled_flag', full_name='CSOItemCriteria.ignore_enabled_flag', index=6,
+      name='ignore_enabled_flag', full_name='dota.CSOItemCriteria.ignore_enabled_flag', index=6,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='conditions', full_name='CSOItemCriteria.conditions', index=7,
+      name='conditions', full_name='dota.CSOItemCriteria.conditions', index=7,
       number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='recent_only', full_name='CSOItemCriteria.recent_only', index=8,
+      name='recent_only', full_name='dota.CSOItemCriteria.recent_only', index=8,
       number=10, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -1263,146 +1263,146 @@ _CSOITEMCRITERIA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1929,
-  serialized_end=2188,
+  serialized_start=1961,
+  serialized_end=2225,
 )
 
 
 _CSOITEMRECIPE = _descriptor.Descriptor(
   name='CSOItemRecipe',
-  full_name='CSOItemRecipe',
+  full_name='dota.CSOItemRecipe',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='def_index', full_name='CSOItemRecipe.def_index', index=0,
+      name='def_index', full_name='dota.CSOItemRecipe.def_index', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='CSOItemRecipe.name', index=1,
+      name='name', full_name='dota.CSOItemRecipe.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='n_a', full_name='CSOItemRecipe.n_a', index=2,
+      name='n_a', full_name='dota.CSOItemRecipe.n_a', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='desc_inputs', full_name='CSOItemRecipe.desc_inputs', index=3,
+      name='desc_inputs', full_name='dota.CSOItemRecipe.desc_inputs', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='desc_outputs', full_name='CSOItemRecipe.desc_outputs', index=4,
+      name='desc_outputs', full_name='dota.CSOItemRecipe.desc_outputs', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='di_a', full_name='CSOItemRecipe.di_a', index=5,
+      name='di_a', full_name='dota.CSOItemRecipe.di_a', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='di_b', full_name='CSOItemRecipe.di_b', index=6,
+      name='di_b', full_name='dota.CSOItemRecipe.di_b', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='di_c', full_name='CSOItemRecipe.di_c', index=7,
+      name='di_c', full_name='dota.CSOItemRecipe.di_c', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='do_a', full_name='CSOItemRecipe.do_a', index=8,
+      name='do_a', full_name='dota.CSOItemRecipe.do_a', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='do_b', full_name='CSOItemRecipe.do_b', index=9,
+      name='do_b', full_name='dota.CSOItemRecipe.do_b', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='do_c', full_name='CSOItemRecipe.do_c', index=10,
+      name='do_c', full_name='dota.CSOItemRecipe.do_c', index=10,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='requires_all_same_class', full_name='CSOItemRecipe.requires_all_same_class', index=11,
+      name='requires_all_same_class', full_name='dota.CSOItemRecipe.requires_all_same_class', index=11,
       number=12, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='requires_all_same_slot', full_name='CSOItemRecipe.requires_all_same_slot', index=12,
+      name='requires_all_same_slot', full_name='dota.CSOItemRecipe.requires_all_same_slot', index=12,
       number=13, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='class_usage_for_output', full_name='CSOItemRecipe.class_usage_for_output', index=13,
+      name='class_usage_for_output', full_name='dota.CSOItemRecipe.class_usage_for_output', index=13,
       number=14, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='slot_usage_for_output', full_name='CSOItemRecipe.slot_usage_for_output', index=14,
+      name='slot_usage_for_output', full_name='dota.CSOItemRecipe.slot_usage_for_output', index=14,
       number=15, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='set_for_output', full_name='CSOItemRecipe.set_for_output', index=15,
+      name='set_for_output', full_name='dota.CSOItemRecipe.set_for_output', index=15,
       number=16, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='input_items_criteria', full_name='CSOItemRecipe.input_items_criteria', index=16,
+      name='input_items_criteria', full_name='dota.CSOItemRecipe.input_items_criteria', index=16,
       number=20, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='output_items_criteria', full_name='CSOItemRecipe.output_items_criteria', index=17,
+      name='output_items_criteria', full_name='dota.CSOItemRecipe.output_items_criteria', index=17,
       number=21, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='input_item_dupe_counts', full_name='CSOItemRecipe.input_item_dupe_counts', index=18,
+      name='input_item_dupe_counts', full_name='dota.CSOItemRecipe.input_item_dupe_counts', index=18,
       number=22, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1420,27 +1420,27 @@ _CSOITEMRECIPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2191,
-  serialized_end=2660,
+  serialized_start=2228,
+  serialized_end=2707,
 )
 
 
 _CMSGAPPLYSTRANGEPART = _descriptor.Descriptor(
   name='CMsgApplyStrangePart',
-  full_name='CMsgApplyStrangePart',
+  full_name='dota.CMsgApplyStrangePart',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='strange_part_item_id', full_name='CMsgApplyStrangePart.strange_part_item_id', index=0,
+      name='strange_part_item_id', full_name='dota.CMsgApplyStrangePart.strange_part_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_item_id', full_name='CMsgApplyStrangePart.item_item_id', index=1,
+      name='item_item_id', full_name='dota.CMsgApplyStrangePart.item_item_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1458,27 +1458,27 @@ _CMSGAPPLYSTRANGEPART = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2662,
-  serialized_end=2736,
+  serialized_start=2709,
+  serialized_end=2783,
 )
 
 
 _CMSGAPPLYPENNANTUPGRADE = _descriptor.Descriptor(
   name='CMsgApplyPennantUpgrade',
-  full_name='CMsgApplyPennantUpgrade',
+  full_name='dota.CMsgApplyPennantUpgrade',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='upgrade_item_id', full_name='CMsgApplyPennantUpgrade.upgrade_item_id', index=0,
+      name='upgrade_item_id', full_name='dota.CMsgApplyPennantUpgrade.upgrade_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pennant_item_id', full_name='CMsgApplyPennantUpgrade.pennant_item_id', index=1,
+      name='pennant_item_id', full_name='dota.CMsgApplyPennantUpgrade.pennant_item_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1496,27 +1496,27 @@ _CMSGAPPLYPENNANTUPGRADE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2738,
-  serialized_end=2813,
+  serialized_start=2785,
+  serialized_end=2860,
 )
 
 
 _CMSGAPPLYEGGESSENCE = _descriptor.Descriptor(
   name='CMsgApplyEggEssence',
-  full_name='CMsgApplyEggEssence',
+  full_name='dota.CMsgApplyEggEssence',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='essence_item_id', full_name='CMsgApplyEggEssence.essence_item_id', index=0,
+      name='essence_item_id', full_name='dota.CMsgApplyEggEssence.essence_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='egg_item_id', full_name='CMsgApplyEggEssence.egg_item_id', index=1,
+      name='egg_item_id', full_name='dota.CMsgApplyEggEssence.egg_item_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1534,34 +1534,34 @@ _CMSGAPPLYEGGESSENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2815,
-  serialized_end=2882,
+  serialized_start=2862,
+  serialized_end=2929,
 )
 
 
 _CSOECONITEMATTRIBUTE = _descriptor.Descriptor(
   name='CSOEconItemAttribute',
-  full_name='CSOEconItemAttribute',
+  full_name='dota.CSOEconItemAttribute',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='def_index', full_name='CSOEconItemAttribute.def_index', index=0,
+      name='def_index', full_name='dota.CSOEconItemAttribute.def_index', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='value', full_name='CSOEconItemAttribute.value', index=1,
+      name='value', full_name='dota.CSOEconItemAttribute.value', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='value_bytes', full_name='CSOEconItemAttribute.value_bytes', index=2,
+      name='value_bytes', full_name='dota.CSOEconItemAttribute.value_bytes', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -1579,27 +1579,27 @@ _CSOECONITEMATTRIBUTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2884,
-  serialized_end=2961,
+  serialized_start=2931,
+  serialized_end=3008,
 )
 
 
 _CSOECONITEMEQUIPPED = _descriptor.Descriptor(
   name='CSOEconItemEquipped',
-  full_name='CSOEconItemEquipped',
+  full_name='dota.CSOEconItemEquipped',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='new_class', full_name='CSOEconItemEquipped.new_class', index=0,
+      name='new_class', full_name='dota.CSOEconItemEquipped.new_class', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='new_slot', full_name='CSOEconItemEquipped.new_slot', index=1,
+      name='new_slot', full_name='dota.CSOEconItemEquipped.new_slot', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1617,118 +1617,118 @@ _CSOECONITEMEQUIPPED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2963,
-  serialized_end=3021,
+  serialized_start=3010,
+  serialized_end=3068,
 )
 
 
 _CSOECONITEM = _descriptor.Descriptor(
   name='CSOEconItem',
-  full_name='CSOEconItem',
+  full_name='dota.CSOEconItem',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='CSOEconItem.id', index=0,
+      name='id', full_name='dota.CSOEconItem.id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CSOEconItem.account_id', index=1,
+      name='account_id', full_name='dota.CSOEconItem.account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='inventory', full_name='CSOEconItem.inventory', index=2,
+      name='inventory', full_name='dota.CSOEconItem.inventory', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='def_index', full_name='CSOEconItem.def_index', index=3,
+      name='def_index', full_name='dota.CSOEconItem.def_index', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='quantity', full_name='CSOEconItem.quantity', index=4,
+      name='quantity', full_name='dota.CSOEconItem.quantity', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='level', full_name='CSOEconItem.level', index=5,
+      name='level', full_name='dota.CSOEconItem.level', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='quality', full_name='CSOEconItem.quality', index=6,
+      name='quality', full_name='dota.CSOEconItem.quality', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=4,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='flags', full_name='CSOEconItem.flags', index=7,
+      name='flags', full_name='dota.CSOEconItem.flags', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='origin', full_name='CSOEconItem.origin', index=8,
+      name='origin', full_name='dota.CSOEconItem.origin', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='attribute', full_name='CSOEconItem.attribute', index=9,
+      name='attribute', full_name='dota.CSOEconItem.attribute', index=9,
       number=12, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='interior_item', full_name='CSOEconItem.interior_item', index=10,
+      name='interior_item', full_name='dota.CSOEconItem.interior_item', index=10,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='in_use', full_name='CSOEconItem.in_use', index=11,
+      name='in_use', full_name='dota.CSOEconItem.in_use', index=11,
       number=14, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='style', full_name='CSOEconItem.style', index=12,
+      name='style', full_name='dota.CSOEconItem.style', index=12,
       number=15, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='original_id', full_name='CSOEconItem.original_id', index=13,
+      name='original_id', full_name='dota.CSOEconItem.original_id', index=13,
       number=16, type=4, cpp_type=4, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='equipped_state', full_name='CSOEconItem.equipped_state', index=14,
+      name='equipped_state', full_name='dota.CSOEconItem.equipped_state', index=14,
       number=18, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1746,20 +1746,20 @@ _CSOECONITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3024,
-  serialized_end=3393,
+  serialized_start=3071,
+  serialized_end=3455,
 )
 
 
 _CMSGSORTITEMS = _descriptor.Descriptor(
   name='CMsgSortItems',
-  full_name='CMsgSortItems',
+  full_name='dota.CMsgSortItems',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sort_type', full_name='CMsgSortItems.sort_type', index=0,
+      name='sort_type', full_name='dota.CMsgSortItems.sort_type', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1777,41 +1777,41 @@ _CMSGSORTITEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3395,
-  serialized_end=3429,
+  serialized_start=3457,
+  serialized_end=3491,
 )
 
 
 _CSOECONCLAIMCODE = _descriptor.Descriptor(
   name='CSOEconClaimCode',
-  full_name='CSOEconClaimCode',
+  full_name='dota.CSOEconClaimCode',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CSOEconClaimCode.account_id', index=0,
+      name='account_id', full_name='dota.CSOEconClaimCode.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='code_type', full_name='CSOEconClaimCode.code_type', index=1,
+      name='code_type', full_name='dota.CSOEconClaimCode.code_type', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_acquired', full_name='CSOEconClaimCode.time_acquired', index=2,
+      name='time_acquired', full_name='dota.CSOEconClaimCode.time_acquired', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='code', full_name='CSOEconClaimCode.code', index=3,
+      name='code', full_name='dota.CSOEconClaimCode.code', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1829,20 +1829,20 @@ _CSOECONCLAIMCODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3431,
-  serialized_end=3525,
+  serialized_start=3493,
+  serialized_end=3587,
 )
 
 
 _CMSGSTOREGETUSERDATA = _descriptor.Descriptor(
   name='CMsgStoreGetUserData',
-  full_name='CMsgStoreGetUserData',
+  full_name='dota.CMsgStoreGetUserData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='price_sheet_version', full_name='CMsgStoreGetUserData.price_sheet_version', index=0,
+      name='price_sheet_version', full_name='dota.CMsgStoreGetUserData.price_sheet_version', index=0,
       number=1, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1860,83 +1860,83 @@ _CMSGSTOREGETUSERDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3527,
-  serialized_end=3578,
+  serialized_start=3589,
+  serialized_end=3640,
 )
 
 
 _CMSGSTOREGETUSERDATARESPONSE = _descriptor.Descriptor(
   name='CMsgStoreGetUserDataResponse',
-  full_name='CMsgStoreGetUserDataResponse',
+  full_name='dota.CMsgStoreGetUserDataResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgStoreGetUserDataResponse.result', index=0,
+      name='result', full_name='dota.CMsgStoreGetUserDataResponse.result', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='currency', full_name='CMsgStoreGetUserDataResponse.currency', index=1,
+      name='currency', full_name='dota.CMsgStoreGetUserDataResponse.currency', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='country', full_name='CMsgStoreGetUserDataResponse.country', index=2,
+      name='country', full_name='dota.CMsgStoreGetUserDataResponse.country', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='price_sheet_version', full_name='CMsgStoreGetUserDataResponse.price_sheet_version', index=3,
+      name='price_sheet_version', full_name='dota.CMsgStoreGetUserDataResponse.price_sheet_version', index=3,
       number=4, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='experiment_data', full_name='CMsgStoreGetUserDataResponse.experiment_data', index=4,
+      name='experiment_data', full_name='dota.CMsgStoreGetUserDataResponse.experiment_data', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='featured_item_idx', full_name='CMsgStoreGetUserDataResponse.featured_item_idx', index=5,
+      name='featured_item_idx', full_name='dota.CMsgStoreGetUserDataResponse.featured_item_idx', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='show_hat_descriptions', full_name='CMsgStoreGetUserDataResponse.show_hat_descriptions', index=6,
+      name='show_hat_descriptions', full_name='dota.CMsgStoreGetUserDataResponse.show_hat_descriptions', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=True,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='price_sheet', full_name='CMsgStoreGetUserDataResponse.price_sheet', index=7,
+      name='price_sheet', full_name='dota.CMsgStoreGetUserDataResponse.price_sheet', index=7,
       number=8, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='default_item_sort', full_name='CMsgStoreGetUserDataResponse.default_item_sort', index=8,
+      name='default_item_sort', full_name='dota.CMsgStoreGetUserDataResponse.default_item_sort', index=8,
       number=9, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='popular_items', full_name='CMsgStoreGetUserDataResponse.popular_items', index=9,
+      name='popular_items', full_name='dota.CMsgStoreGetUserDataResponse.popular_items', index=9,
       number=10, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1954,34 +1954,34 @@ _CMSGSTOREGETUSERDATARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3581,
-  serialized_end=3857,
+  serialized_start=3643,
+  serialized_end=3919,
 )
 
 
 _CMSGUPDATEITEMSCHEMA = _descriptor.Descriptor(
   name='CMsgUpdateItemSchema',
-  full_name='CMsgUpdateItemSchema',
+  full_name='dota.CMsgUpdateItemSchema',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='items_game', full_name='CMsgUpdateItemSchema.items_game', index=0,
+      name='items_game', full_name='dota.CMsgUpdateItemSchema.items_game', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_schema_version', full_name='CMsgUpdateItemSchema.item_schema_version', index=1,
+      name='item_schema_version', full_name='dota.CMsgUpdateItemSchema.item_schema_version', index=1,
       number=2, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='items_game_url', full_name='CMsgUpdateItemSchema.items_game_url', index=2,
+      name='items_game_url', full_name='dota.CMsgUpdateItemSchema.items_game_url', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1999,20 +1999,20 @@ _CMSGUPDATEITEMSCHEMA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3859,
-  serialized_end=3954,
+  serialized_start=3921,
+  serialized_end=4016,
 )
 
 
 _CMSGGCERROR = _descriptor.Descriptor(
   name='CMsgGCError',
-  full_name='CMsgGCError',
+  full_name='dota.CMsgGCError',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='error_text', full_name='CMsgGCError.error_text', index=0,
+      name='error_text', full_name='dota.CMsgGCError.error_text', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -2030,14 +2030,14 @@ _CMSGGCERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3956,
-  serialized_end=3989,
+  serialized_start=4018,
+  serialized_end=4051,
 )
 
 
 _CMSGREQUESTINVENTORYREFRESH = _descriptor.Descriptor(
   name='CMsgRequestInventoryRefresh',
-  full_name='CMsgRequestInventoryRefresh',
+  full_name='dota.CMsgRequestInventoryRefresh',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -2054,27 +2054,27 @@ _CMSGREQUESTINVENTORYREFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3991,
-  serialized_end=4020,
+  serialized_start=4053,
+  serialized_end=4082,
 )
 
 
 _CMSGCONVARVALUE = _descriptor.Descriptor(
   name='CMsgConVarValue',
-  full_name='CMsgConVarValue',
+  full_name='dota.CMsgConVarValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgConVarValue.name', index=0,
+      name='name', full_name='dota.CMsgConVarValue.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='value', full_name='CMsgConVarValue.value', index=1,
+      name='value', full_name='dota.CMsgConVarValue.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -2092,20 +2092,20 @@ _CMSGCONVARVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4022,
-  serialized_end=4068,
+  serialized_start=4084,
+  serialized_end=4130,
 )
 
 
 _CMSGREPLICATECONVARS = _descriptor.Descriptor(
   name='CMsgReplicateConVars',
-  full_name='CMsgReplicateConVars',
+  full_name='dota.CMsgReplicateConVars',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='convars', full_name='CMsgReplicateConVars.convars', index=0,
+      name='convars', full_name='dota.CMsgReplicateConVars.convars', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2123,20 +2123,20 @@ _CMSGREPLICATECONVARS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4070,
-  serialized_end=4127,
+  serialized_start=4132,
+  serialized_end=4194,
 )
 
 
 _CMSGCONSUMABLEEXHAUSTED = _descriptor.Descriptor(
   name='CMsgConsumableExhausted',
-  full_name='CMsgConsumableExhausted',
+  full_name='dota.CMsgConsumableExhausted',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_def_id', full_name='CMsgConsumableExhausted.item_def_id', index=0,
+      name='item_def_id', full_name='dota.CMsgConsumableExhausted.item_def_id', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2154,55 +2154,55 @@ _CMSGCONSUMABLEEXHAUSTED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4129,
-  serialized_end=4175,
+  serialized_start=4196,
+  serialized_end=4242,
 )
 
 
 _CMSGITEMACKNOWLEDGED = _descriptor.Descriptor(
   name='CMsgItemAcknowledged',
-  full_name='CMsgItemAcknowledged',
+  full_name='dota.CMsgItemAcknowledged',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgItemAcknowledged.account_id', index=0,
+      name='account_id', full_name='dota.CMsgItemAcknowledged.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='inventory', full_name='CMsgItemAcknowledged.inventory', index=1,
+      name='inventory', full_name='dota.CMsgItemAcknowledged.inventory', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='def_index', full_name='CMsgItemAcknowledged.def_index', index=2,
+      name='def_index', full_name='dota.CMsgItemAcknowledged.def_index', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='quality', full_name='CMsgItemAcknowledged.quality', index=3,
+      name='quality', full_name='dota.CMsgItemAcknowledged.quality', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='rarity', full_name='CMsgItemAcknowledged.rarity', index=4,
+      name='rarity', full_name='dota.CMsgItemAcknowledged.rarity', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='origin', full_name='CMsgItemAcknowledged.origin', index=5,
+      name='origin', full_name='dota.CMsgItemAcknowledged.origin', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2220,27 +2220,27 @@ _CMSGITEMACKNOWLEDGED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4178,
-  serialized_end=4307,
+  serialized_start=4245,
+  serialized_end=4374,
 )
 
 
 _CMSGSETITEMPOSITIONS_ITEMPOSITION = _descriptor.Descriptor(
   name='ItemPosition',
-  full_name='CMsgSetItemPositions.ItemPosition',
+  full_name='dota.CMsgSetItemPositions.ItemPosition',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='CMsgSetItemPositions.ItemPosition.item_id', index=0,
+      name='item_id', full_name='dota.CMsgSetItemPositions.ItemPosition.item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='position', full_name='CMsgSetItemPositions.ItemPosition.position', index=1,
+      name='position', full_name='dota.CMsgSetItemPositions.ItemPosition.position', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2258,19 +2258,19 @@ _CMSGSETITEMPOSITIONS_ITEMPOSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4394,
-  serialized_end=4443,
+  serialized_start=4466,
+  serialized_end=4515,
 )
 
 _CMSGSETITEMPOSITIONS = _descriptor.Descriptor(
   name='CMsgSetItemPositions',
-  full_name='CMsgSetItemPositions',
+  full_name='dota.CMsgSetItemPositions',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_positions', full_name='CMsgSetItemPositions.item_positions', index=0,
+      name='item_positions', full_name='dota.CMsgSetItemPositions.item_positions', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2288,34 +2288,34 @@ _CMSGSETITEMPOSITIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4310,
-  serialized_end=4443,
+  serialized_start=4377,
+  serialized_end=4515,
 )
 
 
 _CMSGGCNAMEITEMNOTIFICATION = _descriptor.Descriptor(
   name='CMsgGCNameItemNotification',
-  full_name='CMsgGCNameItemNotification',
+  full_name='dota.CMsgGCNameItemNotification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player_steamid', full_name='CMsgGCNameItemNotification.player_steamid', index=0,
+      name='player_steamid', full_name='dota.CMsgGCNameItemNotification.player_steamid', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_def_index', full_name='CMsgGCNameItemNotification.item_def_index', index=1,
+      name='item_def_index', full_name='dota.CMsgGCNameItemNotification.item_def_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_name_custom', full_name='CMsgGCNameItemNotification.item_name_custom', index=2,
+      name='item_name_custom', full_name='dota.CMsgGCNameItemNotification.item_name_custom', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -2333,41 +2333,41 @@ _CMSGGCNAMEITEMNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4445,
-  serialized_end=4547,
+  serialized_start=4517,
+  serialized_end=4619,
 )
 
 
 _CMSGGCCLIENTDISPLAYNOTIFICATION = _descriptor.Descriptor(
   name='CMsgGCClientDisplayNotification',
-  full_name='CMsgGCClientDisplayNotification',
+  full_name='dota.CMsgGCClientDisplayNotification',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='notification_title_localization_key', full_name='CMsgGCClientDisplayNotification.notification_title_localization_key', index=0,
+      name='notification_title_localization_key', full_name='dota.CMsgGCClientDisplayNotification.notification_title_localization_key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='notification_body_localization_key', full_name='CMsgGCClientDisplayNotification.notification_body_localization_key', index=1,
+      name='notification_body_localization_key', full_name='dota.CMsgGCClientDisplayNotification.notification_body_localization_key', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='body_substring_keys', full_name='CMsgGCClientDisplayNotification.body_substring_keys', index=2,
+      name='body_substring_keys', full_name='dota.CMsgGCClientDisplayNotification.body_substring_keys', index=2,
       number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='body_substring_values', full_name='CMsgGCClientDisplayNotification.body_substring_values', index=3,
+      name='body_substring_values', full_name='dota.CMsgGCClientDisplayNotification.body_substring_values', index=3,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2385,20 +2385,20 @@ _CMSGGCCLIENTDISPLAYNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4550,
-  serialized_end=4732,
+  serialized_start=4622,
+  serialized_end=4804,
 )
 
 
 _CMSGGCSHOWITEMSPICKEDUP = _descriptor.Descriptor(
   name='CMsgGCShowItemsPickedUp',
-  full_name='CMsgGCShowItemsPickedUp',
+  full_name='dota.CMsgGCShowItemsPickedUp',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player_steamid', full_name='CMsgGCShowItemsPickedUp.player_steamid', index=0,
+      name='player_steamid', full_name='dota.CMsgGCShowItemsPickedUp.player_steamid', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2416,41 +2416,41 @@ _CMSGGCSHOWITEMSPICKEDUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4734,
-  serialized_end=4783,
+  serialized_start=4806,
+  serialized_end=4855,
 )
 
 
 _CMSGGCINCREMENTKILLCOUNTRESPONSE = _descriptor.Descriptor(
   name='CMsgGCIncrementKillCountResponse',
-  full_name='CMsgGCIncrementKillCountResponse',
+  full_name='dota.CMsgGCIncrementKillCountResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='killer_account_id', full_name='CMsgGCIncrementKillCountResponse.killer_account_id', index=0,
+      name='killer_account_id', full_name='dota.CMsgGCIncrementKillCountResponse.killer_account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200\227\"\001'))),
     _descriptor.FieldDescriptor(
-      name='num_kills', full_name='CMsgGCIncrementKillCountResponse.num_kills', index=1,
+      name='num_kills', full_name='dota.CMsgGCIncrementKillCountResponse.num_kills', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_def', full_name='CMsgGCIncrementKillCountResponse.item_def', index=2,
+      name='item_def', full_name='dota.CMsgGCIncrementKillCountResponse.item_def', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='level_type', full_name='CMsgGCIncrementKillCountResponse.level_type', index=3,
+      name='level_type', full_name='dota.CMsgGCIncrementKillCountResponse.level_type', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2468,69 +2468,69 @@ _CMSGGCINCREMENTKILLCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4785,
-  serialized_end=4909,
+  serialized_start=4857,
+  serialized_end=4981,
 )
 
 
 _CSOECONITEMDROPRATEBONUS = _descriptor.Descriptor(
   name='CSOEconItemDropRateBonus',
-  full_name='CSOEconItemDropRateBonus',
+  full_name='dota.CSOEconItemDropRateBonus',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CSOEconItemDropRateBonus.account_id', index=0,
+      name='account_id', full_name='dota.CSOEconItemDropRateBonus.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200\227\"\001'))),
     _descriptor.FieldDescriptor(
-      name='expiration_date', full_name='CSOEconItemDropRateBonus.expiration_date', index=1,
+      name='expiration_date', full_name='dota.CSOEconItemDropRateBonus.expiration_date', index=1,
       number=2, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='bonus', full_name='CSOEconItemDropRateBonus.bonus', index=2,
+      name='bonus', full_name='dota.CSOEconItemDropRateBonus.bonus', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200\227\"\001'))),
     _descriptor.FieldDescriptor(
-      name='bonus_count', full_name='CSOEconItemDropRateBonus.bonus_count', index=3,
+      name='bonus_count', full_name='dota.CSOEconItemDropRateBonus.bonus_count', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='CSOEconItemDropRateBonus.item_id', index=4,
+      name='item_id', full_name='dota.CSOEconItemDropRateBonus.item_id', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='def_index', full_name='CSOEconItemDropRateBonus.def_index', index=5,
+      name='def_index', full_name='dota.CSOEconItemDropRateBonus.def_index', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='seconds_left', full_name='CSOEconItemDropRateBonus.seconds_left', index=6,
+      name='seconds_left', full_name='dota.CSOEconItemDropRateBonus.seconds_left', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='booster_type', full_name='CSOEconItemDropRateBonus.booster_type', index=7,
+      name='booster_type', full_name='dota.CSOEconItemDropRateBonus.booster_type', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2548,41 +2548,41 @@ _CSOECONITEMDROPRATEBONUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4912,
-  serialized_end=5117,
+  serialized_start=4984,
+  serialized_end=5189,
 )
 
 
 _CSOECONITEMLEAGUEVIEWPASS = _descriptor.Descriptor(
   name='CSOEconItemLeagueViewPass',
-  full_name='CSOEconItemLeagueViewPass',
+  full_name='dota.CSOEconItemLeagueViewPass',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CSOEconItemLeagueViewPass.account_id', index=0,
+      name='account_id', full_name='dota.CSOEconItemLeagueViewPass.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200\227\"\001'))),
     _descriptor.FieldDescriptor(
-      name='league_id', full_name='CSOEconItemLeagueViewPass.league_id', index=1,
+      name='league_id', full_name='dota.CSOEconItemLeagueViewPass.league_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\200\227\"\001'))),
     _descriptor.FieldDescriptor(
-      name='itemindex', full_name='CSOEconItemLeagueViewPass.itemindex', index=2,
+      name='itemindex', full_name='dota.CSOEconItemLeagueViewPass.itemindex', index=2,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='grant_reason', full_name='CSOEconItemLeagueViewPass.grant_reason', index=3,
+      name='grant_reason', full_name='dota.CSOEconItemLeagueViewPass.grant_reason', index=3,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2600,34 +2600,34 @@ _CSOECONITEMLEAGUEVIEWPASS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5119,
-  serialized_end=5238,
+  serialized_start=5191,
+  serialized_end=5310,
 )
 
 
 _CSOECONITEMEVENTTICKET = _descriptor.Descriptor(
   name='CSOEconItemEventTicket',
-  full_name='CSOEconItemEventTicket',
+  full_name='dota.CSOEconItemEventTicket',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CSOEconItemEventTicket.account_id', index=0,
+      name='account_id', full_name='dota.CSOEconItemEventTicket.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='event_id', full_name='CSOEconItemEventTicket.event_id', index=1,
+      name='event_id', full_name='dota.CSOEconItemEventTicket.event_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='CSOEconItemEventTicket.item_id', index=2,
+      name='item_id', full_name='dota.CSOEconItemEventTicket.item_id', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2645,69 +2645,69 @@ _CSOECONITEMEVENTTICKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5240,
-  serialized_end=5319,
+  serialized_start=5312,
+  serialized_end=5391,
 )
 
 
 _CSOECONITEMTOURNAMENTPASSPORT = _descriptor.Descriptor(
   name='CSOEconItemTournamentPassport',
-  full_name='CSOEconItemTournamentPassport',
+  full_name='dota.CSOEconItemTournamentPassport',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CSOEconItemTournamentPassport.account_id', index=0,
+      name='account_id', full_name='dota.CSOEconItemTournamentPassport.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='league_id', full_name='CSOEconItemTournamentPassport.league_id', index=1,
+      name='league_id', full_name='dota.CSOEconItemTournamentPassport.league_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='CSOEconItemTournamentPassport.item_id', index=2,
+      name='item_id', full_name='dota.CSOEconItemTournamentPassport.item_id', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='original_purchaser_id', full_name='CSOEconItemTournamentPassport.original_purchaser_id', index=3,
+      name='original_purchaser_id', full_name='dota.CSOEconItemTournamentPassport.original_purchaser_id', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='passports_bought', full_name='CSOEconItemTournamentPassport.passports_bought', index=4,
+      name='passports_bought', full_name='dota.CSOEconItemTournamentPassport.passports_bought', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='version', full_name='CSOEconItemTournamentPassport.version', index=5,
+      name='version', full_name='dota.CSOEconItemTournamentPassport.version', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='def_index', full_name='CSOEconItemTournamentPassport.def_index', index=6,
+      name='def_index', full_name='dota.CSOEconItemTournamentPassport.def_index', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='reward_flags', full_name='CSOEconItemTournamentPassport.reward_flags', index=7,
+      name='reward_flags', full_name='dota.CSOEconItemTournamentPassport.reward_flags', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2725,20 +2725,20 @@ _CSOECONITEMTOURNAMENTPASSPORT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5322,
-  serialized_end=5524,
+  serialized_start=5394,
+  serialized_end=5596,
 )
 
 
 _CMSGGCSTOREPURCHASECANCEL = _descriptor.Descriptor(
   name='CMsgGCStorePurchaseCancel',
-  full_name='CMsgGCStorePurchaseCancel',
+  full_name='dota.CMsgGCStorePurchaseCancel',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='txn_id', full_name='CMsgGCStorePurchaseCancel.txn_id', index=0,
+      name='txn_id', full_name='dota.CMsgGCStorePurchaseCancel.txn_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2756,20 +2756,20 @@ _CMSGGCSTOREPURCHASECANCEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5526,
-  serialized_end=5569,
+  serialized_start=5598,
+  serialized_end=5641,
 )
 
 
 _CMSGGCSTOREPURCHASECANCELRESPONSE = _descriptor.Descriptor(
   name='CMsgGCStorePurchaseCancelResponse',
-  full_name='CMsgGCStorePurchaseCancelResponse',
+  full_name='dota.CMsgGCStorePurchaseCancelResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgGCStorePurchaseCancelResponse.result', index=0,
+      name='result', full_name='dota.CMsgGCStorePurchaseCancelResponse.result', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2787,20 +2787,20 @@ _CMSGGCSTOREPURCHASECANCELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5571,
-  serialized_end=5622,
+  serialized_start=5643,
+  serialized_end=5694,
 )
 
 
 _CMSGGCSTOREPURCHASEFINALIZE = _descriptor.Descriptor(
   name='CMsgGCStorePurchaseFinalize',
-  full_name='CMsgGCStorePurchaseFinalize',
+  full_name='dota.CMsgGCStorePurchaseFinalize',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='txn_id', full_name='CMsgGCStorePurchaseFinalize.txn_id', index=0,
+      name='txn_id', full_name='dota.CMsgGCStorePurchaseFinalize.txn_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2818,27 +2818,27 @@ _CMSGGCSTOREPURCHASEFINALIZE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5624,
-  serialized_end=5669,
+  serialized_start=5696,
+  serialized_end=5741,
 )
 
 
 _CMSGGCSTOREPURCHASEFINALIZERESPONSE = _descriptor.Descriptor(
   name='CMsgGCStorePurchaseFinalizeResponse',
-  full_name='CMsgGCStorePurchaseFinalizeResponse',
+  full_name='dota.CMsgGCStorePurchaseFinalizeResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgGCStorePurchaseFinalizeResponse.result', index=0,
+      name='result', full_name='dota.CMsgGCStorePurchaseFinalizeResponse.result', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_ids', full_name='CMsgGCStorePurchaseFinalizeResponse.item_ids', index=1,
+      name='item_ids', full_name='dota.CMsgGCStorePurchaseFinalizeResponse.item_ids', index=1,
       number=2, type=4, cpp_type=4, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2856,27 +2856,27 @@ _CMSGGCSTOREPURCHASEFINALIZERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5671,
-  serialized_end=5742,
+  serialized_start=5743,
+  serialized_end=5814,
 )
 
 
 _CMSGGCBANNEDWORDLISTREQUEST = _descriptor.Descriptor(
   name='CMsgGCBannedWordListRequest',
-  full_name='CMsgGCBannedWordListRequest',
+  full_name='dota.CMsgGCBannedWordListRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ban_list_group_id', full_name='CMsgGCBannedWordListRequest.ban_list_group_id', index=0,
+      name='ban_list_group_id', full_name='dota.CMsgGCBannedWordListRequest.ban_list_group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='word_id', full_name='CMsgGCBannedWordListRequest.word_id', index=1,
+      name='word_id', full_name='dota.CMsgGCBannedWordListRequest.word_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2894,34 +2894,34 @@ _CMSGGCBANNEDWORDLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5744,
-  serialized_end=5817,
+  serialized_start=5816,
+  serialized_end=5889,
 )
 
 
 _CMSGGCBANNEDWORD = _descriptor.Descriptor(
   name='CMsgGCBannedWord',
-  full_name='CMsgGCBannedWord',
+  full_name='dota.CMsgGCBannedWord',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='word_id', full_name='CMsgGCBannedWord.word_id', index=0,
+      name='word_id', full_name='dota.CMsgGCBannedWord.word_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='word_type', full_name='CMsgGCBannedWord.word_type', index=1,
+      name='word_type', full_name='dota.CMsgGCBannedWord.word_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='word', full_name='CMsgGCBannedWord.word', index=2,
+      name='word', full_name='dota.CMsgGCBannedWord.word', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -2939,27 +2939,27 @@ _CMSGGCBANNEDWORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5819,
-  serialized_end=5936,
+  serialized_start=5891,
+  serialized_end=6013,
 )
 
 
 _CMSGGCBANNEDWORDLISTRESPONSE = _descriptor.Descriptor(
   name='CMsgGCBannedWordListResponse',
-  full_name='CMsgGCBannedWordListResponse',
+  full_name='dota.CMsgGCBannedWordListResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ban_list_group_id', full_name='CMsgGCBannedWordListResponse.ban_list_group_id', index=0,
+      name='ban_list_group_id', full_name='dota.CMsgGCBannedWordListResponse.ban_list_group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='word_list', full_name='CMsgGCBannedWordListResponse.word_list', index=1,
+      name='word_list', full_name='dota.CMsgGCBannedWordListResponse.word_list', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2977,20 +2977,20 @@ _CMSGGCBANNEDWORDLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5938,
-  serialized_end=6033,
+  serialized_start=6015,
+  serialized_end=6115,
 )
 
 
 _CMSGGCTOGCBANNEDWORDLISTBROADCAST = _descriptor.Descriptor(
   name='CMsgGCToGCBannedWordListBroadcast',
-  full_name='CMsgGCToGCBannedWordListBroadcast',
+  full_name='dota.CMsgGCToGCBannedWordListBroadcast',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='broadcast', full_name='CMsgGCToGCBannedWordListBroadcast.broadcast', index=0,
+      name='broadcast', full_name='dota.CMsgGCToGCBannedWordListBroadcast.broadcast', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -3008,20 +3008,20 @@ _CMSGGCTOGCBANNEDWORDLISTBROADCAST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6035,
-  serialized_end=6120,
+  serialized_start=6117,
+  serialized_end=6207,
 )
 
 
 _CMSGGCTOGCBANNEDWORDLISTUPDATED = _descriptor.Descriptor(
   name='CMsgGCToGCBannedWordListUpdated',
-  full_name='CMsgGCToGCBannedWordListUpdated',
+  full_name='dota.CMsgGCToGCBannedWordListUpdated',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='CMsgGCToGCBannedWordListUpdated.group_id', index=0,
+      name='group_id', full_name='dota.CMsgGCToGCBannedWordListUpdated.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3039,27 +3039,27 @@ _CMSGGCTOGCBANNEDWORDLISTUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6122,
-  serialized_end=6173,
+  serialized_start=6209,
+  serialized_end=6260,
 )
 
 
 _CMSGGCTOGCDIRTYSDOCACHE = _descriptor.Descriptor(
   name='CMsgGCToGCDirtySDOCache',
-  full_name='CMsgGCToGCDirtySDOCache',
+  full_name='dota.CMsgGCToGCDirtySDOCache',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sdo_type', full_name='CMsgGCToGCDirtySDOCache.sdo_type', index=0,
+      name='sdo_type', full_name='dota.CMsgGCToGCDirtySDOCache.sdo_type', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='key_uint64', full_name='CMsgGCToGCDirtySDOCache.key_uint64', index=1,
+      name='key_uint64', full_name='dota.CMsgGCToGCDirtySDOCache.key_uint64', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3077,27 +3077,27 @@ _CMSGGCTOGCDIRTYSDOCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6175,
-  serialized_end=6238,
+  serialized_start=6262,
+  serialized_end=6325,
 )
 
 
 _CMSGGCTOGCDIRTYMULTIPLESDOCACHE = _descriptor.Descriptor(
   name='CMsgGCToGCDirtyMultipleSDOCache',
-  full_name='CMsgGCToGCDirtyMultipleSDOCache',
+  full_name='dota.CMsgGCToGCDirtyMultipleSDOCache',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sdo_type', full_name='CMsgGCToGCDirtyMultipleSDOCache.sdo_type', index=0,
+      name='sdo_type', full_name='dota.CMsgGCToGCDirtyMultipleSDOCache.sdo_type', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='key_uint64', full_name='CMsgGCToGCDirtyMultipleSDOCache.key_uint64', index=1,
+      name='key_uint64', full_name='dota.CMsgGCToGCDirtyMultipleSDOCache.key_uint64', index=1,
       number=2, type=4, cpp_type=4, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -3115,27 +3115,27 @@ _CMSGGCTOGCDIRTYMULTIPLESDOCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6240,
-  serialized_end=6311,
+  serialized_start=6327,
+  serialized_end=6398,
 )
 
 
 _CMSGGCTOGCAPPLYLOCALIZATIONDIFF = _descriptor.Descriptor(
   name='CMsgGCToGCApplyLocalizationDiff',
-  full_name='CMsgGCToGCApplyLocalizationDiff',
+  full_name='dota.CMsgGCToGCApplyLocalizationDiff',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='language', full_name='CMsgGCToGCApplyLocalizationDiff.language', index=0,
+      name='language', full_name='dota.CMsgGCToGCApplyLocalizationDiff.language', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='packed_diff', full_name='CMsgGCToGCApplyLocalizationDiff.packed_diff', index=1,
+      name='packed_diff', full_name='dota.CMsgGCToGCApplyLocalizationDiff.packed_diff', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -3153,20 +3153,20 @@ _CMSGGCTOGCAPPLYLOCALIZATIONDIFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6313,
-  serialized_end=6385,
+  serialized_start=6400,
+  serialized_end=6472,
 )
 
 
 _CMSGGCTOGCAPPLYLOCALIZATIONDIFFRESPONSE = _descriptor.Descriptor(
   name='CMsgGCToGCApplyLocalizationDiffResponse',
-  full_name='CMsgGCToGCApplyLocalizationDiffResponse',
+  full_name='dota.CMsgGCToGCApplyLocalizationDiffResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='CMsgGCToGCApplyLocalizationDiffResponse.success', index=0,
+      name='success', full_name='dota.CMsgGCToGCApplyLocalizationDiffResponse.success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -3184,27 +3184,27 @@ _CMSGGCTOGCAPPLYLOCALIZATIONDIFFRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6387,
-  serialized_end=6445,
+  serialized_start=6474,
+  serialized_end=6532,
 )
 
 
 _CMSGGCCOLLECTITEM = _descriptor.Descriptor(
   name='CMsgGCCollectItem',
-  full_name='CMsgGCCollectItem',
+  full_name='dota.CMsgGCCollectItem',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='collection_item_id', full_name='CMsgGCCollectItem.collection_item_id', index=0,
+      name='collection_item_id', full_name='dota.CMsgGCCollectItem.collection_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='subject_item_id', full_name='CMsgGCCollectItem.subject_item_id', index=1,
+      name='subject_item_id', full_name='dota.CMsgGCCollectItem.subject_item_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3222,14 +3222,14 @@ _CMSGGCCOLLECTITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6447,
-  serialized_end=6519,
+  serialized_start=6534,
+  serialized_end=6606,
 )
 
 
 _CMSGSDONOMEMCACHED = _descriptor.Descriptor(
   name='CMsgSDONoMemcached',
-  full_name='CMsgSDONoMemcached',
+  full_name='dota.CMsgSDONoMemcached',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -3246,20 +3246,20 @@ _CMSGSDONOMEMCACHED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6521,
-  serialized_end=6541,
+  serialized_start=6608,
+  serialized_end=6628,
 )
 
 
 _CMSGGCTOGCUPDATESQLKEYVALUE = _descriptor.Descriptor(
   name='CMsgGCToGCUpdateSQLKeyValue',
-  full_name='CMsgGCToGCUpdateSQLKeyValue',
+  full_name='dota.CMsgGCToGCUpdateSQLKeyValue',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key_name', full_name='CMsgGCToGCUpdateSQLKeyValue.key_name', index=0,
+      name='key_name', full_name='dota.CMsgGCToGCUpdateSQLKeyValue.key_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -3277,20 +3277,20 @@ _CMSGGCTOGCUPDATESQLKEYVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6543,
-  serialized_end=6590,
+  serialized_start=6630,
+  serialized_end=6677,
 )
 
 
 _CMSGGCSERVERVERSIONUPDATED = _descriptor.Descriptor(
   name='CMsgGCServerVersionUpdated',
-  full_name='CMsgGCServerVersionUpdated',
+  full_name='dota.CMsgGCServerVersionUpdated',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='server_version', full_name='CMsgGCServerVersionUpdated.server_version', index=0,
+      name='server_version', full_name='dota.CMsgGCServerVersionUpdated.server_version', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3308,20 +3308,20 @@ _CMSGGCSERVERVERSIONUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6592,
-  serialized_end=6644,
+  serialized_start=6679,
+  serialized_end=6731,
 )
 
 
 _CMSGGCCLIENTVERSIONUPDATED = _descriptor.Descriptor(
   name='CMsgGCClientVersionUpdated',
-  full_name='CMsgGCClientVersionUpdated',
+  full_name='dota.CMsgGCClientVersionUpdated',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgGCClientVersionUpdated.client_version', index=0,
+      name='client_version', full_name='dota.CMsgGCClientVersionUpdated.client_version', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3339,14 +3339,14 @@ _CMSGGCCLIENTVERSIONUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6646,
-  serialized_end=6698,
+  serialized_start=6733,
+  serialized_end=6785,
 )
 
 
 _CMSGGCTOGCWEBAPIACCOUNTCHANGED = _descriptor.Descriptor(
   name='CMsgGCToGCWebAPIAccountChanged',
-  full_name='CMsgGCToGCWebAPIAccountChanged',
+  full_name='dota.CMsgGCToGCWebAPIAccountChanged',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -3363,27 +3363,27 @@ _CMSGGCTOGCWEBAPIACCOUNTCHANGED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6700,
-  serialized_end=6732,
+  serialized_start=6787,
+  serialized_end=6819,
 )
 
 
 _CMSGRECIPECOMPONENT = _descriptor.Descriptor(
   name='CMsgRecipeComponent',
-  full_name='CMsgRecipeComponent',
+  full_name='dota.CMsgRecipeComponent',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='subject_item_id', full_name='CMsgRecipeComponent.subject_item_id', index=0,
+      name='subject_item_id', full_name='dota.CMsgRecipeComponent.subject_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='attribute_index', full_name='CMsgRecipeComponent.attribute_index', index=1,
+      name='attribute_index', full_name='dota.CMsgRecipeComponent.attribute_index', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3401,27 +3401,27 @@ _CMSGRECIPECOMPONENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6734,
-  serialized_end=6805,
+  serialized_start=6821,
+  serialized_end=6892,
 )
 
 
 _CMSGFULFILLDYNAMICRECIPECOMPONENT = _descriptor.Descriptor(
   name='CMsgFulfillDynamicRecipeComponent',
-  full_name='CMsgFulfillDynamicRecipeComponent',
+  full_name='dota.CMsgFulfillDynamicRecipeComponent',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tool_item_id', full_name='CMsgFulfillDynamicRecipeComponent.tool_item_id', index=0,
+      name='tool_item_id', full_name='dota.CMsgFulfillDynamicRecipeComponent.tool_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='consumption_components', full_name='CMsgFulfillDynamicRecipeComponent.consumption_components', index=1,
+      name='consumption_components', full_name='dota.CMsgFulfillDynamicRecipeComponent.consumption_components', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -3439,20 +3439,20 @@ _CMSGFULFILLDYNAMICRECIPECOMPONENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6807,
-  serialized_end=6918,
+  serialized_start=6894,
+  serialized_end=7010,
 )
 
 
 _CMSGGCCLIENTMARKETDATAREQUEST = _descriptor.Descriptor(
   name='CMsgGCClientMarketDataRequest',
-  full_name='CMsgGCClientMarketDataRequest',
+  full_name='dota.CMsgGCClientMarketDataRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_currency', full_name='CMsgGCClientMarketDataRequest.user_currency', index=0,
+      name='user_currency', full_name='dota.CMsgGCClientMarketDataRequest.user_currency', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3470,41 +3470,41 @@ _CMSGGCCLIENTMARKETDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6920,
-  serialized_end=6974,
+  serialized_start=7012,
+  serialized_end=7066,
 )
 
 
 _CMSGGCCLIENTMARKETDATAENTRY = _descriptor.Descriptor(
   name='CMsgGCClientMarketDataEntry',
-  full_name='CMsgGCClientMarketDataEntry',
+  full_name='dota.CMsgGCClientMarketDataEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_def_index', full_name='CMsgGCClientMarketDataEntry.item_def_index', index=0,
+      name='item_def_index', full_name='dota.CMsgGCClientMarketDataEntry.item_def_index', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_quality', full_name='CMsgGCClientMarketDataEntry.item_quality', index=1,
+      name='item_quality', full_name='dota.CMsgGCClientMarketDataEntry.item_quality', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_sell_listings', full_name='CMsgGCClientMarketDataEntry.item_sell_listings', index=2,
+      name='item_sell_listings', full_name='dota.CMsgGCClientMarketDataEntry.item_sell_listings', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='price_in_local_currency', full_name='CMsgGCClientMarketDataEntry.price_in_local_currency', index=3,
+      name='price_in_local_currency', full_name='dota.CMsgGCClientMarketDataEntry.price_in_local_currency', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3522,20 +3522,20 @@ _CMSGGCCLIENTMARKETDATAENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6977,
-  serialized_end=7113,
+  serialized_start=7069,
+  serialized_end=7205,
 )
 
 
 _CMSGGCCLIENTMARKETDATA = _descriptor.Descriptor(
   name='CMsgGCClientMarketData',
-  full_name='CMsgGCClientMarketData',
+  full_name='dota.CMsgGCClientMarketData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='entries', full_name='CMsgGCClientMarketData.entries', index=0,
+      name='entries', full_name='dota.CMsgGCClientMarketData.entries', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -3553,34 +3553,34 @@ _CMSGGCCLIENTMARKETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7115,
-  serialized_end=7186,
+  serialized_start=7207,
+  serialized_end=7283,
 )
 
 
 _CMSGEXTRACTGEMS = _descriptor.Descriptor(
   name='CMsgExtractGems',
-  full_name='CMsgExtractGems',
+  full_name='dota.CMsgExtractGems',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tool_item_id', full_name='CMsgExtractGems.tool_item_id', index=0,
+      name='tool_item_id', full_name='dota.CMsgExtractGems.tool_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_item_id', full_name='CMsgExtractGems.item_item_id', index=1,
+      name='item_item_id', full_name='dota.CMsgExtractGems.item_item_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_socket_id', full_name='CMsgExtractGems.item_socket_id', index=2,
+      name='item_socket_id', full_name='dota.CMsgExtractGems.item_socket_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=65535,
       message_type=None, enum_type=None, containing_type=None,
@@ -3598,27 +3598,27 @@ _CMSGEXTRACTGEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7188,
-  serialized_end=7280,
+  serialized_start=7285,
+  serialized_end=7377,
 )
 
 
 _CMSGEXTRACTGEMSRESPONSE = _descriptor.Descriptor(
   name='CMsgExtractGemsResponse',
-  full_name='CMsgExtractGemsResponse',
+  full_name='dota.CMsgExtractGemsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='CMsgExtractGemsResponse.item_id', index=0,
+      name='item_id', full_name='dota.CMsgExtractGemsResponse.item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='response', full_name='CMsgExtractGemsResponse.response', index=1,
+      name='response', full_name='dota.CMsgExtractGemsResponse.response', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3637,34 +3637,34 @@ _CMSGEXTRACTGEMSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7283,
-  serialized_end=7623,
+  serialized_start=7380,
+  serialized_end=7725,
 )
 
 
 _CMSGADDSOCKET = _descriptor.Descriptor(
   name='CMsgAddSocket',
-  full_name='CMsgAddSocket',
+  full_name='dota.CMsgAddSocket',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tool_item_id', full_name='CMsgAddSocket.tool_item_id', index=0,
+      name='tool_item_id', full_name='dota.CMsgAddSocket.tool_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='item_item_id', full_name='CMsgAddSocket.item_item_id', index=1,
+      name='item_item_id', full_name='dota.CMsgAddSocket.item_item_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unusual', full_name='CMsgAddSocket.unusual', index=2,
+      name='unusual', full_name='dota.CMsgAddSocket.unusual', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -3682,34 +3682,34 @@ _CMSGADDSOCKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7625,
-  serialized_end=7701,
+  serialized_start=7727,
+  serialized_end=7803,
 )
 
 
 _CMSGADDSOCKETRESPONSE = _descriptor.Descriptor(
   name='CMsgAddSocketResponse',
-  full_name='CMsgAddSocketResponse',
+  full_name='dota.CMsgAddSocketResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='CMsgAddSocketResponse.item_id', index=0,
+      name='item_id', full_name='dota.CMsgAddSocketResponse.item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='updated_socket_index', full_name='CMsgAddSocketResponse.updated_socket_index', index=1,
+      name='updated_socket_index', full_name='dota.CMsgAddSocketResponse.updated_socket_index', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='response', full_name='CMsgAddSocketResponse.response', index=2,
+      name='response', full_name='dota.CMsgAddSocketResponse.response', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3728,27 +3728,27 @@ _CMSGADDSOCKETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7704,
-  serialized_end=8017,
+  serialized_start=7806,
+  serialized_end=8124,
 )
 
 
 _CMSGADDITEMTOSOCKETDATA = _descriptor.Descriptor(
   name='CMsgAddItemToSocketData',
-  full_name='CMsgAddItemToSocketData',
+  full_name='dota.CMsgAddItemToSocketData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='gem_item_id', full_name='CMsgAddItemToSocketData.gem_item_id', index=0,
+      name='gem_item_id', full_name='dota.CMsgAddItemToSocketData.gem_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='socket_index', full_name='CMsgAddItemToSocketData.socket_index', index=1,
+      name='socket_index', full_name='dota.CMsgAddItemToSocketData.socket_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3766,27 +3766,27 @@ _CMSGADDITEMTOSOCKETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8019,
-  serialized_end=8087,
+  serialized_start=8126,
+  serialized_end=8194,
 )
 
 
 _CMSGADDITEMTOSOCKET = _descriptor.Descriptor(
   name='CMsgAddItemToSocket',
-  full_name='CMsgAddItemToSocket',
+  full_name='dota.CMsgAddItemToSocket',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_item_id', full_name='CMsgAddItemToSocket.item_item_id', index=0,
+      name='item_item_id', full_name='dota.CMsgAddItemToSocket.item_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gems_to_socket', full_name='CMsgAddItemToSocket.gems_to_socket', index=1,
+      name='gems_to_socket', full_name='dota.CMsgAddItemToSocket.gems_to_socket', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -3804,34 +3804,34 @@ _CMSGADDITEMTOSOCKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8089,
-  serialized_end=8182,
+  serialized_start=8196,
+  serialized_end=8294,
 )
 
 
 _CMSGADDITEMTOSOCKETRESPONSE = _descriptor.Descriptor(
   name='CMsgAddItemToSocketResponse',
-  full_name='CMsgAddItemToSocketResponse',
+  full_name='dota.CMsgAddItemToSocketResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_item_id', full_name='CMsgAddItemToSocketResponse.item_item_id', index=0,
+      name='item_item_id', full_name='dota.CMsgAddItemToSocketResponse.item_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='updated_socket_index', full_name='CMsgAddItemToSocketResponse.updated_socket_index', index=1,
+      name='updated_socket_index', full_name='dota.CMsgAddItemToSocketResponse.updated_socket_index', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='response', full_name='CMsgAddItemToSocketResponse.response', index=2,
+      name='response', full_name='dota.CMsgAddItemToSocketResponse.response', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3850,27 +3850,27 @@ _CMSGADDITEMTOSOCKETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8185,
-  serialized_end=8664,
+  serialized_start=8297,
+  serialized_end=8781,
 )
 
 
 _CMSGRESETSTRANGEGEMCOUNT = _descriptor.Descriptor(
   name='CMsgResetStrangeGemCount',
-  full_name='CMsgResetStrangeGemCount',
+  full_name='dota.CMsgResetStrangeGemCount',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_item_id', full_name='CMsgResetStrangeGemCount.item_item_id', index=0,
+      name='item_item_id', full_name='dota.CMsgResetStrangeGemCount.item_item_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='socket_index', full_name='CMsgResetStrangeGemCount.socket_index', index=1,
+      name='socket_index', full_name='dota.CMsgResetStrangeGemCount.socket_index', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3888,20 +3888,20 @@ _CMSGRESETSTRANGEGEMCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8666,
-  serialized_end=8736,
+  serialized_start=8783,
+  serialized_end=8853,
 )
 
 
 _CMSGRESETSTRANGEGEMCOUNTRESPONSE = _descriptor.Descriptor(
   name='CMsgResetStrangeGemCountResponse',
-  full_name='CMsgResetStrangeGemCountResponse',
+  full_name='dota.CMsgResetStrangeGemCountResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='response', full_name='CMsgResetStrangeGemCountResponse.response', index=0,
+      name='response', full_name='dota.CMsgResetStrangeGemCountResponse.response', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3920,34 +3920,34 @@ _CMSGRESETSTRANGEGEMCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8739,
-  serialized_end=9057,
+  serialized_start=8856,
+  serialized_end=9179,
 )
 
 
 _CMSGGCTOCLIENTPOLLFILEREQUEST = _descriptor.Descriptor(
   name='CMsgGCToClientPollFileRequest',
-  full_name='CMsgGCToClientPollFileRequest',
+  full_name='dota.CMsgGCToClientPollFileRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='file_name', full_name='CMsgGCToClientPollFileRequest.file_name', index=0,
+      name='file_name', full_name='dota.CMsgGCToClientPollFileRequest.file_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='client_version', full_name='CMsgGCToClientPollFileRequest.client_version', index=1,
+      name='client_version', full_name='dota.CMsgGCToClientPollFileRequest.client_version', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='poll_id', full_name='CMsgGCToClientPollFileRequest.poll_id', index=2,
+      name='poll_id', full_name='dota.CMsgGCToClientPollFileRequest.poll_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3965,27 +3965,27 @@ _CMSGGCTOCLIENTPOLLFILEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9059,
-  serialized_end=9150,
+  serialized_start=9181,
+  serialized_end=9272,
 )
 
 
 _CMSGGCTOCLIENTPOLLFILERESPONSE = _descriptor.Descriptor(
   name='CMsgGCToClientPollFileResponse',
-  full_name='CMsgGCToClientPollFileResponse',
+  full_name='dota.CMsgGCToClientPollFileResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='poll_id', full_name='CMsgGCToClientPollFileResponse.poll_id', index=0,
+      name='poll_id', full_name='dota.CMsgGCToClientPollFileResponse.poll_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='file_size', full_name='CMsgGCToClientPollFileResponse.file_size', index=1,
+      name='file_size', full_name='dota.CMsgGCToClientPollFileResponse.file_size', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -4003,8 +4003,8 @@ _CMSGGCTOCLIENTPOLLFILERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9152,
-  serialized_end=9220,
+  serialized_start=9274,
+  serialized_end=9342,
 )
 
 _CMSGGCSTOREPURCHASEINIT.fields_by_name['line_items'].message_type = _CGCSTOREPURCHASEINIT_LINEITEM
@@ -4123,252 +4123,252 @@ DESCRIPTOR.enum_types_by_name['GC_BannedWordType'] = _GC_BANNEDWORDTYPE
 CGCStorePurchaseInit_LineItem = _reflection.GeneratedProtocolMessageType('CGCStorePurchaseInit_LineItem', (_message.Message,), dict(
   DESCRIPTOR = _CGCSTOREPURCHASEINIT_LINEITEM,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CGCStorePurchaseInit_LineItem)
+  # @@protoc_insertion_point(class_scope:dota.CGCStorePurchaseInit_LineItem)
   ))
 _sym_db.RegisterMessage(CGCStorePurchaseInit_LineItem)
 
 CMsgGCStorePurchaseInit = _reflection.GeneratedProtocolMessageType('CMsgGCStorePurchaseInit', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCSTOREPURCHASEINIT,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCStorePurchaseInit)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCStorePurchaseInit)
   ))
 _sym_db.RegisterMessage(CMsgGCStorePurchaseInit)
 
 CMsgGCStorePurchaseInitResponse = _reflection.GeneratedProtocolMessageType('CMsgGCStorePurchaseInitResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCSTOREPURCHASEINITRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCStorePurchaseInitResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCStorePurchaseInitResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCStorePurchaseInitResponse)
 
 CMsgSystemBroadcast = _reflection.GeneratedProtocolMessageType('CMsgSystemBroadcast', (_message.Message,), dict(
   DESCRIPTOR = _CMSGSYSTEMBROADCAST,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgSystemBroadcast)
+  # @@protoc_insertion_point(class_scope:dota.CMsgSystemBroadcast)
   ))
 _sym_db.RegisterMessage(CMsgSystemBroadcast)
 
 CMsgClientPingData = _reflection.GeneratedProtocolMessageType('CMsgClientPingData', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCLIENTPINGDATA,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgClientPingData)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientPingData)
   ))
 _sym_db.RegisterMessage(CMsgClientPingData)
 
 CMsgInviteToParty = _reflection.GeneratedProtocolMessageType('CMsgInviteToParty', (_message.Message,), dict(
   DESCRIPTOR = _CMSGINVITETOPARTY,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgInviteToParty)
+  # @@protoc_insertion_point(class_scope:dota.CMsgInviteToParty)
   ))
 _sym_db.RegisterMessage(CMsgInviteToParty)
 
 CMsgInviteToLobby = _reflection.GeneratedProtocolMessageType('CMsgInviteToLobby', (_message.Message,), dict(
   DESCRIPTOR = _CMSGINVITETOLOBBY,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgInviteToLobby)
+  # @@protoc_insertion_point(class_scope:dota.CMsgInviteToLobby)
   ))
 _sym_db.RegisterMessage(CMsgInviteToLobby)
 
 CMsgInvitationCreated = _reflection.GeneratedProtocolMessageType('CMsgInvitationCreated', (_message.Message,), dict(
   DESCRIPTOR = _CMSGINVITATIONCREATED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgInvitationCreated)
+  # @@protoc_insertion_point(class_scope:dota.CMsgInvitationCreated)
   ))
 _sym_db.RegisterMessage(CMsgInvitationCreated)
 
 CMsgPartyInviteResponse = _reflection.GeneratedProtocolMessageType('CMsgPartyInviteResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGPARTYINVITERESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgPartyInviteResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgPartyInviteResponse)
   ))
 _sym_db.RegisterMessage(CMsgPartyInviteResponse)
 
 CMsgLobbyInviteResponse = _reflection.GeneratedProtocolMessageType('CMsgLobbyInviteResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGLOBBYINVITERESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgLobbyInviteResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgLobbyInviteResponse)
   ))
 _sym_db.RegisterMessage(CMsgLobbyInviteResponse)
 
 CMsgKickFromParty = _reflection.GeneratedProtocolMessageType('CMsgKickFromParty', (_message.Message,), dict(
   DESCRIPTOR = _CMSGKICKFROMPARTY,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgKickFromParty)
+  # @@protoc_insertion_point(class_scope:dota.CMsgKickFromParty)
   ))
 _sym_db.RegisterMessage(CMsgKickFromParty)
 
 CMsgLeaveParty = _reflection.GeneratedProtocolMessageType('CMsgLeaveParty', (_message.Message,), dict(
   DESCRIPTOR = _CMSGLEAVEPARTY,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgLeaveParty)
+  # @@protoc_insertion_point(class_scope:dota.CMsgLeaveParty)
   ))
 _sym_db.RegisterMessage(CMsgLeaveParty)
 
 CMsgCustomGameInstallStatus = _reflection.GeneratedProtocolMessageType('CMsgCustomGameInstallStatus', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCUSTOMGAMEINSTALLSTATUS,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgCustomGameInstallStatus)
+  # @@protoc_insertion_point(class_scope:dota.CMsgCustomGameInstallStatus)
   ))
 _sym_db.RegisterMessage(CMsgCustomGameInstallStatus)
 
 CMsgServerAvailable = _reflection.GeneratedProtocolMessageType('CMsgServerAvailable', (_message.Message,), dict(
   DESCRIPTOR = _CMSGSERVERAVAILABLE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgServerAvailable)
+  # @@protoc_insertion_point(class_scope:dota.CMsgServerAvailable)
   ))
 _sym_db.RegisterMessage(CMsgServerAvailable)
 
 CMsgLANServerAvailable = _reflection.GeneratedProtocolMessageType('CMsgLANServerAvailable', (_message.Message,), dict(
   DESCRIPTOR = _CMSGLANSERVERAVAILABLE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgLANServerAvailable)
+  # @@protoc_insertion_point(class_scope:dota.CMsgLANServerAvailable)
   ))
 _sym_db.RegisterMessage(CMsgLANServerAvailable)
 
 CSOEconGameAccountClient = _reflection.GeneratedProtocolMessageType('CSOEconGameAccountClient', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONGAMEACCOUNTCLIENT,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconGameAccountClient)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconGameAccountClient)
   ))
 _sym_db.RegisterMessage(CSOEconGameAccountClient)
 
 CSOItemCriteriaCondition = _reflection.GeneratedProtocolMessageType('CSOItemCriteriaCondition', (_message.Message,), dict(
   DESCRIPTOR = _CSOITEMCRITERIACONDITION,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOItemCriteriaCondition)
+  # @@protoc_insertion_point(class_scope:dota.CSOItemCriteriaCondition)
   ))
 _sym_db.RegisterMessage(CSOItemCriteriaCondition)
 
 CSOItemCriteria = _reflection.GeneratedProtocolMessageType('CSOItemCriteria', (_message.Message,), dict(
   DESCRIPTOR = _CSOITEMCRITERIA,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOItemCriteria)
+  # @@protoc_insertion_point(class_scope:dota.CSOItemCriteria)
   ))
 _sym_db.RegisterMessage(CSOItemCriteria)
 
 CSOItemRecipe = _reflection.GeneratedProtocolMessageType('CSOItemRecipe', (_message.Message,), dict(
   DESCRIPTOR = _CSOITEMRECIPE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOItemRecipe)
+  # @@protoc_insertion_point(class_scope:dota.CSOItemRecipe)
   ))
 _sym_db.RegisterMessage(CSOItemRecipe)
 
 CMsgApplyStrangePart = _reflection.GeneratedProtocolMessageType('CMsgApplyStrangePart', (_message.Message,), dict(
   DESCRIPTOR = _CMSGAPPLYSTRANGEPART,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgApplyStrangePart)
+  # @@protoc_insertion_point(class_scope:dota.CMsgApplyStrangePart)
   ))
 _sym_db.RegisterMessage(CMsgApplyStrangePart)
 
 CMsgApplyPennantUpgrade = _reflection.GeneratedProtocolMessageType('CMsgApplyPennantUpgrade', (_message.Message,), dict(
   DESCRIPTOR = _CMSGAPPLYPENNANTUPGRADE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgApplyPennantUpgrade)
+  # @@protoc_insertion_point(class_scope:dota.CMsgApplyPennantUpgrade)
   ))
 _sym_db.RegisterMessage(CMsgApplyPennantUpgrade)
 
 CMsgApplyEggEssence = _reflection.GeneratedProtocolMessageType('CMsgApplyEggEssence', (_message.Message,), dict(
   DESCRIPTOR = _CMSGAPPLYEGGESSENCE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgApplyEggEssence)
+  # @@protoc_insertion_point(class_scope:dota.CMsgApplyEggEssence)
   ))
 _sym_db.RegisterMessage(CMsgApplyEggEssence)
 
 CSOEconItemAttribute = _reflection.GeneratedProtocolMessageType('CSOEconItemAttribute', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONITEMATTRIBUTE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconItemAttribute)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconItemAttribute)
   ))
 _sym_db.RegisterMessage(CSOEconItemAttribute)
 
 CSOEconItemEquipped = _reflection.GeneratedProtocolMessageType('CSOEconItemEquipped', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONITEMEQUIPPED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconItemEquipped)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconItemEquipped)
   ))
 _sym_db.RegisterMessage(CSOEconItemEquipped)
 
 CSOEconItem = _reflection.GeneratedProtocolMessageType('CSOEconItem', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONITEM,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconItem)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconItem)
   ))
 _sym_db.RegisterMessage(CSOEconItem)
 
 CMsgSortItems = _reflection.GeneratedProtocolMessageType('CMsgSortItems', (_message.Message,), dict(
   DESCRIPTOR = _CMSGSORTITEMS,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgSortItems)
+  # @@protoc_insertion_point(class_scope:dota.CMsgSortItems)
   ))
 _sym_db.RegisterMessage(CMsgSortItems)
 
 CSOEconClaimCode = _reflection.GeneratedProtocolMessageType('CSOEconClaimCode', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONCLAIMCODE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconClaimCode)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconClaimCode)
   ))
 _sym_db.RegisterMessage(CSOEconClaimCode)
 
 CMsgStoreGetUserData = _reflection.GeneratedProtocolMessageType('CMsgStoreGetUserData', (_message.Message,), dict(
   DESCRIPTOR = _CMSGSTOREGETUSERDATA,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgStoreGetUserData)
+  # @@protoc_insertion_point(class_scope:dota.CMsgStoreGetUserData)
   ))
 _sym_db.RegisterMessage(CMsgStoreGetUserData)
 
 CMsgStoreGetUserDataResponse = _reflection.GeneratedProtocolMessageType('CMsgStoreGetUserDataResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGSTOREGETUSERDATARESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgStoreGetUserDataResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgStoreGetUserDataResponse)
   ))
 _sym_db.RegisterMessage(CMsgStoreGetUserDataResponse)
 
 CMsgUpdateItemSchema = _reflection.GeneratedProtocolMessageType('CMsgUpdateItemSchema', (_message.Message,), dict(
   DESCRIPTOR = _CMSGUPDATEITEMSCHEMA,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgUpdateItemSchema)
+  # @@protoc_insertion_point(class_scope:dota.CMsgUpdateItemSchema)
   ))
 _sym_db.RegisterMessage(CMsgUpdateItemSchema)
 
 CMsgGCError = _reflection.GeneratedProtocolMessageType('CMsgGCError', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCERROR,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCError)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCError)
   ))
 _sym_db.RegisterMessage(CMsgGCError)
 
 CMsgRequestInventoryRefresh = _reflection.GeneratedProtocolMessageType('CMsgRequestInventoryRefresh', (_message.Message,), dict(
   DESCRIPTOR = _CMSGREQUESTINVENTORYREFRESH,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgRequestInventoryRefresh)
+  # @@protoc_insertion_point(class_scope:dota.CMsgRequestInventoryRefresh)
   ))
 _sym_db.RegisterMessage(CMsgRequestInventoryRefresh)
 
 CMsgConVarValue = _reflection.GeneratedProtocolMessageType('CMsgConVarValue', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCONVARVALUE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgConVarValue)
+  # @@protoc_insertion_point(class_scope:dota.CMsgConVarValue)
   ))
 _sym_db.RegisterMessage(CMsgConVarValue)
 
 CMsgReplicateConVars = _reflection.GeneratedProtocolMessageType('CMsgReplicateConVars', (_message.Message,), dict(
   DESCRIPTOR = _CMSGREPLICATECONVARS,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgReplicateConVars)
+  # @@protoc_insertion_point(class_scope:dota.CMsgReplicateConVars)
   ))
 _sym_db.RegisterMessage(CMsgReplicateConVars)
 
 CMsgConsumableExhausted = _reflection.GeneratedProtocolMessageType('CMsgConsumableExhausted', (_message.Message,), dict(
   DESCRIPTOR = _CMSGCONSUMABLEEXHAUSTED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgConsumableExhausted)
+  # @@protoc_insertion_point(class_scope:dota.CMsgConsumableExhausted)
   ))
 _sym_db.RegisterMessage(CMsgConsumableExhausted)
 
 CMsgItemAcknowledged = _reflection.GeneratedProtocolMessageType('CMsgItemAcknowledged', (_message.Message,), dict(
   DESCRIPTOR = _CMSGITEMACKNOWLEDGED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgItemAcknowledged)
+  # @@protoc_insertion_point(class_scope:dota.CMsgItemAcknowledged)
   ))
 _sym_db.RegisterMessage(CMsgItemAcknowledged)
 
@@ -4377,12 +4377,12 @@ CMsgSetItemPositions = _reflection.GeneratedProtocolMessageType('CMsgSetItemPosi
   ItemPosition = _reflection.GeneratedProtocolMessageType('ItemPosition', (_message.Message,), dict(
     DESCRIPTOR = _CMSGSETITEMPOSITIONS_ITEMPOSITION,
     __module__ = 'base_gcmessages_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgSetItemPositions.ItemPosition)
+    # @@protoc_insertion_point(class_scope:dota.CMsgSetItemPositions.ItemPosition)
     ))
   ,
   DESCRIPTOR = _CMSGSETITEMPOSITIONS,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgSetItemPositions)
+  # @@protoc_insertion_point(class_scope:dota.CMsgSetItemPositions)
   ))
 _sym_db.RegisterMessage(CMsgSetItemPositions)
 _sym_db.RegisterMessage(CMsgSetItemPositions.ItemPosition)
@@ -4390,301 +4390,301 @@ _sym_db.RegisterMessage(CMsgSetItemPositions.ItemPosition)
 CMsgGCNameItemNotification = _reflection.GeneratedProtocolMessageType('CMsgGCNameItemNotification', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCNAMEITEMNOTIFICATION,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCNameItemNotification)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCNameItemNotification)
   ))
 _sym_db.RegisterMessage(CMsgGCNameItemNotification)
 
 CMsgGCClientDisplayNotification = _reflection.GeneratedProtocolMessageType('CMsgGCClientDisplayNotification', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCCLIENTDISPLAYNOTIFICATION,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCClientDisplayNotification)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCClientDisplayNotification)
   ))
 _sym_db.RegisterMessage(CMsgGCClientDisplayNotification)
 
 CMsgGCShowItemsPickedUp = _reflection.GeneratedProtocolMessageType('CMsgGCShowItemsPickedUp', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCSHOWITEMSPICKEDUP,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCShowItemsPickedUp)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCShowItemsPickedUp)
   ))
 _sym_db.RegisterMessage(CMsgGCShowItemsPickedUp)
 
 CMsgGCIncrementKillCountResponse = _reflection.GeneratedProtocolMessageType('CMsgGCIncrementKillCountResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCINCREMENTKILLCOUNTRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCIncrementKillCountResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCIncrementKillCountResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCIncrementKillCountResponse)
 
 CSOEconItemDropRateBonus = _reflection.GeneratedProtocolMessageType('CSOEconItemDropRateBonus', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONITEMDROPRATEBONUS,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconItemDropRateBonus)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconItemDropRateBonus)
   ))
 _sym_db.RegisterMessage(CSOEconItemDropRateBonus)
 
 CSOEconItemLeagueViewPass = _reflection.GeneratedProtocolMessageType('CSOEconItemLeagueViewPass', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONITEMLEAGUEVIEWPASS,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconItemLeagueViewPass)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconItemLeagueViewPass)
   ))
 _sym_db.RegisterMessage(CSOEconItemLeagueViewPass)
 
 CSOEconItemEventTicket = _reflection.GeneratedProtocolMessageType('CSOEconItemEventTicket', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONITEMEVENTTICKET,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconItemEventTicket)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconItemEventTicket)
   ))
 _sym_db.RegisterMessage(CSOEconItemEventTicket)
 
 CSOEconItemTournamentPassport = _reflection.GeneratedProtocolMessageType('CSOEconItemTournamentPassport', (_message.Message,), dict(
   DESCRIPTOR = _CSOECONITEMTOURNAMENTPASSPORT,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CSOEconItemTournamentPassport)
+  # @@protoc_insertion_point(class_scope:dota.CSOEconItemTournamentPassport)
   ))
 _sym_db.RegisterMessage(CSOEconItemTournamentPassport)
 
 CMsgGCStorePurchaseCancel = _reflection.GeneratedProtocolMessageType('CMsgGCStorePurchaseCancel', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCSTOREPURCHASECANCEL,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCStorePurchaseCancel)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCStorePurchaseCancel)
   ))
 _sym_db.RegisterMessage(CMsgGCStorePurchaseCancel)
 
 CMsgGCStorePurchaseCancelResponse = _reflection.GeneratedProtocolMessageType('CMsgGCStorePurchaseCancelResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCSTOREPURCHASECANCELRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCStorePurchaseCancelResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCStorePurchaseCancelResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCStorePurchaseCancelResponse)
 
 CMsgGCStorePurchaseFinalize = _reflection.GeneratedProtocolMessageType('CMsgGCStorePurchaseFinalize', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCSTOREPURCHASEFINALIZE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCStorePurchaseFinalize)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCStorePurchaseFinalize)
   ))
 _sym_db.RegisterMessage(CMsgGCStorePurchaseFinalize)
 
 CMsgGCStorePurchaseFinalizeResponse = _reflection.GeneratedProtocolMessageType('CMsgGCStorePurchaseFinalizeResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCSTOREPURCHASEFINALIZERESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCStorePurchaseFinalizeResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCStorePurchaseFinalizeResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCStorePurchaseFinalizeResponse)
 
 CMsgGCBannedWordListRequest = _reflection.GeneratedProtocolMessageType('CMsgGCBannedWordListRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCBANNEDWORDLISTREQUEST,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCBannedWordListRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCBannedWordListRequest)
   ))
 _sym_db.RegisterMessage(CMsgGCBannedWordListRequest)
 
 CMsgGCBannedWord = _reflection.GeneratedProtocolMessageType('CMsgGCBannedWord', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCBANNEDWORD,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCBannedWord)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCBannedWord)
   ))
 _sym_db.RegisterMessage(CMsgGCBannedWord)
 
 CMsgGCBannedWordListResponse = _reflection.GeneratedProtocolMessageType('CMsgGCBannedWordListResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCBANNEDWORDLISTRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCBannedWordListResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCBannedWordListResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCBannedWordListResponse)
 
 CMsgGCToGCBannedWordListBroadcast = _reflection.GeneratedProtocolMessageType('CMsgGCToGCBannedWordListBroadcast', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCBANNEDWORDLISTBROADCAST,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToGCBannedWordListBroadcast)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCBannedWordListBroadcast)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCBannedWordListBroadcast)
 
 CMsgGCToGCBannedWordListUpdated = _reflection.GeneratedProtocolMessageType('CMsgGCToGCBannedWordListUpdated', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCBANNEDWORDLISTUPDATED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToGCBannedWordListUpdated)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCBannedWordListUpdated)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCBannedWordListUpdated)
 
 CMsgGCToGCDirtySDOCache = _reflection.GeneratedProtocolMessageType('CMsgGCToGCDirtySDOCache', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCDIRTYSDOCACHE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToGCDirtySDOCache)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCDirtySDOCache)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCDirtySDOCache)
 
 CMsgGCToGCDirtyMultipleSDOCache = _reflection.GeneratedProtocolMessageType('CMsgGCToGCDirtyMultipleSDOCache', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCDIRTYMULTIPLESDOCACHE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToGCDirtyMultipleSDOCache)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCDirtyMultipleSDOCache)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCDirtyMultipleSDOCache)
 
 CMsgGCToGCApplyLocalizationDiff = _reflection.GeneratedProtocolMessageType('CMsgGCToGCApplyLocalizationDiff', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCAPPLYLOCALIZATIONDIFF,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToGCApplyLocalizationDiff)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCApplyLocalizationDiff)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCApplyLocalizationDiff)
 
 CMsgGCToGCApplyLocalizationDiffResponse = _reflection.GeneratedProtocolMessageType('CMsgGCToGCApplyLocalizationDiffResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCAPPLYLOCALIZATIONDIFFRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToGCApplyLocalizationDiffResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCApplyLocalizationDiffResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCApplyLocalizationDiffResponse)
 
 CMsgGCCollectItem = _reflection.GeneratedProtocolMessageType('CMsgGCCollectItem', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCCOLLECTITEM,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCCollectItem)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCCollectItem)
   ))
 _sym_db.RegisterMessage(CMsgGCCollectItem)
 
 CMsgSDONoMemcached = _reflection.GeneratedProtocolMessageType('CMsgSDONoMemcached', (_message.Message,), dict(
   DESCRIPTOR = _CMSGSDONOMEMCACHED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgSDONoMemcached)
+  # @@protoc_insertion_point(class_scope:dota.CMsgSDONoMemcached)
   ))
 _sym_db.RegisterMessage(CMsgSDONoMemcached)
 
 CMsgGCToGCUpdateSQLKeyValue = _reflection.GeneratedProtocolMessageType('CMsgGCToGCUpdateSQLKeyValue', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCUPDATESQLKEYVALUE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToGCUpdateSQLKeyValue)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCUpdateSQLKeyValue)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCUpdateSQLKeyValue)
 
 CMsgGCServerVersionUpdated = _reflection.GeneratedProtocolMessageType('CMsgGCServerVersionUpdated', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCSERVERVERSIONUPDATED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCServerVersionUpdated)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCServerVersionUpdated)
   ))
 _sym_db.RegisterMessage(CMsgGCServerVersionUpdated)
 
 CMsgGCClientVersionUpdated = _reflection.GeneratedProtocolMessageType('CMsgGCClientVersionUpdated', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCCLIENTVERSIONUPDATED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCClientVersionUpdated)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCClientVersionUpdated)
   ))
 _sym_db.RegisterMessage(CMsgGCClientVersionUpdated)
 
 CMsgGCToGCWebAPIAccountChanged = _reflection.GeneratedProtocolMessageType('CMsgGCToGCWebAPIAccountChanged', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOGCWEBAPIACCOUNTCHANGED,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToGCWebAPIAccountChanged)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCWebAPIAccountChanged)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCWebAPIAccountChanged)
 
 CMsgRecipeComponent = _reflection.GeneratedProtocolMessageType('CMsgRecipeComponent', (_message.Message,), dict(
   DESCRIPTOR = _CMSGRECIPECOMPONENT,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgRecipeComponent)
+  # @@protoc_insertion_point(class_scope:dota.CMsgRecipeComponent)
   ))
 _sym_db.RegisterMessage(CMsgRecipeComponent)
 
 CMsgFulfillDynamicRecipeComponent = _reflection.GeneratedProtocolMessageType('CMsgFulfillDynamicRecipeComponent', (_message.Message,), dict(
   DESCRIPTOR = _CMSGFULFILLDYNAMICRECIPECOMPONENT,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgFulfillDynamicRecipeComponent)
+  # @@protoc_insertion_point(class_scope:dota.CMsgFulfillDynamicRecipeComponent)
   ))
 _sym_db.RegisterMessage(CMsgFulfillDynamicRecipeComponent)
 
 CMsgGCClientMarketDataRequest = _reflection.GeneratedProtocolMessageType('CMsgGCClientMarketDataRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCCLIENTMARKETDATAREQUEST,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCClientMarketDataRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCClientMarketDataRequest)
   ))
 _sym_db.RegisterMessage(CMsgGCClientMarketDataRequest)
 
 CMsgGCClientMarketDataEntry = _reflection.GeneratedProtocolMessageType('CMsgGCClientMarketDataEntry', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCCLIENTMARKETDATAENTRY,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCClientMarketDataEntry)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCClientMarketDataEntry)
   ))
 _sym_db.RegisterMessage(CMsgGCClientMarketDataEntry)
 
 CMsgGCClientMarketData = _reflection.GeneratedProtocolMessageType('CMsgGCClientMarketData', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCCLIENTMARKETDATA,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCClientMarketData)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCClientMarketData)
   ))
 _sym_db.RegisterMessage(CMsgGCClientMarketData)
 
 CMsgExtractGems = _reflection.GeneratedProtocolMessageType('CMsgExtractGems', (_message.Message,), dict(
   DESCRIPTOR = _CMSGEXTRACTGEMS,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgExtractGems)
+  # @@protoc_insertion_point(class_scope:dota.CMsgExtractGems)
   ))
 _sym_db.RegisterMessage(CMsgExtractGems)
 
 CMsgExtractGemsResponse = _reflection.GeneratedProtocolMessageType('CMsgExtractGemsResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGEXTRACTGEMSRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgExtractGemsResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgExtractGemsResponse)
   ))
 _sym_db.RegisterMessage(CMsgExtractGemsResponse)
 
 CMsgAddSocket = _reflection.GeneratedProtocolMessageType('CMsgAddSocket', (_message.Message,), dict(
   DESCRIPTOR = _CMSGADDSOCKET,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgAddSocket)
+  # @@protoc_insertion_point(class_scope:dota.CMsgAddSocket)
   ))
 _sym_db.RegisterMessage(CMsgAddSocket)
 
 CMsgAddSocketResponse = _reflection.GeneratedProtocolMessageType('CMsgAddSocketResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGADDSOCKETRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgAddSocketResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgAddSocketResponse)
   ))
 _sym_db.RegisterMessage(CMsgAddSocketResponse)
 
 CMsgAddItemToSocketData = _reflection.GeneratedProtocolMessageType('CMsgAddItemToSocketData', (_message.Message,), dict(
   DESCRIPTOR = _CMSGADDITEMTOSOCKETDATA,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgAddItemToSocketData)
+  # @@protoc_insertion_point(class_scope:dota.CMsgAddItemToSocketData)
   ))
 _sym_db.RegisterMessage(CMsgAddItemToSocketData)
 
 CMsgAddItemToSocket = _reflection.GeneratedProtocolMessageType('CMsgAddItemToSocket', (_message.Message,), dict(
   DESCRIPTOR = _CMSGADDITEMTOSOCKET,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgAddItemToSocket)
+  # @@protoc_insertion_point(class_scope:dota.CMsgAddItemToSocket)
   ))
 _sym_db.RegisterMessage(CMsgAddItemToSocket)
 
 CMsgAddItemToSocketResponse = _reflection.GeneratedProtocolMessageType('CMsgAddItemToSocketResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGADDITEMTOSOCKETRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgAddItemToSocketResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgAddItemToSocketResponse)
   ))
 _sym_db.RegisterMessage(CMsgAddItemToSocketResponse)
 
 CMsgResetStrangeGemCount = _reflection.GeneratedProtocolMessageType('CMsgResetStrangeGemCount', (_message.Message,), dict(
   DESCRIPTOR = _CMSGRESETSTRANGEGEMCOUNT,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgResetStrangeGemCount)
+  # @@protoc_insertion_point(class_scope:dota.CMsgResetStrangeGemCount)
   ))
 _sym_db.RegisterMessage(CMsgResetStrangeGemCount)
 
 CMsgResetStrangeGemCountResponse = _reflection.GeneratedProtocolMessageType('CMsgResetStrangeGemCountResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGRESETSTRANGEGEMCOUNTRESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgResetStrangeGemCountResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgResetStrangeGemCountResponse)
   ))
 _sym_db.RegisterMessage(CMsgResetStrangeGemCountResponse)
 
 CMsgGCToClientPollFileRequest = _reflection.GeneratedProtocolMessageType('CMsgGCToClientPollFileRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOCLIENTPOLLFILEREQUEST,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientPollFileRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientPollFileRequest)
   ))
 _sym_db.RegisterMessage(CMsgGCToClientPollFileRequest)
 
 CMsgGCToClientPollFileResponse = _reflection.GeneratedProtocolMessageType('CMsgGCToClientPollFileResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGCTOCLIENTPOLLFILERESPONSE,
   __module__ = 'base_gcmessages_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGCToClientPollFileResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientPollFileResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCToClientPollFileResponse)
 

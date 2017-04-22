@@ -1,4 +1,5 @@
 syntax = "proto2";
+package dota;
 import "dota_shared_enums.proto";
 
 option optimize_for = SPEED;
@@ -44,7 +45,7 @@ message CMsgGCToClientPrivateChatResponse {
 	}
 
 	optional string private_chat_channel_name = 1;
-	optional .CMsgGCToClientPrivateChatResponse.Result result = 2 [default = SUCCESS];
+	optional dota.CMsgGCToClientPrivateChatResponse.Result result = 2 [default = SUCCESS];
 	optional string username = 3;
 }
 
@@ -60,14 +61,14 @@ message CMsgGCToClientPrivateChatInfoResponse {
 	}
 
 	optional string private_chat_channel_name = 1;
-	repeated .CMsgGCToClientPrivateChatInfoResponse.Member members = 2;
+	repeated dota.CMsgGCToClientPrivateChatInfoResponse.Member members = 2;
 	optional uint32 creator = 3;
 	optional uint32 creation_date = 4;
 }
 
 message CMsgDOTAJoinChatChannel {
 	optional string channel_name = 2;
-	optional .DOTAChatChannelType_t channel_type = 4 [default = DOTAChannelType_Regional];
+	optional dota.DOTAChatChannelType_t channel_type = 4 [default = DOTAChannelType_Regional];
 }
 
 message CMsgDOTALeaveChatChannel {
@@ -106,7 +107,7 @@ message CMsgDOTAChatMessage {
 	optional int32 player_id = 14 [default = -1];
 	optional uint32 share_profile_account_id = 15;
 	optional uint32 channel_user_id = 16;
-	optional .CMsgDOTAChatMessage.DiceRoll dice_roll = 17;
+	optional dota.CMsgDOTAChatMessage.DiceRoll dice_roll = 17;
 	optional uint64 share_party_id = 18;
 	optional uint64 share_lobby_id = 19;
 	optional uint64 share_lobby_custom_game_id = 20;
@@ -152,9 +153,9 @@ message CMsgDOTAJoinChatChannelResponse {
 	optional string channel_name = 2;
 	optional fixed64 channel_id = 3;
 	optional uint32 max_members = 4;
-	repeated .CMsgDOTAChatMember members = 5;
-	optional .DOTAChatChannelType_t channel_type = 6 [default = DOTAChannelType_Regional];
-	optional .CMsgDOTAJoinChatChannelResponse.Result result = 7 [default = JOIN_SUCCESS];
+	repeated dota.CMsgDOTAChatMember members = 5;
+	optional dota.DOTAChatChannelType_t channel_type = 6 [default = DOTAChannelType_Regional];
+	optional dota.CMsgDOTAJoinChatChannelResponse.Result result = 7 [default = JOIN_SUCCESS];
 	optional bool gc_initiated_join = 8;
 	optional uint32 channel_user_id = 9;
 	optional string welcome_message = 10;
@@ -162,7 +163,7 @@ message CMsgDOTAJoinChatChannelResponse {
 
 message CMsgDOTAChatChannelFullUpdate {
 	optional fixed64 channel_id = 1;
-	repeated .CMsgDOTAChatMember members = 2;
+	repeated dota.CMsgDOTAChatMember members = 2;
 }
 
 message CMsgDOTAOtherJoinedChatChannel {
@@ -189,7 +190,7 @@ message CMsgDOTAChatChannelMemberUpdate {
 
 	optional fixed64 channel_id = 1;
 	repeated fixed64 left_steam_ids = 2;
-	repeated .CMsgDOTAChatChannelMemberUpdate.JoinedMember joined_members = 3;
+	repeated dota.CMsgDOTAChatChannelMemberUpdate.JoinedMember joined_members = 3;
 }
 
 message CMsgDOTARequestChatChannelList {
@@ -199,10 +200,10 @@ message CMsgDOTARequestChatChannelListResponse {
 	message ChatChannel {
 		optional string channel_name = 1;
 		optional uint32 num_members = 2;
-		optional .DOTAChatChannelType_t channel_type = 3 [default = DOTAChannelType_Regional];
+		optional dota.DOTAChatChannelType_t channel_type = 3 [default = DOTAChannelType_Regional];
 	}
 
-	repeated .CMsgDOTARequestChatChannelListResponse.ChatChannel channels = 1;
+	repeated dota.CMsgDOTARequestChatChannelListResponse.ChatChannel channels = 1;
 }
 
 message CMsgDOTAChatGetUserList {
@@ -218,17 +219,17 @@ message CMsgDOTAChatGetUserListResponse {
 	}
 
 	optional fixed64 channel_id = 1;
-	repeated .CMsgDOTAChatGetUserListResponse.Member members = 2;
+	repeated dota.CMsgDOTAChatGetUserListResponse.Member members = 2;
 }
 
 message CMsgDOTAChatGetMemberCount {
 	optional string channel_name = 1;
-	optional .DOTAChatChannelType_t channel_type = 2 [default = DOTAChannelType_Regional];
+	optional dota.DOTAChatChannelType_t channel_type = 2 [default = DOTAChannelType_Regional];
 }
 
 message CMsgDOTAChatGetMemberCountResponse {
 	optional string channel_name = 1;
-	optional .DOTAChatChannelType_t channel_type = 2 [default = DOTAChannelType_Regional];
+	optional dota.DOTAChatChannelType_t channel_type = 2 [default = DOTAChannelType_Regional];
 	optional uint32 member_count = 3;
 }
 
@@ -241,6 +242,6 @@ message CMsgDOTAChatRegionsEnabled {
 	}
 
 	optional bool enable_all_regions = 1;
-	repeated .CMsgDOTAChatRegionsEnabled.Region enabled_regions = 2;
+	repeated dota.CMsgDOTAChatRegionsEnabled.Region enabled_regions = 2;
 }
 

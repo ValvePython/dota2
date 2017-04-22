@@ -55,7 +55,8 @@ upload: dist register
 pb_fetch:
 	wget -nv --backups=1 --show-progress -P ./protobufs/ -i protobuf_list.txt
 	rm -f ./protobufs/*.1
-	sed -i '1s/^/syntax = "proto2"\;\n/' protobufs/*.proto
+	sed -i '1s/^/syntax = "proto2"\;\npackage dota\;\n/' protobufs/*.proto
+	sed -i 's/\(optional\|repeated\) \.\([A-Z]\)/\1 dota.\2/' protobufs/*.proto
 	sed -i 's/cc_generic_services/py_generic_services/' protobufs/*.proto
 	sed -i 's/ = 6000/ = 7000/' protobufs/steammessages.proto  # extentions hack
 

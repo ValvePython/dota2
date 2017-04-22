@@ -18,15 +18,15 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='econ_shared_enums.proto',
-  package='',
+  package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x17\x65\x63on_shared_enums.proto\">\n\x11\x43MsgGenericResult\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x15\n\rdebug_message\x18\x02 \x01(\t*,\n\x0e\x45GCEconBaseMsg\x12\x1a\n\x15k_EMsgGCGenericResult\x10\x93\x14*\x9b\x02\n\x0e\x45GCMsgResponse\x12\x16\n\x12k_EGCMsgResponseOK\x10\x00\x12\x1a\n\x16k_EGCMsgResponseDenied\x10\x01\x12\x1f\n\x1bk_EGCMsgResponseServerError\x10\x02\x12\x1b\n\x17k_EGCMsgResponseTimeout\x10\x03\x12\x1b\n\x17k_EGCMsgResponseInvalid\x10\x04\x12\x1b\n\x17k_EGCMsgResponseNoMatch\x10\x05\x12 \n\x1ck_EGCMsgResponseUnknownError\x10\x06\x12\x1f\n\x1bk_EGCMsgResponseNotLoggedOn\x10\x07\x12\x1a\n\x16k_EGCMsgFailedToCreate\x10\x08*\xa2\x01\n\x19\x45GCPartnerRequestResponse\x12\x17\n\x13k_EPartnerRequestOK\x10\x01\x12\x1f\n\x1bk_EPartnerRequestBadAccount\x10\x02\x12\x1e\n\x1ak_EPartnerRequestNotLinked\x10\x03\x12+\n\'k_EPartnerRequestUnsupportedPartnerType\x10\x04*\xc5\x05\n\x15\x45GCMsgUseItemResponse\x12$\n k_EGCMsgUseItemResponse_ItemUsed\x10\x00\x12.\n*k_EGCMsgUseItemResponse_GiftNoOtherPlayers\x10\x01\x12\'\n#k_EGCMsgUseItemResponse_ServerError\x10\x02\x12\x32\n.k_EGCMsgUseItemResponse_MiniGameAlreadyStarted\x10\x03\x12\x31\n-k_EGCMsgUseItemResponse_ItemUsed_ItemsGranted\x10\x04\x12\x37\n3k_EGCMsgUseItemResponse_DropRateBonusAlreadyGranted\x10\x05\x12\x30\n,k_EGCMsgUseItemResponse_NotInLowPriorityPool\x10\x06\x12.\n*k_EGCMsgUseItemResponse_NotHighEnoughLevel\x10\x07\x12*\n&k_EGCMsgUseItemResponse_EventNotActive\x10\x08\x12\x37\n3k_EGCMsgUseItemResponse_ItemUsed_EventPointsGranted\x10\t\x12.\n*k_EGCMsgUseItemResponse_MissingRequirement\x10\n\x12\x30\n,k_EGCMsgUseItemResponse_EmoticonUnlock_NoNew\x10\x0b\x12\x33\n/k_EGCMsgUseItemResponse_EmoticonUnlock_Complete\x10\x0c\x12/\n+k_EGCMsgUseItemResponse_ItemUsed_Compendium\x10\rB\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x17\x65\x63on_shared_enums.proto\x12\x04\x64ota\">\n\x11\x43MsgGenericResult\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x15\n\rdebug_message\x18\x02 \x01(\t*,\n\x0e\x45GCEconBaseMsg\x12\x1a\n\x15k_EMsgGCGenericResult\x10\x93\x14*\x9b\x02\n\x0e\x45GCMsgResponse\x12\x16\n\x12k_EGCMsgResponseOK\x10\x00\x12\x1a\n\x16k_EGCMsgResponseDenied\x10\x01\x12\x1f\n\x1bk_EGCMsgResponseServerError\x10\x02\x12\x1b\n\x17k_EGCMsgResponseTimeout\x10\x03\x12\x1b\n\x17k_EGCMsgResponseInvalid\x10\x04\x12\x1b\n\x17k_EGCMsgResponseNoMatch\x10\x05\x12 \n\x1ck_EGCMsgResponseUnknownError\x10\x06\x12\x1f\n\x1bk_EGCMsgResponseNotLoggedOn\x10\x07\x12\x1a\n\x16k_EGCMsgFailedToCreate\x10\x08*\xa2\x01\n\x19\x45GCPartnerRequestResponse\x12\x17\n\x13k_EPartnerRequestOK\x10\x01\x12\x1f\n\x1bk_EPartnerRequestBadAccount\x10\x02\x12\x1e\n\x1ak_EPartnerRequestNotLinked\x10\x03\x12+\n\'k_EPartnerRequestUnsupportedPartnerType\x10\x04*\xc5\x05\n\x15\x45GCMsgUseItemResponse\x12$\n k_EGCMsgUseItemResponse_ItemUsed\x10\x00\x12.\n*k_EGCMsgUseItemResponse_GiftNoOtherPlayers\x10\x01\x12\'\n#k_EGCMsgUseItemResponse_ServerError\x10\x02\x12\x32\n.k_EGCMsgUseItemResponse_MiniGameAlreadyStarted\x10\x03\x12\x31\n-k_EGCMsgUseItemResponse_ItemUsed_ItemsGranted\x10\x04\x12\x37\n3k_EGCMsgUseItemResponse_DropRateBonusAlreadyGranted\x10\x05\x12\x30\n,k_EGCMsgUseItemResponse_NotInLowPriorityPool\x10\x06\x12.\n*k_EGCMsgUseItemResponse_NotHighEnoughLevel\x10\x07\x12*\n&k_EGCMsgUseItemResponse_EventNotActive\x10\x08\x12\x37\n3k_EGCMsgUseItemResponse_ItemUsed_EventPointsGranted\x10\t\x12.\n*k_EGCMsgUseItemResponse_MissingRequirement\x10\n\x12\x30\n,k_EGCMsgUseItemResponse_EmoticonUnlock_NoNew\x10\x0b\x12\x33\n/k_EGCMsgUseItemResponse_EmoticonUnlock_Complete\x10\x0c\x12/\n+k_EGCMsgUseItemResponse_ItemUsed_Compendium\x10\rB\x05H\x01\x90\x01\x00')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _EGCECONBASEMSG = _descriptor.EnumDescriptor(
   name='EGCEconBaseMsg',
-  full_name='EGCEconBaseMsg',
+  full_name='dota.EGCEconBaseMsg',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -37,15 +37,15 @@ _EGCECONBASEMSG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=91,
-  serialized_end=135,
+  serialized_start=97,
+  serialized_end=141,
 )
 _sym_db.RegisterEnumDescriptor(_EGCECONBASEMSG)
 
 EGCEconBaseMsg = enum_type_wrapper.EnumTypeWrapper(_EGCECONBASEMSG)
 _EGCMSGRESPONSE = _descriptor.EnumDescriptor(
   name='EGCMsgResponse',
-  full_name='EGCMsgResponse',
+  full_name='dota.EGCMsgResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -88,15 +88,15 @@ _EGCMSGRESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=138,
-  serialized_end=421,
+  serialized_start=144,
+  serialized_end=427,
 )
 _sym_db.RegisterEnumDescriptor(_EGCMSGRESPONSE)
 
 EGCMsgResponse = enum_type_wrapper.EnumTypeWrapper(_EGCMSGRESPONSE)
 _EGCPARTNERREQUESTRESPONSE = _descriptor.EnumDescriptor(
   name='EGCPartnerRequestResponse',
-  full_name='EGCPartnerRequestResponse',
+  full_name='dota.EGCPartnerRequestResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -119,15 +119,15 @@ _EGCPARTNERREQUESTRESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=424,
-  serialized_end=586,
+  serialized_start=430,
+  serialized_end=592,
 )
 _sym_db.RegisterEnumDescriptor(_EGCPARTNERREQUESTRESPONSE)
 
 EGCPartnerRequestResponse = enum_type_wrapper.EnumTypeWrapper(_EGCPARTNERREQUESTRESPONSE)
 _EGCMSGUSEITEMRESPONSE = _descriptor.EnumDescriptor(
   name='EGCMsgUseItemResponse',
-  full_name='EGCMsgUseItemResponse',
+  full_name='dota.EGCMsgUseItemResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -190,8 +190,8 @@ _EGCMSGUSEITEMRESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=589,
-  serialized_end=1298,
+  serialized_start=595,
+  serialized_end=1304,
 )
 _sym_db.RegisterEnumDescriptor(_EGCMSGUSEITEMRESPONSE)
 
@@ -229,20 +229,20 @@ k_EGCMsgUseItemResponse_ItemUsed_Compendium = 13
 
 _CMSGGENERICRESULT = _descriptor.Descriptor(
   name='CMsgGenericResult',
-  full_name='CMsgGenericResult',
+  full_name='dota.CMsgGenericResult',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='eresult', full_name='CMsgGenericResult.eresult', index=0,
+      name='eresult', full_name='dota.CMsgGenericResult.eresult', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=2,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='debug_message', full_name='CMsgGenericResult.debug_message', index=1,
+      name='debug_message', full_name='dota.CMsgGenericResult.debug_message', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -260,8 +260,8 @@ _CMSGGENERICRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27,
-  serialized_end=89,
+  serialized_start=33,
+  serialized_end=95,
 )
 
 DESCRIPTOR.message_types_by_name['CMsgGenericResult'] = _CMSGGENERICRESULT
@@ -273,7 +273,7 @@ DESCRIPTOR.enum_types_by_name['EGCMsgUseItemResponse'] = _EGCMSGUSEITEMRESPONSE
 CMsgGenericResult = _reflection.GeneratedProtocolMessageType('CMsgGenericResult', (_message.Message,), dict(
   DESCRIPTOR = _CMSGGENERICRESULT,
   __module__ = 'econ_shared_enums_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgGenericResult)
+  # @@protoc_insertion_point(class_scope:dota.CMsgGenericResult)
   ))
 _sym_db.RegisterMessage(CMsgGenericResult)
 

@@ -18,15 +18,15 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_shared_enums.proto',
-  package='',
+  package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x17\x64ota_shared_enums.proto\"\xbf\x01\n\x18\x43\x44OTAClientHardwareSpecs\x12\x1a\n\x12logical_processors\x18\x01 \x01(\r\x12\x1d\n\x15\x63pu_cycles_per_second\x18\x02 \x01(\x06\x12\x1d\n\x15total_physical_memory\x18\x03 \x01(\x06\x12\x14\n\x0cis_64_bit_os\x18\x04 \x01(\x08\x12\x1a\n\x12upload_measurement\x18\x05 \x01(\x04\x12\x17\n\x0fprefer_not_host\x18\x06 \x01(\x08\"\xce\x03\n\rCDOTASaveGame\x12\x10\n\x08match_id\x18\x05 \x01(\x04\x12\x11\n\tsave_time\x18\x02 \x01(\r\x12&\n\x07players\x18\x03 \x03(\x0b\x32\x15.CDOTASaveGame.Player\x12\x33\n\x0esave_instances\x18\x04 \x03(\x0b\x32\x1b.CDOTASaveGame.SaveInstance\x1aY\n\x06Player\x12\x33\n\x04team\x18\x01 \x01(\x0e\x32\r.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04hero\x18\x03 \x01(\t\x1a\xdf\x01\n\x0cSaveInstance\x12\x11\n\tgame_time\x18\x02 \x01(\r\x12\x13\n\x0bteam1_score\x18\x03 \x01(\r\x12\x13\n\x0bteam2_score\x18\x04 \x01(\r\x12\x45\n\x10player_positions\x18\x05 \x03(\x0b\x32+.CDOTASaveGame.SaveInstance.PlayerPositions\x12\x0f\n\x07save_id\x18\x06 \x01(\r\x12\x11\n\tsave_time\x18\x07 \x01(\r\x1a\'\n\x0fPlayerPositions\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02*\xc0\x04\n\rDOTA_GameMode\x12\x16\n\x12\x44OTA_GAMEMODE_NONE\x10\x00\x12\x14\n\x10\x44OTA_GAMEMODE_AP\x10\x01\x12\x14\n\x10\x44OTA_GAMEMODE_CM\x10\x02\x12\x14\n\x10\x44OTA_GAMEMODE_RD\x10\x03\x12\x14\n\x10\x44OTA_GAMEMODE_SD\x10\x04\x12\x14\n\x10\x44OTA_GAMEMODE_AR\x10\x05\x12\x17\n\x13\x44OTA_GAMEMODE_INTRO\x10\x06\x12\x14\n\x10\x44OTA_GAMEMODE_HW\x10\x07\x12\x1c\n\x18\x44OTA_GAMEMODE_REVERSE_CM\x10\x08\x12\x16\n\x12\x44OTA_GAMEMODE_XMAS\x10\t\x12\x1a\n\x16\x44OTA_GAMEMODE_TUTORIAL\x10\n\x12\x14\n\x10\x44OTA_GAMEMODE_MO\x10\x0b\x12\x14\n\x10\x44OTA_GAMEMODE_LP\x10\x0c\x12\x17\n\x13\x44OTA_GAMEMODE_POOL1\x10\r\x12\x14\n\x10\x44OTA_GAMEMODE_FH\x10\x0e\x12\x18\n\x14\x44OTA_GAMEMODE_CUSTOM\x10\x0f\x12\x14\n\x10\x44OTA_GAMEMODE_CD\x10\x10\x12\x14\n\x10\x44OTA_GAMEMODE_BD\x10\x11\x12\x1f\n\x1b\x44OTA_GAMEMODE_ABILITY_DRAFT\x10\x12\x12\x17\n\x13\x44OTA_GAMEMODE_EVENT\x10\x13\x12\x16\n\x12\x44OTA_GAMEMODE_ARDM\x10\x14\x12\x18\n\x14\x44OTA_GAMEMODE_1V1MID\x10\x15\x12\x1b\n\x17\x44OTA_GAMEMODE_ALL_DRAFT\x10\x16*\xec\x03\n\x0e\x44OTA_GameState\x12\x1d\n\x19\x44OTA_GAMERULES_STATE_INIT\x10\x00\x12\x31\n-DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD\x10\x01\x12\'\n#DOTA_GAMERULES_STATE_HERO_SELECTION\x10\x02\x12&\n\"DOTA_GAMERULES_STATE_STRATEGY_TIME\x10\x03\x12!\n\x1d\x44OTA_GAMERULES_STATE_PRE_GAME\x10\x04\x12)\n%DOTA_GAMERULES_STATE_GAME_IN_PROGRESS\x10\x05\x12\"\n\x1e\x44OTA_GAMERULES_STATE_POST_GAME\x10\x06\x12#\n\x1f\x44OTA_GAMERULES_STATE_DISCONNECT\x10\x07\x12&\n\"DOTA_GAMERULES_STATE_TEAM_SHOWCASE\x10\x08\x12*\n&DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP\x10\t\x12-\n)DOTA_GAMERULES_STATE_WAIT_FOR_MAP_TO_LOAD\x10\n\x12\x1d\n\x19\x44OTA_GAMERULES_STATE_LAST\x10\x0b*\xb6\x01\n\x0c\x44OTA_GC_TEAM\x12\x1a\n\x16\x44OTA_GC_TEAM_GOOD_GUYS\x10\x00\x12\x19\n\x15\x44OTA_GC_TEAM_BAD_GUYS\x10\x01\x12\x1c\n\x18\x44OTA_GC_TEAM_BROADCASTER\x10\x02\x12\x1a\n\x16\x44OTA_GC_TEAM_SPECTATOR\x10\x03\x12\x1c\n\x18\x44OTA_GC_TEAM_PLAYER_POOL\x10\x04\x12\x17\n\x13\x44OTA_GC_TEAM_NOTEAM\x10\x05*\xc6\x04\n\x06\x45\x45vent\x12\x11\n\rEVENT_ID_NONE\x10\x00\x12\x15\n\x11\x45VENT_ID_DIRETIDE\x10\x01\x12\x1c\n\x18\x45VENT_ID_SPRING_FESTIVAL\x10\x02\x12\x1b\n\x17\x45VENT_ID_FROSTIVUS_2013\x10\x03\x12\x1c\n\x18\x45VENT_ID_COMPENDIUM_2014\x10\x04\x12\x1a\n\x16\x45VENT_ID_NEXON_PC_BANG\x10\x05\x12\x1a\n\x16\x45VENT_ID_PWRD_DAC_2015\x10\x06\x12\x1b\n\x17\x45VENT_ID_NEW_BLOOM_2015\x10\x07\x12\x1f\n\x1b\x45VENT_ID_INTERNATIONAL_2015\x10\x08\x12\x1c\n\x18\x45VENT_ID_FALL_MAJOR_2015\x10\t\x12\x16\n\x12\x45VENT_ID_ORACLE_PA\x10\n\x12$\n EVENT_ID_NEW_BLOOM_2015_PREBEAST\x10\x0b\x12\x16\n\x12\x45VENT_ID_FROSTIVUS\x10\x0c\x12\x1e\n\x1a\x45VENT_ID_WINTER_MAJOR_2016\x10\r\x12\x1f\n\x1b\x45VENT_ID_INTERNATIONAL_2016\x10\x0e\x12\x1c\n\x18\x45VENT_ID_FALL_MAJOR_2016\x10\x0f\x12\x1e\n\x1a\x45VENT_ID_WINTER_MAJOR_2017\x10\x10\x12\x1b\n\x17\x45VENT_ID_NEW_BLOOM_2017\x10\x11\x12\x1f\n\x1b\x45VENT_ID_INTERNATIONAL_2017\x10\x12\x12\x12\n\x0e\x45VENT_ID_COUNT\x10\x13*\xa8\x02\n\x12\x44OTALeaverStatus_t\x12\x14\n\x10\x44OTA_LEAVER_NONE\x10\x00\x12\x1c\n\x18\x44OTA_LEAVER_DISCONNECTED\x10\x01\x12%\n!DOTA_LEAVER_DISCONNECTED_TOO_LONG\x10\x02\x12\x19\n\x15\x44OTA_LEAVER_ABANDONED\x10\x03\x12\x13\n\x0f\x44OTA_LEAVER_AFK\x10\x04\x12\x1f\n\x1b\x44OTA_LEAVER_NEVER_CONNECTED\x10\x05\x12(\n$DOTA_LEAVER_NEVER_CONNECTED_TOO_LONG\x10\x06\x12\"\n\x1e\x44OTA_LEAVER_FAILED_TO_READY_UP\x10\x07\x12\x18\n\x14\x44OTA_LEAVER_DECLINED\x10\x08*\x9e\x02\n\x15\x44OTAConnectionState_t\x12!\n\x1d\x44OTA_CONNECTION_STATE_UNKNOWN\x10\x00\x12+\n\'DOTA_CONNECTION_STATE_NOT_YET_CONNECTED\x10\x01\x12#\n\x1f\x44OTA_CONNECTION_STATE_CONNECTED\x10\x02\x12&\n\"DOTA_CONNECTION_STATE_DISCONNECTED\x10\x03\x12#\n\x1f\x44OTA_CONNECTION_STATE_ABANDONED\x10\x04\x12!\n\x1d\x44OTA_CONNECTION_STATE_LOADING\x10\x05\x12 \n\x1c\x44OTA_CONNECTION_STATE_FAILED\x10\x06*v\n\rFantasy_Roles\x12\x1a\n\x16\x46\x41NTASY_ROLE_UNDEFINED\x10\x00\x12\x15\n\x11\x46\x41NTASY_ROLE_CORE\x10\x01\x12\x18\n\x14\x46\x41NTASY_ROLE_SUPPORT\x10\x02\x12\x18\n\x14\x46\x41NTASY_ROLE_OFFLANE\x10\x03*\x8a\x01\n\x12\x46\x61ntasy_Team_Slots\x12\x15\n\x11\x46\x41NTASY_SLOT_NONE\x10\x00\x12\x15\n\x11\x46\x41NTASY_SLOT_CORE\x10\x01\x12\x18\n\x14\x46\x41NTASY_SLOT_SUPPORT\x10\x02\x12\x14\n\x10\x46\x41NTASY_SLOT_ANY\x10\x03\x12\x16\n\x12\x46\x41NTASY_SLOT_BENCH\x10\x04*\xdd\x02\n\x16\x46\x61ntasy_Selection_Mode\x12\x1d\n\x19\x46\x41NTASY_SELECTION_INVALID\x10\x00\x12\x1c\n\x18\x46\x41NTASY_SELECTION_LOCKED\x10\x01\x12\x1d\n\x19\x46\x41NTASY_SELECTION_SHUFFLE\x10\x02\x12\x1f\n\x1b\x46\x41NTASY_SELECTION_FREE_PICK\x10\x03\x12\x1b\n\x17\x46\x41NTASY_SELECTION_ENDED\x10\x04\x12 \n\x1c\x46\x41NTASY_SELECTION_PRE_SEASON\x10\x05\x12\x1f\n\x1b\x46\x41NTASY_SELECTION_PRE_DRAFT\x10\x06\x12\x1e\n\x1a\x46\x41NTASY_SELECTION_DRAFTING\x10\x07\x12$\n FANTASY_SELECTION_REGULAR_SEASON\x10\x08\x12 \n\x1c\x46\x41NTASY_SELECTION_CARD_BASED\x10\t*\x80\x05\n\x15\x44OTAChatChannelType_t\x12\x1c\n\x18\x44OTAChannelType_Regional\x10\x00\x12\x1a\n\x16\x44OTAChannelType_Custom\x10\x01\x12\x19\n\x15\x44OTAChannelType_Party\x10\x02\x12\x19\n\x15\x44OTAChannelType_Lobby\x10\x03\x12\x18\n\x14\x44OTAChannelType_Team\x10\x04\x12\x19\n\x15\x44OTAChannelType_Guild\x10\x05\x12\x1b\n\x17\x44OTAChannelType_Fantasy\x10\x06\x12\x1b\n\x17\x44OTAChannelType_Whisper\x10\x07\x12\x1b\n\x17\x44OTAChannelType_Console\x10\x08\x12\x17\n\x13\x44OTAChannelType_Tab\x10\t\x12\x1b\n\x17\x44OTAChannelType_Invalid\x10\n\x12\x1b\n\x17\x44OTAChannelType_GameAll\x10\x0b\x12\x1e\n\x1a\x44OTAChannelType_GameAllies\x10\x0c\x12!\n\x1d\x44OTAChannelType_GameSpectator\x10\r\x12\x18\n\x14\x44OTAChannelType_Cafe\x10\x0f\x12\x1e\n\x1a\x44OTAChannelType_CustomGame\x10\x10\x12\x1b\n\x17\x44OTAChannelType_Private\x10\x11\x12\x1c\n\x18\x44OTAChannelType_PostGame\x10\x12\x12\x1d\n\x19\x44OTAChannelType_BattleCup\x10\x13\x12!\n\x1d\x44OTAChannelType_HLTVSpectator\x10\x14\x12\x1e\n\x1a\x44OTAChannelType_GameEvents\x10\x15*\xe3\x01\n\x14\x45ProfileCardSlotType\x12 \n\x1ck_EProfileCardSlotType_Empty\x10\x00\x12\x1f\n\x1bk_EProfileCardSlotType_Stat\x10\x01\x12!\n\x1dk_EProfileCardSlotType_Trophy\x10\x02\x12\x1f\n\x1bk_EProfileCardSlotType_Item\x10\x03\x12\x1f\n\x1bk_EProfileCardSlotType_Hero\x10\x04\x12#\n\x1fk_EProfileCardSlotType_Emoticon\x10\x05*\x95\x01\n\x17\x45MatchGroupServerStatus\x12 \n\x1ck_EMatchGroupServerStatus_OK\x10\x00\x12\x31\n-k_EMatchGroupServerStatus_LimitedAvailability\x10\x01\x12%\n!k_EMatchGroupServerStatus_Offline\x10\x02*O\n\x0c\x44OTA_CM_PICK\x12\x12\n\x0e\x44OTA_CM_RANDOM\x10\x00\x12\x15\n\x11\x44OTA_CM_GOOD_GUYS\x10\x01\x12\x14\n\x10\x44OTA_CM_BAD_GUYS\x10\x02*\x8b\x01\n\x16\x44OTALowPriorityBanType\x12!\n\x1d\x44OTA_LOW_PRIORITY_BAN_ABANDON\x10\x00\x12!\n\x1d\x44OTA_LOW_PRIORITY_BAN_REPORTS\x10\x01\x12+\n\'DOTA_LOW_PRIORITY_BAN_SECONDARY_ABANDON\x10\x02*}\n\x13\x44OTALobbyReadyState\x12\"\n\x1e\x44OTALobbyReadyState_UNDECLARED\x10\x00\x12 \n\x1c\x44OTALobbyReadyState_ACCEPTED\x10\x01\x12 \n\x1c\x44OTALobbyReadyState_DECLINED\x10\x02*D\n\x0f\x44OTAGameVersion\x12\x18\n\x14GAME_VERSION_CURRENT\x10\x00\x12\x17\n\x13GAME_VERSION_STABLE\x10\x01*\xd2\x03\n\x13\x44OTAJoinLobbyResult\x12\x1c\n\x18\x44OTA_JOIN_RESULT_SUCCESS\x10\x00\x12$\n DOTA_JOIN_RESULT_ALREADY_IN_GAME\x10\x01\x12\"\n\x1e\x44OTA_JOIN_RESULT_INVALID_LOBBY\x10\x02\x12\'\n#DOTA_JOIN_RESULT_INCORRECT_PASSWORD\x10\x03\x12\"\n\x1e\x44OTA_JOIN_RESULT_ACCESS_DENIED\x10\x04\x12\"\n\x1e\x44OTA_JOIN_RESULT_GENERIC_ERROR\x10\x05\x12&\n\"DOTA_JOIN_RESULT_INCORRECT_VERSION\x10\x06\x12\"\n\x1e\x44OTA_JOIN_RESULT_IN_TEAM_PARTY\x10\x07\x12#\n\x1f\x44OTA_JOIN_RESULT_NO_LOBBY_FOUND\x10\x08\x12\x1f\n\x1b\x44OTA_JOIN_RESULT_LOBBY_FULL\x10\t\x12\x32\n.DOTA_JOIN_RESULT_CUSTOM_GAME_INCORRECT_VERSION\x10\n\x12\x1c\n\x18\x44OTA_JOIN_RESULT_TIMEOUT\x10\x0b*^\n\x15SelectionPriorityType\x12\r\n\tUNDEFINED\x10\x00\x12\x0b\n\x07RADIANT\x10\x01\x12\x08\n\x04\x44IRE\x10\x02\x12\x0e\n\nFIRST_PICK\x10\x03\x12\x0f\n\x0bSECOND_PICK\x10\x04*b\n\rDOTAMatchVote\x12\x19\n\x15\x44OTAMatchVote_INVALID\x10\x00\x12\x1a\n\x16\x44OTAMatchVote_POSITIVE\x10\x01\x12\x1a\n\x16\x44OTAMatchVote_NEGATIVE\x10\x02*\x83\x02\n\x17\x44OTA_LobbyMemberXPBonus\x12#\n\x1f\x44OTA_LobbyMemberXPBonus_DEFAULT\x10\x00\x12*\n&DOTA_LobbyMemberXPBonus_BATTLE_BOOSTER\x10\x01\x12\'\n#DOTA_LobbyMemberXPBonus_SHARE_BONUS\x10\x02\x12!\n\x1d\x44OTA_LobbyMemberXPBonus_PARTY\x10\x03\x12\'\n#DOTA_LobbyMemberXPBonus_RECRUITMENT\x10\x04\x12\"\n\x1e\x44OTA_LobbyMemberXPBonus_PCBANG\x10\x05*x\n\x13\x44OTALobbyVisibility\x12\x1e\n\x1a\x44OTALobbyVisibility_Public\x10\x00\x12\x1f\n\x1b\x44OTALobbyVisibility_Friends\x10\x01\x12 \n\x1c\x44OTALobbyVisibility_Unlisted\x10\x02*\xe7\x02\n\x12\x45\x44OTAPlayerMMRType\x12 \n\x1ck_EDOTAPlayerMMRType_Invalid\x10\x00\x12&\n\"k_EDOTAPlayerMMRType_GeneralHidden\x10\x01\x12#\n\x1fk_EDOTAPlayerMMRType_SoloHidden\x10\x02\x12+\n\'k_EDOTAPlayerMMRType_GeneralCompetitive\x10\x03\x12(\n$k_EDOTAPlayerMMRType_SoloCompetitive\x10\x04\x12.\n*k_EDOTAPlayerMMRType_1v1Competitive_UNUSED\x10\x05\x12.\n*k_EDOTAPlayerMMRType_GeneralSeasonalRanked\x10\x06\x12+\n\'k_EDOTAPlayerMMRType_SoloSeasonalRanked\x10\x07*\x87\x02\n\tMatchType\x12\x15\n\x11MATCH_TYPE_CASUAL\x10\x00\x12\x18\n\x14MATCH_TYPE_COOP_BOTS\x10\x01\x12\x1a\n\x16MATCH_TYPE_TEAM_RANKED\x10\x02\x12 \n\x1cMATCH_TYPE_LEGACY_SOLO_QUEUE\x10\x03\x12\x1a\n\x16MATCH_TYPE_COMPETITIVE\x10\x04\x12\x1e\n\x1aMATCH_TYPE_WEEKEND_TOURNEY\x10\x05\x12\x19\n\x15MATCH_TYPE_CASUAL_1V1\x10\x06\x12\x14\n\x10MATCH_TYPE_EVENT\x10\x07\x12\x1e\n\x1aMATCH_TYPE_SEASONAL_RANKED\x10\x08*\x84\x02\n\x11\x44OTABotDifficulty\x12\x1a\n\x16\x42OT_DIFFICULTY_PASSIVE\x10\x00\x12\x17\n\x13\x42OT_DIFFICULTY_EASY\x10\x01\x12\x19\n\x15\x42OT_DIFFICULTY_MEDIUM\x10\x02\x12\x17\n\x13\x42OT_DIFFICULTY_HARD\x10\x03\x12\x19\n\x15\x42OT_DIFFICULTY_UNFAIR\x10\x04\x12\x1a\n\x16\x42OT_DIFFICULTY_INVALID\x10\x05\x12\x19\n\x15\x42OT_DIFFICULTY_EXTRA1\x10\x06\x12\x19\n\x15\x42OT_DIFFICULTY_EXTRA2\x10\x07\x12\x19\n\x15\x42OT_DIFFICULTY_EXTRA3\x10\x08*\x93\x06\n\rDOTA_BOT_MODE\x12\x16\n\x12\x44OTA_BOT_MODE_NONE\x10\x00\x12\x18\n\x14\x44OTA_BOT_MODE_LANING\x10\x01\x12\x18\n\x14\x44OTA_BOT_MODE_ATTACK\x10\x02\x12\x16\n\x12\x44OTA_BOT_MODE_ROAM\x10\x03\x12\x19\n\x15\x44OTA_BOT_MODE_RETREAT\x10\x04\x12\x1d\n\x19\x44OTA_BOT_MODE_SECRET_SHOP\x10\x05\x12\x1b\n\x17\x44OTA_BOT_MODE_SIDE_SHOP\x10\x06\x12\x16\n\x12\x44OTA_BOT_MODE_RUNE\x10\x07\x12 \n\x1c\x44OTA_BOT_MODE_PUSH_TOWER_TOP\x10\x08\x12 \n\x1c\x44OTA_BOT_MODE_PUSH_TOWER_MID\x10\t\x12 \n\x1c\x44OTA_BOT_MODE_PUSH_TOWER_BOT\x10\n\x12\"\n\x1e\x44OTA_BOT_MODE_DEFEND_TOWER_TOP\x10\x0b\x12\"\n\x1e\x44OTA_BOT_MODE_DEFEND_TOWER_MID\x10\x0c\x12\"\n\x1e\x44OTA_BOT_MODE_DEFEND_TOWER_BOT\x10\r\x12\x1a\n\x16\x44OTA_BOT_MODE_ASSEMBLE\x10\x0e\x12&\n\"DOTA_BOT_MODE_ASSEMBLE_WITH_HUMANS\x10\x0f\x12\x1b\n\x17\x44OTA_BOT_MODE_TEAM_ROAM\x10\x10\x12\x16\n\x12\x44OTA_BOT_MODE_FARM\x10\x11\x12\x1d\n\x19\x44OTA_BOT_MODE_DEFEND_ALLY\x10\x12\x12#\n\x1f\x44OTA_BOT_MODE_EVASIVE_MANEUVERS\x10\x13\x12\x18\n\x14\x44OTA_BOT_MODE_ROSHAN\x10\x14\x12\x16\n\x12\x44OTA_BOT_MODE_ITEM\x10\x15\x12\x16\n\x12\x44OTA_BOT_MODE_WARD\x10\x16\x12\x1b\n\x17\x44OTA_BOT_MODE_COMPANION\x10\x17\x12\x1f\n\x1b\x44OTA_BOT_MODE_TUTORIAL_BOSS\x10\x18\x12\x18\n\x14\x44OTA_BOT_MODE_MINION\x10\x19*\xf3\x01\n\x0eMatchLanguages\x12\x1a\n\x16MATCH_LANGUAGE_INVALID\x10\x00\x12\x1a\n\x16MATCH_LANGUAGE_ENGLISH\x10\x01\x12\x1a\n\x16MATCH_LANGUAGE_RUSSIAN\x10\x02\x12\x1a\n\x16MATCH_LANGUAGE_CHINESE\x10\x03\x12\x19\n\x15MATCH_LANGUAGE_KOREAN\x10\x04\x12\x1a\n\x16MATCH_LANGUAGE_SPANISH\x10\x05\x12\x1d\n\x19MATCH_LANGUAGE_PORTUGUESE\x10\x06\x12\x1b\n\x17MATCH_LANGUAGE_ENGLISH2\x10\x07*\xd8\x02\n\x1a\x45TourneyQueueDeadlineState\x12\'\n#k_ETourneyQueueDeadlineState_Normal\x10\x00\x12\'\n#k_ETourneyQueueDeadlineState_Missed\x10\x01\x12*\n&k_ETourneyQueueDeadlineState_ExpiredOK\x10\x02\x12+\n\'k_ETourneyQueueDeadlineState_SeekingBye\x10\x03\x12\x32\n.k_ETourneyQueueDeadlineState_EligibleForRefund\x10\x04\x12,\n\x1fk_ETourneyQueueDeadlineState_NA\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12-\n)k_ETourneyQueueDeadlineState_ExpiringSoon\x10\x65*\xc7\x02\n\rEMatchOutcome\x12\x1b\n\x17k_EMatchOutcome_Unknown\x10\x00\x12\x1e\n\x1ak_EMatchOutcome_RadVictory\x10\x02\x12\x1f\n\x1bk_EMatchOutcome_DireVictory\x10\x03\x12\x33\n/k_EMatchOutcome_NotScored_PoorNetworkConditions\x10@\x12$\n k_EMatchOutcome_NotScored_Leaver\x10\x41\x12)\n%k_EMatchOutcome_NotScored_ServerCrash\x10\x42\x12*\n&k_EMatchOutcome_NotScored_NeverStarted\x10\x43\x12&\n\"k_EMatchOutcome_NotScored_Canceled\x10\x44\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x17\x64ota_shared_enums.proto\x12\x04\x64ota\"\xbf\x01\n\x18\x43\x44OTAClientHardwareSpecs\x12\x1a\n\x12logical_processors\x18\x01 \x01(\r\x12\x1d\n\x15\x63pu_cycles_per_second\x18\x02 \x01(\x06\x12\x1d\n\x15total_physical_memory\x18\x03 \x01(\x06\x12\x14\n\x0cis_64_bit_os\x18\x04 \x01(\x08\x12\x1a\n\x12upload_measurement\x18\x05 \x01(\x04\x12\x17\n\x0fprefer_not_host\x18\x06 \x01(\x08\"\xe2\x03\n\rCDOTASaveGame\x12\x10\n\x08match_id\x18\x05 \x01(\x04\x12\x11\n\tsave_time\x18\x02 \x01(\r\x12+\n\x07players\x18\x03 \x03(\x0b\x32\x1a.dota.CDOTASaveGame.Player\x12\x38\n\x0esave_instances\x18\x04 \x03(\x0b\x32 .dota.CDOTASaveGame.SaveInstance\x1a^\n\x06Player\x12\x38\n\x04team\x18\x01 \x01(\x0e\x32\x12.dota.DOTA_GC_TEAM:\x16\x44OTA_GC_TEAM_GOOD_GUYS\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04hero\x18\x03 \x01(\t\x1a\xe4\x01\n\x0cSaveInstance\x12\x11\n\tgame_time\x18\x02 \x01(\r\x12\x13\n\x0bteam1_score\x18\x03 \x01(\r\x12\x13\n\x0bteam2_score\x18\x04 \x01(\r\x12J\n\x10player_positions\x18\x05 \x03(\x0b\x32\x30.dota.CDOTASaveGame.SaveInstance.PlayerPositions\x12\x0f\n\x07save_id\x18\x06 \x01(\r\x12\x11\n\tsave_time\x18\x07 \x01(\r\x1a\'\n\x0fPlayerPositions\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02*\xc0\x04\n\rDOTA_GameMode\x12\x16\n\x12\x44OTA_GAMEMODE_NONE\x10\x00\x12\x14\n\x10\x44OTA_GAMEMODE_AP\x10\x01\x12\x14\n\x10\x44OTA_GAMEMODE_CM\x10\x02\x12\x14\n\x10\x44OTA_GAMEMODE_RD\x10\x03\x12\x14\n\x10\x44OTA_GAMEMODE_SD\x10\x04\x12\x14\n\x10\x44OTA_GAMEMODE_AR\x10\x05\x12\x17\n\x13\x44OTA_GAMEMODE_INTRO\x10\x06\x12\x14\n\x10\x44OTA_GAMEMODE_HW\x10\x07\x12\x1c\n\x18\x44OTA_GAMEMODE_REVERSE_CM\x10\x08\x12\x16\n\x12\x44OTA_GAMEMODE_XMAS\x10\t\x12\x1a\n\x16\x44OTA_GAMEMODE_TUTORIAL\x10\n\x12\x14\n\x10\x44OTA_GAMEMODE_MO\x10\x0b\x12\x14\n\x10\x44OTA_GAMEMODE_LP\x10\x0c\x12\x17\n\x13\x44OTA_GAMEMODE_POOL1\x10\r\x12\x14\n\x10\x44OTA_GAMEMODE_FH\x10\x0e\x12\x18\n\x14\x44OTA_GAMEMODE_CUSTOM\x10\x0f\x12\x14\n\x10\x44OTA_GAMEMODE_CD\x10\x10\x12\x14\n\x10\x44OTA_GAMEMODE_BD\x10\x11\x12\x1f\n\x1b\x44OTA_GAMEMODE_ABILITY_DRAFT\x10\x12\x12\x17\n\x13\x44OTA_GAMEMODE_EVENT\x10\x13\x12\x16\n\x12\x44OTA_GAMEMODE_ARDM\x10\x14\x12\x18\n\x14\x44OTA_GAMEMODE_1V1MID\x10\x15\x12\x1b\n\x17\x44OTA_GAMEMODE_ALL_DRAFT\x10\x16*\xec\x03\n\x0e\x44OTA_GameState\x12\x1d\n\x19\x44OTA_GAMERULES_STATE_INIT\x10\x00\x12\x31\n-DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD\x10\x01\x12\'\n#DOTA_GAMERULES_STATE_HERO_SELECTION\x10\x02\x12&\n\"DOTA_GAMERULES_STATE_STRATEGY_TIME\x10\x03\x12!\n\x1d\x44OTA_GAMERULES_STATE_PRE_GAME\x10\x04\x12)\n%DOTA_GAMERULES_STATE_GAME_IN_PROGRESS\x10\x05\x12\"\n\x1e\x44OTA_GAMERULES_STATE_POST_GAME\x10\x06\x12#\n\x1f\x44OTA_GAMERULES_STATE_DISCONNECT\x10\x07\x12&\n\"DOTA_GAMERULES_STATE_TEAM_SHOWCASE\x10\x08\x12*\n&DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP\x10\t\x12-\n)DOTA_GAMERULES_STATE_WAIT_FOR_MAP_TO_LOAD\x10\n\x12\x1d\n\x19\x44OTA_GAMERULES_STATE_LAST\x10\x0b*\xb6\x01\n\x0c\x44OTA_GC_TEAM\x12\x1a\n\x16\x44OTA_GC_TEAM_GOOD_GUYS\x10\x00\x12\x19\n\x15\x44OTA_GC_TEAM_BAD_GUYS\x10\x01\x12\x1c\n\x18\x44OTA_GC_TEAM_BROADCASTER\x10\x02\x12\x1a\n\x16\x44OTA_GC_TEAM_SPECTATOR\x10\x03\x12\x1c\n\x18\x44OTA_GC_TEAM_PLAYER_POOL\x10\x04\x12\x17\n\x13\x44OTA_GC_TEAM_NOTEAM\x10\x05*\xc6\x04\n\x06\x45\x45vent\x12\x11\n\rEVENT_ID_NONE\x10\x00\x12\x15\n\x11\x45VENT_ID_DIRETIDE\x10\x01\x12\x1c\n\x18\x45VENT_ID_SPRING_FESTIVAL\x10\x02\x12\x1b\n\x17\x45VENT_ID_FROSTIVUS_2013\x10\x03\x12\x1c\n\x18\x45VENT_ID_COMPENDIUM_2014\x10\x04\x12\x1a\n\x16\x45VENT_ID_NEXON_PC_BANG\x10\x05\x12\x1a\n\x16\x45VENT_ID_PWRD_DAC_2015\x10\x06\x12\x1b\n\x17\x45VENT_ID_NEW_BLOOM_2015\x10\x07\x12\x1f\n\x1b\x45VENT_ID_INTERNATIONAL_2015\x10\x08\x12\x1c\n\x18\x45VENT_ID_FALL_MAJOR_2015\x10\t\x12\x16\n\x12\x45VENT_ID_ORACLE_PA\x10\n\x12$\n EVENT_ID_NEW_BLOOM_2015_PREBEAST\x10\x0b\x12\x16\n\x12\x45VENT_ID_FROSTIVUS\x10\x0c\x12\x1e\n\x1a\x45VENT_ID_WINTER_MAJOR_2016\x10\r\x12\x1f\n\x1b\x45VENT_ID_INTERNATIONAL_2016\x10\x0e\x12\x1c\n\x18\x45VENT_ID_FALL_MAJOR_2016\x10\x0f\x12\x1e\n\x1a\x45VENT_ID_WINTER_MAJOR_2017\x10\x10\x12\x1b\n\x17\x45VENT_ID_NEW_BLOOM_2017\x10\x11\x12\x1f\n\x1b\x45VENT_ID_INTERNATIONAL_2017\x10\x12\x12\x12\n\x0e\x45VENT_ID_COUNT\x10\x13*\xa8\x02\n\x12\x44OTALeaverStatus_t\x12\x14\n\x10\x44OTA_LEAVER_NONE\x10\x00\x12\x1c\n\x18\x44OTA_LEAVER_DISCONNECTED\x10\x01\x12%\n!DOTA_LEAVER_DISCONNECTED_TOO_LONG\x10\x02\x12\x19\n\x15\x44OTA_LEAVER_ABANDONED\x10\x03\x12\x13\n\x0f\x44OTA_LEAVER_AFK\x10\x04\x12\x1f\n\x1b\x44OTA_LEAVER_NEVER_CONNECTED\x10\x05\x12(\n$DOTA_LEAVER_NEVER_CONNECTED_TOO_LONG\x10\x06\x12\"\n\x1e\x44OTA_LEAVER_FAILED_TO_READY_UP\x10\x07\x12\x18\n\x14\x44OTA_LEAVER_DECLINED\x10\x08*\x9e\x02\n\x15\x44OTAConnectionState_t\x12!\n\x1d\x44OTA_CONNECTION_STATE_UNKNOWN\x10\x00\x12+\n\'DOTA_CONNECTION_STATE_NOT_YET_CONNECTED\x10\x01\x12#\n\x1f\x44OTA_CONNECTION_STATE_CONNECTED\x10\x02\x12&\n\"DOTA_CONNECTION_STATE_DISCONNECTED\x10\x03\x12#\n\x1f\x44OTA_CONNECTION_STATE_ABANDONED\x10\x04\x12!\n\x1d\x44OTA_CONNECTION_STATE_LOADING\x10\x05\x12 \n\x1c\x44OTA_CONNECTION_STATE_FAILED\x10\x06*v\n\rFantasy_Roles\x12\x1a\n\x16\x46\x41NTASY_ROLE_UNDEFINED\x10\x00\x12\x15\n\x11\x46\x41NTASY_ROLE_CORE\x10\x01\x12\x18\n\x14\x46\x41NTASY_ROLE_SUPPORT\x10\x02\x12\x18\n\x14\x46\x41NTASY_ROLE_OFFLANE\x10\x03*\x8a\x01\n\x12\x46\x61ntasy_Team_Slots\x12\x15\n\x11\x46\x41NTASY_SLOT_NONE\x10\x00\x12\x15\n\x11\x46\x41NTASY_SLOT_CORE\x10\x01\x12\x18\n\x14\x46\x41NTASY_SLOT_SUPPORT\x10\x02\x12\x14\n\x10\x46\x41NTASY_SLOT_ANY\x10\x03\x12\x16\n\x12\x46\x41NTASY_SLOT_BENCH\x10\x04*\xdd\x02\n\x16\x46\x61ntasy_Selection_Mode\x12\x1d\n\x19\x46\x41NTASY_SELECTION_INVALID\x10\x00\x12\x1c\n\x18\x46\x41NTASY_SELECTION_LOCKED\x10\x01\x12\x1d\n\x19\x46\x41NTASY_SELECTION_SHUFFLE\x10\x02\x12\x1f\n\x1b\x46\x41NTASY_SELECTION_FREE_PICK\x10\x03\x12\x1b\n\x17\x46\x41NTASY_SELECTION_ENDED\x10\x04\x12 \n\x1c\x46\x41NTASY_SELECTION_PRE_SEASON\x10\x05\x12\x1f\n\x1b\x46\x41NTASY_SELECTION_PRE_DRAFT\x10\x06\x12\x1e\n\x1a\x46\x41NTASY_SELECTION_DRAFTING\x10\x07\x12$\n FANTASY_SELECTION_REGULAR_SEASON\x10\x08\x12 \n\x1c\x46\x41NTASY_SELECTION_CARD_BASED\x10\t*\x80\x05\n\x15\x44OTAChatChannelType_t\x12\x1c\n\x18\x44OTAChannelType_Regional\x10\x00\x12\x1a\n\x16\x44OTAChannelType_Custom\x10\x01\x12\x19\n\x15\x44OTAChannelType_Party\x10\x02\x12\x19\n\x15\x44OTAChannelType_Lobby\x10\x03\x12\x18\n\x14\x44OTAChannelType_Team\x10\x04\x12\x19\n\x15\x44OTAChannelType_Guild\x10\x05\x12\x1b\n\x17\x44OTAChannelType_Fantasy\x10\x06\x12\x1b\n\x17\x44OTAChannelType_Whisper\x10\x07\x12\x1b\n\x17\x44OTAChannelType_Console\x10\x08\x12\x17\n\x13\x44OTAChannelType_Tab\x10\t\x12\x1b\n\x17\x44OTAChannelType_Invalid\x10\n\x12\x1b\n\x17\x44OTAChannelType_GameAll\x10\x0b\x12\x1e\n\x1a\x44OTAChannelType_GameAllies\x10\x0c\x12!\n\x1d\x44OTAChannelType_GameSpectator\x10\r\x12\x18\n\x14\x44OTAChannelType_Cafe\x10\x0f\x12\x1e\n\x1a\x44OTAChannelType_CustomGame\x10\x10\x12\x1b\n\x17\x44OTAChannelType_Private\x10\x11\x12\x1c\n\x18\x44OTAChannelType_PostGame\x10\x12\x12\x1d\n\x19\x44OTAChannelType_BattleCup\x10\x13\x12!\n\x1d\x44OTAChannelType_HLTVSpectator\x10\x14\x12\x1e\n\x1a\x44OTAChannelType_GameEvents\x10\x15*\xe3\x01\n\x14\x45ProfileCardSlotType\x12 \n\x1ck_EProfileCardSlotType_Empty\x10\x00\x12\x1f\n\x1bk_EProfileCardSlotType_Stat\x10\x01\x12!\n\x1dk_EProfileCardSlotType_Trophy\x10\x02\x12\x1f\n\x1bk_EProfileCardSlotType_Item\x10\x03\x12\x1f\n\x1bk_EProfileCardSlotType_Hero\x10\x04\x12#\n\x1fk_EProfileCardSlotType_Emoticon\x10\x05*\x95\x01\n\x17\x45MatchGroupServerStatus\x12 \n\x1ck_EMatchGroupServerStatus_OK\x10\x00\x12\x31\n-k_EMatchGroupServerStatus_LimitedAvailability\x10\x01\x12%\n!k_EMatchGroupServerStatus_Offline\x10\x02*O\n\x0c\x44OTA_CM_PICK\x12\x12\n\x0e\x44OTA_CM_RANDOM\x10\x00\x12\x15\n\x11\x44OTA_CM_GOOD_GUYS\x10\x01\x12\x14\n\x10\x44OTA_CM_BAD_GUYS\x10\x02*\x8b\x01\n\x16\x44OTALowPriorityBanType\x12!\n\x1d\x44OTA_LOW_PRIORITY_BAN_ABANDON\x10\x00\x12!\n\x1d\x44OTA_LOW_PRIORITY_BAN_REPORTS\x10\x01\x12+\n\'DOTA_LOW_PRIORITY_BAN_SECONDARY_ABANDON\x10\x02*}\n\x13\x44OTALobbyReadyState\x12\"\n\x1e\x44OTALobbyReadyState_UNDECLARED\x10\x00\x12 \n\x1c\x44OTALobbyReadyState_ACCEPTED\x10\x01\x12 \n\x1c\x44OTALobbyReadyState_DECLINED\x10\x02*D\n\x0f\x44OTAGameVersion\x12\x18\n\x14GAME_VERSION_CURRENT\x10\x00\x12\x17\n\x13GAME_VERSION_STABLE\x10\x01*\xd2\x03\n\x13\x44OTAJoinLobbyResult\x12\x1c\n\x18\x44OTA_JOIN_RESULT_SUCCESS\x10\x00\x12$\n DOTA_JOIN_RESULT_ALREADY_IN_GAME\x10\x01\x12\"\n\x1e\x44OTA_JOIN_RESULT_INVALID_LOBBY\x10\x02\x12\'\n#DOTA_JOIN_RESULT_INCORRECT_PASSWORD\x10\x03\x12\"\n\x1e\x44OTA_JOIN_RESULT_ACCESS_DENIED\x10\x04\x12\"\n\x1e\x44OTA_JOIN_RESULT_GENERIC_ERROR\x10\x05\x12&\n\"DOTA_JOIN_RESULT_INCORRECT_VERSION\x10\x06\x12\"\n\x1e\x44OTA_JOIN_RESULT_IN_TEAM_PARTY\x10\x07\x12#\n\x1f\x44OTA_JOIN_RESULT_NO_LOBBY_FOUND\x10\x08\x12\x1f\n\x1b\x44OTA_JOIN_RESULT_LOBBY_FULL\x10\t\x12\x32\n.DOTA_JOIN_RESULT_CUSTOM_GAME_INCORRECT_VERSION\x10\n\x12\x1c\n\x18\x44OTA_JOIN_RESULT_TIMEOUT\x10\x0b*^\n\x15SelectionPriorityType\x12\r\n\tUNDEFINED\x10\x00\x12\x0b\n\x07RADIANT\x10\x01\x12\x08\n\x04\x44IRE\x10\x02\x12\x0e\n\nFIRST_PICK\x10\x03\x12\x0f\n\x0bSECOND_PICK\x10\x04*b\n\rDOTAMatchVote\x12\x19\n\x15\x44OTAMatchVote_INVALID\x10\x00\x12\x1a\n\x16\x44OTAMatchVote_POSITIVE\x10\x01\x12\x1a\n\x16\x44OTAMatchVote_NEGATIVE\x10\x02*\x83\x02\n\x17\x44OTA_LobbyMemberXPBonus\x12#\n\x1f\x44OTA_LobbyMemberXPBonus_DEFAULT\x10\x00\x12*\n&DOTA_LobbyMemberXPBonus_BATTLE_BOOSTER\x10\x01\x12\'\n#DOTA_LobbyMemberXPBonus_SHARE_BONUS\x10\x02\x12!\n\x1d\x44OTA_LobbyMemberXPBonus_PARTY\x10\x03\x12\'\n#DOTA_LobbyMemberXPBonus_RECRUITMENT\x10\x04\x12\"\n\x1e\x44OTA_LobbyMemberXPBonus_PCBANG\x10\x05*x\n\x13\x44OTALobbyVisibility\x12\x1e\n\x1a\x44OTALobbyVisibility_Public\x10\x00\x12\x1f\n\x1b\x44OTALobbyVisibility_Friends\x10\x01\x12 \n\x1c\x44OTALobbyVisibility_Unlisted\x10\x02*\xe7\x02\n\x12\x45\x44OTAPlayerMMRType\x12 \n\x1ck_EDOTAPlayerMMRType_Invalid\x10\x00\x12&\n\"k_EDOTAPlayerMMRType_GeneralHidden\x10\x01\x12#\n\x1fk_EDOTAPlayerMMRType_SoloHidden\x10\x02\x12+\n\'k_EDOTAPlayerMMRType_GeneralCompetitive\x10\x03\x12(\n$k_EDOTAPlayerMMRType_SoloCompetitive\x10\x04\x12.\n*k_EDOTAPlayerMMRType_1v1Competitive_UNUSED\x10\x05\x12.\n*k_EDOTAPlayerMMRType_GeneralSeasonalRanked\x10\x06\x12+\n\'k_EDOTAPlayerMMRType_SoloSeasonalRanked\x10\x07*\x87\x02\n\tMatchType\x12\x15\n\x11MATCH_TYPE_CASUAL\x10\x00\x12\x18\n\x14MATCH_TYPE_COOP_BOTS\x10\x01\x12\x1a\n\x16MATCH_TYPE_TEAM_RANKED\x10\x02\x12 \n\x1cMATCH_TYPE_LEGACY_SOLO_QUEUE\x10\x03\x12\x1a\n\x16MATCH_TYPE_COMPETITIVE\x10\x04\x12\x1e\n\x1aMATCH_TYPE_WEEKEND_TOURNEY\x10\x05\x12\x19\n\x15MATCH_TYPE_CASUAL_1V1\x10\x06\x12\x14\n\x10MATCH_TYPE_EVENT\x10\x07\x12\x1e\n\x1aMATCH_TYPE_SEASONAL_RANKED\x10\x08*\x84\x02\n\x11\x44OTABotDifficulty\x12\x1a\n\x16\x42OT_DIFFICULTY_PASSIVE\x10\x00\x12\x17\n\x13\x42OT_DIFFICULTY_EASY\x10\x01\x12\x19\n\x15\x42OT_DIFFICULTY_MEDIUM\x10\x02\x12\x17\n\x13\x42OT_DIFFICULTY_HARD\x10\x03\x12\x19\n\x15\x42OT_DIFFICULTY_UNFAIR\x10\x04\x12\x1a\n\x16\x42OT_DIFFICULTY_INVALID\x10\x05\x12\x19\n\x15\x42OT_DIFFICULTY_EXTRA1\x10\x06\x12\x19\n\x15\x42OT_DIFFICULTY_EXTRA2\x10\x07\x12\x19\n\x15\x42OT_DIFFICULTY_EXTRA3\x10\x08*\x93\x06\n\rDOTA_BOT_MODE\x12\x16\n\x12\x44OTA_BOT_MODE_NONE\x10\x00\x12\x18\n\x14\x44OTA_BOT_MODE_LANING\x10\x01\x12\x18\n\x14\x44OTA_BOT_MODE_ATTACK\x10\x02\x12\x16\n\x12\x44OTA_BOT_MODE_ROAM\x10\x03\x12\x19\n\x15\x44OTA_BOT_MODE_RETREAT\x10\x04\x12\x1d\n\x19\x44OTA_BOT_MODE_SECRET_SHOP\x10\x05\x12\x1b\n\x17\x44OTA_BOT_MODE_SIDE_SHOP\x10\x06\x12\x16\n\x12\x44OTA_BOT_MODE_RUNE\x10\x07\x12 \n\x1c\x44OTA_BOT_MODE_PUSH_TOWER_TOP\x10\x08\x12 \n\x1c\x44OTA_BOT_MODE_PUSH_TOWER_MID\x10\t\x12 \n\x1c\x44OTA_BOT_MODE_PUSH_TOWER_BOT\x10\n\x12\"\n\x1e\x44OTA_BOT_MODE_DEFEND_TOWER_TOP\x10\x0b\x12\"\n\x1e\x44OTA_BOT_MODE_DEFEND_TOWER_MID\x10\x0c\x12\"\n\x1e\x44OTA_BOT_MODE_DEFEND_TOWER_BOT\x10\r\x12\x1a\n\x16\x44OTA_BOT_MODE_ASSEMBLE\x10\x0e\x12&\n\"DOTA_BOT_MODE_ASSEMBLE_WITH_HUMANS\x10\x0f\x12\x1b\n\x17\x44OTA_BOT_MODE_TEAM_ROAM\x10\x10\x12\x16\n\x12\x44OTA_BOT_MODE_FARM\x10\x11\x12\x1d\n\x19\x44OTA_BOT_MODE_DEFEND_ALLY\x10\x12\x12#\n\x1f\x44OTA_BOT_MODE_EVASIVE_MANEUVERS\x10\x13\x12\x18\n\x14\x44OTA_BOT_MODE_ROSHAN\x10\x14\x12\x16\n\x12\x44OTA_BOT_MODE_ITEM\x10\x15\x12\x16\n\x12\x44OTA_BOT_MODE_WARD\x10\x16\x12\x1b\n\x17\x44OTA_BOT_MODE_COMPANION\x10\x17\x12\x1f\n\x1b\x44OTA_BOT_MODE_TUTORIAL_BOSS\x10\x18\x12\x18\n\x14\x44OTA_BOT_MODE_MINION\x10\x19*\xf3\x01\n\x0eMatchLanguages\x12\x1a\n\x16MATCH_LANGUAGE_INVALID\x10\x00\x12\x1a\n\x16MATCH_LANGUAGE_ENGLISH\x10\x01\x12\x1a\n\x16MATCH_LANGUAGE_RUSSIAN\x10\x02\x12\x1a\n\x16MATCH_LANGUAGE_CHINESE\x10\x03\x12\x19\n\x15MATCH_LANGUAGE_KOREAN\x10\x04\x12\x1a\n\x16MATCH_LANGUAGE_SPANISH\x10\x05\x12\x1d\n\x19MATCH_LANGUAGE_PORTUGUESE\x10\x06\x12\x1b\n\x17MATCH_LANGUAGE_ENGLISH2\x10\x07*\xd8\x02\n\x1a\x45TourneyQueueDeadlineState\x12\'\n#k_ETourneyQueueDeadlineState_Normal\x10\x00\x12\'\n#k_ETourneyQueueDeadlineState_Missed\x10\x01\x12*\n&k_ETourneyQueueDeadlineState_ExpiredOK\x10\x02\x12+\n\'k_ETourneyQueueDeadlineState_SeekingBye\x10\x03\x12\x32\n.k_ETourneyQueueDeadlineState_EligibleForRefund\x10\x04\x12,\n\x1fk_ETourneyQueueDeadlineState_NA\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12-\n)k_ETourneyQueueDeadlineState_ExpiringSoon\x10\x65*\xc7\x02\n\rEMatchOutcome\x12\x1b\n\x17k_EMatchOutcome_Unknown\x10\x00\x12\x1e\n\x1ak_EMatchOutcome_RadVictory\x10\x02\x12\x1f\n\x1bk_EMatchOutcome_DireVictory\x10\x03\x12\x33\n/k_EMatchOutcome_NotScored_PoorNetworkConditions\x10@\x12$\n k_EMatchOutcome_NotScored_Leaver\x10\x41\x12)\n%k_EMatchOutcome_NotScored_ServerCrash\x10\x42\x12*\n&k_EMatchOutcome_NotScored_NeverStarted\x10\x43\x12&\n\"k_EMatchOutcome_NotScored_Canceled\x10\x44\x42\x05H\x01\x90\x01\x00')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _DOTA_GAMEMODE = _descriptor.EnumDescriptor(
   name='DOTA_GameMode',
-  full_name='DOTA_GameMode',
+  full_name='dota.DOTA_GameMode',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -125,15 +125,15 @@ _DOTA_GAMEMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=687,
-  serialized_end=1263,
+  serialized_start=713,
+  serialized_end=1289,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_GAMEMODE)
 
 DOTA_GameMode = enum_type_wrapper.EnumTypeWrapper(_DOTA_GAMEMODE)
 _DOTA_GAMESTATE = _descriptor.EnumDescriptor(
   name='DOTA_GameState',
-  full_name='DOTA_GameState',
+  full_name='dota.DOTA_GameState',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -188,15 +188,15 @@ _DOTA_GAMESTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1266,
-  serialized_end=1758,
+  serialized_start=1292,
+  serialized_end=1784,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_GAMESTATE)
 
 DOTA_GameState = enum_type_wrapper.EnumTypeWrapper(_DOTA_GAMESTATE)
 _DOTA_GC_TEAM = _descriptor.EnumDescriptor(
   name='DOTA_GC_TEAM',
-  full_name='DOTA_GC_TEAM',
+  full_name='dota.DOTA_GC_TEAM',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -227,15 +227,15 @@ _DOTA_GC_TEAM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1761,
-  serialized_end=1943,
+  serialized_start=1787,
+  serialized_end=1969,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_GC_TEAM)
 
 DOTA_GC_TEAM = enum_type_wrapper.EnumTypeWrapper(_DOTA_GC_TEAM)
 _EEVENT = _descriptor.EnumDescriptor(
   name='EEvent',
-  full_name='EEvent',
+  full_name='dota.EEvent',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -322,15 +322,15 @@ _EEVENT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1946,
-  serialized_end=2528,
+  serialized_start=1972,
+  serialized_end=2554,
 )
 _sym_db.RegisterEnumDescriptor(_EEVENT)
 
 EEvent = enum_type_wrapper.EnumTypeWrapper(_EEVENT)
 _DOTALEAVERSTATUS_T = _descriptor.EnumDescriptor(
   name='DOTALeaverStatus_t',
-  full_name='DOTALeaverStatus_t',
+  full_name='dota.DOTALeaverStatus_t',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -373,15 +373,15 @@ _DOTALEAVERSTATUS_T = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2531,
-  serialized_end=2827,
+  serialized_start=2557,
+  serialized_end=2853,
 )
 _sym_db.RegisterEnumDescriptor(_DOTALEAVERSTATUS_T)
 
 DOTALeaverStatus_t = enum_type_wrapper.EnumTypeWrapper(_DOTALEAVERSTATUS_T)
 _DOTACONNECTIONSTATE_T = _descriptor.EnumDescriptor(
   name='DOTAConnectionState_t',
-  full_name='DOTAConnectionState_t',
+  full_name='dota.DOTAConnectionState_t',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -416,15 +416,15 @@ _DOTACONNECTIONSTATE_T = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2830,
-  serialized_end=3116,
+  serialized_start=2856,
+  serialized_end=3142,
 )
 _sym_db.RegisterEnumDescriptor(_DOTACONNECTIONSTATE_T)
 
 DOTAConnectionState_t = enum_type_wrapper.EnumTypeWrapper(_DOTACONNECTIONSTATE_T)
 _FANTASY_ROLES = _descriptor.EnumDescriptor(
   name='Fantasy_Roles',
-  full_name='Fantasy_Roles',
+  full_name='dota.Fantasy_Roles',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -447,15 +447,15 @@ _FANTASY_ROLES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3118,
-  serialized_end=3236,
+  serialized_start=3144,
+  serialized_end=3262,
 )
 _sym_db.RegisterEnumDescriptor(_FANTASY_ROLES)
 
 Fantasy_Roles = enum_type_wrapper.EnumTypeWrapper(_FANTASY_ROLES)
 _FANTASY_TEAM_SLOTS = _descriptor.EnumDescriptor(
   name='Fantasy_Team_Slots',
-  full_name='Fantasy_Team_Slots',
+  full_name='dota.Fantasy_Team_Slots',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -482,15 +482,15 @@ _FANTASY_TEAM_SLOTS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3239,
-  serialized_end=3377,
+  serialized_start=3265,
+  serialized_end=3403,
 )
 _sym_db.RegisterEnumDescriptor(_FANTASY_TEAM_SLOTS)
 
 Fantasy_Team_Slots = enum_type_wrapper.EnumTypeWrapper(_FANTASY_TEAM_SLOTS)
 _FANTASY_SELECTION_MODE = _descriptor.EnumDescriptor(
   name='Fantasy_Selection_Mode',
-  full_name='Fantasy_Selection_Mode',
+  full_name='dota.Fantasy_Selection_Mode',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -537,15 +537,15 @@ _FANTASY_SELECTION_MODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3380,
-  serialized_end=3729,
+  serialized_start=3406,
+  serialized_end=3755,
 )
 _sym_db.RegisterEnumDescriptor(_FANTASY_SELECTION_MODE)
 
 Fantasy_Selection_Mode = enum_type_wrapper.EnumTypeWrapper(_FANTASY_SELECTION_MODE)
 _DOTACHATCHANNELTYPE_T = _descriptor.EnumDescriptor(
   name='DOTAChatChannelType_t',
-  full_name='DOTAChatChannelType_t',
+  full_name='dota.DOTAChatChannelType_t',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -636,15 +636,15 @@ _DOTACHATCHANNELTYPE_T = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3732,
-  serialized_end=4372,
+  serialized_start=3758,
+  serialized_end=4398,
 )
 _sym_db.RegisterEnumDescriptor(_DOTACHATCHANNELTYPE_T)
 
 DOTAChatChannelType_t = enum_type_wrapper.EnumTypeWrapper(_DOTACHATCHANNELTYPE_T)
 _EPROFILECARDSLOTTYPE = _descriptor.EnumDescriptor(
   name='EProfileCardSlotType',
-  full_name='EProfileCardSlotType',
+  full_name='dota.EProfileCardSlotType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -675,15 +675,15 @@ _EPROFILECARDSLOTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4375,
-  serialized_end=4602,
+  serialized_start=4401,
+  serialized_end=4628,
 )
 _sym_db.RegisterEnumDescriptor(_EPROFILECARDSLOTTYPE)
 
 EProfileCardSlotType = enum_type_wrapper.EnumTypeWrapper(_EPROFILECARDSLOTTYPE)
 _EMATCHGROUPSERVERSTATUS = _descriptor.EnumDescriptor(
   name='EMatchGroupServerStatus',
-  full_name='EMatchGroupServerStatus',
+  full_name='dota.EMatchGroupServerStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -702,15 +702,15 @@ _EMATCHGROUPSERVERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4605,
-  serialized_end=4754,
+  serialized_start=4631,
+  serialized_end=4780,
 )
 _sym_db.RegisterEnumDescriptor(_EMATCHGROUPSERVERSTATUS)
 
 EMatchGroupServerStatus = enum_type_wrapper.EnumTypeWrapper(_EMATCHGROUPSERVERSTATUS)
 _DOTA_CM_PICK = _descriptor.EnumDescriptor(
   name='DOTA_CM_PICK',
-  full_name='DOTA_CM_PICK',
+  full_name='dota.DOTA_CM_PICK',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -729,15 +729,15 @@ _DOTA_CM_PICK = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4756,
-  serialized_end=4835,
+  serialized_start=4782,
+  serialized_end=4861,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_CM_PICK)
 
 DOTA_CM_PICK = enum_type_wrapper.EnumTypeWrapper(_DOTA_CM_PICK)
 _DOTALOWPRIORITYBANTYPE = _descriptor.EnumDescriptor(
   name='DOTALowPriorityBanType',
-  full_name='DOTALowPriorityBanType',
+  full_name='dota.DOTALowPriorityBanType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -756,15 +756,15 @@ _DOTALOWPRIORITYBANTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4838,
-  serialized_end=4977,
+  serialized_start=4864,
+  serialized_end=5003,
 )
 _sym_db.RegisterEnumDescriptor(_DOTALOWPRIORITYBANTYPE)
 
 DOTALowPriorityBanType = enum_type_wrapper.EnumTypeWrapper(_DOTALOWPRIORITYBANTYPE)
 _DOTALOBBYREADYSTATE = _descriptor.EnumDescriptor(
   name='DOTALobbyReadyState',
-  full_name='DOTALobbyReadyState',
+  full_name='dota.DOTALobbyReadyState',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -783,15 +783,15 @@ _DOTALOBBYREADYSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4979,
-  serialized_end=5104,
+  serialized_start=5005,
+  serialized_end=5130,
 )
 _sym_db.RegisterEnumDescriptor(_DOTALOBBYREADYSTATE)
 
 DOTALobbyReadyState = enum_type_wrapper.EnumTypeWrapper(_DOTALOBBYREADYSTATE)
 _DOTAGAMEVERSION = _descriptor.EnumDescriptor(
   name='DOTAGameVersion',
-  full_name='DOTAGameVersion',
+  full_name='dota.DOTAGameVersion',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -806,15 +806,15 @@ _DOTAGAMEVERSION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5106,
-  serialized_end=5174,
+  serialized_start=5132,
+  serialized_end=5200,
 )
 _sym_db.RegisterEnumDescriptor(_DOTAGAMEVERSION)
 
 DOTAGameVersion = enum_type_wrapper.EnumTypeWrapper(_DOTAGAMEVERSION)
 _DOTAJOINLOBBYRESULT = _descriptor.EnumDescriptor(
   name='DOTAJoinLobbyResult',
-  full_name='DOTAJoinLobbyResult',
+  full_name='dota.DOTAJoinLobbyResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -869,15 +869,15 @@ _DOTAJOINLOBBYRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5177,
-  serialized_end=5643,
+  serialized_start=5203,
+  serialized_end=5669,
 )
 _sym_db.RegisterEnumDescriptor(_DOTAJOINLOBBYRESULT)
 
 DOTAJoinLobbyResult = enum_type_wrapper.EnumTypeWrapper(_DOTAJOINLOBBYRESULT)
 _SELECTIONPRIORITYTYPE = _descriptor.EnumDescriptor(
   name='SelectionPriorityType',
-  full_name='SelectionPriorityType',
+  full_name='dota.SelectionPriorityType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -904,15 +904,15 @@ _SELECTIONPRIORITYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5645,
-  serialized_end=5739,
+  serialized_start=5671,
+  serialized_end=5765,
 )
 _sym_db.RegisterEnumDescriptor(_SELECTIONPRIORITYTYPE)
 
 SelectionPriorityType = enum_type_wrapper.EnumTypeWrapper(_SELECTIONPRIORITYTYPE)
 _DOTAMATCHVOTE = _descriptor.EnumDescriptor(
   name='DOTAMatchVote',
-  full_name='DOTAMatchVote',
+  full_name='dota.DOTAMatchVote',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -931,15 +931,15 @@ _DOTAMATCHVOTE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5741,
-  serialized_end=5839,
+  serialized_start=5767,
+  serialized_end=5865,
 )
 _sym_db.RegisterEnumDescriptor(_DOTAMATCHVOTE)
 
 DOTAMatchVote = enum_type_wrapper.EnumTypeWrapper(_DOTAMATCHVOTE)
 _DOTA_LOBBYMEMBERXPBONUS = _descriptor.EnumDescriptor(
   name='DOTA_LobbyMemberXPBonus',
-  full_name='DOTA_LobbyMemberXPBonus',
+  full_name='dota.DOTA_LobbyMemberXPBonus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -970,15 +970,15 @@ _DOTA_LOBBYMEMBERXPBONUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5842,
-  serialized_end=6101,
+  serialized_start=5868,
+  serialized_end=6127,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_LOBBYMEMBERXPBONUS)
 
 DOTA_LobbyMemberXPBonus = enum_type_wrapper.EnumTypeWrapper(_DOTA_LOBBYMEMBERXPBONUS)
 _DOTALOBBYVISIBILITY = _descriptor.EnumDescriptor(
   name='DOTALobbyVisibility',
-  full_name='DOTALobbyVisibility',
+  full_name='dota.DOTALobbyVisibility',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -997,15 +997,15 @@ _DOTALOBBYVISIBILITY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6103,
-  serialized_end=6223,
+  serialized_start=6129,
+  serialized_end=6249,
 )
 _sym_db.RegisterEnumDescriptor(_DOTALOBBYVISIBILITY)
 
 DOTALobbyVisibility = enum_type_wrapper.EnumTypeWrapper(_DOTALOBBYVISIBILITY)
 _EDOTAPLAYERMMRTYPE = _descriptor.EnumDescriptor(
   name='EDOTAPlayerMMRType',
-  full_name='EDOTAPlayerMMRType',
+  full_name='dota.EDOTAPlayerMMRType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1044,15 +1044,15 @@ _EDOTAPLAYERMMRTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6226,
-  serialized_end=6585,
+  serialized_start=6252,
+  serialized_end=6611,
 )
 _sym_db.RegisterEnumDescriptor(_EDOTAPLAYERMMRTYPE)
 
 EDOTAPlayerMMRType = enum_type_wrapper.EnumTypeWrapper(_EDOTAPLAYERMMRTYPE)
 _MATCHTYPE = _descriptor.EnumDescriptor(
   name='MatchType',
-  full_name='MatchType',
+  full_name='dota.MatchType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1095,15 +1095,15 @@ _MATCHTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6588,
-  serialized_end=6851,
+  serialized_start=6614,
+  serialized_end=6877,
 )
 _sym_db.RegisterEnumDescriptor(_MATCHTYPE)
 
 MatchType = enum_type_wrapper.EnumTypeWrapper(_MATCHTYPE)
 _DOTABOTDIFFICULTY = _descriptor.EnumDescriptor(
   name='DOTABotDifficulty',
-  full_name='DOTABotDifficulty',
+  full_name='dota.DOTABotDifficulty',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1146,15 +1146,15 @@ _DOTABOTDIFFICULTY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6854,
-  serialized_end=7114,
+  serialized_start=6880,
+  serialized_end=7140,
 )
 _sym_db.RegisterEnumDescriptor(_DOTABOTDIFFICULTY)
 
 DOTABotDifficulty = enum_type_wrapper.EnumTypeWrapper(_DOTABOTDIFFICULTY)
 _DOTA_BOT_MODE = _descriptor.EnumDescriptor(
   name='DOTA_BOT_MODE',
-  full_name='DOTA_BOT_MODE',
+  full_name='dota.DOTA_BOT_MODE',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1265,15 +1265,15 @@ _DOTA_BOT_MODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7117,
-  serialized_end=7904,
+  serialized_start=7143,
+  serialized_end=7930,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_BOT_MODE)
 
 DOTA_BOT_MODE = enum_type_wrapper.EnumTypeWrapper(_DOTA_BOT_MODE)
 _MATCHLANGUAGES = _descriptor.EnumDescriptor(
   name='MatchLanguages',
-  full_name='MatchLanguages',
+  full_name='dota.MatchLanguages',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1312,15 +1312,15 @@ _MATCHLANGUAGES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7907,
-  serialized_end=8150,
+  serialized_start=7933,
+  serialized_end=8176,
 )
 _sym_db.RegisterEnumDescriptor(_MATCHLANGUAGES)
 
 MatchLanguages = enum_type_wrapper.EnumTypeWrapper(_MATCHLANGUAGES)
 _ETOURNEYQUEUEDEADLINESTATE = _descriptor.EnumDescriptor(
   name='ETourneyQueueDeadlineState',
-  full_name='ETourneyQueueDeadlineState',
+  full_name='dota.ETourneyQueueDeadlineState',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1355,15 +1355,15 @@ _ETOURNEYQUEUEDEADLINESTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8153,
-  serialized_end=8497,
+  serialized_start=8179,
+  serialized_end=8523,
 )
 _sym_db.RegisterEnumDescriptor(_ETOURNEYQUEUEDEADLINESTATE)
 
 ETourneyQueueDeadlineState = enum_type_wrapper.EnumTypeWrapper(_ETOURNEYQUEUEDEADLINESTATE)
 _EMATCHOUTCOME = _descriptor.EnumDescriptor(
   name='EMatchOutcome',
-  full_name='EMatchOutcome',
+  full_name='dota.EMatchOutcome',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1402,8 +1402,8 @@ _EMATCHOUTCOME = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8500,
-  serialized_end=8827,
+  serialized_start=8526,
+  serialized_end=8853,
 )
 _sym_db.RegisterEnumDescriptor(_EMATCHOUTCOME)
 
@@ -1654,48 +1654,48 @@ k_EMatchOutcome_NotScored_Canceled = 68
 
 _CDOTACLIENTHARDWARESPECS = _descriptor.Descriptor(
   name='CDOTAClientHardwareSpecs',
-  full_name='CDOTAClientHardwareSpecs',
+  full_name='dota.CDOTAClientHardwareSpecs',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='logical_processors', full_name='CDOTAClientHardwareSpecs.logical_processors', index=0,
+      name='logical_processors', full_name='dota.CDOTAClientHardwareSpecs.logical_processors', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='cpu_cycles_per_second', full_name='CDOTAClientHardwareSpecs.cpu_cycles_per_second', index=1,
+      name='cpu_cycles_per_second', full_name='dota.CDOTAClientHardwareSpecs.cpu_cycles_per_second', index=1,
       number=2, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='total_physical_memory', full_name='CDOTAClientHardwareSpecs.total_physical_memory', index=2,
+      name='total_physical_memory', full_name='dota.CDOTAClientHardwareSpecs.total_physical_memory', index=2,
       number=3, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_64_bit_os', full_name='CDOTAClientHardwareSpecs.is_64_bit_os', index=3,
+      name='is_64_bit_os', full_name='dota.CDOTAClientHardwareSpecs.is_64_bit_os', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='upload_measurement', full_name='CDOTAClientHardwareSpecs.upload_measurement', index=4,
+      name='upload_measurement', full_name='dota.CDOTAClientHardwareSpecs.upload_measurement', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='prefer_not_host', full_name='CDOTAClientHardwareSpecs.prefer_not_host', index=5,
+      name='prefer_not_host', full_name='dota.CDOTAClientHardwareSpecs.prefer_not_host', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -1713,34 +1713,34 @@ _CDOTACLIENTHARDWARESPECS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28,
-  serialized_end=219,
+  serialized_start=34,
+  serialized_end=225,
 )
 
 
 _CDOTASAVEGAME_PLAYER = _descriptor.Descriptor(
   name='Player',
-  full_name='CDOTASaveGame.Player',
+  full_name='dota.CDOTASaveGame.Player',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='team', full_name='CDOTASaveGame.Player.team', index=0,
+      name='team', full_name='dota.CDOTASaveGame.Player.team', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='CDOTASaveGame.Player.name', index=1,
+      name='name', full_name='dota.CDOTASaveGame.Player.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='hero', full_name='CDOTASaveGame.Player.hero', index=2,
+      name='hero', full_name='dota.CDOTASaveGame.Player.hero', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1758,26 +1758,26 @@ _CDOTASAVEGAME_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=369,
-  serialized_end=458,
+  serialized_start=385,
+  serialized_end=479,
 )
 
 _CDOTASAVEGAME_SAVEINSTANCE_PLAYERPOSITIONS = _descriptor.Descriptor(
   name='PlayerPositions',
-  full_name='CDOTASaveGame.SaveInstance.PlayerPositions',
+  full_name='dota.CDOTASaveGame.SaveInstance.PlayerPositions',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='x', full_name='CDOTASaveGame.SaveInstance.PlayerPositions.x', index=0,
+      name='x', full_name='dota.CDOTASaveGame.SaveInstance.PlayerPositions.x', index=0,
       number=1, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='y', full_name='CDOTASaveGame.SaveInstance.PlayerPositions.y', index=1,
+      name='y', full_name='dota.CDOTASaveGame.SaveInstance.PlayerPositions.y', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -1795,54 +1795,54 @@ _CDOTASAVEGAME_SAVEINSTANCE_PLAYERPOSITIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=645,
-  serialized_end=684,
+  serialized_start=671,
+  serialized_end=710,
 )
 
 _CDOTASAVEGAME_SAVEINSTANCE = _descriptor.Descriptor(
   name='SaveInstance',
-  full_name='CDOTASaveGame.SaveInstance',
+  full_name='dota.CDOTASaveGame.SaveInstance',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='game_time', full_name='CDOTASaveGame.SaveInstance.game_time', index=0,
+      name='game_time', full_name='dota.CDOTASaveGame.SaveInstance.game_time', index=0,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_score', full_name='CDOTASaveGame.SaveInstance.team1_score', index=1,
+      name='team1_score', full_name='dota.CDOTASaveGame.SaveInstance.team1_score', index=1,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_score', full_name='CDOTASaveGame.SaveInstance.team2_score', index=2,
+      name='team2_score', full_name='dota.CDOTASaveGame.SaveInstance.team2_score', index=2,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_positions', full_name='CDOTASaveGame.SaveInstance.player_positions', index=3,
+      name='player_positions', full_name='dota.CDOTASaveGame.SaveInstance.player_positions', index=3,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='save_id', full_name='CDOTASaveGame.SaveInstance.save_id', index=4,
+      name='save_id', full_name='dota.CDOTASaveGame.SaveInstance.save_id', index=4,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='save_time', full_name='CDOTASaveGame.SaveInstance.save_time', index=5,
+      name='save_time', full_name='dota.CDOTASaveGame.SaveInstance.save_time', index=5,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1860,40 +1860,40 @@ _CDOTASAVEGAME_SAVEINSTANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=461,
-  serialized_end=684,
+  serialized_start=482,
+  serialized_end=710,
 )
 
 _CDOTASAVEGAME = _descriptor.Descriptor(
   name='CDOTASaveGame',
-  full_name='CDOTASaveGame',
+  full_name='dota.CDOTASaveGame',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='match_id', full_name='CDOTASaveGame.match_id', index=0,
+      name='match_id', full_name='dota.CDOTASaveGame.match_id', index=0,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='save_time', full_name='CDOTASaveGame.save_time', index=1,
+      name='save_time', full_name='dota.CDOTASaveGame.save_time', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='players', full_name='CDOTASaveGame.players', index=2,
+      name='players', full_name='dota.CDOTASaveGame.players', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='save_instances', full_name='CDOTASaveGame.save_instances', index=3,
+      name='save_instances', full_name='dota.CDOTASaveGame.save_instances', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1911,8 +1911,8 @@ _CDOTASAVEGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=222,
-  serialized_end=684,
+  serialized_start=228,
+  serialized_end=710,
 )
 
 _CDOTASAVEGAME_PLAYER.fields_by_name['team'].enum_type = _DOTA_GC_TEAM
@@ -1956,7 +1956,7 @@ DESCRIPTOR.enum_types_by_name['EMatchOutcome'] = _EMATCHOUTCOME
 CDOTAClientHardwareSpecs = _reflection.GeneratedProtocolMessageType('CDOTAClientHardwareSpecs', (_message.Message,), dict(
   DESCRIPTOR = _CDOTACLIENTHARDWARESPECS,
   __module__ = 'dota_shared_enums_pb2'
-  # @@protoc_insertion_point(class_scope:CDOTAClientHardwareSpecs)
+  # @@protoc_insertion_point(class_scope:dota.CDOTAClientHardwareSpecs)
   ))
 _sym_db.RegisterMessage(CDOTAClientHardwareSpecs)
 
@@ -1965,7 +1965,7 @@ CDOTASaveGame = _reflection.GeneratedProtocolMessageType('CDOTASaveGame', (_mess
   Player = _reflection.GeneratedProtocolMessageType('Player', (_message.Message,), dict(
     DESCRIPTOR = _CDOTASAVEGAME_PLAYER,
     __module__ = 'dota_shared_enums_pb2'
-    # @@protoc_insertion_point(class_scope:CDOTASaveGame.Player)
+    # @@protoc_insertion_point(class_scope:dota.CDOTASaveGame.Player)
     ))
   ,
 
@@ -1974,17 +1974,17 @@ CDOTASaveGame = _reflection.GeneratedProtocolMessageType('CDOTASaveGame', (_mess
     PlayerPositions = _reflection.GeneratedProtocolMessageType('PlayerPositions', (_message.Message,), dict(
       DESCRIPTOR = _CDOTASAVEGAME_SAVEINSTANCE_PLAYERPOSITIONS,
       __module__ = 'dota_shared_enums_pb2'
-      # @@protoc_insertion_point(class_scope:CDOTASaveGame.SaveInstance.PlayerPositions)
+      # @@protoc_insertion_point(class_scope:dota.CDOTASaveGame.SaveInstance.PlayerPositions)
       ))
     ,
     DESCRIPTOR = _CDOTASAVEGAME_SAVEINSTANCE,
     __module__ = 'dota_shared_enums_pb2'
-    # @@protoc_insertion_point(class_scope:CDOTASaveGame.SaveInstance)
+    # @@protoc_insertion_point(class_scope:dota.CDOTASaveGame.SaveInstance)
     ))
   ,
   DESCRIPTOR = _CDOTASAVEGAME,
   __module__ = 'dota_shared_enums_pb2'
-  # @@protoc_insertion_point(class_scope:CDOTASaveGame)
+  # @@protoc_insertion_point(class_scope:dota.CDOTASaveGame)
   ))
 _sym_db.RegisterMessage(CDOTASaveGame)
 _sym_db.RegisterMessage(CDOTASaveGame.Player)

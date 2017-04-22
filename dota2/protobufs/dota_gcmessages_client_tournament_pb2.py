@@ -19,16 +19,16 @@ import dota2.protobufs.dota_client_enums_pb2 as dota__client__enums__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_tournament.proto',
-  package='',
+  package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\'dota_gcmessages_client_tournament.proto\x1a\x17\x64ota_client_enums.proto\"\xb8\n\n\x16\x43MsgDOTATournamentInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x31\n\nphase_list\x18\x02 \x03(\x0b\x32\x1d.CMsgDOTATournamentInfo.Phase\x12\x30\n\nteams_list\x18\x03 \x03(\x0b\x32\x1c.CMsgDOTATournamentInfo.Team\x12\x44\n\x15upcoming_matches_list\x18\x04 \x03(\x0b\x32%.CMsgDOTATournamentInfo.UpcomingMatch\x12/\n\tnews_list\x18\x05 \x03(\x0b\x32\x1c.CMsgDOTATournamentInfo.News\x1a\x32\n\nPhaseGroup\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x12\n\ngroup_name\x18\x02 \x01(\t\x1a\xba\x01\n\x05Phase\x12\x10\n\x08phase_id\x18\x01 \x01(\r\x12\x12\n\nphase_name\x18\x02 \x01(\t\x12\x0f\n\x07type_id\x18\x03 \x01(\r\x12\x12\n\niterations\x18\x04 \x01(\r\x12\x16\n\x0emin_start_time\x18\x05 \x01(\r\x12\x16\n\x0emax_start_time\x18\x06 \x01(\r\x12\x36\n\ngroup_list\x18\x07 \x03(\x0b\x32\".CMsgDOTATournamentInfo.PhaseGroup\x1aY\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03tag\x18\x03 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x04\x12\x12\n\neliminated\x18\x05 \x01(\x08\x1a\x9b\x05\n\rUpcomingMatch\x12\x11\n\tseries_id\x18\x01 \x01(\r\x12\x10\n\x08team1_id\x18\x02 \x01(\r\x12\x10\n\x08team2_id\x18\x03 \x01(\r\x12\n\n\x02\x62o\x18\x04 \x01(\r\x12\x12\n\nstage_name\x18\x05 \x01(\t\x12\x12\n\nstart_time\x18\x06 \x01(\r\x12\x14\n\x0cwinner_stage\x18\x07 \x01(\t\x12\x13\n\x0bloser_stage\x18\x08 \x01(\t\x12\x11\n\tteam1_tag\x18\t \x01(\t\x12\x11\n\tteam2_tag\x18\n \x01(\t\x12\x1f\n\x17team1_prev_opponent_tag\x18\x0b \x01(\t\x12\x1f\n\x17team2_prev_opponent_tag\x18\x0c \x01(\t\x12\x12\n\nteam1_logo\x18\r \x01(\x04\x12\x12\n\nteam2_logo\x18\x0e \x01(\x04\x12 \n\x18team1_prev_opponent_logo\x18\x0f \x01(\x04\x12 \n\x18team2_prev_opponent_logo\x18\x10 \x01(\x04\x12\x1e\n\x16team1_prev_opponent_id\x18\x11 \x01(\r\x12\x1e\n\x16team2_prev_opponent_id\x18\x12 \x01(\r\x12\x1e\n\x16team1_prev_match_score\x18\x13 \x01(\r\x12\'\n\x1fteam1_prev_match_opponent_score\x18\x14 \x01(\r\x12\x1e\n\x16team2_prev_match_score\x18\x15 \x01(\r\x12\'\n\x1fteam2_prev_match_opponent_score\x18\x16 \x01(\r\x12\x12\n\nphase_type\x18\x17 \x01(\r\x12\x13\n\x0bteam1_score\x18\x18 \x01(\r\x12\x13\n\x0bteam2_score\x18\x19 \x01(\r\x12\x10\n\x08phase_id\x18\x1a \x01(\r\x1a\x45\n\x04News\x12\x0c\n\x04link\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\r\n\x05image\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\r\"#\n!CMsgRequestWeekendTourneySchedule\"\xf6\x01\n\x1a\x43MsgWeekendTourneySchedule\x12\x37\n\tdivisions\x18\x01 \x03(\x0b\x32$.CMsgWeekendTourneySchedule.Division\x1a\x9e\x01\n\x08\x44ivision\x12\x15\n\rdivision_code\x18\x01 \x01(\r\x12\x18\n\x10time_window_open\x18\x02 \x01(\r\x12\x19\n\x11time_window_close\x18\x03 \x01(\r\x12\x1d\n\x15time_window_open_next\x18\x04 \x01(\r\x12\x11\n\ttrophy_id\x18\x05 \x01(\r\x12\x14\n\x0c\x66ree_weekend\x18\x06 \x01(\x08\"\xc3\x01\n\x16\x43MsgWeekendTourneyOpts\x12\x15\n\rparticipating\x18\x01 \x01(\x08\x12\x13\n\x0b\x64ivision_id\x18\x02 \x01(\r\x12\r\n\x05\x62uyin\x18\x03 \x01(\r\x12\x13\n\x0bskill_level\x18\x04 \x01(\r\x12\x14\n\x0cmatch_groups\x18\x05 \x01(\r\x12\x0f\n\x07team_id\x18\x06 \x01(\r\x12\x18\n\x10pickup_team_name\x18\x07 \x01(\t\x12\x18\n\x10pickup_team_logo\x18\x08 \x01(\x04\"\x19\n\x17\x43MsgWeekendTourneyLeave\"\xe0\x07\n\x12\x43MsgDOTATournament\x12\x15\n\rtournament_id\x18\x01 \x01(\r\x12\x13\n\x0b\x64ivision_id\x18\x02 \x01(\r\x12\x15\n\rschedule_time\x18\x03 \x01(\r\x12\x13\n\x0bskill_level\x18\x04 \x01(\r\x12M\n\x13tournament_template\x18\x05 \x01(\x0e\x32\x14.ETournamentTemplate:\x1ak_ETournamentTemplate_None\x12<\n\x05state\x18\x06 \x01(\x0e\x32\x11.ETournamentState:\x1ak_ETournamentState_Unknown\x12\x15\n\rstate_seq_num\x18\n \x01(\r\x12\x18\n\x10season_trophy_id\x18\x0b \x01(\r\x12\'\n\x05teams\x18\x07 \x03(\x0b\x32\x18.CMsgDOTATournament.Team\x12\'\n\x05games\x18\x08 \x03(\x0b\x32\x18.CMsgDOTATournament.Game\x12\'\n\x05nodes\x18\t \x03(\x0b\x32\x18.CMsgDOTATournament.Node\x1a\xfd\x01\n\x04Team\x12\x10\n\x08team_gid\x18\x01 \x01(\x06\x12\x15\n\rnode_or_state\x18\x02 \x01(\r\x12\x13\n\x07players\x18\x03 \x03(\rB\x02\x10\x01\x12\x18\n\x0cplayer_buyin\x18\t \x03(\rB\x02\x10\x01\x12\x1e\n\x12player_skill_level\x18\n \x03(\rB\x02\x10\x01\x12\x18\n\x10match_group_mask\x18\x0c \x01(\r\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x11\n\tteam_name\x18\x05 \x01(\t\x12\x16\n\x0eteam_base_logo\x18\x07 \x01(\x04\x12\x14\n\x0cteam_ui_logo\x18\x08 \x01(\x04\x12\x11\n\tteam_date\x18\x0b \x01(\r\x1a\xab\x01\n\x04Game\x12\x10\n\x08node_idx\x18\x01 \x01(\r\x12\x10\n\x08lobby_id\x18\x02 \x01(\x06\x12\x10\n\x08match_id\x18\x03 \x01(\x04\x12\x13\n\x0bteam_a_good\x18\x04 \x01(\x08\x12\x44\n\x05state\x18\x05 \x01(\x0e\x32\x15.ETournamentGameState:\x1ek_ETournamentGameState_Unknown\x12\x12\n\nstart_time\x18\x06 \x01(\r\x1a\x8a\x01\n\x04Node\x12\x0f\n\x07node_id\x18\x01 \x01(\r\x12\x12\n\nteam_idx_a\x18\x02 \x01(\r\x12\x12\n\nteam_idx_b\x18\x03 \x01(\r\x12I\n\nnode_state\x18\x04 \x01(\x0e\x32\x15.ETournamentNodeState:\x1ek_ETournamentNodeState_Unknown\"\xbe\x04\n\x1d\x43MsgDOTATournamentStateChange\x12\x19\n\x11new_tournament_id\x18\x01 \x01(\r\x12\x39\n\x05\x65vent\x18\x02 \x01(\x0e\x32\x11.ETournamentEvent:\x17k_ETournamentEvent_None\x12K\n\x14new_tournament_state\x18\x03 \x01(\x0e\x32\x11.ETournamentState:\x1ak_ETournamentState_Unknown\x12?\n\x0cgame_changes\x18\x04 \x03(\x0b\x32).CMsgDOTATournamentStateChange.GameChange\x12?\n\x0cteam_changes\x18\x05 \x03(\x0b\x32).CMsgDOTATournamentStateChange.TeamChange\x12!\n\x15merged_tournament_ids\x18\x06 \x03(\rB\x02\x10\x01\x12\x15\n\rstate_seq_num\x18\x07 \x01(\r\x1ah\n\nGameChange\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12H\n\tnew_state\x18\x02 \x01(\x0e\x32\x15.ETournamentGameState:\x1ek_ETournamentGameState_Unknown\x1aT\n\nTeamChange\x12\x10\n\x08team_gid\x18\x01 \x01(\x04\x12\x19\n\x11new_node_or_state\x18\x02 \x01(\r\x12\x19\n\x11old_node_or_state\x18\x03 \x01(\r\"Q\n\x19\x43MsgDOTATournamentRequest\x12\x15\n\rtournament_id\x18\x01 \x01(\r\x12\x1d\n\x15\x63lient_tournament_gid\x18\x02 \x01(\x04\"X\n\x1a\x43MsgDOTATournamentResponse\x12\x11\n\x06result\x18\x01 \x01(\r:\x01\x32\x12\'\n\ntournament\x18\x02 \x01(\x0b\x32\x13.CMsgDOTATournament\"E\n\x1b\x43MsgDOTAClearTournamentGame\x12\x15\n\rtournament_id\x18\x01 \x01(\r\x12\x0f\n\x07game_id\x18\x02 \x01(\r\"\xf5\x01\n+CMsgDOTAWeekendTourneyPlayerSkillLevelStats\x12\x13\n\x0bskill_level\x18\x01 \x01(\r\x12\x13\n\x0btimes_won_0\x18\x02 \x01(\r\x12\x13\n\x0btimes_won_1\x18\x03 \x01(\r\x12\x13\n\x0btimes_won_2\x18\x04 \x01(\r\x12\x13\n\x0btimes_won_3\x18\x05 \x01(\r\x12\x1a\n\x12times_bye_and_lost\x18\x06 \x01(\r\x12\x19\n\x11times_bye_and_won\x18\x07 \x01(\r\x12\x17\n\x0ftotal_games_won\x18\x08 \x01(\r\x12\r\n\x05score\x18\t \x01(\r\"\xab\x01\n!CMsgDOTAWeekendTourneyPlayerStats\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10season_trophy_id\x18\x02 \x01(\r\x12\x42\n\x0cskill_levels\x18\x03 \x03(\x0b\x32,.CMsgDOTAWeekendTourneyPlayerSkillLevelStats\x12\x14\n\x0c\x63urrent_tier\x18\x04 \x01(\r\"X\n(CMsgDOTAWeekendTourneyPlayerStatsRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10season_trophy_id\x18\x02 \x01(\r\"Z\n*CMsgDOTAWeekendTourneyPlayerHistoryRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10season_trophy_id\x18\x02 \x01(\r\"\xcc\x02\n#CMsgDOTAWeekendTourneyPlayerHistory\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x44\n\x0btournaments\x18\x03 \x03(\x0b\x32/.CMsgDOTAWeekendTourneyPlayerHistory.Tournament\x1a\xca\x01\n\nTournament\x12\x15\n\rtournament_id\x18\x01 \x01(\r\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x17\n\x0ftournament_tier\x18\x03 \x01(\r\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x11\n\tteam_date\x18\x05 \x01(\r\x12\x13\n\x0bteam_result\x18\x06 \x01(\r\x12\x12\n\naccount_id\x18\x07 \x03(\r\x12\x11\n\tteam_name\x18\x08 \x01(\t\x12\x18\n\x10season_trophy_id\x18\t \x01(\r\"\xa4\x03\n*CMsgDOTAWeekendTourneyParticipationDetails\x12G\n\tdivisions\x18\x01 \x03(\x0b\x32\x34.CMsgDOTAWeekendTourneyParticipationDetails.Division\x1a\xb3\x01\n\x04Tier\x12\x0c\n\x04tier\x18\x01 \x01(\r\x12\x0f\n\x07players\x18\x02 \x01(\r\x12\r\n\x05teams\x18\x03 \x01(\r\x12\x15\n\rwinning_teams\x18\x04 \x01(\r\x12\x18\n\x10players_streak_2\x18\x05 \x01(\r\x12\x18\n\x10players_streak_3\x18\x06 \x01(\r\x12\x18\n\x10players_streak_4\x18\x07 \x01(\r\x12\x18\n\x10players_streak_5\x18\x08 \x01(\r\x1aw\n\x08\x44ivision\x12\x13\n\x0b\x64ivision_id\x18\x01 \x01(\r\x12\x15\n\rschedule_time\x18\x02 \x01(\r\x12?\n\x05tiers\x18\x03 \x03(\x0b\x32\x30.CMsgDOTAWeekendTourneyParticipationDetails.Tier*\xf5\x03\n\x10\x45TournamentEvent\x12\x1b\n\x17k_ETournamentEvent_None\x10\x00\x12(\n$k_ETournamentEvent_TournamentCreated\x10\x01\x12(\n$k_ETournamentEvent_TournamentsMerged\x10\x02\x12\"\n\x1ek_ETournamentEvent_GameOutcome\x10\x03\x12#\n\x1fk_ETournamentEvent_TeamGivenBye\x10\x04\x12\x30\n,k_ETournamentEvent_TournamentCanceledByAdmin\x10\x05\x12$\n k_ETournamentEvent_TeamAbandoned\x10\x06\x12+\n\'k_ETournamentEvent_ScheduledGameStarted\x10\x07\x12\x1f\n\x1bk_ETournamentEvent_Canceled\x10\x08\x12?\n;k_ETournamentEvent_TeamParticipationTimedOut_EntryFeeRefund\x10\t\x12@\n<k_ETournamentEvent_TeamParticipationTimedOut_EntryFeeForfeit\x10\nB\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\'dota_gcmessages_client_tournament.proto\x12\x04\x64ota\x1a\x17\x64ota_client_enums.proto\"\xd1\n\n\x16\x43MsgDOTATournamentInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x36\n\nphase_list\x18\x02 \x03(\x0b\x32\".dota.CMsgDOTATournamentInfo.Phase\x12\x35\n\nteams_list\x18\x03 \x03(\x0b\x32!.dota.CMsgDOTATournamentInfo.Team\x12I\n\x15upcoming_matches_list\x18\x04 \x03(\x0b\x32*.dota.CMsgDOTATournamentInfo.UpcomingMatch\x12\x34\n\tnews_list\x18\x05 \x03(\x0b\x32!.dota.CMsgDOTATournamentInfo.News\x1a\x32\n\nPhaseGroup\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x12\n\ngroup_name\x18\x02 \x01(\t\x1a\xbf\x01\n\x05Phase\x12\x10\n\x08phase_id\x18\x01 \x01(\r\x12\x12\n\nphase_name\x18\x02 \x01(\t\x12\x0f\n\x07type_id\x18\x03 \x01(\r\x12\x12\n\niterations\x18\x04 \x01(\r\x12\x16\n\x0emin_start_time\x18\x05 \x01(\r\x12\x16\n\x0emax_start_time\x18\x06 \x01(\r\x12;\n\ngroup_list\x18\x07 \x03(\x0b\x32\'.dota.CMsgDOTATournamentInfo.PhaseGroup\x1aY\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03tag\x18\x03 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x04\x12\x12\n\neliminated\x18\x05 \x01(\x08\x1a\x9b\x05\n\rUpcomingMatch\x12\x11\n\tseries_id\x18\x01 \x01(\r\x12\x10\n\x08team1_id\x18\x02 \x01(\r\x12\x10\n\x08team2_id\x18\x03 \x01(\r\x12\n\n\x02\x62o\x18\x04 \x01(\r\x12\x12\n\nstage_name\x18\x05 \x01(\t\x12\x12\n\nstart_time\x18\x06 \x01(\r\x12\x14\n\x0cwinner_stage\x18\x07 \x01(\t\x12\x13\n\x0bloser_stage\x18\x08 \x01(\t\x12\x11\n\tteam1_tag\x18\t \x01(\t\x12\x11\n\tteam2_tag\x18\n \x01(\t\x12\x1f\n\x17team1_prev_opponent_tag\x18\x0b \x01(\t\x12\x1f\n\x17team2_prev_opponent_tag\x18\x0c \x01(\t\x12\x12\n\nteam1_logo\x18\r \x01(\x04\x12\x12\n\nteam2_logo\x18\x0e \x01(\x04\x12 \n\x18team1_prev_opponent_logo\x18\x0f \x01(\x04\x12 \n\x18team2_prev_opponent_logo\x18\x10 \x01(\x04\x12\x1e\n\x16team1_prev_opponent_id\x18\x11 \x01(\r\x12\x1e\n\x16team2_prev_opponent_id\x18\x12 \x01(\r\x12\x1e\n\x16team1_prev_match_score\x18\x13 \x01(\r\x12\'\n\x1fteam1_prev_match_opponent_score\x18\x14 \x01(\r\x12\x1e\n\x16team2_prev_match_score\x18\x15 \x01(\r\x12\'\n\x1fteam2_prev_match_opponent_score\x18\x16 \x01(\r\x12\x12\n\nphase_type\x18\x17 \x01(\r\x12\x13\n\x0bteam1_score\x18\x18 \x01(\r\x12\x13\n\x0bteam2_score\x18\x19 \x01(\r\x12\x10\n\x08phase_id\x18\x1a \x01(\r\x1a\x45\n\x04News\x12\x0c\n\x04link\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\r\n\x05image\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\r\"#\n!CMsgRequestWeekendTourneySchedule\"\xfb\x01\n\x1a\x43MsgWeekendTourneySchedule\x12<\n\tdivisions\x18\x01 \x03(\x0b\x32).dota.CMsgWeekendTourneySchedule.Division\x1a\x9e\x01\n\x08\x44ivision\x12\x15\n\rdivision_code\x18\x01 \x01(\r\x12\x18\n\x10time_window_open\x18\x02 \x01(\r\x12\x19\n\x11time_window_close\x18\x03 \x01(\r\x12\x1d\n\x15time_window_open_next\x18\x04 \x01(\r\x12\x11\n\ttrophy_id\x18\x05 \x01(\r\x12\x14\n\x0c\x66ree_weekend\x18\x06 \x01(\x08\"\xc3\x01\n\x16\x43MsgWeekendTourneyOpts\x12\x15\n\rparticipating\x18\x01 \x01(\x08\x12\x13\n\x0b\x64ivision_id\x18\x02 \x01(\r\x12\r\n\x05\x62uyin\x18\x03 \x01(\r\x12\x13\n\x0bskill_level\x18\x04 \x01(\r\x12\x14\n\x0cmatch_groups\x18\x05 \x01(\r\x12\x0f\n\x07team_id\x18\x06 \x01(\r\x12\x18\n\x10pickup_team_name\x18\x07 \x01(\t\x12\x18\n\x10pickup_team_logo\x18\x08 \x01(\x04\"\x19\n\x17\x43MsgWeekendTourneyLeave\"\x83\x08\n\x12\x43MsgDOTATournament\x12\x15\n\rtournament_id\x18\x01 \x01(\r\x12\x13\n\x0b\x64ivision_id\x18\x02 \x01(\r\x12\x15\n\rschedule_time\x18\x03 \x01(\r\x12\x13\n\x0bskill_level\x18\x04 \x01(\r\x12R\n\x13tournament_template\x18\x05 \x01(\x0e\x32\x19.dota.ETournamentTemplate:\x1ak_ETournamentTemplate_None\x12\x41\n\x05state\x18\x06 \x01(\x0e\x32\x16.dota.ETournamentState:\x1ak_ETournamentState_Unknown\x12\x15\n\rstate_seq_num\x18\n \x01(\r\x12\x18\n\x10season_trophy_id\x18\x0b \x01(\r\x12,\n\x05teams\x18\x07 \x03(\x0b\x32\x1d.dota.CMsgDOTATournament.Team\x12,\n\x05games\x18\x08 \x03(\x0b\x32\x1d.dota.CMsgDOTATournament.Game\x12,\n\x05nodes\x18\t \x03(\x0b\x32\x1d.dota.CMsgDOTATournament.Node\x1a\xfd\x01\n\x04Team\x12\x10\n\x08team_gid\x18\x01 \x01(\x06\x12\x15\n\rnode_or_state\x18\x02 \x01(\r\x12\x13\n\x07players\x18\x03 \x03(\rB\x02\x10\x01\x12\x18\n\x0cplayer_buyin\x18\t \x03(\rB\x02\x10\x01\x12\x1e\n\x12player_skill_level\x18\n \x03(\rB\x02\x10\x01\x12\x18\n\x10match_group_mask\x18\x0c \x01(\r\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x11\n\tteam_name\x18\x05 \x01(\t\x12\x16\n\x0eteam_base_logo\x18\x07 \x01(\x04\x12\x14\n\x0cteam_ui_logo\x18\x08 \x01(\x04\x12\x11\n\tteam_date\x18\x0b \x01(\r\x1a\xb0\x01\n\x04Game\x12\x10\n\x08node_idx\x18\x01 \x01(\r\x12\x10\n\x08lobby_id\x18\x02 \x01(\x06\x12\x10\n\x08match_id\x18\x03 \x01(\x04\x12\x13\n\x0bteam_a_good\x18\x04 \x01(\x08\x12I\n\x05state\x18\x05 \x01(\x0e\x32\x1a.dota.ETournamentGameState:\x1ek_ETournamentGameState_Unknown\x12\x12\n\nstart_time\x18\x06 \x01(\r\x1a\x8f\x01\n\x04Node\x12\x0f\n\x07node_id\x18\x01 \x01(\r\x12\x12\n\nteam_idx_a\x18\x02 \x01(\r\x12\x12\n\nteam_idx_b\x18\x03 \x01(\r\x12N\n\nnode_state\x18\x04 \x01(\x0e\x32\x1a.dota.ETournamentNodeState:\x1ek_ETournamentNodeState_Unknown\"\xd7\x04\n\x1d\x43MsgDOTATournamentStateChange\x12\x19\n\x11new_tournament_id\x18\x01 \x01(\r\x12>\n\x05\x65vent\x18\x02 \x01(\x0e\x32\x16.dota.ETournamentEvent:\x17k_ETournamentEvent_None\x12P\n\x14new_tournament_state\x18\x03 \x01(\x0e\x32\x16.dota.ETournamentState:\x1ak_ETournamentState_Unknown\x12\x44\n\x0cgame_changes\x18\x04 \x03(\x0b\x32..dota.CMsgDOTATournamentStateChange.GameChange\x12\x44\n\x0cteam_changes\x18\x05 \x03(\x0b\x32..dota.CMsgDOTATournamentStateChange.TeamChange\x12!\n\x15merged_tournament_ids\x18\x06 \x03(\rB\x02\x10\x01\x12\x15\n\rstate_seq_num\x18\x07 \x01(\r\x1am\n\nGameChange\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12M\n\tnew_state\x18\x02 \x01(\x0e\x32\x1a.dota.ETournamentGameState:\x1ek_ETournamentGameState_Unknown\x1aT\n\nTeamChange\x12\x10\n\x08team_gid\x18\x01 \x01(\x04\x12\x19\n\x11new_node_or_state\x18\x02 \x01(\r\x12\x19\n\x11old_node_or_state\x18\x03 \x01(\r\"Q\n\x19\x43MsgDOTATournamentRequest\x12\x15\n\rtournament_id\x18\x01 \x01(\r\x12\x1d\n\x15\x63lient_tournament_gid\x18\x02 \x01(\x04\"]\n\x1a\x43MsgDOTATournamentResponse\x12\x11\n\x06result\x18\x01 \x01(\r:\x01\x32\x12,\n\ntournament\x18\x02 \x01(\x0b\x32\x18.dota.CMsgDOTATournament\"E\n\x1b\x43MsgDOTAClearTournamentGame\x12\x15\n\rtournament_id\x18\x01 \x01(\r\x12\x0f\n\x07game_id\x18\x02 \x01(\r\"\xf5\x01\n+CMsgDOTAWeekendTourneyPlayerSkillLevelStats\x12\x13\n\x0bskill_level\x18\x01 \x01(\r\x12\x13\n\x0btimes_won_0\x18\x02 \x01(\r\x12\x13\n\x0btimes_won_1\x18\x03 \x01(\r\x12\x13\n\x0btimes_won_2\x18\x04 \x01(\r\x12\x13\n\x0btimes_won_3\x18\x05 \x01(\r\x12\x1a\n\x12times_bye_and_lost\x18\x06 \x01(\r\x12\x19\n\x11times_bye_and_won\x18\x07 \x01(\r\x12\x17\n\x0ftotal_games_won\x18\x08 \x01(\r\x12\r\n\x05score\x18\t \x01(\r\"\xb0\x01\n!CMsgDOTAWeekendTourneyPlayerStats\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10season_trophy_id\x18\x02 \x01(\r\x12G\n\x0cskill_levels\x18\x03 \x03(\x0b\x32\x31.dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats\x12\x14\n\x0c\x63urrent_tier\x18\x04 \x01(\r\"X\n(CMsgDOTAWeekendTourneyPlayerStatsRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10season_trophy_id\x18\x02 \x01(\r\"Z\n*CMsgDOTAWeekendTourneyPlayerHistoryRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10season_trophy_id\x18\x02 \x01(\r\"\xd1\x02\n#CMsgDOTAWeekendTourneyPlayerHistory\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12I\n\x0btournaments\x18\x03 \x03(\x0b\x32\x34.dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament\x1a\xca\x01\n\nTournament\x12\x15\n\rtournament_id\x18\x01 \x01(\r\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x17\n\x0ftournament_tier\x18\x03 \x01(\r\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x11\n\tteam_date\x18\x05 \x01(\r\x12\x13\n\x0bteam_result\x18\x06 \x01(\r\x12\x12\n\naccount_id\x18\x07 \x03(\r\x12\x11\n\tteam_name\x18\x08 \x01(\t\x12\x18\n\x10season_trophy_id\x18\t \x01(\r\"\xae\x03\n*CMsgDOTAWeekendTourneyParticipationDetails\x12L\n\tdivisions\x18\x01 \x03(\x0b\x32\x39.dota.CMsgDOTAWeekendTourneyParticipationDetails.Division\x1a\xb3\x01\n\x04Tier\x12\x0c\n\x04tier\x18\x01 \x01(\r\x12\x0f\n\x07players\x18\x02 \x01(\r\x12\r\n\x05teams\x18\x03 \x01(\r\x12\x15\n\rwinning_teams\x18\x04 \x01(\r\x12\x18\n\x10players_streak_2\x18\x05 \x01(\r\x12\x18\n\x10players_streak_3\x18\x06 \x01(\r\x12\x18\n\x10players_streak_4\x18\x07 \x01(\r\x12\x18\n\x10players_streak_5\x18\x08 \x01(\r\x1a|\n\x08\x44ivision\x12\x13\n\x0b\x64ivision_id\x18\x01 \x01(\r\x12\x15\n\rschedule_time\x18\x02 \x01(\r\x12\x44\n\x05tiers\x18\x03 \x03(\x0b\x32\x35.dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier*\xf5\x03\n\x10\x45TournamentEvent\x12\x1b\n\x17k_ETournamentEvent_None\x10\x00\x12(\n$k_ETournamentEvent_TournamentCreated\x10\x01\x12(\n$k_ETournamentEvent_TournamentsMerged\x10\x02\x12\"\n\x1ek_ETournamentEvent_GameOutcome\x10\x03\x12#\n\x1fk_ETournamentEvent_TeamGivenBye\x10\x04\x12\x30\n,k_ETournamentEvent_TournamentCanceledByAdmin\x10\x05\x12$\n k_ETournamentEvent_TeamAbandoned\x10\x06\x12+\n\'k_ETournamentEvent_ScheduledGameStarted\x10\x07\x12\x1f\n\x1bk_ETournamentEvent_Canceled\x10\x08\x12?\n;k_ETournamentEvent_TeamParticipationTimedOut_EntryFeeRefund\x10\t\x12@\n<k_ETournamentEvent_TeamParticipationTimedOut_EntryFeeForfeit\x10\nB\x05H\x01\x90\x01\x00')
   ,
   dependencies=[dota__client__enums__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _ETOURNAMENTEVENT = _descriptor.EnumDescriptor(
   name='ETournamentEvent',
-  full_name='ETournamentEvent',
+  full_name='dota.ETournamentEvent',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -79,8 +79,8 @@ _ETOURNAMENTEVENT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5097,
-  serialized_end=5598,
+  serialized_start=5218,
+  serialized_end=5719,
 )
 _sym_db.RegisterEnumDescriptor(_ETOURNAMENTEVENT)
 
@@ -101,20 +101,20 @@ k_ETournamentEvent_TeamParticipationTimedOut_EntryFeeForfeit = 10
 
 _CMSGDOTATOURNAMENTINFO_PHASEGROUP = _descriptor.Descriptor(
   name='PhaseGroup',
-  full_name='CMsgDOTATournamentInfo.PhaseGroup',
+  full_name='dota.CMsgDOTATournamentInfo.PhaseGroup',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='group_id', full_name='CMsgDOTATournamentInfo.PhaseGroup.group_id', index=0,
+      name='group_id', full_name='dota.CMsgDOTATournamentInfo.PhaseGroup.group_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='group_name', full_name='CMsgDOTATournamentInfo.PhaseGroup.group_name', index=1,
+      name='group_name', full_name='dota.CMsgDOTATournamentInfo.PhaseGroup.group_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -132,61 +132,61 @@ _CMSGDOTATOURNAMENTINFO_PHASEGROUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=334,
-  serialized_end=384,
+  serialized_start=360,
+  serialized_end=410,
 )
 
 _CMSGDOTATOURNAMENTINFO_PHASE = _descriptor.Descriptor(
   name='Phase',
-  full_name='CMsgDOTATournamentInfo.Phase',
+  full_name='dota.CMsgDOTATournamentInfo.Phase',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='phase_id', full_name='CMsgDOTATournamentInfo.Phase.phase_id', index=0,
+      name='phase_id', full_name='dota.CMsgDOTATournamentInfo.Phase.phase_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='phase_name', full_name='CMsgDOTATournamentInfo.Phase.phase_name', index=1,
+      name='phase_name', full_name='dota.CMsgDOTATournamentInfo.Phase.phase_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='type_id', full_name='CMsgDOTATournamentInfo.Phase.type_id', index=2,
+      name='type_id', full_name='dota.CMsgDOTATournamentInfo.Phase.type_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='iterations', full_name='CMsgDOTATournamentInfo.Phase.iterations', index=3,
+      name='iterations', full_name='dota.CMsgDOTATournamentInfo.Phase.iterations', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='min_start_time', full_name='CMsgDOTATournamentInfo.Phase.min_start_time', index=4,
+      name='min_start_time', full_name='dota.CMsgDOTATournamentInfo.Phase.min_start_time', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='max_start_time', full_name='CMsgDOTATournamentInfo.Phase.max_start_time', index=5,
+      name='max_start_time', full_name='dota.CMsgDOTATournamentInfo.Phase.max_start_time', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='group_list', full_name='CMsgDOTATournamentInfo.Phase.group_list', index=6,
+      name='group_list', full_name='dota.CMsgDOTATournamentInfo.Phase.group_list', index=6,
       number=7, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -204,47 +204,47 @@ _CMSGDOTATOURNAMENTINFO_PHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=387,
-  serialized_end=573,
+  serialized_start=413,
+  serialized_end=604,
 )
 
 _CMSGDOTATOURNAMENTINFO_TEAM = _descriptor.Descriptor(
   name='Team',
-  full_name='CMsgDOTATournamentInfo.Team',
+  full_name='dota.CMsgDOTATournamentInfo.Team',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTATournamentInfo.Team.team_id', index=0,
+      name='team_id', full_name='dota.CMsgDOTATournamentInfo.Team.team_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='CMsgDOTATournamentInfo.Team.name', index=1,
+      name='name', full_name='dota.CMsgDOTATournamentInfo.Team.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tag', full_name='CMsgDOTATournamentInfo.Team.tag', index=2,
+      name='tag', full_name='dota.CMsgDOTATournamentInfo.Team.tag', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_logo', full_name='CMsgDOTATournamentInfo.Team.team_logo', index=3,
+      name='team_logo', full_name='dota.CMsgDOTATournamentInfo.Team.team_logo', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='eliminated', full_name='CMsgDOTATournamentInfo.Team.eliminated', index=4,
+      name='eliminated', full_name='dota.CMsgDOTATournamentInfo.Team.eliminated', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -262,194 +262,194 @@ _CMSGDOTATOURNAMENTINFO_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=575,
-  serialized_end=664,
+  serialized_start=606,
+  serialized_end=695,
 )
 
 _CMSGDOTATOURNAMENTINFO_UPCOMINGMATCH = _descriptor.Descriptor(
   name='UpcomingMatch',
-  full_name='CMsgDOTATournamentInfo.UpcomingMatch',
+  full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='series_id', full_name='CMsgDOTATournamentInfo.UpcomingMatch.series_id', index=0,
+      name='series_id', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.series_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_id', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_id', index=1,
+      name='team1_id', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_id', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_id', index=2,
+      name='team2_id', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='bo', full_name='CMsgDOTATournamentInfo.UpcomingMatch.bo', index=3,
+      name='bo', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.bo', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stage_name', full_name='CMsgDOTATournamentInfo.UpcomingMatch.stage_name', index=4,
+      name='stage_name', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.stage_name', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='start_time', full_name='CMsgDOTATournamentInfo.UpcomingMatch.start_time', index=5,
+      name='start_time', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.start_time', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='winner_stage', full_name='CMsgDOTATournamentInfo.UpcomingMatch.winner_stage', index=6,
+      name='winner_stage', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.winner_stage', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='loser_stage', full_name='CMsgDOTATournamentInfo.UpcomingMatch.loser_stage', index=7,
+      name='loser_stage', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.loser_stage', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_tag', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_tag', index=8,
+      name='team1_tag', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_tag', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_tag', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_tag', index=9,
+      name='team2_tag', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_tag', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_prev_opponent_tag', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_opponent_tag', index=10,
+      name='team1_prev_opponent_tag', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_opponent_tag', index=10,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_prev_opponent_tag', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_opponent_tag', index=11,
+      name='team2_prev_opponent_tag', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_opponent_tag', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_logo', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_logo', index=12,
+      name='team1_logo', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_logo', index=12,
       number=13, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_logo', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_logo', index=13,
+      name='team2_logo', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_logo', index=13,
       number=14, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_prev_opponent_logo', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_opponent_logo', index=14,
+      name='team1_prev_opponent_logo', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_opponent_logo', index=14,
       number=15, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_prev_opponent_logo', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_opponent_logo', index=15,
+      name='team2_prev_opponent_logo', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_opponent_logo', index=15,
       number=16, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_prev_opponent_id', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_opponent_id', index=16,
+      name='team1_prev_opponent_id', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_opponent_id', index=16,
       number=17, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_prev_opponent_id', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_opponent_id', index=17,
+      name='team2_prev_opponent_id', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_opponent_id', index=17,
       number=18, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_prev_match_score', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_match_score', index=18,
+      name='team1_prev_match_score', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_match_score', index=18,
       number=19, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_prev_match_opponent_score', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_match_opponent_score', index=19,
+      name='team1_prev_match_opponent_score', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_prev_match_opponent_score', index=19,
       number=20, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_prev_match_score', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_match_score', index=20,
+      name='team2_prev_match_score', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_match_score', index=20,
       number=21, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_prev_match_opponent_score', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_match_opponent_score', index=21,
+      name='team2_prev_match_opponent_score', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_prev_match_opponent_score', index=21,
       number=22, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='phase_type', full_name='CMsgDOTATournamentInfo.UpcomingMatch.phase_type', index=22,
+      name='phase_type', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.phase_type', index=22,
       number=23, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team1_score', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team1_score', index=23,
+      name='team1_score', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team1_score', index=23,
       number=24, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team2_score', full_name='CMsgDOTATournamentInfo.UpcomingMatch.team2_score', index=24,
+      name='team2_score', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.team2_score', index=24,
       number=25, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='phase_id', full_name='CMsgDOTATournamentInfo.UpcomingMatch.phase_id', index=25,
+      name='phase_id', full_name='dota.CMsgDOTATournamentInfo.UpcomingMatch.phase_id', index=25,
       number=26, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -467,40 +467,40 @@ _CMSGDOTATOURNAMENTINFO_UPCOMINGMATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=667,
-  serialized_end=1334,
+  serialized_start=698,
+  serialized_end=1365,
 )
 
 _CMSGDOTATOURNAMENTINFO_NEWS = _descriptor.Descriptor(
   name='News',
-  full_name='CMsgDOTATournamentInfo.News',
+  full_name='dota.CMsgDOTATournamentInfo.News',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='link', full_name='CMsgDOTATournamentInfo.News.link', index=0,
+      name='link', full_name='dota.CMsgDOTATournamentInfo.News.link', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='title', full_name='CMsgDOTATournamentInfo.News.title', index=1,
+      name='title', full_name='dota.CMsgDOTATournamentInfo.News.title', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='image', full_name='CMsgDOTATournamentInfo.News.image', index=2,
+      name='image', full_name='dota.CMsgDOTATournamentInfo.News.image', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='CMsgDOTATournamentInfo.News.timestamp', index=3,
+      name='timestamp', full_name='dota.CMsgDOTATournamentInfo.News.timestamp', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -518,47 +518,47 @@ _CMSGDOTATOURNAMENTINFO_NEWS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1336,
-  serialized_end=1405,
+  serialized_start=1367,
+  serialized_end=1436,
 )
 
 _CMSGDOTATOURNAMENTINFO = _descriptor.Descriptor(
   name='CMsgDOTATournamentInfo',
-  full_name='CMsgDOTATournamentInfo',
+  full_name='dota.CMsgDOTATournamentInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='league_id', full_name='CMsgDOTATournamentInfo.league_id', index=0,
+      name='league_id', full_name='dota.CMsgDOTATournamentInfo.league_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='phase_list', full_name='CMsgDOTATournamentInfo.phase_list', index=1,
+      name='phase_list', full_name='dota.CMsgDOTATournamentInfo.phase_list', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='teams_list', full_name='CMsgDOTATournamentInfo.teams_list', index=2,
+      name='teams_list', full_name='dota.CMsgDOTATournamentInfo.teams_list', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='upcoming_matches_list', full_name='CMsgDOTATournamentInfo.upcoming_matches_list', index=3,
+      name='upcoming_matches_list', full_name='dota.CMsgDOTATournamentInfo.upcoming_matches_list', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='news_list', full_name='CMsgDOTATournamentInfo.news_list', index=4,
+      name='news_list', full_name='dota.CMsgDOTATournamentInfo.news_list', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -576,14 +576,14 @@ _CMSGDOTATOURNAMENTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=69,
-  serialized_end=1405,
+  serialized_start=75,
+  serialized_end=1436,
 )
 
 
 _CMSGREQUESTWEEKENDTOURNEYSCHEDULE = _descriptor.Descriptor(
   name='CMsgRequestWeekendTourneySchedule',
-  full_name='CMsgRequestWeekendTourneySchedule',
+  full_name='dota.CMsgRequestWeekendTourneySchedule',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -600,55 +600,55 @@ _CMSGREQUESTWEEKENDTOURNEYSCHEDULE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1407,
-  serialized_end=1442,
+  serialized_start=1438,
+  serialized_end=1473,
 )
 
 
 _CMSGWEEKENDTOURNEYSCHEDULE_DIVISION = _descriptor.Descriptor(
   name='Division',
-  full_name='CMsgWeekendTourneySchedule.Division',
+  full_name='dota.CMsgWeekendTourneySchedule.Division',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='division_code', full_name='CMsgWeekendTourneySchedule.Division.division_code', index=0,
+      name='division_code', full_name='dota.CMsgWeekendTourneySchedule.Division.division_code', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_window_open', full_name='CMsgWeekendTourneySchedule.Division.time_window_open', index=1,
+      name='time_window_open', full_name='dota.CMsgWeekendTourneySchedule.Division.time_window_open', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_window_close', full_name='CMsgWeekendTourneySchedule.Division.time_window_close', index=2,
+      name='time_window_close', full_name='dota.CMsgWeekendTourneySchedule.Division.time_window_close', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_window_open_next', full_name='CMsgWeekendTourneySchedule.Division.time_window_open_next', index=3,
+      name='time_window_open_next', full_name='dota.CMsgWeekendTourneySchedule.Division.time_window_open_next', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='trophy_id', full_name='CMsgWeekendTourneySchedule.Division.trophy_id', index=4,
+      name='trophy_id', full_name='dota.CMsgWeekendTourneySchedule.Division.trophy_id', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='free_weekend', full_name='CMsgWeekendTourneySchedule.Division.free_weekend', index=5,
+      name='free_weekend', full_name='dota.CMsgWeekendTourneySchedule.Division.free_weekend', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -666,19 +666,19 @@ _CMSGWEEKENDTOURNEYSCHEDULE_DIVISION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1533,
-  serialized_end=1691,
+  serialized_start=1569,
+  serialized_end=1727,
 )
 
 _CMSGWEEKENDTOURNEYSCHEDULE = _descriptor.Descriptor(
   name='CMsgWeekendTourneySchedule',
-  full_name='CMsgWeekendTourneySchedule',
+  full_name='dota.CMsgWeekendTourneySchedule',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='divisions', full_name='CMsgWeekendTourneySchedule.divisions', index=0,
+      name='divisions', full_name='dota.CMsgWeekendTourneySchedule.divisions', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -696,69 +696,69 @@ _CMSGWEEKENDTOURNEYSCHEDULE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1445,
-  serialized_end=1691,
+  serialized_start=1476,
+  serialized_end=1727,
 )
 
 
 _CMSGWEEKENDTOURNEYOPTS = _descriptor.Descriptor(
   name='CMsgWeekendTourneyOpts',
-  full_name='CMsgWeekendTourneyOpts',
+  full_name='dota.CMsgWeekendTourneyOpts',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='participating', full_name='CMsgWeekendTourneyOpts.participating', index=0,
+      name='participating', full_name='dota.CMsgWeekendTourneyOpts.participating', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='division_id', full_name='CMsgWeekendTourneyOpts.division_id', index=1,
+      name='division_id', full_name='dota.CMsgWeekendTourneyOpts.division_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='buyin', full_name='CMsgWeekendTourneyOpts.buyin', index=2,
+      name='buyin', full_name='dota.CMsgWeekendTourneyOpts.buyin', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='skill_level', full_name='CMsgWeekendTourneyOpts.skill_level', index=3,
+      name='skill_level', full_name='dota.CMsgWeekendTourneyOpts.skill_level', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='match_groups', full_name='CMsgWeekendTourneyOpts.match_groups', index=4,
+      name='match_groups', full_name='dota.CMsgWeekendTourneyOpts.match_groups', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgWeekendTourneyOpts.team_id', index=5,
+      name='team_id', full_name='dota.CMsgWeekendTourneyOpts.team_id', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pickup_team_name', full_name='CMsgWeekendTourneyOpts.pickup_team_name', index=6,
+      name='pickup_team_name', full_name='dota.CMsgWeekendTourneyOpts.pickup_team_name', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pickup_team_logo', full_name='CMsgWeekendTourneyOpts.pickup_team_logo', index=7,
+      name='pickup_team_logo', full_name='dota.CMsgWeekendTourneyOpts.pickup_team_logo', index=7,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -776,14 +776,14 @@ _CMSGWEEKENDTOURNEYOPTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1694,
-  serialized_end=1889,
+  serialized_start=1730,
+  serialized_end=1925,
 )
 
 
 _CMSGWEEKENDTOURNEYLEAVE = _descriptor.Descriptor(
   name='CMsgWeekendTourneyLeave',
-  full_name='CMsgWeekendTourneyLeave',
+  full_name='dota.CMsgWeekendTourneyLeave',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -800,90 +800,90 @@ _CMSGWEEKENDTOURNEYLEAVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1891,
-  serialized_end=1916,
+  serialized_start=1927,
+  serialized_end=1952,
 )
 
 
 _CMSGDOTATOURNAMENT_TEAM = _descriptor.Descriptor(
   name='Team',
-  full_name='CMsgDOTATournament.Team',
+  full_name='dota.CMsgDOTATournament.Team',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='team_gid', full_name='CMsgDOTATournament.Team.team_gid', index=0,
+      name='team_gid', full_name='dota.CMsgDOTATournament.Team.team_gid', index=0,
       number=1, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='node_or_state', full_name='CMsgDOTATournament.Team.node_or_state', index=1,
+      name='node_or_state', full_name='dota.CMsgDOTATournament.Team.node_or_state', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='players', full_name='CMsgDOTATournament.Team.players', index=2,
+      name='players', full_name='dota.CMsgDOTATournament.Team.players', index=2,
       number=3, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='player_buyin', full_name='CMsgDOTATournament.Team.player_buyin', index=3,
+      name='player_buyin', full_name='dota.CMsgDOTATournament.Team.player_buyin', index=3,
       number=9, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='player_skill_level', full_name='CMsgDOTATournament.Team.player_skill_level', index=4,
+      name='player_skill_level', full_name='dota.CMsgDOTATournament.Team.player_skill_level', index=4,
       number=10, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='match_group_mask', full_name='CMsgDOTATournament.Team.match_group_mask', index=5,
+      name='match_group_mask', full_name='dota.CMsgDOTATournament.Team.match_group_mask', index=5,
       number=12, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTATournament.Team.team_id', index=6,
+      name='team_id', full_name='dota.CMsgDOTATournament.Team.team_id', index=6,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTATournament.Team.team_name', index=7,
+      name='team_name', full_name='dota.CMsgDOTATournament.Team.team_name', index=7,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_base_logo', full_name='CMsgDOTATournament.Team.team_base_logo', index=8,
+      name='team_base_logo', full_name='dota.CMsgDOTATournament.Team.team_base_logo', index=8,
       number=7, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_ui_logo', full_name='CMsgDOTATournament.Team.team_ui_logo', index=9,
+      name='team_ui_logo', full_name='dota.CMsgDOTATournament.Team.team_ui_logo', index=9,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_date', full_name='CMsgDOTATournament.Team.team_date', index=10,
+      name='team_date', full_name='dota.CMsgDOTATournament.Team.team_date', index=10,
       number=11, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -901,54 +901,54 @@ _CMSGDOTATOURNAMENT_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2343,
-  serialized_end=2596,
+  serialized_start=2404,
+  serialized_end=2657,
 )
 
 _CMSGDOTATOURNAMENT_GAME = _descriptor.Descriptor(
   name='Game',
-  full_name='CMsgDOTATournament.Game',
+  full_name='dota.CMsgDOTATournament.Game',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='node_idx', full_name='CMsgDOTATournament.Game.node_idx', index=0,
+      name='node_idx', full_name='dota.CMsgDOTATournament.Game.node_idx', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='lobby_id', full_name='CMsgDOTATournament.Game.lobby_id', index=1,
+      name='lobby_id', full_name='dota.CMsgDOTATournament.Game.lobby_id', index=1,
       number=2, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='match_id', full_name='CMsgDOTATournament.Game.match_id', index=2,
+      name='match_id', full_name='dota.CMsgDOTATournament.Game.match_id', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_a_good', full_name='CMsgDOTATournament.Game.team_a_good', index=3,
+      name='team_a_good', full_name='dota.CMsgDOTATournament.Game.team_a_good', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='state', full_name='CMsgDOTATournament.Game.state', index=4,
+      name='state', full_name='dota.CMsgDOTATournament.Game.state', index=4,
       number=5, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='start_time', full_name='CMsgDOTATournament.Game.start_time', index=5,
+      name='start_time', full_name='dota.CMsgDOTATournament.Game.start_time', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -966,40 +966,40 @@ _CMSGDOTATOURNAMENT_GAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2599,
-  serialized_end=2770,
+  serialized_start=2660,
+  serialized_end=2836,
 )
 
 _CMSGDOTATOURNAMENT_NODE = _descriptor.Descriptor(
   name='Node',
-  full_name='CMsgDOTATournament.Node',
+  full_name='dota.CMsgDOTATournament.Node',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='node_id', full_name='CMsgDOTATournament.Node.node_id', index=0,
+      name='node_id', full_name='dota.CMsgDOTATournament.Node.node_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_idx_a', full_name='CMsgDOTATournament.Node.team_idx_a', index=1,
+      name='team_idx_a', full_name='dota.CMsgDOTATournament.Node.team_idx_a', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_idx_b', full_name='CMsgDOTATournament.Node.team_idx_b', index=2,
+      name='team_idx_b', full_name='dota.CMsgDOTATournament.Node.team_idx_b', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='node_state', full_name='CMsgDOTATournament.Node.node_state', index=3,
+      name='node_state', full_name='dota.CMsgDOTATournament.Node.node_state', index=3,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1017,89 +1017,89 @@ _CMSGDOTATOURNAMENT_NODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2773,
-  serialized_end=2911,
+  serialized_start=2839,
+  serialized_end=2982,
 )
 
 _CMSGDOTATOURNAMENT = _descriptor.Descriptor(
   name='CMsgDOTATournament',
-  full_name='CMsgDOTATournament',
+  full_name='dota.CMsgDOTATournament',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tournament_id', full_name='CMsgDOTATournament.tournament_id', index=0,
+      name='tournament_id', full_name='dota.CMsgDOTATournament.tournament_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='division_id', full_name='CMsgDOTATournament.division_id', index=1,
+      name='division_id', full_name='dota.CMsgDOTATournament.division_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='schedule_time', full_name='CMsgDOTATournament.schedule_time', index=2,
+      name='schedule_time', full_name='dota.CMsgDOTATournament.schedule_time', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='skill_level', full_name='CMsgDOTATournament.skill_level', index=3,
+      name='skill_level', full_name='dota.CMsgDOTATournament.skill_level', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tournament_template', full_name='CMsgDOTATournament.tournament_template', index=4,
+      name='tournament_template', full_name='dota.CMsgDOTATournament.tournament_template', index=4,
       number=5, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='state', full_name='CMsgDOTATournament.state', index=5,
+      name='state', full_name='dota.CMsgDOTATournament.state', index=5,
       number=6, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='state_seq_num', full_name='CMsgDOTATournament.state_seq_num', index=6,
+      name='state_seq_num', full_name='dota.CMsgDOTATournament.state_seq_num', index=6,
       number=10, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='season_trophy_id', full_name='CMsgDOTATournament.season_trophy_id', index=7,
+      name='season_trophy_id', full_name='dota.CMsgDOTATournament.season_trophy_id', index=7,
       number=11, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='teams', full_name='CMsgDOTATournament.teams', index=8,
+      name='teams', full_name='dota.CMsgDOTATournament.teams', index=8,
       number=7, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='games', full_name='CMsgDOTATournament.games', index=9,
+      name='games', full_name='dota.CMsgDOTATournament.games', index=9,
       number=8, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='nodes', full_name='CMsgDOTATournament.nodes', index=10,
+      name='nodes', full_name='dota.CMsgDOTATournament.nodes', index=10,
       number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1117,27 +1117,27 @@ _CMSGDOTATOURNAMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1919,
-  serialized_end=2911,
+  serialized_start=1955,
+  serialized_end=2982,
 )
 
 
 _CMSGDOTATOURNAMENTSTATECHANGE_GAMECHANGE = _descriptor.Descriptor(
   name='GameChange',
-  full_name='CMsgDOTATournamentStateChange.GameChange',
+  full_name='dota.CMsgDOTATournamentStateChange.GameChange',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='match_id', full_name='CMsgDOTATournamentStateChange.GameChange.match_id', index=0,
+      name='match_id', full_name='dota.CMsgDOTATournamentStateChange.GameChange.match_id', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='new_state', full_name='CMsgDOTATournamentStateChange.GameChange.new_state', index=1,
+      name='new_state', full_name='dota.CMsgDOTATournamentStateChange.GameChange.new_state', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1155,33 +1155,33 @@ _CMSGDOTATOURNAMENTSTATECHANGE_GAMECHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3298,
-  serialized_end=3402,
+  serialized_start=3389,
+  serialized_end=3498,
 )
 
 _CMSGDOTATOURNAMENTSTATECHANGE_TEAMCHANGE = _descriptor.Descriptor(
   name='TeamChange',
-  full_name='CMsgDOTATournamentStateChange.TeamChange',
+  full_name='dota.CMsgDOTATournamentStateChange.TeamChange',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='team_gid', full_name='CMsgDOTATournamentStateChange.TeamChange.team_gid', index=0,
+      name='team_gid', full_name='dota.CMsgDOTATournamentStateChange.TeamChange.team_gid', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='new_node_or_state', full_name='CMsgDOTATournamentStateChange.TeamChange.new_node_or_state', index=1,
+      name='new_node_or_state', full_name='dota.CMsgDOTATournamentStateChange.TeamChange.new_node_or_state', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='old_node_or_state', full_name='CMsgDOTATournamentStateChange.TeamChange.old_node_or_state', index=2,
+      name='old_node_or_state', full_name='dota.CMsgDOTATournamentStateChange.TeamChange.old_node_or_state', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1199,61 +1199,61 @@ _CMSGDOTATOURNAMENTSTATECHANGE_TEAMCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3404,
-  serialized_end=3488,
+  serialized_start=3500,
+  serialized_end=3584,
 )
 
 _CMSGDOTATOURNAMENTSTATECHANGE = _descriptor.Descriptor(
   name='CMsgDOTATournamentStateChange',
-  full_name='CMsgDOTATournamentStateChange',
+  full_name='dota.CMsgDOTATournamentStateChange',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='new_tournament_id', full_name='CMsgDOTATournamentStateChange.new_tournament_id', index=0,
+      name='new_tournament_id', full_name='dota.CMsgDOTATournamentStateChange.new_tournament_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='event', full_name='CMsgDOTATournamentStateChange.event', index=1,
+      name='event', full_name='dota.CMsgDOTATournamentStateChange.event', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='new_tournament_state', full_name='CMsgDOTATournamentStateChange.new_tournament_state', index=2,
+      name='new_tournament_state', full_name='dota.CMsgDOTATournamentStateChange.new_tournament_state', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='game_changes', full_name='CMsgDOTATournamentStateChange.game_changes', index=3,
+      name='game_changes', full_name='dota.CMsgDOTATournamentStateChange.game_changes', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_changes', full_name='CMsgDOTATournamentStateChange.team_changes', index=4,
+      name='team_changes', full_name='dota.CMsgDOTATournamentStateChange.team_changes', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='merged_tournament_ids', full_name='CMsgDOTATournamentStateChange.merged_tournament_ids', index=5,
+      name='merged_tournament_ids', full_name='dota.CMsgDOTATournamentStateChange.merged_tournament_ids', index=5,
       number=6, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='state_seq_num', full_name='CMsgDOTATournamentStateChange.state_seq_num', index=6,
+      name='state_seq_num', full_name='dota.CMsgDOTATournamentStateChange.state_seq_num', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1271,27 +1271,27 @@ _CMSGDOTATOURNAMENTSTATECHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2914,
-  serialized_end=3488,
+  serialized_start=2985,
+  serialized_end=3584,
 )
 
 
 _CMSGDOTATOURNAMENTREQUEST = _descriptor.Descriptor(
   name='CMsgDOTATournamentRequest',
-  full_name='CMsgDOTATournamentRequest',
+  full_name='dota.CMsgDOTATournamentRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tournament_id', full_name='CMsgDOTATournamentRequest.tournament_id', index=0,
+      name='tournament_id', full_name='dota.CMsgDOTATournamentRequest.tournament_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='client_tournament_gid', full_name='CMsgDOTATournamentRequest.client_tournament_gid', index=1,
+      name='client_tournament_gid', full_name='dota.CMsgDOTATournamentRequest.client_tournament_gid', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1309,27 +1309,27 @@ _CMSGDOTATOURNAMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3490,
-  serialized_end=3571,
+  serialized_start=3586,
+  serialized_end=3667,
 )
 
 
 _CMSGDOTATOURNAMENTRESPONSE = _descriptor.Descriptor(
   name='CMsgDOTATournamentResponse',
-  full_name='CMsgDOTATournamentResponse',
+  full_name='dota.CMsgDOTATournamentResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='CMsgDOTATournamentResponse.result', index=0,
+      name='result', full_name='dota.CMsgDOTATournamentResponse.result', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=2,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tournament', full_name='CMsgDOTATournamentResponse.tournament', index=1,
+      name='tournament', full_name='dota.CMsgDOTATournamentResponse.tournament', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1347,27 +1347,27 @@ _CMSGDOTATOURNAMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3573,
-  serialized_end=3661,
+  serialized_start=3669,
+  serialized_end=3762,
 )
 
 
 _CMSGDOTACLEARTOURNAMENTGAME = _descriptor.Descriptor(
   name='CMsgDOTAClearTournamentGame',
-  full_name='CMsgDOTAClearTournamentGame',
+  full_name='dota.CMsgDOTAClearTournamentGame',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tournament_id', full_name='CMsgDOTAClearTournamentGame.tournament_id', index=0,
+      name='tournament_id', full_name='dota.CMsgDOTAClearTournamentGame.tournament_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='game_id', full_name='CMsgDOTAClearTournamentGame.game_id', index=1,
+      name='game_id', full_name='dota.CMsgDOTAClearTournamentGame.game_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1385,76 +1385,76 @@ _CMSGDOTACLEARTOURNAMENTGAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3663,
-  serialized_end=3732,
+  serialized_start=3764,
+  serialized_end=3833,
 )
 
 
 _CMSGDOTAWEEKENDTOURNEYPLAYERSKILLLEVELSTATS = _descriptor.Descriptor(
   name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats',
-  full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats',
+  full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='skill_level', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.skill_level', index=0,
+      name='skill_level', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.skill_level', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='times_won_0', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_won_0', index=1,
+      name='times_won_0', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_won_0', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='times_won_1', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_won_1', index=2,
+      name='times_won_1', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_won_1', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='times_won_2', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_won_2', index=3,
+      name='times_won_2', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_won_2', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='times_won_3', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_won_3', index=4,
+      name='times_won_3', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_won_3', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='times_bye_and_lost', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_bye_and_lost', index=5,
+      name='times_bye_and_lost', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_bye_and_lost', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='times_bye_and_won', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_bye_and_won', index=6,
+      name='times_bye_and_won', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.times_bye_and_won', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='total_games_won', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.total_games_won', index=7,
+      name='total_games_won', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.total_games_won', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='score', full_name='CMsgDOTAWeekendTourneyPlayerSkillLevelStats.score', index=8,
+      name='score', full_name='dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats.score', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1472,41 +1472,41 @@ _CMSGDOTAWEEKENDTOURNEYPLAYERSKILLLEVELSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3735,
-  serialized_end=3980,
+  serialized_start=3836,
+  serialized_end=4081,
 )
 
 
 _CMSGDOTAWEEKENDTOURNEYPLAYERSTATS = _descriptor.Descriptor(
   name='CMsgDOTAWeekendTourneyPlayerStats',
-  full_name='CMsgDOTAWeekendTourneyPlayerStats',
+  full_name='dota.CMsgDOTAWeekendTourneyPlayerStats',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAWeekendTourneyPlayerStats.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerStats.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='season_trophy_id', full_name='CMsgDOTAWeekendTourneyPlayerStats.season_trophy_id', index=1,
+      name='season_trophy_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerStats.season_trophy_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='skill_levels', full_name='CMsgDOTAWeekendTourneyPlayerStats.skill_levels', index=2,
+      name='skill_levels', full_name='dota.CMsgDOTAWeekendTourneyPlayerStats.skill_levels', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='current_tier', full_name='CMsgDOTAWeekendTourneyPlayerStats.current_tier', index=3,
+      name='current_tier', full_name='dota.CMsgDOTAWeekendTourneyPlayerStats.current_tier', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1524,27 +1524,27 @@ _CMSGDOTAWEEKENDTOURNEYPLAYERSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3983,
-  serialized_end=4154,
+  serialized_start=4084,
+  serialized_end=4260,
 )
 
 
 _CMSGDOTAWEEKENDTOURNEYPLAYERSTATSREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAWeekendTourneyPlayerStatsRequest',
-  full_name='CMsgDOTAWeekendTourneyPlayerStatsRequest',
+  full_name='dota.CMsgDOTAWeekendTourneyPlayerStatsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAWeekendTourneyPlayerStatsRequest.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerStatsRequest.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='season_trophy_id', full_name='CMsgDOTAWeekendTourneyPlayerStatsRequest.season_trophy_id', index=1,
+      name='season_trophy_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerStatsRequest.season_trophy_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1562,27 +1562,27 @@ _CMSGDOTAWEEKENDTOURNEYPLAYERSTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4156,
-  serialized_end=4244,
+  serialized_start=4262,
+  serialized_end=4350,
 )
 
 
 _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORYREQUEST = _descriptor.Descriptor(
   name='CMsgDOTAWeekendTourneyPlayerHistoryRequest',
-  full_name='CMsgDOTAWeekendTourneyPlayerHistoryRequest',
+  full_name='dota.CMsgDOTAWeekendTourneyPlayerHistoryRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAWeekendTourneyPlayerHistoryRequest.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistoryRequest.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='season_trophy_id', full_name='CMsgDOTAWeekendTourneyPlayerHistoryRequest.season_trophy_id', index=1,
+      name='season_trophy_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistoryRequest.season_trophy_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1600,76 +1600,76 @@ _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4246,
-  serialized_end=4336,
+  serialized_start=4352,
+  serialized_end=4442,
 )
 
 
 _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORY_TOURNAMENT = _descriptor.Descriptor(
   name='Tournament',
-  full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament',
+  full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tournament_id', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.tournament_id', index=0,
+      name='tournament_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.tournament_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='start_time', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.start_time', index=1,
+      name='start_time', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.start_time', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tournament_tier', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.tournament_tier', index=2,
+      name='tournament_tier', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.tournament_tier', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_id', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.team_id', index=3,
+      name='team_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.team_id', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_date', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.team_date', index=4,
+      name='team_date', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.team_date', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_result', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.team_result', index=5,
+      name='team_result', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.team_result', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.account_id', index=6,
+      name='account_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.account_id', index=6,
       number=7, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_name', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.team_name', index=7,
+      name='team_name', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.team_name', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='season_trophy_id', full_name='CMsgDOTAWeekendTourneyPlayerHistory.Tournament.season_trophy_id', index=8,
+      name='season_trophy_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament.season_trophy_id', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1687,26 +1687,26 @@ _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORY_TOURNAMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4469,
-  serialized_end=4671,
+  serialized_start=4580,
+  serialized_end=4782,
 )
 
 _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORY = _descriptor.Descriptor(
   name='CMsgDOTAWeekendTourneyPlayerHistory',
-  full_name='CMsgDOTAWeekendTourneyPlayerHistory',
+  full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='CMsgDOTAWeekendTourneyPlayerHistory.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tournaments', full_name='CMsgDOTAWeekendTourneyPlayerHistory.tournaments', index=1,
+      name='tournaments', full_name='dota.CMsgDOTAWeekendTourneyPlayerHistory.tournaments', index=1,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1724,69 +1724,69 @@ _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4339,
-  serialized_end=4671,
+  serialized_start=4445,
+  serialized_end=4782,
 )
 
 
 _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS_TIER = _descriptor.Descriptor(
   name='Tier',
-  full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier',
+  full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tier', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier.tier', index=0,
+      name='tier', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier.tier', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='players', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier.players', index=1,
+      name='players', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier.players', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='teams', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier.teams', index=2,
+      name='teams', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier.teams', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='winning_teams', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier.winning_teams', index=3,
+      name='winning_teams', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier.winning_teams', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='players_streak_2', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier.players_streak_2', index=4,
+      name='players_streak_2', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier.players_streak_2', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='players_streak_3', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier.players_streak_3', index=5,
+      name='players_streak_3', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier.players_streak_3', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='players_streak_4', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier.players_streak_4', index=6,
+      name='players_streak_4', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier.players_streak_4', index=6,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='players_streak_5', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Tier.players_streak_5', index=7,
+      name='players_streak_5', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier.players_streak_5', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1804,33 +1804,33 @@ _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS_TIER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4794,
-  serialized_end=4973,
+  serialized_start=4910,
+  serialized_end=5089,
 )
 
 _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS_DIVISION = _descriptor.Descriptor(
   name='Division',
-  full_name='CMsgDOTAWeekendTourneyParticipationDetails.Division',
+  full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Division',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='division_id', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Division.division_id', index=0,
+      name='division_id', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Division.division_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='schedule_time', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Division.schedule_time', index=1,
+      name='schedule_time', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Division.schedule_time', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tiers', full_name='CMsgDOTAWeekendTourneyParticipationDetails.Division.tiers', index=2,
+      name='tiers', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.Division.tiers', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1848,19 +1848,19 @@ _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS_DIVISION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4975,
-  serialized_end=5094,
+  serialized_start=5091,
+  serialized_end=5215,
 )
 
 _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS = _descriptor.Descriptor(
   name='CMsgDOTAWeekendTourneyParticipationDetails',
-  full_name='CMsgDOTAWeekendTourneyParticipationDetails',
+  full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='divisions', full_name='CMsgDOTAWeekendTourneyParticipationDetails.divisions', index=0,
+      name='divisions', full_name='dota.CMsgDOTAWeekendTourneyParticipationDetails.divisions', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1878,8 +1878,8 @@ _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4674,
-  serialized_end=5094,
+  serialized_start=4785,
+  serialized_end=5215,
 )
 
 _CMSGDOTATOURNAMENTINFO_PHASEGROUP.containing_type = _CMSGDOTATOURNAMENTINFO
@@ -1942,40 +1942,40 @@ CMsgDOTATournamentInfo = _reflection.GeneratedProtocolMessageType('CMsgDOTATourn
   PhaseGroup = _reflection.GeneratedProtocolMessageType('PhaseGroup', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENTINFO_PHASEGROUP,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournamentInfo.PhaseGroup)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentInfo.PhaseGroup)
     ))
   ,
 
   Phase = _reflection.GeneratedProtocolMessageType('Phase', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENTINFO_PHASE,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournamentInfo.Phase)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentInfo.Phase)
     ))
   ,
 
   Team = _reflection.GeneratedProtocolMessageType('Team', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENTINFO_TEAM,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournamentInfo.Team)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentInfo.Team)
     ))
   ,
 
   UpcomingMatch = _reflection.GeneratedProtocolMessageType('UpcomingMatch', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENTINFO_UPCOMINGMATCH,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournamentInfo.UpcomingMatch)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentInfo.UpcomingMatch)
     ))
   ,
 
   News = _reflection.GeneratedProtocolMessageType('News', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENTINFO_NEWS,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournamentInfo.News)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentInfo.News)
     ))
   ,
   DESCRIPTOR = _CMSGDOTATOURNAMENTINFO,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTATournamentInfo)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentInfo)
   ))
 _sym_db.RegisterMessage(CMsgDOTATournamentInfo)
 _sym_db.RegisterMessage(CMsgDOTATournamentInfo.PhaseGroup)
@@ -1987,7 +1987,7 @@ _sym_db.RegisterMessage(CMsgDOTATournamentInfo.News)
 CMsgRequestWeekendTourneySchedule = _reflection.GeneratedProtocolMessageType('CMsgRequestWeekendTourneySchedule', (_message.Message,), dict(
   DESCRIPTOR = _CMSGREQUESTWEEKENDTOURNEYSCHEDULE,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgRequestWeekendTourneySchedule)
+  # @@protoc_insertion_point(class_scope:dota.CMsgRequestWeekendTourneySchedule)
   ))
 _sym_db.RegisterMessage(CMsgRequestWeekendTourneySchedule)
 
@@ -1996,12 +1996,12 @@ CMsgWeekendTourneySchedule = _reflection.GeneratedProtocolMessageType('CMsgWeeke
   Division = _reflection.GeneratedProtocolMessageType('Division', (_message.Message,), dict(
     DESCRIPTOR = _CMSGWEEKENDTOURNEYSCHEDULE_DIVISION,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgWeekendTourneySchedule.Division)
+    # @@protoc_insertion_point(class_scope:dota.CMsgWeekendTourneySchedule.Division)
     ))
   ,
   DESCRIPTOR = _CMSGWEEKENDTOURNEYSCHEDULE,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgWeekendTourneySchedule)
+  # @@protoc_insertion_point(class_scope:dota.CMsgWeekendTourneySchedule)
   ))
 _sym_db.RegisterMessage(CMsgWeekendTourneySchedule)
 _sym_db.RegisterMessage(CMsgWeekendTourneySchedule.Division)
@@ -2009,14 +2009,14 @@ _sym_db.RegisterMessage(CMsgWeekendTourneySchedule.Division)
 CMsgWeekendTourneyOpts = _reflection.GeneratedProtocolMessageType('CMsgWeekendTourneyOpts', (_message.Message,), dict(
   DESCRIPTOR = _CMSGWEEKENDTOURNEYOPTS,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgWeekendTourneyOpts)
+  # @@protoc_insertion_point(class_scope:dota.CMsgWeekendTourneyOpts)
   ))
 _sym_db.RegisterMessage(CMsgWeekendTourneyOpts)
 
 CMsgWeekendTourneyLeave = _reflection.GeneratedProtocolMessageType('CMsgWeekendTourneyLeave', (_message.Message,), dict(
   DESCRIPTOR = _CMSGWEEKENDTOURNEYLEAVE,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgWeekendTourneyLeave)
+  # @@protoc_insertion_point(class_scope:dota.CMsgWeekendTourneyLeave)
   ))
 _sym_db.RegisterMessage(CMsgWeekendTourneyLeave)
 
@@ -2025,26 +2025,26 @@ CMsgDOTATournament = _reflection.GeneratedProtocolMessageType('CMsgDOTATournamen
   Team = _reflection.GeneratedProtocolMessageType('Team', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENT_TEAM,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournament.Team)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournament.Team)
     ))
   ,
 
   Game = _reflection.GeneratedProtocolMessageType('Game', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENT_GAME,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournament.Game)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournament.Game)
     ))
   ,
 
   Node = _reflection.GeneratedProtocolMessageType('Node', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENT_NODE,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournament.Node)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournament.Node)
     ))
   ,
   DESCRIPTOR = _CMSGDOTATOURNAMENT,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTATournament)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournament)
   ))
 _sym_db.RegisterMessage(CMsgDOTATournament)
 _sym_db.RegisterMessage(CMsgDOTATournament.Team)
@@ -2056,19 +2056,19 @@ CMsgDOTATournamentStateChange = _reflection.GeneratedProtocolMessageType('CMsgDO
   GameChange = _reflection.GeneratedProtocolMessageType('GameChange', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENTSTATECHANGE_GAMECHANGE,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournamentStateChange.GameChange)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentStateChange.GameChange)
     ))
   ,
 
   TeamChange = _reflection.GeneratedProtocolMessageType('TeamChange', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTATOURNAMENTSTATECHANGE_TEAMCHANGE,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTATournamentStateChange.TeamChange)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentStateChange.TeamChange)
     ))
   ,
   DESCRIPTOR = _CMSGDOTATOURNAMENTSTATECHANGE,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTATournamentStateChange)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentStateChange)
   ))
 _sym_db.RegisterMessage(CMsgDOTATournamentStateChange)
 _sym_db.RegisterMessage(CMsgDOTATournamentStateChange.GameChange)
@@ -2077,49 +2077,49 @@ _sym_db.RegisterMessage(CMsgDOTATournamentStateChange.TeamChange)
 CMsgDOTATournamentRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTATournamentRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTATOURNAMENTREQUEST,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTATournamentRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTATournamentRequest)
 
 CMsgDOTATournamentResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTATournamentResponse', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTATOURNAMENTRESPONSE,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTATournamentResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTATournamentResponse)
   ))
 _sym_db.RegisterMessage(CMsgDOTATournamentResponse)
 
 CMsgDOTAClearTournamentGame = _reflection.GeneratedProtocolMessageType('CMsgDOTAClearTournamentGame', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACLEARTOURNAMENTGAME,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAClearTournamentGame)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAClearTournamentGame)
   ))
 _sym_db.RegisterMessage(CMsgDOTAClearTournamentGame)
 
 CMsgDOTAWeekendTourneyPlayerSkillLevelStats = _reflection.GeneratedProtocolMessageType('CMsgDOTAWeekendTourneyPlayerSkillLevelStats', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPLAYERSKILLLEVELSTATS,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyPlayerSkillLevelStats)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyPlayerSkillLevelStats)
   ))
 _sym_db.RegisterMessage(CMsgDOTAWeekendTourneyPlayerSkillLevelStats)
 
 CMsgDOTAWeekendTourneyPlayerStats = _reflection.GeneratedProtocolMessageType('CMsgDOTAWeekendTourneyPlayerStats', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPLAYERSTATS,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyPlayerStats)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyPlayerStats)
   ))
 _sym_db.RegisterMessage(CMsgDOTAWeekendTourneyPlayerStats)
 
 CMsgDOTAWeekendTourneyPlayerStatsRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAWeekendTourneyPlayerStatsRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPLAYERSTATSREQUEST,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyPlayerStatsRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyPlayerStatsRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAWeekendTourneyPlayerStatsRequest)
 
 CMsgDOTAWeekendTourneyPlayerHistoryRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAWeekendTourneyPlayerHistoryRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORYREQUEST,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyPlayerHistoryRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyPlayerHistoryRequest)
   ))
 _sym_db.RegisterMessage(CMsgDOTAWeekendTourneyPlayerHistoryRequest)
 
@@ -2128,12 +2128,12 @@ CMsgDOTAWeekendTourneyPlayerHistory = _reflection.GeneratedProtocolMessageType('
   Tournament = _reflection.GeneratedProtocolMessageType('Tournament', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORY_TOURNAMENT,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyPlayerHistory.Tournament)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyPlayerHistory.Tournament)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPLAYERHISTORY,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyPlayerHistory)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyPlayerHistory)
   ))
 _sym_db.RegisterMessage(CMsgDOTAWeekendTourneyPlayerHistory)
 _sym_db.RegisterMessage(CMsgDOTAWeekendTourneyPlayerHistory.Tournament)
@@ -2143,19 +2143,19 @@ CMsgDOTAWeekendTourneyParticipationDetails = _reflection.GeneratedProtocolMessag
   Tier = _reflection.GeneratedProtocolMessageType('Tier', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS_TIER,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyParticipationDetails.Tier)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyParticipationDetails.Tier)
     ))
   ,
 
   Division = _reflection.GeneratedProtocolMessageType('Division', (_message.Message,), dict(
     DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS_DIVISION,
     __module__ = 'dota_gcmessages_client_tournament_pb2'
-    # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyParticipationDetails.Division)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyParticipationDetails.Division)
     ))
   ,
   DESCRIPTOR = _CMSGDOTAWEEKENDTOURNEYPARTICIPATIONDETAILS,
   __module__ = 'dota_gcmessages_client_tournament_pb2'
-  # @@protoc_insertion_point(class_scope:CMsgDOTAWeekendTourneyParticipationDetails)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAWeekendTourneyParticipationDetails)
   ))
 _sym_db.RegisterMessage(CMsgDOTAWeekendTourneyParticipationDetails)
 _sym_db.RegisterMessage(CMsgDOTAWeekendTourneyParticipationDetails.Tier)

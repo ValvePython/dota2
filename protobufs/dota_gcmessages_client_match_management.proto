@@ -1,4 +1,5 @@
 syntax = "proto2";
+package dota;
 import "steammessages.proto";
 import "dota_shared_enums.proto";
 import "dota_client_enums.proto";
@@ -40,21 +41,21 @@ message CMsgStartFindingMatch {
 	optional uint32 matchgroups = 2 [default = 4294967295];
 	optional uint32 client_version = 3;
 	optional uint32 game_modes = 4 [default = 4294967295];
-	optional .DOTABotDifficulty bot_difficulty = 5 [default = BOT_DIFFICULTY_HARD];
-	optional .MatchType match_type = 6 [default = MATCH_TYPE_CASUAL];
+	optional dota.DOTABotDifficulty bot_difficulty = 5 [default = BOT_DIFFICULTY_HARD];
+	optional dota.MatchType match_type = 6 [default = MATCH_TYPE_CASUAL];
 	optional uint32 matchlanguages = 7 [default = 4294967295];
 	optional uint32 map_preference = 9;
 	optional uint32 team_id = 8;
-	optional .MatchLanguages game_language_enum = 10 [default = MATCH_LANGUAGE_INVALID];
+	optional dota.MatchLanguages game_language_enum = 10 [default = MATCH_LANGUAGE_INVALID];
 	optional string game_language_name = 11;
-	optional .CMsgClientPingData ping_data = 12;
+	optional dota.CMsgClientPingData ping_data = 12;
 	optional uint32 region_select_flags = 13;
 	optional bool solo_queue = 14;
 }
 
 message CMsgStartFindingMatchResult {
 	optional uint32 legacy_generic_eresult = 1 [default = 2];
-	optional .EStartFindingMatchResult result = 2 [default = k_EStartFindingMatchResult_Invalid];
+	optional dota.EStartFindingMatchResult result = 2 [default = k_EStartFindingMatchResult_Invalid];
 	optional string error_token = 3;
 	optional string debug_message = 4;
 	repeated fixed64 responsible_party_members = 5;
@@ -65,16 +66,16 @@ message CMsgStopFindingMatch {
 
 message CMsgPartyBuilderOptions {
 	optional uint32 additional_slots = 1;
-	optional .MatchType match_type = 2 [default = MATCH_TYPE_CASUAL];
+	optional dota.MatchType match_type = 2 [default = MATCH_TYPE_CASUAL];
 	optional uint32 matchgroups = 3;
 	optional uint32 client_version = 4;
-	optional .MatchLanguages language = 5 [default = MATCH_LANGUAGE_INVALID];
+	optional dota.MatchLanguages language = 5 [default = MATCH_LANGUAGE_INVALID];
 }
 
 message CMsgReadyUp {
-	optional .DOTALobbyReadyState state = 1 [default = DOTALobbyReadyState_UNDECLARED];
+	optional dota.DOTALobbyReadyState state = 1 [default = DOTALobbyReadyState_UNDECLARED];
 	optional fixed64 ready_up_key = 2;
-	optional .CDOTAClientHardwareSpecs hardware_specs = 3;
+	optional dota.CDOTAClientHardwareSpecs hardware_specs = 3;
 }
 
 message CMsgReadyUpStatus {
@@ -89,16 +90,16 @@ message CMsgAbandonCurrentGame {
 message CMsgPracticeLobbySetDetails {
 	optional uint64 lobby_id = 1;
 	optional string game_name = 2;
-	repeated .CLobbyTeamDetails team_details = 3;
+	repeated dota.CLobbyTeamDetails team_details = 3;
 	optional uint32 server_region = 4;
 	optional uint32 game_mode = 5;
-	optional .DOTA_CM_PICK cm_pick = 6 [default = DOTA_CM_RANDOM];
-	optional .DOTABotDifficulty bot_difficulty_radiant = 9 [default = BOT_DIFFICULTY_PASSIVE];
+	optional dota.DOTA_CM_PICK cm_pick = 6 [default = DOTA_CM_RANDOM];
+	optional dota.DOTABotDifficulty bot_difficulty_radiant = 9 [default = BOT_DIFFICULTY_PASSIVE];
 	optional bool allow_cheats = 10;
 	optional bool fill_with_bots = 11;
 	optional bool intro_mode = 12;
 	optional bool allow_spectating = 13;
-	optional .DOTAGameVersion game_version = 14 [default = GAME_VERSION_CURRENT];
+	optional dota.DOTAGameVersion game_version = 14 [default = GAME_VERSION_CURRENT];
 	optional string pass_key = 15;
 	optional uint32 leagueid = 16;
 	optional uint32 penalty_level_radiant = 17;
@@ -108,7 +109,7 @@ message CMsgPracticeLobbySetDetails {
 	optional uint32 radiant_series_wins = 21;
 	optional uint32 dire_series_wins = 22;
 	optional bool allchat = 23 [default = false];
-	optional .LobbyDotaTVDelay dota_tv_delay = 24 [default = LobbyDotaTV_120];
+	optional dota.LobbyDotaTVDelay dota_tv_delay = 24 [default = LobbyDotaTV_120];
 	optional bool lan = 25;
 	optional string custom_game_mode = 26;
 	optional string custom_map_name = 27;
@@ -117,17 +118,17 @@ message CMsgPracticeLobbySetDetails {
 	optional uint32 custom_min_players = 30;
 	optional uint32 custom_max_players = 31;
 	optional uint32 lan_host_ping_to_server_region = 32;
-	optional .DOTALobbyVisibility visibility = 33 [default = DOTALobbyVisibility_Public];
+	optional dota.DOTALobbyVisibility visibility = 33 [default = DOTALobbyVisibility_Public];
 	optional fixed64 custom_game_crc = 34;
 	optional uint32 league_series_id = 35;
 	optional uint32 league_game_id = 36;
 	optional fixed32 custom_game_timestamp = 37;
 	optional uint64 previous_match_override = 38;
 	optional uint32 league_selection_priority_team = 39;
-	optional .SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-	optional .SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
-	optional .LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
-	optional .DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
+	optional dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
+	optional dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
+	optional dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
+	optional dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
 	optional uint64 bot_radiant = 44;
 	optional uint64 bot_dire = 45;
 }
@@ -143,18 +144,18 @@ message CMsgPracticeLobbyCreate {
 	optional string search_key = 1;
 	optional string pass_key = 5;
 	optional uint32 client_version = 6;
-	optional .CMsgPracticeLobbySetDetails lobby_details = 7;
-	optional .CMsgPracticeLobbyCreate.SaveGame save_game = 8;
+	optional dota.CMsgPracticeLobbySetDetails lobby_details = 7;
+	optional dota.CMsgPracticeLobbyCreate.SaveGame save_game = 8;
 }
 
 message CMsgPracticeLobbySetTeamSlot {
-	optional .DOTA_GC_TEAM team = 1 [default = DOTA_GC_TEAM_GOOD_GUYS];
+	optional dota.DOTA_GC_TEAM team = 1 [default = DOTA_GC_TEAM_GOOD_GUYS];
 	optional uint32 slot = 2;
-	optional .DOTABotDifficulty bot_difficulty = 3 [default = BOT_DIFFICULTY_PASSIVE];
+	optional dota.DOTABotDifficulty bot_difficulty = 3 [default = BOT_DIFFICULTY_PASSIVE];
 }
 
 message CMsgPracticeLobbySetCoach {
-	optional .DOTA_GC_TEAM team = 1 [default = DOTA_GC_TEAM_GOOD_GUYS];
+	optional dota.DOTA_GC_TEAM team = 1 [default = DOTA_GC_TEAM_GOOD_GUYS];
 }
 
 message CMsgPracticeLobbyJoinBroadcastChannel {
@@ -197,7 +198,7 @@ message CMsgPracticeLobbyList {
 	optional bool tournament_games = 1;
 	optional string pass_key = 2;
 	optional uint32 region = 3;
-	optional .DOTA_GameMode game_mode = 4 [default = DOTA_GAMEMODE_NONE];
+	optional dota.DOTA_GameMode game_mode = 4 [default = DOTA_GAMEMODE_NONE];
 }
 
 message CMsgPracticeLobbyListResponseEntry {
@@ -209,14 +210,14 @@ message CMsgPracticeLobbyListResponseEntry {
 	optional uint64 id = 1 [(key_field) = true];
 	optional uint32 tournament_id = 3;
 	optional uint32 tournament_game_id = 4;
-	repeated .CMsgPracticeLobbyListResponseEntry.CLobbyMember members = 5;
+	repeated dota.CMsgPracticeLobbyListResponseEntry.CLobbyMember members = 5;
 	optional bool requires_pass_key = 6;
 	optional uint32 leader_account_id = 7;
 	optional uint32 guild_id = 8;
 	optional uint64 guild_logo = 9;
 	optional string name = 10;
 	optional string custom_game_mode = 11;
-	optional .DOTA_GameMode game_mode = 12 [default = DOTA_GAMEMODE_NONE];
+	optional dota.DOTA_GameMode game_mode = 12 [default = DOTA_GAMEMODE_NONE];
 	optional bool friend_present = 13;
 	optional uint32 players = 14;
 	optional string custom_map_name = 15;
@@ -228,16 +229,16 @@ message CMsgPracticeLobbyListResponseEntry {
 
 message CMsgPracticeLobbyListResponse {
 	optional bool tournament_games = 1;
-	repeated .CMsgPracticeLobbyListResponseEntry lobbies = 2;
+	repeated dota.CMsgPracticeLobbyListResponseEntry lobbies = 2;
 }
 
 message CMsgLobbyList {
 	optional uint32 server_region = 1 [default = 0];
-	optional .DOTA_GameMode game_mode = 2 [default = DOTA_GAMEMODE_NONE];
+	optional dota.DOTA_GameMode game_mode = 2 [default = DOTA_GAMEMODE_NONE];
 }
 
 message CMsgLobbyListResponse {
-	repeated .CMsgPracticeLobbyListResponseEntry lobbies = 1;
+	repeated dota.CMsgPracticeLobbyListResponseEntry lobbies = 1;
 }
 
 message CMsgPracticeLobbyJoin {
@@ -249,7 +250,7 @@ message CMsgPracticeLobbyJoin {
 }
 
 message CMsgPracticeLobbyJoinResponse {
-	optional .DOTAJoinLobbyResult result = 1 [default = DOTA_JOIN_RESULT_SUCCESS];
+	optional dota.DOTAJoinLobbyResult result = 1 [default = DOTA_JOIN_RESULT_SUCCESS];
 }
 
 message CMsgFriendPracticeLobbyListRequest {
@@ -257,7 +258,7 @@ message CMsgFriendPracticeLobbyListRequest {
 }
 
 message CMsgFriendPracticeLobbyListResponse {
-	repeated .CMsgPracticeLobbyListResponseEntry lobbies = 1;
+	repeated dota.CMsgPracticeLobbyListResponseEntry lobbies = 1;
 }
 
 message CMsgGuildmatePracticeLobbyListRequest {
@@ -265,7 +266,7 @@ message CMsgGuildmatePracticeLobbyListRequest {
 }
 
 message CMsgGuildmatePracticeLobbyListResponse {
-	repeated .CMsgPracticeLobbyListResponseEntry lobbies = 1;
+	repeated dota.CMsgPracticeLobbyListResponseEntry lobbies = 1;
 }
 
 message CMsgJoinableCustomGameModesRequest {
@@ -279,7 +280,7 @@ message CMsgJoinableCustomGameModesResponseEntry {
 }
 
 message CMsgJoinableCustomGameModesResponse {
-	repeated .CMsgJoinableCustomGameModesResponseEntry game_modes = 1;
+	repeated dota.CMsgJoinableCustomGameModesResponseEntry game_modes = 1;
 }
 
 message CMsgJoinableCustomLobbiesRequest {
@@ -302,7 +303,7 @@ message CMsgJoinableCustomLobbiesResponseEntry {
 }
 
 message CMsgJoinableCustomLobbiesResponse {
-	repeated .CMsgJoinableCustomLobbiesResponseEntry lobbies = 1;
+	repeated dota.CMsgJoinableCustomLobbiesResponseEntry lobbies = 1;
 }
 
 message CMsgQuickJoinCustomLobby {
@@ -315,23 +316,23 @@ message CMsgQuickJoinCustomLobby {
 	optional uint32 legacy_server_region = 1;
 	optional uint64 custom_game_id = 2;
 	optional uint32 client_version = 3;
-	optional .CMsgPracticeLobbySetDetails create_lobby_details = 4;
+	optional dota.CMsgPracticeLobbySetDetails create_lobby_details = 4;
 	optional bool allow_any_map = 5;
-	repeated .CMsgQuickJoinCustomLobby.LegacyRegionPing legacy_region_pings = 6;
-	optional .CMsgClientPingData ping_data = 7;
+	repeated dota.CMsgQuickJoinCustomLobby.LegacyRegionPing legacy_region_pings = 6;
+	optional dota.CMsgClientPingData ping_data = 7;
 }
 
 message CMsgQuickJoinCustomLobbyResponse {
-	optional .DOTAJoinLobbyResult result = 1 [default = DOTA_JOIN_RESULT_SUCCESS];
+	optional dota.DOTAJoinLobbyResult result = 1 [default = DOTA_JOIN_RESULT_SUCCESS];
 }
 
 message CMsgBotGameCreate {
 	optional string search_key = 1;
 	optional uint32 client_version = 2;
-	optional .DOTABotDifficulty difficulty_radiant = 3 [default = BOT_DIFFICULTY_PASSIVE];
-	optional .DOTA_GC_TEAM team = 4 [default = DOTA_GC_TEAM_GOOD_GUYS];
+	optional dota.DOTABotDifficulty difficulty_radiant = 3 [default = BOT_DIFFICULTY_PASSIVE];
+	optional dota.DOTA_GC_TEAM team = 4 [default = DOTA_GC_TEAM_GOOD_GUYS];
 	optional uint32 game_mode = 5;
-	optional .DOTABotDifficulty difficulty_dire = 6 [default = BOT_DIFFICULTY_PASSIVE];
+	optional dota.DOTABotDifficulty difficulty_dire = 6 [default = BOT_DIFFICULTY_PASSIVE];
 }
 
 message CMsgCustomGameCreate {
@@ -379,7 +380,7 @@ message CMsgDOTAGroupMergeResponse {
 }
 
 message CMsgDOTAGroupMergeReply {
-	optional .EDOTAGroupMergeResult result = 1 [default = k_EDOTAGroupMergeResult_OK];
+	optional dota.EDOTAGroupMergeResult result = 1 [default = k_EDOTAGroupMergeResult_OK];
 }
 
 message CMsgSpectatorLobbyGameDetails {
@@ -397,20 +398,20 @@ message CMsgSpectatorLobbyGameDetails {
 	optional uint32 league_id = 6;
 	optional uint32 series_type = 7;
 	optional uint32 series_game = 8;
-	optional .CMsgSpectatorLobbyGameDetails.Team radiant_team = 9;
-	optional .CMsgSpectatorLobbyGameDetails.Team dire_team = 10;
+	optional dota.CMsgSpectatorLobbyGameDetails.Team radiant_team = 9;
+	optional dota.CMsgSpectatorLobbyGameDetails.Team dire_team = 10;
 }
 
 message CMsgSetSpectatorLobbyDetails {
 	optional uint64 lobby_id = 1;
 	optional string lobby_name = 2;
 	optional string pass_key = 3;
-	optional .CMsgSpectatorLobbyGameDetails game_details = 4;
+	optional dota.CMsgSpectatorLobbyGameDetails game_details = 4;
 }
 
 message CMsgCreateSpectatorLobby {
 	optional uint32 client_version = 1;
-	optional .CMsgSetSpectatorLobbyDetails details = 2;
+	optional dota.CMsgSetSpectatorLobbyDetails details = 2;
 }
 
 message CMsgSpectatorLobbyList {
@@ -423,10 +424,10 @@ message CMsgSpectatorLobbyListResponse {
 		optional bool requires_pass_key = 3;
 		optional uint32 leader_account_id = 4;
 		optional uint32 member_count = 5;
-		optional .CMsgSpectatorLobbyGameDetails game_details = 7;
+		optional dota.CMsgSpectatorLobbyGameDetails game_details = 7;
 	}
 
-	repeated .CMsgSpectatorLobbyListResponse.SpectatorLobby lobbies = 1;
+	repeated dota.CMsgSpectatorLobbyListResponse.SpectatorLobby lobbies = 1;
 }
 
 message CMsgClientToGCRequestSteamDatagramTicket {

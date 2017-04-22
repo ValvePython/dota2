@@ -1,4 +1,5 @@
 syntax = "proto2";
+package dota;
 import "google/protobuf/descriptor.proto";
 
 option optimize_for = SPEED;
@@ -33,7 +34,7 @@ message CMsgProtoBufHeader {
 	optional string target_job_name = 12;
 	optional int32 eresult = 13 [default = 2];
 	optional string error_message = 14;
-	optional .GCProtoBufMsgSrc gc_msg_src = 200 [default = GCProtoBufMsgSrc_Unspecified];
+	optional dota.GCProtoBufMsgSrc gc_msg_src = 200 [default = GCProtoBufMsgSrc_Unspecified];
 	optional uint32 gc_dir_index_source = 201;
 }
 
@@ -59,9 +60,9 @@ message CMsgHttpRequest {
 	optional uint32 request_method = 1;
 	optional string hostname = 2;
 	optional string url = 3;
-	repeated .CMsgHttpRequest.RequestHeader headers = 4;
-	repeated .CMsgHttpRequest.QueryParam get_params = 5;
-	repeated .CMsgHttpRequest.QueryParam post_params = 6;
+	repeated dota.CMsgHttpRequest.RequestHeader headers = 4;
+	repeated dota.CMsgHttpRequest.QueryParam get_params = 5;
+	repeated dota.CMsgHttpRequest.QueryParam post_params = 6;
 	optional bytes body = 7;
 	optional uint32 absolute_timeout = 8;
 }
@@ -71,8 +72,8 @@ message CMsgWebAPIRequest {
 	optional string interface_name = 2;
 	optional string method_name = 3;
 	optional uint32 version = 4;
-	optional .CMsgWebAPIKey api_key = 5;
-	optional .CMsgHttpRequest request = 6;
+	optional dota.CMsgWebAPIKey api_key = 5;
+	optional dota.CMsgHttpRequest request = 6;
 	optional uint32 routing_app_id = 7;
 }
 
@@ -83,7 +84,7 @@ message CMsgHttpResponse {
 	}
 
 	optional uint32 status_code = 1;
-	repeated .CMsgHttpResponse.ResponseHeader headers = 2;
+	repeated dota.CMsgHttpResponse.ResponseHeader headers = 2;
 	optional bytes body = 3;
 }
 
@@ -117,7 +118,7 @@ message CMsgPackageLicense {
 }
 
 message CMsgAMGetLicensesResponse {
-	repeated .CMsgPackageLicense license = 1;
+	repeated dota.CMsgPackageLicense license = 1;
 	optional uint32 result = 2;
 }
 
@@ -142,8 +143,8 @@ message CMsgAMGetUserGameStatsResponse {
 	optional fixed64 steam_id = 1;
 	optional fixed64 game_id = 2;
 	optional int32 eresult = 3 [default = 2];
-	repeated .CMsgAMGetUserGameStatsResponse.Stats stats = 4;
-	repeated .CMsgAMGetUserGameStatsResponse.Achievement_Blocks achievement_blocks = 5;
+	repeated dota.CMsgAMGetUserGameStatsResponse.Stats stats = 4;
+	repeated dota.CMsgAMGetUserGameStatsResponse.Achievement_Blocks achievement_blocks = 5;
 }
 
 message CMsgGCGetCommandList {
@@ -165,7 +166,7 @@ message CGCMsgMemCachedGetResponse {
 		optional bytes value = 2;
 	}
 
-	repeated .CGCMsgMemCachedGetResponse.ValueTag values = 1;
+	repeated dota.CGCMsgMemCachedGetResponse.ValueTag values = 1;
 }
 
 message CGCMsgMemCachedSet {
@@ -174,7 +175,7 @@ message CGCMsgMemCachedSet {
 		optional bytes value = 2;
 	}
 
-	repeated .CGCMsgMemCachedSet.KeyPair keys = 1;
+	repeated dota.CGCMsgMemCachedSet.KeyPair keys = 1;
 }
 
 message CGCMsgMemCachedDelete {
@@ -244,7 +245,7 @@ message CIPLocationInfo {
 }
 
 message CGCMsgGetIPLocationResponse {
-	repeated .CIPLocationInfo infos = 1;
+	repeated dota.CIPLocationInfo infos = 1;
 }
 
 message CGCMsgGetIPASN {
@@ -257,7 +258,7 @@ message CIPASNInfo {
 }
 
 message CGCMsgGetIPASNResponse {
-	repeated .CIPASNInfo infos = 1;
+	repeated dota.CIPASNInfo infos = 1;
 }
 
 message CGCMsgSystemStatsSchema {
@@ -298,9 +299,9 @@ message CMsgAMSendEmail {
 	optional fixed64 steamid = 1;
 	optional uint32 email_msg_type = 2;
 	optional uint32 email_format = 3;
-	repeated .CMsgAMSendEmail.PersonaNameReplacementToken persona_name_tokens = 5;
+	repeated dota.CMsgAMSendEmail.PersonaNameReplacementToken persona_name_tokens = 5;
 	optional uint32 source_gc = 6;
-	repeated .CMsgAMSendEmail.ReplacementToken tokens = 7;
+	repeated dota.CMsgAMSendEmail.ReplacementToken tokens = 7;
 }
 
 message CMsgAMSendEmailResponse {
@@ -387,7 +388,7 @@ message CMsgGCGetPersonaNames_Response {
 		optional string persona_name = 2;
 	}
 
-	repeated .CMsgGCGetPersonaNames_Response.PersonaName succeeded_lookups = 1;
+	repeated dota.CMsgGCGetPersonaNames_Response.PersonaName succeeded_lookups = 1;
 	repeated fixed64 failed_lookup_steamids = 2;
 }
 
@@ -422,7 +423,7 @@ message CMsgGCMsgMasterSetDirectory {
 	}
 
 	optional uint32 master_dir_index = 1;
-	repeated .CMsgGCMsgMasterSetDirectory.SubGC dir = 2;
+	repeated dota.CMsgGCMsgMasterSetDirectory.SubGC dir = 2;
 }
 
 message CMsgGCMsgMasterSetDirectory_Response {
@@ -473,8 +474,8 @@ message CMsgGCRoutingInfo {
 	}
 
 	repeated uint32 dir_index = 1;
-	optional .CMsgGCRoutingInfo.RoutingMethod method = 2 [default = RANDOM];
-	optional .CMsgGCRoutingInfo.RoutingMethod fallback = 3 [default = DISCARD];
+	optional dota.CMsgGCRoutingInfo.RoutingMethod method = 2 [default = RANDOM];
+	optional dota.CMsgGCRoutingInfo.RoutingMethod fallback = 3 [default = DISCARD];
 	optional uint32 protobuf_field = 4;
 	optional string webapi_param = 5;
 }
@@ -483,19 +484,19 @@ message CMsgGCMsgMasterSetWebAPIRouting {
 	message Entry {
 		optional string interface_name = 1;
 		optional string method_name = 2;
-		optional .CMsgGCRoutingInfo routing = 3;
+		optional dota.CMsgGCRoutingInfo routing = 3;
 	}
 
-	repeated .CMsgGCMsgMasterSetWebAPIRouting.Entry entries = 1;
+	repeated dota.CMsgGCMsgMasterSetWebAPIRouting.Entry entries = 1;
 }
 
 message CMsgGCMsgMasterSetClientMsgRouting {
 	message Entry {
 		optional uint32 msg_type = 1;
-		optional .CMsgGCRoutingInfo routing = 2;
+		optional dota.CMsgGCRoutingInfo routing = 2;
 	}
 
-	repeated .CMsgGCMsgMasterSetClientMsgRouting.Entry entries = 1;
+	repeated dota.CMsgGCMsgMasterSetClientMsgRouting.Entry entries = 1;
 }
 
 message CMsgGCMsgMasterSetWebAPIRouting_Response {
@@ -524,9 +525,9 @@ message CMsgGCMsgSetOptions {
 		GCSQL_VERSION_BOOLTYPE = 2;
 	}
 
-	repeated .CMsgGCMsgSetOptions.Option options = 1;
-	repeated .CMsgGCMsgSetOptions.MessageRange client_msg_ranges = 2;
-	optional .CMsgGCMsgSetOptions.GCSQLVersion gcsql_version = 3 [default = GCSQL_VERSION_BASELINE];
+	repeated dota.CMsgGCMsgSetOptions.Option options = 1;
+	repeated dota.CMsgGCMsgSetOptions.MessageRange client_msg_ranges = 2;
+	optional dota.CMsgGCMsgSetOptions.GCSQLVersion gcsql_version = 3 [default = GCSQL_VERSION_BASELINE];
 }
 
 message CMsgGCHUpdateSession {
@@ -543,7 +544,7 @@ message CMsgGCHUpdateSession {
 	optional uint32 server_port = 6;
 	optional uint32 os_type = 7;
 	optional uint32 client_addr = 8;
-	repeated .CMsgGCHUpdateSession.ExtraField extra_fields = 9;
+	repeated dota.CMsgGCHUpdateSession.ExtraField extra_fields = 9;
 }
 
 message CMsgNotificationOfSuspiciousActivity {
@@ -554,7 +555,7 @@ message CMsgNotificationOfSuspiciousActivity {
 
 	optional fixed64 steamid = 1;
 	optional uint32 appid = 2;
-	optional .CMsgNotificationOfSuspiciousActivity.MultipleGameInstances multiple_instances = 3;
+	optional dota.CMsgNotificationOfSuspiciousActivity.MultipleGameInstances multiple_instances = 3;
 }
 
 message CMsgDPPartnerMicroTxns {
@@ -587,8 +588,8 @@ message CMsgDPPartnerMicroTxns {
 
 	optional uint32 appid = 1;
 	optional string gc_name = 2;
-	optional .CMsgDPPartnerMicroTxns.PartnerInfo partner = 3;
-	repeated .CMsgDPPartnerMicroTxns.PartnerMicroTxn transactions = 4;
+	optional dota.CMsgDPPartnerMicroTxns.PartnerInfo partner = 3;
+	repeated dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn transactions = 4;
 }
 
 message CMsgDPPartnerMicroTxnsResponse {
@@ -605,7 +606,7 @@ message CMsgDPPartnerMicroTxnsResponse {
 	}
 
 	optional uint32 eresult = 1 [default = 2];
-	optional .CMsgDPPartnerMicroTxnsResponse.EErrorCode eerrorcode = 2 [default = k_MsgValid];
+	optional dota.CMsgDPPartnerMicroTxnsResponse.EErrorCode eerrorcode = 2 [default = k_MsgValid];
 }
 
 message CMsgGCHVacVerificationChange {
