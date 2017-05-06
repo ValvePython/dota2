@@ -89,6 +89,8 @@ def find_proto(emsg):
             proto = getattr(module, emsg.name.replace("EMsgGC", "CMsg"), None)
         if proto is None:
             proto = getattr(module, emsg.name.replace("EMsgDOTA", "CMsg"), None)
+        if proto is None:
+            proto = getattr(module, emsg.name.replace("EMsg", "CMsgDOTA"), None)
 
         if proto is not None:
             break
