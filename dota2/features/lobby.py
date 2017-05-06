@@ -1,4 +1,4 @@
-from dota2.enums import ESOType, EGCBaseMsg, EDOTAGCMsg
+from dota2.enums import ESOType, EGCBaseMsg, EDOTAGCMsg, DOTA_GameMode, EServerRegion
 from dota2.enums import DOTAJoinLobbyResult, DOTA_GC_TEAM, DOTABotDifficulty
 
 
@@ -124,19 +124,56 @@ class Lobby(object):
 
         self.send(EDOTAGCMsg.EMsgGCPracticeLobbySetDetails, options)
 
-    def get_practice_lobby_list(self):
+    def get_lobby_list(self, server_region=EServerRegion.Unspecified, game_mode=DOTA_GameMode.DOTA_GAMEMODE_NONE):
         """
-        Request a list of practice lobbies.
+        Get a lobby list
 
+        .. note::
+            These are regular lobbies. (e.g. All pick, Captains Mode, etc)
+
+        :param server_region: limit to a specific server region
+        :type  server_region: :class:`.EServerRegion`
+        :param game_mode: limit to specific game mode, ``DOTA_GAMEMODE_NONE`` means any
+        :type  game_mode: :class:`.DOTA_GameMode`
+        :return: List of `CMsgPracticeLobbyListResponseEntry <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L202-L226>`_
+        :rtype: proto message, :class:`None`
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Requesting lobby list.")
+
+        jobid = self.send(EDOTAGCMsg.EMsgGCLobbyList,
+                          {
+                             'server_region': server_region,
+                             'game_mode': game_mode,
+                          })
+
+        resp = self.wait_msg(EDOTAGCMsg.EMsgGCLobbyListResponse, timeout=10)
+        return resp.lobbies if resp else None
+
+    def get_practice_lobby_list(self, tournament_games=False, password=''):
+        """
+        Get list of practice lobbies
+
+        .. note::
+            These are private Custom Game lobbies
+
+        :param tournament_games: whether to show tournament games only
+        :type  tournament_games: :class:`bool`
+        :param password: practice lobbies with this password
+        :type  password: :class:`str`
         :return: List of `CMsgPracticeLobbyListResponseEntry <https://github.com/ValvePython/dota2/blob/ca75440adca20d852b9aec3917e4387466848d5b/protobufs/dota_gcmessages_client_match_management.proto#L202-L226>`_
         :rtype: proto message, :class:`None`
         """
         if self.verbose_debug:
             self._LOG.debug("Requesting practice lobby list.")
 
-        jobid = self.send_job(EDOTAGCMsg.EMsgGCPracticeLobbyList, {})
-        resp = self.wait_msg(jobid, timeout=10)
+        jobid = self.send_job(EDOTAGCMsg.EMsgGCPracticeLobbyList,
+                             {
+                                'tournament_games': tournament_games,
+                                'pass_key': password,
+                             })
 
+        resp = self.wait_msg(jobid, timeout=10)
         return resp.lobbies if resp else None
 
     def get_friend_practice_lobby_list(self):
