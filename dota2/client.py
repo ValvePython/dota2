@@ -167,6 +167,27 @@ class Dota2Client(GameCoordinator, FeatureBase):
 
         return "job_%d" % jobid
 
+    def send_job_and_wait(self, emsg, data={}, proto=None, timeout=None, raises=False):
+        """
+        Send a message as a job and wait for the response.
+
+        .. note::
+            Not all messages are jobs, you'll have to find out which are which
+
+        :param emsg: Enum for the message
+        :param data: data for the proto message
+        :type data: :class:`dict`
+        :param proto: (optional) specify protobuf, otherwise it's detected based on ``emsg``
+        :param timeout: (optional) seconds to wait
+        :type timeout: :class:`int`
+        :param raises: (optional) On timeout if this is ``False`` method will return ``None``, else raises ``gevent.Timeout``
+        :type raises: :class:`bool`
+        :return: response proto message
+        :raises: ``gevent.Timeout``
+        """
+        job_id = self.send_job(emsg, data, proto)
+        return self.wait_msg(job_id, timeout, raises=raises)
+
     def send(self, emsg, data={}, proto=None):
         """
         Send a message
