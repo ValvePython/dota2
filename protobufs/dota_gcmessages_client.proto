@@ -207,6 +207,7 @@ message CMsgDOTAPopup {
 		LOW_BADGE_LEVEL_CHAT = 71;
 		LOW_WINS_CHAT = 72;
 		UNVERIFIED_USER_CHAT = 73;
+		PARTY_STARTED_FINDING_EVENT_MATCH = 74;
 		GENERIC_INFO = 69;
 		GENERIC_ERROR = 70;
 	}
@@ -417,9 +418,9 @@ message CMsgDOTAWelcome {
 	optional uint32 gc_socache_file_version = 22;
 	repeated dota.CMsgDOTAWelcome.LocalizationDigest localization_digests = 23;
 	optional bool is_perfect_world_test_account = 24;
-	repeated dota.EEvent active_events = 25;
 	repeated dota.CMsgDOTAWelcome.CExtraMsg extra_messages = 26;
 	optional uint64 minimum_recent_item_id = 27;
+	optional dota.EEvent active_event = 28 [default = EVENT_ID_NONE];
 }
 
 message CSODOTAGameHeroFavorites {
@@ -474,7 +475,6 @@ message CStaticLeagueData {
 	optional string loading_screen_name = 9;
 	optional uint32 base_prize_pool = 10;
 	optional bool is_major = 11;
-	optional uint32 sort_order = 12;
 	optional uint32 tier = 13;
 	optional uint32 amateur_region = 14;
 	optional string organizer = 15;
@@ -484,12 +484,17 @@ message CStaticLeagueData {
 	optional string inventory_image = 19;
 	optional string square_image = 20;
 	optional bool battle_pass_rollup = 21;
+	optional string base_prize_pool_string = 22;
 }
 
 message CLeagueData {
 	optional dota.CDynamicLeagueData dynamic_data = 1;
 	optional dota.CStaticLeagueData static_data = 2;
 	optional bool is_owned = 3;
+}
+
+message CMsgResponseLeagueStaticData {
+	repeated dota.CStaticLeagueData leagues = 1;
 }
 
 message CMsgResponseLeagueInfo {
@@ -1221,7 +1226,7 @@ message CMsgClientToGCRecordCompendiumStats {
 }
 
 message CMsgGCToClientEventStatusChanged {
-	repeated dota.EEvent active_events = 1;
+	optional dota.EEvent active_event = 2 [default = EVENT_ID_NONE];
 }
 
 message CMsgClientToGCPlayerStatsRequest {
@@ -1750,6 +1755,14 @@ message CMsgClientToGCRequestEventPointLogResponse {
 		optional uint32 correct_answers = 1;
 	}
 
+	message WeeklyGameEvent {
+		optional uint32 points_won = 1;
+	}
+
+	message ExploitCorrectionEvent {
+		optional uint32 points_corrected = 1;
+	}
+
 	message EventPointTransaction {
 		optional uint32 time = 1;
 		optional int32 event_points = 2;
@@ -1766,6 +1779,8 @@ message CMsgClientToGCRequestEventPointLogResponse {
 		optional dota.CMsgClientToGCRequestEventPointLogResponse.CorrectPredictionEvent prediction_event = 13;
 		optional dota.CMsgClientToGCRequestEventPointLogResponse.FantasyRewardEvent fantasy_reward_event = 15;
 		optional dota.CMsgClientToGCRequestEventPointLogResponse.BracketRewardEvent bracket_reward_event = 16;
+		optional dota.CMsgClientToGCRequestEventPointLogResponse.WeeklyGameEvent weekly_game_event = 19;
+		optional dota.CMsgClientToGCRequestEventPointLogResponse.ExploitCorrectionEvent exploit_correction_event = 20;
 	}
 
 	optional bool result = 1;
@@ -1935,7 +1950,7 @@ message CMsgClientToGCOpenPlayerCardPackResponse {
 }
 
 message CMsgClientToGCRecyclePlayerCard {
-	optional uint64 player_card_item_id = 1;
+	repeated uint64 player_card_item_ids = 3;
 	optional uint32 event_id = 2;
 }
 
@@ -1956,6 +1971,7 @@ message CMsgClientToGCRecyclePlayerCardResponse {
 message CMsgClientToGCCreatePlayerCardPack {
 	optional uint64 card_dust_item_id = 1;
 	optional uint32 event_id = 2;
+	optional bool premium_pack = 3;
 }
 
 message CMsgClientToGCCreatePlayerCardPackResponse {
@@ -2090,6 +2106,66 @@ message CMsgGCToClientBattlePassRollup_Fall2016 {
 	optional dota.CMsgGCToClientBattlePassRollup_Fall2016.FantasyChallenge fantasy_challenge = 9;
 }
 
+message CMsgGCToClientBattlePassRollup_Winter2017 {
+	message Questlines {
+		optional string name = 1;
+		optional uint32 onestar = 2;
+		optional uint32 twostar = 3;
+		optional uint32 threestar = 4;
+		optional uint32 total = 5;
+	}
+
+	message Wagering {
+		optional uint32 total_wagered = 1;
+		optional uint32 total_won = 2;
+		optional uint32 average_won = 3;
+		optional uint32 success_rate = 4;
+		optional uint32 total_tips = 5;
+	}
+
+	message Achievements {
+		optional uint32 completed = 1;
+		optional uint32 total = 2;
+		optional uint32 points = 3;
+	}
+
+	message BattleCup {
+		optional uint32 wins = 1;
+		optional uint32 score = 2;
+	}
+
+	message Predictions {
+		optional uint32 correct = 1;
+		optional uint32 total = 2;
+		optional uint32 points = 3;
+	}
+
+	message Bracket {
+		optional uint32 correct = 1;
+		optional uint32 points = 2;
+	}
+
+	message PlayerCard {
+		optional uint32 account_id = 1;
+		optional uint32 quality = 2;
+	}
+
+	message FantasyChallenge {
+		optional float total_score = 1;
+		optional float percentile = 2;
+	}
+
+	optional uint32 battle_pass_level = 1;
+	repeated dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines questlines = 2;
+	optional dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering wagering = 3;
+	optional dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements achievements = 4;
+	optional dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup battle_cup = 5;
+	optional dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions predictions = 6;
+	optional dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket bracket = 7;
+	repeated dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard player_cards = 8;
+	optional dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge fantasy_challenge = 9;
+}
+
 message CMsgGCToClientBattlePassRollupRequest {
 	optional uint32 event_id = 1;
 	optional uint32 account_id = 2;
@@ -2098,6 +2174,7 @@ message CMsgGCToClientBattlePassRollupRequest {
 message CMsgGCToClientBattlePassRollupResponse {
 	optional dota.CMsgGCToClientBattlePassRollup_International2016 event_ti6 = 1;
 	optional dota.CMsgGCToClientBattlePassRollup_Fall2016 event_fall2016 = 2;
+	optional dota.CMsgGCToClientBattlePassRollup_Winter2017 event_winter2017 = 3;
 }
 
 message CMsgGCToClientBattlePassRollupListRequest {
@@ -2197,7 +2274,8 @@ message CMsgClientToGCGiveTipResponse {
 		ERROR_INVALID_MATCH_TIME = 4;
 		ERROR_NOT_WINNER = 5;
 		ERROR_UNOWNED_EVENT = 6;
-		ERROR_UNKNOWN = 7;
+		ERROR_INVALID_LOBBY_TYPE = 7;
+		ERROR_UNKNOWN = 8;
 	}
 
 	optional dota.CMsgClientToGCGiveTipResponse.Result result = 1 [default = SUCCESS];
@@ -2236,5 +2314,30 @@ message CMsgGCToClientTipNotification {
 	optional uint32 recipient_account_id = 3;
 	optional string recipient_name = 4;
 	optional uint32 event_id = 5;
+}
+
+message CMsgGCToClientAllStarVotesRequest {
+	optional uint32 event_id = 1;
+}
+
+message CMsgGCToClientAllStarVotesReply {
+	repeated uint32 player_account_ids = 1;
+}
+
+message CMsgGCToClientAllStarVotesSubmit {
+	optional uint32 event_id = 1;
+	repeated uint32 player_account_ids = 2;
+}
+
+message CMsgGCToClientAllStarVotesSubmitReply {
+	enum Result {
+		SUCCESS = 1;
+		ERROR_INTERNAL = 2;
+		ERROR_INVALID_EVENT_ID = 3;
+		ERROR_INVALID_ACCOUNT_ID = 4;
+		ERROR_SELECTIONS_LOCKED = 5;
+	}
+
+	optional dota.CMsgGCToClientAllStarVotesSubmitReply.Result result = 1 [default = SUCCESS];
 }
 

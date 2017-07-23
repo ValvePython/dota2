@@ -63,7 +63,6 @@ message CSODOTAParty {
 	optional uint32 open_guild_id = 30;
 	repeated uint32 common_guilds = 31;
 	optional uint32 low_priority_games_remaining = 35;
-	repeated dota.EEvent active_ingame_events = 39;
 	optional bool open_for_join_requests = 40;
 	repeated dota.CSODOTAPartyInvite sent_invites = 41;
 	repeated dota.CSODOTAPartyInvite recv_invites = 42;
@@ -80,6 +79,7 @@ message CSODOTAParty {
 	optional uint32 party_builder_match_groups = 57;
 	optional uint32 party_builder_start_time = 58;
 	optional bool solo_queue = 59;
+	optional uint32 bot_script = 60;
 }
 
 message CSODOTAPartyInvite {
@@ -156,7 +156,7 @@ message CDOTALobbyMember {
 	repeated uint32 custom_game_product_ids = 31;
 	optional uint32 lobby_mvp_vote_account_id = 32;
 	optional dota.MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
-	optional uint32 favorite_team_and_quality = 34;
+	optional uint64 favorite_team_packed = 35;
 }
 
 message CLobbyTeamDetails {
@@ -278,7 +278,6 @@ message CSODOTALobby {
 	optional dota.EMatchOutcome match_outcome = 70 [default = k_EMatchOutcome_Unknown];
 	optional bool mass_disconnect = 67;
 	optional uint64 custom_game_id = 68;
-	repeated dota.EEvent active_ingame_events = 69;
 	optional uint32 custom_min_players = 71;
 	optional uint32 custom_max_players = 72;
 	optional dota.PartnerAccountType partner_type = 73 [default = PARTNER_NONE];
@@ -292,9 +291,6 @@ message CSODOTALobby {
 	repeated uint64 previous_series_matches = 81;
 	optional uint64 previous_match_override = 82;
 	optional bool custom_game_uses_account_records = 83;
-	optional uint32 league_selection_priority_team = 84;
-	optional dota.SelectionPriorityType league_selection_priority_choice = 85 [default = UNDEFINED];
-	optional dota.SelectionPriorityType league_non_selection_priority_choice = 86 [default = UNDEFINED];
 	optional uint32 game_start_time = 87;
 	optional dota.LobbyDotaPauseSetting pause_setting = 88 [default = LobbyDotaPauseSetting_Unlimited];
 	optional uint32 lobby_mvp_account_id = 89;
@@ -304,6 +300,12 @@ message CSODOTALobby {
 	optional dota.DOTABotDifficulty bot_difficulty_dire = 93 [default = BOT_DIFFICULTY_HARD];
 	optional uint64 bot_radiant = 94;
 	optional uint64 bot_dire = 95;
+	optional bool event_progression_enabled = 96;
+	optional dota.DOTASelectionPriorityRules selection_priority_rules = 97 [default = k_DOTASelectionPriorityRules_Manual];
+	optional uint32 series_previous_selection_priority_team_id = 98;
+	optional uint32 series_current_selection_priority_team_id = 99;
+	optional dota.DOTASelectionPriorityChoice series_current_priority_team_choice = 100 [default = k_DOTASelectionPriorityChoice_Invalid];
+	optional dota.DOTASelectionPriorityChoice series_current_non_priority_team_choice = 101 [default = k_DOTASelectionPriorityChoice_Invalid];
 }
 
 message CMsgLobbyPlaytestDetails {

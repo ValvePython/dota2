@@ -14,11 +14,11 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import dota2.protobufs.steammessages_pb2 as steammessages__pb2
-import dota2.protobufs.dota_shared_enums_pb2 as dota__shared__enums__pb2
-import dota2.protobufs.dota_client_enums_pb2 as dota__client__enums__pb2
-import dota2.protobufs.base_gcmessages_pb2 as base__gcmessages__pb2
-import dota2.protobufs.dota_gcmessages_common_match_management_pb2 as dota__gcmessages__common__match__management__pb2
+import dota2.protobufs.dota2.protobufs.steammessages_pb2 as steammessages__pb2
+import dota2.protobufs.dota2.protobufs.dota_shared_enums_pb2 as dota__shared__enums__pb2
+import dota2.protobufs.dota2.protobufs.dota_client_enums_pb2 as dota__client__enums__pb2
+import dota2.protobufs.dota2.protobufs.base_gcmessages_pb2 as base__gcmessages__pb2
+import dota2.protobufs.dota2.protobufs.dota_gcmessages_common_match_management_pb2 as dota__gcmessages__common__match__management__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
