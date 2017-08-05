@@ -2341,3 +2341,40 @@ message CMsgGCToClientAllStarVotesSubmitReply {
 	optional dota.CMsgGCToClientAllStarVotesSubmitReply.Result result = 1 [default = SUCCESS];
 }
 
+message CMsgDOTAClientToGCQuickStatsRequest {
+	optional uint32 player_account_id = 1;
+	optional uint32 hero_id = 2;
+	optional uint32 item_id = 3;
+	optional uint32 league_id = 4;
+}
+
+message CMsgDOTAClientToGCQuickStatsResponse {
+	message SimpleStats {
+		optional float win_percent = 1;
+		optional float pick_percent = 2;
+		optional uint32 win_count = 3;
+		optional uint32 pick_count = 4;
+	}
+
+	optional dota.CMsgDOTAClientToGCQuickStatsRequest original_request = 1;
+	optional dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats hero_stats = 2;
+	optional dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_stats = 3;
+	optional dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_hero_stats = 4;
+	optional dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats item_player_stats = 5;
+	optional dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats hero_player_stats = 6;
+	optional dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats full_set_stats = 7;
+}
+
+message CMsgDOTASelectionPriorityChoiceRequest {
+	optional dota.DOTASelectionPriorityChoice choice = 1 [default = k_DOTASelectionPriorityChoice_Invalid];
+}
+
+message CMsgDOTASelectionPriorityChoiceResponse {
+	enum Result {
+		SUCCESS = 0;
+		ERROR_UNKNOWN = 1;
+	}
+
+	optional dota.CMsgDOTASelectionPriorityChoiceResponse.Result result = 1 [default = SUCCESS];
+}
+

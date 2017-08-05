@@ -52,6 +52,7 @@ message CMsgStartFindingMatch {
 	optional dota.CMsgClientPingData ping_data = 12;
 	optional uint32 region_select_flags = 13;
 	optional bool solo_queue = 14;
+	optional uint64 bot_script = 15;
 }
 
 message CMsgStartFindingMatchResult {
@@ -125,13 +126,11 @@ message CMsgPracticeLobbySetDetails {
 	optional uint32 league_game_id = 36;
 	optional fixed32 custom_game_timestamp = 37;
 	optional uint64 previous_match_override = 38;
-	optional uint32 league_selection_priority_team = 39;
-	optional dota.SelectionPriorityType league_selection_priority_choice = 40 [default = UNDEFINED];
-	optional dota.SelectionPriorityType league_non_selection_priority_choice = 41 [default = UNDEFINED];
 	optional dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
 	optional dota.DOTABotDifficulty bot_difficulty_dire = 43 [default = BOT_DIFFICULTY_PASSIVE];
 	optional uint64 bot_radiant = 44;
 	optional uint64 bot_dire = 45;
+	optional dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
 }
 
 message CMsgPracticeLobbyCreate {
