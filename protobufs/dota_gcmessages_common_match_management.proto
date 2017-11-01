@@ -58,7 +58,6 @@ message CSODOTAParty {
 	optional uint32 match_disabled_account_id = 25;
 	optional uint32 matchmaking_max_range_minutes = 26;
 	optional uint32 matchlanguages = 27;
-	optional uint32 map_preference = 38;
 	repeated dota.CSODOTAPartyMember members = 29;
 	optional uint32 open_guild_id = 30;
 	repeated uint32 common_guilds = 31;
@@ -79,7 +78,8 @@ message CSODOTAParty {
 	optional uint32 party_builder_match_groups = 57;
 	optional uint32 party_builder_start_time = 58;
 	optional bool solo_queue = 59;
-	optional uint32 bot_script = 60;
+	optional uint32 bot_script_index = 60;
+	optional uint32 steam_clan_account_id = 61;
 }
 
 message CSODOTAPartyInvite {
@@ -157,6 +157,8 @@ message CDOTALobbyMember {
 	optional uint32 lobby_mvp_vote_account_id = 32;
 	optional dota.MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
 	optional uint64 favorite_team_packed = 35;
+	optional bool is_prime_subscriber = 36;
+	optional sint32 rank_tier = 37;
 }
 
 message CLobbyTeamDetails {
@@ -300,13 +302,15 @@ message CSODOTALobby {
 	optional dota.DOTABotDifficulty bot_difficulty_dire = 93 [default = BOT_DIFFICULTY_HARD];
 	optional uint64 bot_radiant = 94;
 	optional uint64 bot_dire = 95;
-	optional bool event_progression_enabled = 96;
+	repeated dota.EEvent event_progression_enabled = 96;
 	optional dota.DOTASelectionPriorityRules selection_priority_rules = 97 [default = k_DOTASelectionPriorityRules_Manual];
 	optional uint32 series_previous_selection_priority_team_id = 98;
 	optional uint32 series_current_selection_priority_team_id = 99;
 	optional dota.DOTASelectionPriorityChoice series_current_priority_team_choice = 100 [default = k_DOTASelectionPriorityChoice_Invalid];
 	optional dota.DOTASelectionPriorityChoice series_current_non_priority_team_choice = 101 [default = k_DOTASelectionPriorityChoice_Invalid];
 	optional bool series_current_selection_priority_used_coin_toss = 102;
+	optional dota.EEvent current_primary_event = 103 [default = EVENT_ID_NONE];
+	optional bool lowpri_deprecated = 104;
 }
 
 message CMsgLobbyPlaytestDetails {
