@@ -220,6 +220,10 @@ class SOCache(EventEmitter, dict):
         result = self._update_object(message.type_id, message.object_data)
         if result:
             type_id, obj = result
+
+            if self._dota.verbose_debug:
+                self._LOG.debug("Incoming: %s\n%s", repr(type_id), obj)
+
             self.emit(('updated', type_id), obj)
 
     def _handle_destroy(self, so):
@@ -266,6 +270,10 @@ class SOCache(EventEmitter, dict):
                 if not result: break
 
                 type_id, obj = result
+
+                if self._dota.verbose_debug:
+                    self._LOG.debug("Incoming: %s\n%s", repr(type_id), obj)
+
                 self.emit(('new', type_id), obj)
 
     def _handle_cache_unsubscribed(self, message):

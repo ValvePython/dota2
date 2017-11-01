@@ -65,6 +65,7 @@ class ESOType(IntEnum):
     CMsgDOTATournament = 2009
     CSODOTAPlayerChallenge = 2010
     CSODOTALobbyInvite = 2011
+    CSODOTAGameAccountPrime = 2012
 
 
 class EServerRegion(IntEnum):
