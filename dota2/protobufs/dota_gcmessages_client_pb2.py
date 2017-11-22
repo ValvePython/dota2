@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client.proto',
   package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x1c\x64ota_gcmessages_client.proto\x12\x04\x64ota\x1a\x13steammessages.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x1c\x64ota_gcmessages_common.proto\x1a\x16gcsdk_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"\'\n\x13\x43MsgClientSuspended\x12\x10\n\x08time_end\x18\x01 \x01(\r\" \n\x1e\x43MsgRequestInternationalTicket\"\x1a\n\x18\x43MsgBalancedShuffleLobby\"9\n CMsgInitialQuestionnaireResponse\x12\x15\n\rinitial_skill\x18\x01 \x01(\r\"/\n\x1a\x43MsgDOTAPlayerMatchHistory\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"o\n\x1a\x43MsgDOTAMatchHistoryFilter\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\x12%\n\x1dnewest_match_id_at_last_query\x18\x02 \x01(\x04\x12\x17\n\x0ftime_last_query\x18\x03 \x01(\r\"\xa6\x03\n\x16\x43MsgDOTARequestMatches\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x11\n\tgame_mode\x18\x03 \x01(\r\x12\x10\n\x08\x64\x61te_min\x18\x06 \x01(\x07\x12\x10\n\x08\x64\x61te_max\x18\x07 \x01(\x07\x12\x19\n\x11matches_requested\x18\n \x01(\r\x12\x19\n\x11start_at_match_id\x18\x0b \x01(\x04\x12\x13\n\x0bmin_players\x18\x0c \x01(\x07\x12\x12\n\nrequest_id\x18\r \x01(\r\x12\x1d\n\x15tournament_games_only\x18\x0e \x01(\x08\x12\x12\n\naccount_id\x18\x0f \x01(\r\x12\x11\n\tleague_id\x18\x10 \x01(\r\x12;\n\x05skill\x18\x11 \x01(\x0e\x32\'.dota.CMsgDOTARequestMatches.SkillLevel:\x03\x41ny\x12\x0f\n\x07team_id\x18\x12 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x14 \x01(\x04\"9\n\nSkillLevel\x12\x07\n\x03\x41ny\x10\x00\x12\n\n\x06Normal\x10\x01\x12\x08\n\x04High\x10\x02\x12\x0c\n\x08VeryHigh\x10\x03\"\xa1\x02\n\x1e\x43MsgDOTARequestMatchesResponse\x12$\n\x07matches\x18\x01 \x03(\x0b\x32\x13.dota.CMsgDOTAMatch\x12;\n\x06series\x18\x02 \x03(\x0b\x32+.dota.CMsgDOTARequestMatchesResponse.Series\x12\x12\n\nrequest_id\x18\x03 \x01(\r\x12\x15\n\rtotal_results\x18\x04 \x01(\r\x12\x19\n\x11results_remaining\x18\x05 \x01(\r\x1aV\n\x06Series\x12$\n\x07matches\x18\x01 \x03(\x0b\x32\x13.dota.CMsgDOTAMatch\x12\x11\n\tseries_id\x18\x02 \x01(\r\x12\x13\n\x0bseries_type\x18\x03 \x01(\r\"\xe2\x0e\n\rCMsgDOTAPopup\x12-\n\x02id\x18\x01 \x01(\x0e\x32\x1b.dota.CMsgDOTAPopup.PopupID:\x04NONE\x12\x13\n\x0b\x63ustom_text\x18\x02 \x01(\t\x12\x10\n\x08int_data\x18\x03 \x01(\x11\x12\x12\n\npopup_data\x18\x04 \x01(\x0c\x12\x18\n\x10loc_token_header\x18\x05 \x01(\t\x12\x15\n\rloc_token_msg\x18\x06 \x01(\t\x12\x11\n\tvar_names\x18\x07 \x03(\t\x12\x12\n\nvar_values\x18\x08 \x03(\t\x12\x12\n\ndebug_text\x18\t \x01(\t\"\xfa\x0c\n\x07PopupID\x12\x11\n\x04NONE\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x15\n\x11KICKED_FROM_LOBBY\x10\x00\x12\x15\n\x11KICKED_FROM_PARTY\x10\x01\x12\x14\n\x10KICKED_FROM_TEAM\x10\x02\x12\x16\n\x12TEAM_WAS_DISBANDED\x10\x03\x12 \n\x1cTEAM_MATCHMAKE_ALREADY_MATCH\x10\x04\x12\"\n\x1eTEAM_MATCHMAKE_ALREADY_FINDING\x10\x05\x12\x17\n\x13TEAM_MATCHMAKE_FULL\x10\x06\x12\x1b\n\x17TEAM_MATCHMAKE_FAIL_ADD\x10\x07\x12#\n\x1fTEAM_MATCHMAKE_FAIL_ADD_CURRENT\x10\x08\x12%\n!TEAM_MATCHMAKE_FAILED_TEAM_MEMBER\x10\t\x12\x1f\n\x1bTEAM_MATCHMAKE_ALREADY_GAME\x10\n\x12!\n\x1dTEAM_MATCHMAKE_FAIL_GET_PARTY\x10\x0b\x12\x18\n\x14MATCHMAKING_DISABLED\x10\x0c\x12\x11\n\rINVITE_DENIED\x10\r\x12\x0e\n\nPARTY_FULL\x10\x0e\x12\x0e\n\nMADE_ADMIN\x10\x0f\x12\x14\n\x10NEED_TO_PURCHASE\x10\x10\x12\x12\n\x0eSIGNON_MESSAGE\x10\x11\x12\x10\n\x0cGUILD_KICKED\x10\x12\x12\x1e\n\x1aMATCHMAKING_REGION_OFFLINE\x10\x13\x12\x1d\n\x19TOURNAMENT_GAME_NOT_FOUND\x10\x15\x12 \n\x1cTOURNAMENT_GAME_HAS_LOBBY_ID\x10\x16\x12 \n\x1cTOURNAMENT_GAME_HAS_MATCH_ID\x10\x17\x12\'\n#TOURNAMENT_GAME_HAS_NO_RADIANT_TEAM\x10\x18\x12$\n TOURNAMENT_GAME_HAS_NO_DIRE_TEAM\x10\x19\x12%\n!TOURNAMENT_GAME_SQL_UPDATE_FAILED\x10\x1a\x12\x14\n\x10NOT_LEAGUE_ADMIN\x10\x1b\x12\x13\n\x0fIN_ANOTHER_GAME\x10\x1d\x12 \n\x1cPARTY_MEMBER_IN_ANOTHER_GAME\x10\x1e\x12 \n\x1cPARTY_MEMBER_IN_LOW_PRIORITY\x10\x1f\x12\x16\n\x12\x43LIENT_OUT_OF_DATE\x10 \x12\x15\n\x11SAVE_GAME_CORRUPT\x10&\x12\x17\n\x13INSUFFICIENT_INGOTS\x10\'\x12\x39\n5COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_PLAY_MORE_CASUAL\x10*\x12\x1d\n\x19PARTY_LEADER_JOINED_LOBBY\x10,\x12\x1d\n\x19WEEKEND_TOURNEY_UNMATCHED\x10\x30\x12\x15\n\x11POST_MATCH_SURVEY\x10\x31\x12\x12\n\x0eTROPHY_AWARDED\x10\x32\x12\x13\n\x0fTROPHY_LEVEL_UP\x10\x33\x12\x1f\n\x1b\x41LL_HERO_CHALLENGE_PROGRESS\x10\x34\x12\x16\n\x12NEED_INITIAL_SKILL\x10\x35\x12\x1f\n\x1bNEED_INITIAL_SKILL_IN_PARTY\x10\x36\x12\x1a\n\x16TARGET_ENGINE_MISMATCH\x10\x37\x12\x14\n\x10VAC_NOT_VERIFIED\x10\x38\x12$\n KICKED_FROM_QUEUE_EVENT_STARTING\x10\x39\x12\"\n\x1eKICKED_FROM_QUEUE_EVENT_ENDING\x10:\x12\x0e\n\nLOBBY_FULL\x10>\x12\x17\n\x13\x45VENT_POINTS_EARNED\x10?\x12!\n\x1d\x43USTOM_GAME_INCORRECT_VERSION\x10@\x12\x15\n\x11LIMITED_USER_CHAT\x10\x42\x12\x1f\n\x1b\x45VENT_PREMIUM_POINTS_EARNED\x10\x43\x12\x15\n\x11LOBBY_MVP_AWARDED\x10\x44\x12\x18\n\x14LOW_BADGE_LEVEL_CHAT\x10G\x12\x11\n\rLOW_WINS_CHAT\x10H\x12\x18\n\x14UNVERIFIED_USER_CHAT\x10I\x12%\n!PARTY_STARTED_FINDING_EVENT_MATCH\x10J\x12\x10\n\x0cGENERIC_INFO\x10\x45\x12\x11\n\rGENERIC_ERROR\x10\x46\"!\n\x1f\x43MsgDOTAReportsRemainingRequest\"\xba\x01\n CMsgDOTAReportsRemainingResponse\x12&\n\x1enum_positive_reports_remaining\x18\x01 \x01(\r\x12&\n\x1enum_negative_reports_remaining\x18\x02 \x01(\r\x12\"\n\x1anum_positive_reports_total\x18\x03 \x01(\r\x12\"\n\x1anum_negative_reports_total\x18\x04 \x01(\r\"p\n\x1a\x43MsgDOTASubmitPlayerReport\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x14\n\x0creport_flags\x18\x02 \x01(\r\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\"|\n\"CMsgDOTASubmitPlayerReportResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x14\n\x0creport_flags\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\x15\n\rdebug_message\x18\x04 \x01(\t\"8\n\x1b\x43MsgDOTAReportCountsRequest\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\"\x9c\x01\n\x1c\x43MsgDOTAReportCountsResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x18\n\x10leadership_count\x18\x02 \x01(\r\x12\x16\n\x0eteaching_count\x18\x03 \x01(\r\x12\x16\n\x0e\x66riendly_count\x18\x04 \x01(\r\x12\x17\n\x0f\x66orgiving_count\x18\x05 \x01(\r\"7\n\x1a\x43MsgDOTASubmitLobbyMVPVote\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\"P\n\"CMsgDOTASubmitLobbyMVPVoteResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\"l\n\x1f\x43MsgDOTALobbyMVPNotifyRecipient\x12\x18\n\x10voter_account_id\x18\x01 \x01(\r\x12\x1c\n\x14recipient_account_id\x18\x02 \x01(\r\x12\x11\n\tnum_votes\x18\x03 \x01(\r\"1\n\x17\x43MsgDOTALobbyMVPAwarded\x12\x16\n\x0emvp_account_id\x18\x01 \x01(\r\"\\\n\"CMsgDOTAKickedFromMatchmakingQueue\x12\x36\n\nmatch_type\x18\x01 \x01(\x0e\x32\x0f.dota.MatchType:\x11MATCH_TYPE_CASUAL\"1\n\x18\x43MsgDOTARequestSaveGames\x12\x15\n\rserver_region\x18\x01 \x01(\r\"]\n CMsgDOTARequestSaveGamesResponse\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\'\n\nsave_games\x18\x02 \x03(\x0b\x32\x13.dota.CDOTASaveGame\"-\n\x19\x43MsgGCMatchDetailsRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\"\x8a\x01\n\x1a\x43MsgGCMatchDetailsResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\"\n\x05match\x18\x02 \x01(\x0b\x32\x13.dota.CMsgDOTAMatch\x12\x38\n\x04vote\x18\x03 \x01(\x0e\x32\x13.dota.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\"6\n!CMsgServerToGCMatchDetailsRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"J\n\"CMsgGCToServerMatchDetailsResponse\x12$\n\x07matches\x18\x01 \x03(\x0b\x32\x13.dota.CMsgDOTAMatch\"B\n\x16\x43MsgDOTAProfileRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0crequest_name\x18\x02 \x01(\x08\"\xe5\x06\n\x17\x43MsgDOTAProfileResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12;\n\x13game_account_client\x18\x02 \x01(\x0b\x32\x1e.dota.CSODOTAGameAccountClient\x12+\n\x0elatest_matches\x18\x03 \x03(\x0b\x32\x13.dota.CMsgDOTAMatch\x12\x38\n\x06heroes\x18\x04 \x03(\x0b\x32(.dota.CMsgDOTAProfileResponse.PlayedHero\x12\x13\n\x0bplayer_name\x18\x05 \x01(\t\x12\x11\n\tteam_name\x18\x06 \x01(\t\x12\x10\n\x08team_tag\x18\x07 \x01(\t\x12\x11\n\tteam_logo\x18\x08 \x01(\x04\x12\x41\n\rshowcase_hero\x18\t \x01(\x0b\x32*.dota.CMsgDOTAProfileResponse.ShowcaseHero\x12?\n\rleague_passes\x18\n \x03(\x0b\x32(.dota.CMsgDOTAProfileResponse.LeaguePass\x12@\n\revent_tickets\x18\x0b \x03(\x0b\x32).dota.CMsgDOTAProfileResponse.EventTicket\x12\x0f\n\x07team_id\x18\x0c \x01(\r\x12\x14\n\x0chas_passport\x18\r \x01(\x08\x12\x42\n\x0e\x66\x65\x61tured_items\x18\x0e \x03(\x0b\x32*.dota.CMsgDOTAProfileResponse.FeaturedItem\x12\x17\n\x0f\x61\x62\x61ndon_percent\x18\x0f \x01(\r\x1a+\n\nPlayedHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0c\n\x04wins\x18\x02 \x01(\r\x1a\x34\n\x0cShowcaseHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bobject_data\x18\x02 \x03(\x0c\x1a\x31\n\nLeaguePass\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x1a\x1f\n\x0b\x45ventTicket\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x1aH\n\x0c\x46\x65\x61turedItem\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x13\n\x0bobject_data\x18\x02 \x01(\x0c\x12\x12\n\nslot_index\x18\x03 \x01(\r\"\x91\x02\n\x16\x43MsgDOTAProfileTickets\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12>\n\rleague_passes\x18\x03 \x03(\x0b\x32\'.dota.CMsgDOTAProfileTickets.LeaguePass\x12?\n\revent_tickets\x18\x04 \x03(\x0b\x32(.dota.CMsgDOTAProfileTickets.EventTicket\x1a\x31\n\nLeaguePass\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x1a\x1f\n\x0b\x45ventTicket\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"5\n\x1f\x43MsgClientToGCGetProfileTickets\x12\x12\n\naccount_id\x18\x01 \x01(\r\"/\n\x19\x43MsgGCSteamProfileRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\"3\n!CMsgGCSteamProfileRequestResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"%\n#CMsgDOTAClearNotifySuccessfulReport\"\xd3\x07\n\x0f\x43MsgDOTAWelcome\x12\x17\n\x0fstore_item_hash\x18\x05 \x01(\r\x12\x1f\n\x17timeplayedconsecutively\x18\x06 \x01(\r\x12%\n\x1d\x61llow_3rd_party_match_history\x18\x07 \x01(\x08\x12\x44\n\x14partner_account_type\x18\x08 \x01(\x0e\x32\x18.dota.PartnerAccountType:\x0cPARTNER_NONE\x12 \n\x18\x62\x61nned_word_list_word_id\x18\t \x01(\r\x12\x1d\n\x15partner_account_state\x18\x0b \x01(\r\x12\x18\n\x10last_time_played\x18\x0c \x01(\r\x12\x17\n\x0flast_ip_address\x18\r \x01(\r\x12#\n\x1bshutdownlawterminateminutes\x18\x0f \x01(\r\x12 \n\x18\x62\x61nned_word_list_version\x18\x10 \x01(\r\x12\x17\n\x0fprofile_private\x18\x11 \x01(\x08\x12\x10\n\x08\x63urrency\x18\x12 \x01(\r\x12\x0f\n\x07\x62\x61ng_no\x18\x13 \x01(\r\x12$\n\x1cshould_request_player_origin\x18\x14 \x01(\x08\x12\x1a\n\x12\x63ompendium_unlocks\x18\x15 \x01(\x04\x12\x1f\n\x17gc_socache_file_version\x18\x16 \x01(\r\x12\x46\n\x14localization_digests\x18\x17 \x03(\x0b\x32(.dota.CMsgDOTAWelcome.LocalizationDigest\x12%\n\x1dis_perfect_world_test_account\x18\x18 \x01(\x08\x12\x37\n\x0e\x65xtra_messages\x18\x1a \x03(\x0b\x32\x1f.dota.CMsgDOTAWelcome.CExtraMsg\x12\x1e\n\x16minimum_recent_item_id\x18\x1b \x01(\x04\x12\x31\n\x0c\x61\x63tive_event\x18\x1c \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x1a\x98\x01\n\x12LocalizationDigest\x12\x0f\n\x07\x63ontext\x18\x01 \x01(\t\x12\x38\n\x1a\x65nglish_language_file_sha1\x18\x02 \x01(\x0b\x32\x14.dota.CMsgSHA1Digest\x12\x37\n\x19\x63lient_language_file_sha1\x18\x03 \x01(\x0b\x32\x14.dota.CMsgSHA1Digest\x1a)\n\tCExtraMsg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63ontents\x18\x02 \x01(\x0c\"K\n\x18\x43SODOTAGameHeroFavorites\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x15\n\x07hero_id\x18\x02 \x01(\rB\x04\x80\x97\"\x01\"+\n\x18\x43MsgDOTAHeroFavoritesAdd\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\".\n\x1b\x43MsgDOTAHeroFavoritesRemove\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"/\n\x13\x43MsgSetShowcaseHero\x12\x18\n\x10showcase_hero_id\x18\x01 \x01(\r\"0\n\x14\x43MsgSetFeaturedItems\x12\x18\n\x10\x66\x65\x61tured_item_id\x18\x01 \x03(\x04\"Z\n\x15\x43MsgDOTAFeaturedItems\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10\x66\x65\x61tured_item_id\x18\x02 \x03(\x04\x12\x13\n\x0bobject_data\x18\x03 \x03(\x0c\"\x17\n\x15\x43MsgRequestLeagueInfo\"\xd0\x01\n\x12\x43\x44ynamicLeagueData\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0flast_match_time\x18\x02 \x01(\x07\x12\x16\n\x0eprize_pool_usd\x18\x03 \x01(\r\x12\x18\n\x10has_live_matches\x18\x04 \x01(\x08\x12\x1c\n\x14is_compendium_public\x18\x05 \x01(\x08\x12\x1a\n\x12\x63ompendium_version\x18\x06 \x01(\r\x12\"\n\x1a\x63ompendium_content_version\x18\x07 \x01(\r\"\xde\x03\n\x11\x43StaticLeagueData\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0b\x62\x61nner_name\x18\x04 \x01(\t\x12\x14\n\x0citemdef_name\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x16\n\x0eitem_def_index\x18\x07 \x01(\r\x12\x1f\n\x17hud_skin_item_def_index\x18\x08 \x01(\r\x12\x1b\n\x13loading_screen_name\x18\t \x01(\t\x12\x17\n\x0f\x62\x61se_prize_pool\x18\n \x01(\r\x12\x10\n\x08is_major\x18\x0b \x01(\x08\x12\x0c\n\x04tier\x18\r \x01(\r\x12\x16\n\x0e\x61mateur_region\x18\x0e \x01(\r\x12\x11\n\torganizer\x18\x0f \x01(\t\x12\x12\n\nstart_date\x18\x10 \x01(\r\x12\x10\n\x08\x65nd_date\x18\x11 \x01(\r\x12\x10\n\x08location\x18\x12 \x01(\t\x12\x17\n\x0finventory_image\x18\x13 \x01(\t\x12\x14\n\x0csquare_image\x18\x14 \x01(\t\x12\x1a\n\x12\x62\x61ttle_pass_rollup\x18\x15 \x01(\x08\x12\x1e\n\x16\x62\x61se_prize_pool_string\x18\x16 \x01(\t\"}\n\x0b\x43LeagueData\x12.\n\x0c\x64ynamic_data\x18\x01 \x01(\x0b\x32\x18.dota.CDynamicLeagueData\x12,\n\x0bstatic_data\x18\x02 \x01(\x0b\x32\x17.dota.CStaticLeagueData\x12\x10\n\x08is_owned\x18\x03 \x01(\x08\"H\n\x1c\x43MsgResponseLeagueStaticData\x12(\n\x07leagues\x18\x01 \x03(\x0b\x32\x17.dota.CStaticLeagueData\"C\n\x16\x43MsgResponseLeagueInfo\x12)\n\x07leagues\x18\x01 \x03(\x0b\x32\x18.dota.CDynamicLeagueData\"\x8a\x01\n\x12\x43MsgDOTAMatchVotes\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x32\n\x05votes\x18\x02 \x03(\x0b\x32#.dota.CMsgDOTAMatchVotes.PlayerVote\x1a.\n\nPlayerVote\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04vote\x18\x02 \x01(\r\"_\n\x11\x43MsgCastMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x38\n\x04vote\x18\x02 \x01(\x0e\x32\x13.dota.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\">\n\x15\x43MsgRetrieveMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x13\n\x0bincremental\x18\x02 \x01(\r\"\x95\x01\n\x15\x43MsgMatchVoteResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x38\n\x04vote\x18\x02 \x01(\x0e\x32\x13.dota.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\x12\x16\n\x0epositive_votes\x18\x03 \x01(\r\x12\x16\n\x0enegative_votes\x18\x04 \x01(\r\"\xef\x02\n\x12\x43MsgDOTAHallOfFame\x12\x0c\n\x04week\x18\x01 \x01(\r\x12\x41\n\x10\x66\x65\x61tured_players\x18\x02 \x03(\x0b\x32\'.dota.CMsgDOTAHallOfFame.FeaturedPlayer\x12@\n\x0f\x66\x65\x61tured_farmer\x18\x03 \x01(\x0b\x32\'.dota.CMsgDOTAHallOfFame.FeaturedFarmer\x1ag\n\x0e\x46\x65\x61turedPlayer\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x1d\n\x15\x61verage_scaled_metric\x18\x03 \x01(\x02\x12\x11\n\tnum_games\x18\x04 \x01(\r\x1a]\n\x0e\x46\x65\x61turedFarmer\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x14\n\x0cgold_per_min\x18\x03 \x01(\r\x12\x10\n\x08match_id\x18\x04 \x01(\x04\")\n\x19\x43MsgDOTAHallOfFameRequest\x12\x0c\n\x04week\x18\x01 \x01(\r\"`\n\x1a\x43MsgDOTAHallOfFameResponse\x12.\n\x0chall_of_fame\x18\x01 \x01(\x0b\x32\x18.dota.CMsgDOTAHallOfFame\x12\x12\n\x07\x65result\x18\x02 \x01(\r:\x01\x32\"6\n!CMsgDOTAHalloweenHighScoreRequest\x12\x11\n\x05round\x18\x01 \x01(\x05:\x02-1\"w\n\"CMsgDOTAHalloweenHighScoreResponse\x12\r\n\x05score\x18\x01 \x01(\r\x12\"\n\x05match\x18\x02 \x01(\x0b\x32\x13.dota.CMsgDOTAMatch\x12\x0f\n\x07\x65result\x18\x03 \x01(\r\x12\r\n\x05round\x18\x04 \x01(\x05\"6\n\x1e\x43MsgDOTAStorePromoPagesRequest\x12\x14\n\x0cversion_seen\x18\x01 \x01(\r\"\x9c\x01\n\x1f\x43MsgDOTAStorePromoPagesResponse\x12>\n\x05pages\x18\x01 \x03(\x0b\x32/.dota.CMsgDOTAStorePromoPagesResponse.PromoPage\x1a\x39\n\tPromoPage\x12\x10\n\x08promo_id\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\"\xb0\x01\n\x1d\x43MsgMatchmakingMatchGroupInfo\x12\x19\n\x11players_searching\x18\x01 \x01(\r\x12\'\n\x1f\x61uto_region_select_ping_penalty\x18\x02 \x01(\x11\x12K\n\x06status\x18\x03 \x01(\x0e\x32\x1d.dota.EMatchGroupServerStatus:\x1ck_EMatchGroupServerStatus_OK\"!\n\x1f\x43MsgDOTAMatchmakingStatsRequest\"\xad\x01\n CMsgDOTAMatchmakingStatsResponse\x12\x1b\n\x13matchgroups_version\x18\x01 \x01(\r\x12\x31\n)legacy_searching_players_by_group_source2\x18\x07 \x03(\r\x12\x39\n\x0cmatch_groups\x18\x08 \x03(\x0b\x32#.dota.CMsgMatchmakingMatchGroupInfo\"W\n\x1e\x43MsgDOTAUpdateMatchmakingStats\x12\x35\n\x05stats\x18\x01 \x01(\x0b\x32&.dota.CMsgDOTAMatchmakingStatsResponse\"[\n\"CMsgDOTAUpdateMatchManagementStats\x12\x35\n\x05stats\x18\x01 \x01(\x0b\x32&.dota.CMsgDOTAMatchmakingStatsResponse\"F\n\x1d\x43MsgDOTASetMatchHistoryAccess\x12%\n\x1d\x61llow_3rd_party_match_history\x18\x01 \x01(\x08\";\n%CMsgDOTASetMatchHistoryAccessResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"L\n CMsgDOTANotifyAccountFlagsChange\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x15\n\raccount_flags\x18\x02 \x01(\r\"4\n\x19\x43MsgDOTASetProfilePrivacy\x12\x17\n\x0fprofile_private\x18\x01 \x01(\x08\"4\n!CMsgDOTASetProfilePrivacyResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\"<\n\x15\x43MsgUpgradeLeagueItem\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tleague_id\x18\x02 \x01(\r\"\x1f\n\x1d\x43MsgUpgradeLeagueItemResponse\"y\n\x1b\x43MsgGCWatchDownloadedReplay\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12H\n\nwatch_type\x18\x02 \x01(\x0e\x32\x1a.dota.DOTA_WatchReplayType:\x18\x44OTA_WATCH_REPLAY_NORMAL\"A\n\x17\x43MsgSetMapLocationState\x12\x13\n\x0blocation_id\x18\x01 \x01(\x05\x12\x11\n\tcompleted\x18\x02 \x01(\x08\"5\n\x1f\x43MsgSetMapLocationStateResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"\x17\n\x15\x43MsgResetMapLocations\"3\n\x1d\x43MsgResetMapLocationsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"5\n\x1d\x43MsgRefreshPartnerAccountLink\x12\x14\n\x0cpartner_type\x18\x01 \x01(\x05\"\x1f\n\x1d\x43MsgClientsRejoinChatChannels\".\n\x1a\x43MsgDOTASendFriendRecruits\x12\x10\n\x08recruits\x18\x01 \x03(\r\"4\n\x1d\x43MsgDOTAFriendRecruitsRequest\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\x91\x03\n\x1e\x43MsgDOTAFriendRecruitsResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.dota.CMsgDOTAFriendRecruitsResponse.EResult:\x07SUCCESS\x12J\n\x08recruits\x18\x02 \x03(\x0b\x32\x38.dota.CMsgDOTAFriendRecruitsResponse.FriendRecruitStatus\x12L\n\nrecruiters\x18\x03 \x03(\x0b\x32\x38.dota.CMsgDOTAFriendRecruitsResponse.FriendRecruitStatus\x1a_\n\x13\x46riendRecruitStatus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x15\n\rlevels_earned\x18\x03 \x01(\r\x12\r\n\x05\x62onus\x18\x04 \x01(\x08\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"P\n(CMsgDOTAFriendRecruitInviteAcceptDecline\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x01 \x01(\x08\x12\x12\n\naccount_id\x18\x02 \x01(\r\"/\n\x1a\x43MsgRequestLeaguePrizePool\x12\x11\n\tleague_id\x18\x01 \x01(\r\"K\n\"CMsgRequestLeaguePrizePoolResponse\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x12\n\nprize_pool\x18\x02 \x01(\r\"\x18\n\x16\x43MsgGCGetHeroStandings\"\xf0\x03\n\x1e\x43MsgGCGetHeroStandingsResponse\x12<\n\tstandings\x18\x01 \x03(\x0b\x32).dota.CMsgGCGetHeroStandingsResponse.Hero\x1a\x8f\x03\n\x04Hero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0c\n\x04wins\x18\x02 \x01(\r\x12\x0e\n\x06losses\x18\x03 \x01(\r\x12\x12\n\nwin_streak\x18\x04 \x01(\r\x12\x17\n\x0f\x62\x65st_win_streak\x18\x05 \x01(\r\x12\x11\n\tavg_kills\x18\x06 \x01(\x02\x12\x12\n\navg_deaths\x18\x07 \x01(\x02\x12\x13\n\x0b\x61vg_assists\x18\x08 \x01(\x02\x12\x0f\n\x07\x61vg_gpm\x18\t \x01(\x02\x12\x0f\n\x07\x61vg_xpm\x18\n \x01(\x02\x12\x12\n\nbest_kills\x18\x0b \x01(\r\x12\x14\n\x0c\x62\x65st_assists\x18\x0c \x01(\r\x12\x10\n\x08\x62\x65st_gpm\x18\r \x01(\r\x12\x10\n\x08\x62\x65st_xpm\x18\x0e \x01(\r\x12\x13\n\x0bperformance\x18\x0f \x01(\x02\x12\x16\n\x0ewins_with_ally\x18\x10 \x01(\r\x12\x18\n\x10losses_with_ally\x18\x11 \x01(\r\x12\x1a\n\x12wins_against_enemy\x18\x12 \x01(\r\x12\x1c\n\x14losses_against_enemy\x18\x13 \x01(\r\"%\n#CMsgGCItemEditorReservationsRequest\">\n\x1b\x43MsgGCItemEditorReservation\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"_\n$CMsgGCItemEditorReservationsResponse\x12\x37\n\x0creservations\x18\x01 \x03(\x0b\x32!.dota.CMsgGCItemEditorReservation\"E\n\x1e\x43MsgGCItemEditorReserveItemDef\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\"]\n&CMsgGCItemEditorReserveItemDefResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0e\n\x06result\x18\x03 \x01(\r\"I\n\"CMsgGCItemEditorReleaseReservation\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\"Q\n*CMsgGCItemEditorReleaseReservationResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08released\x18\x02 \x01(\x08\"6\n!CMsgGCItemEditorRequestLeagueInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xba\x01\n\"CMsgGCItemEditorLeagueInfoResponse\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x13\n\x0bleague_name\x18\x02 \x01(\t\x12\x13\n\x0bleague_desc\x18\x03 \x01(\t\x12\x12\n\nleague_url\x18\x04 \x01(\t\x12\x13\n\x0brevenue_url\x18\x05 \x01(\t\x12\x0c\n\x04tier\x18\x06 \x01(\r\x12\x10\n\x08location\x18\x07 \x01(\r\x12\x0e\n\x06result\x18\x08 \x01(\r\"J\n\x1c\x43MsgDOTARewardTutorialPrizes\x12\x13\n\x0blocation_id\x18\x01 \x01(\r\x12\x15\n\rtracking_only\x18\x02 \x01(\x08\"L\n%CMsgDOTALastHitChallengeHighScorePost\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhigh_score\x18\x02 \x01(\r\";\n(CMsgDOTALastHitChallengeHighScoreRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"K\n)CMsgDOTALastHitChallengeHighScoreResponse\x12\r\n\x05score\x18\x01 \x01(\r\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\"\x14\n\x12\x43MsgFlipLobbyTeams\"!\n\x1f\x43MsgPresentedClientTerminateDlg\"}\n%CMsgGCLobbyUpdateBroadcastChannelInfo\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\"Q\n\x18\x43MsgDOTAClaimEventAction\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x11\n\taction_id\x18\x02 \x01(\r\x12\x10\n\x08quantity\x18\x03 \x01(\r\"\x84\x05\n CMsgDOTAClaimEventActionResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTAClaimEventActionResponse.ResultCode:\x07Success\x12P\n\x0ereward_results\x18\x02 \x03(\x0b\x32\x38.dota.CMsgDOTAClaimEventActionResponse.GrantedRewardData\x1a@\n\x15MysteryItemRewardData\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x15\n\ritem_category\x18\x02 \x01(\r\x1a&\n\x12LootListRewardData\x12\x10\n\x08item_def\x18\x01 \x03(\r\x1ah\n\x11GrantedRewardData\x12\x13\n\x0bgrant_index\x18\x01 \x01(\r\x12\x13\n\x0bscore_index\x18\x02 \x01(\r\x12\x14\n\x0creward_index\x18\x03 \x01(\r\x12\x13\n\x0breward_data\x18\x04 \x01(\x0c\"\xed\x01\n\nResultCode\x12\x0b\n\x07Success\x10\x00\x12\x10\n\x0cInvalidEvent\x10\x01\x12\x12\n\x0e\x45ventNotActive\x10\x02\x12\x11\n\rInvalidAction\x10\x03\x12\x0f\n\x0bServerError\x10\x04\x12\x16\n\x12InsufficientPoints\x10\x05\x12\x14\n\x10InsufficentLevel\x10\x06\x12\x12\n\x0e\x41lreadyClaimed\x10\x07\x12\x12\n\x0eSDOLockFailure\x10\x08\x12\x12\n\x0eSDOLoadFailure\x10\t\x12\x11\n\rEventNotOwned\x10\n\x12\x0b\n\x07Timeout\x10\x0b\">\n\x16\x43MsgDOTAGetEventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\xc8\x02\n\x1e\x43MsgDOTAGetEventPointsResponse\x12\x14\n\x0ctotal_points\x18\x01 \x01(\r\x12\x1c\n\x14total_premium_points\x18\x02 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\x12\x0e\n\x06points\x18\x04 \x01(\r\x12\x16\n\x0epremium_points\x18\x05 \x01(\r\x12\x46\n\x11\x63ompleted_actions\x18\x06 \x03(\x0b\x32+.dota.CMsgDOTAGetEventPointsResponse.Action\x12\x12\n\naccount_id\x18\x07 \x01(\r\x12\r\n\x05owned\x18\x08 \x01(\x08\x12\x14\n\x0c\x61udit_action\x18\t \x01(\r\x1a\x37\n\x06\x41\x63tion\x12\x11\n\taction_id\x18\x01 \x01(\r\x12\x1a\n\x0ftimes_completed\x18\x02 \x01(\r:\x01\x31\"b\n\x1b\x43MsgDOTAGetPeriodicResource\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1c\n\x14periodic_resource_id\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\"d\n#CMsgDOTAGetPeriodicResourceResponse\x12\x1d\n\x15periodic_resource_max\x18\x01 \x01(\r\x12\x1e\n\x16periodic_resource_used\x18\x02 \x01(\r\"\xaf\x01\n\x1f\x43MsgDOTAPeriodicResourceUpdated\x12@\n\x15periodic_resource_key\x18\x01 \x01(\x0b\x32!.dota.CMsgDOTAGetPeriodicResource\x12J\n\x17periodic_resource_value\x18\x02 \x01(\x0b\x32).dota.CMsgDOTAGetPeriodicResourceResponse\"9\n\x1c\x43MsgDOTALiveLeagueGameUpdate\x12\x19\n\x11live_league_games\x18\x01 \x01(\r\"[\n\x1b\x43MsgDOTACompendiumSelection\x12\x17\n\x0fselection_index\x18\x01 \x01(\r\x12\x11\n\tselection\x18\x02 \x01(\r\x12\x10\n\x08leagueid\x18\x03 \x01(\r\"v\n#CMsgDOTACompendiumSelectionResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12;\n\x10\x65xtra_selections\x18\x02 \x03(\x0b\x32!.dota.CMsgDOTACompendiumSelection\"O\n\x16\x43MsgDOTACompendiumData\x12\x35\n\nselections\x18\x01 \x03(\x0b\x32!.dota.CMsgDOTACompendiumSelection\"E\n\x1d\x43MsgDOTACompendiumDataRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08leagueid\x18\x02 \x01(\r\"\x90\x01\n\x1e\x43MsgDOTACompendiumDataResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08leagueid\x18\x02 \x01(\r\x12\x11\n\x06result\x18\x03 \x01(\r:\x01\x32\x12\x35\n\x0f\x63ompendium_data\x18\x04 \x01(\x0b\x32\x1c.dota.CMsgDOTACompendiumData\"\xeb\x01\n\x1d\x43MsgDOTAGetPlayerMatchHistory\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x19\n\x11start_at_match_id\x18\x02 \x01(\x04\x12\x19\n\x11matches_requested\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x12\n\nrequest_id\x18\x05 \x01(\r\x12 \n\x18include_practice_matches\x18\x07 \x01(\x08\x12\x1c\n\x14include_custom_games\x18\x08 \x01(\x08\x12\x1b\n\x13include_event_games\x18\t \x01(\x08\"\xbc\x04\n%CMsgDOTAGetPlayerMatchHistoryResponse\x12\x42\n\x07matches\x18\x01 \x03(\x0b\x32\x31.dota.CMsgDOTAGetPlayerMatchHistoryResponse.Match\x12\x12\n\nrequest_id\x18\x02 \x01(\r\x1a\xba\x03\n\x05Match\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06winner\x18\x04 \x01(\x08\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12\x13\n\x0brank_change\x18\x06 \x01(\x05\x12\x15\n\rprevious_rank\x18\x07 \x01(\r\x12\x12\n\nlobby_type\x18\x08 \x01(\r\x12\x11\n\tsolo_rank\x18\t \x01(\x08\x12\x0f\n\x07\x61\x62\x61ndon\x18\n \x01(\x08\x12\x10\n\x08\x64uration\x18\x0b \x01(\r\x12\x0e\n\x06\x65ngine\x18\x0c \x01(\r\x12!\n\x19\x61\x63tive_prime_subscription\x18\r \x01(\x08\x12\x15\n\rseasonal_rank\x18\x0e \x01(\x08\x12\x12\n\ntourney_id\x18\x0f \x01(\r\x12\x15\n\rtourney_round\x18\x10 \x01(\r\x12\x14\n\x0ctourney_tier\x18\x11 \x01(\r\x12\x18\n\x10tourney_division\x18\x12 \x01(\r\x12\x0f\n\x07team_id\x18\x13 \x01(\r\x12\x11\n\tteam_name\x18\x14 \x01(\t\x12\x18\n\x10ugc_team_ui_logo\x18\x15 \x01(\x04\"!\n\x1f\x43MsgDOTAStartDailyHeroChallenge\"\x1c\n\x1a\x43MsgGCNotificationsRequest\"\xf5\x02\n\x1b\x43MsgGCNotificationsResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).dota.CMsgGCNotificationsResponse.EResult:\x07SUCCESS\x12\x45\n\rnotifications\x18\x02 \x03(\x0b\x32..dota.CMsgGCNotificationsResponse.Notification\x1a\x9b\x01\n\x0cNotification\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x13\n\x0breference_a\x18\x04 \x01(\r\x12\x13\n\x0breference_b\x18\x05 \x01(\r\x12\x13\n\x0breference_c\x18\x06 \x01(\r\x12\x0f\n\x07message\x18\x07 \x01(\t\x12\x0e\n\x06unread\x18\x08 \x01(\x08\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"$\n\"CMsgGCNotificationsMarkReadRequest\"B\n&CMsgClientToGCMarkNotificationListRead\x12\x18\n\x10notification_ids\x18\x01 \x03(\x04\"\xa2\x01\n\x16\x43MsgGCLeagueAdminState\x12\x0f\n\x07leagues\x18\x01 \x03(\r\x12<\n\x04keys\x18\x02 \x03(\x0b\x32..dota.CMsgGCLeagueAdminState.PrivateLeagueKeys\x1a\x39\n\x11PrivateLeagueKeys\x12\x10\n\x08leagueid\x18\x01 \x01(\r\x12\x12\n\nprivatekey\x18\x02 \x01(\r\"\x8e\x01\n\x17\x43MsgGCPlayerInfoRequest\x12>\n\x0cplayer_infos\x18\x01 \x03(\x0b\x32(.dota.CMsgGCPlayerInfoRequest.PlayerInfo\x1a\x33\n\nPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\"t\n\x16\x43MsgGCPlayerInfoSubmit\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x14\n\x0c\x66\x61ntasy_role\x18\x03 \x01(\r\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x0f\n\x07sponsor\x18\x05 \x01(\t\"\xad\x01\n\x1e\x43MsgGCPlayerInfoSubmitResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.dota.CMsgGCPlayerInfoSubmitResponse.EResult:\x07SUCCESS\"D\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x15\n\x11\x45RROR_INFO_LOCKED\x10\x02\"\xab\x01\n\x1d\x43MsgClientProvideSurveyResult\x12?\n\tresponses\x18\x01 \x03(\x0b\x32,.dota.CMsgClientProvideSurveyResult.Response\x12\x12\n\nsurvey_key\x18\x02 \x01(\x04\x1a\x35\n\x08Response\x12\x13\n\x0bquestion_id\x18\x01 \x01(\r\x12\x14\n\x0csurvey_value\x18\x02 \x01(\r\"K\n\x19\x43MsgDOTAEmoticonAccessSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1a\n\x12unlocked_emoticons\x18\x02 \x01(\x0c\"#\n!CMsgClientToGCEmoticonDataRequest\"V\n\x1a\x43MsgGCToClientEmoticonData\x12\x38\n\x0f\x65moticon_access\x18\x01 \x01(\x0b\x32\x1f.dota.CMsgDOTAEmoticonAccessSDO\"C\n\x1f\x43MsgClientToGCTrackDialogResult\x12\x11\n\tdialog_id\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\"H\n CMsgGCToClientTournamentItemDrop\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x12\n\nevent_type\x18\x02 \x01(\r\"O\n!CMsgClientToGCSetAdditionalEquips\x12*\n\x06\x65quips\x18\x01 \x03(\x0b\x32\x1a.dota.CAdditionalEquipSlot\"+\n)CMsgClientToGCSetAdditionalEquipsResponse\"#\n!CMsgClientToGCGetAdditionalEquips\"W\n)CMsgClientToGCGetAdditionalEquipsResponse\x12*\n\x06\x65quips\x18\x01 \x03(\x0b\x32\x1a.dota.CAdditionalEquipSlot\"\x1f\n\x1d\x43MsgClientToGCGetAllHeroOrder\"9\n%CMsgClientToGCGetAllHeroOrderResponse\x12\x10\n\x08hero_ids\x18\x01 \x03(\r\"6\n CMsgClientToGCGetAllHeroProgress\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\x99\x04\n(CMsgClientToGCGetAllHeroProgressResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63urr_hero_id\x18\x02 \x01(\r\x12\x16\n\x0elaps_completed\x18\x03 \x01(\r\x12\x17\n\x0f\x63urr_hero_games\x18\x04 \x01(\r\x12\x1d\n\x15\x63urr_lap_time_started\x18\x05 \x01(\r\x12\x16\n\x0e\x63urr_lap_games\x18\x06 \x01(\r\x12\x16\n\x0e\x62\x65st_lap_games\x18\x07 \x01(\r\x12\x15\n\rbest_lap_time\x18\x08 \x01(\r\x12\x1c\n\x14lap_heroes_completed\x18\t \x01(\r\x12\x1c\n\x14lap_heroes_remaining\x18\n \x01(\r\x12\x14\n\x0cnext_hero_id\x18\x0b \x01(\r\x12\x14\n\x0cprev_hero_id\x18\x0c \x01(\r\x12\x17\n\x0fprev_hero_games\x18\r \x01(\r\x12\x16\n\x0eprev_avg_tries\x18\x0e \x01(\x02\x12\x16\n\x0e\x63urr_avg_tries\x18\x0f \x01(\x02\x12\x16\n\x0enext_avg_tries\x18\x10 \x01(\x02\x12\x1a\n\x12\x66ull_lap_avg_tries\x18\x11 \x01(\x02\x12\x1a\n\x12\x63urr_lap_avg_tries\x18\x12 \x01(\x02\x12\x14\n\x0cprofile_name\x18\x13 \x01(\t\x12\x15\n\rstart_hero_id\x18\x14 \x01(\r\"1\n\x1b\x43MsgClientToGCGetTrophyList\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xdc\x01\n#CMsgClientToGCGetTrophyListResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x42\n\x08trophies\x18\x02 \x03(\x0b\x32\x30.dota.CMsgClientToGCGetTrophyListResponse.Trophy\x12\x14\n\x0cprofile_name\x18\x03 \x01(\t\x1aG\n\x06Trophy\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x12\x14\n\x0clast_updated\x18\x03 \x01(\r\"v\n\x1b\x43MsgGCToClientTrophyAwarded\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x12\x18\n\x10trophy_old_score\x18\x03 \x01(\r\x12\x14\n\x0clast_updated\x18\x04 \x01(\r\"2\n\x1c\x43MsgClientToGCGetProfileCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xe2\x01\n!CMsgClientToGCSetProfileCardSlots\x12?\n\x05slots\x18\x01 \x03(\x0b\x32\x30.dota.CMsgClientToGCSetProfileCardSlots.CardSlot\x1a|\n\x08\x43\x61rdSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12K\n\tslot_type\x18\x02 \x01(\x0e\x32\x1a.dota.EProfileCardSlotType:\x1ck_EProfileCardSlotType_Empty\x12\x12\n\nslot_value\x18\x03 \x01(\x04\"#\n!CMsgClientToGCGetProfileCardStats\"\xd4\x01\n\x1e\x43MsgClientToGCCreateHeroStatue\x12\x13\n\x0bsource_item\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x15\n\rsequence_name\x18\x04 \x01(\t\x12\r\n\x05\x63ycle\x18\x05 \x01(\x02\x12\x11\n\twearables\x18\x06 \x03(\r\x12\x13\n\x0binscription\x18\x07 \x01(\t\x12\x0e\n\x06styles\x18\x08 \x03(\r\x12\x15\n\rreforger_item\x18\t \x01(\x04\x12\x17\n\x0ftournament_drop\x18\n \x01(\x08\">\n$CMsgGCToClientHeroStatueCreateResult\x12\x16\n\x0eresulting_item\x18\x01 \x01(\x04\"\x94\x01\n#CMsgClientToGCRecordCompendiumStats\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fview_duration_s\x18\x02 \x01(\r\x12\x15\n\rvideos_viewed\x18\x03 \x01(\r\x12\x12\n\npage_turns\x18\x04 \x01(\r\x12\x16\n\x0elinks_followed\x18\x05 \x01(\r\"U\n CMsgGCToClientEventStatusChanged\x12\x31\n\x0c\x61\x63tive_event\x18\x02 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\"6\n CMsgClientToGCPlayerStatsRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xcf\x03\n!CMsgGCToClientPlayerStatsResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0cplayer_stats\x18\x02 \x03(\x02\x12\x13\n\x0bmatch_count\x18\x03 \x01(\r\x12\x10\n\x08mean_gpm\x18\x04 \x01(\x02\x12\x11\n\tmean_xppm\x18\x05 \x01(\x02\x12\x15\n\rmean_lasthits\x18\x06 \x01(\x02\x12\x10\n\x08rampages\x18\x07 \x01(\r\x12\x14\n\x0ctriple_kills\x18\x08 \x01(\r\x12\x1b\n\x13\x66irst_blood_claimed\x18\t \x01(\r\x12\x19\n\x11\x66irst_blood_given\x18\n \x01(\r\x12\x17\n\x0f\x63ouriers_killed\x18\x0b \x01(\r\x12\x18\n\x10\x61\x65gises_snatched\x18\x0c \x01(\r\x12\x15\n\rcheeses_eaten\x18\r \x01(\r\x12\x16\n\x0e\x63reeps_stacked\x18\x0e \x01(\r\x12\x13\n\x0b\x66ight_score\x18\x0f \x01(\x02\x12\x12\n\nfarm_score\x18\x10 \x01(\x02\x12\x15\n\rsupport_score\x18\x11 \x01(\x02\x12\x12\n\npush_score\x18\x12 \x01(\x02\x12\x19\n\x11versatility_score\x18\x13 \x01(\x02\"D\n*CMsgClientToGCCustomGamePlayerCountRequest\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\"t\n+CMsgGCToClientCustomGamePlayerCountResponse\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x14\n\x0cplayer_count\x18\x02 \x01(\x04\x12\x17\n\x0fspectator_count\x18\x03 \x01(\x04\"/\n-CMsgClientToGCCustomGamesFriendsPlayedRequest\"\xcf\x01\n.CMsgGCToClientCustomGamesFriendsPlayedResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12N\n\x05games\x18\x02 \x03(\x0b\x32?.dota.CMsgGCToClientCustomGamesFriendsPlayedResponse.CustomGame\x1a\x39\n\nCustomGame\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"O\n*CMsgClientToGCSocialFeedPostCommentRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\">\n+CMsgGCToClientSocialFeedPostCommentResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"h\n*CMsgClientToGCSocialFeedPostMessageRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x17\n\x0fmatch_timestamp\x18\x03 \x01(\r\">\n+CMsgGCToClientSocialFeedPostMessageResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"F\n,CMsgClientToGCFriendsPlayedCustomGameRequest\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\"\\\n-CMsgGCToClientFriendsPlayedCustomGameResponse\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"%\n#CMsgClientToGCFeaturedHeroesRequest\"\xaa\x04\n$CMsgGCToClientFeaturedHeroesResponse\x12G\n\ncategories\x18\x01 \x03(\x0b\x32\x33.dota.CMsgGCToClientFeaturedHeroesResponse.Category\x1a\xb2\x01\n\tDataField\x12N\n\tdata_type\x18\x01 \x01(\x0e\x32\x1b.dota.EFeaturedHeroDataType:\x1ek_EFeaturedHeroDataType_HeroID\x12\x14\n\x0cuint32_value\x18\x02 \x01(\r\x12\x14\n\x0cuint64_value\x18\x03 \x01(\x04\x12\x14\n\x0cstring_value\x18\x04 \x01(\t\x12\x13\n\x0b\x66loat_value\x18\x05 \x01(\x02\x1aY\n\x0c\x46\x65\x61turedHero\x12I\n\x0b\x64\x61ta_fields\x18\x01 \x03(\x0b\x32\x34.dota.CMsgGCToClientFeaturedHeroesResponse.DataField\x1a\xa8\x01\n\x08\x43\x61tegory\x12\x17\n\x0f\x63\x61tegory_weight\x18\x01 \x01(\x05\x12\x31\n\x0btext_fields\x18\x02 \x03(\x0e\x32\x1c.dota.EFeaturedHeroTextField\x12P\n\x0f\x66\x65\x61tured_heroes\x18\x03 \x03(\x0b\x32\x37.dota.CMsgGCToClientFeaturedHeroesResponse.FeaturedHero\"P\n+CMsgClientToGCSocialMatchPostCommentRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\"?\n,CMsgGCToClientSocialMatchPostCommentResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"Y\n\'CMsgClientToGCSocialMatchDetailsRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x1c\n\x14pagination_timestamp\x18\x02 \x01(\r\"\xde\x01\n(CMsgGCToClientSocialMatchDetailsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12H\n\x08\x63omments\x18\x02 \x03(\x0b\x32\x36.dota.CMsgGCToClientSocialMatchDetailsResponse.Comment\x1aW\n\x07\x43omment\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x0f\n\x07\x63omment\x18\x04 \x01(\t\"\xdb\x04\n\x19\x43MsgDOTAPartyRichPresence\x12\x10\n\x08party_id\x18\x01 \x01(\x06\x12\x31\n\x0bparty_state\x18\x02 \x01(\x0e\x32\x18.dota.CSODOTAParty.State:\x02UI\x12\x0c\n\x04open\x18\x03 \x01(\x08\x12\x14\n\x0clow_priority\x18\x05 \x01(\x08\x12\x0f\n\x07team_id\x18\x07 \x01(\r\x12\x11\n\tteam_name\x18\x08 \x01(\t\x12\x18\n\x10ugc_team_ui_logo\x18\t \x01(\x04\x12\x37\n\x07members\x18\x04 \x03(\x0b\x32&.dota.CMsgDOTAPartyRichPresence.Member\x12G\n\x0fweekend_tourney\x18\x06 \x01(\x0b\x32..dota.CMsgDOTAPartyRichPresence.WeekendTourney\x1a)\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\r\n\x05\x63oach\x18\x02 \x01(\x08\x1a\xe9\x01\n\x0eWeekendTourney\x12\x10\n\x08\x64ivision\x18\x01 \x01(\r\x12\x13\n\x0bskill_level\x18\x02 \x01(\r\x12\r\n\x05round\x18\x03 \x01(\r\x12\x15\n\rtournament_id\x18\x04 \x01(\r\x12\x15\n\rstate_seq_num\x18\x05 \x01(\r\x12^\n\x05\x65vent\x18\x06 \x01(\x0e\x32&.dota.EWeekendTourneyRichPresenceEvent:\'k_EWeekendTourneyRichPresenceEvent_None\x12\x13\n\x0b\x65vent_round\x18\x07 \x01(\r\"\x98\x02\n\x19\x43MsgDOTALobbyRichPresence\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x31\n\x0blobby_state\x18\x02 \x01(\x0e\x32\x18.dota.CSODOTALobby.State:\x02UI\x12\x10\n\x08password\x18\x03 \x01(\x08\x12:\n\tgame_mode\x18\x04 \x01(\x0e\x32\x13.dota.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x14\n\x0cmember_count\x18\x05 \x01(\r\x12\x18\n\x10max_member_count\x18\x06 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x06\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x12\n\nlobby_type\x18\t \x01(\r\"\x83\x01\n,CMsgDOTACustomGameListenServerStartedLoading\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x15\n\rlobby_members\x18\x03 \x03(\r\x12\x12\n\nstart_time\x18\x04 \x01(\r\"\xa9\x01\n\'CMsgDOTACustomGameClientFinishedLoading\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x18\n\x10loading_duration\x18\x02 \x01(\r\x12\x13\n\x0bresult_code\x18\x03 \x01(\x11\x12\x15\n\rresult_string\x18\x04 \x01(\t\x12\x15\n\rsignon_states\x18\x05 \x01(\r\x12\x0f\n\x07\x63omment\x18\x06 \x01(\t\"2\n\x1d\x43MsgClientToGCGetLeagueSeries\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xbc\x03\n%CMsgClientToGCGetLeagueSeriesResponse\x12\x42\n\x06series\x18\x01 \x03(\x0b\x32\x32.dota.CMsgClientToGCGetLeagueSeriesResponse.Series\x1a\xce\x02\n\x06Series\x12\x11\n\tseries_id\x18\x01 \x01(\r\x12\x11\n\tnum_games\x18\x02 \x01(\r\x12\x46\n\x05teams\x18\x03 \x03(\x0b\x32\x37.dota.CMsgClientToGCGetLeagueSeriesResponse.Series.Team\x12\x13\n\x0bseries_name\x18\x04 \x01(\t\x12\x12\n\nphase_name\x18\x05 \x01(\t\x12\x12\n\nstart_time\x18\x06 \x01(\r\x12\x17\n\x0f\x61\x66ter_series_id\x18\x07 \x01(\r\x12\x1b\n\x13num_completed_games\x18\x08 \x01(\r\x1a\x63\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x12\n\nteam_score\x18\x04 \x01(\r\x12\x11\n\tteam_wins\x18\x05 \x01(\r\"F\n\x1e\x43MsgClientToGCApplyGemCombiner\x12\x11\n\titem_id_1\x18\x01 \x01(\x04\x12\x11\n\titem_id_2\x18\x02 \x01(\x04\"\x1f\n\x1d\x43MsgClientToGCH264Unsupported\"\"\n CMsgClientToGCRequestH264Support\"3\n\x1e\x43MsgClientToGCGetQuestProgress\x12\x11\n\tquest_ids\x18\x01 \x03(\r\"\xf9\x02\n&CMsgClientToGCGetQuestProgressResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x42\n\x06quests\x18\x02 \x03(\x0b\x32\x32.dota.CMsgClientToGCGetQuestProgressResponse.Quest\x1a\x88\x01\n\tChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\x12\x16\n\x0etime_completed\x18\x02 \x01(\r\x12\x10\n\x08\x61ttempts\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_type\x18\x05 \x01(\r\x12\x12\n\nquest_rank\x18\x06 \x01(\r\x1ao\n\x05Quest\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12T\n\x14\x63ompleted_challenges\x18\x02 \x03(\x0b\x32\x36.dota.CMsgClientToGCGetQuestProgressResponse.Challenge\"0\n\x1c\x43MsgGCToClientMatchSignedOut\x12\x10\n\x08match_id\x18\x01 \x01(\x04\",\n\x19\x43MsgGCGetHeroStatsHistory\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"h\n!CMsgGCGetHeroStatsHistoryResponse\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x32\n\x07records\x18\x02 \x03(\x0b\x32!.dota.CMsgDOTASDOHeroStatsHistory\"#\n!CMsgPlayerConductScorecardRequest\"\xd4\x02\n\x1a\x43MsgPlayerConductScorecard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x0f\n\x07seq_num\x18\x03 \x01(\r\x12\x0f\n\x07reasons\x18\x04 \x01(\r\x12\x19\n\x11matches_in_report\x18\x05 \x01(\r\x12\x15\n\rmatches_clean\x18\x06 \x01(\r\x12\x18\n\x10matches_reported\x18\x07 \x01(\r\x12\x19\n\x11matches_abandoned\x18\x08 \x01(\r\x12\x15\n\rreports_count\x18\t \x01(\r\x12\x17\n\x0freports_parties\x18\n \x01(\r\x12\x15\n\rcommend_count\x18\x0b \x01(\r\x12\x0c\n\x04\x64\x61te\x18\x0e \x01(\r\x12\x16\n\x0e\x62\x65havior_grade\x18\x0f \x01(\r\x12\x1a\n\x12old_behavior_grade\x18\x10 \x01(\r\"1\n\x1d\x43MsgClientToGCWageringRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"\x8c\x02\n\x1e\x43MsgGCToClientWageringResponse\x12\x17\n\x0f\x63oins_remaining\x18\x01 \x01(\r\x12\x18\n\x10total_points_won\x18\x02 \x01(\r\x12\x1c\n\x14total_points_wagered\x18\x03 \x01(\r\x12\x1b\n\x13total_points_tipped\x18\x04 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x05 \x01(\r\x12\x1b\n\x13total_games_wagered\x18\x06 \x01(\r\x12\x11\n\tcoins_max\x18\x07 \x01(\r\x12\x1d\n\x15rank_wagers_remaining\x18\x08 \x01(\r\x12\x17\n\x0frank_wagers_max\x18\t \x01(\r\"m\n\x1c\x43MsgGCToClientWageringUpdate\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12;\n\rwagering_info\x18\x02 \x01(\x0b\x32$.dota.CMsgGCToClientWageringResponse\"\x82\x01\n\x1f\x43MsgGCToClientArcanaVotesUpdate\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12M\n\x0c\x61rcana_votes\x18\x02 \x01(\x0b\x32\x37.dota.CMsgClientToGCRequestArcanaVotesRemainingResponse\">\n\x1b\x43MsgClientToGCGetEventGoals\x12\x1f\n\tevent_ids\x18\x01 \x03(\x0e\x32\x0c.dota.EEvent\"\xa1\x01\n\x0e\x43MsgEventGoals\x12\x33\n\x0b\x65vent_goals\x18\x01 \x03(\x0b\x32\x1e.dota.CMsgEventGoals.EventGoal\x1aZ\n\tEventGoal\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x0f\n\x07goal_id\x18\x02 \x01(\r\x12\r\n\x05value\x18\x03 \x01(\x04\"0\n\x1b\x43MsgGCToGCLeaguePredictions\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xa6\x02\n\x16\x43MsgPredictionRankings\x12<\n\x0bpredictions\x18\x01 \x03(\x0b\x32\'.dota.CMsgPredictionRankings.Prediction\x1a\x63\n\x0ePredictionLine\x12\x11\n\tanswer_id\x18\x01 \x01(\r\x12\x13\n\x0b\x61nswer_name\x18\x02 \x01(\t\x12\x13\n\x0b\x61nswer_logo\x18\x03 \x01(\x04\x12\x14\n\x0c\x61nswer_value\x18\x04 \x01(\x02\x1ai\n\nPrediction\x12\x14\n\x0cselection_id\x18\x01 \x01(\r\x12\x45\n\x10prediction_lines\x18\x02 \x03(\x0b\x32+.dota.CMsgPredictionRankings.PredictionLine\"\xf6\x01\n\x15\x43MsgPredictionResults\x12\x33\n\x07results\x18\x01 \x03(\x0b\x32\".dota.CMsgPredictionResults.Result\x1a\x41\n\x0fResultBreakdown\x12\x18\n\x10\x61nswer_selection\x18\x02 \x01(\r\x12\x14\n\x0c\x61nswer_value\x18\x03 \x01(\x02\x1a\x65\n\x06Result\x12\x14\n\x0cselection_id\x18\x01 \x01(\r\x12\x45\n\x10result_breakdown\x18\x02 \x03(\x0b\x32+.dota.CMsgPredictionResults.ResultBreakdown\"4\n CMsgClientToGCSuspiciousActivity\x12\x10\n\x08\x61pp_data\x18\x01 \x01(\x04\"6\n\"CMsgClientToGCHasPlayerVotedForMVP\x12\x10\n\x08match_id\x18\x01 \x01(\x04\"<\n*CMsgClientToGCHasPlayerVotedForMVPResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"@\n\x18\x43MsgClientToGCVoteForMVP\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x03 \x01(\r\"2\n CMsgClientToGCVoteForMVPResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"|\n\x14\x43MsgMVPVotesForMatch\x12\x32\n\x07players\x18\x01 \x03(\x0b\x32!.dota.CMsgMVPVotesForMatch.Player\x1a\x30\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nvote_count\x18\x02 \x01(\r\"G\n\x13\x43MsgLeaguePrizePool\x12\x12\n\nprize_pool\x18\x01 \x01(\r\x12\x1c\n\x14increment_per_second\x18\x02 \x01(\x02\"$\n\"CMsgClientToGCTeammateStatsRequest\"\xa4\x02\n#CMsgClientToGCTeammateStatsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12N\n\x0eteammate_stats\x18\x02 \x03(\x0b\x32\x36.dota.CMsgClientToGCTeammateStatsResponse.TeammateStat\x1a\x9b\x01\n\x0cTeammateStat\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05games\x18\x02 \x01(\r\x12\x0c\n\x04wins\x18\x03 \x01(\r\x12\"\n\x1amost_recent_game_timestamp\x18\x04 \x01(\r\x12!\n\x19most_recent_game_match_id\x18\x05 \x01(\x04\x12\x13\n\x0bperformance\x18\x64 \x01(\x02\"\x9f\x01\n\x1b\x43MsgClientToGCVoteForArcana\x12<\n\x07matches\x18\x01 \x03(\x0b\x32+.dota.CMsgClientToGCVoteForArcana.MatchVote\x1a\x42\n\tMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nvote_count\x18\x03 \x01(\r\"\xc2\x01\n#CMsgClientToGCVoteForArcanaResponse\x12K\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgClientToGCVoteForArcanaResponse.Result:\tSUCCEEDED\"N\n\x06Result\x12\r\n\tSUCCEEDED\x10\x00\x12 \n\x1cVOTING_NOT_ENABLED_FOR_ROUND\x10\x01\x12\x13\n\x0fUNKNOWN_FAILURE\x10\x02\"\xa6\x04\n\x0f\x43MsgArcanaVotes\x12,\n\x07matches\x18\x01 \x03(\x0b\x32\x1b.dota.CMsgArcanaVotes.Match\x12\x1c\n\x14round_time_remaining\x18\x02 \x01(\r\x12\x14\n\x0cround_number\x18\x03 \x01(\r\x12\x14\n\x0cvoting_state\x18\x04 \x01(\r\x12$\n\x1cis_current_round_calibrating\x18\x05 \x01(\x08\x12\x1f\n\x17\x63losest_active_match_id\x18\x06 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x07 \x01(\r\x1a\x84\x02\n\x05Match\x12\x10\n\x08match_id\x18\x01 \x01(\r\x12\x11\n\thero_id_0\x18\x02 \x01(\r\x12\x11\n\thero_id_1\x18\x03 \x01(\r\x12\x16\n\x0ehero_seeding_0\x18\x04 \x01(\r\x12\x16\n\x0ehero_seeding_1\x18\x05 \x01(\r\x12\x14\n\x0cvote_count_0\x18\x06 \x01(\r\x12\x14\n\x0cvote_count_1\x18\x07 \x01(\r\x12\x14\n\x0cvoting_state\x18\x08 \x01(\r\x12\x14\n\x0cround_number\x18\t \x01(\r\x12\x17\n\x0fis_votes_hidden\x18\n \x01(\x08\x12\"\n\x1a\x63\x61libration_time_remaining\x18\x0b \x01(\r\";\n\x0bVotingState\x12\x0c\n\x08\x46INISHED\x10\x00\x12\x0f\n\x0bIN_PROGRESS\x10\x01\x12\r\n\tIN_FUTURE\x10\x02\"+\n)CMsgClientToGCRequestArcanaVotesRemaining\"\x9e\x02\n1CMsgClientToGCRequestArcanaVotesRemainingResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12\x17\n\x0fvotes_remaining\x18\x02 \x01(\r\x12\x13\n\x0bvotes_total\x18\x03 \x01(\r\x12g\n\x1cmatches_previously_voted_for\x18\x04 \x03(\x0b\x32\x41.dota.CMsgClientToGCRequestArcanaVotesRemainingResponse.MatchVote\x1a\x42\n\tMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nvote_count\x18\x03 \x01(\r\"6\n\"CMsgClientToGCRequestEventPointLog\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"\xa1\x12\n*CMsgClientToGCRequestEventPointLogResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12\\\n\x0ctransactions\x18\x02 \x03(\x0b\x32\x46.dota.CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\x1aK\n\x13QuestChallengeEvent\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63hallenge_id\x18\x02 \x01(\r\x12\x0c\n\x04rank\x18\x03 \x01(\r\x1a!\n\rWagerWonEvent\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x1a\x45\n\rTipGivenEvent\x12\x1c\n\x14recipient_account_id\x18\x01 \x01(\r\x12\x16\n\x0erecipient_name\x18\x02 \x01(\t\x1a@\n\x10TipReceivedEvent\x12\x18\n\x10giver_account_id\x18\x01 \x01(\r\x12\x12\n\ngiver_name\x18\x02 \x01(\t\x1a\x32\n\x11RecycledItemEvent\x12\x1d\n\x15recipe_item_def_index\x18\x01 \x01(\r\x1a<\n\x11\x41\x63tionRewardEvent\x12\x11\n\taction_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63tion_score\x18\x02 \x01(\r\x1a\x37\n\x18MysteryItemReceivedEvent\x12\x1b\n\x13\x63ommunity_goal_item\x18\x01 \x01(\x08\x1a/\n\x16\x43orrectPredictionEvent\x12\x15\n\rprediction_id\x18\x01 \x01(\r\x1a\x30\n\x1cInGamePredictionCorrectEvent\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x1a-\n\x19WeekendTourneyPayoutEvent\x12\x10\n\x08team_gid\x18\x01 \x01(\x04\x1a(\n\x12\x46\x61ntasyRewardEvent\x12\x12\n\npercentile\x18\x01 \x01(\r\x1a-\n\x12\x42racketRewardEvent\x12\x17\n\x0f\x63orrect_answers\x18\x01 \x01(\r\x1a%\n\x0fWeeklyGameEvent\x12\x12\n\npoints_won\x18\x01 \x01(\r\x1a\x32\n\x16\x45xploitCorrectionEvent\x12\x18\n\x10points_corrected\x18\x01 \x01(\r\x1a\x88\x0b\n\x15\x45ventPointTransaction\x12\x0c\n\x04time\x18\x01 \x01(\r\x12\x14\n\x0c\x65vent_points\x18\x02 \x01(\x05\x12\"\n\x1a\x63ompendium_activated_event\x18\x03 \x01(\x08\x12\x1d\n\x15point_item_used_event\x18\x04 \x01(\x08\x12W\n\x0fwager_won_event\x18\x05 \x01(\x0b\x32>.dota.CMsgClientToGCRequestEventPointLogResponse.WagerWonEvent\x12n\n\x1bmystery_item_received_event\x18\x06 \x01(\x0b\x32I.dota.CMsgClientToGCRequestEventPointLogResponse.MysteryItemReceivedEvent\x12\x63\n\x15quest_challenge_event\x18\x07 \x01(\x0b\x32\x44.dota.CMsgClientToGCRequestEventPointLogResponse.QuestChallengeEvent\x12W\n\x0ftip_given_event\x18\x08 \x01(\x0b\x32>.dota.CMsgClientToGCRequestEventPointLogResponse.TipGivenEvent\x12]\n\x12tip_received_event\x18\t \x01(\x0b\x32\x41.dota.CMsgClientToGCRequestEventPointLogResponse.TipReceivedEvent\x12_\n\x13recycled_item_event\x18\n \x01(\x0b\x32\x42.dota.CMsgClientToGCRequestEventPointLogResponse.RecycledItemEvent\x12_\n\x13\x61\x63tion_reward_event\x18\x0b \x01(\x0b\x32\x42.dota.CMsgClientToGCRequestEventPointLogResponse.ActionRewardEvent\x12o\n\x18in_game_prediction_event\x18\x0c \x01(\x0b\x32M.dota.CMsgClientToGCRequestEventPointLogResponse.InGamePredictionCorrectEvent\x12\x61\n\x10prediction_event\x18\r \x01(\x0b\x32G.dota.CMsgClientToGCRequestEventPointLogResponse.CorrectPredictionEvent\x12\x61\n\x14\x66\x61ntasy_reward_event\x18\x0f \x01(\x0b\x32\x43.dota.CMsgClientToGCRequestEventPointLogResponse.FantasyRewardEvent\x12\x61\n\x14\x62racket_reward_event\x18\x10 \x01(\x0b\x32\x43.dota.CMsgClientToGCRequestEventPointLogResponse.BracketRewardEvent\x12[\n\x11weekly_game_event\x18\x13 \x01(\x0b\x32@.dota.CMsgClientToGCRequestEventPointLogResponse.WeeklyGameEvent\x12i\n\x18\x65xploit_correction_event\x18\x14 \x01(\x0b\x32G.dota.CMsgClientToGCRequestEventPointLogResponse.ExploitCorrectionEvent\"Q\n\x1d\x43MsgClientToGCPublishUserStat\x12\x18\n\x10user_stats_event\x18\x01 \x01(\r\x12\x16\n\x0ereference_data\x18\x02 \x01(\x04\"1\n CMsgClientToGCAddTI6TreeProgress\x12\r\n\x05trees\x18\x01 \x01(\r\"X\n\'CMsgClientToGCRequestLinaPlaysRemaining\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\"_\n/CMsgClientToGCRequestLinaPlaysRemainingResponse\x12\x17\n\x0fplays_remaining\x18\x01 \x01(\r\x12\x13\n\x0bplays_total\x18\x02 \x01(\r\"i\n#CMsgClientToGCRequestLinaGameResult\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x13\n\x0bslot_chosen\x18\x02 \x01(\r\"=\n+CMsgClientToGCRequestLinaGameResultResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"x\n$CMsgClientToGCRequestSlarkGameResult\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x13\n\x0bslot_chosen\x18\x02 \x01(\r\x12\x0c\n\x04week\x18\x03 \x01(\r\"T\n,CMsgClientToGCRequestSlarkGameResultResponse\x12\x12\n\npoints_won\x18\x01 \x01(\r\x12\x10\n\x08\x61ura_won\x18\x02 \x01(\x08\"\xab\x02\n\"CMsgGCToClientQuestProgressUpdated\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12P\n\x14\x63ompleted_challenges\x18\x02 \x03(\x0b\x32\x32.dota.CMsgGCToClientQuestProgressUpdated.Challenge\x1a\xa0\x01\n\tChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\x12\x16\n\x0etime_completed\x18\x02 \x01(\r\x12\x10\n\x08\x61ttempts\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_type\x18\x05 \x01(\r\x12\x12\n\nquest_rank\x18\x06 \x01(\r\x12\x16\n\x0emax_quest_rank\x18\x07 \x01(\r\"4\n CMsgGCToClientUpdateClientClippy\x12\x10\n\x08hero_ids\x18\x01 \x03(\r\"?\n\x12\x43MsgDOTARedeemItem\x12\x13\n\x0b\x63urrency_id\x18\x01 \x01(\x04\x12\x14\n\x0cpurchase_def\x18\x02 \x01(\r\"\x97\x01\n\x1a\x43MsgDOTARedeemItemResponse\x12K\n\x08response\x18\x01 \x01(\x0e\x32,.dota.CMsgDOTARedeemItemResponse.EResultCode:\x0bk_Succeeded\",\n\x0b\x45ResultCode\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x0c\n\x08k_Failed\x10\x01\"6\n!CMsgPerfectWorldUserLookupRequest\x12\x11\n\tuser_name\x18\x01 \x01(\t\"\xcd\x02\n\"CMsgPerfectWorldUserLookupResponse\x12`\n\x0bresult_code\x18\x01 \x01(\x0e\x32\x34.dota.CMsgPerfectWorldUserLookupResponse.EResultCode:\x15SUCCESS_ACCOUNT_FOUND\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\xb0\x01\n\x0b\x45ResultCode\x12\x19\n\x15SUCCESS_ACCOUNT_FOUND\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\x12 \n\x1c\x45RROR_USER_NAME_WRONG_FORMAT\x10\x02\x12(\n$ERROR_NO_PERFECT_WORLD_ACCOUNT_FOUND\x10\x03\x12\'\n#ERROR_NO_LINKED_STEAM_ACCOUNT_FOUND\x10\x04\"W\n\x16\x43MsgNexonPartnerUpdate\x12\x13\n\x0bmessagetype\x18\x01 \x01(\r\x12\x15\n\rtimeremaining\x18\x02 \x01(\r\x12\x11\n\tterminate\x18\x03 \x01(\x08\"#\n\x10\x43MsgMakeOffering\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\x16\n\x14\x43MsgRequestOfferings\"\xb1\x01\n\x1c\x43MsgRequestOfferingsResponse\x12\x46\n\tofferings\x18\x01 \x03(\x0b\x32\x33.dota.CMsgRequestOfferingsResponse.NewYearsOffering\x12\x11\n\tcompleted\x18\x02 \x01(\x08\x1a\x36\n\x10NewYearsOffering\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"Q\n\x19\x43MsgDOTAPCBangTimedReward\x12\x0f\n\x07persona\x18\x01 \x01(\t\x12\x0f\n\x07itemdef\x18\x02 \x01(\r\x12\x12\n\npcbangname\x18\x03 \x01(\t\"\xf2\x01\n)CMsgDOTACompendiumInGamePredictionResults\x12Q\n\x07results\x18\x01 \x03(\x0b\x32@.dota.CMsgDOTACompendiumInGamePredictionResults.PredictionResult\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x1a\n\x12predictions_closed\x18\x03 \x01(\x08\x1a\x43\n\x10PredictionResult\x12\x15\n\rprediction_id\x18\x01 \x01(\r\x12\x18\n\x10prediction_value\x18\x02 \x01(\r\"\xea\x01\n.CMsgClientToGCSelectCompendiumInGamePrediction\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12T\n\x0bpredictions\x18\x02 \x03(\x0b\x32?.dota.CMsgClientToGCSelectCompendiumInGamePrediction.Prediction\x12\x11\n\tleague_id\x18\x03 \x01(\r\x1a=\n\nPrediction\x12\x15\n\rprediction_id\x18\x01 \x01(\r\x12\x18\n\x10prediction_value\x18\x02 \x01(\r\"\xef\x01\n6CMsgClientToGCSelectCompendiumInGamePredictionResponse\x12]\n\x06result\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCSelectCompendiumInGamePredictionResponse.EResult:\x07SUCCESS\"V\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rINVALID_MATCH\x10\x01\x12\x1a\n\x16PREDICTIONS_ARE_CLOSED\x10\x02\x12\x0f\n\x0bOTHER_ERROR\x10\x03\"D\n CMsgClientToGCOpenPlayerCardPack\x12 \n\x18player_card_pack_item_id\x18\x01 \x01(\x04\"\x9f\x02\n(CMsgClientToGCOpenPlayerCardPackResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCOpenPlayerCardPackResponse.Result:\x07SUCCESS\x12\x1c\n\x14player_card_item_ids\x18\x02 \x03(\x04\"\x84\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0e\x45RROR_INTERNAL\x10\x02\x12\x1d\n\x19\x45RROR_FAILED_TO_FIND_PACK\x10\x03\x12\x1c\n\x18\x45RROR_ITEM_NOT_CARD_PACK\x10\x04\x12\x1c\n\x18\x45RROR_FAILED_CARD_CREATE\x10\x05\"Q\n\x1f\x43MsgClientToGCRecyclePlayerCard\x12\x1c\n\x14player_card_item_ids\x18\x03 \x03(\x04\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\"\xb9\x02\n\'CMsgClientToGCRecyclePlayerCardResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgClientToGCRecyclePlayerCardResponse.Result:\x07SUCCESS\x12\x13\n\x0b\x64ust_amount\x18\x02 \x01(\r\"\xa9\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0e\x45RROR_INTERNAL\x10\x02\x12$\n ERROR_FAILED_TO_FIND_PLAYER_CARD\x10\x03\x12\x1e\n\x1a\x45RROR_ITEM_NOT_PLAYER_CARD\x10\x04\x12!\n\x1d\x45RROR_FAILED_DUST_CARD_CREATE\x10\x05\x12\x15\n\x11\x45RROR_CARD_LOCKED\x10\x06\"g\n\"CMsgClientToGCCreatePlayerCardPack\x12\x19\n\x11\x63\x61rd_dust_item_id\x18\x01 \x01(\x04\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\x12\x14\n\x0cpremium_pack\x18\x03 \x01(\x08\"\x88\x02\n*CMsgClientToGCCreatePlayerCardPackResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgClientToGCCreatePlayerCardPackResponse.Result:\x07SUCCESS\"\x87\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0e\x45RROR_INTERNAL\x10\x02\x12\x1b\n\x17\x45RROR_INSUFFICIENT_DUST\x10\x03\x12\x1c\n\x18\x45RROR_ITEM_NOT_DUST_ITEM\x10\x04\x12!\n\x1d\x45RROR_FAILED_CARD_PACK_CREATE\x10\x05\"\xab\n\n0CMsgGCToClientBattlePassRollup_International2016\x12\x19\n\x11\x62\x61ttle_pass_level\x18\x01 \x01(\r\x12U\n\nquestlines\x18\x02 \x03(\x0b\x32\x41.dota.CMsgGCToClientBattlePassRollup_International2016.Questlines\x12Q\n\x08wagering\x18\x03 \x01(\x0b\x32?.dota.CMsgGCToClientBattlePassRollup_International2016.Wagering\x12Y\n\x0c\x61\x63hievements\x18\x04 \x01(\x0b\x32\x43.dota.CMsgGCToClientBattlePassRollup_International2016.Achievements\x12T\n\nbattle_cup\x18\x05 \x01(\x0b\x32@.dota.CMsgGCToClientBattlePassRollup_International2016.BattleCup\x12W\n\x0bpredictions\x18\x06 \x01(\x0b\x32\x42.dota.CMsgGCToClientBattlePassRollup_International2016.Predictions\x12O\n\x07\x62racket\x18\x07 \x01(\x0b\x32>.dota.CMsgGCToClientBattlePassRollup_International2016.Bracket\x12W\n\x0cplayer_cards\x18\x08 \x03(\x0b\x32\x41.dota.CMsgGCToClientBattlePassRollup_International2016.PlayerCard\x12\x62\n\x11\x66\x61ntasy_challenge\x18\t \x01(\x0b\x32G.dota.CMsgGCToClientBattlePassRollup_International2016.FantasyChallenge\x1a^\n\nQuestlines\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07onestar\x18\x02 \x01(\r\x12\x0f\n\x07twostar\x18\x03 \x01(\r\x12\x11\n\tthreestar\x18\x04 \x01(\r\x12\r\n\x05total\x18\x05 \x01(\r\x1as\n\x08Wagering\x12\x15\n\rtotal_wagered\x18\x01 \x01(\r\x12\x11\n\ttotal_won\x18\x02 \x01(\r\x12\x13\n\x0b\x61verage_won\x18\x03 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x04 \x01(\r\x12\x12\n\ntotal_tips\x18\x05 \x01(\r\x1a@\n\x0c\x41\x63hievements\x12\x11\n\tcompleted\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a(\n\tBattleCup\x12\x0c\n\x04wins\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\r\x1a=\n\x0bPredictions\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a*\n\x07\x42racket\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\x0e\n\x06points\x18\x02 \x01(\r\x1a\x31\n\nPlayerCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07quality\x18\x02 \x01(\r\x1a;\n\x10\x46\x61ntasyChallenge\x12\x13\n\x0btotal_score\x18\x01 \x01(\x02\x12\x12\n\npercentile\x18\x02 \x01(\x02\"\xda\t\n\'CMsgGCToClientBattlePassRollup_Fall2016\x12\x19\n\x11\x62\x61ttle_pass_level\x18\x01 \x01(\r\x12L\n\nquestlines\x18\x02 \x03(\x0b\x32\x38.dota.CMsgGCToClientBattlePassRollup_Fall2016.Questlines\x12H\n\x08wagering\x18\x03 \x01(\x0b\x32\x36.dota.CMsgGCToClientBattlePassRollup_Fall2016.Wagering\x12P\n\x0c\x61\x63hievements\x18\x04 \x01(\x0b\x32:.dota.CMsgGCToClientBattlePassRollup_Fall2016.Achievements\x12K\n\nbattle_cup\x18\x05 \x01(\x0b\x32\x37.dota.CMsgGCToClientBattlePassRollup_Fall2016.BattleCup\x12N\n\x0bpredictions\x18\x06 \x01(\x0b\x32\x39.dota.CMsgGCToClientBattlePassRollup_Fall2016.Predictions\x12\x46\n\x07\x62racket\x18\x07 \x01(\x0b\x32\x35.dota.CMsgGCToClientBattlePassRollup_Fall2016.Bracket\x12N\n\x0cplayer_cards\x18\x08 \x03(\x0b\x32\x38.dota.CMsgGCToClientBattlePassRollup_Fall2016.PlayerCard\x12Y\n\x11\x66\x61ntasy_challenge\x18\t \x01(\x0b\x32>.dota.CMsgGCToClientBattlePassRollup_Fall2016.FantasyChallenge\x1a^\n\nQuestlines\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07onestar\x18\x02 \x01(\r\x12\x0f\n\x07twostar\x18\x03 \x01(\r\x12\x11\n\tthreestar\x18\x04 \x01(\r\x12\r\n\x05total\x18\x05 \x01(\r\x1as\n\x08Wagering\x12\x15\n\rtotal_wagered\x18\x01 \x01(\r\x12\x11\n\ttotal_won\x18\x02 \x01(\r\x12\x13\n\x0b\x61verage_won\x18\x03 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x04 \x01(\r\x12\x12\n\ntotal_tips\x18\x05 \x01(\r\x1a@\n\x0c\x41\x63hievements\x12\x11\n\tcompleted\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a(\n\tBattleCup\x12\x0c\n\x04wins\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\r\x1a=\n\x0bPredictions\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a*\n\x07\x42racket\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\x0e\n\x06points\x18\x02 \x01(\r\x1a\x31\n\nPlayerCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07quality\x18\x02 \x01(\r\x1a;\n\x10\x46\x61ntasyChallenge\x12\x13\n\x0btotal_score\x18\x01 \x01(\x02\x12\x12\n\npercentile\x18\x02 \x01(\x02\"\xec\t\n)CMsgGCToClientBattlePassRollup_Winter2017\x12\x19\n\x11\x62\x61ttle_pass_level\x18\x01 \x01(\r\x12N\n\nquestlines\x18\x02 \x03(\x0b\x32:.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines\x12J\n\x08wagering\x18\x03 \x01(\x0b\x32\x38.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering\x12R\n\x0c\x61\x63hievements\x18\x04 \x01(\x0b\x32<.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements\x12M\n\nbattle_cup\x18\x05 \x01(\x0b\x32\x39.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup\x12P\n\x0bpredictions\x18\x06 \x01(\x0b\x32;.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions\x12H\n\x07\x62racket\x18\x07 \x01(\x0b\x32\x37.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket\x12P\n\x0cplayer_cards\x18\x08 \x03(\x0b\x32:.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard\x12[\n\x11\x66\x61ntasy_challenge\x18\t \x01(\x0b\x32@.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge\x1a^\n\nQuestlines\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07onestar\x18\x02 \x01(\r\x12\x0f\n\x07twostar\x18\x03 \x01(\r\x12\x11\n\tthreestar\x18\x04 \x01(\r\x12\r\n\x05total\x18\x05 \x01(\r\x1as\n\x08Wagering\x12\x15\n\rtotal_wagered\x18\x01 \x01(\r\x12\x11\n\ttotal_won\x18\x02 \x01(\r\x12\x13\n\x0b\x61verage_won\x18\x03 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x04 \x01(\r\x12\x12\n\ntotal_tips\x18\x05 \x01(\r\x1a@\n\x0c\x41\x63hievements\x12\x11\n\tcompleted\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a(\n\tBattleCup\x12\x0c\n\x04wins\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\r\x1a=\n\x0bPredictions\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a*\n\x07\x42racket\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\x0e\n\x06points\x18\x02 \x01(\r\x1a\x31\n\nPlayerCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07quality\x18\x02 \x01(\r\x1a;\n\x10\x46\x61ntasyChallenge\x12\x13\n\x0btotal_score\x18\x01 \x01(\x02\x12\x12\n\npercentile\x18\x02 \x01(\x02\"M\n%CMsgGCToClientBattlePassRollupRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\x85\x02\n&CMsgGCToClientBattlePassRollupResponse\x12I\n\tevent_ti6\x18\x01 \x01(\x0b\x32\x36.dota.CMsgGCToClientBattlePassRollup_International2016\x12\x45\n\x0e\x65vent_fall2016\x18\x02 \x01(\x0b\x32-.dota.CMsgGCToClientBattlePassRollup_Fall2016\x12I\n\x10\x65vent_winter2017\x18\x03 \x01(\x0b\x32/.dota.CMsgGCToClientBattlePassRollup_Winter2017\"?\n)CMsgGCToClientBattlePassRollupListRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\">\n*CMsgGCToClientBattlePassRollupListResponse\x12\x10\n\x08\x65vent_id\x18\x01 \x03(\r\"<\n(CMsgClientToGCTransferSeasonalMMRRequest\x12\x10\n\x08is_party\x18\x01 \x01(\x08\"<\n)CMsgClientToGCTransferSeasonalMMRResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\".\n\x1c\x43MsgGCToClientPlaytestStatus\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\"4\n\x1a\x43MsgClientToGCJoinPlaytest\x12\x16\n\x0e\x63lient_version\x18\x01 \x01(\r\"3\n\"CMsgClientToGCJoinPlaytestResponse\x12\r\n\x05\x65rror\x18\x01 \x01(\t\"\x86\x02\n\x13\x43MsgDOTAEventInvite\x12-\n\x05teams\x18\x01 \x03(\x0b\x32\x1e.dota.CMsgDOTAEventInvite.Team\x1a\xbf\x01\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x19\n\x11\x61nnouncement_date\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12N\n\x0binvite_type\x18\x04 \x01(\x0e\x32\x1a.dota.EDOTAEventInviteType:\x1dk_EDOTAEventInviteType_Direct\x12\x0e\n\x06region\x18\x05 \x01(\r\x12\x18\n\x10qualifier_winner\x18\x06 \x01(\x08\"<\n\x17\x43MsgDOTASetFavoriteTeam\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\"\xed\x01\n\x16\x43MsgDOTATriviaQuestion\x12\x13\n\x0bquestion_id\x18\x01 \x01(\r\x12^\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32!.dota.EDOTATriviaQuestionCategory:)k_EDOTATriviaQuestionCategory_AbilityIcon\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x16\n\x0equestion_value\x18\x04 \x01(\t\x12\x15\n\ranswer_values\x18\x05 \x03(\t\x12\x1c\n\x14\x63orrect_answer_index\x18\x06 \x01(\r\"i\n\x1e\x43MsgDOTATriviaCurrentQuestions\x12/\n\tquestions\x18\x01 \x03(\x0b\x32\x1c.dota.CMsgDOTATriviaQuestion\x12\x16\n\x0etrivia_enabled\x18\x02 \x01(\x08\"W\n$CMsgDOTATriviaQuestionAnswersSummary\x12\x19\n\x11summary_available\x18\x01 \x01(\x08\x12\x14\n\x0cpicked_count\x18\x02 \x03(\r\"O\n\"CMsgDOTASubmitTriviaQuestionAnswer\x12\x13\n\x0bquestion_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61nswer_index\x18\x02 \x01(\r\"~\n*CMsgDOTASubmitTriviaQuestionAnswerResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x1d.dota.EDOTATriviaAnswerResult:!k_EDOTATriviaAnswerResult_Success\"\x1c\n\x1a\x43MsgDOTAStartTriviaSession\"W\n\"CMsgDOTAStartTriviaSessionResponse\x12\x16\n\x0etrivia_enabled\x18\x01 \x01(\x08\x12\x19\n\x11\x63urrent_timestamp\x18\x02 \x01(\r\"Y\n\x15\x43MsgClientToGCGiveTip\x12\x1c\n\x14recipient_account_id\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\"\xcc\x02\n\x1d\x43MsgClientToGCGiveTipResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.dota.CMsgClientToGCGiveTipResponse.Result:\x07SUCCESS\"\xe5\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x18\n\x14\x45RROR_ALREADY_TIPPED\x10\x01\x12\x1a\n\x16\x45RROR_INVALID_MATCH_ID\x10\x02\x12\x1a\n\x16\x45RROR_INVALID_EVENT_ID\x10\x03\x12\x1c\n\x18\x45RROR_INVALID_MATCH_TIME\x10\x04\x12\x14\n\x10\x45RROR_NOT_WINNER\x10\x05\x12\x17\n\x13\x45RROR_UNOWNED_EVENT\x10\x06\x12\x1c\n\x18\x45RROR_INVALID_LOBBY_TYPE\x10\x07\x12\x11\n\rERROR_UNKNOWN\x10\x08\"\"\n CMsgDOTAAnchorPhoneNumberRequest\"\xe5\x01\n!CMsgDOTAAnchorPhoneNumberResponse\x12G\n\x06result\x18\x01 \x01(\x0e\x32..dota.CMsgDOTAAnchorPhoneNumberResponse.Result:\x07SUCCESS\"w\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\x12\x18\n\x14\x45RROR_NO_STEAM_PHONE\x10\x02\x12\x18\n\x14\x45RROR_ALREADY_IN_USE\x10\x03\x12\x19\n\x15\x45RROR_COOLDOWN_ACTIVE\x10\x04\"$\n\"CMsgDOTAUnanchorPhoneNumberRequest\"\x9a\x01\n#CMsgDOTAUnanchorPhoneNumberResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAUnanchorPhoneNumberResponse.Result:\x07SUCCESS\"(\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\"\x97\x01\n\x1d\x43MsgGCToClientTipNotification\x12\x19\n\x11tipper_account_id\x18\x01 \x01(\r\x12\x13\n\x0btipper_name\x18\x02 \x01(\t\x12\x1c\n\x14recipient_account_id\x18\x03 \x01(\r\x12\x16\n\x0erecipient_name\x18\x04 \x01(\t\x12\x10\n\x08\x65vent_id\x18\x05 \x01(\r\"5\n!CMsgGCToClientAllStarVotesRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"=\n\x1f\x43MsgGCToClientAllStarVotesReply\x12\x1a\n\x12player_account_ids\x18\x01 \x03(\r\"P\n CMsgGCToClientAllStarVotesSubmit\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x1a\n\x12player_account_ids\x18\x02 \x03(\r\"\xf7\x01\n%CMsgGCToClientAllStarVotesSubmitReply\x12K\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgGCToClientAllStarVotesSubmitReply.Result:\x07SUCCESS\"\x80\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0e\x45RROR_INTERNAL\x10\x02\x12\x1a\n\x16\x45RROR_INVALID_EVENT_ID\x10\x03\x12\x1c\n\x18\x45RROR_INVALID_ACCOUNT_ID\x10\x04\x12\x1b\n\x17\x45RROR_SELECTIONS_LOCKED\x10\x05\"u\n#CMsgDOTAClientToGCQuickStatsRequest\x12\x19\n\x11player_account_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\r\x12\x11\n\tleague_id\x18\x04 \x01(\r\"\xab\x05\n$CMsgDOTAClientToGCQuickStatsResponse\x12\x43\n\x10original_request\x18\x01 \x01(\x0b\x32).dota.CMsgDOTAClientToGCQuickStatsRequest\x12J\n\nhero_stats\x18\x02 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12J\n\nitem_stats\x18\x03 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12O\n\x0fitem_hero_stats\x18\x04 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12Q\n\x11item_player_stats\x18\x05 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12Q\n\x11hero_player_stats\x18\x06 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12N\n\x0e\x66ull_set_stats\x18\x07 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x1a_\n\x0bSimpleStats\x12\x13\n\x0bwin_percent\x18\x01 \x01(\x02\x12\x14\n\x0cpick_percent\x18\x02 \x01(\x02\x12\x11\n\twin_count\x18\x03 \x01(\r\x12\x12\n\npick_count\x18\x04 \x01(\r\"\x82\x01\n&CMsgDOTASelectionPriorityChoiceRequest\x12X\n\x06\x63hoice\x18\x01 \x01(\x0e\x32!.dota.DOTASelectionPriorityChoice:%k_DOTASelectionPriorityChoice_Invalid\"\xa2\x01\n\'CMsgDOTASelectionPriorityChoiceResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgDOTASelectionPriorityChoiceResponse.Result:\x07SUCCESS\"(\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\"/\n\x1b\x43MsgDOTAGameAutographReward\x12\x10\n\x08\x62\x61\x64ge_id\x18\x01 \x01(\t\"\x9a\x01\n#CMsgDOTAGameAutographRewardResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAGameAutographRewardResponse.Result:\x07SUCCESS\"(\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\"\x1d\n\x1b\x43MsgDOTADestroyLobbyRequest\"\x8c\x01\n\x1c\x43MsgDOTADestroyLobbyResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).dota.CMsgDOTADestroyLobbyResponse.Result:\x07SUCCESS\"(\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\"\x90\x01\n\x1f\x43MsgPurchaseItemWithEventPoints\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x10\n\x08quantity\x18\x02 \x01(\r\x12-\n\x08\x65vent_id\x18\x03 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x1a\n\x12use_premium_points\x18\x04 \x01(\x08\"\xac\x02\n\'CMsgPurchaseItemWithEventPointsResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgPurchaseItemWithEventPointsResponse.Result:\x07SUCCESS\"\xb1\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rUNKNOWN_EVENT\x10\x01\x12\x10\n\x0cUNKNOWN_ITEM\x10\x02\x12\x10\n\x0c\x42\x41\x44_QUANTITY\x10\x03\x12\x14\n\x10NOT_PURCHASEABLE\x10\x04\x12\x13\n\x0fSDO_LOAD_FAILED\x10\x05\x12\x15\n\x11NOT_ENOUGH_POINTS\x10\x06\x12\r\n\tSQL_ERROR\x10\x07\x12\x12\n\x0e\x46\x41ILED_TO_SEND\x10\x08\"\xbe\x01\n CMsgGCRequestItemRecommendations\x12\x0b\n\x03mmr\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x17\n\x0f\x61llied_hero_ids\x18\x03 \x03(\r\x12\x16\n\x0e\x65nemy_hero_ids\x18\x04 \x03(\r\x12\x17\n\x0finventory_items\x18\x05 \x03(\r\x12\x11\n\tgame_time\x18\x06 \x01(\x05\x12\x0c\n\x04gold\x18\x07 \x01(\r\x12\x11\n\tnet_worth\x18\x08 \x01(\r\"H\n(CMsgGCRequestItemRecommendationsResponse\x12\x1c\n\x14recommended_item_ids\x18\x01 \x03(\r*V\n\x14\x44OTA_WatchReplayType\x12\x1c\n\x18\x44OTA_WATCH_REPLAY_NORMAL\x10\x00\x12 \n\x1c\x44OTA_WATCH_REPLAY_HIGHLIGHTS\x10\x01*\xd1\x01\n\x1c\x45ItemEditorReservationResult\x12%\n!k_EItemEditorReservationResult_OK\x10\x01\x12\x30\n,k_EItemEditorReservationResult_AlreadyExists\x10\x02\x12+\n\'k_EItemEditorReservationResult_Reserved\x10\x03\x12+\n\'k_EItemEditorReservationResult_TimedOut\x10\x04*\x92\x04\n\x16\x45\x46\x65\x61turedHeroTextField\x12$\n k_EFeaturedHeroTextField_NewHero\x10\x00\x12$\n k_EFeaturedHeroTextField_NewItem\x10\x01\x12/\n+k_EFeaturedHeroTextField_ItemSetDescription\x10\x02\x12,\n(k_EFeaturedHeroTextField_ItemDescription\x10\x03\x12!\n\x1dk_EFeaturedHeroTextField_Hype\x10\x04\x12(\n$k_EFeaturedHeroTextField_HeroWinLoss\x10\x05\x12\x31\n-k_EFeaturedHeroTextField_FrequentlyPlayedHero\x10\x06\x12)\n%k_EFeaturedHeroTextField_FeaturedItem\x10\x07\x12(\n$k_EFeaturedHeroTextField_PopularItem\x10\x08\x12%\n!k_EFeaturedHeroTextField_SaleItem\x10\t\x12)\n%k_EFeaturedHeroTextField_SaleDiscount\x10\n\x12&\n\"k_EFeaturedHeroTextField_Container\x10\x0b*\x87\x03\n\x15\x45\x46\x65\x61turedHeroDataType\x12\"\n\x1ek_EFeaturedHeroDataType_HeroID\x10\x00\x12#\n\x1fk_EFeaturedHeroDataType_ItemDef\x10\x01\x12&\n\"k_EFeaturedHeroDataType_HypeString\x10\x02\x12*\n&k_EFeaturedHeroDataType_StartTimestamp\x10\x03\x12+\n\'k_EFeaturedHeroDataType_ExpireTimestamp\x10\x04\x12$\n k_EFeaturedHeroDataType_HeroWins\x10\x05\x12&\n\"k_EFeaturedHeroDataType_HeroLosses\x10\x06\x12(\n$k_EFeaturedHeroDataType_SaleDiscount\x10\x07\x12,\n(k_EFeaturedHeroDataType_ContainerItemDef\x10\x08*\xe8\x01\n EWeekendTourneyRichPresenceEvent\x12+\n\'k_EWeekendTourneyRichPresenceEvent_None\x10\x00\x12\x33\n/k_EWeekendTourneyRichPresenceEvent_StartedMatch\x10\x01\x12/\n+k_EWeekendTourneyRichPresenceEvent_WonMatch\x10\x02\x12\x31\n-k_EWeekendTourneyRichPresenceEvent_Eliminated\x10\x03*\x8c\x01\n\x14\x45\x44OTAEventInviteType\x12!\n\x1dk_EDOTAEventInviteType_Direct\x10\x00\x12(\n$k_EDOTAEventInviteType_OpenQualifier\x10\x01\x12\'\n#k_EDOTAEventInviteType_ChampionsCup\x10\x02*\xc2\x05\n\x1b\x45\x44OTATriviaQuestionCategory\x12-\n)k_EDOTATriviaQuestionCategory_AbilityIcon\x10\x00\x12\x31\n-k_EDOTATriviaQuestionCategory_AbilityCooldown\x10\x01\x12\x30\n,k_EDOTATriviaQuestionCategory_HeroAttributes\x10\x02\x12\x33\n/k_EDOTATriviaQuestionCategory_HeroMovementSpeed\x10\x03\x12,\n(k_EDOTATriviaQuestionCategory_TalentTree\x10\x04\x12+\n\'k_EDOTATriviaQuestionCategory_HeroStats\x10\x05\x12+\n\'k_EDOTATriviaQuestionCategory_ItemPrice\x10\x06\x12.\n*k_EDOTATriviaQuestionCategory_AbilitySound\x10\x07\x12/\n+k_EDOTATriviaQuestionCategory_InvokerSpells\x10\x08\x12\x31\n-k_EDOTATriviaQuestionCategory_AbilityManaCost\x10\t\x12\x31\n-k_EDOTATriviaQuestionCategory_HeroAttackSound\x10\n\x12-\n)k_EDOTATriviaQuestionCategory_AbilityName\x10\x0b\x12\x30\n,k_EDOTATriviaQuestionCategory_ItemComponents\x10\x0c\x12*\n&k_EDOTATriviaQuestionCategory_ItemLore\x10\r*\xa7\x02\n\x17\x45\x44OTATriviaAnswerResult\x12%\n!k_EDOTATriviaAnswerResult_Success\x10\x00\x12-\n)k_EDOTATriviaAnswerResult_InvalidQuestion\x10\x01\x12+\n\'k_EDOTATriviaAnswerResult_InvalidAnswer\x10\x02\x12,\n(k_EDOTATriviaAnswerResult_QuestionLocked\x10\x03\x12-\n)k_EDOTATriviaAnswerResult_AlreadyAnswered\x10\x04\x12,\n(k_EDOTATriviaAnswerResult_TriviaDisabled\x10\x05\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x1c\x64ota_gcmessages_client.proto\x12\x04\x64ota\x1a\x13steammessages.proto\x1a\x17\x64ota_shared_enums.proto\x1a\x1c\x64ota_gcmessages_common.proto\x1a\x16gcsdk_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"\'\n\x13\x43MsgClientSuspended\x12\x10\n\x08time_end\x18\x01 \x01(\r\" \n\x1e\x43MsgRequestInternationalTicket\"\x1a\n\x18\x43MsgBalancedShuffleLobby\"9\n CMsgInitialQuestionnaireResponse\x12\x15\n\rinitial_skill\x18\x01 \x01(\r\"/\n\x1a\x43MsgDOTAPlayerMatchHistory\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"o\n\x1a\x43MsgDOTAMatchHistoryFilter\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\x12%\n\x1dnewest_match_id_at_last_query\x18\x02 \x01(\x04\x12\x17\n\x0ftime_last_query\x18\x03 \x01(\r\"\xa6\x03\n\x16\x43MsgDOTARequestMatches\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x11\n\tgame_mode\x18\x03 \x01(\r\x12\x10\n\x08\x64\x61te_min\x18\x06 \x01(\x07\x12\x10\n\x08\x64\x61te_max\x18\x07 \x01(\x07\x12\x19\n\x11matches_requested\x18\n \x01(\r\x12\x19\n\x11start_at_match_id\x18\x0b \x01(\x04\x12\x13\n\x0bmin_players\x18\x0c \x01(\x07\x12\x12\n\nrequest_id\x18\r \x01(\r\x12\x1d\n\x15tournament_games_only\x18\x0e \x01(\x08\x12\x12\n\naccount_id\x18\x0f \x01(\r\x12\x11\n\tleague_id\x18\x10 \x01(\r\x12;\n\x05skill\x18\x11 \x01(\x0e\x32\'.dota.CMsgDOTARequestMatches.SkillLevel:\x03\x41ny\x12\x0f\n\x07team_id\x18\x12 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x14 \x01(\x04\"9\n\nSkillLevel\x12\x07\n\x03\x41ny\x10\x00\x12\n\n\x06Normal\x10\x01\x12\x08\n\x04High\x10\x02\x12\x0c\n\x08VeryHigh\x10\x03\"\xa1\x02\n\x1e\x43MsgDOTARequestMatchesResponse\x12$\n\x07matches\x18\x01 \x03(\x0b\x32\x13.dota.CMsgDOTAMatch\x12;\n\x06series\x18\x02 \x03(\x0b\x32+.dota.CMsgDOTARequestMatchesResponse.Series\x12\x12\n\nrequest_id\x18\x03 \x01(\r\x12\x15\n\rtotal_results\x18\x04 \x01(\r\x12\x19\n\x11results_remaining\x18\x05 \x01(\r\x1aV\n\x06Series\x12$\n\x07matches\x18\x01 \x03(\x0b\x32\x13.dota.CMsgDOTAMatch\x12\x11\n\tseries_id\x18\x02 \x01(\r\x12\x13\n\x0bseries_type\x18\x03 \x01(\r\"\xf9\x0e\n\rCMsgDOTAPopup\x12-\n\x02id\x18\x01 \x01(\x0e\x32\x1b.dota.CMsgDOTAPopup.PopupID:\x04NONE\x12\x13\n\x0b\x63ustom_text\x18\x02 \x01(\t\x12\x10\n\x08int_data\x18\x03 \x01(\x11\x12\x12\n\npopup_data\x18\x04 \x01(\x0c\x12\x18\n\x10loc_token_header\x18\x05 \x01(\t\x12\x15\n\rloc_token_msg\x18\x06 \x01(\t\x12\x11\n\tvar_names\x18\x07 \x03(\t\x12\x12\n\nvar_values\x18\x08 \x03(\t\x12\x12\n\ndebug_text\x18\t \x01(\t\"\x91\r\n\x07PopupID\x12\x11\n\x04NONE\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12\x15\n\x11KICKED_FROM_LOBBY\x10\x00\x12\x15\n\x11KICKED_FROM_PARTY\x10\x01\x12\x14\n\x10KICKED_FROM_TEAM\x10\x02\x12\x16\n\x12TEAM_WAS_DISBANDED\x10\x03\x12 \n\x1cTEAM_MATCHMAKE_ALREADY_MATCH\x10\x04\x12\"\n\x1eTEAM_MATCHMAKE_ALREADY_FINDING\x10\x05\x12\x17\n\x13TEAM_MATCHMAKE_FULL\x10\x06\x12\x1b\n\x17TEAM_MATCHMAKE_FAIL_ADD\x10\x07\x12#\n\x1fTEAM_MATCHMAKE_FAIL_ADD_CURRENT\x10\x08\x12%\n!TEAM_MATCHMAKE_FAILED_TEAM_MEMBER\x10\t\x12\x1f\n\x1bTEAM_MATCHMAKE_ALREADY_GAME\x10\n\x12!\n\x1dTEAM_MATCHMAKE_FAIL_GET_PARTY\x10\x0b\x12\x18\n\x14MATCHMAKING_DISABLED\x10\x0c\x12\x11\n\rINVITE_DENIED\x10\r\x12\x0e\n\nPARTY_FULL\x10\x0e\x12\x0e\n\nMADE_ADMIN\x10\x0f\x12\x14\n\x10NEED_TO_PURCHASE\x10\x10\x12\x12\n\x0eSIGNON_MESSAGE\x10\x11\x12\x10\n\x0cGUILD_KICKED\x10\x12\x12\x1e\n\x1aMATCHMAKING_REGION_OFFLINE\x10\x13\x12\x1d\n\x19TOURNAMENT_GAME_NOT_FOUND\x10\x15\x12 \n\x1cTOURNAMENT_GAME_HAS_LOBBY_ID\x10\x16\x12 \n\x1cTOURNAMENT_GAME_HAS_MATCH_ID\x10\x17\x12\'\n#TOURNAMENT_GAME_HAS_NO_RADIANT_TEAM\x10\x18\x12$\n TOURNAMENT_GAME_HAS_NO_DIRE_TEAM\x10\x19\x12%\n!TOURNAMENT_GAME_SQL_UPDATE_FAILED\x10\x1a\x12\x14\n\x10NOT_LEAGUE_ADMIN\x10\x1b\x12\x13\n\x0fIN_ANOTHER_GAME\x10\x1d\x12 \n\x1cPARTY_MEMBER_IN_ANOTHER_GAME\x10\x1e\x12 \n\x1cPARTY_MEMBER_IN_LOW_PRIORITY\x10\x1f\x12\x16\n\x12\x43LIENT_OUT_OF_DATE\x10 \x12\x15\n\x11SAVE_GAME_CORRUPT\x10&\x12\x17\n\x13INSUFFICIENT_INGOTS\x10\'\x12\x39\n5COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_PLAY_MORE_CASUAL\x10*\x12\x1d\n\x19PARTY_LEADER_JOINED_LOBBY\x10,\x12\x1d\n\x19WEEKEND_TOURNEY_UNMATCHED\x10\x30\x12\x15\n\x11POST_MATCH_SURVEY\x10\x31\x12\x12\n\x0eTROPHY_AWARDED\x10\x32\x12\x13\n\x0fTROPHY_LEVEL_UP\x10\x33\x12\x1f\n\x1b\x41LL_HERO_CHALLENGE_PROGRESS\x10\x34\x12\x16\n\x12NEED_INITIAL_SKILL\x10\x35\x12\x1f\n\x1bNEED_INITIAL_SKILL_IN_PARTY\x10\x36\x12\x1a\n\x16TARGET_ENGINE_MISMATCH\x10\x37\x12\x14\n\x10VAC_NOT_VERIFIED\x10\x38\x12$\n KICKED_FROM_QUEUE_EVENT_STARTING\x10\x39\x12\"\n\x1eKICKED_FROM_QUEUE_EVENT_ENDING\x10:\x12\x0e\n\nLOBBY_FULL\x10>\x12\x17\n\x13\x45VENT_POINTS_EARNED\x10?\x12!\n\x1d\x43USTOM_GAME_INCORRECT_VERSION\x10@\x12\x15\n\x11LIMITED_USER_CHAT\x10\x42\x12\x1f\n\x1b\x45VENT_PREMIUM_POINTS_EARNED\x10\x43\x12\x15\n\x11LOBBY_MVP_AWARDED\x10\x44\x12\x18\n\x14LOW_BADGE_LEVEL_CHAT\x10G\x12\x11\n\rLOW_WINS_CHAT\x10H\x12\x18\n\x14UNVERIFIED_USER_CHAT\x10I\x12%\n!PARTY_STARTED_FINDING_EVENT_MATCH\x10J\x12\x10\n\x0cGENERIC_INFO\x10\x45\x12\x11\n\rGENERIC_ERROR\x10\x46\x12\x15\n\x11RANK_TIER_UPDATED\x10K\"!\n\x1f\x43MsgDOTAReportsRemainingRequest\"\xba\x01\n CMsgDOTAReportsRemainingResponse\x12&\n\x1enum_positive_reports_remaining\x18\x01 \x01(\r\x12&\n\x1enum_negative_reports_remaining\x18\x02 \x01(\r\x12\"\n\x1anum_positive_reports_total\x18\x03 \x01(\r\x12\"\n\x1anum_negative_reports_total\x18\x04 \x01(\r\"p\n\x1a\x43MsgDOTASubmitPlayerReport\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x14\n\x0creport_flags\x18\x02 \x01(\r\x12\x10\n\x08lobby_id\x18\x04 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\"|\n\"CMsgDOTASubmitPlayerReportResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x14\n\x0creport_flags\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\x15\n\rdebug_message\x18\x04 \x01(\t\"8\n\x1b\x43MsgDOTAReportCountsRequest\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\"\x9c\x01\n\x1c\x43MsgDOTAReportCountsResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x18\n\x10leadership_count\x18\x02 \x01(\r\x12\x16\n\x0eteaching_count\x18\x03 \x01(\r\x12\x16\n\x0e\x66riendly_count\x18\x04 \x01(\r\x12\x17\n\x0f\x66orgiving_count\x18\x05 \x01(\r\"7\n\x1a\x43MsgDOTASubmitLobbyMVPVote\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\"P\n\"CMsgDOTASubmitLobbyMVPVoteResponse\x12\x19\n\x11target_account_id\x18\x01 \x01(\r\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\"l\n\x1f\x43MsgDOTALobbyMVPNotifyRecipient\x12\x18\n\x10voter_account_id\x18\x01 \x01(\r\x12\x1c\n\x14recipient_account_id\x18\x02 \x01(\r\x12\x11\n\tnum_votes\x18\x03 \x01(\r\"1\n\x17\x43MsgDOTALobbyMVPAwarded\x12\x16\n\x0emvp_account_id\x18\x01 \x01(\r\"\\\n\"CMsgDOTAKickedFromMatchmakingQueue\x12\x36\n\nmatch_type\x18\x01 \x01(\x0e\x32\x0f.dota.MatchType:\x11MATCH_TYPE_CASUAL\"1\n\x18\x43MsgDOTARequestSaveGames\x12\x15\n\rserver_region\x18\x01 \x01(\r\"]\n CMsgDOTARequestSaveGamesResponse\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\'\n\nsave_games\x18\x02 \x03(\x0b\x32\x13.dota.CDOTASaveGame\"-\n\x19\x43MsgGCMatchDetailsRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\"\x8a\x01\n\x1a\x43MsgGCMatchDetailsResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\"\n\x05match\x18\x02 \x01(\x0b\x32\x13.dota.CMsgDOTAMatch\x12\x38\n\x04vote\x18\x03 \x01(\x0e\x32\x13.dota.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\"6\n!CMsgServerToGCMatchDetailsRequest\x12\x11\n\tmatch_ids\x18\x01 \x03(\x04\"J\n\"CMsgGCToServerMatchDetailsResponse\x12$\n\x07matches\x18\x01 \x03(\x0b\x32\x13.dota.CMsgDOTAMatch\"B\n\x16\x43MsgDOTAProfileRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0crequest_name\x18\x02 \x01(\x08\"\xe5\x06\n\x17\x43MsgDOTAProfileResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12;\n\x13game_account_client\x18\x02 \x01(\x0b\x32\x1e.dota.CSODOTAGameAccountClient\x12+\n\x0elatest_matches\x18\x03 \x03(\x0b\x32\x13.dota.CMsgDOTAMatch\x12\x38\n\x06heroes\x18\x04 \x03(\x0b\x32(.dota.CMsgDOTAProfileResponse.PlayedHero\x12\x13\n\x0bplayer_name\x18\x05 \x01(\t\x12\x11\n\tteam_name\x18\x06 \x01(\t\x12\x10\n\x08team_tag\x18\x07 \x01(\t\x12\x11\n\tteam_logo\x18\x08 \x01(\x04\x12\x41\n\rshowcase_hero\x18\t \x01(\x0b\x32*.dota.CMsgDOTAProfileResponse.ShowcaseHero\x12?\n\rleague_passes\x18\n \x03(\x0b\x32(.dota.CMsgDOTAProfileResponse.LeaguePass\x12@\n\revent_tickets\x18\x0b \x03(\x0b\x32).dota.CMsgDOTAProfileResponse.EventTicket\x12\x0f\n\x07team_id\x18\x0c \x01(\r\x12\x14\n\x0chas_passport\x18\r \x01(\x08\x12\x42\n\x0e\x66\x65\x61tured_items\x18\x0e \x03(\x0b\x32*.dota.CMsgDOTAProfileResponse.FeaturedItem\x12\x17\n\x0f\x61\x62\x61ndon_percent\x18\x0f \x01(\r\x1a+\n\nPlayedHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0c\n\x04wins\x18\x02 \x01(\r\x1a\x34\n\x0cShowcaseHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bobject_data\x18\x02 \x03(\x0c\x1a\x31\n\nLeaguePass\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x1a\x1f\n\x0b\x45ventTicket\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x1aH\n\x0c\x46\x65\x61turedItem\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x13\n\x0bobject_data\x18\x02 \x01(\x0c\x12\x12\n\nslot_index\x18\x03 \x01(\r\"\x91\x02\n\x16\x43MsgDOTAProfileTickets\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12>\n\rleague_passes\x18\x03 \x03(\x0b\x32\'.dota.CMsgDOTAProfileTickets.LeaguePass\x12?\n\revent_tickets\x18\x04 \x03(\x0b\x32(.dota.CMsgDOTAProfileTickets.EventTicket\x1a\x31\n\nLeaguePass\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x1a\x1f\n\x0b\x45ventTicket\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"5\n\x1f\x43MsgClientToGCGetProfileTickets\x12\x12\n\naccount_id\x18\x01 \x01(\r\"/\n\x19\x43MsgGCSteamProfileRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\"3\n!CMsgGCSteamProfileRequestResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"%\n#CMsgDOTAClearNotifySuccessfulReport\"\xd3\x07\n\x0f\x43MsgDOTAWelcome\x12\x17\n\x0fstore_item_hash\x18\x05 \x01(\r\x12\x1f\n\x17timeplayedconsecutively\x18\x06 \x01(\r\x12%\n\x1d\x61llow_3rd_party_match_history\x18\x07 \x01(\x08\x12\x44\n\x14partner_account_type\x18\x08 \x01(\x0e\x32\x18.dota.PartnerAccountType:\x0cPARTNER_NONE\x12 \n\x18\x62\x61nned_word_list_word_id\x18\t \x01(\r\x12\x1d\n\x15partner_account_state\x18\x0b \x01(\r\x12\x18\n\x10last_time_played\x18\x0c \x01(\r\x12\x17\n\x0flast_ip_address\x18\r \x01(\r\x12#\n\x1bshutdownlawterminateminutes\x18\x0f \x01(\r\x12 \n\x18\x62\x61nned_word_list_version\x18\x10 \x01(\r\x12\x17\n\x0fprofile_private\x18\x11 \x01(\x08\x12\x10\n\x08\x63urrency\x18\x12 \x01(\r\x12\x0f\n\x07\x62\x61ng_no\x18\x13 \x01(\r\x12$\n\x1cshould_request_player_origin\x18\x14 \x01(\x08\x12\x1a\n\x12\x63ompendium_unlocks\x18\x15 \x01(\x04\x12\x1f\n\x17gc_socache_file_version\x18\x16 \x01(\r\x12\x46\n\x14localization_digests\x18\x17 \x03(\x0b\x32(.dota.CMsgDOTAWelcome.LocalizationDigest\x12%\n\x1dis_perfect_world_test_account\x18\x18 \x01(\x08\x12\x37\n\x0e\x65xtra_messages\x18\x1a \x03(\x0b\x32\x1f.dota.CMsgDOTAWelcome.CExtraMsg\x12\x1e\n\x16minimum_recent_item_id\x18\x1b \x01(\x04\x12\x31\n\x0c\x61\x63tive_event\x18\x1c \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x1a\x98\x01\n\x12LocalizationDigest\x12\x0f\n\x07\x63ontext\x18\x01 \x01(\t\x12\x38\n\x1a\x65nglish_language_file_sha1\x18\x02 \x01(\x0b\x32\x14.dota.CMsgSHA1Digest\x12\x37\n\x19\x63lient_language_file_sha1\x18\x03 \x01(\x0b\x32\x14.dota.CMsgSHA1Digest\x1a)\n\tCExtraMsg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63ontents\x18\x02 \x01(\x0c\"K\n\x18\x43SODOTAGameHeroFavorites\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x15\n\x07hero_id\x18\x02 \x01(\rB\x04\x80\x97\"\x01\"+\n\x18\x43MsgDOTAHeroFavoritesAdd\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\".\n\x1b\x43MsgDOTAHeroFavoritesRemove\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"/\n\x13\x43MsgSetShowcaseHero\x12\x18\n\x10showcase_hero_id\x18\x01 \x01(\r\"0\n\x14\x43MsgSetFeaturedItems\x12\x18\n\x10\x66\x65\x61tured_item_id\x18\x01 \x03(\x04\"Z\n\x15\x43MsgDOTAFeaturedItems\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10\x66\x65\x61tured_item_id\x18\x02 \x03(\x04\x12\x13\n\x0bobject_data\x18\x03 \x03(\x0c\"\x17\n\x15\x43MsgRequestLeagueInfo\"\xd0\x01\n\x12\x43\x44ynamicLeagueData\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0flast_match_time\x18\x02 \x01(\x07\x12\x16\n\x0eprize_pool_usd\x18\x03 \x01(\r\x12\x18\n\x10has_live_matches\x18\x04 \x01(\x08\x12\x1c\n\x14is_compendium_public\x18\x05 \x01(\x08\x12\x1a\n\x12\x63ompendium_version\x18\x06 \x01(\r\x12\"\n\x1a\x63ompendium_content_version\x18\x07 \x01(\r\"\xde\x03\n\x11\x43StaticLeagueData\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x13\n\x0b\x62\x61nner_name\x18\x04 \x01(\t\x12\x14\n\x0citemdef_name\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x16\n\x0eitem_def_index\x18\x07 \x01(\r\x12\x1f\n\x17hud_skin_item_def_index\x18\x08 \x01(\r\x12\x1b\n\x13loading_screen_name\x18\t \x01(\t\x12\x17\n\x0f\x62\x61se_prize_pool\x18\n \x01(\r\x12\x10\n\x08is_major\x18\x0b \x01(\x08\x12\x0c\n\x04tier\x18\r \x01(\r\x12\x16\n\x0e\x61mateur_region\x18\x0e \x01(\r\x12\x11\n\torganizer\x18\x0f \x01(\t\x12\x12\n\nstart_date\x18\x10 \x01(\r\x12\x10\n\x08\x65nd_date\x18\x11 \x01(\r\x12\x10\n\x08location\x18\x12 \x01(\t\x12\x17\n\x0finventory_image\x18\x13 \x01(\t\x12\x14\n\x0csquare_image\x18\x14 \x01(\t\x12\x1a\n\x12\x62\x61ttle_pass_rollup\x18\x15 \x01(\x08\x12\x1e\n\x16\x62\x61se_prize_pool_string\x18\x16 \x01(\t\"}\n\x0b\x43LeagueData\x12.\n\x0c\x64ynamic_data\x18\x01 \x01(\x0b\x32\x18.dota.CDynamicLeagueData\x12,\n\x0bstatic_data\x18\x02 \x01(\x0b\x32\x17.dota.CStaticLeagueData\x12\x10\n\x08is_owned\x18\x03 \x01(\x08\"H\n\x1c\x43MsgResponseLeagueStaticData\x12(\n\x07leagues\x18\x01 \x03(\x0b\x32\x17.dota.CStaticLeagueData\"C\n\x16\x43MsgResponseLeagueInfo\x12)\n\x07leagues\x18\x01 \x03(\x0b\x32\x18.dota.CDynamicLeagueData\"\x8a\x01\n\x12\x43MsgDOTAMatchVotes\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x32\n\x05votes\x18\x02 \x03(\x0b\x32#.dota.CMsgDOTAMatchVotes.PlayerVote\x1a.\n\nPlayerVote\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04vote\x18\x02 \x01(\r\"_\n\x11\x43MsgCastMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x38\n\x04vote\x18\x02 \x01(\x0e\x32\x13.dota.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\">\n\x15\x43MsgRetrieveMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x13\n\x0bincremental\x18\x02 \x01(\r\"\x95\x01\n\x15\x43MsgMatchVoteResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x38\n\x04vote\x18\x02 \x01(\x0e\x32\x13.dota.DOTAMatchVote:\x15\x44OTAMatchVote_INVALID\x12\x16\n\x0epositive_votes\x18\x03 \x01(\r\x12\x16\n\x0enegative_votes\x18\x04 \x01(\r\"\xef\x02\n\x12\x43MsgDOTAHallOfFame\x12\x0c\n\x04week\x18\x01 \x01(\r\x12\x41\n\x10\x66\x65\x61tured_players\x18\x02 \x03(\x0b\x32\'.dota.CMsgDOTAHallOfFame.FeaturedPlayer\x12@\n\x0f\x66\x65\x61tured_farmer\x18\x03 \x01(\x0b\x32\'.dota.CMsgDOTAHallOfFame.FeaturedFarmer\x1ag\n\x0e\x46\x65\x61turedPlayer\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x1d\n\x15\x61verage_scaled_metric\x18\x03 \x01(\x02\x12\x11\n\tnum_games\x18\x04 \x01(\r\x1a]\n\x0e\x46\x65\x61turedFarmer\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x14\n\x0cgold_per_min\x18\x03 \x01(\r\x12\x10\n\x08match_id\x18\x04 \x01(\x04\")\n\x19\x43MsgDOTAHallOfFameRequest\x12\x0c\n\x04week\x18\x01 \x01(\r\"`\n\x1a\x43MsgDOTAHallOfFameResponse\x12.\n\x0chall_of_fame\x18\x01 \x01(\x0b\x32\x18.dota.CMsgDOTAHallOfFame\x12\x12\n\x07\x65result\x18\x02 \x01(\r:\x01\x32\"6\n!CMsgDOTAHalloweenHighScoreRequest\x12\x11\n\x05round\x18\x01 \x01(\x05:\x02-1\"w\n\"CMsgDOTAHalloweenHighScoreResponse\x12\r\n\x05score\x18\x01 \x01(\r\x12\"\n\x05match\x18\x02 \x01(\x0b\x32\x13.dota.CMsgDOTAMatch\x12\x0f\n\x07\x65result\x18\x03 \x01(\r\x12\r\n\x05round\x18\x04 \x01(\x05\"6\n\x1e\x43MsgDOTAStorePromoPagesRequest\x12\x14\n\x0cversion_seen\x18\x01 \x01(\r\"\x9c\x01\n\x1f\x43MsgDOTAStorePromoPagesResponse\x12>\n\x05pages\x18\x01 \x03(\x0b\x32/.dota.CMsgDOTAStorePromoPagesResponse.PromoPage\x1a\x39\n\tPromoPage\x12\x10\n\x08promo_id\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\"\xb0\x01\n\x1d\x43MsgMatchmakingMatchGroupInfo\x12\x19\n\x11players_searching\x18\x01 \x01(\r\x12\'\n\x1f\x61uto_region_select_ping_penalty\x18\x02 \x01(\x11\x12K\n\x06status\x18\x03 \x01(\x0e\x32\x1d.dota.EMatchGroupServerStatus:\x1ck_EMatchGroupServerStatus_OK\"!\n\x1f\x43MsgDOTAMatchmakingStatsRequest\"\xad\x01\n CMsgDOTAMatchmakingStatsResponse\x12\x1b\n\x13matchgroups_version\x18\x01 \x01(\r\x12\x31\n)legacy_searching_players_by_group_source2\x18\x07 \x03(\r\x12\x39\n\x0cmatch_groups\x18\x08 \x03(\x0b\x32#.dota.CMsgMatchmakingMatchGroupInfo\"W\n\x1e\x43MsgDOTAUpdateMatchmakingStats\x12\x35\n\x05stats\x18\x01 \x01(\x0b\x32&.dota.CMsgDOTAMatchmakingStatsResponse\"[\n\"CMsgDOTAUpdateMatchManagementStats\x12\x35\n\x05stats\x18\x01 \x01(\x0b\x32&.dota.CMsgDOTAMatchmakingStatsResponse\"F\n\x1d\x43MsgDOTASetMatchHistoryAccess\x12%\n\x1d\x61llow_3rd_party_match_history\x18\x01 \x01(\x08\";\n%CMsgDOTASetMatchHistoryAccessResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"L\n CMsgDOTANotifyAccountFlagsChange\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x15\n\raccount_flags\x18\x02 \x01(\r\"4\n\x19\x43MsgDOTASetProfilePrivacy\x12\x17\n\x0fprofile_private\x18\x01 \x01(\x08\"4\n!CMsgDOTASetProfilePrivacyResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\"<\n\x15\x43MsgUpgradeLeagueItem\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tleague_id\x18\x02 \x01(\r\"\x1f\n\x1d\x43MsgUpgradeLeagueItemResponse\"y\n\x1b\x43MsgGCWatchDownloadedReplay\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12H\n\nwatch_type\x18\x02 \x01(\x0e\x32\x1a.dota.DOTA_WatchReplayType:\x18\x44OTA_WATCH_REPLAY_NORMAL\"A\n\x17\x43MsgSetMapLocationState\x12\x13\n\x0blocation_id\x18\x01 \x01(\x05\x12\x11\n\tcompleted\x18\x02 \x01(\x08\"5\n\x1f\x43MsgSetMapLocationStateResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"\x17\n\x15\x43MsgResetMapLocations\"3\n\x1d\x43MsgResetMapLocationsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"5\n\x1d\x43MsgRefreshPartnerAccountLink\x12\x14\n\x0cpartner_type\x18\x01 \x01(\x05\"\x1f\n\x1d\x43MsgClientsRejoinChatChannels\".\n\x1a\x43MsgDOTASendFriendRecruits\x12\x10\n\x08recruits\x18\x01 \x03(\r\"4\n\x1d\x43MsgDOTAFriendRecruitsRequest\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\x91\x03\n\x1e\x43MsgDOTAFriendRecruitsResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.dota.CMsgDOTAFriendRecruitsResponse.EResult:\x07SUCCESS\x12J\n\x08recruits\x18\x02 \x03(\x0b\x32\x38.dota.CMsgDOTAFriendRecruitsResponse.FriendRecruitStatus\x12L\n\nrecruiters\x18\x03 \x03(\x0b\x32\x38.dota.CMsgDOTAFriendRecruitsResponse.FriendRecruitStatus\x1a_\n\x13\x46riendRecruitStatus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x15\n\rlevels_earned\x18\x03 \x01(\r\x12\r\n\x05\x62onus\x18\x04 \x01(\x08\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"P\n(CMsgDOTAFriendRecruitInviteAcceptDecline\x12\x10\n\x08\x61\x63\x63\x65pted\x18\x01 \x01(\x08\x12\x12\n\naccount_id\x18\x02 \x01(\r\"/\n\x1a\x43MsgRequestLeaguePrizePool\x12\x11\n\tleague_id\x18\x01 \x01(\r\"K\n\"CMsgRequestLeaguePrizePoolResponse\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x12\n\nprize_pool\x18\x02 \x01(\r\"\x18\n\x16\x43MsgGCGetHeroStandings\"\xf0\x03\n\x1e\x43MsgGCGetHeroStandingsResponse\x12<\n\tstandings\x18\x01 \x03(\x0b\x32).dota.CMsgGCGetHeroStandingsResponse.Hero\x1a\x8f\x03\n\x04Hero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0c\n\x04wins\x18\x02 \x01(\r\x12\x0e\n\x06losses\x18\x03 \x01(\r\x12\x12\n\nwin_streak\x18\x04 \x01(\r\x12\x17\n\x0f\x62\x65st_win_streak\x18\x05 \x01(\r\x12\x11\n\tavg_kills\x18\x06 \x01(\x02\x12\x12\n\navg_deaths\x18\x07 \x01(\x02\x12\x13\n\x0b\x61vg_assists\x18\x08 \x01(\x02\x12\x0f\n\x07\x61vg_gpm\x18\t \x01(\x02\x12\x0f\n\x07\x61vg_xpm\x18\n \x01(\x02\x12\x12\n\nbest_kills\x18\x0b \x01(\r\x12\x14\n\x0c\x62\x65st_assists\x18\x0c \x01(\r\x12\x10\n\x08\x62\x65st_gpm\x18\r \x01(\r\x12\x10\n\x08\x62\x65st_xpm\x18\x0e \x01(\r\x12\x13\n\x0bperformance\x18\x0f \x01(\x02\x12\x16\n\x0ewins_with_ally\x18\x10 \x01(\r\x12\x18\n\x10losses_with_ally\x18\x11 \x01(\r\x12\x1a\n\x12wins_against_enemy\x18\x12 \x01(\r\x12\x1c\n\x14losses_against_enemy\x18\x13 \x01(\r\"%\n#CMsgGCItemEditorReservationsRequest\">\n\x1b\x43MsgGCItemEditorReservation\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"_\n$CMsgGCItemEditorReservationsResponse\x12\x37\n\x0creservations\x18\x01 \x03(\x0b\x32!.dota.CMsgGCItemEditorReservation\"E\n\x1e\x43MsgGCItemEditorReserveItemDef\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\"]\n&CMsgGCItemEditorReserveItemDefResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0e\n\x06result\x18\x03 \x01(\r\"I\n\"CMsgGCItemEditorReleaseReservation\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08username\x18\x02 \x01(\t\"Q\n*CMsgGCItemEditorReleaseReservationResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x10\n\x08released\x18\x02 \x01(\x08\"6\n!CMsgGCItemEditorRequestLeagueInfo\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xba\x01\n\"CMsgGCItemEditorLeagueInfoResponse\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x13\n\x0bleague_name\x18\x02 \x01(\t\x12\x13\n\x0bleague_desc\x18\x03 \x01(\t\x12\x12\n\nleague_url\x18\x04 \x01(\t\x12\x13\n\x0brevenue_url\x18\x05 \x01(\t\x12\x0c\n\x04tier\x18\x06 \x01(\r\x12\x10\n\x08location\x18\x07 \x01(\r\x12\x0e\n\x06result\x18\x08 \x01(\r\"J\n\x1c\x43MsgDOTARewardTutorialPrizes\x12\x13\n\x0blocation_id\x18\x01 \x01(\r\x12\x15\n\rtracking_only\x18\x02 \x01(\x08\"L\n%CMsgDOTALastHitChallengeHighScorePost\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhigh_score\x18\x02 \x01(\r\";\n(CMsgDOTALastHitChallengeHighScoreRequest\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"K\n)CMsgDOTALastHitChallengeHighScoreResponse\x12\r\n\x05score\x18\x01 \x01(\r\x12\x0f\n\x07\x65result\x18\x02 \x01(\r\"\x14\n\x12\x43MsgFlipLobbyTeams\"!\n\x1f\x43MsgPresentedClientTerminateDlg\"}\n%CMsgGCLobbyUpdateBroadcastChannelInfo\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\"Q\n\x18\x43MsgDOTAClaimEventAction\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x11\n\taction_id\x18\x02 \x01(\r\x12\x10\n\x08quantity\x18\x03 \x01(\r\"\x84\x05\n CMsgDOTAClaimEventActionResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTAClaimEventActionResponse.ResultCode:\x07Success\x12P\n\x0ereward_results\x18\x02 \x03(\x0b\x32\x38.dota.CMsgDOTAClaimEventActionResponse.GrantedRewardData\x1a@\n\x15MysteryItemRewardData\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x15\n\ritem_category\x18\x02 \x01(\r\x1a&\n\x12LootListRewardData\x12\x10\n\x08item_def\x18\x01 \x03(\r\x1ah\n\x11GrantedRewardData\x12\x13\n\x0bgrant_index\x18\x01 \x01(\r\x12\x13\n\x0bscore_index\x18\x02 \x01(\r\x12\x14\n\x0creward_index\x18\x03 \x01(\r\x12\x13\n\x0breward_data\x18\x04 \x01(\x0c\"\xed\x01\n\nResultCode\x12\x0b\n\x07Success\x10\x00\x12\x10\n\x0cInvalidEvent\x10\x01\x12\x12\n\x0e\x45ventNotActive\x10\x02\x12\x11\n\rInvalidAction\x10\x03\x12\x0f\n\x0bServerError\x10\x04\x12\x16\n\x12InsufficientPoints\x10\x05\x12\x14\n\x10InsufficentLevel\x10\x06\x12\x12\n\x0e\x41lreadyClaimed\x10\x07\x12\x12\n\x0eSDOLockFailure\x10\x08\x12\x12\n\x0eSDOLoadFailure\x10\t\x12\x11\n\rEventNotOwned\x10\n\x12\x0b\n\x07Timeout\x10\x0b\">\n\x16\x43MsgDOTAGetEventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\xc8\x02\n\x1e\x43MsgDOTAGetEventPointsResponse\x12\x14\n\x0ctotal_points\x18\x01 \x01(\r\x12\x1c\n\x14total_premium_points\x18\x02 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\x12\x0e\n\x06points\x18\x04 \x01(\r\x12\x16\n\x0epremium_points\x18\x05 \x01(\r\x12\x46\n\x11\x63ompleted_actions\x18\x06 \x03(\x0b\x32+.dota.CMsgDOTAGetEventPointsResponse.Action\x12\x12\n\naccount_id\x18\x07 \x01(\r\x12\r\n\x05owned\x18\x08 \x01(\x08\x12\x14\n\x0c\x61udit_action\x18\t \x01(\r\x1a\x37\n\x06\x41\x63tion\x12\x11\n\taction_id\x18\x01 \x01(\r\x12\x1a\n\x0ftimes_completed\x18\x02 \x01(\r:\x01\x31\"b\n\x1b\x43MsgDOTAGetPeriodicResource\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1c\n\x14periodic_resource_id\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\"d\n#CMsgDOTAGetPeriodicResourceResponse\x12\x1d\n\x15periodic_resource_max\x18\x01 \x01(\r\x12\x1e\n\x16periodic_resource_used\x18\x02 \x01(\r\"\xaf\x01\n\x1f\x43MsgDOTAPeriodicResourceUpdated\x12@\n\x15periodic_resource_key\x18\x01 \x01(\x0b\x32!.dota.CMsgDOTAGetPeriodicResource\x12J\n\x17periodic_resource_value\x18\x02 \x01(\x0b\x32).dota.CMsgDOTAGetPeriodicResourceResponse\"9\n\x1c\x43MsgDOTALiveLeagueGameUpdate\x12\x19\n\x11live_league_games\x18\x01 \x01(\r\"[\n\x1b\x43MsgDOTACompendiumSelection\x12\x17\n\x0fselection_index\x18\x01 \x01(\r\x12\x11\n\tselection\x18\x02 \x01(\r\x12\x10\n\x08leagueid\x18\x03 \x01(\r\"v\n#CMsgDOTACompendiumSelectionResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12;\n\x10\x65xtra_selections\x18\x02 \x03(\x0b\x32!.dota.CMsgDOTACompendiumSelection\"O\n\x16\x43MsgDOTACompendiumData\x12\x35\n\nselections\x18\x01 \x03(\x0b\x32!.dota.CMsgDOTACompendiumSelection\"E\n\x1d\x43MsgDOTACompendiumDataRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08leagueid\x18\x02 \x01(\r\"\x90\x01\n\x1e\x43MsgDOTACompendiumDataResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08leagueid\x18\x02 \x01(\r\x12\x11\n\x06result\x18\x03 \x01(\r:\x01\x32\x12\x35\n\x0f\x63ompendium_data\x18\x04 \x01(\x0b\x32\x1c.dota.CMsgDOTACompendiumData\"\xeb\x01\n\x1d\x43MsgDOTAGetPlayerMatchHistory\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x19\n\x11start_at_match_id\x18\x02 \x01(\x04\x12\x19\n\x11matches_requested\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x12\n\nrequest_id\x18\x05 \x01(\r\x12 \n\x18include_practice_matches\x18\x07 \x01(\x08\x12\x1c\n\x14include_custom_games\x18\x08 \x01(\x08\x12\x1b\n\x13include_event_games\x18\t \x01(\x08\"\xbc\x04\n%CMsgDOTAGetPlayerMatchHistoryResponse\x12\x42\n\x07matches\x18\x01 \x03(\x0b\x32\x31.dota.CMsgDOTAGetPlayerMatchHistoryResponse.Match\x12\x12\n\nrequest_id\x18\x02 \x01(\r\x1a\xba\x03\n\x05Match\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06winner\x18\x04 \x01(\x08\x12\x11\n\tgame_mode\x18\x05 \x01(\r\x12\x13\n\x0brank_change\x18\x06 \x01(\x05\x12\x15\n\rprevious_rank\x18\x07 \x01(\r\x12\x12\n\nlobby_type\x18\x08 \x01(\r\x12\x11\n\tsolo_rank\x18\t \x01(\x08\x12\x0f\n\x07\x61\x62\x61ndon\x18\n \x01(\x08\x12\x10\n\x08\x64uration\x18\x0b \x01(\r\x12\x0e\n\x06\x65ngine\x18\x0c \x01(\r\x12!\n\x19\x61\x63tive_prime_subscription\x18\r \x01(\x08\x12\x15\n\rseasonal_rank\x18\x0e \x01(\x08\x12\x12\n\ntourney_id\x18\x0f \x01(\r\x12\x15\n\rtourney_round\x18\x10 \x01(\r\x12\x14\n\x0ctourney_tier\x18\x11 \x01(\r\x12\x18\n\x10tourney_division\x18\x12 \x01(\r\x12\x0f\n\x07team_id\x18\x13 \x01(\r\x12\x11\n\tteam_name\x18\x14 \x01(\t\x12\x18\n\x10ugc_team_ui_logo\x18\x15 \x01(\x04\"!\n\x1f\x43MsgDOTAStartDailyHeroChallenge\"\x1c\n\x1a\x43MsgGCNotificationsRequest\"\xf5\x02\n\x1b\x43MsgGCNotificationsResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).dota.CMsgGCNotificationsResponse.EResult:\x07SUCCESS\x12\x45\n\rnotifications\x18\x02 \x03(\x0b\x32..dota.CMsgGCNotificationsResponse.Notification\x1a\x9b\x01\n\x0cNotification\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x13\n\x0breference_a\x18\x04 \x01(\r\x12\x13\n\x0breference_b\x18\x05 \x01(\r\x12\x13\n\x0breference_c\x18\x06 \x01(\r\x12\x0f\n\x07message\x18\x07 \x01(\t\x12\x0e\n\x06unread\x18\x08 \x01(\x08\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"$\n\"CMsgGCNotificationsMarkReadRequest\"B\n&CMsgClientToGCMarkNotificationListRead\x12\x18\n\x10notification_ids\x18\x01 \x03(\x04\"\xa2\x01\n\x16\x43MsgGCLeagueAdminState\x12\x0f\n\x07leagues\x18\x01 \x03(\r\x12<\n\x04keys\x18\x02 \x03(\x0b\x32..dota.CMsgGCLeagueAdminState.PrivateLeagueKeys\x1a\x39\n\x11PrivateLeagueKeys\x12\x10\n\x08leagueid\x18\x01 \x01(\r\x12\x12\n\nprivatekey\x18\x02 \x01(\r\"\x8e\x01\n\x17\x43MsgGCPlayerInfoRequest\x12>\n\x0cplayer_infos\x18\x01 \x03(\x0b\x32(.dota.CMsgGCPlayerInfoRequest.PlayerInfo\x1a\x33\n\nPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\"t\n\x16\x43MsgGCPlayerInfoSubmit\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x02 \x01(\t\x12\x14\n\x0c\x66\x61ntasy_role\x18\x03 \x01(\r\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x0f\n\x07sponsor\x18\x05 \x01(\t\"\xad\x01\n\x1e\x43MsgGCPlayerInfoSubmitResponse\x12\x45\n\x06result\x18\x01 \x01(\x0e\x32,.dota.CMsgGCPlayerInfoSubmitResponse.EResult:\x07SUCCESS\"D\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x15\n\x11\x45RROR_INFO_LOCKED\x10\x02\"\xab\x01\n\x1d\x43MsgClientProvideSurveyResult\x12?\n\tresponses\x18\x01 \x03(\x0b\x32,.dota.CMsgClientProvideSurveyResult.Response\x12\x12\n\nsurvey_key\x18\x02 \x01(\x04\x1a\x35\n\x08Response\x12\x13\n\x0bquestion_id\x18\x01 \x01(\r\x12\x14\n\x0csurvey_value\x18\x02 \x01(\r\"K\n\x19\x43MsgDOTAEmoticonAccessSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1a\n\x12unlocked_emoticons\x18\x02 \x01(\x0c\"#\n!CMsgClientToGCEmoticonDataRequest\"V\n\x1a\x43MsgGCToClientEmoticonData\x12\x38\n\x0f\x65moticon_access\x18\x01 \x01(\x0b\x32\x1f.dota.CMsgDOTAEmoticonAccessSDO\"C\n\x1f\x43MsgClientToGCTrackDialogResult\x12\x11\n\tdialog_id\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\"H\n CMsgGCToClientTournamentItemDrop\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x12\n\nevent_type\x18\x02 \x01(\r\"O\n!CMsgClientToGCSetAdditionalEquips\x12*\n\x06\x65quips\x18\x01 \x03(\x0b\x32\x1a.dota.CAdditionalEquipSlot\"+\n)CMsgClientToGCSetAdditionalEquipsResponse\"#\n!CMsgClientToGCGetAdditionalEquips\"W\n)CMsgClientToGCGetAdditionalEquipsResponse\x12*\n\x06\x65quips\x18\x01 \x03(\x0b\x32\x1a.dota.CAdditionalEquipSlot\"\x1f\n\x1d\x43MsgClientToGCGetAllHeroOrder\"9\n%CMsgClientToGCGetAllHeroOrderResponse\x12\x10\n\x08hero_ids\x18\x01 \x03(\r\"6\n CMsgClientToGCGetAllHeroProgress\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\x99\x04\n(CMsgClientToGCGetAllHeroProgressResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63urr_hero_id\x18\x02 \x01(\r\x12\x16\n\x0elaps_completed\x18\x03 \x01(\r\x12\x17\n\x0f\x63urr_hero_games\x18\x04 \x01(\r\x12\x1d\n\x15\x63urr_lap_time_started\x18\x05 \x01(\r\x12\x16\n\x0e\x63urr_lap_games\x18\x06 \x01(\r\x12\x16\n\x0e\x62\x65st_lap_games\x18\x07 \x01(\r\x12\x15\n\rbest_lap_time\x18\x08 \x01(\r\x12\x1c\n\x14lap_heroes_completed\x18\t \x01(\r\x12\x1c\n\x14lap_heroes_remaining\x18\n \x01(\r\x12\x14\n\x0cnext_hero_id\x18\x0b \x01(\r\x12\x14\n\x0cprev_hero_id\x18\x0c \x01(\r\x12\x17\n\x0fprev_hero_games\x18\r \x01(\r\x12\x16\n\x0eprev_avg_tries\x18\x0e \x01(\x02\x12\x16\n\x0e\x63urr_avg_tries\x18\x0f \x01(\x02\x12\x16\n\x0enext_avg_tries\x18\x10 \x01(\x02\x12\x1a\n\x12\x66ull_lap_avg_tries\x18\x11 \x01(\x02\x12\x1a\n\x12\x63urr_lap_avg_tries\x18\x12 \x01(\x02\x12\x14\n\x0cprofile_name\x18\x13 \x01(\t\x12\x15\n\rstart_hero_id\x18\x14 \x01(\r\"1\n\x1b\x43MsgClientToGCGetTrophyList\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xdc\x01\n#CMsgClientToGCGetTrophyListResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x42\n\x08trophies\x18\x02 \x03(\x0b\x32\x30.dota.CMsgClientToGCGetTrophyListResponse.Trophy\x12\x14\n\x0cprofile_name\x18\x03 \x01(\t\x1aG\n\x06Trophy\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x12\x14\n\x0clast_updated\x18\x03 \x01(\r\"v\n\x1b\x43MsgGCToClientTrophyAwarded\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x12\x18\n\x10trophy_old_score\x18\x03 \x01(\r\x12\x14\n\x0clast_updated\x18\x04 \x01(\r\"2\n\x1c\x43MsgClientToGCGetProfileCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xe2\x01\n!CMsgClientToGCSetProfileCardSlots\x12?\n\x05slots\x18\x01 \x03(\x0b\x32\x30.dota.CMsgClientToGCSetProfileCardSlots.CardSlot\x1a|\n\x08\x43\x61rdSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12K\n\tslot_type\x18\x02 \x01(\x0e\x32\x1a.dota.EProfileCardSlotType:\x1ck_EProfileCardSlotType_Empty\x12\x12\n\nslot_value\x18\x03 \x01(\x04\"#\n!CMsgClientToGCGetProfileCardStats\"\xd4\x01\n\x1e\x43MsgClientToGCCreateHeroStatue\x12\x13\n\x0bsource_item\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x15\n\rsequence_name\x18\x04 \x01(\t\x12\r\n\x05\x63ycle\x18\x05 \x01(\x02\x12\x11\n\twearables\x18\x06 \x03(\r\x12\x13\n\x0binscription\x18\x07 \x01(\t\x12\x0e\n\x06styles\x18\x08 \x03(\r\x12\x15\n\rreforger_item\x18\t \x01(\x04\x12\x17\n\x0ftournament_drop\x18\n \x01(\x08\">\n$CMsgGCToClientHeroStatueCreateResult\x12\x16\n\x0eresulting_item\x18\x01 \x01(\x04\"\x94\x01\n#CMsgClientToGCRecordCompendiumStats\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x17\n\x0fview_duration_s\x18\x02 \x01(\r\x12\x15\n\rvideos_viewed\x18\x03 \x01(\r\x12\x12\n\npage_turns\x18\x04 \x01(\r\x12\x16\n\x0elinks_followed\x18\x05 \x01(\r\"U\n CMsgGCToClientEventStatusChanged\x12\x31\n\x0c\x61\x63tive_event\x18\x02 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\"6\n CMsgClientToGCPlayerStatsRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xcf\x03\n!CMsgGCToClientPlayerStatsResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0cplayer_stats\x18\x02 \x03(\x02\x12\x13\n\x0bmatch_count\x18\x03 \x01(\r\x12\x10\n\x08mean_gpm\x18\x04 \x01(\x02\x12\x11\n\tmean_xppm\x18\x05 \x01(\x02\x12\x15\n\rmean_lasthits\x18\x06 \x01(\x02\x12\x10\n\x08rampages\x18\x07 \x01(\r\x12\x14\n\x0ctriple_kills\x18\x08 \x01(\r\x12\x1b\n\x13\x66irst_blood_claimed\x18\t \x01(\r\x12\x19\n\x11\x66irst_blood_given\x18\n \x01(\r\x12\x17\n\x0f\x63ouriers_killed\x18\x0b \x01(\r\x12\x18\n\x10\x61\x65gises_snatched\x18\x0c \x01(\r\x12\x15\n\rcheeses_eaten\x18\r \x01(\r\x12\x16\n\x0e\x63reeps_stacked\x18\x0e \x01(\r\x12\x13\n\x0b\x66ight_score\x18\x0f \x01(\x02\x12\x12\n\nfarm_score\x18\x10 \x01(\x02\x12\x15\n\rsupport_score\x18\x11 \x01(\x02\x12\x12\n\npush_score\x18\x12 \x01(\x02\x12\x19\n\x11versatility_score\x18\x13 \x01(\x02\"D\n*CMsgClientToGCCustomGamePlayerCountRequest\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\"t\n+CMsgGCToClientCustomGamePlayerCountResponse\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x14\n\x0cplayer_count\x18\x02 \x01(\x04\x12\x17\n\x0fspectator_count\x18\x03 \x01(\x04\"/\n-CMsgClientToGCCustomGamesFriendsPlayedRequest\"\xcf\x01\n.CMsgGCToClientCustomGamesFriendsPlayedResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12N\n\x05games\x18\x02 \x03(\x0b\x32?.dota.CMsgGCToClientCustomGamesFriendsPlayedResponse.CustomGame\x1a\x39\n\nCustomGame\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"O\n*CMsgClientToGCSocialFeedPostCommentRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\">\n+CMsgGCToClientSocialFeedPostCommentResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"h\n*CMsgClientToGCSocialFeedPostMessageRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x17\n\x0fmatch_timestamp\x18\x03 \x01(\r\">\n+CMsgGCToClientSocialFeedPostMessageResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"F\n,CMsgClientToGCFriendsPlayedCustomGameRequest\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\"\\\n-CMsgGCToClientFriendsPlayedCustomGameResponse\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"%\n#CMsgClientToGCFeaturedHeroesRequest\"\xaa\x04\n$CMsgGCToClientFeaturedHeroesResponse\x12G\n\ncategories\x18\x01 \x03(\x0b\x32\x33.dota.CMsgGCToClientFeaturedHeroesResponse.Category\x1a\xb2\x01\n\tDataField\x12N\n\tdata_type\x18\x01 \x01(\x0e\x32\x1b.dota.EFeaturedHeroDataType:\x1ek_EFeaturedHeroDataType_HeroID\x12\x14\n\x0cuint32_value\x18\x02 \x01(\r\x12\x14\n\x0cuint64_value\x18\x03 \x01(\x04\x12\x14\n\x0cstring_value\x18\x04 \x01(\t\x12\x13\n\x0b\x66loat_value\x18\x05 \x01(\x02\x1aY\n\x0c\x46\x65\x61turedHero\x12I\n\x0b\x64\x61ta_fields\x18\x01 \x03(\x0b\x32\x34.dota.CMsgGCToClientFeaturedHeroesResponse.DataField\x1a\xa8\x01\n\x08\x43\x61tegory\x12\x17\n\x0f\x63\x61tegory_weight\x18\x01 \x01(\x05\x12\x31\n\x0btext_fields\x18\x02 \x03(\x0e\x32\x1c.dota.EFeaturedHeroTextField\x12P\n\x0f\x66\x65\x61tured_heroes\x18\x03 \x03(\x0b\x32\x37.dota.CMsgGCToClientFeaturedHeroesResponse.FeaturedHero\"P\n+CMsgClientToGCSocialMatchPostCommentRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\"?\n,CMsgGCToClientSocialMatchPostCommentResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"Y\n\'CMsgClientToGCSocialMatchDetailsRequest\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x1c\n\x14pagination_timestamp\x18\x02 \x01(\r\"\xde\x01\n(CMsgGCToClientSocialMatchDetailsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12H\n\x08\x63omments\x18\x02 \x03(\x0b\x32\x36.dota.CMsgGCToClientSocialMatchDetailsResponse.Comment\x1aW\n\x07\x43omment\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x0f\n\x07\x63omment\x18\x04 \x01(\t\"\xdb\x04\n\x19\x43MsgDOTAPartyRichPresence\x12\x10\n\x08party_id\x18\x01 \x01(\x06\x12\x31\n\x0bparty_state\x18\x02 \x01(\x0e\x32\x18.dota.CSODOTAParty.State:\x02UI\x12\x0c\n\x04open\x18\x03 \x01(\x08\x12\x14\n\x0clow_priority\x18\x05 \x01(\x08\x12\x0f\n\x07team_id\x18\x07 \x01(\r\x12\x11\n\tteam_name\x18\x08 \x01(\t\x12\x18\n\x10ugc_team_ui_logo\x18\t \x01(\x04\x12\x37\n\x07members\x18\x04 \x03(\x0b\x32&.dota.CMsgDOTAPartyRichPresence.Member\x12G\n\x0fweekend_tourney\x18\x06 \x01(\x0b\x32..dota.CMsgDOTAPartyRichPresence.WeekendTourney\x1a)\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\r\n\x05\x63oach\x18\x02 \x01(\x08\x1a\xe9\x01\n\x0eWeekendTourney\x12\x10\n\x08\x64ivision\x18\x01 \x01(\r\x12\x13\n\x0bskill_level\x18\x02 \x01(\r\x12\r\n\x05round\x18\x03 \x01(\r\x12\x15\n\rtournament_id\x18\x04 \x01(\r\x12\x15\n\rstate_seq_num\x18\x05 \x01(\r\x12^\n\x05\x65vent\x18\x06 \x01(\x0e\x32&.dota.EWeekendTourneyRichPresenceEvent:\'k_EWeekendTourneyRichPresenceEvent_None\x12\x13\n\x0b\x65vent_round\x18\x07 \x01(\r\"\x98\x02\n\x19\x43MsgDOTALobbyRichPresence\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x31\n\x0blobby_state\x18\x02 \x01(\x0e\x32\x18.dota.CSODOTALobby.State:\x02UI\x12\x10\n\x08password\x18\x03 \x01(\x08\x12:\n\tgame_mode\x18\x04 \x01(\x0e\x32\x13.dota.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x14\n\x0cmember_count\x18\x05 \x01(\r\x12\x18\n\x10max_member_count\x18\x06 \x01(\r\x12\x16\n\x0e\x63ustom_game_id\x18\x07 \x01(\x06\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x12\n\nlobby_type\x18\t \x01(\r\"\x83\x01\n,CMsgDOTACustomGameListenServerStartedLoading\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63ustom_game_id\x18\x02 \x01(\x04\x12\x15\n\rlobby_members\x18\x03 \x03(\r\x12\x12\n\nstart_time\x18\x04 \x01(\r\"\xa9\x01\n\'CMsgDOTACustomGameClientFinishedLoading\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x18\n\x10loading_duration\x18\x02 \x01(\r\x12\x13\n\x0bresult_code\x18\x03 \x01(\x11\x12\x15\n\rresult_string\x18\x04 \x01(\t\x12\x15\n\rsignon_states\x18\x05 \x01(\r\x12\x0f\n\x07\x63omment\x18\x06 \x01(\t\"2\n\x1d\x43MsgClientToGCGetLeagueSeries\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xbc\x03\n%CMsgClientToGCGetLeagueSeriesResponse\x12\x42\n\x06series\x18\x01 \x03(\x0b\x32\x32.dota.CMsgClientToGCGetLeagueSeriesResponse.Series\x1a\xce\x02\n\x06Series\x12\x11\n\tseries_id\x18\x01 \x01(\r\x12\x11\n\tnum_games\x18\x02 \x01(\r\x12\x46\n\x05teams\x18\x03 \x03(\x0b\x32\x37.dota.CMsgClientToGCGetLeagueSeriesResponse.Series.Team\x12\x13\n\x0bseries_name\x18\x04 \x01(\t\x12\x12\n\nphase_name\x18\x05 \x01(\t\x12\x12\n\nstart_time\x18\x06 \x01(\r\x12\x17\n\x0f\x61\x66ter_series_id\x18\x07 \x01(\r\x12\x1b\n\x13num_completed_games\x18\x08 \x01(\r\x1a\x63\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x11\n\tteam_name\x18\x02 \x01(\t\x12\x10\n\x08team_tag\x18\x03 \x01(\t\x12\x12\n\nteam_score\x18\x04 \x01(\r\x12\x11\n\tteam_wins\x18\x05 \x01(\r\"F\n\x1e\x43MsgClientToGCApplyGemCombiner\x12\x11\n\titem_id_1\x18\x01 \x01(\x04\x12\x11\n\titem_id_2\x18\x02 \x01(\x04\"\x1f\n\x1d\x43MsgClientToGCH264Unsupported\"\"\n CMsgClientToGCRequestH264Support\"3\n\x1e\x43MsgClientToGCGetQuestProgress\x12\x11\n\tquest_ids\x18\x01 \x03(\r\"\xf9\x02\n&CMsgClientToGCGetQuestProgressResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x42\n\x06quests\x18\x02 \x03(\x0b\x32\x32.dota.CMsgClientToGCGetQuestProgressResponse.Quest\x1a\x88\x01\n\tChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\x12\x16\n\x0etime_completed\x18\x02 \x01(\r\x12\x10\n\x08\x61ttempts\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_type\x18\x05 \x01(\r\x12\x12\n\nquest_rank\x18\x06 \x01(\r\x1ao\n\x05Quest\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12T\n\x14\x63ompleted_challenges\x18\x02 \x03(\x0b\x32\x36.dota.CMsgClientToGCGetQuestProgressResponse.Challenge\"0\n\x1c\x43MsgGCToClientMatchSignedOut\x12\x10\n\x08match_id\x18\x01 \x01(\x04\",\n\x19\x43MsgGCGetHeroStatsHistory\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"h\n!CMsgGCGetHeroStatsHistoryResponse\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x32\n\x07records\x18\x02 \x03(\x0b\x32!.dota.CMsgDOTASDOHeroStatsHistory\"#\n!CMsgPlayerConductScorecardRequest\"\xd4\x02\n\x1a\x43MsgPlayerConductScorecard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x0f\n\x07seq_num\x18\x03 \x01(\r\x12\x0f\n\x07reasons\x18\x04 \x01(\r\x12\x19\n\x11matches_in_report\x18\x05 \x01(\r\x12\x15\n\rmatches_clean\x18\x06 \x01(\r\x12\x18\n\x10matches_reported\x18\x07 \x01(\r\x12\x19\n\x11matches_abandoned\x18\x08 \x01(\r\x12\x15\n\rreports_count\x18\t \x01(\r\x12\x17\n\x0freports_parties\x18\n \x01(\r\x12\x15\n\rcommend_count\x18\x0b \x01(\r\x12\x0c\n\x04\x64\x61te\x18\x0e \x01(\r\x12\x16\n\x0e\x62\x65havior_grade\x18\x0f \x01(\r\x12\x1a\n\x12old_behavior_grade\x18\x10 \x01(\r\"1\n\x1d\x43MsgClientToGCWageringRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"\x8c\x02\n\x1e\x43MsgGCToClientWageringResponse\x12\x17\n\x0f\x63oins_remaining\x18\x01 \x01(\r\x12\x18\n\x10total_points_won\x18\x02 \x01(\r\x12\x1c\n\x14total_points_wagered\x18\x03 \x01(\r\x12\x1b\n\x13total_points_tipped\x18\x04 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x05 \x01(\r\x12\x1b\n\x13total_games_wagered\x18\x06 \x01(\r\x12\x11\n\tcoins_max\x18\x07 \x01(\r\x12\x1d\n\x15rank_wagers_remaining\x18\x08 \x01(\r\x12\x17\n\x0frank_wagers_max\x18\t \x01(\r\"m\n\x1c\x43MsgGCToClientWageringUpdate\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12;\n\rwagering_info\x18\x02 \x01(\x0b\x32$.dota.CMsgGCToClientWageringResponse\"\x82\x01\n\x1f\x43MsgGCToClientArcanaVotesUpdate\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12M\n\x0c\x61rcana_votes\x18\x02 \x01(\x0b\x32\x37.dota.CMsgClientToGCRequestArcanaVotesRemainingResponse\">\n\x1b\x43MsgClientToGCGetEventGoals\x12\x1f\n\tevent_ids\x18\x01 \x03(\x0e\x32\x0c.dota.EEvent\"\xa1\x01\n\x0e\x43MsgEventGoals\x12\x33\n\x0b\x65vent_goals\x18\x01 \x03(\x0b\x32\x1e.dota.CMsgEventGoals.EventGoal\x1aZ\n\tEventGoal\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x0f\n\x07goal_id\x18\x02 \x01(\r\x12\r\n\x05value\x18\x03 \x01(\x04\"0\n\x1b\x43MsgGCToGCLeaguePredictions\x12\x11\n\tleague_id\x18\x01 \x01(\r\"\xa6\x02\n\x16\x43MsgPredictionRankings\x12<\n\x0bpredictions\x18\x01 \x03(\x0b\x32\'.dota.CMsgPredictionRankings.Prediction\x1a\x63\n\x0ePredictionLine\x12\x11\n\tanswer_id\x18\x01 \x01(\r\x12\x13\n\x0b\x61nswer_name\x18\x02 \x01(\t\x12\x13\n\x0b\x61nswer_logo\x18\x03 \x01(\x04\x12\x14\n\x0c\x61nswer_value\x18\x04 \x01(\x02\x1ai\n\nPrediction\x12\x14\n\x0cselection_id\x18\x01 \x01(\r\x12\x45\n\x10prediction_lines\x18\x02 \x03(\x0b\x32+.dota.CMsgPredictionRankings.PredictionLine\"\xf6\x01\n\x15\x43MsgPredictionResults\x12\x33\n\x07results\x18\x01 \x03(\x0b\x32\".dota.CMsgPredictionResults.Result\x1a\x41\n\x0fResultBreakdown\x12\x18\n\x10\x61nswer_selection\x18\x02 \x01(\r\x12\x14\n\x0c\x61nswer_value\x18\x03 \x01(\x02\x1a\x65\n\x06Result\x12\x14\n\x0cselection_id\x18\x01 \x01(\r\x12\x45\n\x10result_breakdown\x18\x02 \x03(\x0b\x32+.dota.CMsgPredictionResults.ResultBreakdown\"4\n CMsgClientToGCSuspiciousActivity\x12\x10\n\x08\x61pp_data\x18\x01 \x01(\x04\"6\n\"CMsgClientToGCHasPlayerVotedForMVP\x12\x10\n\x08match_id\x18\x01 \x01(\x04\"<\n*CMsgClientToGCHasPlayerVotedForMVPResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"@\n\x18\x43MsgClientToGCVoteForMVP\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x03 \x01(\r\"2\n CMsgClientToGCVoteForMVPResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"|\n\x14\x43MsgMVPVotesForMatch\x12\x32\n\x07players\x18\x01 \x03(\x0b\x32!.dota.CMsgMVPVotesForMatch.Player\x1a\x30\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\nvote_count\x18\x02 \x01(\r\"G\n\x13\x43MsgLeaguePrizePool\x12\x12\n\nprize_pool\x18\x01 \x01(\r\x12\x1c\n\x14increment_per_second\x18\x02 \x01(\x02\"$\n\"CMsgClientToGCTeammateStatsRequest\"\xa4\x02\n#CMsgClientToGCTeammateStatsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12N\n\x0eteammate_stats\x18\x02 \x03(\x0b\x32\x36.dota.CMsgClientToGCTeammateStatsResponse.TeammateStat\x1a\x9b\x01\n\x0cTeammateStat\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05games\x18\x02 \x01(\r\x12\x0c\n\x04wins\x18\x03 \x01(\r\x12\"\n\x1amost_recent_game_timestamp\x18\x04 \x01(\r\x12!\n\x19most_recent_game_match_id\x18\x05 \x01(\x04\x12\x13\n\x0bperformance\x18\x64 \x01(\x02\"\x9f\x01\n\x1b\x43MsgClientToGCVoteForArcana\x12<\n\x07matches\x18\x01 \x03(\x0b\x32+.dota.CMsgClientToGCVoteForArcana.MatchVote\x1a\x42\n\tMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nvote_count\x18\x03 \x01(\r\"\xc2\x01\n#CMsgClientToGCVoteForArcanaResponse\x12K\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgClientToGCVoteForArcanaResponse.Result:\tSUCCEEDED\"N\n\x06Result\x12\r\n\tSUCCEEDED\x10\x00\x12 \n\x1cVOTING_NOT_ENABLED_FOR_ROUND\x10\x01\x12\x13\n\x0fUNKNOWN_FAILURE\x10\x02\"\xa6\x04\n\x0f\x43MsgArcanaVotes\x12,\n\x07matches\x18\x01 \x03(\x0b\x32\x1b.dota.CMsgArcanaVotes.Match\x12\x1c\n\x14round_time_remaining\x18\x02 \x01(\r\x12\x14\n\x0cround_number\x18\x03 \x01(\r\x12\x14\n\x0cvoting_state\x18\x04 \x01(\r\x12$\n\x1cis_current_round_calibrating\x18\x05 \x01(\x08\x12\x1f\n\x17\x63losest_active_match_id\x18\x06 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x07 \x01(\r\x1a\x84\x02\n\x05Match\x12\x10\n\x08match_id\x18\x01 \x01(\r\x12\x11\n\thero_id_0\x18\x02 \x01(\r\x12\x11\n\thero_id_1\x18\x03 \x01(\r\x12\x16\n\x0ehero_seeding_0\x18\x04 \x01(\r\x12\x16\n\x0ehero_seeding_1\x18\x05 \x01(\r\x12\x14\n\x0cvote_count_0\x18\x06 \x01(\r\x12\x14\n\x0cvote_count_1\x18\x07 \x01(\r\x12\x14\n\x0cvoting_state\x18\x08 \x01(\r\x12\x14\n\x0cround_number\x18\t \x01(\r\x12\x17\n\x0fis_votes_hidden\x18\n \x01(\x08\x12\"\n\x1a\x63\x61libration_time_remaining\x18\x0b \x01(\r\";\n\x0bVotingState\x12\x0c\n\x08\x46INISHED\x10\x00\x12\x0f\n\x0bIN_PROGRESS\x10\x01\x12\r\n\tIN_FUTURE\x10\x02\"+\n)CMsgClientToGCRequestArcanaVotesRemaining\"\x9e\x02\n1CMsgClientToGCRequestArcanaVotesRemainingResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12\x17\n\x0fvotes_remaining\x18\x02 \x01(\r\x12\x13\n\x0bvotes_total\x18\x03 \x01(\r\x12g\n\x1cmatches_previously_voted_for\x18\x04 \x03(\x0b\x32\x41.dota.CMsgClientToGCRequestArcanaVotesRemainingResponse.MatchVote\x1a\x42\n\tMatchVote\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nvote_count\x18\x03 \x01(\r\"6\n\"CMsgClientToGCRequestEventPointLog\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"\xa1\x12\n*CMsgClientToGCRequestEventPointLogResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12\\\n\x0ctransactions\x18\x02 \x03(\x0b\x32\x46.dota.CMsgClientToGCRequestEventPointLogResponse.EventPointTransaction\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\x1aK\n\x13QuestChallengeEvent\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63hallenge_id\x18\x02 \x01(\r\x12\x0c\n\x04rank\x18\x03 \x01(\r\x1a!\n\rWagerWonEvent\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x1a\x45\n\rTipGivenEvent\x12\x1c\n\x14recipient_account_id\x18\x01 \x01(\r\x12\x16\n\x0erecipient_name\x18\x02 \x01(\t\x1a@\n\x10TipReceivedEvent\x12\x18\n\x10giver_account_id\x18\x01 \x01(\r\x12\x12\n\ngiver_name\x18\x02 \x01(\t\x1a\x32\n\x11RecycledItemEvent\x12\x1d\n\x15recipe_item_def_index\x18\x01 \x01(\r\x1a<\n\x11\x41\x63tionRewardEvent\x12\x11\n\taction_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63tion_score\x18\x02 \x01(\r\x1a\x37\n\x18MysteryItemReceivedEvent\x12\x1b\n\x13\x63ommunity_goal_item\x18\x01 \x01(\x08\x1a/\n\x16\x43orrectPredictionEvent\x12\x15\n\rprediction_id\x18\x01 \x01(\r\x1a\x30\n\x1cInGamePredictionCorrectEvent\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x1a-\n\x19WeekendTourneyPayoutEvent\x12\x10\n\x08team_gid\x18\x01 \x01(\x04\x1a(\n\x12\x46\x61ntasyRewardEvent\x12\x12\n\npercentile\x18\x01 \x01(\r\x1a-\n\x12\x42racketRewardEvent\x12\x17\n\x0f\x63orrect_answers\x18\x01 \x01(\r\x1a%\n\x0fWeeklyGameEvent\x12\x12\n\npoints_won\x18\x01 \x01(\r\x1a\x32\n\x16\x45xploitCorrectionEvent\x12\x18\n\x10points_corrected\x18\x01 \x01(\r\x1a\x88\x0b\n\x15\x45ventPointTransaction\x12\x0c\n\x04time\x18\x01 \x01(\r\x12\x14\n\x0c\x65vent_points\x18\x02 \x01(\x05\x12\"\n\x1a\x63ompendium_activated_event\x18\x03 \x01(\x08\x12\x1d\n\x15point_item_used_event\x18\x04 \x01(\x08\x12W\n\x0fwager_won_event\x18\x05 \x01(\x0b\x32>.dota.CMsgClientToGCRequestEventPointLogResponse.WagerWonEvent\x12n\n\x1bmystery_item_received_event\x18\x06 \x01(\x0b\x32I.dota.CMsgClientToGCRequestEventPointLogResponse.MysteryItemReceivedEvent\x12\x63\n\x15quest_challenge_event\x18\x07 \x01(\x0b\x32\x44.dota.CMsgClientToGCRequestEventPointLogResponse.QuestChallengeEvent\x12W\n\x0ftip_given_event\x18\x08 \x01(\x0b\x32>.dota.CMsgClientToGCRequestEventPointLogResponse.TipGivenEvent\x12]\n\x12tip_received_event\x18\t \x01(\x0b\x32\x41.dota.CMsgClientToGCRequestEventPointLogResponse.TipReceivedEvent\x12_\n\x13recycled_item_event\x18\n \x01(\x0b\x32\x42.dota.CMsgClientToGCRequestEventPointLogResponse.RecycledItemEvent\x12_\n\x13\x61\x63tion_reward_event\x18\x0b \x01(\x0b\x32\x42.dota.CMsgClientToGCRequestEventPointLogResponse.ActionRewardEvent\x12o\n\x18in_game_prediction_event\x18\x0c \x01(\x0b\x32M.dota.CMsgClientToGCRequestEventPointLogResponse.InGamePredictionCorrectEvent\x12\x61\n\x10prediction_event\x18\r \x01(\x0b\x32G.dota.CMsgClientToGCRequestEventPointLogResponse.CorrectPredictionEvent\x12\x61\n\x14\x66\x61ntasy_reward_event\x18\x0f \x01(\x0b\x32\x43.dota.CMsgClientToGCRequestEventPointLogResponse.FantasyRewardEvent\x12\x61\n\x14\x62racket_reward_event\x18\x10 \x01(\x0b\x32\x43.dota.CMsgClientToGCRequestEventPointLogResponse.BracketRewardEvent\x12[\n\x11weekly_game_event\x18\x13 \x01(\x0b\x32@.dota.CMsgClientToGCRequestEventPointLogResponse.WeeklyGameEvent\x12i\n\x18\x65xploit_correction_event\x18\x14 \x01(\x0b\x32G.dota.CMsgClientToGCRequestEventPointLogResponse.ExploitCorrectionEvent\"Q\n\x1d\x43MsgClientToGCPublishUserStat\x12\x18\n\x10user_stats_event\x18\x01 \x01(\r\x12\x16\n\x0ereference_data\x18\x02 \x01(\x04\"1\n CMsgClientToGCAddTI6TreeProgress\x12\r\n\x05trees\x18\x01 \x01(\r\"X\n\'CMsgClientToGCRequestLinaPlaysRemaining\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\"_\n/CMsgClientToGCRequestLinaPlaysRemainingResponse\x12\x17\n\x0fplays_remaining\x18\x01 \x01(\r\x12\x13\n\x0bplays_total\x18\x02 \x01(\r\"i\n#CMsgClientToGCRequestLinaGameResult\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x13\n\x0bslot_chosen\x18\x02 \x01(\r\"=\n+CMsgClientToGCRequestLinaGameResultResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"x\n$CMsgClientToGCRequestSlarkGameResult\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x13\n\x0bslot_chosen\x18\x02 \x01(\r\x12\x0c\n\x04week\x18\x03 \x01(\r\"T\n,CMsgClientToGCRequestSlarkGameResultResponse\x12\x12\n\npoints_won\x18\x01 \x01(\r\x12\x10\n\x08\x61ura_won\x18\x02 \x01(\x08\"\xab\x02\n\"CMsgGCToClientQuestProgressUpdated\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12P\n\x14\x63ompleted_challenges\x18\x02 \x03(\x0b\x32\x32.dota.CMsgGCToClientQuestProgressUpdated.Challenge\x1a\xa0\x01\n\tChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\x12\x16\n\x0etime_completed\x18\x02 \x01(\r\x12\x10\n\x08\x61ttempts\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_type\x18\x05 \x01(\r\x12\x12\n\nquest_rank\x18\x06 \x01(\r\x12\x16\n\x0emax_quest_rank\x18\x07 \x01(\r\"4\n CMsgGCToClientUpdateClientClippy\x12\x10\n\x08hero_ids\x18\x01 \x03(\r\"?\n\x12\x43MsgDOTARedeemItem\x12\x13\n\x0b\x63urrency_id\x18\x01 \x01(\x04\x12\x14\n\x0cpurchase_def\x18\x02 \x01(\r\"\x97\x01\n\x1a\x43MsgDOTARedeemItemResponse\x12K\n\x08response\x18\x01 \x01(\x0e\x32,.dota.CMsgDOTARedeemItemResponse.EResultCode:\x0bk_Succeeded\",\n\x0b\x45ResultCode\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x0c\n\x08k_Failed\x10\x01\"6\n!CMsgPerfectWorldUserLookupRequest\x12\x11\n\tuser_name\x18\x01 \x01(\t\"\xcd\x02\n\"CMsgPerfectWorldUserLookupResponse\x12`\n\x0bresult_code\x18\x01 \x01(\x0e\x32\x34.dota.CMsgPerfectWorldUserLookupResponse.EResultCode:\x15SUCCESS_ACCOUNT_FOUND\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\xb0\x01\n\x0b\x45ResultCode\x12\x19\n\x15SUCCESS_ACCOUNT_FOUND\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\x12 \n\x1c\x45RROR_USER_NAME_WRONG_FORMAT\x10\x02\x12(\n$ERROR_NO_PERFECT_WORLD_ACCOUNT_FOUND\x10\x03\x12\'\n#ERROR_NO_LINKED_STEAM_ACCOUNT_FOUND\x10\x04\"W\n\x16\x43MsgNexonPartnerUpdate\x12\x13\n\x0bmessagetype\x18\x01 \x01(\r\x12\x15\n\rtimeremaining\x18\x02 \x01(\r\x12\x11\n\tterminate\x18\x03 \x01(\x08\"#\n\x10\x43MsgMakeOffering\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\x16\n\x14\x43MsgRequestOfferings\"\xb1\x01\n\x1c\x43MsgRequestOfferingsResponse\x12\x46\n\tofferings\x18\x01 \x03(\x0b\x32\x33.dota.CMsgRequestOfferingsResponse.NewYearsOffering\x12\x11\n\tcompleted\x18\x02 \x01(\x08\x1a\x36\n\x10NewYearsOffering\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"Q\n\x19\x43MsgDOTAPCBangTimedReward\x12\x0f\n\x07persona\x18\x01 \x01(\t\x12\x0f\n\x07itemdef\x18\x02 \x01(\r\x12\x12\n\npcbangname\x18\x03 \x01(\t\"\xf2\x01\n)CMsgDOTACompendiumInGamePredictionResults\x12Q\n\x07results\x18\x01 \x03(\x0b\x32@.dota.CMsgDOTACompendiumInGamePredictionResults.PredictionResult\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x1a\n\x12predictions_closed\x18\x03 \x01(\x08\x1a\x43\n\x10PredictionResult\x12\x15\n\rprediction_id\x18\x01 \x01(\r\x12\x18\n\x10prediction_value\x18\x02 \x01(\r\"\xea\x01\n.CMsgClientToGCSelectCompendiumInGamePrediction\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12T\n\x0bpredictions\x18\x02 \x03(\x0b\x32?.dota.CMsgClientToGCSelectCompendiumInGamePrediction.Prediction\x12\x11\n\tleague_id\x18\x03 \x01(\r\x1a=\n\nPrediction\x12\x15\n\rprediction_id\x18\x01 \x01(\r\x12\x18\n\x10prediction_value\x18\x02 \x01(\r\"\xef\x01\n6CMsgClientToGCSelectCompendiumInGamePredictionResponse\x12]\n\x06result\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCSelectCompendiumInGamePredictionResponse.EResult:\x07SUCCESS\"V\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rINVALID_MATCH\x10\x01\x12\x1a\n\x16PREDICTIONS_ARE_CLOSED\x10\x02\x12\x0f\n\x0bOTHER_ERROR\x10\x03\"D\n CMsgClientToGCOpenPlayerCardPack\x12 \n\x18player_card_pack_item_id\x18\x01 \x01(\x04\"\x9f\x02\n(CMsgClientToGCOpenPlayerCardPackResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCOpenPlayerCardPackResponse.Result:\x07SUCCESS\x12\x1c\n\x14player_card_item_ids\x18\x02 \x03(\x04\"\x84\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0e\x45RROR_INTERNAL\x10\x02\x12\x1d\n\x19\x45RROR_FAILED_TO_FIND_PACK\x10\x03\x12\x1c\n\x18\x45RROR_ITEM_NOT_CARD_PACK\x10\x04\x12\x1c\n\x18\x45RROR_FAILED_CARD_CREATE\x10\x05\"Q\n\x1f\x43MsgClientToGCRecyclePlayerCard\x12\x1c\n\x14player_card_item_ids\x18\x03 \x03(\x04\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\"\xb9\x02\n\'CMsgClientToGCRecyclePlayerCardResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgClientToGCRecyclePlayerCardResponse.Result:\x07SUCCESS\x12\x13\n\x0b\x64ust_amount\x18\x02 \x01(\r\"\xa9\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0e\x45RROR_INTERNAL\x10\x02\x12$\n ERROR_FAILED_TO_FIND_PLAYER_CARD\x10\x03\x12\x1e\n\x1a\x45RROR_ITEM_NOT_PLAYER_CARD\x10\x04\x12!\n\x1d\x45RROR_FAILED_DUST_CARD_CREATE\x10\x05\x12\x15\n\x11\x45RROR_CARD_LOCKED\x10\x06\"g\n\"CMsgClientToGCCreatePlayerCardPack\x12\x19\n\x11\x63\x61rd_dust_item_id\x18\x01 \x01(\x04\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\x12\x14\n\x0cpremium_pack\x18\x03 \x01(\x08\"\x88\x02\n*CMsgClientToGCCreatePlayerCardPackResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgClientToGCCreatePlayerCardPackResponse.Result:\x07SUCCESS\"\x87\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0e\x45RROR_INTERNAL\x10\x02\x12\x1b\n\x17\x45RROR_INSUFFICIENT_DUST\x10\x03\x12\x1c\n\x18\x45RROR_ITEM_NOT_DUST_ITEM\x10\x04\x12!\n\x1d\x45RROR_FAILED_CARD_PACK_CREATE\x10\x05\"\xab\n\n0CMsgGCToClientBattlePassRollup_International2016\x12\x19\n\x11\x62\x61ttle_pass_level\x18\x01 \x01(\r\x12U\n\nquestlines\x18\x02 \x03(\x0b\x32\x41.dota.CMsgGCToClientBattlePassRollup_International2016.Questlines\x12Q\n\x08wagering\x18\x03 \x01(\x0b\x32?.dota.CMsgGCToClientBattlePassRollup_International2016.Wagering\x12Y\n\x0c\x61\x63hievements\x18\x04 \x01(\x0b\x32\x43.dota.CMsgGCToClientBattlePassRollup_International2016.Achievements\x12T\n\nbattle_cup\x18\x05 \x01(\x0b\x32@.dota.CMsgGCToClientBattlePassRollup_International2016.BattleCup\x12W\n\x0bpredictions\x18\x06 \x01(\x0b\x32\x42.dota.CMsgGCToClientBattlePassRollup_International2016.Predictions\x12O\n\x07\x62racket\x18\x07 \x01(\x0b\x32>.dota.CMsgGCToClientBattlePassRollup_International2016.Bracket\x12W\n\x0cplayer_cards\x18\x08 \x03(\x0b\x32\x41.dota.CMsgGCToClientBattlePassRollup_International2016.PlayerCard\x12\x62\n\x11\x66\x61ntasy_challenge\x18\t \x01(\x0b\x32G.dota.CMsgGCToClientBattlePassRollup_International2016.FantasyChallenge\x1a^\n\nQuestlines\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07onestar\x18\x02 \x01(\r\x12\x0f\n\x07twostar\x18\x03 \x01(\r\x12\x11\n\tthreestar\x18\x04 \x01(\r\x12\r\n\x05total\x18\x05 \x01(\r\x1as\n\x08Wagering\x12\x15\n\rtotal_wagered\x18\x01 \x01(\r\x12\x11\n\ttotal_won\x18\x02 \x01(\r\x12\x13\n\x0b\x61verage_won\x18\x03 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x04 \x01(\r\x12\x12\n\ntotal_tips\x18\x05 \x01(\r\x1a@\n\x0c\x41\x63hievements\x12\x11\n\tcompleted\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a(\n\tBattleCup\x12\x0c\n\x04wins\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\r\x1a=\n\x0bPredictions\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a*\n\x07\x42racket\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\x0e\n\x06points\x18\x02 \x01(\r\x1a\x31\n\nPlayerCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07quality\x18\x02 \x01(\r\x1a;\n\x10\x46\x61ntasyChallenge\x12\x13\n\x0btotal_score\x18\x01 \x01(\x02\x12\x12\n\npercentile\x18\x02 \x01(\x02\"\xda\t\n\'CMsgGCToClientBattlePassRollup_Fall2016\x12\x19\n\x11\x62\x61ttle_pass_level\x18\x01 \x01(\r\x12L\n\nquestlines\x18\x02 \x03(\x0b\x32\x38.dota.CMsgGCToClientBattlePassRollup_Fall2016.Questlines\x12H\n\x08wagering\x18\x03 \x01(\x0b\x32\x36.dota.CMsgGCToClientBattlePassRollup_Fall2016.Wagering\x12P\n\x0c\x61\x63hievements\x18\x04 \x01(\x0b\x32:.dota.CMsgGCToClientBattlePassRollup_Fall2016.Achievements\x12K\n\nbattle_cup\x18\x05 \x01(\x0b\x32\x37.dota.CMsgGCToClientBattlePassRollup_Fall2016.BattleCup\x12N\n\x0bpredictions\x18\x06 \x01(\x0b\x32\x39.dota.CMsgGCToClientBattlePassRollup_Fall2016.Predictions\x12\x46\n\x07\x62racket\x18\x07 \x01(\x0b\x32\x35.dota.CMsgGCToClientBattlePassRollup_Fall2016.Bracket\x12N\n\x0cplayer_cards\x18\x08 \x03(\x0b\x32\x38.dota.CMsgGCToClientBattlePassRollup_Fall2016.PlayerCard\x12Y\n\x11\x66\x61ntasy_challenge\x18\t \x01(\x0b\x32>.dota.CMsgGCToClientBattlePassRollup_Fall2016.FantasyChallenge\x1a^\n\nQuestlines\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07onestar\x18\x02 \x01(\r\x12\x0f\n\x07twostar\x18\x03 \x01(\r\x12\x11\n\tthreestar\x18\x04 \x01(\r\x12\r\n\x05total\x18\x05 \x01(\r\x1as\n\x08Wagering\x12\x15\n\rtotal_wagered\x18\x01 \x01(\r\x12\x11\n\ttotal_won\x18\x02 \x01(\r\x12\x13\n\x0b\x61verage_won\x18\x03 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x04 \x01(\r\x12\x12\n\ntotal_tips\x18\x05 \x01(\r\x1a@\n\x0c\x41\x63hievements\x12\x11\n\tcompleted\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a(\n\tBattleCup\x12\x0c\n\x04wins\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\r\x1a=\n\x0bPredictions\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a*\n\x07\x42racket\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\x0e\n\x06points\x18\x02 \x01(\r\x1a\x31\n\nPlayerCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07quality\x18\x02 \x01(\r\x1a;\n\x10\x46\x61ntasyChallenge\x12\x13\n\x0btotal_score\x18\x01 \x01(\x02\x12\x12\n\npercentile\x18\x02 \x01(\x02\"\xec\t\n)CMsgGCToClientBattlePassRollup_Winter2017\x12\x19\n\x11\x62\x61ttle_pass_level\x18\x01 \x01(\r\x12N\n\nquestlines\x18\x02 \x03(\x0b\x32:.dota.CMsgGCToClientBattlePassRollup_Winter2017.Questlines\x12J\n\x08wagering\x18\x03 \x01(\x0b\x32\x38.dota.CMsgGCToClientBattlePassRollup_Winter2017.Wagering\x12R\n\x0c\x61\x63hievements\x18\x04 \x01(\x0b\x32<.dota.CMsgGCToClientBattlePassRollup_Winter2017.Achievements\x12M\n\nbattle_cup\x18\x05 \x01(\x0b\x32\x39.dota.CMsgGCToClientBattlePassRollup_Winter2017.BattleCup\x12P\n\x0bpredictions\x18\x06 \x01(\x0b\x32;.dota.CMsgGCToClientBattlePassRollup_Winter2017.Predictions\x12H\n\x07\x62racket\x18\x07 \x01(\x0b\x32\x37.dota.CMsgGCToClientBattlePassRollup_Winter2017.Bracket\x12P\n\x0cplayer_cards\x18\x08 \x03(\x0b\x32:.dota.CMsgGCToClientBattlePassRollup_Winter2017.PlayerCard\x12[\n\x11\x66\x61ntasy_challenge\x18\t \x01(\x0b\x32@.dota.CMsgGCToClientBattlePassRollup_Winter2017.FantasyChallenge\x1a^\n\nQuestlines\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07onestar\x18\x02 \x01(\r\x12\x0f\n\x07twostar\x18\x03 \x01(\r\x12\x11\n\tthreestar\x18\x04 \x01(\r\x12\r\n\x05total\x18\x05 \x01(\r\x1as\n\x08Wagering\x12\x15\n\rtotal_wagered\x18\x01 \x01(\r\x12\x11\n\ttotal_won\x18\x02 \x01(\r\x12\x13\n\x0b\x61verage_won\x18\x03 \x01(\r\x12\x14\n\x0csuccess_rate\x18\x04 \x01(\r\x12\x12\n\ntotal_tips\x18\x05 \x01(\r\x1a@\n\x0c\x41\x63hievements\x12\x11\n\tcompleted\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a(\n\tBattleCup\x12\x0c\n\x04wins\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\r\x1a=\n\x0bPredictions\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0e\n\x06points\x18\x03 \x01(\r\x1a*\n\x07\x42racket\x12\x0f\n\x07\x63orrect\x18\x01 \x01(\r\x12\x0e\n\x06points\x18\x02 \x01(\r\x1a\x31\n\nPlayerCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07quality\x18\x02 \x01(\r\x1a;\n\x10\x46\x61ntasyChallenge\x12\x13\n\x0btotal_score\x18\x01 \x01(\x02\x12\x12\n\npercentile\x18\x02 \x01(\x02\"M\n%CMsgGCToClientBattlePassRollupRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x12\n\naccount_id\x18\x02 \x01(\r\"\x85\x02\n&CMsgGCToClientBattlePassRollupResponse\x12I\n\tevent_ti6\x18\x01 \x01(\x0b\x32\x36.dota.CMsgGCToClientBattlePassRollup_International2016\x12\x45\n\x0e\x65vent_fall2016\x18\x02 \x01(\x0b\x32-.dota.CMsgGCToClientBattlePassRollup_Fall2016\x12I\n\x10\x65vent_winter2017\x18\x03 \x01(\x0b\x32/.dota.CMsgGCToClientBattlePassRollup_Winter2017\"?\n)CMsgGCToClientBattlePassRollupListRequest\x12\x12\n\naccount_id\x18\x01 \x01(\r\">\n*CMsgGCToClientBattlePassRollupListResponse\x12\x10\n\x08\x65vent_id\x18\x01 \x03(\r\"<\n(CMsgClientToGCTransferSeasonalMMRRequest\x12\x10\n\x08is_party\x18\x01 \x01(\x08\"<\n)CMsgClientToGCTransferSeasonalMMRResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\".\n\x1c\x43MsgGCToClientPlaytestStatus\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\"4\n\x1a\x43MsgClientToGCJoinPlaytest\x12\x16\n\x0e\x63lient_version\x18\x01 \x01(\r\"3\n\"CMsgClientToGCJoinPlaytestResponse\x12\r\n\x05\x65rror\x18\x01 \x01(\t\"\x86\x02\n\x13\x43MsgDOTAEventInvite\x12-\n\x05teams\x18\x01 \x03(\x0b\x32\x1e.dota.CMsgDOTAEventInvite.Team\x1a\xbf\x01\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x19\n\x11\x61nnouncement_date\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12N\n\x0binvite_type\x18\x04 \x01(\x0e\x32\x1a.dota.EDOTAEventInviteType:\x1dk_EDOTAEventInviteType_Direct\x12\x0e\n\x06region\x18\x05 \x01(\r\x12\x18\n\x10qualifier_winner\x18\x06 \x01(\x08\"<\n\x17\x43MsgDOTASetFavoriteTeam\x12\x0f\n\x07team_id\x18\x01 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\"\xed\x01\n\x16\x43MsgDOTATriviaQuestion\x12\x13\n\x0bquestion_id\x18\x01 \x01(\r\x12^\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32!.dota.EDOTATriviaQuestionCategory:)k_EDOTATriviaQuestionCategory_AbilityIcon\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x16\n\x0equestion_value\x18\x04 \x01(\t\x12\x15\n\ranswer_values\x18\x05 \x03(\t\x12\x1c\n\x14\x63orrect_answer_index\x18\x06 \x01(\r\"i\n\x1e\x43MsgDOTATriviaCurrentQuestions\x12/\n\tquestions\x18\x01 \x03(\x0b\x32\x1c.dota.CMsgDOTATriviaQuestion\x12\x16\n\x0etrivia_enabled\x18\x02 \x01(\x08\"W\n$CMsgDOTATriviaQuestionAnswersSummary\x12\x19\n\x11summary_available\x18\x01 \x01(\x08\x12\x14\n\x0cpicked_count\x18\x02 \x03(\r\"O\n\"CMsgDOTASubmitTriviaQuestionAnswer\x12\x13\n\x0bquestion_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61nswer_index\x18\x02 \x01(\r\"~\n*CMsgDOTASubmitTriviaQuestionAnswerResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x1d.dota.EDOTATriviaAnswerResult:!k_EDOTATriviaAnswerResult_Success\"\x1c\n\x1a\x43MsgDOTAStartTriviaSession\"W\n\"CMsgDOTAStartTriviaSessionResponse\x12\x16\n\x0etrivia_enabled\x18\x01 \x01(\x08\x12\x19\n\x11\x63urrent_timestamp\x18\x02 \x01(\r\"Y\n\x15\x43MsgClientToGCGiveTip\x12\x1c\n\x14recipient_account_id\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x10\n\x08\x65vent_id\x18\x03 \x01(\r\"\xcc\x02\n\x1d\x43MsgClientToGCGiveTipResponse\x12\x43\n\x06result\x18\x01 \x01(\x0e\x32*.dota.CMsgClientToGCGiveTipResponse.Result:\x07SUCCESS\"\xe5\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x18\n\x14\x45RROR_ALREADY_TIPPED\x10\x01\x12\x1a\n\x16\x45RROR_INVALID_MATCH_ID\x10\x02\x12\x1a\n\x16\x45RROR_INVALID_EVENT_ID\x10\x03\x12\x1c\n\x18\x45RROR_INVALID_MATCH_TIME\x10\x04\x12\x14\n\x10\x45RROR_NOT_WINNER\x10\x05\x12\x17\n\x13\x45RROR_UNOWNED_EVENT\x10\x06\x12\x1c\n\x18\x45RROR_INVALID_LOBBY_TYPE\x10\x07\x12\x11\n\rERROR_UNKNOWN\x10\x08\"\"\n CMsgDOTAAnchorPhoneNumberRequest\"\xe5\x01\n!CMsgDOTAAnchorPhoneNumberResponse\x12G\n\x06result\x18\x01 \x01(\x0e\x32..dota.CMsgDOTAAnchorPhoneNumberResponse.Result:\x07SUCCESS\"w\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\x12\x18\n\x14\x45RROR_NO_STEAM_PHONE\x10\x02\x12\x18\n\x14\x45RROR_ALREADY_IN_USE\x10\x03\x12\x19\n\x15\x45RROR_COOLDOWN_ACTIVE\x10\x04\"$\n\"CMsgDOTAUnanchorPhoneNumberRequest\"\x9a\x01\n#CMsgDOTAUnanchorPhoneNumberResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAUnanchorPhoneNumberResponse.Result:\x07SUCCESS\"(\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\"\x97\x01\n\x1d\x43MsgGCToClientTipNotification\x12\x19\n\x11tipper_account_id\x18\x01 \x01(\r\x12\x13\n\x0btipper_name\x18\x02 \x01(\t\x12\x1c\n\x14recipient_account_id\x18\x03 \x01(\r\x12\x16\n\x0erecipient_name\x18\x04 \x01(\t\x12\x10\n\x08\x65vent_id\x18\x05 \x01(\r\"5\n!CMsgGCToClientAllStarVotesRequest\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\"=\n\x1f\x43MsgGCToClientAllStarVotesReply\x12\x1a\n\x12player_account_ids\x18\x01 \x03(\r\"P\n CMsgGCToClientAllStarVotesSubmit\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x1a\n\x12player_account_ids\x18\x02 \x03(\r\"\xf7\x01\n%CMsgGCToClientAllStarVotesSubmitReply\x12K\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgGCToClientAllStarVotesSubmitReply.Result:\x07SUCCESS\"\x80\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0e\x45RROR_INTERNAL\x10\x02\x12\x1a\n\x16\x45RROR_INVALID_EVENT_ID\x10\x03\x12\x1c\n\x18\x45RROR_INVALID_ACCOUNT_ID\x10\x04\x12\x1b\n\x17\x45RROR_SELECTIONS_LOCKED\x10\x05\"u\n#CMsgDOTAClientToGCQuickStatsRequest\x12\x19\n\x11player_account_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\r\x12\x11\n\tleague_id\x18\x04 \x01(\r\"\xab\x05\n$CMsgDOTAClientToGCQuickStatsResponse\x12\x43\n\x10original_request\x18\x01 \x01(\x0b\x32).dota.CMsgDOTAClientToGCQuickStatsRequest\x12J\n\nhero_stats\x18\x02 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12J\n\nitem_stats\x18\x03 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12O\n\x0fitem_hero_stats\x18\x04 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12Q\n\x11item_player_stats\x18\x05 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12Q\n\x11hero_player_stats\x18\x06 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x12N\n\x0e\x66ull_set_stats\x18\x07 \x01(\x0b\x32\x36.dota.CMsgDOTAClientToGCQuickStatsResponse.SimpleStats\x1a_\n\x0bSimpleStats\x12\x13\n\x0bwin_percent\x18\x01 \x01(\x02\x12\x14\n\x0cpick_percent\x18\x02 \x01(\x02\x12\x11\n\twin_count\x18\x03 \x01(\r\x12\x12\n\npick_count\x18\x04 \x01(\r\"\x82\x01\n&CMsgDOTASelectionPriorityChoiceRequest\x12X\n\x06\x63hoice\x18\x01 \x01(\x0e\x32!.dota.DOTASelectionPriorityChoice:%k_DOTASelectionPriorityChoice_Invalid\"\xa2\x01\n\'CMsgDOTASelectionPriorityChoiceResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgDOTASelectionPriorityChoiceResponse.Result:\x07SUCCESS\"(\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\"/\n\x1b\x43MsgDOTAGameAutographReward\x12\x10\n\x08\x62\x61\x64ge_id\x18\x01 \x01(\t\"\x9a\x01\n#CMsgDOTAGameAutographRewardResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAGameAutographRewardResponse.Result:\x07SUCCESS\"(\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\"\x1d\n\x1b\x43MsgDOTADestroyLobbyRequest\"\x8c\x01\n\x1c\x43MsgDOTADestroyLobbyResponse\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32).dota.CMsgDOTADestroyLobbyResponse.Result:\x07SUCCESS\"(\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rERROR_UNKNOWN\x10\x01\"\x90\x01\n\x1f\x43MsgPurchaseItemWithEventPoints\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x10\n\x08quantity\x18\x02 \x01(\r\x12-\n\x08\x65vent_id\x18\x03 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x1a\n\x12use_premium_points\x18\x04 \x01(\x08\"\xac\x02\n\'CMsgPurchaseItemWithEventPointsResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgPurchaseItemWithEventPointsResponse.Result:\x07SUCCESS\"\xb1\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rUNKNOWN_EVENT\x10\x01\x12\x10\n\x0cUNKNOWN_ITEM\x10\x02\x12\x10\n\x0c\x42\x41\x44_QUANTITY\x10\x03\x12\x14\n\x10NOT_PURCHASEABLE\x10\x04\x12\x13\n\x0fSDO_LOAD_FAILED\x10\x05\x12\x15\n\x11NOT_ENOUGH_POINTS\x10\x06\x12\r\n\tSQL_ERROR\x10\x07\x12\x12\n\x0e\x46\x41ILED_TO_SEND\x10\x08\"\xbe\x01\n CMsgGCRequestItemRecommendations\x12\x0b\n\x03mmr\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x17\n\x0f\x61llied_hero_ids\x18\x03 \x03(\r\x12\x16\n\x0e\x65nemy_hero_ids\x18\x04 \x03(\r\x12\x17\n\x0finventory_items\x18\x05 \x03(\r\x12\x11\n\tgame_time\x18\x06 \x01(\x05\x12\x0c\n\x04gold\x18\x07 \x01(\r\x12\x11\n\tnet_worth\x18\x08 \x01(\r\"H\n(CMsgGCRequestItemRecommendationsResponse\x12\x1c\n\x14recommended_item_ids\x18\x01 \x03(\r*V\n\x14\x44OTA_WatchReplayType\x12\x1c\n\x18\x44OTA_WATCH_REPLAY_NORMAL\x10\x00\x12 \n\x1c\x44OTA_WATCH_REPLAY_HIGHLIGHTS\x10\x01*\xd1\x01\n\x1c\x45ItemEditorReservationResult\x12%\n!k_EItemEditorReservationResult_OK\x10\x01\x12\x30\n,k_EItemEditorReservationResult_AlreadyExists\x10\x02\x12+\n\'k_EItemEditorReservationResult_Reserved\x10\x03\x12+\n\'k_EItemEditorReservationResult_TimedOut\x10\x04*\x92\x04\n\x16\x45\x46\x65\x61turedHeroTextField\x12$\n k_EFeaturedHeroTextField_NewHero\x10\x00\x12$\n k_EFeaturedHeroTextField_NewItem\x10\x01\x12/\n+k_EFeaturedHeroTextField_ItemSetDescription\x10\x02\x12,\n(k_EFeaturedHeroTextField_ItemDescription\x10\x03\x12!\n\x1dk_EFeaturedHeroTextField_Hype\x10\x04\x12(\n$k_EFeaturedHeroTextField_HeroWinLoss\x10\x05\x12\x31\n-k_EFeaturedHeroTextField_FrequentlyPlayedHero\x10\x06\x12)\n%k_EFeaturedHeroTextField_FeaturedItem\x10\x07\x12(\n$k_EFeaturedHeroTextField_PopularItem\x10\x08\x12%\n!k_EFeaturedHeroTextField_SaleItem\x10\t\x12)\n%k_EFeaturedHeroTextField_SaleDiscount\x10\n\x12&\n\"k_EFeaturedHeroTextField_Container\x10\x0b*\x87\x03\n\x15\x45\x46\x65\x61turedHeroDataType\x12\"\n\x1ek_EFeaturedHeroDataType_HeroID\x10\x00\x12#\n\x1fk_EFeaturedHeroDataType_ItemDef\x10\x01\x12&\n\"k_EFeaturedHeroDataType_HypeString\x10\x02\x12*\n&k_EFeaturedHeroDataType_StartTimestamp\x10\x03\x12+\n\'k_EFeaturedHeroDataType_ExpireTimestamp\x10\x04\x12$\n k_EFeaturedHeroDataType_HeroWins\x10\x05\x12&\n\"k_EFeaturedHeroDataType_HeroLosses\x10\x06\x12(\n$k_EFeaturedHeroDataType_SaleDiscount\x10\x07\x12,\n(k_EFeaturedHeroDataType_ContainerItemDef\x10\x08*\xe8\x01\n EWeekendTourneyRichPresenceEvent\x12+\n\'k_EWeekendTourneyRichPresenceEvent_None\x10\x00\x12\x33\n/k_EWeekendTourneyRichPresenceEvent_StartedMatch\x10\x01\x12/\n+k_EWeekendTourneyRichPresenceEvent_WonMatch\x10\x02\x12\x31\n-k_EWeekendTourneyRichPresenceEvent_Eliminated\x10\x03*\x8c\x01\n\x14\x45\x44OTAEventInviteType\x12!\n\x1dk_EDOTAEventInviteType_Direct\x10\x00\x12(\n$k_EDOTAEventInviteType_OpenQualifier\x10\x01\x12\'\n#k_EDOTAEventInviteType_ChampionsCup\x10\x02*\xc2\x05\n\x1b\x45\x44OTATriviaQuestionCategory\x12-\n)k_EDOTATriviaQuestionCategory_AbilityIcon\x10\x00\x12\x31\n-k_EDOTATriviaQuestionCategory_AbilityCooldown\x10\x01\x12\x30\n,k_EDOTATriviaQuestionCategory_HeroAttributes\x10\x02\x12\x33\n/k_EDOTATriviaQuestionCategory_HeroMovementSpeed\x10\x03\x12,\n(k_EDOTATriviaQuestionCategory_TalentTree\x10\x04\x12+\n\'k_EDOTATriviaQuestionCategory_HeroStats\x10\x05\x12+\n\'k_EDOTATriviaQuestionCategory_ItemPrice\x10\x06\x12.\n*k_EDOTATriviaQuestionCategory_AbilitySound\x10\x07\x12/\n+k_EDOTATriviaQuestionCategory_InvokerSpells\x10\x08\x12\x31\n-k_EDOTATriviaQuestionCategory_AbilityManaCost\x10\t\x12\x31\n-k_EDOTATriviaQuestionCategory_HeroAttackSound\x10\n\x12-\n)k_EDOTATriviaQuestionCategory_AbilityName\x10\x0b\x12\x30\n,k_EDOTATriviaQuestionCategory_ItemComponents\x10\x0c\x12*\n&k_EDOTATriviaQuestionCategory_ItemLore\x10\r*\xa7\x02\n\x17\x45\x44OTATriviaAnswerResult\x12%\n!k_EDOTATriviaAnswerResult_Success\x10\x00\x12-\n)k_EDOTATriviaAnswerResult_InvalidQuestion\x10\x01\x12+\n\'k_EDOTATriviaAnswerResult_InvalidAnswer\x10\x02\x12,\n(k_EDOTATriviaAnswerResult_QuestionLocked\x10\x03\x12-\n)k_EDOTATriviaAnswerResult_AlreadyAnswered\x10\x04\x12,\n(k_EDOTATriviaAnswerResult_TriviaDisabled\x10\x05\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[steammessages__pb2.DESCRIPTOR,dota__shared__enums__pb2.DESCRIPTOR,dota__gcmessages__common__pb2.DESCRIPTOR,gcsdk__gcmessages__pb2.DESCRIPTOR,dota__gcmessages__common__match__management__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -47,8 +47,8 @@ _DOTA_WATCHREPLAYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=44884,
-  serialized_end=44970,
+  serialized_start=44907,
+  serialized_end=44993,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_WATCHREPLAYTYPE)
 
@@ -78,8 +78,8 @@ _EITEMEDITORRESERVATIONRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=44973,
-  serialized_end=45182,
+  serialized_start=44996,
+  serialized_end=45205,
 )
 _sym_db.RegisterEnumDescriptor(_EITEMEDITORRESERVATIONRESULT)
 
@@ -141,8 +141,8 @@ _EFEATUREDHEROTEXTFIELD = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=45185,
-  serialized_end=45715,
+  serialized_start=45208,
+  serialized_end=45738,
 )
 _sym_db.RegisterEnumDescriptor(_EFEATUREDHEROTEXTFIELD)
 
@@ -192,8 +192,8 @@ _EFEATUREDHERODATATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=45718,
-  serialized_end=46109,
+  serialized_start=45741,
+  serialized_end=46132,
 )
 _sym_db.RegisterEnumDescriptor(_EFEATUREDHERODATATYPE)
 
@@ -223,8 +223,8 @@ _EWEEKENDTOURNEYRICHPRESENCEEVENT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=46112,
-  serialized_end=46344,
+  serialized_start=46135,
+  serialized_end=46367,
 )
 _sym_db.RegisterEnumDescriptor(_EWEEKENDTOURNEYRICHPRESENCEEVENT)
 
@@ -250,8 +250,8 @@ _EDOTAEVENTINVITETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=46347,
-  serialized_end=46487,
+  serialized_start=46370,
+  serialized_end=46510,
 )
 _sym_db.RegisterEnumDescriptor(_EDOTAEVENTINVITETYPE)
 
@@ -321,8 +321,8 @@ _EDOTATRIVIAQUESTIONCATEGORY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=46490,
-  serialized_end=47196,
+  serialized_start=46513,
+  serialized_end=47219,
 )
 _sym_db.RegisterEnumDescriptor(_EDOTATRIVIAQUESTIONCATEGORY)
 
@@ -360,8 +360,8 @@ _EDOTATRIVIAANSWERRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=47199,
-  serialized_end=47494,
+  serialized_start=47222,
+  serialized_end=47517,
 )
 _sym_db.RegisterEnumDescriptor(_EDOTATRIVIAANSWERRESULT)
 
@@ -694,11 +694,15 @@ _CMSGDOTAPOPUP_POPUPID = _descriptor.EnumDescriptor(
       name='GENERIC_ERROR', index=58, number=70,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RANK_TIER_UPDATED', index=59, number=75,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=1459,
-  serialized_end=3117,
+  serialized_end=3140,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAPOPUP_POPUPID)
 
@@ -719,8 +723,8 @@ _CMSGDOTAFRIENDRECRUITSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11615,
-  serialized_end=11660,
+  serialized_start=11638,
+  serialized_end=11683,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFRIENDRECRUITSRESPONSE_ERESULT)
 
@@ -781,8 +785,8 @@ _CMSGDOTACLAIMEVENTACTIONRESPONSE_RESULTCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=14131,
-  serialized_end=14368,
+  serialized_start=14154,
+  serialized_end=14391,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTACLAIMEVENTACTIONRESPONSE_RESULTCODE)
 
@@ -803,8 +807,8 @@ _CMSGGCNOTIFICATIONSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=11615,
-  serialized_end=11660,
+  serialized_start=11638,
+  serialized_end=11683,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGGCNOTIFICATIONSRESPONSE_ERESULT)
 
@@ -829,8 +833,8 @@ _CMSGGCPLAYERINFOSUBMITRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=17610,
-  serialized_end=17678,
+  serialized_start=17633,
+  serialized_end=17701,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGGCPLAYERINFOSUBMITRESPONSE_ERESULT)
 
@@ -855,8 +859,8 @@ _CMSGCLIENTTOGCVOTEFORARCANARESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=28218,
-  serialized_end=28296,
+  serialized_start=28241,
+  serialized_end=28319,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCVOTEFORARCANARESPONSE_RESULT)
 
@@ -881,8 +885,8 @@ _CMSGARCANAVOTES_VOTINGSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=28790,
-  serialized_end=28849,
+  serialized_start=28813,
+  serialized_end=28872,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGARCANAVOTES_VOTINGSTATE)
 
@@ -903,8 +907,8 @@ _CMSGDOTAREDEEMITEMRESPONSE_ERESULTCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=32809,
-  serialized_end=32853,
+  serialized_start=32832,
+  serialized_end=32876,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAREDEEMITEMRESPONSE_ERESULTCODE)
 
@@ -937,8 +941,8 @@ _CMSGPERFECTWORLDUSERLOOKUPRESPONSE_ERESULTCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=33069,
-  serialized_end=33245,
+  serialized_start=33092,
+  serialized_end=33268,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGPERFECTWORLDUSERLOOKUPRESPONSE_ERESULTCODE)
 
@@ -967,8 +971,8 @@ _CMSGCLIENTTOGCSELECTCOMPENDIUMINGAMEPREDICTIONRESPONSE_ERESULT = _descriptor.En
   ],
   containing_type=None,
   options=None,
-  serialized_start=34296,
-  serialized_end=34382,
+  serialized_start=34319,
+  serialized_end=34405,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSELECTCOMPENDIUMINGAMEPREDICTIONRESPONSE_ERESULT)
 
@@ -1001,8 +1005,8 @@ _CMSGCLIENTTOGCOPENPLAYERCARDPACKRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=34610,
-  serialized_end=34742,
+  serialized_start=34633,
+  serialized_end=34765,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCOPENPLAYERCARDPACKRESPONSE_RESULT)
 
@@ -1039,8 +1043,8 @@ _CMSGCLIENTTOGCRECYCLEPLAYERCARDRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=34972,
-  serialized_end=35141,
+  serialized_start=34995,
+  serialized_end=35164,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCRECYCLEPLAYERCARDRESPONSE_RESULT)
 
@@ -1073,8 +1077,8 @@ _CMSGCLIENTTOGCCREATEPLAYERCARDPACKRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=35378,
-  serialized_end=35513,
+  serialized_start=35401,
+  serialized_end=35536,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCCREATEPLAYERCARDPACKRESPONSE_RESULT)
 
@@ -1123,8 +1127,8 @@ _CMSGCLIENTTOGCGIVETIPRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=41386,
-  serialized_end=41615,
+  serialized_start=41409,
+  serialized_end=41638,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCGIVETIPRESPONSE_RESULT)
 
@@ -1157,8 +1161,8 @@ _CMSGDOTAANCHORPHONENUMBERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=41764,
-  serialized_end=41883,
+  serialized_start=41787,
+  serialized_end=41906,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAANCHORPHONENUMBERRESPONSE_RESULT)
 
@@ -1179,8 +1183,8 @@ _CMSGDOTAUNANCHORPHONENUMBERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=41764,
-  serialized_end=41804,
+  serialized_start=41787,
+  serialized_end=41827,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAUNANCHORPHONENUMBERRESPONSE_RESULT)
 
@@ -1213,8 +1217,8 @@ _CMSGGCTOCLIENTALLSTARVOTESSUBMITREPLY_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=42554,
-  serialized_end=42682,
+  serialized_start=42577,
+  serialized_end=42705,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGGCTOCLIENTALLSTARVOTESSUBMITREPLY_RESULT)
 
@@ -1235,8 +1239,8 @@ _CMSGDOTASELECTIONPRIORITYCHOICERESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=41764,
-  serialized_end=41804,
+  serialized_start=41787,
+  serialized_end=41827,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTASELECTIONPRIORITYCHOICERESPONSE_RESULT)
 
@@ -1257,8 +1261,8 @@ _CMSGDOTAGAMEAUTOGRAPHREWARDRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=41764,
-  serialized_end=41804,
+  serialized_start=41787,
+  serialized_end=41827,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAGAMEAUTOGRAPHREWARDRESPONSE_RESULT)
 
@@ -1279,8 +1283,8 @@ _CMSGDOTADESTROYLOBBYRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=41764,
-  serialized_end=41804,
+  serialized_start=41787,
+  serialized_end=41827,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTADESTROYLOBBYRESPONSE_RESULT)
 
@@ -1329,8 +1333,8 @@ _CMSGPURCHASEITEMWITHEVENTPOINTSRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=44438,
-  serialized_end=44615,
+  serialized_start=44461,
+  serialized_end=44638,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGPURCHASEITEMWITHEVENTPOINTSRESPONSE_RESULT)
 
@@ -1831,7 +1835,7 @@ _CMSGDOTAPOPUP = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1227,
-  serialized_end=3117,
+  serialized_end=3140,
 )
 
 
@@ -1854,8 +1858,8 @@ _CMSGDOTAREPORTSREMAININGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3119,
-  serialized_end=3152,
+  serialized_start=3142,
+  serialized_end=3175,
 )
 
 
@@ -1906,8 +1910,8 @@ _CMSGDOTAREPORTSREMAININGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3155,
-  serialized_end=3341,
+  serialized_start=3178,
+  serialized_end=3364,
 )
 
 
@@ -1958,8 +1962,8 @@ _CMSGDOTASUBMITPLAYERREPORT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3343,
-  serialized_end=3455,
+  serialized_start=3366,
+  serialized_end=3478,
 )
 
 
@@ -2010,8 +2014,8 @@ _CMSGDOTASUBMITPLAYERREPORTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3457,
-  serialized_end=3581,
+  serialized_start=3480,
+  serialized_end=3604,
 )
 
 
@@ -2041,8 +2045,8 @@ _CMSGDOTAREPORTCOUNTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3583,
-  serialized_end=3639,
+  serialized_start=3606,
+  serialized_end=3662,
 )
 
 
@@ -2100,8 +2104,8 @@ _CMSGDOTAREPORTCOUNTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3642,
-  serialized_end=3798,
+  serialized_start=3665,
+  serialized_end=3821,
 )
 
 
@@ -2131,8 +2135,8 @@ _CMSGDOTASUBMITLOBBYMVPVOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3800,
-  serialized_end=3855,
+  serialized_start=3823,
+  serialized_end=3878,
 )
 
 
@@ -2169,8 +2173,8 @@ _CMSGDOTASUBMITLOBBYMVPVOTERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3857,
-  serialized_end=3937,
+  serialized_start=3880,
+  serialized_end=3960,
 )
 
 
@@ -2214,8 +2218,8 @@ _CMSGDOTALOBBYMVPNOTIFYRECIPIENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3939,
-  serialized_end=4047,
+  serialized_start=3962,
+  serialized_end=4070,
 )
 
 
@@ -2245,8 +2249,8 @@ _CMSGDOTALOBBYMVPAWARDED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4049,
-  serialized_end=4098,
+  serialized_start=4072,
+  serialized_end=4121,
 )
 
 
@@ -2276,8 +2280,8 @@ _CMSGDOTAKICKEDFROMMATCHMAKINGQUEUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4100,
-  serialized_end=4192,
+  serialized_start=4123,
+  serialized_end=4215,
 )
 
 
@@ -2307,8 +2311,8 @@ _CMSGDOTAREQUESTSAVEGAMES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4194,
-  serialized_end=4243,
+  serialized_start=4217,
+  serialized_end=4266,
 )
 
 
@@ -2345,8 +2349,8 @@ _CMSGDOTAREQUESTSAVEGAMESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4245,
-  serialized_end=4338,
+  serialized_start=4268,
+  serialized_end=4361,
 )
 
 
@@ -2376,8 +2380,8 @@ _CMSGGCMATCHDETAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4340,
-  serialized_end=4385,
+  serialized_start=4363,
+  serialized_end=4408,
 )
 
 
@@ -2421,8 +2425,8 @@ _CMSGGCMATCHDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4388,
-  serialized_end=4526,
+  serialized_start=4411,
+  serialized_end=4549,
 )
 
 
@@ -2452,8 +2456,8 @@ _CMSGSERVERTOGCMATCHDETAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4528,
-  serialized_end=4582,
+  serialized_start=4551,
+  serialized_end=4605,
 )
 
 
@@ -2483,8 +2487,8 @@ _CMSGGCTOSERVERMATCHDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4584,
-  serialized_end=4658,
+  serialized_start=4607,
+  serialized_end=4681,
 )
 
 
@@ -2521,8 +2525,8 @@ _CMSGDOTAPROFILEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4660,
-  serialized_end=4726,
+  serialized_start=4683,
+  serialized_end=4749,
 )
 
 
@@ -2559,8 +2563,8 @@ _CMSGDOTAPROFILERESPONSE_PLAYEDHERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5343,
-  serialized_end=5386,
+  serialized_start=5366,
+  serialized_end=5409,
 )
 
 _CMSGDOTAPROFILERESPONSE_SHOWCASEHERO = _descriptor.Descriptor(
@@ -2596,8 +2600,8 @@ _CMSGDOTAPROFILERESPONSE_SHOWCASEHERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5388,
-  serialized_end=5440,
+  serialized_start=5411,
+  serialized_end=5463,
 )
 
 _CMSGDOTAPROFILERESPONSE_LEAGUEPASS = _descriptor.Descriptor(
@@ -2633,8 +2637,8 @@ _CMSGDOTAPROFILERESPONSE_LEAGUEPASS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5442,
-  serialized_end=5491,
+  serialized_start=5465,
+  serialized_end=5514,
 )
 
 _CMSGDOTAPROFILERESPONSE_EVENTTICKET = _descriptor.Descriptor(
@@ -2663,8 +2667,8 @@ _CMSGDOTAPROFILERESPONSE_EVENTTICKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5493,
-  serialized_end=5524,
+  serialized_start=5516,
+  serialized_end=5547,
 )
 
 _CMSGDOTAPROFILERESPONSE_FEATUREDITEM = _descriptor.Descriptor(
@@ -2707,8 +2711,8 @@ _CMSGDOTAPROFILERESPONSE_FEATUREDITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5526,
-  serialized_end=5598,
+  serialized_start=5549,
+  serialized_end=5621,
 )
 
 _CMSGDOTAPROFILERESPONSE = _descriptor.Descriptor(
@@ -2835,8 +2839,8 @@ _CMSGDOTAPROFILERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4729,
-  serialized_end=5598,
+  serialized_start=4752,
+  serialized_end=5621,
 )
 
 
@@ -2873,8 +2877,8 @@ _CMSGDOTAPROFILETICKETS_LEAGUEPASS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5442,
-  serialized_end=5491,
+  serialized_start=5465,
+  serialized_end=5514,
 )
 
 _CMSGDOTAPROFILETICKETS_EVENTTICKET = _descriptor.Descriptor(
@@ -2903,8 +2907,8 @@ _CMSGDOTAPROFILETICKETS_EVENTTICKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5493,
-  serialized_end=5524,
+  serialized_start=5516,
+  serialized_end=5547,
 )
 
 _CMSGDOTAPROFILETICKETS = _descriptor.Descriptor(
@@ -2954,8 +2958,8 @@ _CMSGDOTAPROFILETICKETS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5601,
-  serialized_end=5874,
+  serialized_start=5624,
+  serialized_end=5897,
 )
 
 
@@ -2985,8 +2989,8 @@ _CMSGCLIENTTOGCGETPROFILETICKETS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5876,
-  serialized_end=5929,
+  serialized_start=5899,
+  serialized_end=5952,
 )
 
 
@@ -3016,8 +3020,8 @@ _CMSGGCSTEAMPROFILEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5931,
-  serialized_end=5978,
+  serialized_start=5954,
+  serialized_end=6001,
 )
 
 
@@ -3047,8 +3051,8 @@ _CMSGGCSTEAMPROFILEREQUESTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5980,
-  serialized_end=6031,
+  serialized_start=6003,
+  serialized_end=6054,
 )
 
 
@@ -3071,8 +3075,8 @@ _CMSGDOTACLEARNOTIFYSUCCESSFULREPORT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6033,
-  serialized_end=6070,
+  serialized_start=6056,
+  serialized_end=6093,
 )
 
 
@@ -3116,8 +3120,8 @@ _CMSGDOTAWELCOME_LOCALIZATIONDIGEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6857,
-  serialized_end=7009,
+  serialized_start=6880,
+  serialized_end=7032,
 )
 
 _CMSGDOTAWELCOME_CEXTRAMSG = _descriptor.Descriptor(
@@ -3153,8 +3157,8 @@ _CMSGDOTAWELCOME_CEXTRAMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7011,
-  serialized_end=7052,
+  serialized_start=7034,
+  serialized_end=7075,
 )
 
 _CMSGDOTAWELCOME = _descriptor.Descriptor(
@@ -3323,8 +3327,8 @@ _CMSGDOTAWELCOME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6073,
-  serialized_end=7052,
+  serialized_start=6096,
+  serialized_end=7075,
 )
 
 
@@ -3361,8 +3365,8 @@ _CSODOTAGAMEHEROFAVORITES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7054,
-  serialized_end=7129,
+  serialized_start=7077,
+  serialized_end=7152,
 )
 
 
@@ -3392,8 +3396,8 @@ _CMSGDOTAHEROFAVORITESADD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7131,
-  serialized_end=7174,
+  serialized_start=7154,
+  serialized_end=7197,
 )
 
 
@@ -3423,8 +3427,8 @@ _CMSGDOTAHEROFAVORITESREMOVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7176,
-  serialized_end=7222,
+  serialized_start=7199,
+  serialized_end=7245,
 )
 
 
@@ -3454,8 +3458,8 @@ _CMSGSETSHOWCASEHERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7224,
-  serialized_end=7271,
+  serialized_start=7247,
+  serialized_end=7294,
 )
 
 
@@ -3485,8 +3489,8 @@ _CMSGSETFEATUREDITEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7273,
-  serialized_end=7321,
+  serialized_start=7296,
+  serialized_end=7344,
 )
 
 
@@ -3530,8 +3534,8 @@ _CMSGDOTAFEATUREDITEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7323,
-  serialized_end=7413,
+  serialized_start=7346,
+  serialized_end=7436,
 )
 
 
@@ -3554,8 +3558,8 @@ _CMSGREQUESTLEAGUEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7415,
-  serialized_end=7438,
+  serialized_start=7438,
+  serialized_end=7461,
 )
 
 
@@ -3627,8 +3631,8 @@ _CDYNAMICLEAGUEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7441,
-  serialized_end=7649,
+  serialized_start=7464,
+  serialized_end=7672,
 )
 
 
@@ -3798,8 +3802,8 @@ _CSTATICLEAGUEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7652,
-  serialized_end=8130,
+  serialized_start=7675,
+  serialized_end=8153,
 )
 
 
@@ -3843,8 +3847,8 @@ _CLEAGUEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8132,
-  serialized_end=8257,
+  serialized_start=8155,
+  serialized_end=8280,
 )
 
 
@@ -3874,8 +3878,8 @@ _CMSGRESPONSELEAGUESTATICDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8259,
-  serialized_end=8331,
+  serialized_start=8282,
+  serialized_end=8354,
 )
 
 
@@ -3905,8 +3909,8 @@ _CMSGRESPONSELEAGUEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8333,
-  serialized_end=8400,
+  serialized_start=8356,
+  serialized_end=8423,
 )
 
 
@@ -3943,8 +3947,8 @@ _CMSGDOTAMATCHVOTES_PLAYERVOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8495,
-  serialized_end=8541,
+  serialized_start=8518,
+  serialized_end=8564,
 )
 
 _CMSGDOTAMATCHVOTES = _descriptor.Descriptor(
@@ -3980,8 +3984,8 @@ _CMSGDOTAMATCHVOTES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8403,
-  serialized_end=8541,
+  serialized_start=8426,
+  serialized_end=8564,
 )
 
 
@@ -4018,8 +4022,8 @@ _CMSGCASTMATCHVOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8543,
-  serialized_end=8638,
+  serialized_start=8566,
+  serialized_end=8661,
 )
 
 
@@ -4056,8 +4060,8 @@ _CMSGRETRIEVEMATCHVOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8640,
-  serialized_end=8702,
+  serialized_start=8663,
+  serialized_end=8725,
 )
 
 
@@ -4108,8 +4112,8 @@ _CMSGMATCHVOTERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8705,
-  serialized_end=8854,
+  serialized_start=8728,
+  serialized_end=8877,
 )
 
 
@@ -4160,8 +4164,8 @@ _CMSGDOTAHALLOFFAME_FEATUREDPLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9026,
-  serialized_end=9129,
+  serialized_start=9049,
+  serialized_end=9152,
 )
 
 _CMSGDOTAHALLOFFAME_FEATUREDFARMER = _descriptor.Descriptor(
@@ -4211,8 +4215,8 @@ _CMSGDOTAHALLOFFAME_FEATUREDFARMER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9131,
-  serialized_end=9224,
+  serialized_start=9154,
+  serialized_end=9247,
 )
 
 _CMSGDOTAHALLOFFAME = _descriptor.Descriptor(
@@ -4255,8 +4259,8 @@ _CMSGDOTAHALLOFFAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8857,
-  serialized_end=9224,
+  serialized_start=8880,
+  serialized_end=9247,
 )
 
 
@@ -4286,8 +4290,8 @@ _CMSGDOTAHALLOFFAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9226,
-  serialized_end=9267,
+  serialized_start=9249,
+  serialized_end=9290,
 )
 
 
@@ -4324,8 +4328,8 @@ _CMSGDOTAHALLOFFAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9269,
-  serialized_end=9365,
+  serialized_start=9292,
+  serialized_end=9388,
 )
 
 
@@ -4355,8 +4359,8 @@ _CMSGDOTAHALLOWEENHIGHSCOREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9367,
-  serialized_end=9421,
+  serialized_start=9390,
+  serialized_end=9444,
 )
 
 
@@ -4407,8 +4411,8 @@ _CMSGDOTAHALLOWEENHIGHSCORERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9423,
-  serialized_end=9542,
+  serialized_start=9446,
+  serialized_end=9565,
 )
 
 
@@ -4438,8 +4442,8 @@ _CMSGDOTASTOREPROMOPAGESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9544,
-  serialized_end=9598,
+  serialized_start=9567,
+  serialized_end=9621,
 )
 
 
@@ -4483,8 +4487,8 @@ _CMSGDOTASTOREPROMOPAGESRESPONSE_PROMOPAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9700,
-  serialized_end=9757,
+  serialized_start=9723,
+  serialized_end=9780,
 )
 
 _CMSGDOTASTOREPROMOPAGESRESPONSE = _descriptor.Descriptor(
@@ -4513,8 +4517,8 @@ _CMSGDOTASTOREPROMOPAGESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9601,
-  serialized_end=9757,
+  serialized_start=9624,
+  serialized_end=9780,
 )
 
 
@@ -4558,8 +4562,8 @@ _CMSGMATCHMAKINGMATCHGROUPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9760,
-  serialized_end=9936,
+  serialized_start=9783,
+  serialized_end=9959,
 )
 
 
@@ -4582,8 +4586,8 @@ _CMSGDOTAMATCHMAKINGSTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9938,
-  serialized_end=9971,
+  serialized_start=9961,
+  serialized_end=9994,
 )
 
 
@@ -4627,8 +4631,8 @@ _CMSGDOTAMATCHMAKINGSTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9974,
-  serialized_end=10147,
+  serialized_start=9997,
+  serialized_end=10170,
 )
 
 
@@ -4658,8 +4662,8 @@ _CMSGDOTAUPDATEMATCHMAKINGSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10149,
-  serialized_end=10236,
+  serialized_start=10172,
+  serialized_end=10259,
 )
 
 
@@ -4689,8 +4693,8 @@ _CMSGDOTAUPDATEMATCHMANAGEMENTSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10238,
-  serialized_end=10329,
+  serialized_start=10261,
+  serialized_end=10352,
 )
 
 
@@ -4720,8 +4724,8 @@ _CMSGDOTASETMATCHHISTORYACCESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10331,
-  serialized_end=10401,
+  serialized_start=10354,
+  serialized_end=10424,
 )
 
 
@@ -4751,8 +4755,8 @@ _CMSGDOTASETMATCHHISTORYACCESSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10403,
-  serialized_end=10462,
+  serialized_start=10426,
+  serialized_end=10485,
 )
 
 
@@ -4789,8 +4793,8 @@ _CMSGDOTANOTIFYACCOUNTFLAGSCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10464,
-  serialized_end=10540,
+  serialized_start=10487,
+  serialized_end=10563,
 )
 
 
@@ -4820,8 +4824,8 @@ _CMSGDOTASETPROFILEPRIVACY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10542,
-  serialized_end=10594,
+  serialized_start=10565,
+  serialized_end=10617,
 )
 
 
@@ -4851,8 +4855,8 @@ _CMSGDOTASETPROFILEPRIVACYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10596,
-  serialized_end=10648,
+  serialized_start=10619,
+  serialized_end=10671,
 )
 
 
@@ -4889,8 +4893,8 @@ _CMSGUPGRADELEAGUEITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10650,
-  serialized_end=10710,
+  serialized_start=10673,
+  serialized_end=10733,
 )
 
 
@@ -4913,8 +4917,8 @@ _CMSGUPGRADELEAGUEITEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10712,
-  serialized_end=10743,
+  serialized_start=10735,
+  serialized_end=10766,
 )
 
 
@@ -4951,8 +4955,8 @@ _CMSGGCWATCHDOWNLOADEDREPLAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10745,
-  serialized_end=10866,
+  serialized_start=10768,
+  serialized_end=10889,
 )
 
 
@@ -4989,8 +4993,8 @@ _CMSGSETMAPLOCATIONSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10868,
-  serialized_end=10933,
+  serialized_start=10891,
+  serialized_end=10956,
 )
 
 
@@ -5020,8 +5024,8 @@ _CMSGSETMAPLOCATIONSTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10935,
-  serialized_end=10988,
+  serialized_start=10958,
+  serialized_end=11011,
 )
 
 
@@ -5044,8 +5048,8 @@ _CMSGRESETMAPLOCATIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10990,
-  serialized_end=11013,
+  serialized_start=11013,
+  serialized_end=11036,
 )
 
 
@@ -5075,8 +5079,8 @@ _CMSGRESETMAPLOCATIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11015,
-  serialized_end=11066,
+  serialized_start=11038,
+  serialized_end=11089,
 )
 
 
@@ -5106,8 +5110,8 @@ _CMSGREFRESHPARTNERACCOUNTLINK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11068,
-  serialized_end=11121,
+  serialized_start=11091,
+  serialized_end=11144,
 )
 
 
@@ -5130,8 +5134,8 @@ _CMSGCLIENTSREJOINCHATCHANNELS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11123,
-  serialized_end=11154,
+  serialized_start=11146,
+  serialized_end=11177,
 )
 
 
@@ -5161,8 +5165,8 @@ _CMSGDOTASENDFRIENDRECRUITS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11156,
-  serialized_end=11202,
+  serialized_start=11179,
+  serialized_end=11225,
 )
 
 
@@ -5192,8 +5196,8 @@ _CMSGDOTAFRIENDRECRUITSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11204,
-  serialized_end=11256,
+  serialized_start=11227,
+  serialized_end=11279,
 )
 
 
@@ -5244,8 +5248,8 @@ _CMSGDOTAFRIENDRECRUITSRESPONSE_FRIENDRECRUITSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11518,
-  serialized_end=11613,
+  serialized_start=11541,
+  serialized_end=11636,
 )
 
 _CMSGDOTAFRIENDRECRUITSRESPONSE = _descriptor.Descriptor(
@@ -5289,8 +5293,8 @@ _CMSGDOTAFRIENDRECRUITSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11259,
-  serialized_end=11660,
+  serialized_start=11282,
+  serialized_end=11683,
 )
 
 
@@ -5327,8 +5331,8 @@ _CMSGDOTAFRIENDRECRUITINVITEACCEPTDECLINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11662,
-  serialized_end=11742,
+  serialized_start=11685,
+  serialized_end=11765,
 )
 
 
@@ -5358,8 +5362,8 @@ _CMSGREQUESTLEAGUEPRIZEPOOL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11744,
-  serialized_end=11791,
+  serialized_start=11767,
+  serialized_end=11814,
 )
 
 
@@ -5396,8 +5400,8 @@ _CMSGREQUESTLEAGUEPRIZEPOOLRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11793,
-  serialized_end=11868,
+  serialized_start=11816,
+  serialized_end=11891,
 )
 
 
@@ -5420,8 +5424,8 @@ _CMSGGCGETHEROSTANDINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11870,
-  serialized_end=11894,
+  serialized_start=11893,
+  serialized_end=11917,
 )
 
 
@@ -5577,8 +5581,8 @@ _CMSGGCGETHEROSTANDINGSRESPONSE_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11994,
-  serialized_end=12393,
+  serialized_start=12017,
+  serialized_end=12416,
 )
 
 _CMSGGCGETHEROSTANDINGSRESPONSE = _descriptor.Descriptor(
@@ -5607,8 +5611,8 @@ _CMSGGCGETHEROSTANDINGSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11897,
-  serialized_end=12393,
+  serialized_start=11920,
+  serialized_end=12416,
 )
 
 
@@ -5631,8 +5635,8 @@ _CMSGGCITEMEDITORRESERVATIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12395,
-  serialized_end=12432,
+  serialized_start=12418,
+  serialized_end=12455,
 )
 
 
@@ -5669,8 +5673,8 @@ _CMSGGCITEMEDITORRESERVATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12434,
-  serialized_end=12496,
+  serialized_start=12457,
+  serialized_end=12519,
 )
 
 
@@ -5700,8 +5704,8 @@ _CMSGGCITEMEDITORRESERVATIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12498,
-  serialized_end=12593,
+  serialized_start=12521,
+  serialized_end=12616,
 )
 
 
@@ -5738,8 +5742,8 @@ _CMSGGCITEMEDITORRESERVEITEMDEF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12595,
-  serialized_end=12664,
+  serialized_start=12618,
+  serialized_end=12687,
 )
 
 
@@ -5783,8 +5787,8 @@ _CMSGGCITEMEDITORRESERVEITEMDEFRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12666,
-  serialized_end=12759,
+  serialized_start=12689,
+  serialized_end=12782,
 )
 
 
@@ -5821,8 +5825,8 @@ _CMSGGCITEMEDITORRELEASERESERVATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12761,
-  serialized_end=12834,
+  serialized_start=12784,
+  serialized_end=12857,
 )
 
 
@@ -5859,8 +5863,8 @@ _CMSGGCITEMEDITORRELEASERESERVATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12836,
-  serialized_end=12917,
+  serialized_start=12859,
+  serialized_end=12940,
 )
 
 
@@ -5890,8 +5894,8 @@ _CMSGGCITEMEDITORREQUESTLEAGUEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12919,
-  serialized_end=12973,
+  serialized_start=12942,
+  serialized_end=12996,
 )
 
 
@@ -5970,8 +5974,8 @@ _CMSGGCITEMEDITORLEAGUEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12976,
-  serialized_end=13162,
+  serialized_start=12999,
+  serialized_end=13185,
 )
 
 
@@ -6008,8 +6012,8 @@ _CMSGDOTAREWARDTUTORIALPRIZES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13164,
-  serialized_end=13238,
+  serialized_start=13187,
+  serialized_end=13261,
 )
 
 
@@ -6046,8 +6050,8 @@ _CMSGDOTALASTHITCHALLENGEHIGHSCOREPOST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13240,
-  serialized_end=13316,
+  serialized_start=13263,
+  serialized_end=13339,
 )
 
 
@@ -6077,8 +6081,8 @@ _CMSGDOTALASTHITCHALLENGEHIGHSCOREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13318,
-  serialized_end=13377,
+  serialized_start=13341,
+  serialized_end=13400,
 )
 
 
@@ -6115,8 +6119,8 @@ _CMSGDOTALASTHITCHALLENGEHIGHSCORERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13379,
-  serialized_end=13454,
+  serialized_start=13402,
+  serialized_end=13477,
 )
 
 
@@ -6139,8 +6143,8 @@ _CMSGFLIPLOBBYTEAMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13456,
-  serialized_end=13476,
+  serialized_start=13479,
+  serialized_end=13499,
 )
 
 
@@ -6163,8 +6167,8 @@ _CMSGPRESENTEDCLIENTTERMINATEDLG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13478,
-  serialized_end=13511,
+  serialized_start=13501,
+  serialized_end=13534,
 )
 
 
@@ -6215,8 +6219,8 @@ _CMSGGCLOBBYUPDATEBROADCASTCHANNELINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13513,
-  serialized_end=13638,
+  serialized_start=13536,
+  serialized_end=13661,
 )
 
 
@@ -6260,8 +6264,8 @@ _CMSGDOTACLAIMEVENTACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13640,
-  serialized_end=13721,
+  serialized_start=13663,
+  serialized_end=13744,
 )
 
 
@@ -6298,8 +6302,8 @@ _CMSGDOTACLAIMEVENTACTIONRESPONSE_MYSTERYITEMREWARDDATA = _descriptor.Descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13918,
-  serialized_end=13982,
+  serialized_start=13941,
+  serialized_end=14005,
 )
 
 _CMSGDOTACLAIMEVENTACTIONRESPONSE_LOOTLISTREWARDDATA = _descriptor.Descriptor(
@@ -6328,8 +6332,8 @@ _CMSGDOTACLAIMEVENTACTIONRESPONSE_LOOTLISTREWARDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13984,
-  serialized_end=14022,
+  serialized_start=14007,
+  serialized_end=14045,
 )
 
 _CMSGDOTACLAIMEVENTACTIONRESPONSE_GRANTEDREWARDDATA = _descriptor.Descriptor(
@@ -6379,8 +6383,8 @@ _CMSGDOTACLAIMEVENTACTIONRESPONSE_GRANTEDREWARDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14024,
-  serialized_end=14128,
+  serialized_start=14047,
+  serialized_end=14151,
 )
 
 _CMSGDOTACLAIMEVENTACTIONRESPONSE = _descriptor.Descriptor(
@@ -6417,8 +6421,8 @@ _CMSGDOTACLAIMEVENTACTIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13724,
-  serialized_end=14368,
+  serialized_start=13747,
+  serialized_end=14391,
 )
 
 
@@ -6455,8 +6459,8 @@ _CMSGDOTAGETEVENTPOINTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14370,
-  serialized_end=14432,
+  serialized_start=14393,
+  serialized_end=14455,
 )
 
 
@@ -6493,8 +6497,8 @@ _CMSGDOTAGETEVENTPOINTSRESPONSE_ACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14708,
-  serialized_end=14763,
+  serialized_start=14731,
+  serialized_end=14786,
 )
 
 _CMSGDOTAGETEVENTPOINTSRESPONSE = _descriptor.Descriptor(
@@ -6579,8 +6583,8 @@ _CMSGDOTAGETEVENTPOINTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14435,
-  serialized_end=14763,
+  serialized_start=14458,
+  serialized_end=14786,
 )
 
 
@@ -6624,8 +6628,8 @@ _CMSGDOTAGETPERIODICRESOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14765,
-  serialized_end=14863,
+  serialized_start=14788,
+  serialized_end=14886,
 )
 
 
@@ -6662,8 +6666,8 @@ _CMSGDOTAGETPERIODICRESOURCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14865,
-  serialized_end=14965,
+  serialized_start=14888,
+  serialized_end=14988,
 )
 
 
@@ -6700,8 +6704,8 @@ _CMSGDOTAPERIODICRESOURCEUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14968,
-  serialized_end=15143,
+  serialized_start=14991,
+  serialized_end=15166,
 )
 
 
@@ -6731,8 +6735,8 @@ _CMSGDOTALIVELEAGUEGAMEUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15145,
-  serialized_end=15202,
+  serialized_start=15168,
+  serialized_end=15225,
 )
 
 
@@ -6776,8 +6780,8 @@ _CMSGDOTACOMPENDIUMSELECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15204,
-  serialized_end=15295,
+  serialized_start=15227,
+  serialized_end=15318,
 )
 
 
@@ -6814,8 +6818,8 @@ _CMSGDOTACOMPENDIUMSELECTIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15297,
-  serialized_end=15415,
+  serialized_start=15320,
+  serialized_end=15438,
 )
 
 
@@ -6845,8 +6849,8 @@ _CMSGDOTACOMPENDIUMDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15417,
-  serialized_end=15496,
+  serialized_start=15440,
+  serialized_end=15519,
 )
 
 
@@ -6883,8 +6887,8 @@ _CMSGDOTACOMPENDIUMDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15498,
-  serialized_end=15567,
+  serialized_start=15521,
+  serialized_end=15590,
 )
 
 
@@ -6935,8 +6939,8 @@ _CMSGDOTACOMPENDIUMDATARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15570,
-  serialized_end=15714,
+  serialized_start=15593,
+  serialized_end=15737,
 )
 
 
@@ -7015,8 +7019,8 @@ _CMSGDOTAGETPLAYERMATCHHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15717,
-  serialized_end=15952,
+  serialized_start=15740,
+  serialized_end=15975,
 )
 
 
@@ -7186,8 +7190,8 @@ _CMSGDOTAGETPLAYERMATCHHISTORYRESPONSE_MATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16085,
-  serialized_end=16527,
+  serialized_start=16108,
+  serialized_end=16550,
 )
 
 _CMSGDOTAGETPLAYERMATCHHISTORYRESPONSE = _descriptor.Descriptor(
@@ -7223,8 +7227,8 @@ _CMSGDOTAGETPLAYERMATCHHISTORYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15955,
-  serialized_end=16527,
+  serialized_start=15978,
+  serialized_end=16550,
 )
 
 
@@ -7247,8 +7251,8 @@ _CMSGDOTASTARTDAILYHEROCHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16529,
-  serialized_end=16562,
+  serialized_start=16552,
+  serialized_end=16585,
 )
 
 
@@ -7271,8 +7275,8 @@ _CMSGGCNOTIFICATIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16564,
-  serialized_end=16592,
+  serialized_start=16587,
+  serialized_end=16615,
 )
 
 
@@ -7351,8 +7355,8 @@ _CMSGGCNOTIFICATIONSRESPONSE_NOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16766,
-  serialized_end=16921,
+  serialized_start=16789,
+  serialized_end=16944,
 )
 
 _CMSGGCNOTIFICATIONSRESPONSE = _descriptor.Descriptor(
@@ -7389,8 +7393,8 @@ _CMSGGCNOTIFICATIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16595,
-  serialized_end=16968,
+  serialized_start=16618,
+  serialized_end=16991,
 )
 
 
@@ -7413,8 +7417,8 @@ _CMSGGCNOTIFICATIONSMARKREADREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16970,
-  serialized_end=17006,
+  serialized_start=16993,
+  serialized_end=17029,
 )
 
 
@@ -7444,8 +7448,8 @@ _CMSGCLIENTTOGCMARKNOTIFICATIONLISTREAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17008,
-  serialized_end=17074,
+  serialized_start=17031,
+  serialized_end=17097,
 )
 
 
@@ -7482,8 +7486,8 @@ _CMSGGCLEAGUEADMINSTATE_PRIVATELEAGUEKEYS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17182,
-  serialized_end=17239,
+  serialized_start=17205,
+  serialized_end=17262,
 )
 
 _CMSGGCLEAGUEADMINSTATE = _descriptor.Descriptor(
@@ -7519,8 +7523,8 @@ _CMSGGCLEAGUEADMINSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17077,
-  serialized_end=17239,
+  serialized_start=17100,
+  serialized_end=17262,
 )
 
 
@@ -7557,8 +7561,8 @@ _CMSGGCPLAYERINFOREQUEST_PLAYERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17333,
-  serialized_end=17384,
+  serialized_start=17356,
+  serialized_end=17407,
 )
 
 _CMSGGCPLAYERINFOREQUEST = _descriptor.Descriptor(
@@ -7587,8 +7591,8 @@ _CMSGGCPLAYERINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17242,
-  serialized_end=17384,
+  serialized_start=17265,
+  serialized_end=17407,
 )
 
 
@@ -7646,8 +7650,8 @@ _CMSGGCPLAYERINFOSUBMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17386,
-  serialized_end=17502,
+  serialized_start=17409,
+  serialized_end=17525,
 )
 
 
@@ -7678,8 +7682,8 @@ _CMSGGCPLAYERINFOSUBMITRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17505,
-  serialized_end=17678,
+  serialized_start=17528,
+  serialized_end=17701,
 )
 
 
@@ -7716,8 +7720,8 @@ _CMSGCLIENTPROVIDESURVEYRESULT_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17799,
-  serialized_end=17852,
+  serialized_start=17822,
+  serialized_end=17875,
 )
 
 _CMSGCLIENTPROVIDESURVEYRESULT = _descriptor.Descriptor(
@@ -7753,8 +7757,8 @@ _CMSGCLIENTPROVIDESURVEYRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17681,
-  serialized_end=17852,
+  serialized_start=17704,
+  serialized_end=17875,
 )
 
 
@@ -7791,8 +7795,8 @@ _CMSGDOTAEMOTICONACCESSSDO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17854,
-  serialized_end=17929,
+  serialized_start=17877,
+  serialized_end=17952,
 )
 
 
@@ -7815,8 +7819,8 @@ _CMSGCLIENTTOGCEMOTICONDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17931,
-  serialized_end=17966,
+  serialized_start=17954,
+  serialized_end=17989,
 )
 
 
@@ -7846,8 +7850,8 @@ _CMSGGCTOCLIENTEMOTICONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17968,
-  serialized_end=18054,
+  serialized_start=17991,
+  serialized_end=18077,
 )
 
 
@@ -7884,8 +7888,8 @@ _CMSGCLIENTTOGCTRACKDIALOGRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18056,
-  serialized_end=18123,
+  serialized_start=18079,
+  serialized_end=18146,
 )
 
 
@@ -7922,8 +7926,8 @@ _CMSGGCTOCLIENTTOURNAMENTITEMDROP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18125,
-  serialized_end=18197,
+  serialized_start=18148,
+  serialized_end=18220,
 )
 
 
@@ -7953,8 +7957,8 @@ _CMSGCLIENTTOGCSETADDITIONALEQUIPS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18199,
-  serialized_end=18278,
+  serialized_start=18222,
+  serialized_end=18301,
 )
 
 
@@ -7977,8 +7981,8 @@ _CMSGCLIENTTOGCSETADDITIONALEQUIPSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18280,
-  serialized_end=18323,
+  serialized_start=18303,
+  serialized_end=18346,
 )
 
 
@@ -8001,8 +8005,8 @@ _CMSGCLIENTTOGCGETADDITIONALEQUIPS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18325,
-  serialized_end=18360,
+  serialized_start=18348,
+  serialized_end=18383,
 )
 
 
@@ -8032,8 +8036,8 @@ _CMSGCLIENTTOGCGETADDITIONALEQUIPSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18362,
-  serialized_end=18449,
+  serialized_start=18385,
+  serialized_end=18472,
 )
 
 
@@ -8056,8 +8060,8 @@ _CMSGCLIENTTOGCGETALLHEROORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18451,
-  serialized_end=18482,
+  serialized_start=18474,
+  serialized_end=18505,
 )
 
 
@@ -8087,8 +8091,8 @@ _CMSGCLIENTTOGCGETALLHEROORDERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18484,
-  serialized_end=18541,
+  serialized_start=18507,
+  serialized_end=18564,
 )
 
 
@@ -8118,8 +8122,8 @@ _CMSGCLIENTTOGCGETALLHEROPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18543,
-  serialized_end=18597,
+  serialized_start=18566,
+  serialized_end=18620,
 )
 
 
@@ -8282,8 +8286,8 @@ _CMSGCLIENTTOGCGETALLHEROPROGRESSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18600,
-  serialized_end=19137,
+  serialized_start=18623,
+  serialized_end=19160,
 )
 
 
@@ -8313,8 +8317,8 @@ _CMSGCLIENTTOGCGETTROPHYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19139,
-  serialized_end=19188,
+  serialized_start=19162,
+  serialized_end=19211,
 )
 
 
@@ -8358,8 +8362,8 @@ _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE_TROPHY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19340,
-  serialized_end=19411,
+  serialized_start=19363,
+  serialized_end=19434,
 )
 
 _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE = _descriptor.Descriptor(
@@ -8402,8 +8406,8 @@ _CMSGCLIENTTOGCGETTROPHYLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19191,
-  serialized_end=19411,
+  serialized_start=19214,
+  serialized_end=19434,
 )
 
 
@@ -8454,8 +8458,8 @@ _CMSGGCTOCLIENTTROPHYAWARDED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19413,
-  serialized_end=19531,
+  serialized_start=19436,
+  serialized_end=19554,
 )
 
 
@@ -8485,8 +8489,8 @@ _CMSGCLIENTTOGCGETPROFILECARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19533,
-  serialized_end=19583,
+  serialized_start=19556,
+  serialized_end=19606,
 )
 
 
@@ -8530,8 +8534,8 @@ _CMSGCLIENTTOGCSETPROFILECARDSLOTS_CARDSLOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19688,
-  serialized_end=19812,
+  serialized_start=19711,
+  serialized_end=19835,
 )
 
 _CMSGCLIENTTOGCSETPROFILECARDSLOTS = _descriptor.Descriptor(
@@ -8560,8 +8564,8 @@ _CMSGCLIENTTOGCSETPROFILECARDSLOTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19586,
-  serialized_end=19812,
+  serialized_start=19609,
+  serialized_end=19835,
 )
 
 
@@ -8584,8 +8588,8 @@ _CMSGCLIENTTOGCGETPROFILECARDSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19814,
-  serialized_end=19849,
+  serialized_start=19837,
+  serialized_end=19872,
 )
 
 
@@ -8671,8 +8675,8 @@ _CMSGCLIENTTOGCCREATEHEROSTATUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19852,
-  serialized_end=20064,
+  serialized_start=19875,
+  serialized_end=20087,
 )
 
 
@@ -8702,8 +8706,8 @@ _CMSGGCTOCLIENTHEROSTATUECREATERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20066,
-  serialized_end=20128,
+  serialized_start=20089,
+  serialized_end=20151,
 )
 
 
@@ -8761,8 +8765,8 @@ _CMSGCLIENTTOGCRECORDCOMPENDIUMSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20131,
-  serialized_end=20279,
+  serialized_start=20154,
+  serialized_end=20302,
 )
 
 
@@ -8792,8 +8796,8 @@ _CMSGGCTOCLIENTEVENTSTATUSCHANGED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20281,
-  serialized_end=20366,
+  serialized_start=20304,
+  serialized_end=20389,
 )
 
 
@@ -8823,8 +8827,8 @@ _CMSGCLIENTTOGCPLAYERSTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20368,
-  serialized_end=20422,
+  serialized_start=20391,
+  serialized_end=20445,
 )
 
 
@@ -8980,8 +8984,8 @@ _CMSGGCTOCLIENTPLAYERSTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20425,
-  serialized_end=20888,
+  serialized_start=20448,
+  serialized_end=20911,
 )
 
 
@@ -9011,8 +9015,8 @@ _CMSGCLIENTTOGCCUSTOMGAMEPLAYERCOUNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20890,
-  serialized_end=20958,
+  serialized_start=20913,
+  serialized_end=20981,
 )
 
 
@@ -9056,8 +9060,8 @@ _CMSGGCTOCLIENTCUSTOMGAMEPLAYERCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20960,
-  serialized_end=21076,
+  serialized_start=20983,
+  serialized_end=21099,
 )
 
 
@@ -9080,8 +9084,8 @@ _CMSGCLIENTTOGCCUSTOMGAMESFRIENDSPLAYEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21078,
-  serialized_end=21125,
+  serialized_start=21101,
+  serialized_end=21148,
 )
 
 
@@ -9118,8 +9122,8 @@ _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE_CUSTOMGAME = _descriptor.Descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21278,
-  serialized_end=21335,
+  serialized_start=21301,
+  serialized_end=21358,
 )
 
 _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE = _descriptor.Descriptor(
@@ -9155,8 +9159,8 @@ _CMSGGCTOCLIENTCUSTOMGAMESFRIENDSPLAYEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21128,
-  serialized_end=21335,
+  serialized_start=21151,
+  serialized_end=21358,
 )
 
 
@@ -9193,8 +9197,8 @@ _CMSGCLIENTTOGCSOCIALFEEDPOSTCOMMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21337,
-  serialized_end=21416,
+  serialized_start=21360,
+  serialized_end=21439,
 )
 
 
@@ -9224,8 +9228,8 @@ _CMSGGCTOCLIENTSOCIALFEEDPOSTCOMMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21418,
-  serialized_end=21480,
+  serialized_start=21441,
+  serialized_end=21503,
 )
 
 
@@ -9269,8 +9273,8 @@ _CMSGCLIENTTOGCSOCIALFEEDPOSTMESSAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21482,
-  serialized_end=21586,
+  serialized_start=21505,
+  serialized_end=21609,
 )
 
 
@@ -9300,8 +9304,8 @@ _CMSGGCTOCLIENTSOCIALFEEDPOSTMESSAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21588,
-  serialized_end=21650,
+  serialized_start=21611,
+  serialized_end=21673,
 )
 
 
@@ -9331,8 +9335,8 @@ _CMSGCLIENTTOGCFRIENDSPLAYEDCUSTOMGAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21652,
-  serialized_end=21722,
+  serialized_start=21675,
+  serialized_end=21745,
 )
 
 
@@ -9369,8 +9373,8 @@ _CMSGGCTOCLIENTFRIENDSPLAYEDCUSTOMGAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21724,
-  serialized_end=21816,
+  serialized_start=21747,
+  serialized_end=21839,
 )
 
 
@@ -9393,8 +9397,8 @@ _CMSGCLIENTTOGCFEATUREDHEROESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21818,
-  serialized_end=21855,
+  serialized_start=21841,
+  serialized_end=21878,
 )
 
 
@@ -9452,8 +9456,8 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_DATAFIELD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21972,
-  serialized_end=22150,
+  serialized_start=21995,
+  serialized_end=22173,
 )
 
 _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_FEATUREDHERO = _descriptor.Descriptor(
@@ -9482,8 +9486,8 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_FEATUREDHERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22152,
-  serialized_end=22241,
+  serialized_start=22175,
+  serialized_end=22264,
 )
 
 _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_CATEGORY = _descriptor.Descriptor(
@@ -9526,8 +9530,8 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE_CATEGORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22244,
-  serialized_end=22412,
+  serialized_start=22267,
+  serialized_end=22435,
 )
 
 _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE = _descriptor.Descriptor(
@@ -9556,8 +9560,8 @@ _CMSGGCTOCLIENTFEATUREDHEROESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21858,
-  serialized_end=22412,
+  serialized_start=21881,
+  serialized_end=22435,
 )
 
 
@@ -9594,8 +9598,8 @@ _CMSGCLIENTTOGCSOCIALMATCHPOSTCOMMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22414,
-  serialized_end=22494,
+  serialized_start=22437,
+  serialized_end=22517,
 )
 
 
@@ -9625,8 +9629,8 @@ _CMSGGCTOCLIENTSOCIALMATCHPOSTCOMMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22496,
-  serialized_end=22559,
+  serialized_start=22519,
+  serialized_end=22582,
 )
 
 
@@ -9663,8 +9667,8 @@ _CMSGCLIENTTOGCSOCIALMATCHDETAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22561,
-  serialized_end=22650,
+  serialized_start=22584,
+  serialized_end=22673,
 )
 
 
@@ -9715,8 +9719,8 @@ _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE_COMMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22788,
-  serialized_end=22875,
+  serialized_start=22811,
+  serialized_end=22898,
 )
 
 _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE = _descriptor.Descriptor(
@@ -9752,8 +9756,8 @@ _CMSGGCTOCLIENTSOCIALMATCHDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22653,
-  serialized_end=22875,
+  serialized_start=22676,
+  serialized_end=22898,
 )
 
 
@@ -9790,8 +9794,8 @@ _CMSGDOTAPARTYRICHPRESENCE_MEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23204,
-  serialized_end=23245,
+  serialized_start=23227,
+  serialized_end=23268,
 )
 
 _CMSGDOTAPARTYRICHPRESENCE_WEEKENDTOURNEY = _descriptor.Descriptor(
@@ -9862,8 +9866,8 @@ _CMSGDOTAPARTYRICHPRESENCE_WEEKENDTOURNEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23248,
-  serialized_end=23481,
+  serialized_start=23271,
+  serialized_end=23504,
 )
 
 _CMSGDOTAPARTYRICHPRESENCE = _descriptor.Descriptor(
@@ -9948,8 +9952,8 @@ _CMSGDOTAPARTYRICHPRESENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22878,
-  serialized_end=23481,
+  serialized_start=22901,
+  serialized_end=23504,
 )
 
 
@@ -10035,8 +10039,8 @@ _CMSGDOTALOBBYRICHPRESENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23484,
-  serialized_end=23764,
+  serialized_start=23507,
+  serialized_end=23787,
 )
 
 
@@ -10087,8 +10091,8 @@ _CMSGDOTACUSTOMGAMELISTENSERVERSTARTEDLOADING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23767,
-  serialized_end=23898,
+  serialized_start=23790,
+  serialized_end=23921,
 )
 
 
@@ -10153,8 +10157,8 @@ _CMSGDOTACUSTOMGAMECLIENTFINISHEDLOADING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23901,
-  serialized_end=24070,
+  serialized_start=23924,
+  serialized_end=24093,
 )
 
 
@@ -10184,8 +10188,8 @@ _CMSGCLIENTTOGCGETLEAGUESERIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24072,
-  serialized_end=24122,
+  serialized_start=24095,
+  serialized_end=24145,
 )
 
 
@@ -10243,8 +10247,8 @@ _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24470,
-  serialized_end=24569,
+  serialized_start=24493,
+  serialized_end=24592,
 )
 
 _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES = _descriptor.Descriptor(
@@ -10322,8 +10326,8 @@ _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE_SERIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24235,
-  serialized_end=24569,
+  serialized_start=24258,
+  serialized_end=24592,
 )
 
 _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE = _descriptor.Descriptor(
@@ -10352,8 +10356,8 @@ _CMSGCLIENTTOGCGETLEAGUESERIESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24125,
-  serialized_end=24569,
+  serialized_start=24148,
+  serialized_end=24592,
 )
 
 
@@ -10390,8 +10394,8 @@ _CMSGCLIENTTOGCAPPLYGEMCOMBINER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24571,
-  serialized_end=24641,
+  serialized_start=24594,
+  serialized_end=24664,
 )
 
 
@@ -10414,8 +10418,8 @@ _CMSGCLIENTTOGCH264UNSUPPORTED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24643,
-  serialized_end=24674,
+  serialized_start=24666,
+  serialized_end=24697,
 )
 
 
@@ -10438,8 +10442,8 @@ _CMSGCLIENTTOGCREQUESTH264SUPPORT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24676,
-  serialized_end=24710,
+  serialized_start=24699,
+  serialized_end=24733,
 )
 
 
@@ -10469,8 +10473,8 @@ _CMSGCLIENTTOGCGETQUESTPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24712,
-  serialized_end=24763,
+  serialized_start=24735,
+  serialized_end=24786,
 )
 
 
@@ -10535,8 +10539,8 @@ _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_CHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24894,
-  serialized_end=25030,
+  serialized_start=24917,
+  serialized_end=25053,
 )
 
 _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_QUEST = _descriptor.Descriptor(
@@ -10572,8 +10576,8 @@ _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE_QUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25032,
-  serialized_end=25143,
+  serialized_start=25055,
+  serialized_end=25166,
 )
 
 _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE = _descriptor.Descriptor(
@@ -10609,8 +10613,8 @@ _CMSGCLIENTTOGCGETQUESTPROGRESSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24766,
-  serialized_end=25143,
+  serialized_start=24789,
+  serialized_end=25166,
 )
 
 
@@ -10640,8 +10644,8 @@ _CMSGGCTOCLIENTMATCHSIGNEDOUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25145,
-  serialized_end=25193,
+  serialized_start=25168,
+  serialized_end=25216,
 )
 
 
@@ -10671,8 +10675,8 @@ _CMSGGCGETHEROSTATSHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25195,
-  serialized_end=25239,
+  serialized_start=25218,
+  serialized_end=25262,
 )
 
 
@@ -10709,8 +10713,8 @@ _CMSGGCGETHEROSTATSHISTORYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25241,
-  serialized_end=25345,
+  serialized_start=25264,
+  serialized_end=25368,
 )
 
 
@@ -10733,8 +10737,8 @@ _CMSGPLAYERCONDUCTSCORECARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25347,
-  serialized_end=25382,
+  serialized_start=25370,
+  serialized_end=25405,
 )
 
 
@@ -10855,8 +10859,8 @@ _CMSGPLAYERCONDUCTSCORECARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25385,
-  serialized_end=25725,
+  serialized_start=25408,
+  serialized_end=25748,
 )
 
 
@@ -10886,8 +10890,8 @@ _CMSGCLIENTTOGCWAGERINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25727,
-  serialized_end=25776,
+  serialized_start=25750,
+  serialized_end=25799,
 )
 
 
@@ -10973,8 +10977,8 @@ _CMSGGCTOCLIENTWAGERINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25779,
-  serialized_end=26047,
+  serialized_start=25802,
+  serialized_end=26070,
 )
 
 
@@ -11011,8 +11015,8 @@ _CMSGGCTOCLIENTWAGERINGUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26049,
-  serialized_end=26158,
+  serialized_start=26072,
+  serialized_end=26181,
 )
 
 
@@ -11049,8 +11053,8 @@ _CMSGGCTOCLIENTARCANAVOTESUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26161,
-  serialized_end=26291,
+  serialized_start=26184,
+  serialized_end=26314,
 )
 
 
@@ -11080,8 +11084,8 @@ _CMSGCLIENTTOGCGETEVENTGOALS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26293,
-  serialized_end=26355,
+  serialized_start=26316,
+  serialized_end=26378,
 )
 
 
@@ -11125,8 +11129,8 @@ _CMSGEVENTGOALS_EVENTGOAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26429,
-  serialized_end=26519,
+  serialized_start=26452,
+  serialized_end=26542,
 )
 
 _CMSGEVENTGOALS = _descriptor.Descriptor(
@@ -11155,8 +11159,8 @@ _CMSGEVENTGOALS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26358,
-  serialized_end=26519,
+  serialized_start=26381,
+  serialized_end=26542,
 )
 
 
@@ -11186,8 +11190,8 @@ _CMSGGCTOGCLEAGUEPREDICTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26521,
-  serialized_end=26569,
+  serialized_start=26544,
+  serialized_end=26592,
 )
 
 
@@ -11238,8 +11242,8 @@ _CMSGPREDICTIONRANKINGS_PREDICTIONLINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26660,
-  serialized_end=26759,
+  serialized_start=26683,
+  serialized_end=26782,
 )
 
 _CMSGPREDICTIONRANKINGS_PREDICTION = _descriptor.Descriptor(
@@ -11275,8 +11279,8 @@ _CMSGPREDICTIONRANKINGS_PREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26761,
-  serialized_end=26866,
+  serialized_start=26784,
+  serialized_end=26889,
 )
 
 _CMSGPREDICTIONRANKINGS = _descriptor.Descriptor(
@@ -11305,8 +11309,8 @@ _CMSGPREDICTIONRANKINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26572,
-  serialized_end=26866,
+  serialized_start=26595,
+  serialized_end=26889,
 )
 
 
@@ -11343,8 +11347,8 @@ _CMSGPREDICTIONRESULTS_RESULTBREAKDOWN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26947,
-  serialized_end=27012,
+  serialized_start=26970,
+  serialized_end=27035,
 )
 
 _CMSGPREDICTIONRESULTS_RESULT = _descriptor.Descriptor(
@@ -11380,8 +11384,8 @@ _CMSGPREDICTIONRESULTS_RESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27014,
-  serialized_end=27115,
+  serialized_start=27037,
+  serialized_end=27138,
 )
 
 _CMSGPREDICTIONRESULTS = _descriptor.Descriptor(
@@ -11410,8 +11414,8 @@ _CMSGPREDICTIONRESULTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26869,
-  serialized_end=27115,
+  serialized_start=26892,
+  serialized_end=27138,
 )
 
 
@@ -11441,8 +11445,8 @@ _CMSGCLIENTTOGCSUSPICIOUSACTIVITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27117,
-  serialized_end=27169,
+  serialized_start=27140,
+  serialized_end=27192,
 )
 
 
@@ -11472,8 +11476,8 @@ _CMSGCLIENTTOGCHASPLAYERVOTEDFORMVP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27171,
-  serialized_end=27225,
+  serialized_start=27194,
+  serialized_end=27248,
 )
 
 
@@ -11503,8 +11507,8 @@ _CMSGCLIENTTOGCHASPLAYERVOTEDFORMVPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27227,
-  serialized_end=27287,
+  serialized_start=27250,
+  serialized_end=27310,
 )
 
 
@@ -11541,8 +11545,8 @@ _CMSGCLIENTTOGCVOTEFORMVP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27289,
-  serialized_end=27353,
+  serialized_start=27312,
+  serialized_end=27376,
 )
 
 
@@ -11572,8 +11576,8 @@ _CMSGCLIENTTOGCVOTEFORMVPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27355,
-  serialized_end=27405,
+  serialized_start=27378,
+  serialized_end=27428,
 )
 
 
@@ -11610,8 +11614,8 @@ _CMSGMVPVOTESFORMATCH_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27483,
-  serialized_end=27531,
+  serialized_start=27506,
+  serialized_end=27554,
 )
 
 _CMSGMVPVOTESFORMATCH = _descriptor.Descriptor(
@@ -11640,8 +11644,8 @@ _CMSGMVPVOTESFORMATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27407,
-  serialized_end=27531,
+  serialized_start=27430,
+  serialized_end=27554,
 )
 
 
@@ -11678,8 +11682,8 @@ _CMSGLEAGUEPRIZEPOOL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27533,
-  serialized_end=27604,
+  serialized_start=27556,
+  serialized_end=27627,
 )
 
 
@@ -11702,8 +11706,8 @@ _CMSGCLIENTTOGCTEAMMATESTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27606,
-  serialized_end=27642,
+  serialized_start=27629,
+  serialized_end=27665,
 )
 
 
@@ -11768,8 +11772,8 @@ _CMSGCLIENTTOGCTEAMMATESTATSRESPONSE_TEAMMATESTAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27782,
-  serialized_end=27937,
+  serialized_start=27805,
+  serialized_end=27960,
 )
 
 _CMSGCLIENTTOGCTEAMMATESTATSRESPONSE = _descriptor.Descriptor(
@@ -11805,8 +11809,8 @@ _CMSGCLIENTTOGCTEAMMATESTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27645,
-  serialized_end=27937,
+  serialized_start=27668,
+  serialized_end=27960,
 )
 
 
@@ -11850,8 +11854,8 @@ _CMSGCLIENTTOGCVOTEFORARCANA_MATCHVOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28033,
-  serialized_end=28099,
+  serialized_start=28056,
+  serialized_end=28122,
 )
 
 _CMSGCLIENTTOGCVOTEFORARCANA = _descriptor.Descriptor(
@@ -11880,8 +11884,8 @@ _CMSGCLIENTTOGCVOTEFORARCANA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27940,
-  serialized_end=28099,
+  serialized_start=27963,
+  serialized_end=28122,
 )
 
 
@@ -11912,8 +11916,8 @@ _CMSGCLIENTTOGCVOTEFORARCANARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28102,
-  serialized_end=28296,
+  serialized_start=28125,
+  serialized_end=28319,
 )
 
 
@@ -12013,8 +12017,8 @@ _CMSGARCANAVOTES_MATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28528,
-  serialized_end=28788,
+  serialized_start=28551,
+  serialized_end=28811,
 )
 
 _CMSGARCANAVOTES = _descriptor.Descriptor(
@@ -12086,8 +12090,8 @@ _CMSGARCANAVOTES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28299,
-  serialized_end=28849,
+  serialized_start=28322,
+  serialized_end=28872,
 )
 
 
@@ -12110,8 +12114,8 @@ _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAINING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28851,
-  serialized_end=28894,
+  serialized_start=28874,
+  serialized_end=28917,
 )
 
 
@@ -12155,8 +12159,8 @@ _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE_MATCHVOTE = _descriptor.Descr
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28033,
-  serialized_end=28099,
+  serialized_start=28056,
+  serialized_end=28122,
 )
 
 _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE = _descriptor.Descriptor(
@@ -12206,8 +12210,8 @@ _CMSGCLIENTTOGCREQUESTARCANAVOTESREMAININGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28897,
-  serialized_end=29183,
+  serialized_start=28920,
+  serialized_end=29206,
 )
 
 
@@ -12237,8 +12241,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29185,
-  serialized_end=29239,
+  serialized_start=29208,
+  serialized_end=29262,
 )
 
 
@@ -12282,8 +12286,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_QUESTCHALLENGEEVENT = _descriptor.De
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29416,
-  serialized_end=29491,
+  serialized_start=29439,
+  serialized_end=29514,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WAGERWONEVENT = _descriptor.Descriptor(
@@ -12312,8 +12316,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WAGERWONEVENT = _descriptor.Descript
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29493,
-  serialized_end=29526,
+  serialized_start=29516,
+  serialized_end=29549,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPGIVENEVENT = _descriptor.Descriptor(
@@ -12349,8 +12353,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPGIVENEVENT = _descriptor.Descript
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29528,
-  serialized_end=29597,
+  serialized_start=29551,
+  serialized_end=29620,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPRECEIVEDEVENT = _descriptor.Descriptor(
@@ -12386,8 +12390,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_TIPRECEIVEDEVENT = _descriptor.Descr
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29599,
-  serialized_end=29663,
+  serialized_start=29622,
+  serialized_end=29686,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_RECYCLEDITEMEVENT = _descriptor.Descriptor(
@@ -12416,8 +12420,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_RECYCLEDITEMEVENT = _descriptor.Desc
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29665,
-  serialized_end=29715,
+  serialized_start=29688,
+  serialized_end=29738,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_ACTIONREWARDEVENT = _descriptor.Descriptor(
@@ -12453,8 +12457,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_ACTIONREWARDEVENT = _descriptor.Desc
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29717,
-  serialized_end=29777,
+  serialized_start=29740,
+  serialized_end=29800,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_MYSTERYITEMRECEIVEDEVENT = _descriptor.Descriptor(
@@ -12483,8 +12487,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_MYSTERYITEMRECEIVEDEVENT = _descript
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29779,
-  serialized_end=29834,
+  serialized_start=29802,
+  serialized_end=29857,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_CORRECTPREDICTIONEVENT = _descriptor.Descriptor(
@@ -12513,8 +12517,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_CORRECTPREDICTIONEVENT = _descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29836,
-  serialized_end=29883,
+  serialized_start=29859,
+  serialized_end=29906,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_INGAMEPREDICTIONCORRECTEVENT = _descriptor.Descriptor(
@@ -12543,8 +12547,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_INGAMEPREDICTIONCORRECTEVENT = _desc
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29885,
-  serialized_end=29933,
+  serialized_start=29908,
+  serialized_end=29956,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WEEKENDTOURNEYPAYOUTEVENT = _descriptor.Descriptor(
@@ -12573,8 +12577,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WEEKENDTOURNEYPAYOUTEVENT = _descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29935,
-  serialized_end=29980,
+  serialized_start=29958,
+  serialized_end=30003,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_FANTASYREWARDEVENT = _descriptor.Descriptor(
@@ -12603,8 +12607,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_FANTASYREWARDEVENT = _descriptor.Des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29982,
-  serialized_end=30022,
+  serialized_start=30005,
+  serialized_end=30045,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_BRACKETREWARDEVENT = _descriptor.Descriptor(
@@ -12633,8 +12637,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_BRACKETREWARDEVENT = _descriptor.Des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30024,
-  serialized_end=30069,
+  serialized_start=30047,
+  serialized_end=30092,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WEEKLYGAMEEVENT = _descriptor.Descriptor(
@@ -12663,8 +12667,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_WEEKLYGAMEEVENT = _descriptor.Descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30071,
-  serialized_end=30108,
+  serialized_start=30094,
+  serialized_end=30131,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EXPLOITCORRECTIONEVENT = _descriptor.Descriptor(
@@ -12693,8 +12697,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EXPLOITCORRECTIONEVENT = _descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30110,
-  serialized_end=30160,
+  serialized_start=30133,
+  serialized_end=30183,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION = _descriptor.Descriptor(
@@ -12835,8 +12839,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE_EVENTPOINTTRANSACTION = _descriptor.
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30163,
-  serialized_end=31579,
+  serialized_start=30186,
+  serialized_end=31602,
 )
 
 _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE = _descriptor.Descriptor(
@@ -12879,8 +12883,8 @@ _CMSGCLIENTTOGCREQUESTEVENTPOINTLOGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29242,
-  serialized_end=31579,
+  serialized_start=29265,
+  serialized_end=31602,
 )
 
 
@@ -12917,8 +12921,8 @@ _CMSGCLIENTTOGCPUBLISHUSERSTAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31581,
-  serialized_end=31662,
+  serialized_start=31604,
+  serialized_end=31685,
 )
 
 
@@ -12948,8 +12952,8 @@ _CMSGCLIENTTOGCADDTI6TREEPROGRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31664,
-  serialized_end=31713,
+  serialized_start=31687,
+  serialized_end=31736,
 )
 
 
@@ -12979,8 +12983,8 @@ _CMSGCLIENTTOGCREQUESTLINAPLAYSREMAINING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31715,
-  serialized_end=31803,
+  serialized_start=31738,
+  serialized_end=31826,
 )
 
 
@@ -13017,8 +13021,8 @@ _CMSGCLIENTTOGCREQUESTLINAPLAYSREMAININGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31805,
-  serialized_end=31900,
+  serialized_start=31828,
+  serialized_end=31923,
 )
 
 
@@ -13055,8 +13059,8 @@ _CMSGCLIENTTOGCREQUESTLINAGAMERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31902,
-  serialized_end=32007,
+  serialized_start=31925,
+  serialized_end=32030,
 )
 
 
@@ -13086,8 +13090,8 @@ _CMSGCLIENTTOGCREQUESTLINAGAMERESULTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32009,
-  serialized_end=32070,
+  serialized_start=32032,
+  serialized_end=32093,
 )
 
 
@@ -13131,8 +13135,8 @@ _CMSGCLIENTTOGCREQUESTSLARKGAMERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32072,
-  serialized_end=32192,
+  serialized_start=32095,
+  serialized_end=32215,
 )
 
 
@@ -13169,8 +13173,8 @@ _CMSGCLIENTTOGCREQUESTSLARKGAMERESULTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32194,
-  serialized_end=32278,
+  serialized_start=32217,
+  serialized_end=32301,
 )
 
 
@@ -13242,8 +13246,8 @@ _CMSGGCTOCLIENTQUESTPROGRESSUPDATED_CHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32420,
-  serialized_end=32580,
+  serialized_start=32443,
+  serialized_end=32603,
 )
 
 _CMSGGCTOCLIENTQUESTPROGRESSUPDATED = _descriptor.Descriptor(
@@ -13279,8 +13283,8 @@ _CMSGGCTOCLIENTQUESTPROGRESSUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32281,
-  serialized_end=32580,
+  serialized_start=32304,
+  serialized_end=32603,
 )
 
 
@@ -13310,8 +13314,8 @@ _CMSGGCTOCLIENTUPDATECLIENTCLIPPY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32582,
-  serialized_end=32634,
+  serialized_start=32605,
+  serialized_end=32657,
 )
 
 
@@ -13348,8 +13352,8 @@ _CMSGDOTAREDEEMITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32636,
-  serialized_end=32699,
+  serialized_start=32659,
+  serialized_end=32722,
 )
 
 
@@ -13380,8 +13384,8 @@ _CMSGDOTAREDEEMITEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32702,
-  serialized_end=32853,
+  serialized_start=32725,
+  serialized_end=32876,
 )
 
 
@@ -13411,8 +13415,8 @@ _CMSGPERFECTWORLDUSERLOOKUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32855,
-  serialized_end=32909,
+  serialized_start=32878,
+  serialized_end=32932,
 )
 
 
@@ -13450,8 +13454,8 @@ _CMSGPERFECTWORLDUSERLOOKUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32912,
-  serialized_end=33245,
+  serialized_start=32935,
+  serialized_end=33268,
 )
 
 
@@ -13495,8 +13499,8 @@ _CMSGNEXONPARTNERUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33247,
-  serialized_end=33334,
+  serialized_start=33270,
+  serialized_end=33357,
 )
 
 
@@ -13526,8 +13530,8 @@ _CMSGMAKEOFFERING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33336,
-  serialized_end=33371,
+  serialized_start=33359,
+  serialized_end=33394,
 )
 
 
@@ -13550,8 +13554,8 @@ _CMSGREQUESTOFFERINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33373,
-  serialized_end=33395,
+  serialized_start=33396,
+  serialized_end=33418,
 )
 
 
@@ -13588,8 +13592,8 @@ _CMSGREQUESTOFFERINGSRESPONSE_NEWYEARSOFFERING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33521,
-  serialized_end=33575,
+  serialized_start=33544,
+  serialized_end=33598,
 )
 
 _CMSGREQUESTOFFERINGSRESPONSE = _descriptor.Descriptor(
@@ -13625,8 +13629,8 @@ _CMSGREQUESTOFFERINGSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33398,
-  serialized_end=33575,
+  serialized_start=33421,
+  serialized_end=33598,
 )
 
 
@@ -13670,8 +13674,8 @@ _CMSGDOTAPCBANGTIMEDREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33577,
-  serialized_end=33658,
+  serialized_start=33600,
+  serialized_end=33681,
 )
 
 
@@ -13708,8 +13712,8 @@ _CMSGDOTACOMPENDIUMINGAMEPREDICTIONRESULTS_PREDICTIONRESULT = _descriptor.Descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33836,
-  serialized_end=33903,
+  serialized_start=33859,
+  serialized_end=33926,
 )
 
 _CMSGDOTACOMPENDIUMINGAMEPREDICTIONRESULTS = _descriptor.Descriptor(
@@ -13752,8 +13756,8 @@ _CMSGDOTACOMPENDIUMINGAMEPREDICTIONRESULTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33661,
-  serialized_end=33903,
+  serialized_start=33684,
+  serialized_end=33926,
 )
 
 
@@ -13790,8 +13794,8 @@ _CMSGCLIENTTOGCSELECTCOMPENDIUMINGAMEPREDICTION_PREDICTION = _descriptor.Descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34079,
-  serialized_end=34140,
+  serialized_start=34102,
+  serialized_end=34163,
 )
 
 _CMSGCLIENTTOGCSELECTCOMPENDIUMINGAMEPREDICTION = _descriptor.Descriptor(
@@ -13834,8 +13838,8 @@ _CMSGCLIENTTOGCSELECTCOMPENDIUMINGAMEPREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33906,
-  serialized_end=34140,
+  serialized_start=33929,
+  serialized_end=34163,
 )
 
 
@@ -13866,8 +13870,8 @@ _CMSGCLIENTTOGCSELECTCOMPENDIUMINGAMEPREDICTIONRESPONSE = _descriptor.Descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34143,
-  serialized_end=34382,
+  serialized_start=34166,
+  serialized_end=34405,
 )
 
 
@@ -13897,8 +13901,8 @@ _CMSGCLIENTTOGCOPENPLAYERCARDPACK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34384,
-  serialized_end=34452,
+  serialized_start=34407,
+  serialized_end=34475,
 )
 
 
@@ -13936,8 +13940,8 @@ _CMSGCLIENTTOGCOPENPLAYERCARDPACKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34455,
-  serialized_end=34742,
+  serialized_start=34478,
+  serialized_end=34765,
 )
 
 
@@ -13974,8 +13978,8 @@ _CMSGCLIENTTOGCRECYCLEPLAYERCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34744,
-  serialized_end=34825,
+  serialized_start=34767,
+  serialized_end=34848,
 )
 
 
@@ -14013,8 +14017,8 @@ _CMSGCLIENTTOGCRECYCLEPLAYERCARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34828,
-  serialized_end=35141,
+  serialized_start=34851,
+  serialized_end=35164,
 )
 
 
@@ -14058,8 +14062,8 @@ _CMSGCLIENTTOGCCREATEPLAYERCARDPACK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35143,
-  serialized_end=35246,
+  serialized_start=35166,
+  serialized_end=35269,
 )
 
 
@@ -14090,8 +14094,8 @@ _CMSGCLIENTTOGCCREATEPLAYERCARDPACKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35249,
-  serialized_end=35513,
+  serialized_start=35272,
+  serialized_end=35536,
 )
 
 
@@ -14149,8 +14153,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_QUESTLINES = _descriptor.Descr
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36301,
-  serialized_end=36395,
+  serialized_start=36324,
+  serialized_end=36418,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_WAGERING = _descriptor.Descriptor(
@@ -14207,8 +14211,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_WAGERING = _descriptor.Descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36397,
-  serialized_end=36512,
+  serialized_start=36420,
+  serialized_end=36535,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_ACHIEVEMENTS = _descriptor.Descriptor(
@@ -14251,8 +14255,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_ACHIEVEMENTS = _descriptor.Des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36514,
-  serialized_end=36578,
+  serialized_start=36537,
+  serialized_end=36601,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_BATTLECUP = _descriptor.Descriptor(
@@ -14288,8 +14292,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_BATTLECUP = _descriptor.Descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36580,
-  serialized_end=36620,
+  serialized_start=36603,
+  serialized_end=36643,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_PREDICTIONS = _descriptor.Descriptor(
@@ -14332,8 +14336,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_PREDICTIONS = _descriptor.Desc
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36622,
-  serialized_end=36683,
+  serialized_start=36645,
+  serialized_end=36706,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_BRACKET = _descriptor.Descriptor(
@@ -14369,8 +14373,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_BRACKET = _descriptor.Descript
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36685,
-  serialized_end=36727,
+  serialized_start=36708,
+  serialized_end=36750,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_PLAYERCARD = _descriptor.Descriptor(
@@ -14406,8 +14410,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_PLAYERCARD = _descriptor.Descr
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36729,
-  serialized_end=36778,
+  serialized_start=36752,
+  serialized_end=36801,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_FANTASYCHALLENGE = _descriptor.Descriptor(
@@ -14443,8 +14447,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016_FANTASYCHALLENGE = _descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36780,
-  serialized_end=36839,
+  serialized_start=36803,
+  serialized_end=36862,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016 = _descriptor.Descriptor(
@@ -14529,8 +14533,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_INTERNATIONAL2016 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35516,
-  serialized_end=36839,
+  serialized_start=35539,
+  serialized_end=36862,
 )
 
 
@@ -14588,8 +14592,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_QUESTLINES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36301,
-  serialized_end=36395,
+  serialized_start=36324,
+  serialized_end=36418,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_WAGERING = _descriptor.Descriptor(
@@ -14646,8 +14650,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_WAGERING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36397,
-  serialized_end=36512,
+  serialized_start=36420,
+  serialized_end=36535,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_ACHIEVEMENTS = _descriptor.Descriptor(
@@ -14690,8 +14694,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_ACHIEVEMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36514,
-  serialized_end=36578,
+  serialized_start=36537,
+  serialized_end=36601,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_BATTLECUP = _descriptor.Descriptor(
@@ -14727,8 +14731,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_BATTLECUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36580,
-  serialized_end=36620,
+  serialized_start=36603,
+  serialized_end=36643,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_PREDICTIONS = _descriptor.Descriptor(
@@ -14771,8 +14775,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_PREDICTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36622,
-  serialized_end=36683,
+  serialized_start=36645,
+  serialized_end=36706,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_BRACKET = _descriptor.Descriptor(
@@ -14808,8 +14812,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_BRACKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36685,
-  serialized_end=36727,
+  serialized_start=36708,
+  serialized_end=36750,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_PLAYERCARD = _descriptor.Descriptor(
@@ -14845,8 +14849,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_PLAYERCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36729,
-  serialized_end=36778,
+  serialized_start=36752,
+  serialized_end=36801,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_FANTASYCHALLENGE = _descriptor.Descriptor(
@@ -14882,8 +14886,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016_FANTASYCHALLENGE = _descriptor.Descript
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36780,
-  serialized_end=36839,
+  serialized_start=36803,
+  serialized_end=36862,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016 = _descriptor.Descriptor(
@@ -14968,8 +14972,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_FALL2016 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36842,
-  serialized_end=38084,
+  serialized_start=36865,
+  serialized_end=38107,
 )
 
 
@@ -15027,8 +15031,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_QUESTLINES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36301,
-  serialized_end=36395,
+  serialized_start=36324,
+  serialized_end=36418,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_WAGERING = _descriptor.Descriptor(
@@ -15085,8 +15089,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_WAGERING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36397,
-  serialized_end=36512,
+  serialized_start=36420,
+  serialized_end=36535,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_ACHIEVEMENTS = _descriptor.Descriptor(
@@ -15129,8 +15133,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_ACHIEVEMENTS = _descriptor.Descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36514,
-  serialized_end=36578,
+  serialized_start=36537,
+  serialized_end=36601,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_BATTLECUP = _descriptor.Descriptor(
@@ -15166,8 +15170,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_BATTLECUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36580,
-  serialized_end=36620,
+  serialized_start=36603,
+  serialized_end=36643,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_PREDICTIONS = _descriptor.Descriptor(
@@ -15210,8 +15214,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_PREDICTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36622,
-  serialized_end=36683,
+  serialized_start=36645,
+  serialized_end=36706,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_BRACKET = _descriptor.Descriptor(
@@ -15247,8 +15251,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_BRACKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36685,
-  serialized_end=36727,
+  serialized_start=36708,
+  serialized_end=36750,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_PLAYERCARD = _descriptor.Descriptor(
@@ -15284,8 +15288,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_PLAYERCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36729,
-  serialized_end=36778,
+  serialized_start=36752,
+  serialized_end=36801,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_FANTASYCHALLENGE = _descriptor.Descriptor(
@@ -15321,8 +15325,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017_FANTASYCHALLENGE = _descriptor.Descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36780,
-  serialized_end=36839,
+  serialized_start=36803,
+  serialized_end=36862,
 )
 
 _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017 = _descriptor.Descriptor(
@@ -15407,8 +15411,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUP_WINTER2017 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38087,
-  serialized_end=39347,
+  serialized_start=38110,
+  serialized_end=39370,
 )
 
 
@@ -15445,8 +15449,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39349,
-  serialized_end=39426,
+  serialized_start=39372,
+  serialized_end=39449,
 )
 
 
@@ -15490,8 +15494,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39429,
-  serialized_end=39690,
+  serialized_start=39452,
+  serialized_end=39713,
 )
 
 
@@ -15521,8 +15525,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUPLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39692,
-  serialized_end=39755,
+  serialized_start=39715,
+  serialized_end=39778,
 )
 
 
@@ -15552,8 +15556,8 @@ _CMSGGCTOCLIENTBATTLEPASSROLLUPLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39757,
-  serialized_end=39819,
+  serialized_start=39780,
+  serialized_end=39842,
 )
 
 
@@ -15583,8 +15587,8 @@ _CMSGCLIENTTOGCTRANSFERSEASONALMMRREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39821,
-  serialized_end=39881,
+  serialized_start=39844,
+  serialized_end=39904,
 )
 
 
@@ -15614,8 +15618,8 @@ _CMSGCLIENTTOGCTRANSFERSEASONALMMRRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39883,
-  serialized_end=39943,
+  serialized_start=39906,
+  serialized_end=39966,
 )
 
 
@@ -15645,8 +15649,8 @@ _CMSGGCTOCLIENTPLAYTESTSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39945,
-  serialized_end=39991,
+  serialized_start=39968,
+  serialized_end=40014,
 )
 
 
@@ -15676,8 +15680,8 @@ _CMSGCLIENTTOGCJOINPLAYTEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39993,
-  serialized_end=40045,
+  serialized_start=40016,
+  serialized_end=40068,
 )
 
 
@@ -15707,8 +15711,8 @@ _CMSGCLIENTTOGCJOINPLAYTESTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40047,
-  serialized_end=40098,
+  serialized_start=40070,
+  serialized_end=40121,
 )
 
 
@@ -15773,8 +15777,8 @@ _CMSGDOTAEVENTINVITE_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40172,
-  serialized_end=40363,
+  serialized_start=40195,
+  serialized_end=40386,
 )
 
 _CMSGDOTAEVENTINVITE = _descriptor.Descriptor(
@@ -15803,8 +15807,8 @@ _CMSGDOTAEVENTINVITE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40101,
-  serialized_end=40363,
+  serialized_start=40124,
+  serialized_end=40386,
 )
 
 
@@ -15841,8 +15845,8 @@ _CMSGDOTASETFAVORITETEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40365,
-  serialized_end=40425,
+  serialized_start=40388,
+  serialized_end=40448,
 )
 
 
@@ -15907,8 +15911,8 @@ _CMSGDOTATRIVIAQUESTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40428,
-  serialized_end=40665,
+  serialized_start=40451,
+  serialized_end=40688,
 )
 
 
@@ -15945,8 +15949,8 @@ _CMSGDOTATRIVIACURRENTQUESTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40667,
-  serialized_end=40772,
+  serialized_start=40690,
+  serialized_end=40795,
 )
 
 
@@ -15983,8 +15987,8 @@ _CMSGDOTATRIVIAQUESTIONANSWERSSUMMARY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40774,
-  serialized_end=40861,
+  serialized_start=40797,
+  serialized_end=40884,
 )
 
 
@@ -16021,8 +16025,8 @@ _CMSGDOTASUBMITTRIVIAQUESTIONANSWER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40863,
-  serialized_end=40942,
+  serialized_start=40886,
+  serialized_end=40965,
 )
 
 
@@ -16052,8 +16056,8 @@ _CMSGDOTASUBMITTRIVIAQUESTIONANSWERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40944,
-  serialized_end=41070,
+  serialized_start=40967,
+  serialized_end=41093,
 )
 
 
@@ -16076,8 +16080,8 @@ _CMSGDOTASTARTTRIVIASESSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41072,
-  serialized_end=41100,
+  serialized_start=41095,
+  serialized_end=41123,
 )
 
 
@@ -16114,8 +16118,8 @@ _CMSGDOTASTARTTRIVIASESSIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41102,
-  serialized_end=41189,
+  serialized_start=41125,
+  serialized_end=41212,
 )
 
 
@@ -16159,8 +16163,8 @@ _CMSGCLIENTTOGCGIVETIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41191,
-  serialized_end=41280,
+  serialized_start=41214,
+  serialized_end=41303,
 )
 
 
@@ -16191,8 +16195,8 @@ _CMSGCLIENTTOGCGIVETIPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41283,
-  serialized_end=41615,
+  serialized_start=41306,
+  serialized_end=41638,
 )
 
 
@@ -16215,8 +16219,8 @@ _CMSGDOTAANCHORPHONENUMBERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41617,
-  serialized_end=41651,
+  serialized_start=41640,
+  serialized_end=41674,
 )
 
 
@@ -16247,8 +16251,8 @@ _CMSGDOTAANCHORPHONENUMBERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41654,
-  serialized_end=41883,
+  serialized_start=41677,
+  serialized_end=41906,
 )
 
 
@@ -16271,8 +16275,8 @@ _CMSGDOTAUNANCHORPHONENUMBERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41885,
-  serialized_end=41921,
+  serialized_start=41908,
+  serialized_end=41944,
 )
 
 
@@ -16303,8 +16307,8 @@ _CMSGDOTAUNANCHORPHONENUMBERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41924,
-  serialized_end=42078,
+  serialized_start=41947,
+  serialized_end=42101,
 )
 
 
@@ -16362,8 +16366,8 @@ _CMSGGCTOCLIENTTIPNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42081,
-  serialized_end=42232,
+  serialized_start=42104,
+  serialized_end=42255,
 )
 
 
@@ -16393,8 +16397,8 @@ _CMSGGCTOCLIENTALLSTARVOTESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42234,
-  serialized_end=42287,
+  serialized_start=42257,
+  serialized_end=42310,
 )
 
 
@@ -16424,8 +16428,8 @@ _CMSGGCTOCLIENTALLSTARVOTESREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42289,
-  serialized_end=42350,
+  serialized_start=42312,
+  serialized_end=42373,
 )
 
 
@@ -16462,8 +16466,8 @@ _CMSGGCTOCLIENTALLSTARVOTESSUBMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42352,
-  serialized_end=42432,
+  serialized_start=42375,
+  serialized_end=42455,
 )
 
 
@@ -16494,8 +16498,8 @@ _CMSGGCTOCLIENTALLSTARVOTESSUBMITREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42435,
-  serialized_end=42682,
+  serialized_start=42458,
+  serialized_end=42705,
 )
 
 
@@ -16546,8 +16550,8 @@ _CMSGDOTACLIENTTOGCQUICKSTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42684,
-  serialized_end=42801,
+  serialized_start=42707,
+  serialized_end=42824,
 )
 
 
@@ -16598,8 +16602,8 @@ _CMSGDOTACLIENTTOGCQUICKSTATSRESPONSE_SIMPLESTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43392,
-  serialized_end=43487,
+  serialized_start=43415,
+  serialized_end=43510,
 )
 
 _CMSGDOTACLIENTTOGCQUICKSTATSRESPONSE = _descriptor.Descriptor(
@@ -16670,8 +16674,8 @@ _CMSGDOTACLIENTTOGCQUICKSTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42804,
-  serialized_end=43487,
+  serialized_start=42827,
+  serialized_end=43510,
 )
 
 
@@ -16701,8 +16705,8 @@ _CMSGDOTASELECTIONPRIORITYCHOICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43490,
-  serialized_end=43620,
+  serialized_start=43513,
+  serialized_end=43643,
 )
 
 
@@ -16733,8 +16737,8 @@ _CMSGDOTASELECTIONPRIORITYCHOICERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43623,
-  serialized_end=43785,
+  serialized_start=43646,
+  serialized_end=43808,
 )
 
 
@@ -16764,8 +16768,8 @@ _CMSGDOTAGAMEAUTOGRAPHREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43787,
-  serialized_end=43834,
+  serialized_start=43810,
+  serialized_end=43857,
 )
 
 
@@ -16796,8 +16800,8 @@ _CMSGDOTAGAMEAUTOGRAPHREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43837,
-  serialized_end=43991,
+  serialized_start=43860,
+  serialized_end=44014,
 )
 
 
@@ -16820,8 +16824,8 @@ _CMSGDOTADESTROYLOBBYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43993,
-  serialized_end=44022,
+  serialized_start=44016,
+  serialized_end=44045,
 )
 
 
@@ -16852,8 +16856,8 @@ _CMSGDOTADESTROYLOBBYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44025,
-  serialized_end=44165,
+  serialized_start=44048,
+  serialized_end=44188,
 )
 
 
@@ -16904,8 +16908,8 @@ _CMSGPURCHASEITEMWITHEVENTPOINTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44168,
-  serialized_end=44312,
+  serialized_start=44191,
+  serialized_end=44335,
 )
 
 
@@ -16936,8 +16940,8 @@ _CMSGPURCHASEITEMWITHEVENTPOINTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44315,
-  serialized_end=44615,
+  serialized_start=44338,
+  serialized_end=44638,
 )
 
 
@@ -17016,8 +17020,8 @@ _CMSGGCREQUESTITEMRECOMMENDATIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44618,
-  serialized_end=44808,
+  serialized_start=44641,
+  serialized_end=44831,
 )
 
 
@@ -17047,8 +17051,8 @@ _CMSGGCREQUESTITEMRECOMMENDATIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44810,
-  serialized_end=44882,
+  serialized_start=44833,
+  serialized_end=44905,
 )
 
 _CMSGDOTAREQUESTMATCHES.fields_by_name['skill'].enum_type = _CMSGDOTAREQUESTMATCHES_SKILLLEVEL
