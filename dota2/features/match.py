@@ -59,7 +59,6 @@ class Match(object):
 
         return jobid
 
-
     def request_matches(self, **kwargs):
         """Request matches. For arguments see `CMsgDOTARequestMatches <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L81-L103>`_
 
