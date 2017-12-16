@@ -9,3 +9,4 @@ Documentation related to various APIs available in this package.
    dota2.client
    dota2.enums
    dota2.msg
+   dota2.util
