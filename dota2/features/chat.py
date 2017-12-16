@@ -135,7 +135,7 @@ class ChannelManager(EventEmitter):
             channel._process_members_from_proto(message)
 
             if joined or left:
-                self.emit(self.EVENT_CHANNEL_MEMBERS_UPDATE, joined, left)
+                self.emit(self.EVENT_CHANNEL_MEMBERS_UPDATE, channel, joined, left)
 
     def join_channel(self, channel_name, channel_type=DOTAChatChannelType_t.DOTAChannelType_Custom):
         """Join a chat channel
