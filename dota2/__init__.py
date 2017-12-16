@@ -1,7 +1,7 @@
-__version__ = "0.2.10"
+__version__ = "0.2.11"
 __author__ = "Rossen Georgiev"
 
-version_info = (0, 2, 10)
+version_info = (0, 2, 11)
 
 
 # proxy object
