@@ -384,7 +384,7 @@ class Lobby(object):
             "bot_difficulty": bot_difficulty
         })
 
-    def respond_lobby_invite(self, id, accept=False):
+    def respond_to_lobby_invite(self, lobby_id, accept=False):
         """
         Answer to a lobby invite.
 
@@ -394,9 +394,9 @@ class Lobby(object):
         :type  accept: :class:`bool`
         """
         if self.verbose_debug:
-            self._LOG.debug("Responding to lobby invite %s, accept: %s" % (id, accept))
+            self._LOG.debug("Responding to lobby invite %s, accept: %s" % (lobby_id, accept))
 
         self.send(EGCBaseMsg.EMsgGCLobbyInviteResponse, {
-            "lobby_id": id,
+            "lobby_id": lobby_id,
             "accept": accept
         })
