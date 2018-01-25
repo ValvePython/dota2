@@ -170,8 +170,8 @@ class ChannelManager(EventEmitter):
 
         Response event: :attr:`EVENT_JOINED_CHANNEL`
         """
-        if self.lobby:
-            key = "Lobby_%s" % self.lobby.lobby_id, DOTAChatChannelType_t.DOTAChannelType_Lobby
+        if self._dota.lobby:
+            key = "Lobby_%s" % self._dota.lobby.lobby_id, DOTAChatChannelType_t.DOTAChannelType_Lobby
             return self.join_channel(*key)
 
     @property
@@ -181,8 +181,8 @@ class ChannelManager(EventEmitter):
         :return: channel instance
         :rtype: :class:`.ChatChannel`
         """
-        if self.lobby:
-            key = "Lobby_%s" % self.lobby.lobby_id, DOTAChatChannelType_t.DOTAChannelType_Lobby
+        if self._dota.lobby:
+            key = "Lobby_%s" % self._dota.lobby.lobby_id, DOTAChatChannelType_t.DOTAChannelType_Lobby
             return self._channels_by_name.get(key, None)
 
     def join_party_channel(self):
@@ -191,8 +191,8 @@ class ChannelManager(EventEmitter):
 
         Response event: :attr:`EVENT_JOINED_CHANNEL`
         """
-        if self.party:
-            key = "Party_%s" % self.party.party_id, DOTAChatChannelType_t.DOTAChannelType_Party
+        if self._dota.party:
+            key = "Party_%s" % self._dota.party.party_id, DOTAChatChannelType_t.DOTAChannelType_Party
             return self.join_channel(*key)
 
     @property
@@ -202,8 +202,8 @@ class ChannelManager(EventEmitter):
         :return: channel instance
         :rtype: :class:`.ChatChannel`
         """
-        if self.party:
-            key = "Party_%s" % self.party.party_id, DOTAChatChannelType_t.DOTAChannelType_Party
+        if self._dota.party:
+            key = "Party_%s" % self._dota.party.party_id, DOTAChatChannelType_t.DOTAChannelType_Party
             return self._channels_by_name.get(key, None)
 
     def get_channel_list(self):
