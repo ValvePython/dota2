@@ -400,3 +400,13 @@ class Lobby(object):
             "lobby_id": lobby_id,
             "accept": accept
         })
+
+    def destroy_lobby(self):
+        """
+        Destroy the lobby currently in if host.
+        """
+        if self.verbose_debug:
+            self._LOG.debug("Destroying current lobby.")
+
+        self.send(EDOTAGCMsg.EMsgDestroyLobbyRequest, {})
+
