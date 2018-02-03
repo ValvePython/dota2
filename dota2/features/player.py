@@ -10,7 +10,35 @@ class Player(object):
         self.on(EDOTAGCMsg.EMsgClientToGCLatestConductScorecard, self.__handle_conduct_scorecard)
         self.on(EDOTAGCMsg.EMsgGCGetHeroStandingsResponse, self.__handle_hero_standings)
 
-    def request_profile(self, account_id, request_name=False):
+    def request_profile(self, account_id):
+        """
+        Request profile details
+
+        :param account_id: steam account_id
+        :type account_id: :class:`int`
+        :return: job id
+        :rtype: :class:`str`
+
+        Response event: ``profile_data``
+
+        :param account_id: account_id from request
+        :type account_id: :class:`int`
+        :param message: `CMsgProfileResponse https://github.com/ValvePython/dota2/blob/98763e7b748a588462387469db65ea1a3e19a3af/protobufs/dota_gcmessages_client.proto#L2519-L2539`_
+        :type  message: proto message
+
+        """
+        jobid = self.send_job(EDOTAGCMsg.EMsgProfileRequest, {
+                              'account_id': account_id,
+                              })
+
+        def wrap_profile_data(message):
+            self.emit("profile_data", account_id, message)
+
+        self.once(jobid, wrap_profile_data)
+
+        return jobid
+
+    def request_gc_profile(self, account_id, request_name=False):
         """
         Request profile details
 
@@ -25,7 +53,7 @@ class Player(object):
         :return: job id
         :rtype: :class:`str`
 
-        Response event: ``profile_data``
+        Response event: ``gc_profile_data``
 
         :param account_id: account_id from request
         :type account_id: :class:`int`
@@ -43,7 +71,7 @@ class Player(object):
         def wrap_profile_data(message):
             eresult = EResult(message.result)
             message = message if eresult == EResult.OK else None
-            self.emit("profile_data", account_id, eresult, message)
+            self.emit("gc_profile_data", account_id, eresult, message)
 
         self.once(jobid, wrap_profile_data)
 
