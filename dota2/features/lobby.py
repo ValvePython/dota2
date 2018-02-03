@@ -403,10 +403,12 @@ class Lobby(object):
 
     def destroy_lobby(self):
         """
-        Destroy the lobby currently in if host.
+        Destroy the current lobby (host only)
+
+        :return: job_id for response
+        :rtype: :class:`str`
         """
         if self.verbose_debug:
             self._LOG.debug("Destroying current lobby.")
 
-        self.send(EDOTAGCMsg.EMsgDestroyLobbyRequest, {})
-
+        return self.send_job(EDOTAGCMsg.EMsgDestroyLobbyRequest, {})
