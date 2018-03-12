@@ -39,6 +39,7 @@ message CSODOTAPartyMember {
 	repeated uint32 region_ping_codes = 4 [packed = true];
 	repeated uint32 region_ping_times = 5 [packed = true];
 	optional uint32 region_ping_failed_bitmask = 6;
+	optional bool is_plus_subscriber = 10;
 	optional uint32 tourney_skill_level = 7;
 	optional uint32 tourney_buyin = 8;
 	optional uint32 tourney_prevent_until = 9;
@@ -95,6 +96,8 @@ message CSODOTAParty {
 	optional uint32 bot_script_index = 60;
 	optional uint32 steam_clan_account_id = 61;
 	optional dota.CMsgReadyCheckStatus ready_check = 62;
+	optional uint32 custom_game_disabled_until_date = 63;
+	optional uint32 custom_game_disabled_account_id = 64;
 }
 
 message CSODOTAPartyInvite {
@@ -172,7 +175,7 @@ message CDOTALobbyMember {
 	optional uint32 lobby_mvp_vote_account_id = 32;
 	optional dota.MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
 	optional uint64 favorite_team_packed = 35;
-	optional bool is_prime_subscriber = 36;
+	optional bool is_plus_subscriber = 36;
 	optional bool rank_tier_updated = 37;
 }
 
@@ -230,7 +233,6 @@ message CSODOTALobby {
 		INVALID = -1;
 		CASUAL_MATCH = 0;
 		PRACTICE = 1;
-		TOURNAMENT = 2;
 		COOP_BOT_MATCH = 4;
 		LEGACY_TEAM_MATCH = 5;
 		LEGACY_SOLO_QUEUE_MATCH = 6;

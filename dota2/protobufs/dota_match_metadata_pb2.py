@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_match_metadata.proto',
   package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x19\x64ota_match_metadata.proto\x12\x04\x64ota\x1a\x15\x62\x61se_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"\x81\x01\n\x16\x43\x44OTAMatchMetadataFile\x12\x0f\n\x07version\x18\x01 \x02(\x05\x12\x10\n\x08match_id\x18\x02 \x02(\x04\x12*\n\x08metadata\x18\x03 \x01(\x0b\x32\x18.dota.CDOTAMatchMetadata\x12\x18\n\x10private_metadata\x18\x05 \x01(\x0c\"\xc2\x0c\n\x12\x43\x44OTAMatchMetadata\x12,\n\x05teams\x18\x01 \x03(\x0b\x32\x1d.dota.CDOTAMatchMetadata.Team\x12\x34\n\x0citem_rewards\x18\x02 \x03(\x0b\x32\x1e.dota.CLobbyTimedRewardDetails\x12\x10\n\x08lobby_id\x18\x03 \x01(\x06\x12\x19\n\x11report_until_time\x18\x04 \x01(\x06\x12\x1f\n\x17\x65vent_game_custom_table\x18\x05 \x01(\x0c\x1a\xf9\n\n\x04Team\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x35\n\x07players\x18\x02 \x03(\x0b\x32$.dota.CDOTAMatchMetadata.Team.Player\x12\x18\n\x10graph_experience\x18\x03 \x03(\x02\x12\x19\n\x11graph_gold_earned\x18\x04 \x03(\x02\x12\x17\n\x0fgraph_net_worth\x18\x05 \x03(\x02\x12\x15\n\rcm_first_pick\x18\x06 \x01(\x08\x12\x1c\n\x14\x63m_captain_player_id\x18\x07 \x01(\r\x12\x0f\n\x07\x63m_bans\x18\x08 \x03(\r\x12\x10\n\x08\x63m_picks\x18\t \x03(\r\x12\x12\n\ncm_penalty\x18\n \x01(\r\x1a\x30\n\nPlayerKill\x12\x13\n\x0bvictim_slot\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x1a\x36\n\x0cItemPurchase\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x15\n\rpurchase_time\x18\x02 \x01(\x05\x1av\n\x11InventorySnapshot\x12\x0f\n\x07item_id\x18\x01 \x03(\r\x12\x11\n\tgame_time\x18\x02 \x01(\x05\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05level\x18\x06 \x01(\r\x1a\x36\n\x11\x41utoStyleCriteria\x12\x12\n\nname_token\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\x02\x1a\xd2\x06\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10\x61\x62ility_upgrades\x18\x02 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x03 \x01(\r\x12.\n\x13\x65quipped_econ_items\x18\x04 \x03(\x0b\x32\x11.dota.CSOEconItem\x12\x37\n\x05kills\x18\x05 \x03(\x0b\x32(.dota.CDOTAMatchMetadata.Team.PlayerKill\x12\x39\n\x05items\x18\x06 \x03(\x0b\x32*.dota.CDOTAMatchMetadata.Team.ItemPurchase\x12\x15\n\ravg_kills_x16\x18\x07 \x01(\r\x12\x16\n\x0e\x61vg_deaths_x16\x18\x08 \x01(\r\x12\x17\n\x0f\x61vg_assists_x16\x18\t \x01(\r\x12\x13\n\x0b\x61vg_gpm_x16\x18\n \x01(\r\x12\x13\n\x0b\x61vg_xpm_x16\x18\x0b \x01(\r\x12\x16\n\x0e\x62\x65st_kills_x16\x18\x0c \x01(\r\x12\x18\n\x10\x62\x65st_assists_x16\x18\r \x01(\r\x12\x14\n\x0c\x62\x65st_gpm_x16\x18\x0e \x01(\r\x12\x14\n\x0c\x62\x65st_xpm_x16\x18\x0f \x01(\r\x12\x12\n\nwin_streak\x18\x10 \x01(\r\x12\x17\n\x0f\x62\x65st_win_streak\x18\x11 \x01(\r\x12\x13\n\x0b\x66ight_score\x18\x12 \x01(\x02\x12\x12\n\nfarm_score\x18\x13 \x01(\x02\x12\x15\n\rsupport_score\x18\x14 \x01(\x02\x12\x12\n\npush_score\x18\x15 \x01(\x02\x12\x16\n\x0elevel_up_times\x18\x16 \x03(\r\x12\x17\n\x0fgraph_net_worth\x18\x17 \x03(\x02\x12K\n\x12inventory_snapshot\x18\x18 \x03(\x0b\x32/.dota.CDOTAMatchMetadata.Team.InventorySnapshot\x12\x1c\n\x14\x61vg_stats_calibrated\x18\x19 \x01(\x08\x12L\n\x13\x61uto_style_criteria\x18\x1a \x03(\x0b\x32/.dota.CDOTAMatchMetadata.Team.AutoStyleCriteria\x12\x10\n\x08\x65vent_id\x18\x1b \x01(\r\x12\x14\n\x0c\x65vent_points\x18\x1c \x01(\r\"\xbd\t\n\x19\x43\x44OTAMatchPrivateMetadata\x12\x33\n\x05teams\x18\x01 \x03(\x0b\x32$.dota.CDOTAMatchPrivateMetadata.Team\x1a\xea\x08\n\x04Team\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12<\n\x07players\x18\x02 \x03(\x0b\x32+.dota.CDOTAMatchPrivateMetadata.Team.Player\x12@\n\tbuildings\x18\x03 \x03(\x0b\x32-.dota.CDOTAMatchPrivateMetadata.Team.Building\x1a\xe7\x06\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x02 \x01(\r\x12\x17\n\x0fposition_stream\x18\x03 \x01(\x0c\x12R\n\x0f\x63ombat_segments\x18\x04 \x03(\x0b\x32\x39.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment\x12\x19\n\x11\x64\x61mage_unit_names\x18\x05 \x03(\t\x12L\n\x0c\x62uff_records\x18\x06 \x03(\x0b\x32\x36.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord\x1a\xed\x02\n\rCombatSegment\x12\x11\n\tgame_time\x18\x01 \x01(\x05\x12\x64\n\x11\x64\x61mage_by_ability\x18\x02 \x03(\x0b\x32I.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility\x1a\xe2\x01\n\x0f\x44\x61mageByAbility\x12\x19\n\x11source_unit_index\x18\x03 \x01(\r\x12\x12\n\nability_id\x18\x01 \x01(\r\x12o\n\x0f\x62y_hero_targets\x18\x02 \x03(\x0b\x32V.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget\x1a/\n\x0c\x42yHeroTarget\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x02 \x01(\r\x1a\xed\x01\n\nBuffRecord\x12\x17\n\x0f\x62uff_ability_id\x18\x01 \x01(\r\x12\x1a\n\x12\x62uff_modifier_name\x18\x03 \x01(\t\x12\\\n\x0f\x62y_hero_targets\x18\x02 \x03(\x0b\x32\x43.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget\x1aL\n\x0c\x42yHeroTarget\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x18\n\x10\x65lapsed_duration\x18\x02 \x01(\x02\x12\x11\n\tis_hidden\x18\x03 \x01(\x08\x1a\x65\n\x08\x42uilding\x12\x11\n\tunit_name\x18\x01 \x01(\t\x12\x18\n\x10position_quant_x\x18\x02 \x01(\r\x12\x18\n\x10position_quant_y\x18\x03 \x01(\r\x12\x12\n\ndeath_time\x18\x04 \x01(\x02\x42\x03\x90\x01\x00')
+  serialized_pb=_b('\n\x19\x64ota_match_metadata.proto\x12\x04\x64ota\x1a\x15\x62\x61se_gcmessages.proto\x1a-dota_gcmessages_common_match_management.proto\"\x81\x01\n\x16\x43\x44OTAMatchMetadataFile\x12\x0f\n\x07version\x18\x01 \x02(\x05\x12\x10\n\x08match_id\x18\x02 \x02(\x04\x12*\n\x08metadata\x18\x03 \x01(\x0b\x32\x18.dota.CDOTAMatchMetadata\x12\x18\n\x10private_metadata\x18\x05 \x01(\x0c\"\xca\x11\n\x12\x43\x44OTAMatchMetadata\x12,\n\x05teams\x18\x01 \x03(\x0b\x32\x1d.dota.CDOTAMatchMetadata.Team\x12\x34\n\x0citem_rewards\x18\x02 \x03(\x0b\x32\x1e.dota.CLobbyTimedRewardDetails\x12\x10\n\x08lobby_id\x18\x03 \x01(\x06\x12\x19\n\x11report_until_time\x18\x04 \x01(\x06\x12\x1f\n\x17\x65vent_game_custom_table\x18\x05 \x01(\x0c\x12\x18\n\x10primary_event_id\x18\x06 \x01(\r\x1a\xe7\x0f\n\x04Team\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x35\n\x07players\x18\x02 \x03(\x0b\x32$.dota.CDOTAMatchMetadata.Team.Player\x12\x18\n\x10graph_experience\x18\x03 \x03(\x02\x12\x19\n\x11graph_gold_earned\x18\x04 \x03(\x02\x12\x17\n\x0fgraph_net_worth\x18\x05 \x03(\x02\x12\x15\n\rcm_first_pick\x18\x06 \x01(\x08\x12\x1c\n\x14\x63m_captain_player_id\x18\x07 \x01(\r\x12\x0f\n\x07\x63m_bans\x18\x08 \x03(\r\x12\x10\n\x08\x63m_picks\x18\t \x03(\r\x12\x12\n\ncm_penalty\x18\n \x01(\r\x1a\x30\n\nPlayerKill\x12\x13\n\x0bvictim_slot\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x1a\x36\n\x0cItemPurchase\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x15\n\rpurchase_time\x18\x02 \x01(\x05\x1av\n\x11InventorySnapshot\x12\x0f\n\x07item_id\x18\x01 \x03(\r\x12\x11\n\tgame_time\x18\x02 \x01(\x05\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05level\x18\x06 \x01(\r\x1a\x36\n\x11\x41utoStyleCriteria\x12\x12\n\nname_token\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\x02\x1a\xc6\x01\n\x12StrangeGemProgress\x12\x17\n\x0fkill_eater_type\x18\x01 \x01(\r\x12\x1a\n\x12gem_item_def_index\x18\x02 \x01(\r\x12\x18\n\x10required_hero_id\x18\x03 \x01(\r\x12\x16\n\x0estarting_value\x18\x04 \x01(\r\x12\x14\n\x0c\x65nding_value\x18\x05 \x01(\r\x12\x1c\n\x14owner_item_def_index\x18\x06 \x01(\r\x12\x15\n\rowner_item_id\x18\x07 \x01(\x04\x1a\x95\x02\n\tEventData\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x14\n\x0c\x65vent_points\x18\x02 \x01(\r\x12\x1d\n\x15\x63hallenge_instance_id\x18\x03 \x01(\r\x12\x1a\n\x12\x63hallenge_quest_id\x18\x04 \x01(\r\x12$\n\x1c\x63hallenge_quest_challenge_id\x18\x05 \x01(\r\x12\x1b\n\x13\x63hallenge_completed\x18\x06 \x01(\x08\x12 \n\x18\x63hallenge_rank_completed\x18\x07 \x01(\r\x12+\n#challenge_rank_previously_completed\x18\x08 \x01(\r\x12\x13\n\x0b\x65vent_owned\x18\t \x01(\x08\x1a\xdf\x07\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x18\n\x10\x61\x62ility_upgrades\x18\x02 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x03 \x01(\r\x12.\n\x13\x65quipped_econ_items\x18\x04 \x03(\x0b\x32\x11.dota.CSOEconItem\x12\x37\n\x05kills\x18\x05 \x03(\x0b\x32(.dota.CDOTAMatchMetadata.Team.PlayerKill\x12\x39\n\x05items\x18\x06 \x03(\x0b\x32*.dota.CDOTAMatchMetadata.Team.ItemPurchase\x12\x15\n\ravg_kills_x16\x18\x07 \x01(\r\x12\x16\n\x0e\x61vg_deaths_x16\x18\x08 \x01(\r\x12\x17\n\x0f\x61vg_assists_x16\x18\t \x01(\r\x12\x13\n\x0b\x61vg_gpm_x16\x18\n \x01(\r\x12\x13\n\x0b\x61vg_xpm_x16\x18\x0b \x01(\r\x12\x16\n\x0e\x62\x65st_kills_x16\x18\x0c \x01(\r\x12\x18\n\x10\x62\x65st_assists_x16\x18\r \x01(\r\x12\x14\n\x0c\x62\x65st_gpm_x16\x18\x0e \x01(\r\x12\x14\n\x0c\x62\x65st_xpm_x16\x18\x0f \x01(\r\x12\x12\n\nwin_streak\x18\x10 \x01(\r\x12\x17\n\x0f\x62\x65st_win_streak\x18\x11 \x01(\r\x12\x13\n\x0b\x66ight_score\x18\x12 \x01(\x02\x12\x12\n\nfarm_score\x18\x13 \x01(\x02\x12\x15\n\rsupport_score\x18\x14 \x01(\x02\x12\x12\n\npush_score\x18\x15 \x01(\x02\x12\x16\n\x0elevel_up_times\x18\x16 \x03(\r\x12\x17\n\x0fgraph_net_worth\x18\x17 \x03(\x02\x12K\n\x12inventory_snapshot\x18\x18 \x03(\x0b\x32/.dota.CDOTAMatchMetadata.Team.InventorySnapshot\x12\x1c\n\x14\x61vg_stats_calibrated\x18\x19 \x01(\x08\x12L\n\x13\x61uto_style_criteria\x18\x1a \x03(\x0b\x32/.dota.CDOTAMatchMetadata.Team.AutoStyleCriteria\x12;\n\nevent_data\x18\x1d \x03(\x0b\x32\'.dota.CDOTAMatchMetadata.Team.EventData\x12N\n\x14strange_gem_progress\x18\x1e \x03(\x0b\x32\x30.dota.CDOTAMatchMetadata.Team.StrangeGemProgress\x12\x0f\n\x07hero_xp\x18\x1f \x01(\r\x12\x15\n\rcamps_stacked\x18  \x01(\r\"\xcc\n\n\x19\x43\x44OTAMatchPrivateMetadata\x12\x33\n\x05teams\x18\x01 \x03(\x0b\x32$.dota.CDOTAMatchPrivateMetadata.Team\x12\x1d\n\x15graph_win_probability\x18\x02 \x03(\x02\x1a\xda\t\n\x04Team\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12<\n\x07players\x18\x02 \x03(\x0b\x32+.dota.CDOTAMatchPrivateMetadata.Team.Player\x12@\n\tbuildings\x18\x03 \x03(\x0b\x32-.dota.CDOTAMatchPrivateMetadata.Team.Building\x1a\xd7\x07\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x02 \x01(\r\x12\x17\n\x0fposition_stream\x18\x03 \x01(\x0c\x12R\n\x0f\x63ombat_segments\x18\x04 \x03(\x0b\x32\x39.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment\x12\x19\n\x11\x64\x61mage_unit_names\x18\x05 \x03(\t\x12L\n\x0c\x62uff_records\x18\x06 \x03(\x0b\x32\x36.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord\x12\x13\n\x0bgraph_kills\x18\x07 \x03(\x02\x12\x14\n\x0cgraph_deaths\x18\x08 \x03(\x02\x12\x15\n\rgraph_assists\x18\t \x03(\x02\x12\x16\n\x0egraph_lasthits\x18\n \x03(\x02\x12\x14\n\x0cgraph_denies\x18\x0b \x03(\x02\x1a\xed\x02\n\rCombatSegment\x12\x11\n\tgame_time\x18\x01 \x01(\x05\x12\x64\n\x11\x64\x61mage_by_ability\x18\x02 \x03(\x0b\x32I.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility\x1a\xe2\x01\n\x0f\x44\x61mageByAbility\x12\x19\n\x11source_unit_index\x18\x03 \x01(\r\x12\x12\n\nability_id\x18\x01 \x01(\r\x12o\n\x0f\x62y_hero_targets\x18\x02 \x03(\x0b\x32V.dota.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.ByHeroTarget\x1a/\n\x0c\x42yHeroTarget\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x02 \x01(\r\x1a\xed\x01\n\nBuffRecord\x12\x17\n\x0f\x62uff_ability_id\x18\x01 \x01(\r\x12\x1a\n\x12\x62uff_modifier_name\x18\x03 \x01(\t\x12\\\n\x0f\x62y_hero_targets\x18\x02 \x03(\x0b\x32\x43.dota.CDOTAMatchPrivateMetadata.Team.Player.BuffRecord.ByHeroTarget\x1aL\n\x0c\x42yHeroTarget\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x18\n\x10\x65lapsed_duration\x18\x02 \x01(\x02\x12\x11\n\tis_hidden\x18\x03 \x01(\x08\x1a\x65\n\x08\x42uilding\x12\x11\n\tunit_name\x18\x01 \x01(\t\x12\x18\n\x10position_quant_x\x18\x02 \x01(\r\x12\x18\n\x10position_quant_y\x18\x03 \x01(\r\x12\x12\n\ndeath_time\x18\x04 \x01(\x02\x42\x03\x90\x01\x00')
   ,
   dependencies=[base__gcmessages__pb2.DESCRIPTOR,dota__gcmessages__common__match__management__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -114,8 +114,8 @@ _CDOTAMATCHMETADATA_TEAM_PLAYERKILL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=707,
-  serialized_end=755,
+  serialized_start=733,
+  serialized_end=781,
 )
 
 _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE = _descriptor.Descriptor(
@@ -151,8 +151,8 @@ _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=757,
-  serialized_end=811,
+  serialized_start=783,
+  serialized_end=837,
 )
 
 _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT = _descriptor.Descriptor(
@@ -216,8 +216,8 @@ _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=813,
-  serialized_end=931,
+  serialized_start=839,
+  serialized_end=957,
 )
 
 _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA = _descriptor.Descriptor(
@@ -253,8 +253,166 @@ _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=933,
-  serialized_end=987,
+  serialized_start=959,
+  serialized_end=1013,
+)
+
+_CDOTAMATCHMETADATA_TEAM_STRANGEGEMPROGRESS = _descriptor.Descriptor(
+  name='StrangeGemProgress',
+  full_name='dota.CDOTAMatchMetadata.Team.StrangeGemProgress',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='kill_eater_type', full_name='dota.CDOTAMatchMetadata.Team.StrangeGemProgress.kill_eater_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gem_item_def_index', full_name='dota.CDOTAMatchMetadata.Team.StrangeGemProgress.gem_item_def_index', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='required_hero_id', full_name='dota.CDOTAMatchMetadata.Team.StrangeGemProgress.required_hero_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='starting_value', full_name='dota.CDOTAMatchMetadata.Team.StrangeGemProgress.starting_value', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ending_value', full_name='dota.CDOTAMatchMetadata.Team.StrangeGemProgress.ending_value', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='owner_item_def_index', full_name='dota.CDOTAMatchMetadata.Team.StrangeGemProgress.owner_item_def_index', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='owner_item_id', full_name='dota.CDOTAMatchMetadata.Team.StrangeGemProgress.owner_item_id', index=6,
+      number=7, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1016,
+  serialized_end=1214,
+)
+
+_CDOTAMATCHMETADATA_TEAM_EVENTDATA = _descriptor.Descriptor(
+  name='EventData',
+  full_name='dota.CDOTAMatchMetadata.Team.EventData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='event_id', full_name='dota.CDOTAMatchMetadata.Team.EventData.event_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='event_points', full_name='dota.CDOTAMatchMetadata.Team.EventData.event_points', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge_instance_id', full_name='dota.CDOTAMatchMetadata.Team.EventData.challenge_instance_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge_quest_id', full_name='dota.CDOTAMatchMetadata.Team.EventData.challenge_quest_id', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge_quest_challenge_id', full_name='dota.CDOTAMatchMetadata.Team.EventData.challenge_quest_challenge_id', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge_completed', full_name='dota.CDOTAMatchMetadata.Team.EventData.challenge_completed', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge_rank_completed', full_name='dota.CDOTAMatchMetadata.Team.EventData.challenge_rank_completed', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge_rank_previously_completed', full_name='dota.CDOTAMatchMetadata.Team.EventData.challenge_rank_previously_completed', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='event_owned', full_name='dota.CDOTAMatchMetadata.Team.EventData.event_owned', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1217,
+  serialized_end=1494,
 )
 
 _CDOTAMATCHMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
@@ -447,15 +605,29 @@ _CDOTAMATCHMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='event_id', full_name='dota.CDOTAMatchMetadata.Team.Player.event_id', index=26,
-      number=27, type=13, cpp_type=3, label=1,
+      name='event_data', full_name='dota.CDOTAMatchMetadata.Team.Player.event_data', index=26,
+      number=29, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='strange_gem_progress', full_name='dota.CDOTAMatchMetadata.Team.Player.strange_gem_progress', index=27,
+      number=30, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_xp', full_name='dota.CDOTAMatchMetadata.Team.Player.hero_xp', index=28,
+      number=31, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='event_points', full_name='dota.CDOTAMatchMetadata.Team.Player.event_points', index=27,
-      number=28, type=13, cpp_type=3, label=1,
+      name='camps_stacked', full_name='dota.CDOTAMatchMetadata.Team.Player.camps_stacked', index=29,
+      number=32, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -472,8 +644,8 @@ _CDOTAMATCHMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=990,
-  serialized_end=1840,
+  serialized_start=1497,
+  serialized_end=2488,
 )
 
 _CDOTAMATCHMETADATA_TEAM = _descriptor.Descriptor(
@@ -556,7 +728,7 @@ _CDOTAMATCHMETADATA_TEAM = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CDOTAMATCHMETADATA_TEAM_PLAYERKILL, _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE, _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT, _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA, _CDOTAMATCHMETADATA_TEAM_PLAYER, ],
+  nested_types=[_CDOTAMATCHMETADATA_TEAM_PLAYERKILL, _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE, _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT, _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA, _CDOTAMATCHMETADATA_TEAM_STRANGEGEMPROGRESS, _CDOTAMATCHMETADATA_TEAM_EVENTDATA, _CDOTAMATCHMETADATA_TEAM_PLAYER, ],
   enum_types=[
   ],
   options=None,
@@ -565,8 +737,8 @@ _CDOTAMATCHMETADATA_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=439,
-  serialized_end=1840,
+  serialized_start=465,
+  serialized_end=2488,
 )
 
 _CDOTAMATCHMETADATA = _descriptor.Descriptor(
@@ -611,6 +783,13 @@ _CDOTAMATCHMETADATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='primary_event_id', full_name='dota.CDOTAMatchMetadata.primary_event_id', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -624,7 +803,7 @@ _CDOTAMATCHMETADATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=238,
-  serialized_end=1840,
+  serialized_end=2488,
 )
 
 
@@ -661,8 +840,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_COMBATSEGMENT_DAMAGEBYABILITY_BYHEROTARGE
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2666,
-  serialized_end=2713,
+  serialized_start=3457,
+  serialized_end=3504,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_COMBATSEGMENT_DAMAGEBYABILITY = _descriptor.Descriptor(
@@ -705,8 +884,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_COMBATSEGMENT_DAMAGEBYABILITY = _descript
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2487,
-  serialized_end=2713,
+  serialized_start=3278,
+  serialized_end=3504,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_COMBATSEGMENT = _descriptor.Descriptor(
@@ -742,8 +921,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_COMBATSEGMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2348,
-  serialized_end=2713,
+  serialized_start=3139,
+  serialized_end=3504,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_BUFFRECORD_BYHEROTARGET = _descriptor.Descriptor(
@@ -786,8 +965,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_BUFFRECORD_BYHEROTARGET = _descriptor.Des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2877,
-  serialized_end=2953,
+  serialized_start=3668,
+  serialized_end=3744,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_BUFFRECORD = _descriptor.Descriptor(
@@ -830,8 +1009,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER_BUFFRECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2716,
-  serialized_end=2953,
+  serialized_start=3507,
+  serialized_end=3744,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
@@ -883,6 +1062,41 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='graph_kills', full_name='dota.CDOTAMatchPrivateMetadata.Team.Player.graph_kills', index=6,
+      number=7, type=2, cpp_type=6, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='graph_deaths', full_name='dota.CDOTAMatchPrivateMetadata.Team.Player.graph_deaths', index=7,
+      number=8, type=2, cpp_type=6, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='graph_assists', full_name='dota.CDOTAMatchPrivateMetadata.Team.Player.graph_assists', index=8,
+      number=9, type=2, cpp_type=6, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='graph_lasthits', full_name='dota.CDOTAMatchPrivateMetadata.Team.Player.graph_lasthits', index=9,
+      number=10, type=2, cpp_type=6, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='graph_denies', full_name='dota.CDOTAMatchPrivateMetadata.Team.Player.graph_denies', index=10,
+      number=11, type=2, cpp_type=6, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -895,8 +1109,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2082,
-  serialized_end=2953,
+  serialized_start=2761,
+  serialized_end=3744,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM_BUILDING = _descriptor.Descriptor(
@@ -946,8 +1160,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM_BUILDING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2955,
-  serialized_end=3056,
+  serialized_start=3746,
+  serialized_end=3847,
 )
 
 _CDOTAMATCHPRIVATEMETADATA_TEAM = _descriptor.Descriptor(
@@ -990,8 +1204,8 @@ _CDOTAMATCHPRIVATEMETADATA_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1926,
-  serialized_end=3056,
+  serialized_start=2605,
+  serialized_end=3847,
 )
 
 _CDOTAMATCHPRIVATEMETADATA = _descriptor.Descriptor(
@@ -1008,6 +1222,13 @@ _CDOTAMATCHPRIVATEMETADATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='graph_win_probability', full_name='dota.CDOTAMatchPrivateMetadata.graph_win_probability', index=1,
+      number=2, type=2, cpp_type=6, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1020,8 +1241,8 @@ _CDOTAMATCHPRIVATEMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1843,
-  serialized_end=3056,
+  serialized_start=2491,
+  serialized_end=3847,
 )
 
 _CDOTAMATCHMETADATAFILE.fields_by_name['metadata'].message_type = _CDOTAMATCHMETADATA
@@ -1029,11 +1250,15 @@ _CDOTAMATCHMETADATA_TEAM_PLAYERKILL.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA.containing_type = _CDOTAMATCHMETADATA_TEAM
+_CDOTAMATCHMETADATA_TEAM_STRANGEGEMPROGRESS.containing_type = _CDOTAMATCHMETADATA_TEAM
+_CDOTAMATCHMETADATA_TEAM_EVENTDATA.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['equipped_econ_items'].message_type = base__gcmessages__pb2._CSOECONITEM
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['kills'].message_type = _CDOTAMATCHMETADATA_TEAM_PLAYERKILL
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['items'].message_type = _CDOTAMATCHMETADATA_TEAM_ITEMPURCHASE
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['inventory_snapshot'].message_type = _CDOTAMATCHMETADATA_TEAM_INVENTORYSNAPSHOT
 _CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['auto_style_criteria'].message_type = _CDOTAMATCHMETADATA_TEAM_AUTOSTYLECRITERIA
+_CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['event_data'].message_type = _CDOTAMATCHMETADATA_TEAM_EVENTDATA
+_CDOTAMATCHMETADATA_TEAM_PLAYER.fields_by_name['strange_gem_progress'].message_type = _CDOTAMATCHMETADATA_TEAM_STRANGEGEMPROGRESS
 _CDOTAMATCHMETADATA_TEAM_PLAYER.containing_type = _CDOTAMATCHMETADATA_TEAM
 _CDOTAMATCHMETADATA_TEAM.fields_by_name['players'].message_type = _CDOTAMATCHMETADATA_TEAM_PLAYER
 _CDOTAMATCHMETADATA_TEAM.containing_type = _CDOTAMATCHMETADATA
@@ -1098,6 +1323,20 @@ CDOTAMatchMetadata = _reflection.GeneratedProtocolMessageType('CDOTAMatchMetadat
       ))
     ,
 
+    StrangeGemProgress = _reflection.GeneratedProtocolMessageType('StrangeGemProgress', (_message.Message,), dict(
+      DESCRIPTOR = _CDOTAMATCHMETADATA_TEAM_STRANGEGEMPROGRESS,
+      __module__ = 'dota_match_metadata_pb2'
+      # @@protoc_insertion_point(class_scope:dota.CDOTAMatchMetadata.Team.StrangeGemProgress)
+      ))
+    ,
+
+    EventData = _reflection.GeneratedProtocolMessageType('EventData', (_message.Message,), dict(
+      DESCRIPTOR = _CDOTAMATCHMETADATA_TEAM_EVENTDATA,
+      __module__ = 'dota_match_metadata_pb2'
+      # @@protoc_insertion_point(class_scope:dota.CDOTAMatchMetadata.Team.EventData)
+      ))
+    ,
+
     Player = _reflection.GeneratedProtocolMessageType('Player', (_message.Message,), dict(
       DESCRIPTOR = _CDOTAMATCHMETADATA_TEAM_PLAYER,
       __module__ = 'dota_match_metadata_pb2'
@@ -1119,6 +1358,8 @@ _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.PlayerKill)
 _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.ItemPurchase)
 _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.InventorySnapshot)
 _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.AutoStyleCriteria)
+_sym_db.RegisterMessage(CDOTAMatchMetadata.Team.StrangeGemProgress)
+_sym_db.RegisterMessage(CDOTAMatchMetadata.Team.EventData)
 _sym_db.RegisterMessage(CDOTAMatchMetadata.Team.Player)
 
 CDOTAMatchPrivateMetadata = _reflection.GeneratedProtocolMessageType('CDOTAMatchPrivateMetadata', (_message.Message,), dict(
