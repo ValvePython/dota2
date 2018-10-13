@@ -43,8 +43,7 @@ class Player(object):
         Request profile details
 
         .. warning::
-
-            This is disabled by Valve
+            Disabled by Valve
 
         :param account_id: steam account_id
         :type account_id: :class:`int`
@@ -135,6 +134,9 @@ class Player(object):
 
     def request_player_info(self, account_ids):
         """
+        .. warning::
+            Disabled by Valve
+
         Request official player information
 
         :param account_id: A list of account ids
