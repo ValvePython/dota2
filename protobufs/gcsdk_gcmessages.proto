@@ -208,6 +208,7 @@ message CMsgClientWelcome {
 	optional fixed32 item_schema_crc = 7;
 	optional string items_game_url = 8;
 	optional uint32 gc_socache_file_version = 9;
+	optional string txn_country_code = 10;
 }
 
 message CMsgConnectionStatus {
@@ -351,5 +352,39 @@ message CMsgGCToClientPollConvarResponse {
 message CGCMsgCompressedMsgToClient {
 	optional uint32 msg_id = 1;
 	optional bytes compressed_msg = 2;
+}
+
+message CMsgGCToGCMasterBroadcastMessage {
+	optional uint32 users_per_second = 1;
+	optional bool send_to_users = 2;
+	optional bool send_to_servers = 3;
+	optional uint32 msg_id = 4;
+	optional bytes msg_data = 5;
+}
+
+message CMsgGCToGCMasterSubscribeToCache {
+	optional uint32 soid_type = 1;
+	optional fixed64 soid_id = 2;
+	repeated uint32 account_ids = 3;
+	repeated fixed64 steam_ids = 4;
+}
+
+message CMsgGCToGCMasterSubscribeToCacheResponse {
+}
+
+message CMsgGCToGCMasterSubscribeToCacheAsync {
+	optional dota.CMsgGCToGCMasterSubscribeToCache subscribe_msg = 1;
+}
+
+message CMsgGCToGCMasterUnsubscribeFromCache {
+	optional uint32 soid_type = 1;
+	optional fixed64 soid_id = 2;
+	repeated uint32 account_ids = 3;
+	repeated fixed64 steam_ids = 4;
+}
+
+message CMsgGCToGCMasterDestroyCache {
+	optional uint32 soid_type = 1;
+	optional fixed64 soid_id = 2;
 }
 

@@ -44,6 +44,18 @@ enum DOTA_TournamentEvents {
 	TE_BLACK_HOLE = 11;
 }
 
+enum EBroadcastTimelineEvent {
+	EBroadcastTimelineEvent_MatchStarted = 1;
+	EBroadcastTimelineEvent_GameStateChanged = 2;
+	EBroadcastTimelineEvent_TowerDeath = 3;
+	EBroadcastTimelineEvent_BarracksDeath = 4;
+	EBroadcastTimelineEvent_AncientDeath = 5;
+	EBroadcastTimelineEvent_RoshanDeath = 6;
+	EBroadcastTimelineEvent_HeroDeath = 7;
+	EBroadcastTimelineEvent_TeamFight = 8;
+	EBroadcastTimelineEvent_FirstBlood = 9;
+}
+
 message CSODOTAGameAccountClient {
 	optional uint32 account_id = 1 [(key_field) = true];
 	optional uint32 wins = 3;
@@ -126,6 +138,7 @@ message CSODOTAGameAccountPlus {
 	optional uint32 prepaid_time_start = 5;
 	optional uint32 prepaid_time_balance = 6;
 	optional fixed32 next_payment_date = 7;
+	optional fixed64 steam_agreement_id = 8;
 }
 
 message CMsgLobbyPlayerPlusSubscriptionData {
@@ -143,6 +156,11 @@ message CMsgLobbyEventPoints {
 		optional uint32 message_id_end = 2;
 	}
 
+	message PeriodicResourceValues {
+		optional uint32 remaining = 1;
+		optional uint32 max = 2;
+	}
+
 	message AccountPoints {
 		optional uint32 account_id = 1;
 		optional uint32 normal_points = 2;
@@ -153,13 +171,13 @@ message CMsgLobbyEventPoints {
 		optional uint32 points_held = 7;
 		optional uint32 premium_points_held = 8;
 		optional uint32 favorite_team_foil_level = 9;
-		optional uint32 wager_tokens_remaining = 10;
-		optional uint32 wager_tokens_max = 11;
 		optional uint64 active_effects_mask = 12;
 		repeated dota.CMsgLobbyEventPoints.ChatWheelMessageRange unlocked_chat_wheel_message_ranges = 13;
-		optional uint32 rank_wager_tokens_remaining = 14;
-		optional uint32 rank_wager_tokens_max = 15;
 		optional dota.CMsgLobbyPlayerPlusSubscriptionData plus_subscription_data = 16;
+		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues wager_tokens = 17;
+		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues rank_wager_tokens = 18;
+		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues tip_tokens = 19;
+		optional uint32 tip_amount = 20;
 	}
 
 	optional uint32 event_id = 1;
@@ -171,6 +189,8 @@ message CMsgLocalServerFakeLobbyData {
 	repeated dota.CMsgLobbyEventPoints event_points = 2;
 	optional bool is_plus_subscriber = 3;
 	optional uint32 primary_event_id = 4;
+	optional uint32 favorite_team = 5;
+	optional uint32 favorite_team_quality = 6;
 }
 
 message CMsgBattleCupVictory {
@@ -282,6 +302,7 @@ message CMsgDOTAHasItemDefsResponse {
 message CMsgGCGetPlayerCardItemInfo {
 	optional uint32 account_id = 1;
 	repeated uint64 player_card_item_ids = 2;
+	optional uint32 all_for_event = 3;
 }
 
 message CMsgGCGetPlayerCardItemInfoResponse {
@@ -380,6 +401,7 @@ message CMsgDOTAProfileCard {
 		k_eStat_Commends = 4;
 		k_eStat_GamesPlayed = 5;
 		k_eStat_FirstMatchDate = 6;
+		k_eStat_PreviousSeasonRank = 7;
 	}
 
 	optional uint32 account_id = 1;
@@ -393,6 +415,8 @@ message CMsgDOTAProfileCard {
 	optional uint32 leaderboard_rank = 9;
 	optional bool is_plus_subscriber = 10;
 	optional uint32 plus_original_start_date = 11;
+	optional uint32 rank_tier_score = 12;
+	optional uint32 previous_rank_tier = 13;
 }
 
 message CSODOTAPlayerChallenge {
@@ -416,7 +440,7 @@ message CSODOTAPlayerChallenge {
 }
 
 message CMsgClientToGCRerollPlayerChallenge {
-	optional uint32 event_id = 1;
+	optional dota.EEvent event_id = 1 [default = EVENT_ID_NONE];
 	optional uint32 sequence_id = 3;
 	optional uint32 hero_id = 4;
 }
@@ -444,7 +468,9 @@ message CMsgDOTARealtimeGameStats {
 		optional uint32 team_id = 2;
 		optional string team_name = 3;
 		optional fixed64 team_logo = 4;
+		optional string team_tag = 10;
 		optional uint32 score = 5;
+		optional uint32 net_worth = 9;
 		repeated dota.CMsgDOTARealtimeGameStats.PlayerDetails players = 6;
 		optional bool only_team = 7;
 		optional uint32 cheers = 8;
@@ -563,6 +589,7 @@ message CMsgDOTARealtimeGameStats {
 		optional float time_of_day = 4;
 		optional bool is_nightstalker_night = 5;
 		optional int32 game_time = 6;
+		optional uint32 game_state = 19;
 		optional uint32 teamid_radiant = 8;
 		optional uint32 teamid_dire = 9;
 		repeated dota.CMsgDOTARealtimeGameStats.PickBanDetails picks = 10;
@@ -571,6 +598,7 @@ message CMsgDOTARealtimeGameStats {
 		repeated dota.CMsgDOTARealtimeGameStats.BroadcasterDetails broadcasters = 13;
 		optional uint32 game_mode = 14;
 		optional uint32 league_id = 15;
+		optional uint32 league_node_id = 18;
 		optional bool single_team = 16;
 		optional uint32 cheers_peak = 17;
 	}
@@ -620,8 +648,10 @@ message CMsgDOTARealtimeGameStatsTerse {
 		optional uint32 team_number = 1;
 		optional uint32 team_id = 2;
 		optional string team_name = 3;
+		optional string team_tag = 8;
 		optional fixed64 team_logo = 4;
 		optional uint32 score = 5;
+		optional uint32 net_worth = 7;
 		repeated dota.CMsgDOTARealtimeGameStatsTerse.PlayerDetails players = 6;
 	}
 
@@ -640,6 +670,7 @@ message CMsgDOTARealtimeGameStatsTerse {
 		optional uint32 gold = 12;
 		optional float x = 13;
 		optional float y = 14;
+		optional uint32 net_worth = 15;
 	}
 
 	message BuildingDetails {
@@ -661,6 +692,8 @@ message CMsgDOTARealtimeGameStatsTerse {
 		repeated uint32 steam_broadcaster_account_ids = 6;
 		optional uint32 game_mode = 7;
 		optional uint32 league_id = 8;
+		optional uint32 league_node_id = 9;
+		optional uint32 game_state = 10;
 	}
 
 	message GraphData {
@@ -672,6 +705,13 @@ message CMsgDOTARealtimeGameStatsTerse {
 	repeated dota.CMsgDOTARealtimeGameStatsTerse.BuildingDetails buildings = 3;
 	optional dota.CMsgDOTARealtimeGameStatsTerse.GraphData graph_data = 4;
 	optional bool delta_frame = 5;
+}
+
+message CMsgDOTABroadcastTimelineEvent {
+	optional dota.EBroadcastTimelineEvent event = 1 [default = EBroadcastTimelineEvent_MatchStarted];
+	optional fixed32 timestamp = 2;
+	optional uint32 data = 3;
+	optional string string_data = 4;
 }
 
 message CMsgGCToClientMatchGroupsVersion {
@@ -904,6 +944,11 @@ message CMsgDOTAMatch {
 		optional uint32 hero_pick_order = 63;
 		optional bool hero_was_randomed = 64;
 		optional bool hero_was_bonus = 65;
+		optional bool hero_was_dota_plus_suggestion = 69;
+		optional uint32 hero_damage_received_pre_reduction = 67;
+		optional uint32 hero_damage_received_post_reduction = 68;
+		optional uint32 seconds_dead = 70;
+		optional uint32 gold_lost_to_death = 71;
 	}
 
 	message BroadcasterInfo {
@@ -1060,116 +1105,6 @@ message CMsgDOTABotDebugInfo {
 	repeated uint32 rune_status = 13;
 }
 
-message CMsgDOTALeague {
-	message Info {
-		message Admin {
-			optional uint32 account_id = 1;
-			optional bool is_primary = 2;
-		}
-
-		optional uint32 league_id = 1;
-		optional string name = 2;
-		optional uint32 tier = 3;
-		optional uint32 region = 4;
-		optional string league_url = 5;
-		optional string english_url = 6;
-		optional string russian_url = 7;
-		optional string chinese_url = 8;
-		optional string description = 9;
-		optional string notes = 10;
-		optional string revenue_url = 11;
-		optional uint32 ticket_price_cents = 12;
-		optional uint32 prize_pool_dollars = 13;
-		optional uint32 start_timestamp = 14;
-		optional uint32 end_timestamp = 15;
-		optional uint32 pro_circuit_points = 16;
-		optional dota.ELeagueStatus status = 17 [default = LEAGUE_STATUS_UNSET];
-		repeated dota.CMsgDOTALeague.Info.Admin admins = 18;
-	}
-
-	message Stream {
-		optional uint32 stream_id = 1;
-		optional uint32 language = 2;
-		optional string name = 3;
-		optional dota.ELeagueBroadcastProvider broadcast_provider = 4 [default = LEAGUE_BROADCAST_UNKNOWN];
-		optional string stream_url = 5;
-		optional string vod_url = 6;
-	}
-
-	message NodeGroup {
-		optional string name = 1;
-		optional uint32 node_group_id = 2;
-		optional uint32 parent_node_group_id = 3;
-		optional uint32 advancing_node_group_id = 4;
-		optional uint32 advancing_team_count = 5;
-		optional uint32 team_count = 6;
-		optional dota.CMsgDOTALeague.ENodeGroupType node_group_type = 7 [default = INVALID_GROUP_TYPE];
-		optional dota.CMsgDOTALeague.ENodeType default_node_type = 8 [default = INVALID_NODE_TYPE];
-		optional uint32 round = 9;
-		optional uint32 max_rounds = 10;
-		optional bool is_tiebreaker = 11;
-		optional bool is_final_group = 12;
-		optional bool is_completed = 13;
-		repeated dota.CMsgDOTALeague.TeamStanding team_standings = 14;
-		repeated dota.CMsgDOTALeague.Node nodes = 15;
-		repeated dota.CMsgDOTALeague.NodeGroup node_groups = 16;
-		repeated dota.CMsgDOTALeague.Stream streams = 17;
-	}
-
-	message Node {
-		optional string name = 1;
-		optional uint32 node_id = 2;
-		optional uint32 node_group_id = 3;
-		optional uint32 winning_node_id = 4;
-		optional uint32 losing_node_id = 5;
-		optional dota.CMsgDOTALeague.ENodeType node_type = 6 [default = INVALID_NODE_TYPE];
-		optional uint32 scheduled_time = 7;
-		optional uint32 team_id_1 = 10;
-		optional uint32 team_id_2 = 11;
-		optional uint32 series_id = 20;
-		repeated uint64 matches = 21;
-		optional uint32 team_1_wins = 22;
-		optional uint32 team_2_wins = 23;
-		optional bool is_completed = 24;
-	}
-
-	message TeamStanding {
-		optional uint32 team_id = 1;
-		optional uint32 node_wins = 2;
-		optional uint32 node_losses = 3;
-		optional uint32 match_wins = 4;
-		optional uint32 match_losses = 5;
-		optional uint32 score = 6;
-	}
-
-	enum ENodeGroupType {
-		INVALID_GROUP_TYPE = 0;
-		ORGANIZATIONAL = 1;
-		ROUND_ROBIN = 2;
-		SWISS = 3;
-		BRACKET_SINGLE = 4;
-		BRACKET_DOUBLE_SEED_LOSER = 5;
-		BRACKET_DOUBLE_ALL_WINNER = 6;
-		BRACKET_SHOWMATCH = 7;
-	}
-
-	enum ENodeType {
-		INVALID_NODE_TYPE = 0;
-		BEST_OF_ONE = 1;
-		BEST_OF_THREE = 2;
-		BEST_OF_FIVE = 3;
-		BEST_OF_TWO = 4;
-	}
-
-	optional dota.CMsgDOTALeague.Info info = 1;
-	repeated dota.CMsgDOTALeague.Stream streams = 2;
-	repeated dota.CMsgDOTALeague.NodeGroup node_groups = 3;
-}
-
-message CMsgDOTALeagueList {
-	repeated dota.CMsgDOTALeague leagues = 1;
-}
-
 message CMsgSuccessfulHero {
 	optional uint32 hero_id = 1;
 	optional float win_percent = 2;
@@ -1186,5 +1121,16 @@ message CMsgRecentMatchInfo {
 	optional uint32 player_slot = 7;
 	optional dota.EMatchOutcome match_outcome = 8 [default = k_EMatchOutcome_Unknown];
 	optional uint32 timestamp = 9;
+}
+
+message CMsgMatchTips {
+	message SingleTip {
+		optional uint32 source_account_id = 1;
+		optional uint32 target_account_id = 2;
+		optional uint32 tip_amount = 3;
+		optional dota.EEvent event_id = 4 [default = EVENT_ID_NONE];
+	}
+
+	repeated dota.CMsgMatchTips.SingleTip tips = 2;
 }
 

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_client_fantasy.proto',
   package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n$dota_gcmessages_client_fantasy.proto\x12\x04\x64ota\x1a\x17\x64ota_shared_enums.proto\"\xd3\x03\n\x10\x43MsgGCPlayerInfo\x12\x37\n\x0cplayer_infos\x18\x01 \x03(\x0b\x32!.dota.CMsgGCPlayerInfo.PlayerInfo\x12>\n\x0cleaderboards\x18\x02 \x03(\x0b\x32(.dota.CMsgGCPlayerInfo.RegionLeaderboard\x1a\x89\x02\n\nPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x03 \x01(\t\x12\x14\n\x0c\x66\x61ntasy_role\x18\x04 \x01(\r\x12\x0f\n\x07team_id\x18\x05 \x01(\r\x12\x11\n\tteam_name\x18\x06 \x01(\t\x12\x10\n\x08team_tag\x18\x07 \x01(\t\x12\x0f\n\x07sponsor\x18\x08 \x01(\t\x12\x11\n\tis_locked\x18\t \x01(\x08\x12\x0e\n\x06is_pro\x18\n \x01(\x08\x12\x14\n\x0clocked_until\x18\x0b \x01(\r\x12\x11\n\ttimestamp\x18\x0c \x01(\r\x12\x1a\n\x12registered_team_id\x18\r \x01(\r\x1a:\n\x11RegionLeaderboard\x12\x10\n\x08\x64ivision\x18\x01 \x01(\r\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"\xb3\x01\n\"CMsgDOTACreateFantasyLeagueRequest\x12\x13\n\x0bleague_name\x18\x01 \x01(\t\x12\x13\n\x0bleague_logo\x18\x02 \x01(\x04\x12O\n\x0eselection_mode\x18\x03 \x01(\x0e\x32\x1c.dota.Fantasy_Selection_Mode:\x19\x46\x41NTASY_SELECTION_INVALID\x12\x12\n\nteam_count\x18\x04 \x01(\r\"\xf8\x01\n#CMsgDOTACreateFantasyLeagueResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTACreateFantasyLeagueResponse.EResult:\x07SUCCESS\"\x84\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1a\n\x16\x45RROR_TOO_MANY_LEAGUES\x10\x02\x12\x1c\n\x18\x45RROR_INVALID_TEAM_COUNT\x10\x03\x12\x1b\n\x17\x45RROR_CREATION_DISABLED\x10\x04\"\x9f\x02\n\x18\x43MsgFantasyLeagueScoring\x12\r\n\x05level\x18\x01 \x01(\x02\x12\r\n\x05kills\x18\x02 \x01(\x02\x12\x0e\n\x06\x64\x65\x61ths\x18\x03 \x01(\x02\x12\x0f\n\x07\x61ssists\x18\x04 \x01(\x02\x12\x11\n\tlast_hits\x18\x05 \x01(\x02\x12\x0e\n\x06\x64\x65nies\x18\x06 \x01(\x02\x12\x0b\n\x03gpm\x18\x07 \x01(\x02\x12\x0c\n\x04xppm\x18\x08 \x01(\x02\x12\r\n\x05stuns\x18\t \x01(\x02\x12\x0f\n\x07healing\x18\n \x01(\x02\x12\x13\n\x0btower_kills\x18\x0b \x01(\x02\x12\x14\n\x0croshan_kills\x18\x0c \x01(\x02\x12\x1a\n\x12multiplier_premium\x18\r \x01(\x02\x12\x1f\n\x17multiplier_professional\x18\x0e \x01(\x02\"\xdd\x05\n\x19\x43MsgDOTAFantasyLeagueInfo\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x1f\n\x17\x63ommissioner_account_id\x18\x02 \x01(\r\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x03 \x01(\t\x12O\n\x0eselection_mode\x18\x04 \x01(\x0e\x32\x1c.dota.Fantasy_Selection_Mode:\x19\x46\x41NTASY_SELECTION_INVALID\x12\x12\n\nteam_count\x18\x05 \x01(\r\x12\x0c\n\x04logo\x18\x06 \x01(\x04\x12/\n\x07scoring\x18\x07 \x01(\x0b\x32\x1e.dota.CMsgFantasyLeagueScoring\x12\x12\n\ndraft_time\x18\x0c \x01(\r\x12\x17\n\x0f\x64raft_pick_time\x18\r \x01(\r\x12\x14\n\x0cseason_start\x18\x0f \x01(\r\x12\x15\n\rseason_length\x18\x10 \x01(\r\x12\x12\n\nveto_votes\x18\x11 \x01(\r\x12\x14\n\x0c\x61\x63quisitions\x18\x12 \x01(\r\x12\x0e\n\x06slot_1\x18\x13 \x01(\r\x12\x0e\n\x06slot_2\x18\x14 \x01(\r\x12\x0e\n\x06slot_3\x18\x15 \x01(\r\x12\x0e\n\x06slot_4\x18\x16 \x01(\r\x12\x0e\n\x06slot_5\x18\x17 \x01(\r\x12\x13\n\x0b\x62\x65nch_slots\x18\x18 \x01(\r\x12=\n\nowner_info\x18\x19 \x03(\x0b\x32).dota.CMsgDOTAFantasyLeagueInfo.OwnerInfo\x12\x0f\n\x07players\x18\x1a \x03(\r\x12\x11\n\ttime_zone\x18\x1b \x01(\r\x12\x0e\n\x06season\x18\x1c \x01(\r\x12\x10\n\x08password\x18\x1d \x01(\t\x1aU\n\tOwnerInfo\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\x12\x13\n\x0bleft_league\x18\x02 \x01(\x08\x12\x19\n\x11player_account_id\x18\x03 \x03(\r\"u\n$CMsgDOTAFantasyLeagueEditInfoRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x32\n\tedit_info\x18\x02 \x01(\x0b\x32\x1f.dota.CMsgDOTAFantasyLeagueInfo\"\xbd\x01\n%CMsgDOTAFantasyLeagueEditInfoResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyLeagueEditInfoResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"O\n CMsgDOTAFantasyLeagueFindRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\"\xcc\x02\n!CMsgDOTAFantasyLeagueFindResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyLeagueFindResponse.EResult:\x07SUCCESS\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x02 \x01(\t\x12\x19\n\x11\x63ommissioner_name\x18\x03 \x01(\t\"\xa4\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x1a\n\x16\x45RROR_LEAGUE_NOT_FOUND\x10\x01\x12\x16\n\x12\x45RROR_BAD_PASSWORD\x10\x02\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x03\x12\x0e\n\nERROR_FULL\x10\x04\x12\x18\n\x14\x45RROR_ALREADY_MEMBER\x10\x05\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\x06\"=\n CMsgDOTAFantasyLeagueInfoRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xb5\x01\n!CMsgDOTAFantasyLeagueInfoResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyLeagueInfoResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_BAD_LEAGUE_ID\x10\x02\"A\n$CMsgDOTAFantasyLeagueMatchupsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xa9\x04\n%CMsgDOTAFantasyLeagueMatchupsResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyLeagueMatchupsResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12S\n\x0fweekly_matchups\x18\x03 \x03(\x0b\x32:.dota.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups\x1a\x63\n\x07Matchup\x12\x1a\n\x12owner_account_id_1\x18\x01 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x02 \x01(\r\x12\x0f\n\x07score_1\x18\x03 \x01(\x02\x12\x0f\n\x07score_2\x18\x04 \x01(\x02\x1a|\n\x0eWeeklyMatchups\x12\x44\n\x07matchup\x18\x01 \x03(\x0b\x32\x33.dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x03 \x01(\r\"_\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_BAD_LEAGUE_ID\x10\x02\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x03\"u\n\x1e\x43MsgDOTAEditFantasyTeamRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x04\"\xed\x01\n\x1f\x43MsgDOTAEditFantasyTeamResponse\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32-.dota.CMsgDOTAEditFantasyTeamResponse.EResult:\x07SUCCESS\"\x81\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_TEAM_INFO\x10\x02\x12\x1c\n\x18\x45RROR_NAME_ALREADY_TAKEN\x10\x03\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x04\"L\n/CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"J\n.CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\"Q\n\x1f\x43MsgDOTAFantasyTeamInfoResponse\x12.\n\x07results\x18\x01 \x03(\x0b\x32\x1d.dota.CMsgDOTAFantasyTeamInfo\"\xc6\x01\n\x17\x43MsgDOTAFantasyTeamInfo\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x11\n\tteam_name\x18\x04 \x01(\t\x12\x11\n\tteam_logo\x18\x05 \x01(\x04\x12\x0c\n\x04wins\x18\x06 \x01(\r\x12\x0e\n\x06losses\x18\x07 \x01(\r\x12\x16\n\x0e\x63urrent_roster\x18\x08 \x03(\r\"\xd6\x01\n\x1f\x43MsgDOTAFantasyTeamScoreRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x04 \x01(\x04\x12\x19\n\x11\x66ilter_start_time\x18\x05 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x06 \x01(\r\x12\x15\n\rinclude_bench\x18\x07 \x01(\x08\"\xfa\x02\n CMsgDOTAFantasyTeamScoreResponse\x12G\n\x06result\x18\x01 \x01(\x0e\x32..dota.CMsgDOTAFantasyTeamScoreResponse.EResult:\x07SUCCESS\x12\x1a\n\x12\x66\x61ntasy_team_score\x18\x02 \x01(\x02\x12T\n\x14\x66\x61ntasy_player_score\x18\x03 \x03(\x0b\x32\x36.dota.CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore\x1a\x34\n\x0f\x43MsgPlayerScore\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\x02\"e\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x03\"\xcf\x01\n#CMsgDOTAFantasyTeamStandingsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x05 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x06 \x01(\x08\x12\x16\n\x0e\x66ilter_in_hall\x18\x07 \x01(\x08\"\x8b\x04\n$CMsgDOTAFantasyTeamStandingsResponse\x12K\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgDOTAFantasyTeamStandingsResponse.EResult:\x07SUCCESS\x12M\n\x0bteam_scores\x18\x03 \x03(\x0b\x32\x38.dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore\x1a\xfe\x01\n\rCMsgTeamScore\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x19\n\x11\x66\x61ntasy_team_logo\x18\x04 \x01(\x04\x12\x12\n\nowner_name\x18\x05 \x01(\t\x12\x19\n\x11\x66\x61ntasy_team_name\x18\x06 \x01(\t\x12\r\n\x05score\x18\x07 \x01(\x02\x12\x15\n\rscore_against\x18\x08 \x01(\x02\x12\x0c\n\x04wins\x18\t \x01(\r\x12\x0e\n\x06losses\x18\n \x01(\r\x12\x0e\n\x06streak\x18\x0b \x01(\x05\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\xc1\x01\n!CMsgDOTAFantasyPlayerScoreRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x05 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x06 \x01(\x08\"\x91\x02\n\"CMsgDOTAFantasyPlayerScoreResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyPlayerScoreResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12\x19\n\x11player_account_id\x18\x03 \x01(\r\x12\x13\n\x0bplayer_name\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x02\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\xc7\x01\n%CMsgDOTAFantasyPlayerStandingsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x05 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x06 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x07 \x01(\x08\"\x8f\x03\n&CMsgDOTAFantasyPlayerStandingsResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgDOTAFantasyPlayerStandingsResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x12S\n\rplayer_scores\x18\x04 \x03(\x0b\x32<.dota.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore\x1aP\n\x0f\x43MsgPlayerScore\x12\x19\n\x11player_account_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\x02\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\"\n CMsgDOTAFantasyPlayerInfoRequest\"H\n!CMsgDOTAFantasyPlayerInfoResponse\x12#\n\x03msg\x18\x01 \x01(\x0b\x32\x16.dota.CMsgGCPlayerInfo\"\x9f\x01\n\"CMsgDOTAFantasyLeagueCreateRequest\x12\x11\n\tseason_id\x18\x01 \x01(\r\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\x12\x11\n\tteam_name\x18\x04 \x01(\t\x12\x0c\n\x04logo\x18\x05 \x01(\x04\x12\x16\n\x0eticket_item_id\x18\x06 \x01(\x04\"\xd5\x02\n#CMsgDOTAFantasyLeagueCreateResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTAFantasyLeagueCreateResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\"\xc6\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x01\x12\x17\n\x13\x45RROR_BAD_SEASON_ID\x10\x02\x12\x19\n\x15\x45RROR_BAD_LEAGUE_NAME\x10\x03\x12\x17\n\x13\x45RROR_BAD_TEAM_NAME\x10\x04\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x05\x12\x1c\n\x18\x45RROR_FAILED_LOGO_UPLOAD\x10\x06\x12\x13\n\x0f\x45RROR_NO_TICKET\x10\x07\"\x88\x01\n CMsgDOTAFantasyTeamCreateRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x16\n\x0eticket_item_id\x18\x05 \x01(\x04\"\x95\x03\n!CMsgDOTAFantasyTeamCreateResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamCreateResponse.EResult:\x07SUCCESS\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x02 \x01(\r\"\x89\x02\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x01\x12\x1c\n\x18\x45RROR_FAILED_LOGO_UPLOAD\x10\x02\x12\x1f\n\x1b\x45RROR_BAD_FANTASY_LEAGUE_ID\x10\x03\x12\x12\n\x0e\x45RROR_BAD_NAME\x10\x04\x12\x0e\n\nERROR_FULL\x10\x05\x12\x18\n\x14\x45RROR_ALREADY_MEMBER\x10\x06\x12\x16\n\x12\x45RROR_BAD_PASSWORD\x10\x07\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x08\x12\x13\n\x0f\x45RROR_NO_TICKET\x10\t\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\n\"\xde\x01\n\'CMsgDOTAFantasyLeagueEditInvitesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\x12Q\n\rinvite_change\x18\x03 \x03(\x0b\x32:.dota.CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange\x1a\x33\n\x0cInviteChange\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07invited\x18\x02 \x01(\x08\"\xaa\x01\n(CMsgDOTAFantasyLeagueEditInvitesResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyLeagueEditInvitesResponse.EResult:\x07SUCCESS\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"D\n\'CMsgDOTAFantasyLeagueDraftStatusRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xc6\x01\n CMsgDOTAFantasyLeagueDraftStatus\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x13\n\x0b\x64raft_order\x18\x02 \x03(\r\x12\x14\n\x0c\x63urrent_pick\x18\x03 \x01(\r\x12\x16\n\x0etime_remaining\x18\x04 \x01(\r\x12\x16\n\x0epending_resume\x18\x05 \x01(\x08\x12\x11\n\tcompleted\x18\x06 \x01(\x08\x12\x19\n\x11\x61vailable_players\x18\x07 \x03(\r\"s\n\'CMsgDOTAFantasyLeagueDraftPlayerRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x19\n\x11player_account_id\x18\x03 \x01(\r\"\x87\x03\n(CMsgDOTAFantasyLeagueDraftPlayerResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyLeagueDraftPlayerResponse.EResult:\x07SUCCESS\"\x89\x02\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12 \n\x1c\x45RROR_INVALID_FANTASY_LEAGUE\x10\x02\x12%\n!ERROR_FANTASY_LEAGUE_NOT_DRAFTING\x10\x03\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x04\x12\x19\n\x15\x45RROR_NOT_OWNERS_TURN\x10\x05\x12\x18\n\x14\x45RROR_PLAYER_INVALID\x10\x06\x12\x1c\n\x18\x45RROR_PLAYER_UNAVAILABLE\x10\x07\x12\x1f\n\x1b\x45RROR_PLAYER_NO_VALID_SLOTS\x10\x08\"\x88\x01\n$CMsgDOTAFantasyTeamRosterSwapRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x0e\n\x06slot_1\x18\x04 \x01(\r\x12\x0e\n\x06slot_2\x18\x05 \x01(\r\"\xf3\x01\n%CMsgDOTAFantasyTeamRosterSwapResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyTeamRosterSwapResponse.EResult:\x07SUCCESS\"|\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x02\x12\x17\n\x13\x45RROR_SLOTS_INVALID\x10\x03\x12\x15\n\x11\x45RROR_SLOT_LOCKED\x10\x04\"\x89\x01\n\'CMsgDOTAFantasyTeamRosterAddDropRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x16\n\x0e\x61\x64\x64_account_id\x18\x05 \x01(\r\x12\x17\n\x0f\x64rop_account_id\x18\x06 \x01(\r\"\xa9\x02\n(CMsgDOTAFantasyTeamRosterAddDropResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyTeamRosterAddDropResponse.EResult:\x07SUCCESS\"\xab\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x02\x12\x1e\n\x1a\x45RROR_PLAYER_NOT_AVAILABLE\x10\x03\x12\x1c\n\x18\x45RROR_PLAYER_NOT_ON_TEAM\x10\x04\x12\x1f\n\x1b\x45RROR_TRADE_ALREADY_PENDING\x10\x05\"=\n CMsgDOTAFantasyTeamTradesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x93\x03\n!CMsgDOTAFantasyTeamTradesResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamTradesResponse.EResult:\x07SUCCESS\x12=\n\x06trades\x18\x02 \x03(\x0b\x32-.dota.CMsgDOTAFantasyTeamTradesResponse.Trade\x1a\x9c\x01\n\x05Trade\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x1a\n\x12owner_account_id_1\x18\x02 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x03 \x01(\r\x12\x1b\n\x13player_account_id_1\x18\x04 \x01(\r\x12\x1b\n\x13player_account_id_2\x18\x05 \x01(\r\x12\x0e\n\x06status\x18\x06 \x01(\r\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\x8a\x01\n%CMsgDOTAFantasyTeamTradeCancelRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x14\n\x0cteam_index_1\x18\x03 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x04 \x01(\r\x12\x14\n\x0cteam_index_2\x18\x05 \x01(\r\"\xd3\x01\n&CMsgDOTAFantasyTeamTradeCancelResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgDOTAFantasyTeamTradeCancelResponse.EResult:\x07SUCCESS\"Z\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x12\n\x0e\x45RROR_NO_TRADE\x10\x03\"~\n CMsgDOTAFantasyTeamRosterRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x18\n\x10owner_account_id\x18\x03 \x01(\r\x12\x11\n\ttimestamp\x18\x04 \x01(\r\"\x87\x02\n!CMsgDOTAFantasyTeamRosterResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamRosterResponse.EResult:\x07SUCCESS\x12\x1a\n\x12player_account_ids\x18\x02 \x03(\r\x12\x15\n\rplayer_locked\x18\x03 \x03(\x08\"e\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x03\"G\n*CMsgDOTAFantasyPlayerHisoricalStatsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x95\x06\n+CMsgDOTAFantasyPlayerHisoricalStatsResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.EResult:\x07SUCCESS\x12L\n\x05stats\x18\x02 \x03(\x0b\x32=.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats\x1a\x81\x02\n\x16PlayerScoreAccumulator\x12\x0f\n\x07matches\x18\x01 \x01(\r\x12\x0e\n\x06levels\x18\x02 \x01(\x02\x12\r\n\x05kills\x18\x03 \x01(\x02\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\x02\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\x02\x12\x11\n\tlast_hits\x18\x06 \x01(\x02\x12\x0e\n\x06\x64\x65nies\x18\x07 \x01(\x02\x12\x0b\n\x03gpm\x18\x08 \x01(\x02\x12\x0c\n\x04xppm\x18\t \x01(\x02\x12\r\n\x05stuns\x18\n \x01(\x02\x12\x0f\n\x07healing\x18\x0b \x01(\x02\x12\x13\n\x0btower_kills\x18\x0c \x01(\x02\x12\x14\n\x0croshan_kills\x18\r \x01(\x02\x12\r\n\x05score\x18\x0e \x01(\x02\x1a\xf7\x01\n\x0bPlayerStats\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05weeks\x18\x02 \x01(\r\x12_\n\rstats_premium\x18\x04 \x01(\x0b\x32H.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator\x12\x64\n\x12stats_professional\x18\x05 \x01(\x0b\x32H.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"G\n\x19\x43MsgDOTAFantasyMessageAdd\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\"g\n\x1e\x43MsgDOTAFantasyMessagesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x15\n\rstart_message\x18\x02 \x01(\r\x12\x13\n\x0b\x65nd_message\x18\x03 \x01(\r\"\xe7\x02\n\x1f\x43MsgDOTAFantasyMessagesResponse\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32-.dota.CMsgDOTAFantasyMessagesResponse.EResult:\x07SUCCESS\x12?\n\x08messages\x18\x02 \x03(\x0b\x32-.dota.CMsgDOTAFantasyMessagesResponse.Message\x12\x1a\n\x12num_total_messages\x18\x03 \x01(\r\x1aW\n\x07Message\x12\x12\n\nmessage_id\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x19\n\x11\x61uthor_account_id\x18\x03 \x01(\r\x12\x0c\n\x04time\x18\x04 \x01(\r\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"e\n\x1a\x43MsgDOTAFantasyRemoveOwner\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x12\n\nteam_index\x18\x03 \x01(\r\"\xe8\x01\n\"CMsgDOTAFantasyRemoveOwnerResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyRemoveOwnerResponse.EResult:\x07SUCCESS\"w\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\x03\x12\x16\n\x12\x45RROR_NOT_A_MEMBER\x10\x04\"C\n&CMsgDOTAFantasyScheduledMatchesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xd7\x02\n\'CMsgDOTAFantasyScheduledMatchesResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgDOTAFantasyScheduledMatchesResponse.EResult:\x07SUCCESS\x12^\n\x14scheduled_match_days\x18\x02 \x03(\x0b\x32@.dota.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays\x1aM\n\x12ScheduledMatchDays\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\x12\x12\n\nleague_ids\x18\x03 \x03(\r\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"Z\n!CMsgDOTAFantasyLeaveLeagueRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x02 \x01(\r\"\xe8\x01\n\"CMsgDOTAFantasyLeaveLeagueResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyLeaveLeagueResponse.EResult:\x07SUCCESS\"w\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x14\n\x10\x45RROR_NOT_MEMBER\x10\x02\x12\x1a\n\x16\x45RROR_LEAGUE_NOT_FOUND\x10\x03\x12\x16\n\x12\x45RROR_DRAFT_ACTIVE\x10\x04\"\x86\x01\n(CMsgDOTAFantasyPlayerScoreDetailsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x12\n\nstart_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\"\x90\x04\n)CMsgDOTAFantasyPlayerScoreDetailsResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.EResult:\x07SUCCESS\x12M\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32?.dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData\x1a\xfc\x01\n\x0fPlayerMatchData\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tseries_id\x18\x02 \x01(\r\x12\x12\n\nseries_num\x18\x03 \x01(\r\x12\x13\n\x0bseries_type\x18\x04 \x01(\r\x12\x13\n\x0bleague_tier\x18\x05 \x01(\r\x12\x11\n\tleague_id\x18\x06 \x01(\r\x12\x18\n\x10opposing_team_id\x18\x07 \x01(\r\x12\x1a\n\x12opposing_team_logo\x18\x08 \x01(\x04\x12\x1a\n\x12opposing_team_name\x18\t \x01(\t\x12\x10\n\x08owned_by\x18\x0b \x01(\r\x12\x0f\n\x07\x62\x65nched\x18\x0c \x01(\x08\"C\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x14\n\x10\x45RROR_NOT_MEMBER\x10\x02\"Z\n\x1d\x43MsgDOTAPassportVoteTeamGuess\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\twinner_id\x18\x02 \x01(\r\x12\x13\n\x0brunnerup_id\x18\x03 \x01(\r\"\x96\x01\n$CMsgDOTAPassportVoteGenericSelection\x12[\n\x0fselection_index\x18\x01 \x01(\x0e\x32\'.dota.DOTA_2013PassportSelectionIndices:\x19PP13_SEL_ALLSTAR_PLAYER_0\x12\x11\n\tselection\x18\x02 \x01(\r\"F\n\x1d\x43MsgDOTAPassportStampedPlayer\x12\x10\n\x08steam_id\x18\x01 \x01(\x04\x12\x13\n\x0bstamp_level\x18\x02 \x01(\r\";\n#CMsgDOTAPassportPlayerCardChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\"\xa0\x02\n\x14\x43MsgDOTAPassportVote\x12\x37\n\nteam_votes\x18\x01 \x03(\x0b\x32#.dota.CMsgDOTAPassportVoteTeamGuess\x12\x46\n\x12generic_selections\x18\x02 \x03(\x0b\x32*.dota.CMsgDOTAPassportVoteGenericSelection\x12<\n\x0fstamped_players\x18\x03 \x03(\x0b\x32#.dota.CMsgDOTAPassportStampedPlayer\x12I\n\x16player_card_challenges\x18\x04 \x03(\x0b\x32).dota.CMsgDOTAPassportPlayerCardChallenge\"P\n(CMsgClientToGCGetPlayerCardRosterRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\"\xb7\x02\n)CMsgClientToGCGetPlayerCardRosterResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCGetPlayerCardRosterResponse.Result:\x07SUCCESS\x12\x1b\n\x13player_card_item_id\x18\x02 \x03(\x04\x12\r\n\x05score\x18\x03 \x01(\x02\x12\x11\n\tfinalized\x18\x04 \x01(\x08\x12\x12\n\npercentile\x18\x05 \x01(\x02\"f\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_LEAGUE_ID\x10\x02\x12\x1b\n\x17\x45RROR_INVALID_TIMESTAMP\x10\x03\"\x8d\x01\n(CMsgClientToGCSetPlayerCardRosterRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x0c\n\x04slot\x18\x03 \x01(\r\x12\x1b\n\x13player_card_item_id\x18\x04 \x01(\x04\x12\x10\n\x08\x65vent_id\x18\x05 \x01(\r\"\xf3\x02\n)CMsgClientToGCSetPlayerCardRosterResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCSetPlayerCardRosterResponse.Result:\x07SUCCESS\"\xf4\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_LEAGUE_ID\x10\x02\x12\x1b\n\x17\x45RROR_INVALID_TIMESTAMP\x10\x03\x12\x1f\n\x1b\x45RROR_PLAYER_CARD_NOT_OWNED\x10\x04\x12\x16\n\x12\x45RROR_INVALID_SLOT\x10\x05\x12\x1a\n\x16\x45RROR_FAILED_CARD_INFO\x10\x06\x12\x1b\n\x17\x45RROR_ACCOUNT_DUPLICATE\x10\x07\x12\x1a\n\x16\x45RROR_LOCKED_TIMESTAMP\x10\x08*\xa3\x15\n!DOTA_2013PassportSelectionIndices\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_0\x10\x00\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_1\x10\x01\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_2\x10\x02\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_3\x10\x03\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_4\x10\x04\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_5\x10\x05\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_6\x10\x06\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_7\x10\x07\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_8\x10\x08\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_9\x10\t\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_0\x10\n\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_1\x10\x0b\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_2\x10\x0c\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_3\x10\r\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_4\x10\x0e\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_5\x10\x0f\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_6\x10\x10\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_7\x10\x11\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_8\x10\x12\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_9\x10\x13\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_10\x10\x14\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_11\x10\x15\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_12\x10\x16\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_13\x10\x17\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_14\x10\x18\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_0\x10\x19\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_1\x10\x1a\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_2\x10\x1b\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_3\x10\x1c\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_4\x10\x1d\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_5\x10\x1e\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_6\x10\x1f\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_7\x10 \x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_8\x10!\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_9\x10\"\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_10\x10#\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_11\x10$\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_12\x10%\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_13\x10&\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_14\x10\'\x12\x19\n\x15PP13_SEL_TEAMCUP_TEAM\x10(\x12\x1b\n\x17PP13_SEL_TEAMCUP_PLAYER\x10)\x12\x1e\n\x1aPP13_SEL_TEAMCUP_TEAM_LOCK\x10*\x12 \n\x1cPP13_SEL_TEAMCUP_PLAYER_LOCK\x10+\x12\x18\n\x14PP13_SEL_EVENTPRED_0\x10,\x12\x18\n\x14PP13_SEL_EVENTPRED_1\x10-\x12\x18\n\x14PP13_SEL_EVENTPRED_2\x10.\x12\x18\n\x14PP13_SEL_EVENTPRED_3\x10/\x12\x18\n\x14PP13_SEL_EVENTPRED_4\x10\x30\x12\x18\n\x14PP13_SEL_EVENTPRED_5\x10\x31\x12\x18\n\x14PP13_SEL_EVENTPRED_6\x10\x32\x12\x18\n\x14PP13_SEL_EVENTPRED_7\x10\x33\x12\x18\n\x14PP13_SEL_EVENTPRED_8\x10\x34\x12\x18\n\x14PP13_SEL_EVENTPRED_9\x10\x35\x12\x19\n\x15PP13_SEL_EVENTPRED_10\x10\x36\x12\x19\n\x15PP13_SEL_EVENTPRED_11\x10\x37\x12\x19\n\x15PP13_SEL_EVENTPRED_12\x10\x38\x12\x19\n\x15PP13_SEL_EVENTPRED_13\x10\x39\x12\x19\n\x15PP13_SEL_EVENTPRED_14\x10:\x12\x19\n\x15PP13_SEL_EVENTPRED_15\x10;\x12\x19\n\x15PP13_SEL_EVENTPRED_16\x10<\x12\x19\n\x15PP13_SEL_EVENTPRED_17\x10=\x12\x19\n\x15PP13_SEL_EVENTPRED_18\x10>\x12\x19\n\x15PP13_SEL_EVENTPRED_19\x10?\x12\x19\n\x15PP13_SEL_EVENTPRED_20\x10@\x12\x19\n\x15PP13_SEL_EVENTPRED_21\x10\x41\x12\x19\n\x15PP13_SEL_EVENTPRED_22\x10\x42\x12\x19\n\x15PP13_SEL_EVENTPRED_23\x10\x43\x12\x19\n\x15PP13_SEL_EVENTPRED_24\x10\x44\x12\x19\n\x15PP13_SEL_EVENTPRED_25\x10\x45\x12\x19\n\x15PP13_SEL_EVENTPRED_26\x10\x46\x12\x19\n\x15PP13_SEL_EVENTPRED_27\x10G\x12\x19\n\x15PP13_SEL_EVENTPRED_28\x10H\x12\x19\n\x15PP13_SEL_EVENTPRED_29\x10I\x12\x19\n\x15PP13_SEL_EVENTPRED_30\x10J\x12\x19\n\x15PP13_SEL_EVENTPRED_31\x10K\x12\x19\n\x15PP13_SEL_EVENTPRED_32\x10L\x12\x19\n\x15PP13_SEL_EVENTPRED_33\x10M\x12\x19\n\x15PP13_SEL_EVENTPRED_34\x10N\x12\x19\n\x15PP13_SEL_EVENTPRED_35\x10O\x12\x19\n\x15PP13_SEL_EVENTPRED_36\x10P\x12\x19\n\x15PP13_SEL_EVENTPRED_37\x10Q\x12\x19\n\x15PP13_SEL_EVENTPRED_38\x10R\x12\x19\n\x15PP13_SEL_EVENTPRED_39\x10S\x12\x19\n\x15PP13_SEL_EVENTPRED_40\x10T\x12\x19\n\x15PP13_SEL_EVENTPRED_41\x10U\x12\x19\n\x15PP13_SEL_EVENTPRED_42\x10V\x12\x19\n\x15PP13_SEL_EVENTPRED_43\x10W\x12\x13\n\x0fPP13_SEL_SOLO_0\x10X\x12\x13\n\x0fPP13_SEL_SOLO_1\x10Y\x12\x13\n\x0fPP13_SEL_SOLO_2\x10Z\x12\x13\n\x0fPP13_SEL_SOLO_3\x10[\x12\x13\n\x0fPP13_SEL_SOLO_4\x10\\\x12\x13\n\x0fPP13_SEL_SOLO_5\x10]\x12\x13\n\x0fPP13_SEL_SOLO_6\x10^\x12\x13\n\x0fPP13_SEL_SOLO_7\x10_B\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n$dota_gcmessages_client_fantasy.proto\x12\x04\x64ota\x1a\x17\x64ota_shared_enums.proto\"\xcc\x01\n\x12\x43MsgDOTAPlayerInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x03 \x01(\t\x12\x14\n\x0c\x66\x61ntasy_role\x18\x04 \x01(\r\x12\x0f\n\x07team_id\x18\x05 \x01(\r\x12\x11\n\tteam_name\x18\x06 \x01(\t\x12\x10\n\x08team_tag\x18\x07 \x01(\t\x12\x0f\n\x07sponsor\x18\x08 \x01(\t\x12\x11\n\tis_locked\x18\t \x01(\x08\x12\x0e\n\x06is_pro\x18\n \x01(\x08\"H\n\x16\x43MsgDOTAPlayerInfoList\x12.\n\x0cplayer_infos\x18\x01 \x03(\x0b\x32\x18.dota.CMsgDOTAPlayerInfo\"\x96\x01\n\x14\x43MsgDOTALeaderboards\x12\x42\n\x0cleaderboards\x18\x02 \x03(\x0b\x32,.dota.CMsgDOTALeaderboards.RegionLeaderboard\x1a:\n\x11RegionLeaderboard\x12\x10\n\x08\x64ivision\x18\x01 \x01(\r\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x02 \x03(\r\"\xb3\x01\n\"CMsgDOTACreateFantasyLeagueRequest\x12\x13\n\x0bleague_name\x18\x01 \x01(\t\x12\x13\n\x0bleague_logo\x18\x02 \x01(\x04\x12O\n\x0eselection_mode\x18\x03 \x01(\x0e\x32\x1c.dota.Fantasy_Selection_Mode:\x19\x46\x41NTASY_SELECTION_INVALID\x12\x12\n\nteam_count\x18\x04 \x01(\r\"\xf8\x01\n#CMsgDOTACreateFantasyLeagueResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTACreateFantasyLeagueResponse.EResult:\x07SUCCESS\"\x84\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1a\n\x16\x45RROR_TOO_MANY_LEAGUES\x10\x02\x12\x1c\n\x18\x45RROR_INVALID_TEAM_COUNT\x10\x03\x12\x1b\n\x17\x45RROR_CREATION_DISABLED\x10\x04\"\x9f\x02\n\x18\x43MsgFantasyLeagueScoring\x12\r\n\x05level\x18\x01 \x01(\x02\x12\r\n\x05kills\x18\x02 \x01(\x02\x12\x0e\n\x06\x64\x65\x61ths\x18\x03 \x01(\x02\x12\x0f\n\x07\x61ssists\x18\x04 \x01(\x02\x12\x11\n\tlast_hits\x18\x05 \x01(\x02\x12\x0e\n\x06\x64\x65nies\x18\x06 \x01(\x02\x12\x0b\n\x03gpm\x18\x07 \x01(\x02\x12\x0c\n\x04xppm\x18\x08 \x01(\x02\x12\r\n\x05stuns\x18\t \x01(\x02\x12\x0f\n\x07healing\x18\n \x01(\x02\x12\x13\n\x0btower_kills\x18\x0b \x01(\x02\x12\x14\n\x0croshan_kills\x18\x0c \x01(\x02\x12\x1a\n\x12multiplier_premium\x18\r \x01(\x02\x12\x1f\n\x17multiplier_professional\x18\x0e \x01(\x02\"\xdd\x05\n\x19\x43MsgDOTAFantasyLeagueInfo\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x1f\n\x17\x63ommissioner_account_id\x18\x02 \x01(\r\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x03 \x01(\t\x12O\n\x0eselection_mode\x18\x04 \x01(\x0e\x32\x1c.dota.Fantasy_Selection_Mode:\x19\x46\x41NTASY_SELECTION_INVALID\x12\x12\n\nteam_count\x18\x05 \x01(\r\x12\x0c\n\x04logo\x18\x06 \x01(\x04\x12/\n\x07scoring\x18\x07 \x01(\x0b\x32\x1e.dota.CMsgFantasyLeagueScoring\x12\x12\n\ndraft_time\x18\x0c \x01(\r\x12\x17\n\x0f\x64raft_pick_time\x18\r \x01(\r\x12\x14\n\x0cseason_start\x18\x0f \x01(\r\x12\x15\n\rseason_length\x18\x10 \x01(\r\x12\x12\n\nveto_votes\x18\x11 \x01(\r\x12\x14\n\x0c\x61\x63quisitions\x18\x12 \x01(\r\x12\x0e\n\x06slot_1\x18\x13 \x01(\r\x12\x0e\n\x06slot_2\x18\x14 \x01(\r\x12\x0e\n\x06slot_3\x18\x15 \x01(\r\x12\x0e\n\x06slot_4\x18\x16 \x01(\r\x12\x0e\n\x06slot_5\x18\x17 \x01(\r\x12\x13\n\x0b\x62\x65nch_slots\x18\x18 \x01(\r\x12=\n\nowner_info\x18\x19 \x03(\x0b\x32).dota.CMsgDOTAFantasyLeagueInfo.OwnerInfo\x12\x0f\n\x07players\x18\x1a \x03(\r\x12\x11\n\ttime_zone\x18\x1b \x01(\r\x12\x0e\n\x06season\x18\x1c \x01(\r\x12\x10\n\x08password\x18\x1d \x01(\t\x1aU\n\tOwnerInfo\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\x12\x13\n\x0bleft_league\x18\x02 \x01(\x08\x12\x19\n\x11player_account_id\x18\x03 \x03(\r\"u\n$CMsgDOTAFantasyLeagueEditInfoRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x32\n\tedit_info\x18\x02 \x01(\x0b\x32\x1f.dota.CMsgDOTAFantasyLeagueInfo\"\xbd\x01\n%CMsgDOTAFantasyLeagueEditInfoResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyLeagueEditInfoResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"O\n CMsgDOTAFantasyLeagueFindRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\"\xcc\x02\n!CMsgDOTAFantasyLeagueFindResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyLeagueFindResponse.EResult:\x07SUCCESS\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x02 \x01(\t\x12\x19\n\x11\x63ommissioner_name\x18\x03 \x01(\t\"\xa4\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x1a\n\x16\x45RROR_LEAGUE_NOT_FOUND\x10\x01\x12\x16\n\x12\x45RROR_BAD_PASSWORD\x10\x02\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x03\x12\x0e\n\nERROR_FULL\x10\x04\x12\x18\n\x14\x45RROR_ALREADY_MEMBER\x10\x05\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\x06\"=\n CMsgDOTAFantasyLeagueInfoRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xb5\x01\n!CMsgDOTAFantasyLeagueInfoResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyLeagueInfoResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_BAD_LEAGUE_ID\x10\x02\"A\n$CMsgDOTAFantasyLeagueMatchupsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xa9\x04\n%CMsgDOTAFantasyLeagueMatchupsResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyLeagueMatchupsResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12S\n\x0fweekly_matchups\x18\x03 \x03(\x0b\x32:.dota.CMsgDOTAFantasyLeagueMatchupsResponse.WeeklyMatchups\x1a\x63\n\x07Matchup\x12\x1a\n\x12owner_account_id_1\x18\x01 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x02 \x01(\r\x12\x0f\n\x07score_1\x18\x03 \x01(\x02\x12\x0f\n\x07score_2\x18\x04 \x01(\x02\x1a|\n\x0eWeeklyMatchups\x12\x44\n\x07matchup\x18\x01 \x03(\x0b\x32\x33.dota.CMsgDOTAFantasyLeagueMatchupsResponse.Matchup\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x03 \x01(\r\"_\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_BAD_LEAGUE_ID\x10\x02\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x03\"u\n\x1e\x43MsgDOTAEditFantasyTeamRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x04\"\xed\x01\n\x1f\x43MsgDOTAEditFantasyTeamResponse\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32-.dota.CMsgDOTAEditFantasyTeamResponse.EResult:\x07SUCCESS\"\x81\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_TEAM_INFO\x10\x02\x12\x1c\n\x18\x45RROR_NAME_ALREADY_TAKEN\x10\x03\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x04\"L\n/CMsgDOTAFantasyTeamInfoRequestByFantasyLeagueID\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"J\n.CMsgDOTAFantasyTeamInfoRequestByOwnerAccountID\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\"Q\n\x1f\x43MsgDOTAFantasyTeamInfoResponse\x12.\n\x07results\x18\x01 \x03(\x0b\x32\x1d.dota.CMsgDOTAFantasyTeamInfo\"\xc6\x01\n\x17\x43MsgDOTAFantasyTeamInfo\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x11\n\tteam_name\x18\x04 \x01(\t\x12\x11\n\tteam_logo\x18\x05 \x01(\x04\x12\x0c\n\x04wins\x18\x06 \x01(\r\x12\x0e\n\x06losses\x18\x07 \x01(\r\x12\x16\n\x0e\x63urrent_roster\x18\x08 \x03(\r\"\xd6\x01\n\x1f\x43MsgDOTAFantasyTeamScoreRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x04 \x01(\x04\x12\x19\n\x11\x66ilter_start_time\x18\x05 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x06 \x01(\r\x12\x15\n\rinclude_bench\x18\x07 \x01(\x08\"\xfa\x02\n CMsgDOTAFantasyTeamScoreResponse\x12G\n\x06result\x18\x01 \x01(\x0e\x32..dota.CMsgDOTAFantasyTeamScoreResponse.EResult:\x07SUCCESS\x12\x1a\n\x12\x66\x61ntasy_team_score\x18\x02 \x01(\x02\x12T\n\x14\x66\x61ntasy_player_score\x18\x03 \x03(\x0b\x32\x36.dota.CMsgDOTAFantasyTeamScoreResponse.CMsgPlayerScore\x1a\x34\n\x0f\x43MsgPlayerScore\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\x02\"e\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x03\"\xcf\x01\n#CMsgDOTAFantasyTeamStandingsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x05 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x06 \x01(\x08\x12\x16\n\x0e\x66ilter_in_hall\x18\x07 \x01(\x08\"\x8b\x04\n$CMsgDOTAFantasyTeamStandingsResponse\x12K\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgDOTAFantasyTeamStandingsResponse.EResult:\x07SUCCESS\x12M\n\x0bteam_scores\x18\x03 \x03(\x0b\x32\x38.dota.CMsgDOTAFantasyTeamStandingsResponse.CMsgTeamScore\x1a\xfe\x01\n\rCMsgTeamScore\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x03 \x01(\r\x12\x19\n\x11\x66\x61ntasy_team_logo\x18\x04 \x01(\x04\x12\x12\n\nowner_name\x18\x05 \x01(\t\x12\x19\n\x11\x66\x61ntasy_team_name\x18\x06 \x01(\t\x12\r\n\x05score\x18\x07 \x01(\x02\x12\x15\n\rscore_against\x18\x08 \x01(\x02\x12\x0c\n\x04wins\x18\t \x01(\r\x12\x0e\n\x06losses\x18\n \x01(\r\x12\x0e\n\x06streak\x18\x0b \x01(\x05\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\xc1\x01\n!CMsgDOTAFantasyPlayerScoreRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x05 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x06 \x01(\x08\"\x91\x02\n\"CMsgDOTAFantasyPlayerScoreResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyPlayerScoreResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12\x19\n\x11player_account_id\x18\x03 \x01(\r\x12\x13\n\x0bplayer_name\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x02\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\xc7\x01\n%CMsgDOTAFantasyPlayerStandingsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x12\x19\n\x11\x66ilter_start_time\x18\x04 \x01(\r\x12\x17\n\x0f\x66ilter_end_time\x18\x05 \x01(\r\x12\x17\n\x0f\x66ilter_match_id\x18\x06 \x01(\x04\x12\x19\n\x11\x66ilter_last_match\x18\x07 \x01(\x08\"\x8f\x03\n&CMsgDOTAFantasyPlayerStandingsResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgDOTAFantasyPlayerStandingsResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x12S\n\rplayer_scores\x18\x04 \x03(\x0b\x32<.dota.CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore\x1aP\n\x0f\x43MsgPlayerScore\x12\x19\n\x11player_account_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\x02\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\x9f\x01\n\"CMsgDOTAFantasyLeagueCreateRequest\x12\x11\n\tseason_id\x18\x01 \x01(\r\x12\x1b\n\x13\x66\x61ntasy_league_name\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\x12\x11\n\tteam_name\x18\x04 \x01(\t\x12\x0c\n\x04logo\x18\x05 \x01(\x04\x12\x16\n\x0eticket_item_id\x18\x06 \x01(\x04\"\xd5\x02\n#CMsgDOTAFantasyLeagueCreateResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTAFantasyLeagueCreateResponse.EResult:\x07SUCCESS\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x02 \x01(\r\"\xc6\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x01\x12\x17\n\x13\x45RROR_BAD_SEASON_ID\x10\x02\x12\x19\n\x15\x45RROR_BAD_LEAGUE_NAME\x10\x03\x12\x17\n\x13\x45RROR_BAD_TEAM_NAME\x10\x04\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x05\x12\x1c\n\x18\x45RROR_FAILED_LOGO_UPLOAD\x10\x06\x12\x13\n\x0f\x45RROR_NO_TICKET\x10\x07\"\x88\x01\n CMsgDOTAFantasyTeamCreateRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x0c\n\x04logo\x18\x04 \x01(\x04\x12\x16\n\x0eticket_item_id\x18\x05 \x01(\x04\"\x95\x03\n!CMsgDOTAFantasyTeamCreateResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamCreateResponse.EResult:\x07SUCCESS\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x02 \x01(\r\"\x89\x02\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x01\x12\x1c\n\x18\x45RROR_FAILED_LOGO_UPLOAD\x10\x02\x12\x1f\n\x1b\x45RROR_BAD_FANTASY_LEAGUE_ID\x10\x03\x12\x12\n\x0e\x45RROR_BAD_NAME\x10\x04\x12\x0e\n\nERROR_FULL\x10\x05\x12\x18\n\x14\x45RROR_ALREADY_MEMBER\x10\x06\x12\x16\n\x12\x45RROR_BAD_PASSWORD\x10\x07\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x08\x12\x13\n\x0f\x45RROR_NO_TICKET\x10\t\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\n\"\xde\x01\n\'CMsgDOTAFantasyLeagueEditInvitesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x10\n\x08password\x18\x02 \x01(\t\x12Q\n\rinvite_change\x18\x03 \x03(\x0b\x32:.dota.CMsgDOTAFantasyLeagueEditInvitesRequest.InviteChange\x1a\x33\n\x0cInviteChange\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07invited\x18\x02 \x01(\x08\"\xaa\x01\n(CMsgDOTAFantasyLeagueEditInvitesResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyLeagueEditInvitesResponse.EResult:\x07SUCCESS\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"D\n\'CMsgDOTAFantasyLeagueDraftStatusRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xc6\x01\n CMsgDOTAFantasyLeagueDraftStatus\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x13\n\x0b\x64raft_order\x18\x02 \x03(\r\x12\x14\n\x0c\x63urrent_pick\x18\x03 \x01(\r\x12\x16\n\x0etime_remaining\x18\x04 \x01(\r\x12\x16\n\x0epending_resume\x18\x05 \x01(\x08\x12\x11\n\tcompleted\x18\x06 \x01(\x08\x12\x19\n\x11\x61vailable_players\x18\x07 \x03(\r\"s\n\'CMsgDOTAFantasyLeagueDraftPlayerRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x19\n\x11player_account_id\x18\x03 \x01(\r\"\x87\x03\n(CMsgDOTAFantasyLeagueDraftPlayerResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyLeagueDraftPlayerResponse.EResult:\x07SUCCESS\"\x89\x02\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12 \n\x1c\x45RROR_INVALID_FANTASY_LEAGUE\x10\x02\x12%\n!ERROR_FANTASY_LEAGUE_NOT_DRAFTING\x10\x03\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x04\x12\x19\n\x15\x45RROR_NOT_OWNERS_TURN\x10\x05\x12\x18\n\x14\x45RROR_PLAYER_INVALID\x10\x06\x12\x1c\n\x18\x45RROR_PLAYER_UNAVAILABLE\x10\x07\x12\x1f\n\x1b\x45RROR_PLAYER_NO_VALID_SLOTS\x10\x08\"\x88\x01\n$CMsgDOTAFantasyTeamRosterSwapRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x0e\n\x06slot_1\x18\x04 \x01(\r\x12\x0e\n\x06slot_2\x18\x05 \x01(\r\"\xf3\x01\n%CMsgDOTAFantasyTeamRosterSwapResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgDOTAFantasyTeamRosterSwapResponse.EResult:\x07SUCCESS\"|\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x02\x12\x17\n\x13\x45RROR_SLOTS_INVALID\x10\x03\x12\x15\n\x11\x45RROR_SLOT_LOCKED\x10\x04\"\x89\x01\n\'CMsgDOTAFantasyTeamRosterAddDropRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x16\n\x0e\x61\x64\x64_account_id\x18\x05 \x01(\r\x12\x17\n\x0f\x64rop_account_id\x18\x06 \x01(\r\"\xa9\x02\n(CMsgDOTAFantasyTeamRosterAddDropResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgDOTAFantasyTeamRosterAddDropResponse.EResult:\x07SUCCESS\"\xab\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x02\x12\x1e\n\x1a\x45RROR_PLAYER_NOT_AVAILABLE\x10\x03\x12\x1c\n\x18\x45RROR_PLAYER_NOT_ON_TEAM\x10\x04\x12\x1f\n\x1b\x45RROR_TRADE_ALREADY_PENDING\x10\x05\"=\n CMsgDOTAFantasyTeamTradesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x93\x03\n!CMsgDOTAFantasyTeamTradesResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamTradesResponse.EResult:\x07SUCCESS\x12=\n\x06trades\x18\x02 \x03(\x0b\x32-.dota.CMsgDOTAFantasyTeamTradesResponse.Trade\x1a\x9c\x01\n\x05Trade\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x1a\n\x12owner_account_id_1\x18\x02 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x03 \x01(\r\x12\x1b\n\x13player_account_id_1\x18\x04 \x01(\r\x12\x1b\n\x13player_account_id_2\x18\x05 \x01(\r\x12\x0e\n\x06status\x18\x06 \x01(\r\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\x8a\x01\n%CMsgDOTAFantasyTeamTradeCancelRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x14\n\x0cteam_index_1\x18\x03 \x01(\r\x12\x1a\n\x12owner_account_id_2\x18\x04 \x01(\r\x12\x14\n\x0cteam_index_2\x18\x05 \x01(\r\"\xd3\x01\n&CMsgDOTAFantasyTeamTradeCancelResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32\x34.dota.CMsgDOTAFantasyTeamTradeCancelResponse.EResult:\x07SUCCESS\"Z\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x12\n\x0e\x45RROR_NO_TRADE\x10\x03\"~\n CMsgDOTAFantasyTeamRosterRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x12\n\nteam_index\x18\x02 \x01(\r\x12\x18\n\x10owner_account_id\x18\x03 \x01(\r\x12\x11\n\ttimestamp\x18\x04 \x01(\r\"\x87\x02\n!CMsgDOTAFantasyTeamRosterResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAFantasyTeamRosterResponse.EResult:\x07SUCCESS\x12\x1a\n\x12player_account_ids\x18\x02 \x03(\r\x12\x15\n\rplayer_locked\x18\x03 \x03(\x08\"e\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x1d\n\x19\x45RROR_OWNER_NOT_IN_LEAGUE\x10\x03\"G\n*CMsgDOTAFantasyPlayerHisoricalStatsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\x95\x06\n+CMsgDOTAFantasyPlayerHisoricalStatsResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.EResult:\x07SUCCESS\x12L\n\x05stats\x18\x02 \x03(\x0b\x32=.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerStats\x1a\x81\x02\n\x16PlayerScoreAccumulator\x12\x0f\n\x07matches\x18\x01 \x01(\r\x12\x0e\n\x06levels\x18\x02 \x01(\x02\x12\r\n\x05kills\x18\x03 \x01(\x02\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\x02\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\x02\x12\x11\n\tlast_hits\x18\x06 \x01(\x02\x12\x0e\n\x06\x64\x65nies\x18\x07 \x01(\x02\x12\x0b\n\x03gpm\x18\x08 \x01(\x02\x12\x0c\n\x04xppm\x18\t \x01(\x02\x12\r\n\x05stuns\x18\n \x01(\x02\x12\x0f\n\x07healing\x18\x0b \x01(\x02\x12\x13\n\x0btower_kills\x18\x0c \x01(\x02\x12\x14\n\x0croshan_kills\x18\r \x01(\x02\x12\r\n\x05score\x18\x0e \x01(\x02\x1a\xf7\x01\n\x0bPlayerStats\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\r\n\x05weeks\x18\x02 \x01(\r\x12_\n\rstats_premium\x18\x04 \x01(\x0b\x32H.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator\x12\x64\n\x12stats_professional\x18\x05 \x01(\x0b\x32H.dota.CMsgDOTAFantasyPlayerHisoricalStatsResponse.PlayerScoreAccumulator\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"G\n\x19\x43MsgDOTAFantasyMessageAdd\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\"g\n\x1e\x43MsgDOTAFantasyMessagesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x15\n\rstart_message\x18\x02 \x01(\r\x12\x13\n\x0b\x65nd_message\x18\x03 \x01(\r\"\xe7\x02\n\x1f\x43MsgDOTAFantasyMessagesResponse\x12\x46\n\x06result\x18\x01 \x01(\x0e\x32-.dota.CMsgDOTAFantasyMessagesResponse.EResult:\x07SUCCESS\x12?\n\x08messages\x18\x02 \x03(\x0b\x32-.dota.CMsgDOTAFantasyMessagesResponse.Message\x12\x1a\n\x12num_total_messages\x18\x03 \x01(\r\x1aW\n\x07Message\x12\x12\n\nmessage_id\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x19\n\x11\x61uthor_account_id\x18\x03 \x01(\r\x12\x0c\n\x04time\x18\x04 \x01(\r\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"e\n\x1a\x43MsgDOTAFantasyRemoveOwner\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x18\n\x10owner_account_id\x18\x02 \x01(\r\x12\x12\n\nteam_index\x18\x03 \x01(\r\"\xe8\x01\n\"CMsgDOTAFantasyRemoveOwnerResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyRemoveOwnerResponse.EResult:\x07SUCCESS\"w\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x17\n\x13\x45RROR_LEAGUE_LOCKED\x10\x03\x12\x16\n\x12\x45RROR_NOT_A_MEMBER\x10\x04\"C\n&CMsgDOTAFantasyScheduledMatchesRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\"\xd7\x02\n\'CMsgDOTAFantasyScheduledMatchesResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgDOTAFantasyScheduledMatchesResponse.EResult:\x07SUCCESS\x12^\n\x14scheduled_match_days\x18\x02 \x03(\x0b\x32@.dota.CMsgDOTAFantasyScheduledMatchesResponse.ScheduledMatchDays\x1aM\n\x12ScheduledMatchDays\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x10\n\x08team_ids\x18\x02 \x03(\r\x12\x12\n\nleague_ids\x18\x03 \x03(\r\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"Z\n!CMsgDOTAFantasyLeaveLeagueRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x1a\n\x12\x66\x61ntasy_team_index\x18\x02 \x01(\r\"\xe8\x01\n\"CMsgDOTAFantasyLeaveLeagueResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAFantasyLeaveLeagueResponse.EResult:\x07SUCCESS\"w\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x14\n\x10\x45RROR_NOT_MEMBER\x10\x02\x12\x1a\n\x16\x45RROR_LEAGUE_NOT_FOUND\x10\x03\x12\x16\n\x12\x45RROR_DRAFT_ACTIVE\x10\x04\"\x86\x01\n(CMsgDOTAFantasyPlayerScoreDetailsRequest\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x01 \x01(\r\x12\x19\n\x11player_account_id\x18\x02 \x01(\r\x12\x12\n\nstart_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\"\x90\x04\n)CMsgDOTAFantasyPlayerScoreDetailsResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.EResult:\x07SUCCESS\x12M\n\x04\x64\x61ta\x18\x02 \x03(\x0b\x32?.dota.CMsgDOTAFantasyPlayerScoreDetailsResponse.PlayerMatchData\x1a\xfc\x01\n\x0fPlayerMatchData\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tseries_id\x18\x02 \x01(\r\x12\x12\n\nseries_num\x18\x03 \x01(\r\x12\x13\n\x0bseries_type\x18\x04 \x01(\r\x12\x13\n\x0bleague_tier\x18\x05 \x01(\r\x12\x11\n\tleague_id\x18\x06 \x01(\r\x12\x18\n\x10opposing_team_id\x18\x07 \x01(\r\x12\x1a\n\x12opposing_team_logo\x18\x08 \x01(\x04\x12\x1a\n\x12opposing_team_name\x18\t \x01(\t\x12\x10\n\x08owned_by\x18\x0b \x01(\r\x12\x0f\n\x07\x62\x65nched\x18\x0c \x01(\x08\"C\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x14\n\x10\x45RROR_NOT_MEMBER\x10\x02\"Z\n\x1d\x43MsgDOTAPassportVoteTeamGuess\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\twinner_id\x18\x02 \x01(\r\x12\x13\n\x0brunnerup_id\x18\x03 \x01(\r\"\x96\x01\n$CMsgDOTAPassportVoteGenericSelection\x12[\n\x0fselection_index\x18\x01 \x01(\x0e\x32\'.dota.DOTA_2013PassportSelectionIndices:\x19PP13_SEL_ALLSTAR_PLAYER_0\x12\x11\n\tselection\x18\x02 \x01(\r\"F\n\x1d\x43MsgDOTAPassportStampedPlayer\x12\x10\n\x08steam_id\x18\x01 \x01(\x04\x12\x13\n\x0bstamp_level\x18\x02 \x01(\r\";\n#CMsgDOTAPassportPlayerCardChallenge\x12\x14\n\x0c\x63hallenge_id\x18\x01 \x01(\r\"\xa0\x02\n\x14\x43MsgDOTAPassportVote\x12\x37\n\nteam_votes\x18\x01 \x03(\x0b\x32#.dota.CMsgDOTAPassportVoteTeamGuess\x12\x46\n\x12generic_selections\x18\x02 \x03(\x0b\x32*.dota.CMsgDOTAPassportVoteGenericSelection\x12<\n\x0fstamped_players\x18\x03 \x03(\x0b\x32#.dota.CMsgDOTAPassportStampedPlayer\x12I\n\x16player_card_challenges\x18\x04 \x03(\x0b\x32).dota.CMsgDOTAPassportPlayerCardChallenge\"P\n(CMsgClientToGCGetPlayerCardRosterRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\"\xb7\x02\n)CMsgClientToGCGetPlayerCardRosterResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCGetPlayerCardRosterResponse.Result:\x07SUCCESS\x12\x1b\n\x13player_card_item_id\x18\x02 \x03(\x04\x12\r\n\x05score\x18\x03 \x01(\x02\x12\x11\n\tfinalized\x18\x04 \x01(\x08\x12\x12\n\npercentile\x18\x05 \x01(\x02\"f\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_LEAGUE_ID\x10\x02\x12\x1b\n\x17\x45RROR_INVALID_TIMESTAMP\x10\x03\"\x8d\x01\n(CMsgClientToGCSetPlayerCardRosterRequest\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x0c\n\x04slot\x18\x03 \x01(\r\x12\x1b\n\x13player_card_item_id\x18\x04 \x01(\x04\x12\x10\n\x08\x65vent_id\x18\x05 \x01(\r\"\xf3\x02\n)CMsgClientToGCSetPlayerCardRosterResponse\x12O\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCSetPlayerCardRosterResponse.Result:\x07SUCCESS\"\xf4\x01\n\x06Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_LEAGUE_ID\x10\x02\x12\x1b\n\x17\x45RROR_INVALID_TIMESTAMP\x10\x03\x12\x1f\n\x1b\x45RROR_PLAYER_CARD_NOT_OWNED\x10\x04\x12\x16\n\x12\x45RROR_INVALID_SLOT\x10\x05\x12\x1a\n\x16\x45RROR_FAILED_CARD_INFO\x10\x06\x12\x1b\n\x17\x45RROR_ACCOUNT_DUPLICATE\x10\x07\x12\x1a\n\x16\x45RROR_LOCKED_TIMESTAMP\x10\x08*\xa3\x15\n!DOTA_2013PassportSelectionIndices\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_0\x10\x00\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_1\x10\x01\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_2\x10\x02\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_3\x10\x03\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_4\x10\x04\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_5\x10\x05\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_6\x10\x06\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_7\x10\x07\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_8\x10\x08\x12\x1d\n\x19PP13_SEL_ALLSTAR_PLAYER_9\x10\t\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_0\x10\n\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_1\x10\x0b\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_2\x10\x0c\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_3\x10\r\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_4\x10\x0e\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_5\x10\x0f\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_6\x10\x10\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_7\x10\x11\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_8\x10\x12\x12\x1c\n\x18PP13_SEL_QUALPRED_WEST_9\x10\x13\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_10\x10\x14\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_11\x10\x15\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_12\x10\x16\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_13\x10\x17\x12\x1d\n\x19PP13_SEL_QUALPRED_WEST_14\x10\x18\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_0\x10\x19\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_1\x10\x1a\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_2\x10\x1b\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_3\x10\x1c\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_4\x10\x1d\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_5\x10\x1e\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_6\x10\x1f\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_7\x10 \x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_8\x10!\x12\x1c\n\x18PP13_SEL_QUALPRED_EAST_9\x10\"\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_10\x10#\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_11\x10$\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_12\x10%\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_13\x10&\x12\x1d\n\x19PP13_SEL_QUALPRED_EAST_14\x10\'\x12\x19\n\x15PP13_SEL_TEAMCUP_TEAM\x10(\x12\x1b\n\x17PP13_SEL_TEAMCUP_PLAYER\x10)\x12\x1e\n\x1aPP13_SEL_TEAMCUP_TEAM_LOCK\x10*\x12 \n\x1cPP13_SEL_TEAMCUP_PLAYER_LOCK\x10+\x12\x18\n\x14PP13_SEL_EVENTPRED_0\x10,\x12\x18\n\x14PP13_SEL_EVENTPRED_1\x10-\x12\x18\n\x14PP13_SEL_EVENTPRED_2\x10.\x12\x18\n\x14PP13_SEL_EVENTPRED_3\x10/\x12\x18\n\x14PP13_SEL_EVENTPRED_4\x10\x30\x12\x18\n\x14PP13_SEL_EVENTPRED_5\x10\x31\x12\x18\n\x14PP13_SEL_EVENTPRED_6\x10\x32\x12\x18\n\x14PP13_SEL_EVENTPRED_7\x10\x33\x12\x18\n\x14PP13_SEL_EVENTPRED_8\x10\x34\x12\x18\n\x14PP13_SEL_EVENTPRED_9\x10\x35\x12\x19\n\x15PP13_SEL_EVENTPRED_10\x10\x36\x12\x19\n\x15PP13_SEL_EVENTPRED_11\x10\x37\x12\x19\n\x15PP13_SEL_EVENTPRED_12\x10\x38\x12\x19\n\x15PP13_SEL_EVENTPRED_13\x10\x39\x12\x19\n\x15PP13_SEL_EVENTPRED_14\x10:\x12\x19\n\x15PP13_SEL_EVENTPRED_15\x10;\x12\x19\n\x15PP13_SEL_EVENTPRED_16\x10<\x12\x19\n\x15PP13_SEL_EVENTPRED_17\x10=\x12\x19\n\x15PP13_SEL_EVENTPRED_18\x10>\x12\x19\n\x15PP13_SEL_EVENTPRED_19\x10?\x12\x19\n\x15PP13_SEL_EVENTPRED_20\x10@\x12\x19\n\x15PP13_SEL_EVENTPRED_21\x10\x41\x12\x19\n\x15PP13_SEL_EVENTPRED_22\x10\x42\x12\x19\n\x15PP13_SEL_EVENTPRED_23\x10\x43\x12\x19\n\x15PP13_SEL_EVENTPRED_24\x10\x44\x12\x19\n\x15PP13_SEL_EVENTPRED_25\x10\x45\x12\x19\n\x15PP13_SEL_EVENTPRED_26\x10\x46\x12\x19\n\x15PP13_SEL_EVENTPRED_27\x10G\x12\x19\n\x15PP13_SEL_EVENTPRED_28\x10H\x12\x19\n\x15PP13_SEL_EVENTPRED_29\x10I\x12\x19\n\x15PP13_SEL_EVENTPRED_30\x10J\x12\x19\n\x15PP13_SEL_EVENTPRED_31\x10K\x12\x19\n\x15PP13_SEL_EVENTPRED_32\x10L\x12\x19\n\x15PP13_SEL_EVENTPRED_33\x10M\x12\x19\n\x15PP13_SEL_EVENTPRED_34\x10N\x12\x19\n\x15PP13_SEL_EVENTPRED_35\x10O\x12\x19\n\x15PP13_SEL_EVENTPRED_36\x10P\x12\x19\n\x15PP13_SEL_EVENTPRED_37\x10Q\x12\x19\n\x15PP13_SEL_EVENTPRED_38\x10R\x12\x19\n\x15PP13_SEL_EVENTPRED_39\x10S\x12\x19\n\x15PP13_SEL_EVENTPRED_40\x10T\x12\x19\n\x15PP13_SEL_EVENTPRED_41\x10U\x12\x19\n\x15PP13_SEL_EVENTPRED_42\x10V\x12\x19\n\x15PP13_SEL_EVENTPRED_43\x10W\x12\x13\n\x0fPP13_SEL_SOLO_0\x10X\x12\x13\n\x0fPP13_SEL_SOLO_1\x10Y\x12\x13\n\x0fPP13_SEL_SOLO_2\x10Z\x12\x13\n\x0fPP13_SEL_SOLO_3\x10[\x12\x13\n\x0fPP13_SEL_SOLO_4\x10\\\x12\x13\n\x0fPP13_SEL_SOLO_5\x10]\x12\x13\n\x0fPP13_SEL_SOLO_6\x10^\x12\x13\n\x0fPP13_SEL_SOLO_7\x10_B\x05H\x01\x90\x01\x00')
   ,
   dependencies=[dota__shared__enums__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -419,8 +419,8 @@ _DOTA_2013PASSPORTSELECTIONINDICES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15927,
-  serialized_end=18650,
+  serialized_start=15781,
+  serialized_end=18504,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_2013PASSPORTSELECTIONINDICES)
 
@@ -552,8 +552,8 @@ _CMSGDOTACREATEFANTASYLEAGUERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=840,
-  serialized_end=972,
+  serialized_start=804,
+  serialized_end=936,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTACREATEFANTASYLEAGUERESPONSE_ERESULT)
 
@@ -578,8 +578,8 @@ _CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2239,
-  serialized_end=2309,
+  serialized_start=2203,
+  serialized_end=2273,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE_ERESULT)
 
@@ -620,8 +620,8 @@ _CMSGDOTAFANTASYLEAGUEFINDRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2561,
-  serialized_end=2725,
+  serialized_start=2525,
+  serialized_end=2689,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEFINDRESPONSE_ERESULT)
 
@@ -646,8 +646,8 @@ _CMSGDOTAFANTASYLEAGUEINFORESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2902,
-  serialized_end=2972,
+  serialized_start=2866,
+  serialized_end=2936,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEINFORESPONSE_ERESULT)
 
@@ -676,8 +676,8 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3500,
-  serialized_end=3595,
+  serialized_start=3464,
+  serialized_end=3559,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_ERESULT)
 
@@ -710,8 +710,8 @@ _CMSGDOTAEDITFANTASYTEAMRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3825,
-  serialized_end=3954,
+  serialized_start=3789,
+  serialized_end=3918,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAEDITFANTASYTEAMRESPONSE_ERESULT)
 
@@ -740,8 +740,8 @@ _CMSGDOTAFANTASYTEAMSCORERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4889,
-  serialized_end=4990,
+  serialized_start=4853,
+  serialized_end=4954,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMSCORERESPONSE_ERESULT)
 
@@ -766,8 +766,8 @@ _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2239,
-  serialized_end=2309,
+  serialized_start=2203,
+  serialized_end=2273,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_ERESULT)
 
@@ -792,8 +792,8 @@ _CMSGDOTAFANTASYPLAYERSCORERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2239,
-  serialized_end=2309,
+  serialized_start=2203,
+  serialized_end=2273,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYPLAYERSCORERESPONSE_ERESULT)
 
@@ -818,8 +818,8 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2239,
-  serialized_end=2309,
+  serialized_start=2203,
+  serialized_end=2273,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_ERESULT)
 
@@ -864,8 +864,8 @@ _CMSGDOTAFANTASYLEAGUECREATERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7220,
-  serialized_end=7418,
+  serialized_start=7074,
+  serialized_end=7272,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUECREATERESPONSE_ERESULT)
 
@@ -922,8 +922,8 @@ _CMSGDOTAFANTASYTEAMCREATERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7700,
-  serialized_end=7965,
+  serialized_start=7554,
+  serialized_end=7819,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMCREATERESPONSE_ERESULT)
 
@@ -944,8 +944,8 @@ _CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=840,
-  serialized_end=885,
+  serialized_start=804,
+  serialized_end=849,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE_ERESULT)
 
@@ -994,8 +994,8 @@ _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8880,
-  serialized_end=9145,
+  serialized_start=8734,
+  serialized_end=8999,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE_ERESULT)
 
@@ -1028,8 +1028,8 @@ _CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9406,
-  serialized_end=9530,
+  serialized_start=9260,
+  serialized_end=9384,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE_ERESULT)
 
@@ -1066,8 +1066,8 @@ _CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=9799,
-  serialized_end=9970,
+  serialized_start=9653,
+  serialized_end=9824,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE_ERESULT)
 
@@ -1092,8 +1092,8 @@ _CMSGDOTAFANTASYTEAMTRADESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2239,
-  serialized_end=2309,
+  serialized_start=2203,
+  serialized_end=2273,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMTRADESRESPONSE_ERESULT)
 
@@ -1122,8 +1122,8 @@ _CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10704,
-  serialized_end=10794,
+  serialized_start=10558,
+  serialized_end=10648,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE_ERESULT)
 
@@ -1152,8 +1152,8 @@ _CMSGDOTAFANTASYTEAMROSTERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4889,
-  serialized_end=4990,
+  serialized_start=4853,
+  serialized_end=4954,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYTEAMROSTERRESPONSE_ERESULT)
 
@@ -1178,8 +1178,8 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_ERESULT = _descriptor.EnumDescripto
   ],
   containing_type=None,
   options=None,
-  serialized_start=2239,
-  serialized_end=2309,
+  serialized_start=2203,
+  serialized_end=2273,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_ERESULT)
 
@@ -1204,8 +1204,8 @@ _CMSGDOTAFANTASYMESSAGESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2239,
-  serialized_end=2309,
+  serialized_start=2203,
+  serialized_end=2273,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYMESSAGESRESPONSE_ERESULT)
 
@@ -1238,8 +1238,8 @@ _CMSGDOTAFANTASYREMOVEOWNERRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=12812,
-  serialized_end=12931,
+  serialized_start=12666,
+  serialized_end=12785,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYREMOVEOWNERRESPONSE_ERESULT)
 
@@ -1260,8 +1260,8 @@ _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=840,
-  serialized_end=885,
+  serialized_start=804,
+  serialized_end=849,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_ERESULT)
 
@@ -1294,8 +1294,8 @@ _CMSGDOTAFANTASYLEAVELEAGUERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13554,
-  serialized_end=13673,
+  serialized_start=13408,
+  serialized_end=13527,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYLEAVELEAGUERESPONSE_ERESULT)
 
@@ -1320,8 +1320,8 @@ _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=13554,
-  serialized_end=13621,
+  serialized_start=13408,
+  serialized_end=13475,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_ERESULT)
 
@@ -1350,8 +1350,8 @@ _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15304,
-  serialized_end=15406,
+  serialized_start=15158,
+  serialized_end=15260,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE_RESULT)
 
@@ -1400,107 +1400,86 @@ _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=15680,
-  serialized_end=15924,
+  serialized_start=15534,
+  serialized_end=15778,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE_RESULT)
 
 
-_CMSGGCPLAYERINFO_PLAYERINFO = _descriptor.Descriptor(
-  name='PlayerInfo',
-  full_name='dota.CMsgGCPlayerInfo.PlayerInfo',
+_CMSGDOTAPLAYERINFO = _descriptor.Descriptor(
+  name='CMsgDOTAPlayerInfo',
+  full_name='dota.CMsgDOTAPlayerInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.account_id', index=0,
+      name='account_id', full_name='dota.CMsgDOTAPlayerInfo.account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.name', index=1,
+      name='name', full_name='dota.CMsgDOTAPlayerInfo.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='country_code', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.country_code', index=2,
+      name='country_code', full_name='dota.CMsgDOTAPlayerInfo.country_code', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fantasy_role', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.fantasy_role', index=3,
+      name='fantasy_role', full_name='dota.CMsgDOTAPlayerInfo.fantasy_role', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_id', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.team_id', index=4,
+      name='team_id', full_name='dota.CMsgDOTAPlayerInfo.team_id', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_name', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.team_name', index=5,
+      name='team_name', full_name='dota.CMsgDOTAPlayerInfo.team_name', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='team_tag', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.team_tag', index=6,
+      name='team_tag', full_name='dota.CMsgDOTAPlayerInfo.team_tag', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sponsor', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.sponsor', index=7,
+      name='sponsor', full_name='dota.CMsgDOTAPlayerInfo.sponsor', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_locked', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.is_locked', index=8,
+      name='is_locked', full_name='dota.CMsgDOTAPlayerInfo.is_locked', index=8,
       number=9, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_pro', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.is_pro', index=9,
+      name='is_pro', full_name='dota.CMsgDOTAPlayerInfo.is_pro', index=9,
       number=10, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='locked_until', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.locked_until', index=10,
-      number=11, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='timestamp', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.timestamp', index=11,
-      number=12, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='registered_team_id', full_name='dota.CMsgGCPlayerInfo.PlayerInfo.registered_team_id', index=12,
-      number=13, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1516,26 +1495,58 @@ _CMSGGCPLAYERINFO_PLAYERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=214,
-  serialized_end=479,
+  serialized_start=72,
+  serialized_end=276,
 )
 
-_CMSGGCPLAYERINFO_REGIONLEADERBOARD = _descriptor.Descriptor(
-  name='RegionLeaderboard',
-  full_name='dota.CMsgGCPlayerInfo.RegionLeaderboard',
+
+_CMSGDOTAPLAYERINFOLIST = _descriptor.Descriptor(
+  name='CMsgDOTAPlayerInfoList',
+  full_name='dota.CMsgDOTAPlayerInfoList',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='division', full_name='dota.CMsgGCPlayerInfo.RegionLeaderboard.division', index=0,
+      name='player_infos', full_name='dota.CMsgDOTAPlayerInfoList.player_infos', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=278,
+  serialized_end=350,
+)
+
+
+_CMSGDOTALEADERBOARDS_REGIONLEADERBOARD = _descriptor.Descriptor(
+  name='RegionLeaderboard',
+  full_name='dota.CMsgDOTALeaderboards.RegionLeaderboard',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='division', full_name='dota.CMsgDOTALeaderboards.RegionLeaderboard.division', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='account_ids', full_name='dota.CMsgGCPlayerInfo.RegionLeaderboard.account_ids', index=1,
+      name='account_ids', full_name='dota.CMsgDOTALeaderboards.RegionLeaderboard.account_ids', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1553,26 +1564,19 @@ _CMSGGCPLAYERINFO_REGIONLEADERBOARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=481,
-  serialized_end=539,
+  serialized_start=445,
+  serialized_end=503,
 )
 
-_CMSGGCPLAYERINFO = _descriptor.Descriptor(
-  name='CMsgGCPlayerInfo',
-  full_name='dota.CMsgGCPlayerInfo',
+_CMSGDOTALEADERBOARDS = _descriptor.Descriptor(
+  name='CMsgDOTALeaderboards',
+  full_name='dota.CMsgDOTALeaderboards',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player_infos', full_name='dota.CMsgGCPlayerInfo.player_infos', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='leaderboards', full_name='dota.CMsgGCPlayerInfo.leaderboards', index=1,
+      name='leaderboards', full_name='dota.CMsgDOTALeaderboards.leaderboards', index=0,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1581,7 +1585,7 @@ _CMSGGCPLAYERINFO = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CMSGGCPLAYERINFO_PLAYERINFO, _CMSGGCPLAYERINFO_REGIONLEADERBOARD, ],
+  nested_types=[_CMSGDOTALEADERBOARDS_REGIONLEADERBOARD, ],
   enum_types=[
   ],
   options=None,
@@ -1590,8 +1594,8 @@ _CMSGGCPLAYERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=72,
-  serialized_end=539,
+  serialized_start=353,
+  serialized_end=503,
 )
 
 
@@ -1642,8 +1646,8 @@ _CMSGDOTACREATEFANTASYLEAGUEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=542,
-  serialized_end=721,
+  serialized_start=506,
+  serialized_end=685,
 )
 
 
@@ -1674,8 +1678,8 @@ _CMSGDOTACREATEFANTASYLEAGUERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=724,
-  serialized_end=972,
+  serialized_start=688,
+  serialized_end=936,
 )
 
 
@@ -1796,8 +1800,8 @@ _CMSGFANTASYLEAGUESCORING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=975,
-  serialized_end=1262,
+  serialized_start=939,
+  serialized_end=1226,
 )
 
 
@@ -1841,8 +1845,8 @@ _CMSGDOTAFANTASYLEAGUEINFO_OWNERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1913,
-  serialized_end=1998,
+  serialized_start=1877,
+  serialized_end=1962,
 )
 
 _CMSGDOTAFANTASYLEAGUEINFO = _descriptor.Descriptor(
@@ -2032,8 +2036,8 @@ _CMSGDOTAFANTASYLEAGUEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1265,
-  serialized_end=1998,
+  serialized_start=1229,
+  serialized_end=1962,
 )
 
 
@@ -2070,8 +2074,8 @@ _CMSGDOTAFANTASYLEAGUEEDITINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2000,
-  serialized_end=2117,
+  serialized_start=1964,
+  serialized_end=2081,
 )
 
 
@@ -2102,8 +2106,8 @@ _CMSGDOTAFANTASYLEAGUEEDITINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2120,
-  serialized_end=2309,
+  serialized_start=2084,
+  serialized_end=2273,
 )
 
 
@@ -2140,8 +2144,8 @@ _CMSGDOTAFANTASYLEAGUEFINDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2311,
-  serialized_end=2390,
+  serialized_start=2275,
+  serialized_end=2354,
 )
 
 
@@ -2186,8 +2190,8 @@ _CMSGDOTAFANTASYLEAGUEFINDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2393,
-  serialized_end=2725,
+  serialized_start=2357,
+  serialized_end=2689,
 )
 
 
@@ -2217,8 +2221,8 @@ _CMSGDOTAFANTASYLEAGUEINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2727,
-  serialized_end=2788,
+  serialized_start=2691,
+  serialized_end=2752,
 )
 
 
@@ -2249,8 +2253,8 @@ _CMSGDOTAFANTASYLEAGUEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2791,
-  serialized_end=2972,
+  serialized_start=2755,
+  serialized_end=2936,
 )
 
 
@@ -2280,8 +2284,8 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2974,
-  serialized_end=3039,
+  serialized_start=2938,
+  serialized_end=3003,
 )
 
 
@@ -2332,8 +2336,8 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_MATCHUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3273,
-  serialized_end=3372,
+  serialized_start=3237,
+  serialized_end=3336,
 )
 
 _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_WEEKLYMATCHUPS = _descriptor.Descriptor(
@@ -2376,8 +2380,8 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE_WEEKLYMATCHUPS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3374,
-  serialized_end=3498,
+  serialized_start=3338,
+  serialized_end=3462,
 )
 
 _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE = _descriptor.Descriptor(
@@ -2421,8 +2425,8 @@ _CMSGDOTAFANTASYLEAGUEMATCHUPSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3042,
-  serialized_end=3595,
+  serialized_start=3006,
+  serialized_end=3559,
 )
 
 
@@ -2473,8 +2477,8 @@ _CMSGDOTAEDITFANTASYTEAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3597,
-  serialized_end=3714,
+  serialized_start=3561,
+  serialized_end=3678,
 )
 
 
@@ -2505,8 +2509,8 @@ _CMSGDOTAEDITFANTASYTEAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3717,
-  serialized_end=3954,
+  serialized_start=3681,
+  serialized_end=3918,
 )
 
 
@@ -2536,8 +2540,8 @@ _CMSGDOTAFANTASYTEAMINFOREQUESTBYFANTASYLEAGUEID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3956,
-  serialized_end=4032,
+  serialized_start=3920,
+  serialized_end=3996,
 )
 
 
@@ -2567,8 +2571,8 @@ _CMSGDOTAFANTASYTEAMINFOREQUESTBYOWNERACCOUNTID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4034,
-  serialized_end=4108,
+  serialized_start=3998,
+  serialized_end=4072,
 )
 
 
@@ -2598,8 +2602,8 @@ _CMSGDOTAFANTASYTEAMINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4110,
-  serialized_end=4191,
+  serialized_start=4074,
+  serialized_end=4155,
 )
 
 
@@ -2678,8 +2682,8 @@ _CMSGDOTAFANTASYTEAMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4194,
-  serialized_end=4392,
+  serialized_start=4158,
+  serialized_end=4356,
 )
 
 
@@ -2751,8 +2755,8 @@ _CMSGDOTAFANTASYTEAMSCOREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4395,
-  serialized_end=4609,
+  serialized_start=4359,
+  serialized_end=4573,
 )
 
 
@@ -2789,8 +2793,8 @@ _CMSGDOTAFANTASYTEAMSCORERESPONSE_CMSGPLAYERSCORE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4835,
-  serialized_end=4887,
+  serialized_start=4799,
+  serialized_end=4851,
 )
 
 _CMSGDOTAFANTASYTEAMSCORERESPONSE = _descriptor.Descriptor(
@@ -2834,8 +2838,8 @@ _CMSGDOTAFANTASYTEAMSCORERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4612,
-  serialized_end=4990,
+  serialized_start=4576,
+  serialized_end=4954,
 )
 
 
@@ -2907,8 +2911,8 @@ _CMSGDOTAFANTASYTEAMSTANDINGSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4993,
-  serialized_end=5200,
+  serialized_start=4957,
+  serialized_end=5164,
 )
 
 
@@ -3008,8 +3012,8 @@ _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE_CMSGTEAMSCORE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5400,
-  serialized_end=5654,
+  serialized_start=5364,
+  serialized_end=5618,
 )
 
 _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE = _descriptor.Descriptor(
@@ -3046,8 +3050,8 @@ _CMSGDOTAFANTASYTEAMSTANDINGSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5203,
-  serialized_end=5726,
+  serialized_start=5167,
+  serialized_end=5690,
 )
 
 
@@ -3112,8 +3116,8 @@ _CMSGDOTAFANTASYPLAYERSCOREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5729,
-  serialized_end=5922,
+  serialized_start=5693,
+  serialized_end=5886,
 )
 
 
@@ -3172,8 +3176,8 @@ _CMSGDOTAFANTASYPLAYERSCORERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5925,
-  serialized_end=6198,
+  serialized_start=5889,
+  serialized_end=6162,
 )
 
 
@@ -3245,8 +3249,8 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6201,
-  serialized_end=6400,
+  serialized_start=6165,
+  serialized_end=6364,
 )
 
 
@@ -3290,8 +3294,8 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_CMSGPLAYERSCORE = _descriptor.Descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6650,
-  serialized_end=6730,
+  serialized_start=6614,
+  serialized_end=6694,
 )
 
 _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE = _descriptor.Descriptor(
@@ -3342,63 +3346,8 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6403,
-  serialized_end=6802,
-)
-
-
-_CMSGDOTAFANTASYPLAYERINFOREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAFantasyPlayerInfoRequest',
-  full_name='dota.CMsgDOTAFantasyPlayerInfoRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=6804,
-  serialized_end=6838,
-)
-
-
-_CMSGDOTAFANTASYPLAYERINFORESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAFantasyPlayerInfoResponse',
-  full_name='dota.CMsgDOTAFantasyPlayerInfoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='msg', full_name='dota.CMsgDOTAFantasyPlayerInfoResponse.msg', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=6840,
-  serialized_end=6912,
+  serialized_start=6367,
+  serialized_end=6766,
 )
 
 
@@ -3463,8 +3412,8 @@ _CMSGDOTAFANTASYLEAGUECREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6915,
-  serialized_end=7074,
+  serialized_start=6769,
+  serialized_end=6928,
 )
 
 
@@ -3502,8 +3451,8 @@ _CMSGDOTAFANTASYLEAGUECREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7077,
-  serialized_end=7418,
+  serialized_start=6931,
+  serialized_end=7272,
 )
 
 
@@ -3561,8 +3510,8 @@ _CMSGDOTAFANTASYTEAMCREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7421,
-  serialized_end=7557,
+  serialized_start=7275,
+  serialized_end=7411,
 )
 
 
@@ -3600,8 +3549,8 @@ _CMSGDOTAFANTASYTEAMCREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7560,
-  serialized_end=7965,
+  serialized_start=7414,
+  serialized_end=7819,
 )
 
 
@@ -3638,8 +3587,8 @@ _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST_INVITECHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8139,
-  serialized_end=8190,
+  serialized_start=7993,
+  serialized_end=8044,
 )
 
 _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST = _descriptor.Descriptor(
@@ -3682,8 +3631,8 @@ _CMSGDOTAFANTASYLEAGUEEDITINVITESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7968,
-  serialized_end=8190,
+  serialized_start=7822,
+  serialized_end=8044,
 )
 
 
@@ -3714,8 +3663,8 @@ _CMSGDOTAFANTASYLEAGUEEDITINVITESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8193,
-  serialized_end=8363,
+  serialized_start=8047,
+  serialized_end=8217,
 )
 
 
@@ -3745,8 +3694,8 @@ _CMSGDOTAFANTASYLEAGUEDRAFTSTATUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8365,
-  serialized_end=8433,
+  serialized_start=8219,
+  serialized_end=8287,
 )
 
 
@@ -3818,8 +3767,8 @@ _CMSGDOTAFANTASYLEAGUEDRAFTSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8436,
-  serialized_end=8634,
+  serialized_start=8290,
+  serialized_end=8488,
 )
 
 
@@ -3863,8 +3812,8 @@ _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8636,
-  serialized_end=8751,
+  serialized_start=8490,
+  serialized_end=8605,
 )
 
 
@@ -3895,8 +3844,8 @@ _CMSGDOTAFANTASYLEAGUEDRAFTPLAYERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8754,
-  serialized_end=9145,
+  serialized_start=8608,
+  serialized_end=8999,
 )
 
 
@@ -3954,8 +3903,8 @@ _CMSGDOTAFANTASYTEAMROSTERSWAPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9148,
-  serialized_end=9284,
+  serialized_start=9002,
+  serialized_end=9138,
 )
 
 
@@ -3986,8 +3935,8 @@ _CMSGDOTAFANTASYTEAMROSTERSWAPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9287,
-  serialized_end=9530,
+  serialized_start=9141,
+  serialized_end=9384,
 )
 
 
@@ -4038,8 +3987,8 @@ _CMSGDOTAFANTASYTEAMROSTERADDDROPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9533,
-  serialized_end=9670,
+  serialized_start=9387,
+  serialized_end=9524,
 )
 
 
@@ -4070,8 +4019,8 @@ _CMSGDOTAFANTASYTEAMROSTERADDDROPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9673,
-  serialized_end=9970,
+  serialized_start=9527,
+  serialized_end=9824,
 )
 
 
@@ -4101,8 +4050,8 @@ _CMSGDOTAFANTASYTEAMTRADESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9972,
-  serialized_end=10033,
+  serialized_start=9826,
+  serialized_end=9887,
 )
 
 
@@ -4167,8 +4116,8 @@ _CMSGDOTAFANTASYTEAMTRADESRESPONSE_TRADE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10211,
-  serialized_end=10367,
+  serialized_start=10065,
+  serialized_end=10221,
 )
 
 _CMSGDOTAFANTASYTEAMTRADESRESPONSE = _descriptor.Descriptor(
@@ -4205,8 +4154,8 @@ _CMSGDOTAFANTASYTEAMTRADESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10036,
-  serialized_end=10439,
+  serialized_start=9890,
+  serialized_end=10293,
 )
 
 
@@ -4257,8 +4206,8 @@ _CMSGDOTAFANTASYTEAMTRADECANCELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10442,
-  serialized_end=10580,
+  serialized_start=10296,
+  serialized_end=10434,
 )
 
 
@@ -4289,8 +4238,8 @@ _CMSGDOTAFANTASYTEAMTRADECANCELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10583,
-  serialized_end=10794,
+  serialized_start=10437,
+  serialized_end=10648,
 )
 
 
@@ -4341,8 +4290,8 @@ _CMSGDOTAFANTASYTEAMROSTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10796,
-  serialized_end=10922,
+  serialized_start=10650,
+  serialized_end=10776,
 )
 
 
@@ -4387,8 +4336,8 @@ _CMSGDOTAFANTASYTEAMROSTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10925,
-  serialized_end=11188,
+  serialized_start=10779,
+  serialized_end=11042,
 )
 
 
@@ -4418,8 +4367,8 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11190,
-  serialized_end=11261,
+  serialized_start=11044,
+  serialized_end=11115,
 )
 
 
@@ -4540,8 +4489,8 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSCOREACCUMULATOR = _descripto
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11474,
-  serialized_end=11731,
+  serialized_start=11328,
+  serialized_end=11585,
 )
 
 _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSTATS = _descriptor.Descriptor(
@@ -4591,8 +4540,8 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE_PLAYERSTATS = _descriptor.Descripto
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11734,
-  serialized_end=11981,
+  serialized_start=11588,
+  serialized_end=11835,
 )
 
 _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE = _descriptor.Descriptor(
@@ -4629,8 +4578,8 @@ _CMSGDOTAFANTASYPLAYERHISORICALSTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11264,
-  serialized_end=12053,
+  serialized_start=11118,
+  serialized_end=11907,
 )
 
 
@@ -4667,8 +4616,8 @@ _CMSGDOTAFANTASYMESSAGEADD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12055,
-  serialized_end=12126,
+  serialized_start=11909,
+  serialized_end=11980,
 )
 
 
@@ -4712,8 +4661,8 @@ _CMSGDOTAFANTASYMESSAGESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12128,
-  serialized_end=12231,
+  serialized_start=11982,
+  serialized_end=12085,
 )
 
 
@@ -4764,8 +4713,8 @@ _CMSGDOTAFANTASYMESSAGESRESPONSE_MESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12434,
-  serialized_end=12521,
+  serialized_start=12288,
+  serialized_end=12375,
 )
 
 _CMSGDOTAFANTASYMESSAGESRESPONSE = _descriptor.Descriptor(
@@ -4809,8 +4758,8 @@ _CMSGDOTAFANTASYMESSAGESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12234,
-  serialized_end=12593,
+  serialized_start=12088,
+  serialized_end=12447,
 )
 
 
@@ -4854,8 +4803,8 @@ _CMSGDOTAFANTASYREMOVEOWNER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12595,
-  serialized_end=12696,
+  serialized_start=12449,
+  serialized_end=12550,
 )
 
 
@@ -4886,8 +4835,8 @@ _CMSGDOTAFANTASYREMOVEOWNERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12699,
-  serialized_end=12931,
+  serialized_start=12553,
+  serialized_end=12785,
 )
 
 
@@ -4917,8 +4866,8 @@ _CMSGDOTAFANTASYSCHEDULEDMATCHESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12933,
-  serialized_end=13000,
+  serialized_start=12787,
+  serialized_end=12854,
 )
 
 
@@ -4962,8 +4911,8 @@ _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE_SCHEDULEDMATCHDAYS = _descriptor.Descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13222,
-  serialized_end=13299,
+  serialized_start=13076,
+  serialized_end=13153,
 )
 
 _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE = _descriptor.Descriptor(
@@ -5000,8 +4949,8 @@ _CMSGDOTAFANTASYSCHEDULEDMATCHESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13003,
-  serialized_end=13346,
+  serialized_start=12857,
+  serialized_end=13200,
 )
 
 
@@ -5038,8 +4987,8 @@ _CMSGDOTAFANTASYLEAVELEAGUEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13348,
-  serialized_end=13438,
+  serialized_start=13202,
+  serialized_end=13292,
 )
 
 
@@ -5070,8 +5019,8 @@ _CMSGDOTAFANTASYLEAVELEAGUERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13441,
-  serialized_end=13673,
+  serialized_start=13295,
+  serialized_end=13527,
 )
 
 
@@ -5122,8 +5071,8 @@ _CMSGDOTAFANTASYPLAYERSCOREDETAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13676,
-  serialized_end=13810,
+  serialized_start=13530,
+  serialized_end=13664,
 )
 
 
@@ -5223,8 +5172,8 @@ _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE_PLAYERMATCHDATA = _descriptor.Descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14020,
-  serialized_end=14272,
+  serialized_start=13874,
+  serialized_end=14126,
 )
 
 _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE = _descriptor.Descriptor(
@@ -5261,8 +5210,8 @@ _CMSGDOTAFANTASYPLAYERSCOREDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13813,
-  serialized_end=14341,
+  serialized_start=13667,
+  serialized_end=14195,
 )
 
 
@@ -5306,8 +5255,8 @@ _CMSGDOTAPASSPORTVOTETEAMGUESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14343,
-  serialized_end=14433,
+  serialized_start=14197,
+  serialized_end=14287,
 )
 
 
@@ -5344,8 +5293,8 @@ _CMSGDOTAPASSPORTVOTEGENERICSELECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14436,
-  serialized_end=14586,
+  serialized_start=14290,
+  serialized_end=14440,
 )
 
 
@@ -5382,8 +5331,8 @@ _CMSGDOTAPASSPORTSTAMPEDPLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14588,
-  serialized_end=14658,
+  serialized_start=14442,
+  serialized_end=14512,
 )
 
 
@@ -5413,8 +5362,8 @@ _CMSGDOTAPASSPORTPLAYERCARDCHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14660,
-  serialized_end=14719,
+  serialized_start=14514,
+  serialized_end=14573,
 )
 
 
@@ -5465,8 +5414,8 @@ _CMSGDOTAPASSPORTVOTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14722,
-  serialized_end=15010,
+  serialized_start=14576,
+  serialized_end=14864,
 )
 
 
@@ -5503,8 +5452,8 @@ _CMSGCLIENTTOGCGETPLAYERCARDROSTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15012,
-  serialized_end=15092,
+  serialized_start=14866,
+  serialized_end=14946,
 )
 
 
@@ -5563,8 +5512,8 @@ _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15095,
-  serialized_end=15406,
+  serialized_start=14949,
+  serialized_end=15260,
 )
 
 
@@ -5622,8 +5571,8 @@ _CMSGCLIENTTOGCSETPLAYERCARDROSTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15409,
-  serialized_end=15550,
+  serialized_start=15263,
+  serialized_end=15404,
 )
 
 
@@ -5654,14 +5603,13 @@ _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15553,
-  serialized_end=15924,
+  serialized_start=15407,
+  serialized_end=15778,
 )
 
-_CMSGGCPLAYERINFO_PLAYERINFO.containing_type = _CMSGGCPLAYERINFO
-_CMSGGCPLAYERINFO_REGIONLEADERBOARD.containing_type = _CMSGGCPLAYERINFO
-_CMSGGCPLAYERINFO.fields_by_name['player_infos'].message_type = _CMSGGCPLAYERINFO_PLAYERINFO
-_CMSGGCPLAYERINFO.fields_by_name['leaderboards'].message_type = _CMSGGCPLAYERINFO_REGIONLEADERBOARD
+_CMSGDOTAPLAYERINFOLIST.fields_by_name['player_infos'].message_type = _CMSGDOTAPLAYERINFO
+_CMSGDOTALEADERBOARDS_REGIONLEADERBOARD.containing_type = _CMSGDOTALEADERBOARDS
+_CMSGDOTALEADERBOARDS.fields_by_name['leaderboards'].message_type = _CMSGDOTALEADERBOARDS_REGIONLEADERBOARD
 _CMSGDOTACREATEFANTASYLEAGUEREQUEST.fields_by_name['selection_mode'].enum_type = dota__shared__enums__pb2._FANTASY_SELECTION_MODE
 _CMSGDOTACREATEFANTASYLEAGUERESPONSE.fields_by_name['result'].enum_type = _CMSGDOTACREATEFANTASYLEAGUERESPONSE_ERESULT
 _CMSGDOTACREATEFANTASYLEAGUERESPONSE_ERESULT.containing_type = _CMSGDOTACREATEFANTASYLEAGUERESPONSE
@@ -5699,7 +5647,6 @@ _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_CMSGPLAYERSCORE.containing_type = _CMSGD
 _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_ERESULT
 _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE.fields_by_name['player_scores'].message_type = _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_CMSGPLAYERSCORE
 _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE_ERESULT.containing_type = _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE
-_CMSGDOTAFANTASYPLAYERINFORESPONSE.fields_by_name['msg'].message_type = _CMSGGCPLAYERINFO
 _CMSGDOTAFANTASYLEAGUECREATERESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAFANTASYLEAGUECREATERESPONSE_ERESULT
 _CMSGDOTAFANTASYLEAGUECREATERESPONSE_ERESULT.containing_type = _CMSGDOTAFANTASYLEAGUECREATERESPONSE
 _CMSGDOTAFANTASYTEAMCREATERESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAFANTASYTEAMCREATERESPONSE_ERESULT
@@ -5754,7 +5701,9 @@ _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE.fields_by_name['result'].enum_type = 
 _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE_RESULT.containing_type = _CMSGCLIENTTOGCGETPLAYERCARDROSTERRESPONSE
 _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE_RESULT
 _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE_RESULT.containing_type = _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgGCPlayerInfo'] = _CMSGGCPLAYERINFO
+DESCRIPTOR.message_types_by_name['CMsgDOTAPlayerInfo'] = _CMSGDOTAPLAYERINFO
+DESCRIPTOR.message_types_by_name['CMsgDOTAPlayerInfoList'] = _CMSGDOTAPLAYERINFOLIST
+DESCRIPTOR.message_types_by_name['CMsgDOTALeaderboards'] = _CMSGDOTALEADERBOARDS
 DESCRIPTOR.message_types_by_name['CMsgDOTACreateFantasyLeagueRequest'] = _CMSGDOTACREATEFANTASYLEAGUEREQUEST
 DESCRIPTOR.message_types_by_name['CMsgDOTACreateFantasyLeagueResponse'] = _CMSGDOTACREATEFANTASYLEAGUERESPONSE
 DESCRIPTOR.message_types_by_name['CMsgFantasyLeagueScoring'] = _CMSGFANTASYLEAGUESCORING
@@ -5781,8 +5730,6 @@ DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyPlayerScoreRequest'] = _CMSGDOT
 DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyPlayerScoreResponse'] = _CMSGDOTAFANTASYPLAYERSCORERESPONSE
 DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyPlayerStandingsRequest'] = _CMSGDOTAFANTASYPLAYERSTANDINGSREQUEST
 DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyPlayerStandingsResponse'] = _CMSGDOTAFANTASYPLAYERSTANDINGSRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyPlayerInfoRequest'] = _CMSGDOTAFANTASYPLAYERINFOREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyPlayerInfoResponse'] = _CMSGDOTAFANTASYPLAYERINFORESPONSE
 DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyLeagueCreateRequest'] = _CMSGDOTAFANTASYLEAGUECREATEREQUEST
 DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyLeagueCreateResponse'] = _CMSGDOTAFANTASYLEAGUECREATERESPONSE
 DESCRIPTOR.message_types_by_name['CMsgDOTAFantasyTeamCreateRequest'] = _CMSGDOTAFANTASYTEAMCREATEREQUEST
@@ -5827,28 +5774,34 @@ DESCRIPTOR.message_types_by_name['CMsgClientToGCSetPlayerCardRosterRequest'] = _
 DESCRIPTOR.message_types_by_name['CMsgClientToGCSetPlayerCardRosterResponse'] = _CMSGCLIENTTOGCSETPLAYERCARDROSTERRESPONSE
 DESCRIPTOR.enum_types_by_name['DOTA_2013PassportSelectionIndices'] = _DOTA_2013PASSPORTSELECTIONINDICES
 
-CMsgGCPlayerInfo = _reflection.GeneratedProtocolMessageType('CMsgGCPlayerInfo', (_message.Message,), dict(
+CMsgDOTAPlayerInfo = _reflection.GeneratedProtocolMessageType('CMsgDOTAPlayerInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGDOTAPLAYERINFO,
+  __module__ = 'dota_gcmessages_client_fantasy_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPlayerInfo)
+  ))
+_sym_db.RegisterMessage(CMsgDOTAPlayerInfo)
 
-  PlayerInfo = _reflection.GeneratedProtocolMessageType('PlayerInfo', (_message.Message,), dict(
-    DESCRIPTOR = _CMSGGCPLAYERINFO_PLAYERINFO,
-    __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:dota.CMsgGCPlayerInfo.PlayerInfo)
-    ))
-  ,
+CMsgDOTAPlayerInfoList = _reflection.GeneratedProtocolMessageType('CMsgDOTAPlayerInfoList', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGDOTAPLAYERINFOLIST,
+  __module__ = 'dota_gcmessages_client_fantasy_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPlayerInfoList)
+  ))
+_sym_db.RegisterMessage(CMsgDOTAPlayerInfoList)
+
+CMsgDOTALeaderboards = _reflection.GeneratedProtocolMessageType('CMsgDOTALeaderboards', (_message.Message,), dict(
 
   RegionLeaderboard = _reflection.GeneratedProtocolMessageType('RegionLeaderboard', (_message.Message,), dict(
-    DESCRIPTOR = _CMSGGCPLAYERINFO_REGIONLEADERBOARD,
+    DESCRIPTOR = _CMSGDOTALEADERBOARDS_REGIONLEADERBOARD,
     __module__ = 'dota_gcmessages_client_fantasy_pb2'
-    # @@protoc_insertion_point(class_scope:dota.CMsgGCPlayerInfo.RegionLeaderboard)
+    # @@protoc_insertion_point(class_scope:dota.CMsgDOTALeaderboards.RegionLeaderboard)
     ))
   ,
-  DESCRIPTOR = _CMSGGCPLAYERINFO,
+  DESCRIPTOR = _CMSGDOTALEADERBOARDS,
   __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgGCPlayerInfo)
+  # @@protoc_insertion_point(class_scope:dota.CMsgDOTALeaderboards)
   ))
-_sym_db.RegisterMessage(CMsgGCPlayerInfo)
-_sym_db.RegisterMessage(CMsgGCPlayerInfo.PlayerInfo)
-_sym_db.RegisterMessage(CMsgGCPlayerInfo.RegionLeaderboard)
+_sym_db.RegisterMessage(CMsgDOTALeaderboards)
+_sym_db.RegisterMessage(CMsgDOTALeaderboards.RegionLeaderboard)
 
 CMsgDOTACreateFantasyLeagueRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTACreateFantasyLeagueRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTACREATEFANTASYLEAGUEREQUEST,
@@ -6079,20 +6032,6 @@ CMsgDOTAFantasyPlayerStandingsResponse = _reflection.GeneratedProtocolMessageTyp
   ))
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerStandingsResponse)
 _sym_db.RegisterMessage(CMsgDOTAFantasyPlayerStandingsResponse.CMsgPlayerScore)
-
-CMsgDOTAFantasyPlayerInfoRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerInfoRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAFANTASYPLAYERINFOREQUEST,
-  __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerInfoRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAFantasyPlayerInfoRequest)
-
-CMsgDOTAFantasyPlayerInfoResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyPlayerInfoResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAFANTASYPLAYERINFORESPONSE,
-  __module__ = 'dota_gcmessages_client_fantasy_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAFantasyPlayerInfoResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAFantasyPlayerInfoResponse)
 
 CMsgDOTAFantasyLeagueCreateRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAFantasyLeagueCreateRequest', (_message.Message,), dict(
   DESCRIPTOR = _CMSGDOTAFANTASYLEAGUECREATEREQUEST,

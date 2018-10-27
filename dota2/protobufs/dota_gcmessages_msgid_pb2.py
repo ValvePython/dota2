@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='dota_gcmessages_msgid.proto',
   package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x1b\x64ota_gcmessages_msgid.proto\x12\x04\x64ota*\x99\xea\x01\n\nEDOTAGCMsg\x12\x15\n\x10k_EMsgGCDOTABase\x10\xd8\x36\x12\x1c\n\x17k_EMsgGCGeneralResponse\x10\xd9\x36\x12\x1d\n\x18k_EMsgGCGameMatchSignOut\x10\xdc\x36\x12%\n k_EMsgGCGameMatchSignOutResponse\x10\xdd\x36\x12\x1c\n\x17k_EMsgGCJoinChatChannel\x10\xe1\x36\x12$\n\x1fk_EMsgGCJoinChatChannelResponse\x10\xe2\x36\x12\x1f\n\x1ak_EMsgGCOtherJoinedChannel\x10\xe5\x36\x12\x1d\n\x18k_EMsgGCOtherLeftChannel\x10\xe6\x36\x12\x1d\n\x18k_EMsgGCMatchHistoryList\x10\xe9\x36\x12\"\n\x1dk_EMsgServerToGCRequestStatus\x10\xf2\x36\x12\x1d\n\x18k_EMsgGCGetRecentMatches\x10\xf3\x36\x12\"\n\x1dk_EMsgGCRecentMatchesResponse\x10\xf4\x36\x12\x1e\n\x19k_EMsgGCStartFindingMatch\x10\xf9\x36\x12\x1d\n\x18k_EMsgGCConnectedPlayers\x10\xfa\x36\x12\x1f\n\x1ak_EMsgGCAbandonCurrentGame\x10\xfb\x36\x12\x1d\n\x18k_EMsgGCStopFindingMatch\x10\xfc\x36\x12 \n\x1bk_EMsgGCPracticeLobbyCreate\x10\xfe\x36\x12\x1f\n\x1ak_EMsgGCPracticeLobbyLeave\x10\x80\x37\x12 \n\x1bk_EMsgGCPracticeLobbyLaunch\x10\x81\x37\x12\x1e\n\x19k_EMsgGCPracticeLobbyList\x10\x82\x37\x12&\n!k_EMsgGCPracticeLobbyListResponse\x10\x83\x37\x12\x1e\n\x19k_EMsgGCPracticeLobbyJoin\x10\x84\x37\x12$\n\x1fk_EMsgGCPracticeLobbySetDetails\x10\x86\x37\x12%\n k_EMsgGCPracticeLobbySetTeamSlot\x10\x87\x37\x12)\n$k_EMsgGCInitialQuestionnaireResponse\x10\x89\x37\x12\"\n\x1dk_EMsgGCPracticeLobbyResponse\x10\x8f\x37\x12\"\n\x1dk_EMsgGCBroadcastNotification\x10\x90\x37\x12!\n\x1ck_EMsgGCLiveScoreboardUpdate\x10\x91\x37\x12#\n\x1ek_EMsgGCRequestChatChannelList\x10\x94\x37\x12+\n&k_EMsgGCRequestChatChannelListResponse\x10\x95\x37\x12\x1b\n\x16k_EMsgGCRequestMatches\x10\x98\x37\x12#\n\x1ek_EMsgGCRequestMatchesResponse\x10\x99\x37\x12#\n\x1ek_EMsgGCRequestPlayerResources\x10\x9c\x37\x12+\n&k_EMsgGCRequestPlayerResourcesResponse\x10\x9d\x37\x12\x14\n\x0fk_EMsgGCReadyUp\x10\x9e\x37\x12\'\n\"k_EMsgGCKickedFromMatchmakingQueue\x10\x9f\x37\x12\x1b\n\x16k_EMsgGCLeaverDetected\x10\xa0\x37\x12\x1f\n\x1ak_EMsgGCSpectateFriendGame\x10\xa1\x37\x12\'\n\"k_EMsgGCSpectateFriendGameResponse\x10\xa2\x37\x12\x1a\n\x15k_EMsgGCPlayerReports\x10\xa3\x37\x12$\n\x1fk_EMsgGCReportsRemainingRequest\x10\xa4\x37\x12%\n k_EMsgGCReportsRemainingResponse\x10\xa5\x37\x12\x1f\n\x1ak_EMsgGCSubmitPlayerReport\x10\xa6\x37\x12\'\n\"k_EMsgGCSubmitPlayerReportResponse\x10\xa7\x37\x12\x1e\n\x19k_EMsgGCPracticeLobbyKick\x10\xa9\x37\x12 \n\x1bk_EMsgGCReportCountsRequest\x10\xaa\x37\x12!\n\x1ck_EMsgGCReportCountsResponse\x10\xab\x37\x12\x1d\n\x18k_EMsgGCRequestSaveGames\x10\xac\x37\x12#\n\x1ek_EMsgGCRequestSaveGamesServer\x10\xad\x37\x12%\n k_EMsgGCRequestSaveGamesResponse\x10\xae\x37\x12#\n\x1ek_EMsgGCLeaverDetectedResponse\x10\xaf\x37\x12\"\n\x1dk_EMsgGCPlayerFailedToConnect\x10\xb0\x37\x12\x1d\n\x18k_EMsgGCGCToRelayConnect\x10\xb1\x37\x12%\n k_EMsgGCGCToRelayConnectresponse\x10\xb2\x37\x12\x16\n\x11k_EMsgGCWatchGame\x10\xb3\x37\x12\x1e\n\x19k_EMsgGCWatchGameResponse\x10\xb4\x37\x12\x1d\n\x18k_EMsgGCBanStatusRequest\x10\xb5\x37\x12\x1e\n\x19k_EMsgGCBanStatusResponse\x10\xb6\x37\x12 \n\x1bk_EMsgGCMatchDetailsRequest\x10\xb7\x37\x12!\n\x1ck_EMsgGCMatchDetailsResponse\x10\xb8\x37\x12\x1c\n\x17k_EMsgGCCancelWatchGame\x10\xb9\x37\x12\x12\n\rk_EMsgGCPopup\x10\xbe\x37\x12,\n\'k_EMsgGCDOTAClearNotifySuccessfulReport\x10\xc0\x37\x12+\n&k_EMsgGCFriendPracticeLobbyListRequest\x10\xc7\x37\x12,\n\'k_EMsgGCFriendPracticeLobbyListResponse\x10\xc8\x37\x12&\n!k_EMsgGCPracticeLobbyJoinResponse\x10\xc9\x37\x12%\n k_EMsgClientEconNotification_Job\x10\xca\x37\x12\x17\n\x12k_EMsgGCCreateTeam\x10\xcb\x37\x12\x1f\n\x1ak_EMsgGCCreateTeamResponse\x10\xcc\x37\x12\x15\n\x10k_EMsgGCTeamData\x10\xd1\x37\x12#\n\x1ek_EMsgGCTeamInvite_InviterToGC\x10\xd2\x37\x12\x34\n/k_EMsgGCTeamInvite_GCImmediateResponseToInviter\x10\xd3\x37\x12*\n%k_EMsgGCTeamInvite_GCRequestToInvitee\x10\xd4\x37\x12+\n&k_EMsgGCTeamInvite_InviteeResponseToGC\x10\xd5\x37\x12+\n&k_EMsgGCTeamInvite_GCResponseToInviter\x10\xd6\x37\x12+\n&k_EMsgGCTeamInvite_GCResponseToInvitee\x10\xd7\x37\x12\x1b\n\x16k_EMsgGCKickTeamMember\x10\xd8\x37\x12#\n\x1ek_EMsgGCKickTeamMemberResponse\x10\xd9\x37\x12\x16\n\x11k_EMsgGCLeaveTeam\x10\xda\x37\x12\x1e\n\x19k_EMsgGCLeaveTeamResponse\x10\xdb\x37\x12#\n\x1ek_EMsgGCSuggestTeamMatchmaking\x10\xdc\x37\x12%\n k_EMsgGCPlayerHeroesFavoritesAdd\x10\xdd\x37\x12(\n#k_EMsgGCPlayerHeroesFavoritesRemove\x10\xde\x37\x12%\n k_EMsgGCApplyTeamToPracticeLobby\x10\xe6\x37\x12\x1e\n\x19k_EMsgGCTransferTeamAdmin\x10\xe8\x37\x12\x1c\n\x17k_EMsgRequestLeagueInfo\x10\xeb\x37\x12\x1d\n\x18k_EMsgResponseLeagueInfo\x10\xec\x37\x12.\n)k_EMsgGCPracticeLobbyJoinBroadcastChannel\x10\xed\x37\x12!\n\x1ck_EMsgGC_TournamentItemEvent\x10\xee\x37\x12)\n$k_EMsgGC_TournamentItemEventResponse\x10\xef\x37\x12\x18\n\x13k_EMsgCastMatchVote\x10\xf0\x37\x12 \n\x1bk_EMsgCastMatchVoteResponse\x10\xf1\x37\x12\x1c\n\x17k_EMsgRetrieveMatchVote\x10\xf2\x37\x12$\n\x1fk_EMsgRetrieveMatchVoteResponse\x10\xf3\x37\x12\x16\n\x11k_EMsgTeamFanfare\x10\xf4\x37\x12\x1e\n\x19k_EMsgResponseTeamFanfare\x10\xf5\x37\x12&\n!k_EMsgGC_GameServerUploadSaveGame\x10\xf6\x37\x12&\n!k_EMsgGC_GameServerSaveGameResult\x10\xf7\x37\x12#\n\x1ek_EMsgGC_GameServerGetLoadGame\x10\xf8\x37\x12)\n$k_EMsgGC_GameServerGetLoadGameResult\x10\xf9\x37\x12\x1c\n\x17k_EMsgGCEditTeamDetails\x10\xfe\x37\x12$\n\x1fk_EMsgGCEditTeamDetailsResponse\x10\xff\x37\x12\x1f\n\x1ak_EMsgGCProTeamListRequest\x10\x80\x38\x12 \n\x1bk_EMsgGCProTeamListResponse\x10\x81\x38\x12\x1a\n\x15k_EMsgGCReadyUpStatus\x10\x82\x38\x12\x17\n\x12k_EMsgGCHallOfFame\x10\x83\x38\x12\x1e\n\x19k_EMsgGCHallOfFameRequest\x10\x84\x38\x12\x1f\n\x1ak_EMsgGCHallOfFameResponse\x10\x85\x38\x12&\n!k_EMsgGCGenerateDiretidePrizeList\x10\x86\x38\x12!\n\x1ck_EMsgGCRewardDiretidePrizes\x10\x88\x38\x12+\n&k_EMsgGCDiretidePrizesRewardedResponse\x10\x89\x38\x12&\n!k_EMsgGCHalloweenHighScoreRequest\x10\x8a\x38\x12\'\n\"k_EMsgGCHalloweenHighScoreResponse\x10\x8b\x38\x12.\n)k_EMsgGCGenerateDiretidePrizeListResponse\x10\x8c\x38\x12#\n\x1ek_EMsgGCStorePromoPagesRequest\x10\x8e\x38\x12$\n\x1fk_EMsgGCStorePromoPagesResponse\x10\x8f\x38\x12\x1f\n\x1ak_EMsgGCToGCMatchCompleted\x10\x92\x38\x12!\n\x1ck_EMsgGCBalancedShuffleLobby\x10\x94\x38\x12&\n!k_EMsgGCToGCCheckLeaguePermission\x10\x95\x38\x12.\n)k_EMsgGCToGCCheckLeaguePermissionResponse\x10\x96\x38\x12$\n\x1fk_EMsgGCMatchmakingStatsRequest\x10\x9d\x38\x12%\n k_EMsgGCMatchmakingStatsResponse\x10\x9e\x38\x12\x1a\n\x15k_EMsgGCBotGameCreate\x10\x9f\x38\x12\"\n\x1dk_EMsgGCSetMatchHistoryAccess\x10\xa0\x38\x12*\n%k_EMsgGCSetMatchHistoryAccessResponse\x10\xa1\x38\x12\x1c\n\x17k_EMsgUpgradeLeagueItem\x10\xa3\x38\x12$\n\x1fk_EMsgUpgradeLeagueItemResponse\x10\xa4\x38\x12%\n k_EMsgGCTeamMemberProfileRequest\x10\xa5\x38\x12\"\n\x1dk_EMsgGCWatchDownloadedReplay\x10\xa6\x38\x12 \n\x1bk_EMsgGCSetMapLocationState\x10\xa7\x38\x12(\n#k_EMsgGCSetMapLocationStateResponse\x10\xa8\x38\x12\x1e\n\x19k_EMsgGCResetMapLocations\x10\xa9\x38\x12&\n!k_EMsgGCResetMapLocationsResponse\x10\xaa\x38\x12$\n\x1fk_EMsgRefreshPartnerAccountLink\x10\xb0\x38\x12$\n\x1fk_EMsgClientsRejoinChatChannels\x10\xb1\x38\x12 \n\x1bk_EMsgGCToGCGetUserChatInfo\x10\xb2\x38\x12(\n#k_EMsgGCToGCGetUserChatInfoResponse\x10\xb3\x38\x12%\n k_EMsgGCToGCLeaveAllChatChannels\x10\xb4\x38\x12%\n k_EMsgGCToGCUpdateAccountChatBan\x10\xb5\x38\x12\x1f\n\x1ak_EMsgGCGuildCreateRequest\x10\xb6\x38\x12 \n\x1bk_EMsgGCGuildCreateResponse\x10\xb7\x38\x12\'\n\"k_EMsgGCGuildSetAccountRoleRequest\x10\xb8\x38\x12(\n#k_EMsgGCGuildSetAccountRoleResponse\x10\xb9\x38\x12\x1d\n\x18k_EMsgGCRequestGuildData\x10\xba\x38\x12\x16\n\x11k_EMsgGCGuildData\x10\xbb\x38\x12&\n!k_EMsgGCGuildInviteAccountRequest\x10\xbc\x38\x12\'\n\"k_EMsgGCGuildInviteAccountResponse\x10\xbd\x38\x12%\n k_EMsgGCGuildCancelInviteRequest\x10\xbe\x38\x12&\n!k_EMsgGCGuildCancelInviteResponse\x10\xbf\x38\x12&\n!k_EMsgGCGuildUpdateDetailsRequest\x10\xc0\x38\x12\'\n\"k_EMsgGCGuildUpdateDetailsResponse\x10\xc1\x38\x12$\n\x1fk_EMsgGCToGCCanInviteUserToTeam\x10\xc2\x38\x12,\n\'k_EMsgGCToGCCanInviteUserToTeamResponse\x10\xc3\x38\x12\x1c\n\x17k_EMsgGCToGCGetUserRank\x10\xc4\x38\x12$\n\x1fk_EMsgGCToGCGetUserRankResponse\x10\xc5\x38\x12 \n\x1bk_EMsgGCToGCUpdateTeamStats\x10\xc8\x38\x12\x1c\n\x17k_EMsgGCToGCGetTeamRank\x10\xc9\x38\x12$\n\x1fk_EMsgGCToGCGetTeamRankResponse\x10\xca\x38\x12 \n\x1bk_EMsgGCPassportDataRequest\x10\xd0\x38\x12!\n\x1ck_EMsgGCPassportDataResponse\x10\xd1\x38\x12\x1b\n\x16k_EMsgGCNotInGuildData\x10\xd3\x38\x12\x1c\n\x17k_EMsgGCGuildInviteData\x10\xd6\x38\x12\x1f\n\x1ak_EMsgGCToGCGetLeagueAdmin\x10\xd7\x38\x12\'\n\"k_EMsgGCToGCGetLeagueAdminResponse\x10\xd8\x38\x12#\n\x1ek_EMsgGCRequestLeaguePrizePool\x10\xda\x38\x12+\n&k_EMsgGCRequestLeaguePrizePoolResponse\x10\xdb\x38\x12,\n\'k_EMsgGCToGCUpdateOpenGuildPartyRequest\x10\xdd\x38\x12-\n(k_EMsgGCToGCUpdateOpenGuildPartyResponse\x10\xde\x38\x12-\n(k_EMsgGCToGCDestroyOpenGuildPartyRequest\x10\xdf\x38\x12.\n)k_EMsgGCToGCDestroyOpenGuildPartyResponse\x10\xe0\x38\x12\x1f\n\x1ak_EMsgGCGuildUpdateMessage\x10\xe1\x38\x12%\n k_EMsgGCPartySetOpenGuildRequest\x10\xe2\x38\x12&\n!k_EMsgGCPartySetOpenGuildResponse\x10\xe3\x38\x12\"\n\x1dk_EMsgGCGuildOpenPartyRefresh\x10\xe4\x38\x12&\n!k_EMsgGCJoinOpenGuildPartyRequest\x10\xe5\x38\x12\'\n\"k_EMsgGCJoinOpenGuildPartyResponse\x10\xe6\x38\x12\x1d\n\x18k_EMsgGCLeaveChatChannel\x10\xe8\x38\x12\x18\n\x13k_EMsgGCChatMessage\x10\xe9\x38\x12\x1d\n\x18k_EMsgGCGetHeroStandings\x10\xea\x38\x12%\n k_EMsgGCGetHeroStandingsResponse\x10\xeb\x38\x12!\n\x1ck_EMsgGCGuildEditLogoRequest\x10\xef\x38\x12\"\n\x1dk_EMsgGCGuildEditLogoResponse\x10\xf0\x38\x12.\n)k_EMsgGCGuildmatePracticeLobbyListRequest\x10\xf1\x38\x12/\n*k_EMsgGCGuildmatePracticeLobbyListResponse\x10\xf2\x38\x12*\n%k_EMsgGCItemEditorReservationsRequest\x10\xf3\x38\x12+\n&k_EMsgGCItemEditorReservationsResponse\x10\xf4\x38\x12%\n k_EMsgGCItemEditorReserveItemDef\x10\xf5\x38\x12-\n(k_EMsgGCItemEditorReserveItemDefResponse\x10\xf6\x38\x12)\n$k_EMsgGCItemEditorReleaseReservation\x10\xf7\x38\x12\x31\n,k_EMsgGCItemEditorReleaseReservationResponse\x10\xf8\x38\x12!\n\x1ck_EMsgGCRewardTutorialPrizes\x10\xf9\x38\x12*\n%k_EMsgGCLastHitChallengeHighScorePost\x10\xfa\x38\x12-\n(k_EMsgGCLastHitChallengeHighScoreRequest\x10\xfb\x38\x12.\n)k_EMsgGCLastHitChallengeHighScoreResponse\x10\xfc\x38\x12\'\n\"k_EMsgGCCreateFantasyLeagueRequest\x10\xfd\x38\x12(\n#k_EMsgGCCreateFantasyLeagueResponse\x10\xfe\x38\x12%\n k_EMsgGCFantasyLeagueInfoRequest\x10\x81\x39\x12&\n!k_EMsgGCFantasyLeagueInfoResponse\x10\x82\x39\x12\x1e\n\x19k_EMsgGCFantasyLeagueInfo\x10\x83\x39\x12%\n k_EMsgGCCreateFantasyTeamRequest\x10\x84\x39\x12&\n!k_EMsgGCCreateFantasyTeamResponse\x10\x85\x39\x12#\n\x1ek_EMsgGCEditFantasyTeamRequest\x10\x86\x39\x12$\n\x1fk_EMsgGCEditFantasyTeamResponse\x10\x87\x39\x12\x34\n/k_EMsgGCFantasyTeamInfoRequestByFantasyLeagueID\x10\x88\x39\x12\x33\n.k_EMsgGCFantasyTeamInfoRequestByOwnerAccountID\x10\x89\x39\x12$\n\x1fk_EMsgGCFantasyTeamInfoResponse\x10\x8a\x39\x12\x1c\n\x17k_EMsgGCFantasyTeamInfo\x10\x8b\x39\x12#\n\x1ek_EMsgGCFantasyLivePlayerStats\x10\x8c\x39\x12$\n\x1fk_EMsgGCFantasyFinalPlayerStats\x10\x8d\x39\x12\x19\n\x14k_EMsgGCFantasyMatch\x10\x8e\x39\x12$\n\x1fk_EMsgGCFantasyTeamScoreRequest\x10\x90\x39\x12%\n k_EMsgGCFantasyTeamScoreResponse\x10\x91\x39\x12(\n#k_EMsgGCFantasyTeamStandingsRequest\x10\x92\x39\x12)\n$k_EMsgGCFantasyTeamStandingsResponse\x10\x93\x39\x12&\n!k_EMsgGCFantasyPlayerScoreRequest\x10\x94\x39\x12\'\n\"k_EMsgGCFantasyPlayerScoreResponse\x10\x95\x39\x12*\n%k_EMsgGCFantasyPlayerStandingsRequest\x10\x96\x39\x12+\n&k_EMsgGCFantasyPlayerStandingsResponse\x10\x97\x39\x12\x1b\n\x16k_EMsgGCFlipLobbyTeams\x10\x98\x39\x12\x1d\n\x18k_EMsgGCCustomGameCreate\x10\x99\x39\x12%\n k_EMsgGCFantasyPlayerInfoRequest\x10\x9a\x39\x12&\n!k_EMsgGCFantasyPlayerInfoResponse\x10\x9b\x39\x12-\n(k_EMsgGCToGCProcessPlayerReportForTarget\x10\x9c\x39\x12%\n k_EMsgGCToGCProcessReportSuccess\x10\x9d\x39\x12%\n k_EMsgGCNotifyAccountFlagsChange\x10\x9e\x39\x12\x1e\n\x19k_EMsgGCSetProfilePrivacy\x10\x9f\x39\x12&\n!k_EMsgGCSetProfilePrivacyResponse\x10\xa0\x39\x12+\n&k_EMsgGCFantasyLeagueCreateInfoRequest\x10\xa3\x39\x12,\n\'k_EMsgGCFantasyLeagueCreateInfoResponse\x10\xa4\x39\x12+\n&k_EMsgGCFantasyLeagueInviteInfoRequest\x10\xa5\x39\x12,\n\'k_EMsgGCFantasyLeagueInviteInfoResponse\x10\xa6\x39\x12\x1e\n\x19k_EMsgGCClientIgnoredUser\x10\xa7\x39\x12\'\n\"k_EMsgGCFantasyLeagueCreateRequest\x10\xa8\x39\x12(\n#k_EMsgGCFantasyLeagueCreateResponse\x10\xa9\x39\x12%\n k_EMsgGCFantasyTeamCreateRequest\x10\xaa\x39\x12&\n!k_EMsgGCFantasyTeamCreateResponse\x10\xab\x39\x12/\n*k_EMsgGCFantasyLeagueFriendJoinListRequest\x10\xac\x39\x12\x30\n+k_EMsgGCFantasyLeagueFriendJoinListResponse\x10\xad\x39\x12\x1c\n\x17k_EMsgGCClientSuspended\x10\xae\x39\x12 \n\x1bk_EMsgGCPartyMemberSetCoach\x10\xaf\x39\x12,\n\'k_EMsgGCFantasyLeagueEditInvitesRequest\x10\xb0\x39\x12-\n(k_EMsgGCFantasyLeagueEditInvitesResponse\x10\xb1\x39\x12\"\n\x1dk_EMsgGCPracticeLobbySetCoach\x10\xb2\x39\x12)\n$k_EMsgGCFantasyLeagueEditInfoRequest\x10\xb3\x39\x12*\n%k_EMsgGCFantasyLeagueEditInfoResponse\x10\xb4\x39\x12,\n\'k_EMsgGCFantasyLeagueDraftStatusRequest\x10\xb5\x39\x12%\n k_EMsgGCFantasyLeagueDraftStatus\x10\xb6\x39\x12,\n\'k_EMsgGCFantasyLeagueDraftPlayerRequest\x10\xb7\x39\x12-\n(k_EMsgGCFantasyLeagueDraftPlayerResponse\x10\xb8\x39\x12)\n$k_EMsgGCFantasyLeagueMatchupsRequest\x10\xb9\x39\x12*\n%k_EMsgGCFantasyLeagueMatchupsResponse\x10\xba\x39\x12)\n$k_EMsgGCFantasyTeamRosterSwapRequest\x10\xbb\x39\x12*\n%k_EMsgGCFantasyTeamRosterSwapResponse\x10\xbc\x39\x12%\n k_EMsgGCFantasyTeamRosterRequest\x10\xbd\x39\x12&\n!k_EMsgGCFantasyTeamRosterResponse\x10\xbe\x39\x12\x1f\n\x1ak_EMsgGCNexonPartnerUpdate\x10\xbf\x39\x12*\n%k_EMsgGCToGCProcessPCBangRewardPoints\x10\xc0\x39\x12,\n\'k_EMsgGCFantasyTeamRosterAddDropRequest\x10\xc1\x39\x12-\n(k_EMsgGCFantasyTeamRosterAddDropResponse\x10\xc2\x39\x12&\n!k_EMsgPresentedClientTerminateDlg\x10\xc3\x39\x12/\n*k_EMsgGCFantasyPlayerHisoricalStatsRequest\x10\xc4\x39\x12\x30\n+k_EMsgGCFantasyPlayerHisoricalStatsResponse\x10\xc5\x39\x12%\n k_EMsgGCPCBangTimedRewardMessage\x10\xc6\x39\x12,\n\'k_EMsgGCLobbyUpdateBroadcastChannelInfo\x10\xc7\x39\x12%\n k_EMsgGCFantasyTeamTradesRequest\x10\xc8\x39\x12&\n!k_EMsgGCFantasyTeamTradesResponse\x10\xc9\x39\x12*\n%k_EMsgGCFantasyTeamTradeCancelRequest\x10\xca\x39\x12+\n&k_EMsgGCFantasyTeamTradeCancelResponse\x10\xcb\x39\x12$\n\x1fk_EMsgGCToGCGrantTournamentItem\x10\xcc\x39\x12)\n$k_EMsgGCProcessFantasyScheduledEvent\x10\xcd\x39\x12&\n!k_EMsgGCToGCGrantPCBangRewardItem\x10\xce\x39\x12)\n$k_EMsgGCToGCUpgradeTwitchViewerItems\x10\xcf\x39\x12\'\n\"k_EMsgGCToGCGetLiveMatchAffiliates\x10\xd0\x39\x12/\n*k_EMsgGCToGCGetLiveMatchAffiliatesResponse\x10\xd1\x39\x12*\n%k_EMsgGCToGCUpdatePlayerPennantCounts\x10\xd2\x39\x12\'\n\"k_EMsgGCToGCGetPlayerPennantCounts\x10\xd3\x39\x12/\n*k_EMsgGCToGCGetPlayerPennantCountsResponse\x10\xd4\x39\x12.\n)k_EMsgGCGameMatchSignOutPermissionRequest\x10\xd5\x39\x12/\n*k_EMsgGCGameMatchSignOutPermissionResponse\x10\xd6\x39\x12&\n!k_EMsgDOTAChatChannelMemberUpdate\x10\xd7\x39\x12\x1f\n\x1ak_EMsgDOTAAwardEventPoints\x10\xd8\x39\x12\x1d\n\x18k_EMsgDOTAGetEventPoints\x10\xdb\x39\x12%\n k_EMsgDOTAGetEventPointsResponse\x10\xdc\x39\x12(\n#k_EMsgGCToGCSignoutAwardEventPoints\x10\xde\x39\x12!\n\x1ck_EMsgDOTASendFriendRecruits\x10\xe1\x39\x12$\n\x1fk_EMsgDOTAFriendRecruitsRequest\x10\xe2\x39\x12%\n k_EMsgDOTAFriendRecruitsResponse\x10\xe3\x39\x12/\n*k_EMsgDOTAFriendRecruitInviteAcceptDecline\x10\xe4\x39\x12\'\n\"k_EMsgGCPartyLeaderWatchGamePrompt\x10\xe5\x39\x12#\n\x1ek_EMsgDOTAFrostivusTimeElapsed\x10\xe6\x39\x12#\n\x1ek_EMsgDOTALiveLeagueGameUpdate\x10\xea\x39\x12\x1e\n\x19k_EMsgDOTAChatGetUserList\x10\xeb\x39\x12&\n!k_EMsgDOTAChatGetUserListResponse\x10\xec\x39\x12#\n\x1ek_EMsgGCCompendiumSetSelection\x10\xed\x39\x12\"\n\x1dk_EMsgGCCompendiumDataRequest\x10\xee\x39\x12#\n\x1ek_EMsgGCCompendiumDataResponse\x10\xef\x39\x12$\n\x1fk_EMsgDOTAGetPlayerMatchHistory\x10\xf0\x39\x12,\n\'k_EMsgDOTAGetPlayerMatchHistoryResponse\x10\xf1\x39\x12$\n\x1fk_EMsgGCToGCMatchmakingAddParty\x10\xf2\x39\x12\'\n\"k_EMsgGCToGCMatchmakingRemoveParty\x10\xf3\x39\x12,\n\'k_EMsgGCToGCMatchmakingRemoveAllParties\x10\xf4\x39\x12&\n!k_EMsgGCToGCMatchmakingMatchFound\x10\xf5\x39\x12+\n&k_EMsgGCToGCUpdateMatchManagementStats\x10\xf6\x39\x12\'\n\"k_EMsgGCToGCUpdateMatchmakingStats\x10\xf7\x39\x12 \n\x1bk_EMsgGCToServerPingRequest\x10\xf8\x39\x12!\n\x1ck_EMsgGCToServerPingResponse\x10\xf9\x39\x12#\n\x1ek_EMsgGCToServerConsoleCommand\x10\xfa\x39\x12)\n$k_EMsgGCToGCUpdateLiveLeagueGameInfo\x10\xfc\x39\x12\x19\n\x14k_EMsgGCMakeOffering\x10\xff\x39\x12\x1d\n\x18k_EMsgGCRequestOfferings\x10\x80:\x12%\n k_EMsgGCRequestOfferingsResponse\x10\x81:\x12#\n\x1ek_EMsgGCToGCProcessMatchLeaver\x10\x82:\x12!\n\x1ck_EMsgGCNotificationsRequest\x10\x83:\x12\"\n\x1dk_EMsgGCNotificationsResponse\x10\x84:\x12#\n\x1ek_EMsgGCToGCModifyNotification\x10\x85:\x12$\n\x1fk_EMsgGCToGCSetNewNotifications\x10\x86:\x12!\n\x1ck_EMsgGCToGCSetIsLeagueAdmin\x10\x87:\x12\x1d\n\x18k_EMsgGCLeagueAdminState\x10\x88:\x12%\n k_EMsgGCToGCSendLeagueAdminState\x10\x89:\x12\x1c\n\x17k_EMsgGCLeagueAdminList\x10\x8a:\x12)\n$k_EMsgGCNotificationsMarkReadRequest\x10\x8b:\x12\x1e\n\x19k_EMsgGCFantasyMessageAdd\x10\x8c:\x12#\n\x1ek_EMsgGCFantasyMessagesRequest\x10\x8d:\x12$\n\x1fk_EMsgGCFantasyMessagesResponse\x10\x8e:\x12+\n&k_EMsgGCFantasyScheduledMatchesRequest\x10\x8f:\x12,\n\'k_EMsgGCFantasyScheduledMatchesResponse\x10\x90:\x12\"\n\x1dk_EMsgGCToGCGrantLeagueAccess\x10\x91:\x12\x1c\n\x17k_EMsgGCEventGameCreate\x10\x93:\x12*\n%k_EMsgGCPerfectWorldUserLookupRequest\x10\x94:\x12+\n&k_EMsgGCPerfectWorldUserLookupResponse\x10\x95:\x12\x1f\n\x1ak_EMsgGCFantasyRemoveOwner\x10\x98:\x12\'\n\"k_EMsgGCFantasyRemoveOwnerResponse\x10\x99:\x12(\n#k_EMsgGCRequestBatchPlayerResources\x10\x9a:\x12\x30\n+k_EMsgGCRequestBatchPlayerResourcesResponse\x10\x9b:\x12\"\n\x1dk_EMsgGCToGCSendUpdateLeagues\x10\x9c:\x12+\n&k_EMsgGCCompendiumSetSelectionResponse\x10\x9d:\x12\x1e\n\x19k_EMsgGCPlayerInfoRequest\x10\x9e:\x12\x17\n\x12k_EMsgGCPlayerInfo\x10\x9f:\x12\x1d\n\x18k_EMsgGCPlayerInfoSubmit\x10\xa0:\x12%\n k_EMsgGCPlayerInfoSubmitResponse\x10\xa1:\x12 \n\x1bk_EMsgGCToGCGetAccountLevel\x10\xa2:\x12(\n#k_EMsgGCToGCGetAccountLevelResponse\x10\xa3:\x12\"\n\x1dk_EMsgGCToGCGetAccountPartner\x10\xa4:\x12*\n%k_EMsgGCToGCGetAccountPartnerResponse\x10\xa5:\x12(\n#k_EMsgDOTAGetWeekendTourneySchedule\x10\xa8:\x12%\n k_EMsgDOTAWeekendTourneySchedule\x10\xa9:\x12+\n&k_EMsgGCJoinableCustomGameModesRequest\x10\xaa:\x12,\n\'k_EMsgGCJoinableCustomGameModesResponse\x10\xab:\x12)\n$k_EMsgGCJoinableCustomLobbiesRequest\x10\xac:\x12*\n%k_EMsgGCJoinableCustomLobbiesResponse\x10\xad:\x12!\n\x1ck_EMsgGCQuickJoinCustomLobby\x10\xae:\x12)\n$k_EMsgGCQuickJoinCustomLobbyResponse\x10\xaf:\x12&\n!k_EMsgGCToGCGrantEventPointAction\x10\xb0:\x12\x1f\n\x1ak_EMsgServerGetEventPoints\x10\xb1:\x12\'\n\"k_EMsgServerGetEventPointsResponse\x10\xb2:\x12&\n!k_EMsgServerGrantSurveyPermission\x10\xb3:\x12.\n)k_EMsgServerGrantSurveyPermissionResponse\x10\xb4:\x12$\n\x1fk_EMsgClientProvideSurveyResult\x10\xb5:\x12\'\n\"k_EMsgGCToGCSetCompendiumSelection\x10\xb6:\x12#\n\x1ek_EMsgGCToGCUpdateTI4HeroQuest\x10\xb8:\x12\"\n\x1dk_EMsgGCCompendiumDataChanged\x10\xb9:\x12\'\n\"k_EMsgDOTAFantasyLeagueFindRequest\x10\xba:\x12(\n#k_EMsgDOTAFantasyLeagueFindResponse\x10\xbb:\x12\x19\n\x14k_EMsgGCHasItemQuery\x10\xbc:\x12\x1c\n\x17k_EMsgGCHasItemResponse\x10\xbd:\x12!\n\x1ck_EMsgGCConsumeFantasyTicket\x10\xbe:\x12(\n#k_EMsgGCConsumeFantasyTicketFailure\x10\xbf:\x12)\n$k_EMsgGCToGCGrantEventPointActionMsg\x10\xc0:\x12&\n!k_EMsgClientToGCTrackDialogResult\x10\xc1:\x12&\n!k_EMsgGCFantasyLeaveLeagueRequest\x10\xc2:\x12\'\n\"k_EMsgGCFantasyLeaveLeagueResponse\x10\xc3:\x12(\n#k_EMsgGCToGCGetCompendiumSelections\x10\xc4:\x12\x30\n+k_EMsgGCToGCGetCompendiumSelectionsResponse\x10\xc5:\x12)\n$k_EMsgServerToGCMatchConnectionStats\x10\xc6:\x12\'\n\"k_EMsgGCToClientTournamentItemDrop\x10\xc7:\x12$\n\x1fk_EMsgSQLDelayedGrantLeagueDrop\x10\xc8:\x12\'\n\"k_EMsgServerGCUpdateSpectatorCount\x10\xc9:\x12-\n(k_EMsgGCFantasyPlayerScoreDetailsRequest\x10\xcb:\x12.\n)k_EMsgGCFantasyPlayerScoreDetailsResponse\x10\xcc:\x12\x1f\n\x1ak_EMsgGCToGCEmoticonUnlock\x10\xcd:\x12\x1b\n\x16k_EMsgSignOutDraftInfo\x10\xce:\x12(\n#k_EMsgClientToGCEmoticonDataRequest\x10\xcf:\x12!\n\x1ck_EMsgGCToClientEmoticonData\x10\xd0:\x12?\n:k_EMsgGCPracticeLobbyToggleBroadcastChannelCameramanStatus\x10\xd1:\x12,\n\'k_EMsgGCToGCCreateWeekendTourneyRequest\x10\xd2:\x12-\n(k_EMsgGCToGCCreateWeekendTourneyResponse\x10\xd3:\x12(\n#k_EMsgClientToGCSetAdditionalEquips\x10\xd9:\x12(\n#k_EMsgClientToGCGetAdditionalEquips\x10\xda:\x12\x30\n+k_EMsgClientToGCGetAdditionalEquipsResponse\x10\xdb:\x12(\n#k_EMsgServerToGCGetAdditionalEquips\x10\xdc:\x12\x30\n+k_EMsgServerToGCGetAdditionalEquipsResponse\x10\xdd:\x12\x19\n\x14k_EMsgDOTARedeemItem\x10\xde:\x12!\n\x1ck_EMsgDOTARedeemItemResponse\x10\xdf:\x12(\n#k_EMsgSQLGCToGCGrantAllHeroProgress\x10\xe0:\x12\'\n\"k_EMsgClientToGCGetAllHeroProgress\x10\xe1:\x12/\n*k_EMsgClientToGCGetAllHeroProgressResponse\x10\xe2:\x12#\n\x1ek_EMsgGCToGCGetServerForClient\x10\xe3:\x12+\n&k_EMsgGCToGCGetServerForClientResponse\x10\xe4:\x12*\n%k_EMsgSQLProcessTournamentGameOutcome\x10\xe5:\x12\"\n\x1dk_EMsgSQLGrantTrophyToAccount\x10\xe6:\x12\"\n\x1dk_EMsgClientToGCGetTrophyList\x10\xe7:\x12*\n%k_EMsgClientToGCGetTrophyListResponse\x10\xe8:\x12\"\n\x1dk_EMsgGCToClientTrophyAwarded\x10\xe9:\x12 \n\x1bk_EMsgGCGameBotMatchSignOut\x10\xea:\x12\x31\n,k_EMsgGCGameBotMatchSignOutPermissionRequest\x10\xeb:\x12\x19\n\x14k_EMsgSignOutBotInfo\x10\xec:\x12#\n\x1ek_EMsgGCToGCUpdateProfileCards\x10\xed:\x12#\n\x1ek_EMsgClientToGCGetProfileCard\x10\xee:\x12+\n&k_EMsgClientToGCGetProfileCardResponse\x10\xef:\x12#\n\x1ek_EMsgServerToGCGetProfileCard\x10\xf0:\x12+\n&k_EMsgServerToGCGetProfileCardResponse\x10\xf1:\x12(\n#k_EMsgClientToGCSetProfileCardSlots\x10\xf2:\x12\'\n\"k_EMsgGCToClientProfileCardUpdated\x10\xf3:\x12\'\n\"k_EMsgServerToGCVictoryPredictions\x10\xf4:\x12-\n(k_EMsgClientToGCMarkNotificationListRead\x10\xf6:\x12)\n$k_EMsgGCToClientNewNotificationAdded\x10\xf7:\x12\'\n\"k_EMsgServerToGCSuspiciousActivity\x10\xf8:\x12&\n!k_EMsgSignOutCommunicationSummary\x10\xf9:\x12+\n&k_EMsgServerToGCRequestStatus_Response\x10\xfa:\x12%\n k_EMsgClientToGCCreateHeroStatue\x10\xfb:\x12+\n&k_EMsgGCToClientHeroStatueCreateResult\x10\xfc:\x12&\n!k_EMsgGCGCToLANServerRelayConnect\x10\xfd:\x12\'\n\"k_EMsgServerToGCGetIngameEventData\x10\xff:\x12/\n*k_EMsgGCToGCUpdateIngameEventDataBroadcast\x10\x80;\x12-\n(k_EMsgGCToServerIngameEventData_OraclePA\x10\x81;\x12(\n#k_EMsgServerToGCReportKillSummaries\x10\x82;\x12$\n\x1fk_EMsgGCToGCReportKillSummaries\x10\x83;\x12\'\n\"k_EMsgGCToGCUpdateAssassinMinigame\x10\x84;\x12&\n!k_EMsgGCToGCFantasySetMatchLeague\x10\x85;\x12*\n%k_EMsgClientToGCRecordCompendiumStats\x10\x86;\x12(\n#k_EMsgGCItemEditorRequestLeagueInfo\x10\x87;\x12)\n$k_EMsgGCItemEditorLeagueInfoResponse\x10\x88;\x12(\n#k_EMsgGCToGCUpdatePlayerPredictions\x10\x89;\x12%\n k_EMsgGCToServerPredictionResult\x10\x8a;\x12\x30\n+k_EMsgServerToGCSignoutAwardAdditionalDrops\x10\x8b;\x12,\n\'k_EMsgGCToGCSignoutAwardAdditionalDrops\x10\x8c;\x12\'\n\"k_EMsgGCToClientEventStatusChanged\x10\x8d;\x12\x1d\n\x18k_EMsgGCHasItemDefsQuery\x10\x8e;\x12 \n\x1bk_EMsgGCHasItemDefsResponse\x10\x8f;\x12,\n\'k_EMsgGCToGCReplayMonitorValidateReplay\x10\x91;\x12\x1b\n\x16k_EMsgLobbyEventPoints\x10\x94;\x12%\n k_EMsgGCToGCGetCustomGameTickets\x10\x95;\x12-\n(k_EMsgGCToGCGetCustomGameTicketsResponse\x10\x96;\x12!\n\x1ck_EMsgGCToGCCustomGamePlayed\x10\x98;\x12\'\n\"k_EMsgGCToGCGrantEventPointsToUser\x10\x99;\x12)\n$k_EMsgGCToGCSetEventMMPanicFlushTime\x10\x9a;\x12 \n\x1bk_EMsgGameserverCrashReport\x10\x9b;\x12(\n#k_EMsgGameserverCrashReportResponse\x10\x9c;\x12(\n#k_EMsgGCToClientSteamDatagramTicket\x10\x9d;\x12$\n\x1fk_EMsgGCToGCGrantEventOwnership\x10\x9e;\x12(\n#k_EMsgGCToGCSendAccountsEventPoints\x10\x9f;\x12*\n%k_EMsgClientToGCRerollPlayerChallenge\x10\xa0;\x12*\n%k_EMsgServerToGCRerollPlayerChallenge\x10\xa1;\x12*\n%k_EMsgGCRerollPlayerChallengeResponse\x10\xa2;\x12\'\n\"k_EMsgSignOutUpdatePlayerChallenge\x10\xa3;\x12#\n\x1ek_EMsgClientToGCSetPartyLeader\x10\xa4;\x12\'\n\"k_EMsgClientToGCCancelPartyInvites\x10\xa5;\x12$\n\x1fk_EMsgGCToGCMasterReloadAccount\x10\xa6;\x12-\n(k_EMsgSQLGrantLeagueMatchToTicketHolders\x10\xa8;\x12\x30\n+k_EMsgClientToGCSetAdditionalEquipsResponse\x10\xa9;\x12)\n$k_EMsgGCToGCEmoticonUnlockNoRollback\x10\xaa;\x12%\n k_EMsgGCToGCGetCompendiumFanfare\x10\xab;\x12$\n\x1fk_EMsgServerToGCHoldEventPoints\x10\xac;\x12(\n#k_EMsgSignOutReleaseEventPointHolds\x10\xad;\x12#\n\x1ek_EMsgGCToGCChatNewUserSession\x10\xae;\x12$\n\x1fk_EMsgClientToGCGetLeagueSeries\x10\xaf;\x12,\n\'k_EMsgClientToGCGetLeagueSeriesResponse\x10\xb0;\x12/\n*k_EMsgSQLGCToGCSignoutUpdateLeagueSchedule\x10\xb1;\x12*\n%k_EMsgGCToServerUpdateBroadcastCheers\x10\xb2;\x12%\n k_EMsgClientToGCApplyGemCombiner\x10\xb3;\x12+\n&k_EMsgClientToGCDOTACreateStaticRecipe\x10\xb4;\x12\x33\n.k_EMsgClientToGCDOTACreateStaticRecipeResponse\x10\xb5;\x12$\n\x1fk_EMsgClientToGCGetAllHeroOrder\x10\xb6;\x12,\n\'k_EMsgClientToGCGetAllHeroOrderResponse\x10\xb7;\x12$\n\x1fk_EMsgSQLGCToGCGrantBadgePoints\x10\xb8;\x12&\n!k_EMsgGCToGCGetAccountMatchStatus\x10\xb9;\x12.\n)k_EMsgGCToGCGetAccountMatchStatusResponse\x10\xba;\x12-\n(k_EMsgGCToGCCheckOwnsEntireEmoticonRange\x10\xbb;\x12\x35\n0k_EMsgGCToGCCheckOwnsEntireEmoticonRangeResponse\x10\xbc;\x12%\n k_EMsgClientToGCRecycleHeroRelic\x10\xc3;\x12-\n(k_EMsgClientToGCRecycleHeroRelicResponse\x10\xc4;\x12%\n k_EMsgGCToGCRevokeEventOwnership\x10\xc5;\x12)\n$k_EMsgGCToGCUnlockEventPointSpending\x10\xc6;\x12\x1d\n\x18k_EMsgGCDev_GrantWarKill\x10\xc1>\x12%\n k_EMsgServerToGCLockCharmTrading\x10\xc4>\x12\'\n\"k_EMsgClientToGCPlayerStatsRequest\x10\xc6>\x12(\n#k_EMsgGCToClientPlayerStatsResponse\x10\xc7>\x12#\n\x1ek_EMsgGCClearPracticeLobbyTeam\x10\xc8>\x12)\n$k_EMsgClientToGCFindTopSourceTVGames\x10\xc9>\x12\x31\n,k_EMsgGCToClientFindTopSourceTVGamesResponse\x10\xca>\x12\x16\n\x11k_EMsgGCLobbyList\x10\xcb>\x12\x1e\n\x19k_EMsgGCLobbyListResponse\x10\xcc>\x12$\n\x1fk_EMsgGCPlayerStatsMatchSignOut\x10\xcd>\x12\x31\n,k_EMsgClientToGCCustomGamePlayerCountRequest\x10\xce>\x12\x32\n-k_EMsgGCToClientCustomGamePlayerCountResponse\x10\xcf>\x12\x31\n,k_EMsgClientToGCSocialFeedPostCommentRequest\x10\xd0>\x12\x32\n-k_EMsgGCToClientSocialFeedPostCommentResponse\x10\xd1>\x12\x34\n/k_EMsgClientToGCCustomGamesFriendsPlayedRequest\x10\xd2>\x12\x35\n0k_EMsgGCToClientCustomGamesFriendsPlayedResponse\x10\xd3>\x12\x33\n.k_EMsgClientToGCFriendsPlayedCustomGameRequest\x10\xd4>\x12\x34\n/k_EMsgGCToClientFriendsPlayedCustomGameResponse\x10\xd5>\x12*\n%k_EMsgClientToGCFeaturedHeroesRequest\x10\xd6>\x12+\n&k_EMsgGCToClientFeaturedHeroesResponse\x10\xd7>\x12\x1f\n\x1ak_EMsgGCTopCustomGamesList\x10\xd8>\x12\x32\n-k_EMsgClientToGCSocialMatchPostCommentRequest\x10\xd9>\x12\x33\n.k_EMsgGCToClientSocialMatchPostCommentResponse\x10\xda>\x12.\n)k_EMsgClientToGCSocialMatchDetailsRequest\x10\xdb>\x12/\n*k_EMsgGCToClientSocialMatchDetailsResponse\x10\xdc>\x12!\n\x1ck_EMsgClientToGCSetPartyOpen\x10\xdd>\x12%\n k_EMsgClientToGCMergePartyInvite\x10\xde>\x12*\n%k_EMsgGCToClientMergeGroupInviteReply\x10\xdf>\x12\'\n\"k_EMsgClientToGCMergePartyResponse\x10\xe0>\x12,\n\'k_EMsgGCToClientMergePartyResponseReply\x10\xe1>\x12(\n#k_EMsgClientToGCGetProfileCardStats\x10\xe2>\x12\x30\n+k_EMsgClientToGCGetProfileCardStatsResponse\x10\xe3>\x12,\n\'k_EMsgClientToGCTopLeagueMatchesRequest\x10\xe4>\x12,\n\'k_EMsgClientToGCTopFriendMatchesRequest\x10\xe5>\x12,\n\'k_EMsgGCToClientProfileCardStatsUpdated\x10\xe8>\x12\"\n\x1dk_EMsgServerToGCRealtimeStats\x10\xe9>\x12+\n&k_EMsgGCToServerRealtimeStatsStartStop\x10\xea>\x12%\n k_EMsgGCToGCGetServersForClients\x10\xed>\x12-\n(k_EMsgGCToGCGetServersForClientsResponse\x10\xee>\x12&\n!k_EMsgGCPracticeLobbyKickFromTeam\x10\xef>\x12!\n\x1ck_EMsgDOTAChatGetMemberCount\x10\xf0>\x12)\n$k_EMsgDOTAChatGetMemberCountResponse\x10\xf1>\x12\x31\n,k_EMsgClientToGCSocialFeedPostMessageRequest\x10\xf2>\x12\x32\n-k_EMsgGCToClientSocialFeedPostMessageResponse\x10\xf3>\x12/\n*k_EMsgCustomGameListenServerStartedLoading\x10\xf4>\x12*\n%k_EMsgCustomGameClientFinishedLoading\x10\xf5>\x12/\n*k_EMsgGCPracticeLobbyCloseBroadcastChannel\x10\xf6>\x12&\n!k_EMsgGCStartFindingMatchResponse\x10\xf7>\x12$\n\x1fk_EMsgSQLGCToGCGrantAccountFlag\x10\xf9>\x12 \n\x1bk_EMsgGCToGCGetAccountFlags\x10\xfa>\x12(\n#k_EMsgGCToGCGetAccountFlagsResponse\x10\xfb>\x12\x1c\n\x17k_EMsgSignOutWagerStats\x10\xfc>\x12-\n(k_EMsgGCToClientTopLeagueMatchesResponse\x10\xfd>\x12-\n(k_EMsgGCToClientTopFriendMatchesResponse\x10\xfe>\x12*\n%k_EMsgClientToGCMatchesMinimalRequest\x10\xff>\x12+\n&k_EMsgClientToGCMatchesMinimalResponse\x10\x80?\x12&\n!k_EMsgGCToGCGetProfileBadgePoints\x10\x81?\x12.\n)k_EMsgGCToGCGetProfileBadgePointsResponse\x10\x82?\x12\'\n\"k_EMsgGCToClientChatRegionsEnabled\x10\x83?\x12\x1d\n\x18k_EMsgClientToGCPingData\x10\x84?\x12(\n#k_EMsgServerToGCMatchDetailsRequest\x10\x85?\x12)\n$k_EMsgGCToServerMatchDetailsResponse\x10\x86?\x12%\n k_EMsgGCToGCEnsureAccountInParty\x10\x87?\x12-\n(k_EMsgGCToGCEnsureAccountInPartyResponse\x10\x88?\x12&\n!k_EMsgClientToGCGetProfileTickets\x10\x89?\x12.\n)k_EMsgClientToGCGetProfileTicketsResponse\x10\x8a?\x12\'\n\"k_EMsgGCToClientMatchGroupsVersion\x10\x8b?\x12$\n\x1fk_EMsgClientToGCH264Unsupported\x10\x8c?\x12\'\n\"k_EMsgClientToGCRequestH264Support\x10\x8d?\x12%\n k_EMsgClientToGCGetQuestProgress\x10\x8e?\x12-\n(k_EMsgClientToGCGetQuestProgressResponse\x10\x8f?\x12\x19\n\x14k_EMsgSignOutXPCoins\x10\x90?\x12#\n\x1ek_EMsgGCToClientMatchSignedOut\x10\x91?\x12 \n\x1bk_EMsgGCGetHeroStatsHistory\x10\x92?\x12(\n#k_EMsgGCGetHeroStatsHistoryResponse\x10\x93?\x12&\n!k_EMsgClientToGCPrivateChatInvite\x10\x94?\x12$\n\x1fk_EMsgClientToGCPrivateChatKick\x10\x98?\x12\'\n\"k_EMsgClientToGCPrivateChatPromote\x10\x99?\x12&\n!k_EMsgClientToGCPrivateChatDemote\x10\x9a?\x12(\n#k_EMsgGCToClientPrivateChatResponse\x10\x9b?\x12+\n&k_EMsgClientToGCPrivateChatInfoRequest\x10\x9c?\x12,\n\'k_EMsgGCToClientPrivateChatInfoResponse\x10\x9d?\x12\x32\n-k_EMsgClientToGCLatestConductScorecardRequest\x10\x9f?\x12+\n&k_EMsgClientToGCLatestConductScorecard\x10\xa0?\x12!\n\x1ck_EMsgServerToGCPostMatchTip\x10\xa1?\x12)\n$k_EMsgServerToGCPostMatchTipResponse\x10\xa2?\x12$\n\x1fk_EMsgClientToGCWageringRequest\x10\xa3?\x12%\n k_EMsgGCToClientWageringResponse\x10\xa4?\x12&\n!k_EMsgClientToGCEventGoalsRequest\x10\xa7?\x12\'\n\"k_EMsgClientToGCEventGoalsResponse\x10\xa8?\x12&\n!k_EMsgClientToGCLeaguePredictions\x10\xaa?\x12.\n)k_EMsgGCToClientLeaguePredictionsResponse\x10\xab?\x12(\n#k_EMsgGCToGCLeaguePredictionsUpdate\x10\xac?\x12\'\n\"k_EMsgClientToGCSuspiciousActivity\x10\xad?\x12&\n!k_EMsgGCToGCAddUserToPostGameChat\x10\xae?\x12)\n$k_EMsgClientToGCHasPlayerVotedForMVP\x10\xaf?\x12\x31\n,k_EMsgClientToGCHasPlayerVotedForMVPResponse\x10\xb0?\x12\x1f\n\x1ak_EMsgClientToGCVoteForMVP\x10\xb1?\x12\'\n\"k_EMsgClientToGCVoteForMVPResponse\x10\xb2?\x12\"\n\x1dk_EMsgGCToGCGetEventOwnership\x10\xb3?\x12*\n%k_EMsgGCToGCGetEventOwnershipResponse\x10\xb4?\x12\x33\n.k_EMsgGCToClientAutomatedTournamentStateChange\x10\xb5?\x12\'\n\"k_EMsgClientToGCWeekendTourneyOpts\x10\xb6?\x12/\n*k_EMsgClientToGCWeekendTourneyOptsResponse\x10\xb7?\x12(\n#k_EMsgClientToGCWeekendTourneyLeave\x10\xb8?\x12\x30\n+k_EMsgClientToGCWeekendTourneyLeaveResponse\x10\xb9?\x12)\n$k_EMsgClientToGCTeammateStatsRequest\x10\xbc?\x12*\n%k_EMsgClientToGCTeammateStatsResponse\x10\xbd?\x12\'\n\"k_EMsgClientToGCGetGiftPermissions\x10\xbe?\x12/\n*k_EMsgClientToGCGetGiftPermissionsResponse\x10\xbf?\x12\"\n\x1dk_EMsgClientToGCVoteForArcana\x10\xc0?\x12*\n%k_EMsgClientToGCVoteForArcanaResponse\x10\xc1?\x12\x30\n+k_EMsgClientToGCRequestArcanaVotesRemaining\x10\xc2?\x12\x38\n3k_EMsgClientToGCRequestArcanaVotesRemainingResponse\x10\xc3?\x12&\n!k_EMsgGCTransferTeamAdminResponse\x10\xc4?\x12\x1a\n\x15k_EMsgGCChangeTeamSub\x10\xc5?\x12\"\n\x1dk_EMsgGCChangeTeamSubResponse\x10\xc6?\x12\x1d\n\x18k_EMsgGCToClientTeamInfo\x10\xc7?\x12\x1e\n\x19k_EMsgGCToClientTeamsInfo\x10\xc8?\x12&\n!k_EMsgClientToGCMyTeamInfoRequest\x10\xc9?\x12)\n$k_EMsgClientToGCRequestEventPointLog\x10\xca?\x12\x31\n,k_EMsgClientToGCRequestEventPointLogResponse\x10\xcb?\x12$\n\x1fk_EMsgClientToGCPublishUserStat\x10\xcc?\x12\"\n\x1dk_EMsgGCToGCSignoutSpendWager\x10\xcd?\x12\x1f\n\x1ak_EMsgGCSubmitLobbyMVPVote\x10\xd0?\x12\'\n\"k_EMsgGCSubmitLobbyMVPVoteResponse\x10\xd1?\x12.\n)k_EMsgClientToGCRequestLinaPlaysRemaining\x10\xd2?\x12\x36\n1k_EMsgClientToGCRequestLinaPlaysRemainingResponse\x10\xd3?\x12*\n%k_EMsgClientToGCRequestLinaGameResult\x10\xd4?\x12\x32\n-k_EMsgClientToGCRequestLinaGameResultResponse\x10\xd5?\x12\'\n\"k_EMsgSignOutCommunityGoalProgress\x10\xd6?\x12,\n\'k_EMsgGCToClientLobbyMVPNotifyRecipient\x10\xd7?\x12$\n\x1fk_EMsgGCToClientLobbyMVPAwarded\x10\xd8?\x12)\n$k_EMsgGCToClientQuestProgressUpdated\x10\xd9?\x12#\n\x1ek_EMsgGCToClientWageringUpdate\x10\xda?\x12&\n!k_EMsgGCToClientArcanaVotesUpdate\x10\xdb?\x12\'\n\"k_EMsgClientToGCAddTI6TreeProgress\x10\xdc?\x12-\n(k_EMsgClientToGCSetSpectatorLobbyDetails\x10\xdd?\x12\x35\n0k_EMsgClientToGCSetSpectatorLobbyDetailsResponse\x10\xde?\x12)\n$k_EMsgClientToGCCreateSpectatorLobby\x10\xdf?\x12\x31\n,k_EMsgClientToGCCreateSpectatorLobbyResponse\x10\xe0?\x12\'\n\"k_EMsgClientToGCSpectatorLobbyList\x10\xe1?\x12/\n*k_EMsgClientToGCSpectatorLobbyListResponse\x10\xe2?\x12$\n\x1fk_EMsgSpectatorLobbyGameDetails\x10\xe3?\x12\x36\n1k_EMsgServerToGCCompendiumInGamePredictionResults\x10\xe6?\x12:\n5k_EMsgServerToGCCloseCompendiumInGamePredictionVoting\x10\xe7?\x12\'\n\"k_EMsgClientToGCOpenPlayerCardPack\x10\xe8?\x12/\n*k_EMsgClientToGCOpenPlayerCardPackResponse\x10\xe9?\x12\x35\n0k_EMsgClientToGCSelectCompendiumInGamePrediction\x10\xea?\x12=\n8k_EMsgClientToGCSelectCompendiumInGamePredictionResponse\x10\xeb?\x12\x31\n,k_EMsgClientToGCWeekendTourneyGetPlayerStats\x10\xec?\x12\x39\n4k_EMsgClientToGCWeekendTourneyGetPlayerStatsResponse\x10\xed?\x12&\n!k_EMsgClientToGCRecyclePlayerCard\x10\xee?\x12.\n)k_EMsgClientToGCRecyclePlayerCardResponse\x10\xef?\x12)\n$k_EMsgClientToGCCreatePlayerCardPack\x10\xf0?\x12\x31\n,k_EMsgClientToGCCreatePlayerCardPackResponse\x10\xf1?\x12/\n*k_EMsgClientToGCGetPlayerCardRosterRequest\x10\xf2?\x12\x30\n+k_EMsgClientToGCGetPlayerCardRosterResponse\x10\xf3?\x12/\n*k_EMsgClientToGCSetPlayerCardRosterRequest\x10\xf4?\x12\x30\n+k_EMsgClientToGCSetPlayerCardRosterResponse\x10\xf5?\x12\x42\n=k_EMsgServerToGCCloseCompendiumInGamePredictionVotingResponse\x10\xf7?\x12>\n9k_EMsgServerToGCCompendiumInGamePredictionResultsResponse\x10\xf9?\x12 \n\x1bk_EMsgLobbyBattleCupVictory\x10\xfa?\x12\"\n\x1dk_EMsgGCGetPlayerCardItemInfo\x10\xfb?\x12*\n%k_EMsgGCGetPlayerCardItemInfoResponse\x10\xfc?\x12/\n*k_EMsgClientToGCRequestSteamDatagramTicket\x10\xfd?\x12\x37\n2k_EMsgClientToGCRequestSteamDatagramTicketResponse\x10\xfe?\x12,\n\'k_EMsgGCToClientBattlePassRollupRequest\x10\xff?\x12-\n(k_EMsgGCToClientBattlePassRollupResponse\x10\x80@\x12/\n*k_EMsgClientToGCTransferSeasonalMMRRequest\x10\x81@\x12\x30\n+k_EMsgClientToGCTransferSeasonalMMRResponse\x10\x82@\x12+\n&k_EMsgGCToGCPublicChatCommunicationBan\x10\x83@\x12+\n&k_EMsgGCToGCUpdateAccountPublicChatBan\x10\x84@\x12!\n\x1ck_EMsgGCChatReportPublicSpam\x10\x85@\x12+\n&k_EMsgClientToGCSetPartyBuilderOptions\x10\x86@\x12\x33\n.k_EMsgClientToGCSetPartyBuilderOptionsResponse\x10\x87@\x12#\n\x1ek_EMsgGCToClientPlaytestStatus\x10\x88@\x12!\n\x1ck_EMsgClientToGCJoinPlaytest\x10\x89@\x12)\n$k_EMsgClientToGCJoinPlaytestResponse\x10\x8a@\x12\x1f\n\x1ak_EMsgLobbyPlaytestDetails\x10\x8b@\x12\x1e\n\x19k_EMsgDOTASetFavoriteTeam\x10\x8c@\x12\x30\n+k_EMsgGCToClientBattlePassRollupListRequest\x10\x8d@\x12\x31\n,k_EMsgGCToClientBattlePassRollupListResponse\x10\x8e@\x12\x17\n\x12k_EMsgGCIsProQuery\x10\x8f@\x12\x1a\n\x15k_EMsgGCIsProResponse\x10\x90@\x12\x1f\n\x1ak_EMsgDOTAClaimEventAction\x10\x91@\x12\'\n\"k_EMsgDOTAClaimEventActionResponse\x10\x92@\x12\"\n\x1dk_EMsgDOTAGetPeriodicResource\x10\x93@\x12*\n%k_EMsgDOTAGetPeriodicResourceResponse\x10\x94@\x12&\n!k_EMsgDOTAPeriodicResourceUpdated\x10\x95@\x12\x1f\n\x1ak_EMsgServerToGCSpendWager\x10\x96@\x12\'\n\"k_EMsgGCToGCSignoutSpendWagerToken\x10\x97@\x12%\n k_EMsgSubmitTriviaQuestionAnswer\x10\x98@\x12-\n(k_EMsgSubmitTriviaQuestionAnswerResponse\x10\x99@\x12\x1c\n\x17k_EMsgClientToGCGiveTip\x10\x9a@\x12$\n\x1fk_EMsgClientToGCGiveTipResponse\x10\x9b@\x12\x1d\n\x18k_EMsgStartTriviaSession\x10\x9c@\x12%\n k_EMsgStartTriviaSessionResponse\x10\x9d@\x12#\n\x1ek_EMsgAnchorPhoneNumberRequest\x10\x9e@\x12$\n\x1fk_EMsgAnchorPhoneNumberResponse\x10\x9f@\x12%\n k_EMsgUnanchorPhoneNumberRequest\x10\xa0@\x12&\n!k_EMsgUnanchorPhoneNumberResponse\x10\xa1@\x12$\n\x1fk_EMsgGCToClientTipNotification\x10\xa2@\x12+\n&k_EMsgClientToGCRequestSlarkGameResult\x10\xa3@\x12\x33\n.k_EMsgClientToGCRequestSlarkGameResultResponse\x10\xa4@\x12&\n!k_EMsgGCToGCSignoutSpendRankWager\x10\xa5@\x12 \n\x1bk_EMsgGCToGCGetFavoriteTeam\x10\xa6@\x12(\n#k_EMsgGCToGCGetFavoriteTeamResponse\x10\xa7@\x12\x1f\n\x1ak_EMsgSignOutEventGameData\x10\xa8@\x12(\n#k_EMsgGCToClientAllStarVotesRequest\x10\xa9@\x12&\n!k_EMsgGCToClientAllStarVotesReply\x10\xaa@\x12\'\n\"k_EMsgGCToClientAllStarVotesSubmit\x10\xac@\x12,\n\'k_EMsgGCToClientAllStarVotesSubmitReply\x10\xad@\x12&\n!k_EMsgClientToGCQuickStatsRequest\x10\xae@\x12\'\n\"k_EMsgClientToGCQuickStatsResponse\x10\xaf@\x12,\n\'k_EMsgGCToGCSubtractEventPointsFromUser\x10\xb0@\x12)\n$k_EMsgSelectionPriorityChoiceRequest\x10\xb1@\x12*\n%k_EMsgSelectionPriorityChoiceResponse\x10\xb2@\x12\x32\n-k_EMsgGCToGCCompendiumInGamePredictionResults\x10\xb3@\x12\x1e\n\x19k_EMsgGameAutographReward\x10\xb4@\x12&\n!k_EMsgGameAutographRewardResponse\x10\xb5@\x12\x1e\n\x19k_EMsgDestroyLobbyRequest\x10\xb6@\x12\x1f\n\x1ak_EMsgDestroyLobbyResponse\x10\xb7@\x12&\n!k_EMsgPurchaseItemWithEventPoints\x10\xb8@\x12.\n)k_EMsgPurchaseItemWithEventPointsResponse\x10\xb9@\x12\x33\n.k_EMsgServerToGCMatchPlayerItemPurchaseHistory\x10\xba@\x12*\n%k_EMsgGCToGCGrantPlusHeroMatchResults\x10\xbb@\x12\x1e\n\x19k_EMsgGCGetHeroTimedStats\x10\xbc@\x12&\n!k_EMsgGCGetHeroTimedStatsResponse\x10\xbd@\x12*\n%k_EMsgLobbyPlayerPlusSubscriptionData\x10\xbe@\x12&\n!k_EMsgServerToGCMatchStateHistory\x10\xbf@\x12\x1c\n\x17k_EMsgPurchaseHeroRelic\x10\xc0@\x12$\n\x1fk_EMsgPurchaseHeroRelicResponse\x10\xc1@\x12\"\n\x1dk_EMsgPurchaseHeroRandomRelic\x10\xc2@\x12*\n%k_EMsgPurchaseHeroRandomRelicResponse\x10\xc3@\x12\x1d\n\x18k_EMsgLaneSuggestRequest\x10\xc4@\x12\x1e\n\x19k_EMsgLaneSuggestResponse\x10\xc5@\x12!\n\x1ck_EMsgPartyReadyCheckRequest\x10\xc6@\x12\"\n\x1dk_EMsgPartyReadyCheckResponse\x10\xc7@\x12%\n k_EMsgPartyReadyCheckAcknowledge\x10\xc8@\x12*\n%k_EMsgGetRecentPlayTimeFriendsRequest\x10\xc9@\x12+\n&k_EMsgGetRecentPlayTimeFriendsResponse\x10\xca@\x12(\n#k_EMsgGCToClientCommendNotification\x10\xcb@\x12\x19\n\x14k_EMsgProfileRequest\x10\xcc@\x12\x1a\n\x15k_EMsgProfileResponse\x10\xcd@\x12\x18\n\x13k_EMsgProfileUpdate\x10\xce@\x12 \n\x1bk_EMsgProfileUpdateResponse\x10\xcf@\x12\x19\n\x14k_EMsgSuccessfulHero\x10\xd1@\x12 \n\x1bk_EMsgHeroGlobalDataRequest\x10\xd2@\x12!\n\x1ck_EMsgHeroGlobalDataResponse\x10\xd3@\x12\x35\n0k_EMsgClientToGCRequestPlusWeeklyChallengeResult\x10\xd4@\x12=\n8k_EMsgClientToGCRequestPlusWeeklyChallengeResultResponse\x10\xd5@\x12%\n k_EMsgGCToGCGrantPlusPrepaidTime\x10\xd6@\x12$\n\x1fk_EMsgPrivateMetadataKeyRequest\x10\xd7@\x12%\n k_EMsgPrivateMetadataKeyResponse\x10\xd8@\x12$\n\x1fk_EMsgGCToGCReconcilePlusStatus\x10\xd9@\x12 \n\x1bk_EMsgGCToGCCheckPlusStatus\x10\xda@\x12(\n#k_EMsgGCToGCCheckPlusStatusResponse\x10\xdb@\x12,\n\'k_EMsgGCToGCReconcilePlusAutoGrantItems\x10\xdc@\x12.\n)k_EMsgGCToGCReconcilePlusStatusUnreliable\x10\xdd@\x12\'\n\"k_EMsgActivatePlusFreeTrialRequest\x10\xde@\x12(\n#k_EMsgActivatePlusFreeTrialResponse\x10\xdf@B\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x1b\x64ota_gcmessages_msgid.proto\x12\x04\x64ota*\xd7\xf6\x01\n\nEDOTAGCMsg\x12\x15\n\x10k_EMsgGCDOTABase\x10\xd8\x36\x12\x1c\n\x17k_EMsgGCGeneralResponse\x10\xd9\x36\x12\x1d\n\x18k_EMsgGCGameMatchSignOut\x10\xdc\x36\x12%\n k_EMsgGCGameMatchSignOutResponse\x10\xdd\x36\x12\x1c\n\x17k_EMsgGCJoinChatChannel\x10\xe1\x36\x12$\n\x1fk_EMsgGCJoinChatChannelResponse\x10\xe2\x36\x12\x1f\n\x1ak_EMsgGCOtherJoinedChannel\x10\xe5\x36\x12\x1d\n\x18k_EMsgGCOtherLeftChannel\x10\xe6\x36\x12\x1d\n\x18k_EMsgGCMatchHistoryList\x10\xe9\x36\x12\"\n\x1dk_EMsgServerToGCRequestStatus\x10\xf2\x36\x12\x1d\n\x18k_EMsgGCGetRecentMatches\x10\xf3\x36\x12\"\n\x1dk_EMsgGCRecentMatchesResponse\x10\xf4\x36\x12\x1e\n\x19k_EMsgGCStartFindingMatch\x10\xf9\x36\x12\x1d\n\x18k_EMsgGCConnectedPlayers\x10\xfa\x36\x12\x1f\n\x1ak_EMsgGCAbandonCurrentGame\x10\xfb\x36\x12\x1d\n\x18k_EMsgGCStopFindingMatch\x10\xfc\x36\x12 \n\x1bk_EMsgGCPracticeLobbyCreate\x10\xfe\x36\x12\x1f\n\x1ak_EMsgGCPracticeLobbyLeave\x10\x80\x37\x12 \n\x1bk_EMsgGCPracticeLobbyLaunch\x10\x81\x37\x12\x1e\n\x19k_EMsgGCPracticeLobbyList\x10\x82\x37\x12&\n!k_EMsgGCPracticeLobbyListResponse\x10\x83\x37\x12\x1e\n\x19k_EMsgGCPracticeLobbyJoin\x10\x84\x37\x12$\n\x1fk_EMsgGCPracticeLobbySetDetails\x10\x86\x37\x12%\n k_EMsgGCPracticeLobbySetTeamSlot\x10\x87\x37\x12)\n$k_EMsgGCInitialQuestionnaireResponse\x10\x89\x37\x12\"\n\x1dk_EMsgGCPracticeLobbyResponse\x10\x8f\x37\x12\"\n\x1dk_EMsgGCBroadcastNotification\x10\x90\x37\x12!\n\x1ck_EMsgGCLiveScoreboardUpdate\x10\x91\x37\x12#\n\x1ek_EMsgGCRequestChatChannelList\x10\x94\x37\x12+\n&k_EMsgGCRequestChatChannelListResponse\x10\x95\x37\x12\x1b\n\x16k_EMsgGCRequestMatches\x10\x98\x37\x12#\n\x1ek_EMsgGCRequestMatchesResponse\x10\x99\x37\x12#\n\x1ek_EMsgGCRequestPlayerResources\x10\x9c\x37\x12+\n&k_EMsgGCRequestPlayerResourcesResponse\x10\x9d\x37\x12\x14\n\x0fk_EMsgGCReadyUp\x10\x9e\x37\x12\'\n\"k_EMsgGCKickedFromMatchmakingQueue\x10\x9f\x37\x12\x1b\n\x16k_EMsgGCLeaverDetected\x10\xa0\x37\x12\x1f\n\x1ak_EMsgGCSpectateFriendGame\x10\xa1\x37\x12\'\n\"k_EMsgGCSpectateFriendGameResponse\x10\xa2\x37\x12\x1a\n\x15k_EMsgGCPlayerReports\x10\xa3\x37\x12$\n\x1fk_EMsgGCReportsRemainingRequest\x10\xa4\x37\x12%\n k_EMsgGCReportsRemainingResponse\x10\xa5\x37\x12\x1f\n\x1ak_EMsgGCSubmitPlayerReport\x10\xa6\x37\x12\'\n\"k_EMsgGCSubmitPlayerReportResponse\x10\xa7\x37\x12\x1e\n\x19k_EMsgGCPracticeLobbyKick\x10\xa9\x37\x12 \n\x1bk_EMsgGCReportCountsRequest\x10\xaa\x37\x12!\n\x1ck_EMsgGCReportCountsResponse\x10\xab\x37\x12\x1d\n\x18k_EMsgGCRequestSaveGames\x10\xac\x37\x12#\n\x1ek_EMsgGCRequestSaveGamesServer\x10\xad\x37\x12%\n k_EMsgGCRequestSaveGamesResponse\x10\xae\x37\x12#\n\x1ek_EMsgGCLeaverDetectedResponse\x10\xaf\x37\x12\"\n\x1dk_EMsgGCPlayerFailedToConnect\x10\xb0\x37\x12\x1d\n\x18k_EMsgGCGCToRelayConnect\x10\xb1\x37\x12%\n k_EMsgGCGCToRelayConnectresponse\x10\xb2\x37\x12\x16\n\x11k_EMsgGCWatchGame\x10\xb3\x37\x12\x1e\n\x19k_EMsgGCWatchGameResponse\x10\xb4\x37\x12\x1d\n\x18k_EMsgGCBanStatusRequest\x10\xb5\x37\x12\x1e\n\x19k_EMsgGCBanStatusResponse\x10\xb6\x37\x12 \n\x1bk_EMsgGCMatchDetailsRequest\x10\xb7\x37\x12!\n\x1ck_EMsgGCMatchDetailsResponse\x10\xb8\x37\x12\x1c\n\x17k_EMsgGCCancelWatchGame\x10\xb9\x37\x12\x12\n\rk_EMsgGCPopup\x10\xbe\x37\x12,\n\'k_EMsgGCDOTAClearNotifySuccessfulReport\x10\xc0\x37\x12+\n&k_EMsgGCFriendPracticeLobbyListRequest\x10\xc7\x37\x12,\n\'k_EMsgGCFriendPracticeLobbyListResponse\x10\xc8\x37\x12&\n!k_EMsgGCPracticeLobbyJoinResponse\x10\xc9\x37\x12%\n k_EMsgClientEconNotification_Job\x10\xca\x37\x12\x17\n\x12k_EMsgGCCreateTeam\x10\xcb\x37\x12\x1f\n\x1ak_EMsgGCCreateTeamResponse\x10\xcc\x37\x12\x15\n\x10k_EMsgGCTeamData\x10\xd1\x37\x12#\n\x1ek_EMsgGCTeamInvite_InviterToGC\x10\xd2\x37\x12\x34\n/k_EMsgGCTeamInvite_GCImmediateResponseToInviter\x10\xd3\x37\x12*\n%k_EMsgGCTeamInvite_GCRequestToInvitee\x10\xd4\x37\x12+\n&k_EMsgGCTeamInvite_InviteeResponseToGC\x10\xd5\x37\x12+\n&k_EMsgGCTeamInvite_GCResponseToInviter\x10\xd6\x37\x12+\n&k_EMsgGCTeamInvite_GCResponseToInvitee\x10\xd7\x37\x12\x1b\n\x16k_EMsgGCKickTeamMember\x10\xd8\x37\x12#\n\x1ek_EMsgGCKickTeamMemberResponse\x10\xd9\x37\x12\x16\n\x11k_EMsgGCLeaveTeam\x10\xda\x37\x12\x1e\n\x19k_EMsgGCLeaveTeamResponse\x10\xdb\x37\x12#\n\x1ek_EMsgGCSuggestTeamMatchmaking\x10\xdc\x37\x12%\n k_EMsgGCPlayerHeroesFavoritesAdd\x10\xdd\x37\x12(\n#k_EMsgGCPlayerHeroesFavoritesRemove\x10\xde\x37\x12%\n k_EMsgGCApplyTeamToPracticeLobby\x10\xe6\x37\x12\x1e\n\x19k_EMsgGCTransferTeamAdmin\x10\xe8\x37\x12.\n)k_EMsgGCPracticeLobbyJoinBroadcastChannel\x10\xed\x37\x12!\n\x1ck_EMsgGC_TournamentItemEvent\x10\xee\x37\x12)\n$k_EMsgGC_TournamentItemEventResponse\x10\xef\x37\x12\x18\n\x13k_EMsgCastMatchVote\x10\xf0\x37\x12 \n\x1bk_EMsgCastMatchVoteResponse\x10\xf1\x37\x12\x1c\n\x17k_EMsgRetrieveMatchVote\x10\xf2\x37\x12$\n\x1fk_EMsgRetrieveMatchVoteResponse\x10\xf3\x37\x12\x16\n\x11k_EMsgTeamFanfare\x10\xf4\x37\x12\x1e\n\x19k_EMsgResponseTeamFanfare\x10\xf5\x37\x12&\n!k_EMsgGC_GameServerUploadSaveGame\x10\xf6\x37\x12&\n!k_EMsgGC_GameServerSaveGameResult\x10\xf7\x37\x12#\n\x1ek_EMsgGC_GameServerGetLoadGame\x10\xf8\x37\x12)\n$k_EMsgGC_GameServerGetLoadGameResult\x10\xf9\x37\x12\x1c\n\x17k_EMsgGCEditTeamDetails\x10\xfe\x37\x12$\n\x1fk_EMsgGCEditTeamDetailsResponse\x10\xff\x37\x12\x1f\n\x1ak_EMsgGCProTeamListRequest\x10\x80\x38\x12 \n\x1bk_EMsgGCProTeamListResponse\x10\x81\x38\x12\x1a\n\x15k_EMsgGCReadyUpStatus\x10\x82\x38\x12\x17\n\x12k_EMsgGCHallOfFame\x10\x83\x38\x12\x1e\n\x19k_EMsgGCHallOfFameRequest\x10\x84\x38\x12\x1f\n\x1ak_EMsgGCHallOfFameResponse\x10\x85\x38\x12&\n!k_EMsgGCGenerateDiretidePrizeList\x10\x86\x38\x12!\n\x1ck_EMsgGCRewardDiretidePrizes\x10\x88\x38\x12+\n&k_EMsgGCDiretidePrizesRewardedResponse\x10\x89\x38\x12&\n!k_EMsgGCHalloweenHighScoreRequest\x10\x8a\x38\x12\'\n\"k_EMsgGCHalloweenHighScoreResponse\x10\x8b\x38\x12.\n)k_EMsgGCGenerateDiretidePrizeListResponse\x10\x8c\x38\x12#\n\x1ek_EMsgGCStorePromoPagesRequest\x10\x8e\x38\x12$\n\x1fk_EMsgGCStorePromoPagesResponse\x10\x8f\x38\x12\x1f\n\x1ak_EMsgGCToGCMatchCompleted\x10\x92\x38\x12!\n\x1ck_EMsgGCBalancedShuffleLobby\x10\x94\x38\x12&\n!k_EMsgGCToGCCheckLeaguePermission\x10\x95\x38\x12.\n)k_EMsgGCToGCCheckLeaguePermissionResponse\x10\x96\x38\x12$\n\x1fk_EMsgGCMatchmakingStatsRequest\x10\x9d\x38\x12%\n k_EMsgGCMatchmakingStatsResponse\x10\x9e\x38\x12\x1a\n\x15k_EMsgGCBotGameCreate\x10\x9f\x38\x12\"\n\x1dk_EMsgGCSetMatchHistoryAccess\x10\xa0\x38\x12*\n%k_EMsgGCSetMatchHistoryAccessResponse\x10\xa1\x38\x12\x1c\n\x17k_EMsgUpgradeLeagueItem\x10\xa3\x38\x12$\n\x1fk_EMsgUpgradeLeagueItemResponse\x10\xa4\x38\x12%\n k_EMsgGCTeamMemberProfileRequest\x10\xa5\x38\x12\"\n\x1dk_EMsgGCWatchDownloadedReplay\x10\xa6\x38\x12 \n\x1bk_EMsgGCSetMapLocationState\x10\xa7\x38\x12(\n#k_EMsgGCSetMapLocationStateResponse\x10\xa8\x38\x12\x1e\n\x19k_EMsgGCResetMapLocations\x10\xa9\x38\x12&\n!k_EMsgGCResetMapLocationsResponse\x10\xaa\x38\x12$\n\x1fk_EMsgRefreshPartnerAccountLink\x10\xb0\x38\x12$\n\x1fk_EMsgClientsRejoinChatChannels\x10\xb1\x38\x12 \n\x1bk_EMsgGCToGCGetUserChatInfo\x10\xb2\x38\x12(\n#k_EMsgGCToGCGetUserChatInfoResponse\x10\xb3\x38\x12%\n k_EMsgGCToGCLeaveAllChatChannels\x10\xb4\x38\x12%\n k_EMsgGCToGCUpdateAccountChatBan\x10\xb5\x38\x12\x1f\n\x1ak_EMsgGCGuildCreateRequest\x10\xb6\x38\x12 \n\x1bk_EMsgGCGuildCreateResponse\x10\xb7\x38\x12\'\n\"k_EMsgGCGuildSetAccountRoleRequest\x10\xb8\x38\x12(\n#k_EMsgGCGuildSetAccountRoleResponse\x10\xb9\x38\x12\x1d\n\x18k_EMsgGCRequestGuildData\x10\xba\x38\x12\x16\n\x11k_EMsgGCGuildData\x10\xbb\x38\x12&\n!k_EMsgGCGuildInviteAccountRequest\x10\xbc\x38\x12\'\n\"k_EMsgGCGuildInviteAccountResponse\x10\xbd\x38\x12%\n k_EMsgGCGuildCancelInviteRequest\x10\xbe\x38\x12&\n!k_EMsgGCGuildCancelInviteResponse\x10\xbf\x38\x12&\n!k_EMsgGCGuildUpdateDetailsRequest\x10\xc0\x38\x12\'\n\"k_EMsgGCGuildUpdateDetailsResponse\x10\xc1\x38\x12$\n\x1fk_EMsgGCToGCCanInviteUserToTeam\x10\xc2\x38\x12,\n\'k_EMsgGCToGCCanInviteUserToTeamResponse\x10\xc3\x38\x12\x1c\n\x17k_EMsgGCToGCGetUserRank\x10\xc4\x38\x12$\n\x1fk_EMsgGCToGCGetUserRankResponse\x10\xc5\x38\x12 \n\x1bk_EMsgGCToGCUpdateTeamStats\x10\xc8\x38\x12\x1c\n\x17k_EMsgGCToGCGetTeamRank\x10\xc9\x38\x12$\n\x1fk_EMsgGCToGCGetTeamRankResponse\x10\xca\x38\x12 \n\x1bk_EMsgGCPassportDataRequest\x10\xd0\x38\x12!\n\x1ck_EMsgGCPassportDataResponse\x10\xd1\x38\x12\x1b\n\x16k_EMsgGCNotInGuildData\x10\xd3\x38\x12\x1c\n\x17k_EMsgGCGuildInviteData\x10\xd6\x38\x12\x1f\n\x1ak_EMsgGCToGCGetLeagueAdmin\x10\xd7\x38\x12\'\n\"k_EMsgGCToGCGetLeagueAdminResponse\x10\xd8\x38\x12#\n\x1ek_EMsgGCRequestLeaguePrizePool\x10\xda\x38\x12+\n&k_EMsgGCRequestLeaguePrizePoolResponse\x10\xdb\x38\x12,\n\'k_EMsgGCToGCUpdateOpenGuildPartyRequest\x10\xdd\x38\x12-\n(k_EMsgGCToGCUpdateOpenGuildPartyResponse\x10\xde\x38\x12-\n(k_EMsgGCToGCDestroyOpenGuildPartyRequest\x10\xdf\x38\x12.\n)k_EMsgGCToGCDestroyOpenGuildPartyResponse\x10\xe0\x38\x12\x1f\n\x1ak_EMsgGCGuildUpdateMessage\x10\xe1\x38\x12%\n k_EMsgGCPartySetOpenGuildRequest\x10\xe2\x38\x12&\n!k_EMsgGCPartySetOpenGuildResponse\x10\xe3\x38\x12\"\n\x1dk_EMsgGCGuildOpenPartyRefresh\x10\xe4\x38\x12&\n!k_EMsgGCJoinOpenGuildPartyRequest\x10\xe5\x38\x12\'\n\"k_EMsgGCJoinOpenGuildPartyResponse\x10\xe6\x38\x12\x1d\n\x18k_EMsgGCLeaveChatChannel\x10\xe8\x38\x12\x18\n\x13k_EMsgGCChatMessage\x10\xe9\x38\x12\x1d\n\x18k_EMsgGCGetHeroStandings\x10\xea\x38\x12%\n k_EMsgGCGetHeroStandingsResponse\x10\xeb\x38\x12!\n\x1ck_EMsgGCGuildEditLogoRequest\x10\xef\x38\x12\"\n\x1dk_EMsgGCGuildEditLogoResponse\x10\xf0\x38\x12.\n)k_EMsgGCGuildmatePracticeLobbyListRequest\x10\xf1\x38\x12/\n*k_EMsgGCGuildmatePracticeLobbyListResponse\x10\xf2\x38\x12*\n%k_EMsgGCItemEditorReservationsRequest\x10\xf3\x38\x12+\n&k_EMsgGCItemEditorReservationsResponse\x10\xf4\x38\x12%\n k_EMsgGCItemEditorReserveItemDef\x10\xf5\x38\x12-\n(k_EMsgGCItemEditorReserveItemDefResponse\x10\xf6\x38\x12)\n$k_EMsgGCItemEditorReleaseReservation\x10\xf7\x38\x12\x31\n,k_EMsgGCItemEditorReleaseReservationResponse\x10\xf8\x38\x12!\n\x1ck_EMsgGCRewardTutorialPrizes\x10\xf9\x38\x12*\n%k_EMsgGCLastHitChallengeHighScorePost\x10\xfa\x38\x12-\n(k_EMsgGCLastHitChallengeHighScoreRequest\x10\xfb\x38\x12.\n)k_EMsgGCLastHitChallengeHighScoreResponse\x10\xfc\x38\x12\'\n\"k_EMsgGCCreateFantasyLeagueRequest\x10\xfd\x38\x12(\n#k_EMsgGCCreateFantasyLeagueResponse\x10\xfe\x38\x12%\n k_EMsgGCFantasyLeagueInfoRequest\x10\x81\x39\x12&\n!k_EMsgGCFantasyLeagueInfoResponse\x10\x82\x39\x12\x1e\n\x19k_EMsgGCFantasyLeagueInfo\x10\x83\x39\x12%\n k_EMsgGCCreateFantasyTeamRequest\x10\x84\x39\x12&\n!k_EMsgGCCreateFantasyTeamResponse\x10\x85\x39\x12#\n\x1ek_EMsgGCEditFantasyTeamRequest\x10\x86\x39\x12$\n\x1fk_EMsgGCEditFantasyTeamResponse\x10\x87\x39\x12\x34\n/k_EMsgGCFantasyTeamInfoRequestByFantasyLeagueID\x10\x88\x39\x12\x33\n.k_EMsgGCFantasyTeamInfoRequestByOwnerAccountID\x10\x89\x39\x12$\n\x1fk_EMsgGCFantasyTeamInfoResponse\x10\x8a\x39\x12\x1c\n\x17k_EMsgGCFantasyTeamInfo\x10\x8b\x39\x12#\n\x1ek_EMsgGCFantasyLivePlayerStats\x10\x8c\x39\x12$\n\x1fk_EMsgGCFantasyFinalPlayerStats\x10\x8d\x39\x12\x19\n\x14k_EMsgGCFantasyMatch\x10\x8e\x39\x12$\n\x1fk_EMsgGCFantasyTeamScoreRequest\x10\x90\x39\x12%\n k_EMsgGCFantasyTeamScoreResponse\x10\x91\x39\x12(\n#k_EMsgGCFantasyTeamStandingsRequest\x10\x92\x39\x12)\n$k_EMsgGCFantasyTeamStandingsResponse\x10\x93\x39\x12&\n!k_EMsgGCFantasyPlayerScoreRequest\x10\x94\x39\x12\'\n\"k_EMsgGCFantasyPlayerScoreResponse\x10\x95\x39\x12*\n%k_EMsgGCFantasyPlayerStandingsRequest\x10\x96\x39\x12+\n&k_EMsgGCFantasyPlayerStandingsResponse\x10\x97\x39\x12\x1b\n\x16k_EMsgGCFlipLobbyTeams\x10\x98\x39\x12\x1d\n\x18k_EMsgGCCustomGameCreate\x10\x99\x39\x12-\n(k_EMsgGCToGCProcessPlayerReportForTarget\x10\x9c\x39\x12%\n k_EMsgGCToGCProcessReportSuccess\x10\x9d\x39\x12%\n k_EMsgGCNotifyAccountFlagsChange\x10\x9e\x39\x12\x1e\n\x19k_EMsgGCSetProfilePrivacy\x10\x9f\x39\x12&\n!k_EMsgGCSetProfilePrivacyResponse\x10\xa0\x39\x12+\n&k_EMsgGCFantasyLeagueCreateInfoRequest\x10\xa3\x39\x12,\n\'k_EMsgGCFantasyLeagueCreateInfoResponse\x10\xa4\x39\x12+\n&k_EMsgGCFantasyLeagueInviteInfoRequest\x10\xa5\x39\x12,\n\'k_EMsgGCFantasyLeagueInviteInfoResponse\x10\xa6\x39\x12\x1e\n\x19k_EMsgGCClientIgnoredUser\x10\xa7\x39\x12\'\n\"k_EMsgGCFantasyLeagueCreateRequest\x10\xa8\x39\x12(\n#k_EMsgGCFantasyLeagueCreateResponse\x10\xa9\x39\x12%\n k_EMsgGCFantasyTeamCreateRequest\x10\xaa\x39\x12&\n!k_EMsgGCFantasyTeamCreateResponse\x10\xab\x39\x12/\n*k_EMsgGCFantasyLeagueFriendJoinListRequest\x10\xac\x39\x12\x30\n+k_EMsgGCFantasyLeagueFriendJoinListResponse\x10\xad\x39\x12\x1c\n\x17k_EMsgGCClientSuspended\x10\xae\x39\x12 \n\x1bk_EMsgGCPartyMemberSetCoach\x10\xaf\x39\x12,\n\'k_EMsgGCFantasyLeagueEditInvitesRequest\x10\xb0\x39\x12-\n(k_EMsgGCFantasyLeagueEditInvitesResponse\x10\xb1\x39\x12\"\n\x1dk_EMsgGCPracticeLobbySetCoach\x10\xb2\x39\x12)\n$k_EMsgGCFantasyLeagueEditInfoRequest\x10\xb3\x39\x12*\n%k_EMsgGCFantasyLeagueEditInfoResponse\x10\xb4\x39\x12,\n\'k_EMsgGCFantasyLeagueDraftStatusRequest\x10\xb5\x39\x12%\n k_EMsgGCFantasyLeagueDraftStatus\x10\xb6\x39\x12,\n\'k_EMsgGCFantasyLeagueDraftPlayerRequest\x10\xb7\x39\x12-\n(k_EMsgGCFantasyLeagueDraftPlayerResponse\x10\xb8\x39\x12)\n$k_EMsgGCFantasyLeagueMatchupsRequest\x10\xb9\x39\x12*\n%k_EMsgGCFantasyLeagueMatchupsResponse\x10\xba\x39\x12)\n$k_EMsgGCFantasyTeamRosterSwapRequest\x10\xbb\x39\x12*\n%k_EMsgGCFantasyTeamRosterSwapResponse\x10\xbc\x39\x12%\n k_EMsgGCFantasyTeamRosterRequest\x10\xbd\x39\x12&\n!k_EMsgGCFantasyTeamRosterResponse\x10\xbe\x39\x12\x1f\n\x1ak_EMsgGCNexonPartnerUpdate\x10\xbf\x39\x12*\n%k_EMsgGCToGCProcessPCBangRewardPoints\x10\xc0\x39\x12,\n\'k_EMsgGCFantasyTeamRosterAddDropRequest\x10\xc1\x39\x12-\n(k_EMsgGCFantasyTeamRosterAddDropResponse\x10\xc2\x39\x12&\n!k_EMsgPresentedClientTerminateDlg\x10\xc3\x39\x12/\n*k_EMsgGCFantasyPlayerHisoricalStatsRequest\x10\xc4\x39\x12\x30\n+k_EMsgGCFantasyPlayerHisoricalStatsResponse\x10\xc5\x39\x12%\n k_EMsgGCPCBangTimedRewardMessage\x10\xc6\x39\x12,\n\'k_EMsgGCLobbyUpdateBroadcastChannelInfo\x10\xc7\x39\x12%\n k_EMsgGCFantasyTeamTradesRequest\x10\xc8\x39\x12&\n!k_EMsgGCFantasyTeamTradesResponse\x10\xc9\x39\x12*\n%k_EMsgGCFantasyTeamTradeCancelRequest\x10\xca\x39\x12+\n&k_EMsgGCFantasyTeamTradeCancelResponse\x10\xcb\x39\x12$\n\x1fk_EMsgGCToGCGrantTournamentItem\x10\xcc\x39\x12)\n$k_EMsgGCProcessFantasyScheduledEvent\x10\xcd\x39\x12&\n!k_EMsgGCToGCGrantPCBangRewardItem\x10\xce\x39\x12)\n$k_EMsgGCToGCUpgradeTwitchViewerItems\x10\xcf\x39\x12\'\n\"k_EMsgGCToGCGetLiveMatchAffiliates\x10\xd0\x39\x12/\n*k_EMsgGCToGCGetLiveMatchAffiliatesResponse\x10\xd1\x39\x12*\n%k_EMsgGCToGCUpdatePlayerPennantCounts\x10\xd2\x39\x12\'\n\"k_EMsgGCToGCGetPlayerPennantCounts\x10\xd3\x39\x12/\n*k_EMsgGCToGCGetPlayerPennantCountsResponse\x10\xd4\x39\x12.\n)k_EMsgGCGameMatchSignOutPermissionRequest\x10\xd5\x39\x12/\n*k_EMsgGCGameMatchSignOutPermissionResponse\x10\xd6\x39\x12&\n!k_EMsgDOTAChatChannelMemberUpdate\x10\xd7\x39\x12\x1f\n\x1ak_EMsgDOTAAwardEventPoints\x10\xd8\x39\x12\x1d\n\x18k_EMsgDOTAGetEventPoints\x10\xdb\x39\x12%\n k_EMsgDOTAGetEventPointsResponse\x10\xdc\x39\x12(\n#k_EMsgGCToGCSignoutAwardEventPoints\x10\xde\x39\x12!\n\x1ck_EMsgDOTASendFriendRecruits\x10\xe1\x39\x12$\n\x1fk_EMsgDOTAFriendRecruitsRequest\x10\xe2\x39\x12%\n k_EMsgDOTAFriendRecruitsResponse\x10\xe3\x39\x12/\n*k_EMsgDOTAFriendRecruitInviteAcceptDecline\x10\xe4\x39\x12\'\n\"k_EMsgGCPartyLeaderWatchGamePrompt\x10\xe5\x39\x12#\n\x1ek_EMsgDOTAFrostivusTimeElapsed\x10\xe6\x39\x12#\n\x1ek_EMsgDOTALiveLeagueGameUpdate\x10\xea\x39\x12\x1e\n\x19k_EMsgDOTAChatGetUserList\x10\xeb\x39\x12&\n!k_EMsgDOTAChatGetUserListResponse\x10\xec\x39\x12#\n\x1ek_EMsgGCCompendiumSetSelection\x10\xed\x39\x12\"\n\x1dk_EMsgGCCompendiumDataRequest\x10\xee\x39\x12#\n\x1ek_EMsgGCCompendiumDataResponse\x10\xef\x39\x12$\n\x1fk_EMsgDOTAGetPlayerMatchHistory\x10\xf0\x39\x12,\n\'k_EMsgDOTAGetPlayerMatchHistoryResponse\x10\xf1\x39\x12$\n\x1fk_EMsgGCToGCMatchmakingAddParty\x10\xf2\x39\x12\'\n\"k_EMsgGCToGCMatchmakingRemoveParty\x10\xf3\x39\x12,\n\'k_EMsgGCToGCMatchmakingRemoveAllParties\x10\xf4\x39\x12&\n!k_EMsgGCToGCMatchmakingMatchFound\x10\xf5\x39\x12+\n&k_EMsgGCToGCUpdateMatchManagementStats\x10\xf6\x39\x12\'\n\"k_EMsgGCToGCUpdateMatchmakingStats\x10\xf7\x39\x12 \n\x1bk_EMsgGCToServerPingRequest\x10\xf8\x39\x12!\n\x1ck_EMsgGCToServerPingResponse\x10\xf9\x39\x12#\n\x1ek_EMsgGCToServerConsoleCommand\x10\xfa\x39\x12\x19\n\x14k_EMsgGCMakeOffering\x10\xff\x39\x12\x1d\n\x18k_EMsgGCRequestOfferings\x10\x80:\x12%\n k_EMsgGCRequestOfferingsResponse\x10\x81:\x12#\n\x1ek_EMsgGCToGCProcessMatchLeaver\x10\x82:\x12!\n\x1ck_EMsgGCNotificationsRequest\x10\x83:\x12\"\n\x1dk_EMsgGCNotificationsResponse\x10\x84:\x12#\n\x1ek_EMsgGCToGCModifyNotification\x10\x85:\x12$\n\x1fk_EMsgGCToGCSetNewNotifications\x10\x86:\x12\x1c\n\x17k_EMsgGCLeagueAdminList\x10\x8a:\x12)\n$k_EMsgGCNotificationsMarkReadRequest\x10\x8b:\x12\x1e\n\x19k_EMsgGCFantasyMessageAdd\x10\x8c:\x12#\n\x1ek_EMsgGCFantasyMessagesRequest\x10\x8d:\x12$\n\x1fk_EMsgGCFantasyMessagesResponse\x10\x8e:\x12+\n&k_EMsgGCFantasyScheduledMatchesRequest\x10\x8f:\x12,\n\'k_EMsgGCFantasyScheduledMatchesResponse\x10\x90:\x12\x1c\n\x17k_EMsgGCEventGameCreate\x10\x93:\x12*\n%k_EMsgGCPerfectWorldUserLookupRequest\x10\x94:\x12+\n&k_EMsgGCPerfectWorldUserLookupResponse\x10\x95:\x12\x1f\n\x1ak_EMsgGCFantasyRemoveOwner\x10\x98:\x12\'\n\"k_EMsgGCFantasyRemoveOwnerResponse\x10\x99:\x12(\n#k_EMsgGCRequestBatchPlayerResources\x10\x9a:\x12\x30\n+k_EMsgGCRequestBatchPlayerResourcesResponse\x10\x9b:\x12\"\n\x1dk_EMsgGCToGCSendUpdateLeagues\x10\x9c:\x12+\n&k_EMsgGCCompendiumSetSelectionResponse\x10\x9d:\x12\x1e\n\x19k_EMsgGCPlayerInfoRequest\x10\x9e:\x12\x17\n\x12k_EMsgGCPlayerInfo\x10\x9f:\x12\x1d\n\x18k_EMsgGCPlayerInfoSubmit\x10\xa0:\x12%\n k_EMsgGCPlayerInfoSubmitResponse\x10\xa1:\x12 \n\x1bk_EMsgGCToGCGetAccountLevel\x10\xa2:\x12(\n#k_EMsgGCToGCGetAccountLevelResponse\x10\xa3:\x12\"\n\x1dk_EMsgGCToGCGetAccountPartner\x10\xa4:\x12*\n%k_EMsgGCToGCGetAccountPartnerResponse\x10\xa5:\x12(\n#k_EMsgDOTAGetWeekendTourneySchedule\x10\xa8:\x12%\n k_EMsgDOTAWeekendTourneySchedule\x10\xa9:\x12+\n&k_EMsgGCJoinableCustomGameModesRequest\x10\xaa:\x12,\n\'k_EMsgGCJoinableCustomGameModesResponse\x10\xab:\x12)\n$k_EMsgGCJoinableCustomLobbiesRequest\x10\xac:\x12*\n%k_EMsgGCJoinableCustomLobbiesResponse\x10\xad:\x12!\n\x1ck_EMsgGCQuickJoinCustomLobby\x10\xae:\x12)\n$k_EMsgGCQuickJoinCustomLobbyResponse\x10\xaf:\x12&\n!k_EMsgGCToGCGrantEventPointAction\x10\xb0:\x12\x1f\n\x1ak_EMsgServerGetEventPoints\x10\xb1:\x12\'\n\"k_EMsgServerGetEventPointsResponse\x10\xb2:\x12&\n!k_EMsgServerGrantSurveyPermission\x10\xb3:\x12.\n)k_EMsgServerGrantSurveyPermissionResponse\x10\xb4:\x12$\n\x1fk_EMsgClientProvideSurveyResult\x10\xb5:\x12\'\n\"k_EMsgGCToGCSetCompendiumSelection\x10\xb6:\x12#\n\x1ek_EMsgGCToGCUpdateTI4HeroQuest\x10\xb8:\x12\"\n\x1dk_EMsgGCCompendiumDataChanged\x10\xb9:\x12\'\n\"k_EMsgDOTAFantasyLeagueFindRequest\x10\xba:\x12(\n#k_EMsgDOTAFantasyLeagueFindResponse\x10\xbb:\x12\x19\n\x14k_EMsgGCHasItemQuery\x10\xbc:\x12\x1c\n\x17k_EMsgGCHasItemResponse\x10\xbd:\x12!\n\x1ck_EMsgGCConsumeFantasyTicket\x10\xbe:\x12(\n#k_EMsgGCConsumeFantasyTicketFailure\x10\xbf:\x12)\n$k_EMsgGCToGCGrantEventPointActionMsg\x10\xc0:\x12&\n!k_EMsgClientToGCTrackDialogResult\x10\xc1:\x12&\n!k_EMsgGCFantasyLeaveLeagueRequest\x10\xc2:\x12\'\n\"k_EMsgGCFantasyLeaveLeagueResponse\x10\xc3:\x12(\n#k_EMsgGCToGCGetCompendiumSelections\x10\xc4:\x12\x30\n+k_EMsgGCToGCGetCompendiumSelectionsResponse\x10\xc5:\x12)\n$k_EMsgServerToGCMatchConnectionStats\x10\xc6:\x12\'\n\"k_EMsgGCToClientTournamentItemDrop\x10\xc7:\x12$\n\x1fk_EMsgSQLDelayedGrantLeagueDrop\x10\xc8:\x12\'\n\"k_EMsgServerGCUpdateSpectatorCount\x10\xc9:\x12-\n(k_EMsgGCFantasyPlayerScoreDetailsRequest\x10\xcb:\x12.\n)k_EMsgGCFantasyPlayerScoreDetailsResponse\x10\xcc:\x12\x1f\n\x1ak_EMsgGCToGCEmoticonUnlock\x10\xcd:\x12\x1b\n\x16k_EMsgSignOutDraftInfo\x10\xce:\x12(\n#k_EMsgClientToGCEmoticonDataRequest\x10\xcf:\x12!\n\x1ck_EMsgGCToClientEmoticonData\x10\xd0:\x12?\n:k_EMsgGCPracticeLobbyToggleBroadcastChannelCameramanStatus\x10\xd1:\x12,\n\'k_EMsgGCToGCCreateWeekendTourneyRequest\x10\xd2:\x12-\n(k_EMsgGCToGCCreateWeekendTourneyResponse\x10\xd3:\x12(\n#k_EMsgClientToGCSetAdditionalEquips\x10\xd9:\x12(\n#k_EMsgClientToGCGetAdditionalEquips\x10\xda:\x12\x30\n+k_EMsgClientToGCGetAdditionalEquipsResponse\x10\xdb:\x12(\n#k_EMsgServerToGCGetAdditionalEquips\x10\xdc:\x12\x30\n+k_EMsgServerToGCGetAdditionalEquipsResponse\x10\xdd:\x12\x19\n\x14k_EMsgDOTARedeemItem\x10\xde:\x12!\n\x1ck_EMsgDOTARedeemItemResponse\x10\xdf:\x12(\n#k_EMsgSQLGCToGCGrantAllHeroProgress\x10\xe0:\x12\'\n\"k_EMsgClientToGCGetAllHeroProgress\x10\xe1:\x12/\n*k_EMsgClientToGCGetAllHeroProgressResponse\x10\xe2:\x12#\n\x1ek_EMsgGCToGCGetServerForClient\x10\xe3:\x12+\n&k_EMsgGCToGCGetServerForClientResponse\x10\xe4:\x12*\n%k_EMsgSQLProcessTournamentGameOutcome\x10\xe5:\x12\"\n\x1dk_EMsgSQLGrantTrophyToAccount\x10\xe6:\x12\"\n\x1dk_EMsgClientToGCGetTrophyList\x10\xe7:\x12*\n%k_EMsgClientToGCGetTrophyListResponse\x10\xe8:\x12\"\n\x1dk_EMsgGCToClientTrophyAwarded\x10\xe9:\x12 \n\x1bk_EMsgGCGameBotMatchSignOut\x10\xea:\x12\x31\n,k_EMsgGCGameBotMatchSignOutPermissionRequest\x10\xeb:\x12\x19\n\x14k_EMsgSignOutBotInfo\x10\xec:\x12#\n\x1ek_EMsgGCToGCUpdateProfileCards\x10\xed:\x12#\n\x1ek_EMsgClientToGCGetProfileCard\x10\xee:\x12+\n&k_EMsgClientToGCGetProfileCardResponse\x10\xef:\x12#\n\x1ek_EMsgServerToGCGetProfileCard\x10\xf0:\x12+\n&k_EMsgServerToGCGetProfileCardResponse\x10\xf1:\x12(\n#k_EMsgClientToGCSetProfileCardSlots\x10\xf2:\x12\'\n\"k_EMsgGCToClientProfileCardUpdated\x10\xf3:\x12\'\n\"k_EMsgServerToGCVictoryPredictions\x10\xf4:\x12-\n(k_EMsgClientToGCMarkNotificationListRead\x10\xf6:\x12)\n$k_EMsgGCToClientNewNotificationAdded\x10\xf7:\x12\'\n\"k_EMsgServerToGCSuspiciousActivity\x10\xf8:\x12&\n!k_EMsgSignOutCommunicationSummary\x10\xf9:\x12+\n&k_EMsgServerToGCRequestStatus_Response\x10\xfa:\x12%\n k_EMsgClientToGCCreateHeroStatue\x10\xfb:\x12+\n&k_EMsgGCToClientHeroStatueCreateResult\x10\xfc:\x12&\n!k_EMsgGCGCToLANServerRelayConnect\x10\xfd:\x12\'\n\"k_EMsgServerToGCGetIngameEventData\x10\xff:\x12/\n*k_EMsgGCToGCUpdateIngameEventDataBroadcast\x10\x80;\x12-\n(k_EMsgGCToServerIngameEventData_OraclePA\x10\x81;\x12(\n#k_EMsgServerToGCReportKillSummaries\x10\x82;\x12$\n\x1fk_EMsgGCToGCReportKillSummaries\x10\x83;\x12\'\n\"k_EMsgGCToGCUpdateAssassinMinigame\x10\x84;\x12&\n!k_EMsgGCToGCFantasySetMatchLeague\x10\x85;\x12(\n#k_EMsgGCToGCUpdatePlayerPredictions\x10\x89;\x12%\n k_EMsgGCToServerPredictionResult\x10\x8a;\x12\x30\n+k_EMsgServerToGCSignoutAwardAdditionalDrops\x10\x8b;\x12,\n\'k_EMsgGCToGCSignoutAwardAdditionalDrops\x10\x8c;\x12\'\n\"k_EMsgGCToClientEventStatusChanged\x10\x8d;\x12\x1d\n\x18k_EMsgGCHasItemDefsQuery\x10\x8e;\x12 \n\x1bk_EMsgGCHasItemDefsResponse\x10\x8f;\x12,\n\'k_EMsgGCToGCReplayMonitorValidateReplay\x10\x91;\x12\x1b\n\x16k_EMsgLobbyEventPoints\x10\x94;\x12%\n k_EMsgGCToGCGetCustomGameTickets\x10\x95;\x12-\n(k_EMsgGCToGCGetCustomGameTicketsResponse\x10\x96;\x12!\n\x1ck_EMsgGCToGCCustomGamePlayed\x10\x98;\x12\'\n\"k_EMsgGCToGCGrantEventPointsToUser\x10\x99;\x12)\n$k_EMsgGCToGCSetEventMMPanicFlushTime\x10\x9a;\x12 \n\x1bk_EMsgGameserverCrashReport\x10\x9b;\x12(\n#k_EMsgGameserverCrashReportResponse\x10\x9c;\x12(\n#k_EMsgGCToClientSteamDatagramTicket\x10\x9d;\x12$\n\x1fk_EMsgGCToGCGrantEventOwnership\x10\x9e;\x12(\n#k_EMsgGCToGCSendAccountsEventPoints\x10\x9f;\x12*\n%k_EMsgClientToGCRerollPlayerChallenge\x10\xa0;\x12*\n%k_EMsgServerToGCRerollPlayerChallenge\x10\xa1;\x12*\n%k_EMsgGCRerollPlayerChallengeResponse\x10\xa2;\x12\'\n\"k_EMsgSignOutUpdatePlayerChallenge\x10\xa3;\x12#\n\x1ek_EMsgClientToGCSetPartyLeader\x10\xa4;\x12\'\n\"k_EMsgClientToGCCancelPartyInvites\x10\xa5;\x12$\n\x1fk_EMsgGCToGCMasterReloadAccount\x10\xa6;\x12-\n(k_EMsgSQLGrantLeagueMatchToTicketHolders\x10\xa8;\x12\x30\n+k_EMsgClientToGCSetAdditionalEquipsResponse\x10\xa9;\x12)\n$k_EMsgGCToGCEmoticonUnlockNoRollback\x10\xaa;\x12%\n k_EMsgGCToGCGetCompendiumFanfare\x10\xab;\x12$\n\x1fk_EMsgServerToGCHoldEventPoints\x10\xac;\x12(\n#k_EMsgSignOutReleaseEventPointHolds\x10\xad;\x12#\n\x1ek_EMsgGCToGCChatNewUserSession\x10\xae;\x12%\n k_EMsgClientToGCApplyGemCombiner\x10\xb3;\x12+\n&k_EMsgClientToGCDOTACreateStaticRecipe\x10\xb4;\x12\x33\n.k_EMsgClientToGCDOTACreateStaticRecipeResponse\x10\xb5;\x12$\n\x1fk_EMsgClientToGCGetAllHeroOrder\x10\xb6;\x12,\n\'k_EMsgClientToGCGetAllHeroOrderResponse\x10\xb7;\x12$\n\x1fk_EMsgSQLGCToGCGrantBadgePoints\x10\xb8;\x12&\n!k_EMsgGCToGCGetAccountMatchStatus\x10\xb9;\x12.\n)k_EMsgGCToGCGetAccountMatchStatusResponse\x10\xba;\x12-\n(k_EMsgGCToGCCheckOwnsEntireEmoticonRange\x10\xbb;\x12\x35\n0k_EMsgGCToGCCheckOwnsEntireEmoticonRangeResponse\x10\xbc;\x12%\n k_EMsgClientToGCRecycleHeroRelic\x10\xc3;\x12-\n(k_EMsgClientToGCRecycleHeroRelicResponse\x10\xc4;\x12%\n k_EMsgGCToGCRevokeEventOwnership\x10\xc5;\x12)\n$k_EMsgGCToGCUnlockEventPointSpending\x10\xc6;\x12)\n$k_EMsgGCToClientRequestLaneSelection\x10\xc7;\x12\x31\n,k_EMsgGCToClientRequestLaneSelectionResponse\x10\xc8;\x12,\n\'k_EMsgServerToGCCavernCrawlIsHeroActive\x10\xc9;\x12\x34\n/k_EMsgServerToGCCavernCrawlIsHeroActiveResponse\x10\xca;\x12\x36\n1k_EMsgClientToGCPlayerCardSpecificPurchaseRequest\x10\xcb;\x12\x37\n2k_EMsgClientToGCPlayerCardSpecificPurchaseResponse\x10\xcc;\x12\'\n\"k_EMsgGCtoServerTensorflowInstance\x10\xcd;\x12\x1e\n\x19k_EMsgSQLSetIsLeagueAdmin\x10\xce;\x12%\n k_EMsgGCToGCGetLiveLeagueMatches\x10\xcf;\x12-\n(k_EMsgGCToGCGetLiveLeagueMatchesResponse\x10\xd0;\x12*\n%k_EMsgDOTALeagueInfoListAdminsRequest\x10\xd1;\x12*\n%k_EMsgDOTALeagueInfoListAdminsReponse\x10\xd2;\x12#\n\x1ek_EMsgGCToGCLeagueMatchStarted\x10\xdd;\x12%\n k_EMsgGCToGCLeagueMatchCompleted\x10\xde;\x12+\n&k_EMsgGCToGCLeagueMatchStartedResponse\x10\xdf;\x12 \n\x1bk_EMsgDOTALeagueNodeRequest\x10\xe0;\x12!\n\x1ck_EMsgDOTALeagueNodeResponse\x10\xe1;\x12/\n*k_EMsgDOTALeagueAvailableLobbyNodesRequest\x10\xe2;\x12(\n#k_EMsgDOTALeagueAvailableLobbyNodes\x10\xe3;\x12\x1e\n\x19k_EMsgGCToGCLeagueRequest\x10\xe4;\x12\x1f\n\x1ak_EMsgGCToGCLeagueResponse\x10\xe5;\x12\'\n\"k_EMsgGCToGCLeagueNodeGroupRequest\x10\xe6;\x12(\n#k_EMsgGCToGCLeagueNodeGroupResponse\x10\xe7;\x12\"\n\x1dk_EMsgGCToGCLeagueNodeRequest\x10\xe8;\x12#\n\x1ek_EMsgGCToGCLeagueNodeResponse\x10\xe9;\x12*\n%k_EMsgGCToGCRealtimeStatsTerseRequest\x10\xea;\x12+\n&k_EMsgGCToGCRealtimeStatsTerseResponse\x10\xeb;\x12\x1d\n\x18k_EMsgGCDev_GrantWarKill\x10\xc1>\x12%\n k_EMsgServerToGCLockCharmTrading\x10\xc4>\x12\'\n\"k_EMsgClientToGCPlayerStatsRequest\x10\xc6>\x12(\n#k_EMsgGCToClientPlayerStatsResponse\x10\xc7>\x12#\n\x1ek_EMsgGCClearPracticeLobbyTeam\x10\xc8>\x12)\n$k_EMsgClientToGCFindTopSourceTVGames\x10\xc9>\x12\x31\n,k_EMsgGCToClientFindTopSourceTVGamesResponse\x10\xca>\x12\x16\n\x11k_EMsgGCLobbyList\x10\xcb>\x12\x1e\n\x19k_EMsgGCLobbyListResponse\x10\xcc>\x12$\n\x1fk_EMsgGCPlayerStatsMatchSignOut\x10\xcd>\x12\x31\n,k_EMsgClientToGCCustomGamePlayerCountRequest\x10\xce>\x12\x32\n-k_EMsgGCToClientCustomGamePlayerCountResponse\x10\xcf>\x12\x31\n,k_EMsgClientToGCSocialFeedPostCommentRequest\x10\xd0>\x12\x32\n-k_EMsgGCToClientSocialFeedPostCommentResponse\x10\xd1>\x12\x34\n/k_EMsgClientToGCCustomGamesFriendsPlayedRequest\x10\xd2>\x12\x35\n0k_EMsgGCToClientCustomGamesFriendsPlayedResponse\x10\xd3>\x12\x33\n.k_EMsgClientToGCFriendsPlayedCustomGameRequest\x10\xd4>\x12\x34\n/k_EMsgGCToClientFriendsPlayedCustomGameResponse\x10\xd5>\x12\x1f\n\x1ak_EMsgGCTopCustomGamesList\x10\xd8>\x12\x32\n-k_EMsgClientToGCSocialMatchPostCommentRequest\x10\xd9>\x12\x33\n.k_EMsgGCToClientSocialMatchPostCommentResponse\x10\xda>\x12.\n)k_EMsgClientToGCSocialMatchDetailsRequest\x10\xdb>\x12/\n*k_EMsgGCToClientSocialMatchDetailsResponse\x10\xdc>\x12!\n\x1ck_EMsgClientToGCSetPartyOpen\x10\xdd>\x12%\n k_EMsgClientToGCMergePartyInvite\x10\xde>\x12*\n%k_EMsgGCToClientMergeGroupInviteReply\x10\xdf>\x12\'\n\"k_EMsgClientToGCMergePartyResponse\x10\xe0>\x12,\n\'k_EMsgGCToClientMergePartyResponseReply\x10\xe1>\x12(\n#k_EMsgClientToGCGetProfileCardStats\x10\xe2>\x12\x30\n+k_EMsgClientToGCGetProfileCardStatsResponse\x10\xe3>\x12,\n\'k_EMsgClientToGCTopLeagueMatchesRequest\x10\xe4>\x12,\n\'k_EMsgClientToGCTopFriendMatchesRequest\x10\xe5>\x12,\n\'k_EMsgGCToClientProfileCardStatsUpdated\x10\xe8>\x12\"\n\x1dk_EMsgServerToGCRealtimeStats\x10\xe9>\x12+\n&k_EMsgGCToServerRealtimeStatsStartStop\x10\xea>\x12%\n k_EMsgGCToGCGetServersForClients\x10\xed>\x12-\n(k_EMsgGCToGCGetServersForClientsResponse\x10\xee>\x12&\n!k_EMsgGCPracticeLobbyKickFromTeam\x10\xef>\x12!\n\x1ck_EMsgDOTAChatGetMemberCount\x10\xf0>\x12)\n$k_EMsgDOTAChatGetMemberCountResponse\x10\xf1>\x12\x31\n,k_EMsgClientToGCSocialFeedPostMessageRequest\x10\xf2>\x12\x32\n-k_EMsgGCToClientSocialFeedPostMessageResponse\x10\xf3>\x12/\n*k_EMsgCustomGameListenServerStartedLoading\x10\xf4>\x12*\n%k_EMsgCustomGameClientFinishedLoading\x10\xf5>\x12/\n*k_EMsgGCPracticeLobbyCloseBroadcastChannel\x10\xf6>\x12&\n!k_EMsgGCStartFindingMatchResponse\x10\xf7>\x12$\n\x1fk_EMsgSQLGCToGCGrantAccountFlag\x10\xf9>\x12 \n\x1bk_EMsgGCToGCGetAccountFlags\x10\xfa>\x12(\n#k_EMsgGCToGCGetAccountFlagsResponse\x10\xfb>\x12\x1c\n\x17k_EMsgSignOutWagerStats\x10\xfc>\x12-\n(k_EMsgGCToClientTopLeagueMatchesResponse\x10\xfd>\x12-\n(k_EMsgGCToClientTopFriendMatchesResponse\x10\xfe>\x12*\n%k_EMsgClientToGCMatchesMinimalRequest\x10\xff>\x12+\n&k_EMsgClientToGCMatchesMinimalResponse\x10\x80?\x12&\n!k_EMsgGCToGCGetProfileBadgePoints\x10\x81?\x12.\n)k_EMsgGCToGCGetProfileBadgePointsResponse\x10\x82?\x12\'\n\"k_EMsgGCToClientChatRegionsEnabled\x10\x83?\x12\x1d\n\x18k_EMsgClientToGCPingData\x10\x84?\x12(\n#k_EMsgServerToGCMatchDetailsRequest\x10\x85?\x12)\n$k_EMsgGCToServerMatchDetailsResponse\x10\x86?\x12%\n k_EMsgGCToGCEnsureAccountInParty\x10\x87?\x12-\n(k_EMsgGCToGCEnsureAccountInPartyResponse\x10\x88?\x12&\n!k_EMsgClientToGCGetProfileTickets\x10\x89?\x12.\n)k_EMsgClientToGCGetProfileTicketsResponse\x10\x8a?\x12\'\n\"k_EMsgGCToClientMatchGroupsVersion\x10\x8b?\x12$\n\x1fk_EMsgClientToGCH264Unsupported\x10\x8c?\x12\'\n\"k_EMsgClientToGCRequestH264Support\x10\x8d?\x12%\n k_EMsgClientToGCGetQuestProgress\x10\x8e?\x12-\n(k_EMsgClientToGCGetQuestProgressResponse\x10\x8f?\x12\x19\n\x14k_EMsgSignOutXPCoins\x10\x90?\x12#\n\x1ek_EMsgGCToClientMatchSignedOut\x10\x91?\x12 \n\x1bk_EMsgGCGetHeroStatsHistory\x10\x92?\x12(\n#k_EMsgGCGetHeroStatsHistoryResponse\x10\x93?\x12&\n!k_EMsgClientToGCPrivateChatInvite\x10\x94?\x12$\n\x1fk_EMsgClientToGCPrivateChatKick\x10\x98?\x12\'\n\"k_EMsgClientToGCPrivateChatPromote\x10\x99?\x12&\n!k_EMsgClientToGCPrivateChatDemote\x10\x9a?\x12(\n#k_EMsgGCToClientPrivateChatResponse\x10\x9b?\x12+\n&k_EMsgClientToGCPrivateChatInfoRequest\x10\x9c?\x12,\n\'k_EMsgGCToClientPrivateChatInfoResponse\x10\x9d?\x12\x32\n-k_EMsgClientToGCLatestConductScorecardRequest\x10\x9f?\x12+\n&k_EMsgClientToGCLatestConductScorecard\x10\xa0?\x12!\n\x1ck_EMsgServerToGCPostMatchTip\x10\xa1?\x12)\n$k_EMsgServerToGCPostMatchTipResponse\x10\xa2?\x12$\n\x1fk_EMsgClientToGCWageringRequest\x10\xa3?\x12%\n k_EMsgGCToClientWageringResponse\x10\xa4?\x12&\n!k_EMsgClientToGCEventGoalsRequest\x10\xa7?\x12\'\n\"k_EMsgClientToGCEventGoalsResponse\x10\xa8?\x12&\n!k_EMsgClientToGCLeaguePredictions\x10\xaa?\x12.\n)k_EMsgGCToClientLeaguePredictionsResponse\x10\xab?\x12(\n#k_EMsgGCToGCLeaguePredictionsUpdate\x10\xac?\x12\'\n\"k_EMsgClientToGCSuspiciousActivity\x10\xad?\x12&\n!k_EMsgGCToGCAddUserToPostGameChat\x10\xae?\x12)\n$k_EMsgClientToGCHasPlayerVotedForMVP\x10\xaf?\x12\x31\n,k_EMsgClientToGCHasPlayerVotedForMVPResponse\x10\xb0?\x12\x1f\n\x1ak_EMsgClientToGCVoteForMVP\x10\xb1?\x12\'\n\"k_EMsgClientToGCVoteForMVPResponse\x10\xb2?\x12\"\n\x1dk_EMsgGCToGCGetEventOwnership\x10\xb3?\x12*\n%k_EMsgGCToGCGetEventOwnershipResponse\x10\xb4?\x12\x33\n.k_EMsgGCToClientAutomatedTournamentStateChange\x10\xb5?\x12\'\n\"k_EMsgClientToGCWeekendTourneyOpts\x10\xb6?\x12/\n*k_EMsgClientToGCWeekendTourneyOptsResponse\x10\xb7?\x12(\n#k_EMsgClientToGCWeekendTourneyLeave\x10\xb8?\x12\x30\n+k_EMsgClientToGCWeekendTourneyLeaveResponse\x10\xb9?\x12)\n$k_EMsgClientToGCTeammateStatsRequest\x10\xbc?\x12*\n%k_EMsgClientToGCTeammateStatsResponse\x10\xbd?\x12\'\n\"k_EMsgClientToGCGetGiftPermissions\x10\xbe?\x12/\n*k_EMsgClientToGCGetGiftPermissionsResponse\x10\xbf?\x12\"\n\x1dk_EMsgClientToGCVoteForArcana\x10\xc0?\x12*\n%k_EMsgClientToGCVoteForArcanaResponse\x10\xc1?\x12\x30\n+k_EMsgClientToGCRequestArcanaVotesRemaining\x10\xc2?\x12\x38\n3k_EMsgClientToGCRequestArcanaVotesRemainingResponse\x10\xc3?\x12&\n!k_EMsgGCTransferTeamAdminResponse\x10\xc4?\x12\x1d\n\x18k_EMsgGCToClientTeamInfo\x10\xc7?\x12\x1e\n\x19k_EMsgGCToClientTeamsInfo\x10\xc8?\x12&\n!k_EMsgClientToGCMyTeamInfoRequest\x10\xc9?\x12$\n\x1fk_EMsgClientToGCPublishUserStat\x10\xcc?\x12\"\n\x1dk_EMsgGCToGCSignoutSpendWager\x10\xcd?\x12\x1f\n\x1ak_EMsgGCSubmitLobbyMVPVote\x10\xd0?\x12\'\n\"k_EMsgGCSubmitLobbyMVPVoteResponse\x10\xd1?\x12.\n)k_EMsgClientToGCRequestLinaPlaysRemaining\x10\xd2?\x12\x36\n1k_EMsgClientToGCRequestLinaPlaysRemainingResponse\x10\xd3?\x12*\n%k_EMsgClientToGCRequestLinaGameResult\x10\xd4?\x12\x32\n-k_EMsgClientToGCRequestLinaGameResultResponse\x10\xd5?\x12\'\n\"k_EMsgSignOutCommunityGoalProgress\x10\xd6?\x12,\n\'k_EMsgGCToClientLobbyMVPNotifyRecipient\x10\xd7?\x12$\n\x1fk_EMsgGCToClientLobbyMVPAwarded\x10\xd8?\x12)\n$k_EMsgGCToClientQuestProgressUpdated\x10\xd9?\x12#\n\x1ek_EMsgGCToClientWageringUpdate\x10\xda?\x12&\n!k_EMsgGCToClientArcanaVotesUpdate\x10\xdb?\x12\'\n\"k_EMsgClientToGCAddTI6TreeProgress\x10\xdc?\x12-\n(k_EMsgClientToGCSetSpectatorLobbyDetails\x10\xdd?\x12\x35\n0k_EMsgClientToGCSetSpectatorLobbyDetailsResponse\x10\xde?\x12)\n$k_EMsgClientToGCCreateSpectatorLobby\x10\xdf?\x12\x31\n,k_EMsgClientToGCCreateSpectatorLobbyResponse\x10\xe0?\x12\'\n\"k_EMsgClientToGCSpectatorLobbyList\x10\xe1?\x12/\n*k_EMsgClientToGCSpectatorLobbyListResponse\x10\xe2?\x12$\n\x1fk_EMsgSpectatorLobbyGameDetails\x10\xe3?\x12\x36\n1k_EMsgServerToGCCompendiumInGamePredictionResults\x10\xe6?\x12:\n5k_EMsgServerToGCCloseCompendiumInGamePredictionVoting\x10\xe7?\x12\'\n\"k_EMsgClientToGCOpenPlayerCardPack\x10\xe8?\x12/\n*k_EMsgClientToGCOpenPlayerCardPackResponse\x10\xe9?\x12\x35\n0k_EMsgClientToGCSelectCompendiumInGamePrediction\x10\xea?\x12=\n8k_EMsgClientToGCSelectCompendiumInGamePredictionResponse\x10\xeb?\x12\x31\n,k_EMsgClientToGCWeekendTourneyGetPlayerStats\x10\xec?\x12\x39\n4k_EMsgClientToGCWeekendTourneyGetPlayerStatsResponse\x10\xed?\x12&\n!k_EMsgClientToGCRecyclePlayerCard\x10\xee?\x12.\n)k_EMsgClientToGCRecyclePlayerCardResponse\x10\xef?\x12)\n$k_EMsgClientToGCCreatePlayerCardPack\x10\xf0?\x12\x31\n,k_EMsgClientToGCCreatePlayerCardPackResponse\x10\xf1?\x12/\n*k_EMsgClientToGCGetPlayerCardRosterRequest\x10\xf2?\x12\x30\n+k_EMsgClientToGCGetPlayerCardRosterResponse\x10\xf3?\x12/\n*k_EMsgClientToGCSetPlayerCardRosterRequest\x10\xf4?\x12\x30\n+k_EMsgClientToGCSetPlayerCardRosterResponse\x10\xf5?\x12\x42\n=k_EMsgServerToGCCloseCompendiumInGamePredictionVotingResponse\x10\xf7?\x12>\n9k_EMsgServerToGCCompendiumInGamePredictionResultsResponse\x10\xf9?\x12 \n\x1bk_EMsgLobbyBattleCupVictory\x10\xfa?\x12\"\n\x1dk_EMsgGCGetPlayerCardItemInfo\x10\xfb?\x12*\n%k_EMsgGCGetPlayerCardItemInfoResponse\x10\xfc?\x12/\n*k_EMsgClientToGCRequestSteamDatagramTicket\x10\xfd?\x12\x37\n2k_EMsgClientToGCRequestSteamDatagramTicketResponse\x10\xfe?\x12,\n\'k_EMsgGCToClientBattlePassRollupRequest\x10\xff?\x12-\n(k_EMsgGCToClientBattlePassRollupResponse\x10\x80@\x12/\n*k_EMsgClientToGCTransferSeasonalMMRRequest\x10\x81@\x12\x30\n+k_EMsgClientToGCTransferSeasonalMMRResponse\x10\x82@\x12+\n&k_EMsgGCToGCPublicChatCommunicationBan\x10\x83@\x12+\n&k_EMsgGCToGCUpdateAccountPublicChatBan\x10\x84@\x12!\n\x1ck_EMsgGCChatReportPublicSpam\x10\x85@\x12+\n&k_EMsgClientToGCSetPartyBuilderOptions\x10\x86@\x12\x33\n.k_EMsgClientToGCSetPartyBuilderOptionsResponse\x10\x87@\x12#\n\x1ek_EMsgGCToClientPlaytestStatus\x10\x88@\x12!\n\x1ck_EMsgClientToGCJoinPlaytest\x10\x89@\x12)\n$k_EMsgClientToGCJoinPlaytestResponse\x10\x8a@\x12\x1f\n\x1ak_EMsgLobbyPlaytestDetails\x10\x8b@\x12\x1e\n\x19k_EMsgDOTASetFavoriteTeam\x10\x8c@\x12\x30\n+k_EMsgGCToClientBattlePassRollupListRequest\x10\x8d@\x12\x31\n,k_EMsgGCToClientBattlePassRollupListResponse\x10\x8e@\x12\x17\n\x12k_EMsgGCIsProQuery\x10\x8f@\x12\x1a\n\x15k_EMsgGCIsProResponse\x10\x90@\x12\x1f\n\x1ak_EMsgDOTAClaimEventAction\x10\x91@\x12\'\n\"k_EMsgDOTAClaimEventActionResponse\x10\x92@\x12\"\n\x1dk_EMsgDOTAGetPeriodicResource\x10\x93@\x12*\n%k_EMsgDOTAGetPeriodicResourceResponse\x10\x94@\x12&\n!k_EMsgDOTAPeriodicResourceUpdated\x10\x95@\x12\x1f\n\x1ak_EMsgServerToGCSpendWager\x10\x96@\x12\'\n\"k_EMsgGCToGCSignoutSpendWagerToken\x10\x97@\x12%\n k_EMsgSubmitTriviaQuestionAnswer\x10\x98@\x12-\n(k_EMsgSubmitTriviaQuestionAnswerResponse\x10\x99@\x12\x1c\n\x17k_EMsgClientToGCGiveTip\x10\x9a@\x12$\n\x1fk_EMsgClientToGCGiveTipResponse\x10\x9b@\x12\x1d\n\x18k_EMsgStartTriviaSession\x10\x9c@\x12%\n k_EMsgStartTriviaSessionResponse\x10\x9d@\x12#\n\x1ek_EMsgAnchorPhoneNumberRequest\x10\x9e@\x12$\n\x1fk_EMsgAnchorPhoneNumberResponse\x10\x9f@\x12%\n k_EMsgUnanchorPhoneNumberRequest\x10\xa0@\x12&\n!k_EMsgUnanchorPhoneNumberResponse\x10\xa1@\x12$\n\x1fk_EMsgGCToClientTipNotification\x10\xa2@\x12+\n&k_EMsgClientToGCRequestSlarkGameResult\x10\xa3@\x12\x33\n.k_EMsgClientToGCRequestSlarkGameResultResponse\x10\xa4@\x12&\n!k_EMsgGCToGCSignoutSpendRankWager\x10\xa5@\x12 \n\x1bk_EMsgGCToGCGetFavoriteTeam\x10\xa6@\x12(\n#k_EMsgGCToGCGetFavoriteTeamResponse\x10\xa7@\x12\x1f\n\x1ak_EMsgSignOutEventGameData\x10\xa8@\x12(\n#k_EMsgGCToClientAllStarVotesRequest\x10\xa9@\x12&\n!k_EMsgGCToClientAllStarVotesReply\x10\xaa@\x12\'\n\"k_EMsgGCToClientAllStarVotesSubmit\x10\xac@\x12,\n\'k_EMsgGCToClientAllStarVotesSubmitReply\x10\xad@\x12&\n!k_EMsgClientToGCQuickStatsRequest\x10\xae@\x12\'\n\"k_EMsgClientToGCQuickStatsResponse\x10\xaf@\x12,\n\'k_EMsgGCToGCSubtractEventPointsFromUser\x10\xb0@\x12)\n$k_EMsgSelectionPriorityChoiceRequest\x10\xb1@\x12*\n%k_EMsgSelectionPriorityChoiceResponse\x10\xb2@\x12\x32\n-k_EMsgGCToGCCompendiumInGamePredictionResults\x10\xb3@\x12\x1e\n\x19k_EMsgGameAutographReward\x10\xb4@\x12&\n!k_EMsgGameAutographRewardResponse\x10\xb5@\x12\x1e\n\x19k_EMsgDestroyLobbyRequest\x10\xb6@\x12\x1f\n\x1ak_EMsgDestroyLobbyResponse\x10\xb7@\x12&\n!k_EMsgPurchaseItemWithEventPoints\x10\xb8@\x12.\n)k_EMsgPurchaseItemWithEventPointsResponse\x10\xb9@\x12\x33\n.k_EMsgServerToGCMatchPlayerItemPurchaseHistory\x10\xba@\x12*\n%k_EMsgGCToGCGrantPlusHeroMatchResults\x10\xbb@\x12\x1e\n\x19k_EMsgGCGetHeroTimedStats\x10\xbc@\x12&\n!k_EMsgGCGetHeroTimedStatsResponse\x10\xbd@\x12*\n%k_EMsgLobbyPlayerPlusSubscriptionData\x10\xbe@\x12&\n!k_EMsgServerToGCMatchStateHistory\x10\xbf@\x12\x1c\n\x17k_EMsgPurchaseHeroRelic\x10\xc0@\x12$\n\x1fk_EMsgPurchaseHeroRelicResponse\x10\xc1@\x12\"\n\x1dk_EMsgPurchaseHeroRandomRelic\x10\xc2@\x12*\n%k_EMsgPurchaseHeroRandomRelicResponse\x10\xc3@\x12!\n\x1ck_EMsgPartyReadyCheckRequest\x10\xc6@\x12\"\n\x1dk_EMsgPartyReadyCheckResponse\x10\xc7@\x12%\n k_EMsgPartyReadyCheckAcknowledge\x10\xc8@\x12*\n%k_EMsgGetRecentPlayTimeFriendsRequest\x10\xc9@\x12+\n&k_EMsgGetRecentPlayTimeFriendsResponse\x10\xca@\x12(\n#k_EMsgGCToClientCommendNotification\x10\xcb@\x12\x19\n\x14k_EMsgProfileRequest\x10\xcc@\x12\x1a\n\x15k_EMsgProfileResponse\x10\xcd@\x12\x18\n\x13k_EMsgProfileUpdate\x10\xce@\x12 \n\x1bk_EMsgProfileUpdateResponse\x10\xcf@\x12\x19\n\x14k_EMsgSuccessfulHero\x10\xd1@\x12 \n\x1bk_EMsgHeroGlobalDataRequest\x10\xd2@\x12!\n\x1ck_EMsgHeroGlobalDataResponse\x10\xd3@\x12\x35\n0k_EMsgClientToGCRequestPlusWeeklyChallengeResult\x10\xd4@\x12=\n8k_EMsgClientToGCRequestPlusWeeklyChallengeResultResponse\x10\xd5@\x12%\n k_EMsgGCToGCGrantPlusPrepaidTime\x10\xd6@\x12$\n\x1fk_EMsgPrivateMetadataKeyRequest\x10\xd7@\x12%\n k_EMsgPrivateMetadataKeyResponse\x10\xd8@\x12$\n\x1fk_EMsgGCToGCReconcilePlusStatus\x10\xd9@\x12 \n\x1bk_EMsgGCToGCCheckPlusStatus\x10\xda@\x12(\n#k_EMsgGCToGCCheckPlusStatusResponse\x10\xdb@\x12,\n\'k_EMsgGCToGCReconcilePlusAutoGrantItems\x10\xdc@\x12.\n)k_EMsgGCToGCReconcilePlusStatusUnreliable\x10\xdd@\x12\'\n\"k_EMsgActivatePlusFreeTrialRequest\x10\xde@\x12(\n#k_EMsgActivatePlusFreeTrialResponse\x10\xdf@\x12\x30\n+k_EMsgGCToClientCavernCrawlMapPathCompleted\x10\xe0@\x12)\n$k_EMsgClientToGCCavernCrawlClaimRoom\x10\xe1@\x12\x31\n,k_EMsgClientToGCCavernCrawlClaimRoomResponse\x10\xe2@\x12-\n(k_EMsgClientToGCCavernCrawlUseItemOnRoom\x10\xe3@\x12\x35\n0k_EMsgClientToGCCavernCrawlUseItemOnRoomResponse\x10\xe4@\x12-\n(k_EMsgClientToGCCavernCrawlUseItemOnPath\x10\xe5@\x12\x35\n0k_EMsgClientToGCCavernCrawlUseItemOnPathResponse\x10\xe6@\x12/\n*k_EMsgClientToGCCavernCrawlRequestMapState\x10\xe7@\x12\x37\n2k_EMsgClientToGCCavernCrawlRequestMapStateResponse\x10\xe8@\x12\x16\n\x11k_EMsgSignOutTips\x10\xe9@\x12+\n&k_EMsgClientToGCRequestEventPointLogV2\x10\xea@\x12\x33\n.k_EMsgClientToGCRequestEventPointLogResponseV2\x10\xeb@\x12,\n\'k_EMsgClientToGCRequestEventTipsSummary\x10\xec@\x12\x34\n/k_EMsgClientToGCRequestEventTipsSummaryResponse\x10\xed@\x12\"\n\x1dk_EMsgHeroGlobalDataAllHeroes\x10\xee@\x12&\n!k_EMsgClientToGCRequestSocialFeed\x10\xef@\x12.\n)k_EMsgClientToGCRequestSocialFeedResponse\x10\xf0@\x12.\n)k_EMsgClientToGCRequestSocialFeedComments\x10\xf1@\x12\x36\n1k_EMsgClientToGCRequestSocialFeedCommentsResponse\x10\xf2@\x12=\n8k_EMsgGCToGCSignoutAwardCappedUnderhollowEventGamePoints\x10\xf3@\x12\x33\n.k_EMsgClientToGCCavernCrawlGetClaimedRoomCount\x10\xf4@\x12;\n6k_EMsgClientToGCCavernCrawlGetClaimedRoomCountResponse\x10\xf5@\x12\x36\n1k_EMsgGCToGCReconcilePlusAutoGrantItemsUnreliable\x10\xf6@\x12.\n)k_EMsgServerToGCAddBroadcastTimelineEvent\x10\xf7@\x12,\n\'k_EMsgGCToServerUpdateSteamBroadcasting\x10\xf8@\x12&\n!k_EMsgClientToGCRecordContestVote\x10\xf9@\x12.\n)k_EMsgGCToClientRecordContestVoteResponse\x10\xfa@\x12\x1f\n\x1ak_EMsgGCToGCGrantAutograph\x10\xfb@\x12\'\n\"k_EMsgGCToGCGrantAutographResponse\x10\xfc@B\x05H\x01\x90\x01\x00')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -371,2650 +371,2778 @@ _EDOTAGCMSG = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgRequestLeagueInfo', index=85, number=7147,
+      name='k_EMsgGCPracticeLobbyJoinBroadcastChannel', index=85, number=7149,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgResponseLeagueInfo', index=86, number=7148,
+      name='k_EMsgGC_TournamentItemEvent', index=86, number=7150,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPracticeLobbyJoinBroadcastChannel', index=87, number=7149,
+      name='k_EMsgGC_TournamentItemEventResponse', index=87, number=7151,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGC_TournamentItemEvent', index=88, number=7150,
+      name='k_EMsgCastMatchVote', index=88, number=7152,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGC_TournamentItemEventResponse', index=89, number=7151,
+      name='k_EMsgCastMatchVoteResponse', index=89, number=7153,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgCastMatchVote', index=90, number=7152,
+      name='k_EMsgRetrieveMatchVote', index=90, number=7154,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgCastMatchVoteResponse', index=91, number=7153,
+      name='k_EMsgRetrieveMatchVoteResponse', index=91, number=7155,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgRetrieveMatchVote', index=92, number=7154,
+      name='k_EMsgTeamFanfare', index=92, number=7156,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgRetrieveMatchVoteResponse', index=93, number=7155,
+      name='k_EMsgResponseTeamFanfare', index=93, number=7157,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgTeamFanfare', index=94, number=7156,
+      name='k_EMsgGC_GameServerUploadSaveGame', index=94, number=7158,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgResponseTeamFanfare', index=95, number=7157,
+      name='k_EMsgGC_GameServerSaveGameResult', index=95, number=7159,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGC_GameServerUploadSaveGame', index=96, number=7158,
+      name='k_EMsgGC_GameServerGetLoadGame', index=96, number=7160,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGC_GameServerSaveGameResult', index=97, number=7159,
+      name='k_EMsgGC_GameServerGetLoadGameResult', index=97, number=7161,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGC_GameServerGetLoadGame', index=98, number=7160,
+      name='k_EMsgGCEditTeamDetails', index=98, number=7166,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGC_GameServerGetLoadGameResult', index=99, number=7161,
+      name='k_EMsgGCEditTeamDetailsResponse', index=99, number=7167,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCEditTeamDetails', index=100, number=7166,
+      name='k_EMsgGCProTeamListRequest', index=100, number=7168,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCEditTeamDetailsResponse', index=101, number=7167,
+      name='k_EMsgGCProTeamListResponse', index=101, number=7169,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCProTeamListRequest', index=102, number=7168,
+      name='k_EMsgGCReadyUpStatus', index=102, number=7170,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCProTeamListResponse', index=103, number=7169,
+      name='k_EMsgGCHallOfFame', index=103, number=7171,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCReadyUpStatus', index=104, number=7170,
+      name='k_EMsgGCHallOfFameRequest', index=104, number=7172,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHallOfFame', index=105, number=7171,
+      name='k_EMsgGCHallOfFameResponse', index=105, number=7173,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHallOfFameRequest', index=106, number=7172,
+      name='k_EMsgGCGenerateDiretidePrizeList', index=106, number=7174,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHallOfFameResponse', index=107, number=7173,
+      name='k_EMsgGCRewardDiretidePrizes', index=107, number=7176,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGenerateDiretidePrizeList', index=108, number=7174,
+      name='k_EMsgGCDiretidePrizesRewardedResponse', index=108, number=7177,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRewardDiretidePrizes', index=109, number=7176,
+      name='k_EMsgGCHalloweenHighScoreRequest', index=109, number=7178,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCDiretidePrizesRewardedResponse', index=110, number=7177,
+      name='k_EMsgGCHalloweenHighScoreResponse', index=110, number=7179,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHalloweenHighScoreRequest', index=111, number=7178,
+      name='k_EMsgGCGenerateDiretidePrizeListResponse', index=111, number=7180,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHalloweenHighScoreResponse', index=112, number=7179,
+      name='k_EMsgGCStorePromoPagesRequest', index=112, number=7182,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGenerateDiretidePrizeListResponse', index=113, number=7180,
+      name='k_EMsgGCStorePromoPagesResponse', index=113, number=7183,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCStorePromoPagesRequest', index=114, number=7182,
+      name='k_EMsgGCToGCMatchCompleted', index=114, number=7186,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCStorePromoPagesResponse', index=115, number=7183,
+      name='k_EMsgGCBalancedShuffleLobby', index=115, number=7188,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCMatchCompleted', index=116, number=7186,
+      name='k_EMsgGCToGCCheckLeaguePermission', index=116, number=7189,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCBalancedShuffleLobby', index=117, number=7188,
+      name='k_EMsgGCToGCCheckLeaguePermissionResponse', index=117, number=7190,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCheckLeaguePermission', index=118, number=7189,
+      name='k_EMsgGCMatchmakingStatsRequest', index=118, number=7197,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCheckLeaguePermissionResponse', index=119, number=7190,
+      name='k_EMsgGCMatchmakingStatsResponse', index=119, number=7198,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCMatchmakingStatsRequest', index=120, number=7197,
+      name='k_EMsgGCBotGameCreate', index=120, number=7199,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCMatchmakingStatsResponse', index=121, number=7198,
+      name='k_EMsgGCSetMatchHistoryAccess', index=121, number=7200,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCBotGameCreate', index=122, number=7199,
+      name='k_EMsgGCSetMatchHistoryAccessResponse', index=122, number=7201,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCSetMatchHistoryAccess', index=123, number=7200,
+      name='k_EMsgUpgradeLeagueItem', index=123, number=7203,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCSetMatchHistoryAccessResponse', index=124, number=7201,
+      name='k_EMsgUpgradeLeagueItemResponse', index=124, number=7204,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgUpgradeLeagueItem', index=125, number=7203,
+      name='k_EMsgGCTeamMemberProfileRequest', index=125, number=7205,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgUpgradeLeagueItemResponse', index=126, number=7204,
+      name='k_EMsgGCWatchDownloadedReplay', index=126, number=7206,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCTeamMemberProfileRequest', index=127, number=7205,
+      name='k_EMsgGCSetMapLocationState', index=127, number=7207,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCWatchDownloadedReplay', index=128, number=7206,
+      name='k_EMsgGCSetMapLocationStateResponse', index=128, number=7208,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCSetMapLocationState', index=129, number=7207,
+      name='k_EMsgGCResetMapLocations', index=129, number=7209,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCSetMapLocationStateResponse', index=130, number=7208,
+      name='k_EMsgGCResetMapLocationsResponse', index=130, number=7210,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCResetMapLocations', index=131, number=7209,
+      name='k_EMsgRefreshPartnerAccountLink', index=131, number=7216,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCResetMapLocationsResponse', index=132, number=7210,
+      name='k_EMsgClientsRejoinChatChannels', index=132, number=7217,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgRefreshPartnerAccountLink', index=133, number=7216,
+      name='k_EMsgGCToGCGetUserChatInfo', index=133, number=7218,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientsRejoinChatChannels', index=134, number=7217,
+      name='k_EMsgGCToGCGetUserChatInfoResponse', index=134, number=7219,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetUserChatInfo', index=135, number=7218,
+      name='k_EMsgGCToGCLeaveAllChatChannels', index=135, number=7220,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetUserChatInfoResponse', index=136, number=7219,
+      name='k_EMsgGCToGCUpdateAccountChatBan', index=136, number=7221,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCLeaveAllChatChannels', index=137, number=7220,
+      name='k_EMsgGCGuildCreateRequest', index=137, number=7222,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateAccountChatBan', index=138, number=7221,
+      name='k_EMsgGCGuildCreateResponse', index=138, number=7223,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildCreateRequest', index=139, number=7222,
+      name='k_EMsgGCGuildSetAccountRoleRequest', index=139, number=7224,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildCreateResponse', index=140, number=7223,
+      name='k_EMsgGCGuildSetAccountRoleResponse', index=140, number=7225,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildSetAccountRoleRequest', index=141, number=7224,
+      name='k_EMsgGCRequestGuildData', index=141, number=7226,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildSetAccountRoleResponse', index=142, number=7225,
+      name='k_EMsgGCGuildData', index=142, number=7227,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRequestGuildData', index=143, number=7226,
+      name='k_EMsgGCGuildInviteAccountRequest', index=143, number=7228,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildData', index=144, number=7227,
+      name='k_EMsgGCGuildInviteAccountResponse', index=144, number=7229,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildInviteAccountRequest', index=145, number=7228,
+      name='k_EMsgGCGuildCancelInviteRequest', index=145, number=7230,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildInviteAccountResponse', index=146, number=7229,
+      name='k_EMsgGCGuildCancelInviteResponse', index=146, number=7231,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildCancelInviteRequest', index=147, number=7230,
+      name='k_EMsgGCGuildUpdateDetailsRequest', index=147, number=7232,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildCancelInviteResponse', index=148, number=7231,
+      name='k_EMsgGCGuildUpdateDetailsResponse', index=148, number=7233,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildUpdateDetailsRequest', index=149, number=7232,
+      name='k_EMsgGCToGCCanInviteUserToTeam', index=149, number=7234,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildUpdateDetailsResponse', index=150, number=7233,
+      name='k_EMsgGCToGCCanInviteUserToTeamResponse', index=150, number=7235,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCanInviteUserToTeam', index=151, number=7234,
+      name='k_EMsgGCToGCGetUserRank', index=151, number=7236,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCanInviteUserToTeamResponse', index=152, number=7235,
+      name='k_EMsgGCToGCGetUserRankResponse', index=152, number=7237,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetUserRank', index=153, number=7236,
+      name='k_EMsgGCToGCUpdateTeamStats', index=153, number=7240,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetUserRankResponse', index=154, number=7237,
+      name='k_EMsgGCToGCGetTeamRank', index=154, number=7241,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateTeamStats', index=155, number=7240,
+      name='k_EMsgGCToGCGetTeamRankResponse', index=155, number=7242,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetTeamRank', index=156, number=7241,
+      name='k_EMsgGCPassportDataRequest', index=156, number=7248,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetTeamRankResponse', index=157, number=7242,
+      name='k_EMsgGCPassportDataResponse', index=157, number=7249,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPassportDataRequest', index=158, number=7248,
+      name='k_EMsgGCNotInGuildData', index=158, number=7251,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPassportDataResponse', index=159, number=7249,
+      name='k_EMsgGCGuildInviteData', index=159, number=7254,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCNotInGuildData', index=160, number=7251,
+      name='k_EMsgGCToGCGetLeagueAdmin', index=160, number=7255,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildInviteData', index=161, number=7254,
+      name='k_EMsgGCToGCGetLeagueAdminResponse', index=161, number=7256,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetLeagueAdmin', index=162, number=7255,
+      name='k_EMsgGCRequestLeaguePrizePool', index=162, number=7258,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetLeagueAdminResponse', index=163, number=7256,
+      name='k_EMsgGCRequestLeaguePrizePoolResponse', index=163, number=7259,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRequestLeaguePrizePool', index=164, number=7258,
+      name='k_EMsgGCToGCUpdateOpenGuildPartyRequest', index=164, number=7261,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRequestLeaguePrizePoolResponse', index=165, number=7259,
+      name='k_EMsgGCToGCUpdateOpenGuildPartyResponse', index=165, number=7262,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateOpenGuildPartyRequest', index=166, number=7261,
+      name='k_EMsgGCToGCDestroyOpenGuildPartyRequest', index=166, number=7263,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateOpenGuildPartyResponse', index=167, number=7262,
+      name='k_EMsgGCToGCDestroyOpenGuildPartyResponse', index=167, number=7264,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCDestroyOpenGuildPartyRequest', index=168, number=7263,
+      name='k_EMsgGCGuildUpdateMessage', index=168, number=7265,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCDestroyOpenGuildPartyResponse', index=169, number=7264,
+      name='k_EMsgGCPartySetOpenGuildRequest', index=169, number=7266,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildUpdateMessage', index=170, number=7265,
+      name='k_EMsgGCPartySetOpenGuildResponse', index=170, number=7267,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPartySetOpenGuildRequest', index=171, number=7266,
+      name='k_EMsgGCGuildOpenPartyRefresh', index=171, number=7268,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPartySetOpenGuildResponse', index=172, number=7267,
+      name='k_EMsgGCJoinOpenGuildPartyRequest', index=172, number=7269,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildOpenPartyRefresh', index=173, number=7268,
+      name='k_EMsgGCJoinOpenGuildPartyResponse', index=173, number=7270,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCJoinOpenGuildPartyRequest', index=174, number=7269,
+      name='k_EMsgGCLeaveChatChannel', index=174, number=7272,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCJoinOpenGuildPartyResponse', index=175, number=7270,
+      name='k_EMsgGCChatMessage', index=175, number=7273,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLeaveChatChannel', index=176, number=7272,
+      name='k_EMsgGCGetHeroStandings', index=176, number=7274,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCChatMessage', index=177, number=7273,
+      name='k_EMsgGCGetHeroStandingsResponse', index=177, number=7275,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGetHeroStandings', index=178, number=7274,
+      name='k_EMsgGCGuildEditLogoRequest', index=178, number=7279,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGetHeroStandingsResponse', index=179, number=7275,
+      name='k_EMsgGCGuildEditLogoResponse', index=179, number=7280,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildEditLogoRequest', index=180, number=7279,
+      name='k_EMsgGCGuildmatePracticeLobbyListRequest', index=180, number=7281,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildEditLogoResponse', index=181, number=7280,
+      name='k_EMsgGCGuildmatePracticeLobbyListResponse', index=181, number=7282,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildmatePracticeLobbyListRequest', index=182, number=7281,
+      name='k_EMsgGCItemEditorReservationsRequest', index=182, number=7283,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGuildmatePracticeLobbyListResponse', index=183, number=7282,
+      name='k_EMsgGCItemEditorReservationsResponse', index=183, number=7284,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCItemEditorReservationsRequest', index=184, number=7283,
+      name='k_EMsgGCItemEditorReserveItemDef', index=184, number=7285,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCItemEditorReservationsResponse', index=185, number=7284,
+      name='k_EMsgGCItemEditorReserveItemDefResponse', index=185, number=7286,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCItemEditorReserveItemDef', index=186, number=7285,
+      name='k_EMsgGCItemEditorReleaseReservation', index=186, number=7287,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCItemEditorReserveItemDefResponse', index=187, number=7286,
+      name='k_EMsgGCItemEditorReleaseReservationResponse', index=187, number=7288,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCItemEditorReleaseReservation', index=188, number=7287,
+      name='k_EMsgGCRewardTutorialPrizes', index=188, number=7289,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCItemEditorReleaseReservationResponse', index=189, number=7288,
+      name='k_EMsgGCLastHitChallengeHighScorePost', index=189, number=7290,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRewardTutorialPrizes', index=190, number=7289,
+      name='k_EMsgGCLastHitChallengeHighScoreRequest', index=190, number=7291,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLastHitChallengeHighScorePost', index=191, number=7290,
+      name='k_EMsgGCLastHitChallengeHighScoreResponse', index=191, number=7292,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLastHitChallengeHighScoreRequest', index=192, number=7291,
+      name='k_EMsgGCCreateFantasyLeagueRequest', index=192, number=7293,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLastHitChallengeHighScoreResponse', index=193, number=7292,
+      name='k_EMsgGCCreateFantasyLeagueResponse', index=193, number=7294,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCreateFantasyLeagueRequest', index=194, number=7293,
+      name='k_EMsgGCFantasyLeagueInfoRequest', index=194, number=7297,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCreateFantasyLeagueResponse', index=195, number=7294,
+      name='k_EMsgGCFantasyLeagueInfoResponse', index=195, number=7298,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueInfoRequest', index=196, number=7297,
+      name='k_EMsgGCFantasyLeagueInfo', index=196, number=7299,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueInfoResponse', index=197, number=7298,
+      name='k_EMsgGCCreateFantasyTeamRequest', index=197, number=7300,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueInfo', index=198, number=7299,
+      name='k_EMsgGCCreateFantasyTeamResponse', index=198, number=7301,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCreateFantasyTeamRequest', index=199, number=7300,
+      name='k_EMsgGCEditFantasyTeamRequest', index=199, number=7302,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCreateFantasyTeamResponse', index=200, number=7301,
+      name='k_EMsgGCEditFantasyTeamResponse', index=200, number=7303,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCEditFantasyTeamRequest', index=201, number=7302,
+      name='k_EMsgGCFantasyTeamInfoRequestByFantasyLeagueID', index=201, number=7304,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCEditFantasyTeamResponse', index=202, number=7303,
+      name='k_EMsgGCFantasyTeamInfoRequestByOwnerAccountID', index=202, number=7305,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamInfoRequestByFantasyLeagueID', index=203, number=7304,
+      name='k_EMsgGCFantasyTeamInfoResponse', index=203, number=7306,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamInfoRequestByOwnerAccountID', index=204, number=7305,
+      name='k_EMsgGCFantasyTeamInfo', index=204, number=7307,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamInfoResponse', index=205, number=7306,
+      name='k_EMsgGCFantasyLivePlayerStats', index=205, number=7308,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamInfo', index=206, number=7307,
+      name='k_EMsgGCFantasyFinalPlayerStats', index=206, number=7309,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLivePlayerStats', index=207, number=7308,
+      name='k_EMsgGCFantasyMatch', index=207, number=7310,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyFinalPlayerStats', index=208, number=7309,
+      name='k_EMsgGCFantasyTeamScoreRequest', index=208, number=7312,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyMatch', index=209, number=7310,
+      name='k_EMsgGCFantasyTeamScoreResponse', index=209, number=7313,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamScoreRequest', index=210, number=7312,
+      name='k_EMsgGCFantasyTeamStandingsRequest', index=210, number=7314,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamScoreResponse', index=211, number=7313,
+      name='k_EMsgGCFantasyTeamStandingsResponse', index=211, number=7315,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamStandingsRequest', index=212, number=7314,
+      name='k_EMsgGCFantasyPlayerScoreRequest', index=212, number=7316,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamStandingsResponse', index=213, number=7315,
+      name='k_EMsgGCFantasyPlayerScoreResponse', index=213, number=7317,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerScoreRequest', index=214, number=7316,
+      name='k_EMsgGCFantasyPlayerStandingsRequest', index=214, number=7318,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerScoreResponse', index=215, number=7317,
+      name='k_EMsgGCFantasyPlayerStandingsResponse', index=215, number=7319,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerStandingsRequest', index=216, number=7318,
+      name='k_EMsgGCFlipLobbyTeams', index=216, number=7320,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerStandingsResponse', index=217, number=7319,
+      name='k_EMsgGCCustomGameCreate', index=217, number=7321,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFlipLobbyTeams', index=218, number=7320,
+      name='k_EMsgGCToGCProcessPlayerReportForTarget', index=218, number=7324,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCustomGameCreate', index=219, number=7321,
+      name='k_EMsgGCToGCProcessReportSuccess', index=219, number=7325,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerInfoRequest', index=220, number=7322,
+      name='k_EMsgGCNotifyAccountFlagsChange', index=220, number=7326,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerInfoResponse', index=221, number=7323,
+      name='k_EMsgGCSetProfilePrivacy', index=221, number=7327,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCProcessPlayerReportForTarget', index=222, number=7324,
+      name='k_EMsgGCSetProfilePrivacyResponse', index=222, number=7328,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCProcessReportSuccess', index=223, number=7325,
+      name='k_EMsgGCFantasyLeagueCreateInfoRequest', index=223, number=7331,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCNotifyAccountFlagsChange', index=224, number=7326,
+      name='k_EMsgGCFantasyLeagueCreateInfoResponse', index=224, number=7332,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCSetProfilePrivacy', index=225, number=7327,
+      name='k_EMsgGCFantasyLeagueInviteInfoRequest', index=225, number=7333,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCSetProfilePrivacyResponse', index=226, number=7328,
+      name='k_EMsgGCFantasyLeagueInviteInfoResponse', index=226, number=7334,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueCreateInfoRequest', index=227, number=7331,
+      name='k_EMsgGCClientIgnoredUser', index=227, number=7335,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueCreateInfoResponse', index=228, number=7332,
+      name='k_EMsgGCFantasyLeagueCreateRequest', index=228, number=7336,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueInviteInfoRequest', index=229, number=7333,
+      name='k_EMsgGCFantasyLeagueCreateResponse', index=229, number=7337,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueInviteInfoResponse', index=230, number=7334,
+      name='k_EMsgGCFantasyTeamCreateRequest', index=230, number=7338,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCClientIgnoredUser', index=231, number=7335,
+      name='k_EMsgGCFantasyTeamCreateResponse', index=231, number=7339,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueCreateRequest', index=232, number=7336,
+      name='k_EMsgGCFantasyLeagueFriendJoinListRequest', index=232, number=7340,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueCreateResponse', index=233, number=7337,
+      name='k_EMsgGCFantasyLeagueFriendJoinListResponse', index=233, number=7341,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamCreateRequest', index=234, number=7338,
+      name='k_EMsgGCClientSuspended', index=234, number=7342,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamCreateResponse', index=235, number=7339,
+      name='k_EMsgGCPartyMemberSetCoach', index=235, number=7343,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueFriendJoinListRequest', index=236, number=7340,
+      name='k_EMsgGCFantasyLeagueEditInvitesRequest', index=236, number=7344,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueFriendJoinListResponse', index=237, number=7341,
+      name='k_EMsgGCFantasyLeagueEditInvitesResponse', index=237, number=7345,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCClientSuspended', index=238, number=7342,
+      name='k_EMsgGCPracticeLobbySetCoach', index=238, number=7346,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPartyMemberSetCoach', index=239, number=7343,
+      name='k_EMsgGCFantasyLeagueEditInfoRequest', index=239, number=7347,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueEditInvitesRequest', index=240, number=7344,
+      name='k_EMsgGCFantasyLeagueEditInfoResponse', index=240, number=7348,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueEditInvitesResponse', index=241, number=7345,
+      name='k_EMsgGCFantasyLeagueDraftStatusRequest', index=241, number=7349,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPracticeLobbySetCoach', index=242, number=7346,
+      name='k_EMsgGCFantasyLeagueDraftStatus', index=242, number=7350,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueEditInfoRequest', index=243, number=7347,
+      name='k_EMsgGCFantasyLeagueDraftPlayerRequest', index=243, number=7351,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueEditInfoResponse', index=244, number=7348,
+      name='k_EMsgGCFantasyLeagueDraftPlayerResponse', index=244, number=7352,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueDraftStatusRequest', index=245, number=7349,
+      name='k_EMsgGCFantasyLeagueMatchupsRequest', index=245, number=7353,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueDraftStatus', index=246, number=7350,
+      name='k_EMsgGCFantasyLeagueMatchupsResponse', index=246, number=7354,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueDraftPlayerRequest', index=247, number=7351,
+      name='k_EMsgGCFantasyTeamRosterSwapRequest', index=247, number=7355,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueDraftPlayerResponse', index=248, number=7352,
+      name='k_EMsgGCFantasyTeamRosterSwapResponse', index=248, number=7356,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueMatchupsRequest', index=249, number=7353,
+      name='k_EMsgGCFantasyTeamRosterRequest', index=249, number=7357,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeagueMatchupsResponse', index=250, number=7354,
+      name='k_EMsgGCFantasyTeamRosterResponse', index=250, number=7358,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamRosterSwapRequest', index=251, number=7355,
+      name='k_EMsgGCNexonPartnerUpdate', index=251, number=7359,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamRosterSwapResponse', index=252, number=7356,
+      name='k_EMsgGCToGCProcessPCBangRewardPoints', index=252, number=7360,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamRosterRequest', index=253, number=7357,
+      name='k_EMsgGCFantasyTeamRosterAddDropRequest', index=253, number=7361,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamRosterResponse', index=254, number=7358,
+      name='k_EMsgGCFantasyTeamRosterAddDropResponse', index=254, number=7362,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCNexonPartnerUpdate', index=255, number=7359,
+      name='k_EMsgPresentedClientTerminateDlg', index=255, number=7363,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCProcessPCBangRewardPoints', index=256, number=7360,
+      name='k_EMsgGCFantasyPlayerHisoricalStatsRequest', index=256, number=7364,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamRosterAddDropRequest', index=257, number=7361,
+      name='k_EMsgGCFantasyPlayerHisoricalStatsResponse', index=257, number=7365,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamRosterAddDropResponse', index=258, number=7362,
+      name='k_EMsgGCPCBangTimedRewardMessage', index=258, number=7366,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPresentedClientTerminateDlg', index=259, number=7363,
+      name='k_EMsgGCLobbyUpdateBroadcastChannelInfo', index=259, number=7367,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerHisoricalStatsRequest', index=260, number=7364,
+      name='k_EMsgGCFantasyTeamTradesRequest', index=260, number=7368,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerHisoricalStatsResponse', index=261, number=7365,
+      name='k_EMsgGCFantasyTeamTradesResponse', index=261, number=7369,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPCBangTimedRewardMessage', index=262, number=7366,
+      name='k_EMsgGCFantasyTeamTradeCancelRequest', index=262, number=7370,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLobbyUpdateBroadcastChannelInfo', index=263, number=7367,
+      name='k_EMsgGCFantasyTeamTradeCancelResponse', index=263, number=7371,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamTradesRequest', index=264, number=7368,
+      name='k_EMsgGCToGCGrantTournamentItem', index=264, number=7372,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamTradesResponse', index=265, number=7369,
+      name='k_EMsgGCProcessFantasyScheduledEvent', index=265, number=7373,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamTradeCancelRequest', index=266, number=7370,
+      name='k_EMsgGCToGCGrantPCBangRewardItem', index=266, number=7374,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyTeamTradeCancelResponse', index=267, number=7371,
+      name='k_EMsgGCToGCUpgradeTwitchViewerItems', index=267, number=7375,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantTournamentItem', index=268, number=7372,
+      name='k_EMsgGCToGCGetLiveMatchAffiliates', index=268, number=7376,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCProcessFantasyScheduledEvent', index=269, number=7373,
+      name='k_EMsgGCToGCGetLiveMatchAffiliatesResponse', index=269, number=7377,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantPCBangRewardItem', index=270, number=7374,
+      name='k_EMsgGCToGCUpdatePlayerPennantCounts', index=270, number=7378,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpgradeTwitchViewerItems', index=271, number=7375,
+      name='k_EMsgGCToGCGetPlayerPennantCounts', index=271, number=7379,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetLiveMatchAffiliates', index=272, number=7376,
+      name='k_EMsgGCToGCGetPlayerPennantCountsResponse', index=272, number=7380,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetLiveMatchAffiliatesResponse', index=273, number=7377,
+      name='k_EMsgGCGameMatchSignOutPermissionRequest', index=273, number=7381,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdatePlayerPennantCounts', index=274, number=7378,
+      name='k_EMsgGCGameMatchSignOutPermissionResponse', index=274, number=7382,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetPlayerPennantCounts', index=275, number=7379,
+      name='k_EMsgDOTAChatChannelMemberUpdate', index=275, number=7383,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetPlayerPennantCountsResponse', index=276, number=7380,
+      name='k_EMsgDOTAAwardEventPoints', index=276, number=7384,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGameMatchSignOutPermissionRequest', index=277, number=7381,
+      name='k_EMsgDOTAGetEventPoints', index=277, number=7387,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGameMatchSignOutPermissionResponse', index=278, number=7382,
+      name='k_EMsgDOTAGetEventPointsResponse', index=278, number=7388,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAChatChannelMemberUpdate', index=279, number=7383,
+      name='k_EMsgGCToGCSignoutAwardEventPoints', index=279, number=7390,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAAwardEventPoints', index=280, number=7384,
+      name='k_EMsgDOTASendFriendRecruits', index=280, number=7393,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAGetEventPoints', index=281, number=7387,
+      name='k_EMsgDOTAFriendRecruitsRequest', index=281, number=7394,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAGetEventPointsResponse', index=282, number=7388,
+      name='k_EMsgDOTAFriendRecruitsResponse', index=282, number=7395,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSignoutAwardEventPoints', index=283, number=7390,
+      name='k_EMsgDOTAFriendRecruitInviteAcceptDecline', index=283, number=7396,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTASendFriendRecruits', index=284, number=7393,
+      name='k_EMsgGCPartyLeaderWatchGamePrompt', index=284, number=7397,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAFriendRecruitsRequest', index=285, number=7394,
+      name='k_EMsgDOTAFrostivusTimeElapsed', index=285, number=7398,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAFriendRecruitsResponse', index=286, number=7395,
+      name='k_EMsgDOTALiveLeagueGameUpdate', index=286, number=7402,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAFriendRecruitInviteAcceptDecline', index=287, number=7396,
+      name='k_EMsgDOTAChatGetUserList', index=287, number=7403,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPartyLeaderWatchGamePrompt', index=288, number=7397,
+      name='k_EMsgDOTAChatGetUserListResponse', index=288, number=7404,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAFrostivusTimeElapsed', index=289, number=7398,
+      name='k_EMsgGCCompendiumSetSelection', index=289, number=7405,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTALiveLeagueGameUpdate', index=290, number=7402,
+      name='k_EMsgGCCompendiumDataRequest', index=290, number=7406,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAChatGetUserList', index=291, number=7403,
+      name='k_EMsgGCCompendiumDataResponse', index=291, number=7407,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAChatGetUserListResponse', index=292, number=7404,
+      name='k_EMsgDOTAGetPlayerMatchHistory', index=292, number=7408,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCompendiumSetSelection', index=293, number=7405,
+      name='k_EMsgDOTAGetPlayerMatchHistoryResponse', index=293, number=7409,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCompendiumDataRequest', index=294, number=7406,
+      name='k_EMsgGCToGCMatchmakingAddParty', index=294, number=7410,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCompendiumDataResponse', index=295, number=7407,
+      name='k_EMsgGCToGCMatchmakingRemoveParty', index=295, number=7411,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAGetPlayerMatchHistory', index=296, number=7408,
+      name='k_EMsgGCToGCMatchmakingRemoveAllParties', index=296, number=7412,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAGetPlayerMatchHistoryResponse', index=297, number=7409,
+      name='k_EMsgGCToGCMatchmakingMatchFound', index=297, number=7413,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCMatchmakingAddParty', index=298, number=7410,
+      name='k_EMsgGCToGCUpdateMatchManagementStats', index=298, number=7414,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCMatchmakingRemoveParty', index=299, number=7411,
+      name='k_EMsgGCToGCUpdateMatchmakingStats', index=299, number=7415,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCMatchmakingRemoveAllParties', index=300, number=7412,
+      name='k_EMsgGCToServerPingRequest', index=300, number=7416,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCMatchmakingMatchFound', index=301, number=7413,
+      name='k_EMsgGCToServerPingResponse', index=301, number=7417,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateMatchManagementStats', index=302, number=7414,
+      name='k_EMsgGCToServerConsoleCommand', index=302, number=7418,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateMatchmakingStats', index=303, number=7415,
+      name='k_EMsgGCMakeOffering', index=303, number=7423,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToServerPingRequest', index=304, number=7416,
+      name='k_EMsgGCRequestOfferings', index=304, number=7424,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToServerPingResponse', index=305, number=7417,
+      name='k_EMsgGCRequestOfferingsResponse', index=305, number=7425,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToServerConsoleCommand', index=306, number=7418,
+      name='k_EMsgGCToGCProcessMatchLeaver', index=306, number=7426,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateLiveLeagueGameInfo', index=307, number=7420,
+      name='k_EMsgGCNotificationsRequest', index=307, number=7427,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCMakeOffering', index=308, number=7423,
+      name='k_EMsgGCNotificationsResponse', index=308, number=7428,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRequestOfferings', index=309, number=7424,
+      name='k_EMsgGCToGCModifyNotification', index=309, number=7429,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRequestOfferingsResponse', index=310, number=7425,
+      name='k_EMsgGCToGCSetNewNotifications', index=310, number=7430,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCProcessMatchLeaver', index=311, number=7426,
+      name='k_EMsgGCLeagueAdminList', index=311, number=7434,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCNotificationsRequest', index=312, number=7427,
+      name='k_EMsgGCNotificationsMarkReadRequest', index=312, number=7435,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCNotificationsResponse', index=313, number=7428,
+      name='k_EMsgGCFantasyMessageAdd', index=313, number=7436,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCModifyNotification', index=314, number=7429,
+      name='k_EMsgGCFantasyMessagesRequest', index=314, number=7437,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSetNewNotifications', index=315, number=7430,
+      name='k_EMsgGCFantasyMessagesResponse', index=315, number=7438,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSetIsLeagueAdmin', index=316, number=7431,
+      name='k_EMsgGCFantasyScheduledMatchesRequest', index=316, number=7439,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLeagueAdminState', index=317, number=7432,
+      name='k_EMsgGCFantasyScheduledMatchesResponse', index=317, number=7440,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSendLeagueAdminState', index=318, number=7433,
+      name='k_EMsgGCEventGameCreate', index=318, number=7443,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLeagueAdminList', index=319, number=7434,
+      name='k_EMsgGCPerfectWorldUserLookupRequest', index=319, number=7444,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCNotificationsMarkReadRequest', index=320, number=7435,
+      name='k_EMsgGCPerfectWorldUserLookupResponse', index=320, number=7445,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyMessageAdd', index=321, number=7436,
+      name='k_EMsgGCFantasyRemoveOwner', index=321, number=7448,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyMessagesRequest', index=322, number=7437,
+      name='k_EMsgGCFantasyRemoveOwnerResponse', index=322, number=7449,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyMessagesResponse', index=323, number=7438,
+      name='k_EMsgGCRequestBatchPlayerResources', index=323, number=7450,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyScheduledMatchesRequest', index=324, number=7439,
+      name='k_EMsgGCRequestBatchPlayerResourcesResponse', index=324, number=7451,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyScheduledMatchesResponse', index=325, number=7440,
+      name='k_EMsgGCToGCSendUpdateLeagues', index=325, number=7452,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantLeagueAccess', index=326, number=7441,
+      name='k_EMsgGCCompendiumSetSelectionResponse', index=326, number=7453,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCEventGameCreate', index=327, number=7443,
+      name='k_EMsgGCPlayerInfoRequest', index=327, number=7454,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPerfectWorldUserLookupRequest', index=328, number=7444,
+      name='k_EMsgGCPlayerInfo', index=328, number=7455,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPerfectWorldUserLookupResponse', index=329, number=7445,
+      name='k_EMsgGCPlayerInfoSubmit', index=329, number=7456,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyRemoveOwner', index=330, number=7448,
+      name='k_EMsgGCPlayerInfoSubmitResponse', index=330, number=7457,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyRemoveOwnerResponse', index=331, number=7449,
+      name='k_EMsgGCToGCGetAccountLevel', index=331, number=7458,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRequestBatchPlayerResources', index=332, number=7450,
+      name='k_EMsgGCToGCGetAccountLevelResponse', index=332, number=7459,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRequestBatchPlayerResourcesResponse', index=333, number=7451,
+      name='k_EMsgGCToGCGetAccountPartner', index=333, number=7460,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSendUpdateLeagues', index=334, number=7452,
+      name='k_EMsgGCToGCGetAccountPartnerResponse', index=334, number=7461,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCompendiumSetSelectionResponse', index=335, number=7453,
+      name='k_EMsgDOTAGetWeekendTourneySchedule', index=335, number=7464,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPlayerInfoRequest', index=336, number=7454,
+      name='k_EMsgDOTAWeekendTourneySchedule', index=336, number=7465,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPlayerInfo', index=337, number=7455,
+      name='k_EMsgGCJoinableCustomGameModesRequest', index=337, number=7466,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPlayerInfoSubmit', index=338, number=7456,
+      name='k_EMsgGCJoinableCustomGameModesResponse', index=338, number=7467,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPlayerInfoSubmitResponse', index=339, number=7457,
+      name='k_EMsgGCJoinableCustomLobbiesRequest', index=339, number=7468,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetAccountLevel', index=340, number=7458,
+      name='k_EMsgGCJoinableCustomLobbiesResponse', index=340, number=7469,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetAccountLevelResponse', index=341, number=7459,
+      name='k_EMsgGCQuickJoinCustomLobby', index=341, number=7470,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetAccountPartner', index=342, number=7460,
+      name='k_EMsgGCQuickJoinCustomLobbyResponse', index=342, number=7471,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetAccountPartnerResponse', index=343, number=7461,
+      name='k_EMsgGCToGCGrantEventPointAction', index=343, number=7472,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAGetWeekendTourneySchedule', index=344, number=7464,
+      name='k_EMsgServerGetEventPoints', index=344, number=7473,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAWeekendTourneySchedule', index=345, number=7465,
+      name='k_EMsgServerGetEventPointsResponse', index=345, number=7474,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCJoinableCustomGameModesRequest', index=346, number=7466,
+      name='k_EMsgServerGrantSurveyPermission', index=346, number=7475,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCJoinableCustomGameModesResponse', index=347, number=7467,
+      name='k_EMsgServerGrantSurveyPermissionResponse', index=347, number=7476,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCJoinableCustomLobbiesRequest', index=348, number=7468,
+      name='k_EMsgClientProvideSurveyResult', index=348, number=7477,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCJoinableCustomLobbiesResponse', index=349, number=7469,
+      name='k_EMsgGCToGCSetCompendiumSelection', index=349, number=7478,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCQuickJoinCustomLobby', index=350, number=7470,
+      name='k_EMsgGCToGCUpdateTI4HeroQuest', index=350, number=7480,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCQuickJoinCustomLobbyResponse', index=351, number=7471,
+      name='k_EMsgGCCompendiumDataChanged', index=351, number=7481,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantEventPointAction', index=352, number=7472,
+      name='k_EMsgDOTAFantasyLeagueFindRequest', index=352, number=7482,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerGetEventPoints', index=353, number=7473,
+      name='k_EMsgDOTAFantasyLeagueFindResponse', index=353, number=7483,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerGetEventPointsResponse', index=354, number=7474,
+      name='k_EMsgGCHasItemQuery', index=354, number=7484,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerGrantSurveyPermission', index=355, number=7475,
+      name='k_EMsgGCHasItemResponse', index=355, number=7485,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerGrantSurveyPermissionResponse', index=356, number=7476,
+      name='k_EMsgGCConsumeFantasyTicket', index=356, number=7486,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientProvideSurveyResult', index=357, number=7477,
+      name='k_EMsgGCConsumeFantasyTicketFailure', index=357, number=7487,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSetCompendiumSelection', index=358, number=7478,
+      name='k_EMsgGCToGCGrantEventPointActionMsg', index=358, number=7488,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateTI4HeroQuest', index=359, number=7480,
+      name='k_EMsgClientToGCTrackDialogResult', index=359, number=7489,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCCompendiumDataChanged', index=360, number=7481,
+      name='k_EMsgGCFantasyLeaveLeagueRequest', index=360, number=7490,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAFantasyLeagueFindRequest', index=361, number=7482,
+      name='k_EMsgGCFantasyLeaveLeagueResponse', index=361, number=7491,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAFantasyLeagueFindResponse', index=362, number=7483,
+      name='k_EMsgGCToGCGetCompendiumSelections', index=362, number=7492,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHasItemQuery', index=363, number=7484,
+      name='k_EMsgGCToGCGetCompendiumSelectionsResponse', index=363, number=7493,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHasItemResponse', index=364, number=7485,
+      name='k_EMsgServerToGCMatchConnectionStats', index=364, number=7494,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCConsumeFantasyTicket', index=365, number=7486,
+      name='k_EMsgGCToClientTournamentItemDrop', index=365, number=7495,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCConsumeFantasyTicketFailure', index=366, number=7487,
+      name='k_EMsgSQLDelayedGrantLeagueDrop', index=366, number=7496,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantEventPointActionMsg', index=367, number=7488,
+      name='k_EMsgServerGCUpdateSpectatorCount', index=367, number=7497,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCTrackDialogResult', index=368, number=7489,
+      name='k_EMsgGCFantasyPlayerScoreDetailsRequest', index=368, number=7499,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeaveLeagueRequest', index=369, number=7490,
+      name='k_EMsgGCFantasyPlayerScoreDetailsResponse', index=369, number=7500,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyLeaveLeagueResponse', index=370, number=7491,
+      name='k_EMsgGCToGCEmoticonUnlock', index=370, number=7501,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetCompendiumSelections', index=371, number=7492,
+      name='k_EMsgSignOutDraftInfo', index=371, number=7502,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetCompendiumSelectionsResponse', index=372, number=7493,
+      name='k_EMsgClientToGCEmoticonDataRequest', index=372, number=7503,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCMatchConnectionStats', index=373, number=7494,
+      name='k_EMsgGCToClientEmoticonData', index=373, number=7504,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientTournamentItemDrop', index=374, number=7495,
+      name='k_EMsgGCPracticeLobbyToggleBroadcastChannelCameramanStatus', index=374, number=7505,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSQLDelayedGrantLeagueDrop', index=375, number=7496,
+      name='k_EMsgGCToGCCreateWeekendTourneyRequest', index=375, number=7506,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerGCUpdateSpectatorCount', index=376, number=7497,
+      name='k_EMsgGCToGCCreateWeekendTourneyResponse', index=376, number=7507,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerScoreDetailsRequest', index=377, number=7499,
+      name='k_EMsgClientToGCSetAdditionalEquips', index=377, number=7513,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCFantasyPlayerScoreDetailsResponse', index=378, number=7500,
+      name='k_EMsgClientToGCGetAdditionalEquips', index=378, number=7514,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCEmoticonUnlock', index=379, number=7501,
+      name='k_EMsgClientToGCGetAdditionalEquipsResponse', index=379, number=7515,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutDraftInfo', index=380, number=7502,
+      name='k_EMsgServerToGCGetAdditionalEquips', index=380, number=7516,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCEmoticonDataRequest', index=381, number=7503,
+      name='k_EMsgServerToGCGetAdditionalEquipsResponse', index=381, number=7517,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientEmoticonData', index=382, number=7504,
+      name='k_EMsgDOTARedeemItem', index=382, number=7518,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPracticeLobbyToggleBroadcastChannelCameramanStatus', index=383, number=7505,
+      name='k_EMsgDOTARedeemItemResponse', index=383, number=7519,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCreateWeekendTourneyRequest', index=384, number=7506,
+      name='k_EMsgSQLGCToGCGrantAllHeroProgress', index=384, number=7520,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCreateWeekendTourneyResponse', index=385, number=7507,
+      name='k_EMsgClientToGCGetAllHeroProgress', index=385, number=7521,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetAdditionalEquips', index=386, number=7513,
+      name='k_EMsgClientToGCGetAllHeroProgressResponse', index=386, number=7522,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetAdditionalEquips', index=387, number=7514,
+      name='k_EMsgGCToGCGetServerForClient', index=387, number=7523,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetAdditionalEquipsResponse', index=388, number=7515,
+      name='k_EMsgGCToGCGetServerForClientResponse', index=388, number=7524,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCGetAdditionalEquips', index=389, number=7516,
+      name='k_EMsgSQLProcessTournamentGameOutcome', index=389, number=7525,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCGetAdditionalEquipsResponse', index=390, number=7517,
+      name='k_EMsgSQLGrantTrophyToAccount', index=390, number=7526,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTARedeemItem', index=391, number=7518,
+      name='k_EMsgClientToGCGetTrophyList', index=391, number=7527,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTARedeemItemResponse', index=392, number=7519,
+      name='k_EMsgClientToGCGetTrophyListResponse', index=392, number=7528,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSQLGCToGCGrantAllHeroProgress', index=393, number=7520,
+      name='k_EMsgGCToClientTrophyAwarded', index=393, number=7529,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetAllHeroProgress', index=394, number=7521,
+      name='k_EMsgGCGameBotMatchSignOut', index=394, number=7530,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetAllHeroProgressResponse', index=395, number=7522,
+      name='k_EMsgGCGameBotMatchSignOutPermissionRequest', index=395, number=7531,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetServerForClient', index=396, number=7523,
+      name='k_EMsgSignOutBotInfo', index=396, number=7532,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetServerForClientResponse', index=397, number=7524,
+      name='k_EMsgGCToGCUpdateProfileCards', index=397, number=7533,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSQLProcessTournamentGameOutcome', index=398, number=7525,
+      name='k_EMsgClientToGCGetProfileCard', index=398, number=7534,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSQLGrantTrophyToAccount', index=399, number=7526,
+      name='k_EMsgClientToGCGetProfileCardResponse', index=399, number=7535,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetTrophyList', index=400, number=7527,
+      name='k_EMsgServerToGCGetProfileCard', index=400, number=7536,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetTrophyListResponse', index=401, number=7528,
+      name='k_EMsgServerToGCGetProfileCardResponse', index=401, number=7537,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientTrophyAwarded', index=402, number=7529,
+      name='k_EMsgClientToGCSetProfileCardSlots', index=402, number=7538,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGameBotMatchSignOut', index=403, number=7530,
+      name='k_EMsgGCToClientProfileCardUpdated', index=403, number=7539,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGameBotMatchSignOutPermissionRequest', index=404, number=7531,
+      name='k_EMsgServerToGCVictoryPredictions', index=404, number=7540,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutBotInfo', index=405, number=7532,
+      name='k_EMsgClientToGCMarkNotificationListRead', index=405, number=7542,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateProfileCards', index=406, number=7533,
+      name='k_EMsgGCToClientNewNotificationAdded', index=406, number=7543,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetProfileCard', index=407, number=7534,
+      name='k_EMsgServerToGCSuspiciousActivity', index=407, number=7544,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetProfileCardResponse', index=408, number=7535,
+      name='k_EMsgSignOutCommunicationSummary', index=408, number=7545,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCGetProfileCard', index=409, number=7536,
+      name='k_EMsgServerToGCRequestStatus_Response', index=409, number=7546,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCGetProfileCardResponse', index=410, number=7537,
+      name='k_EMsgClientToGCCreateHeroStatue', index=410, number=7547,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetProfileCardSlots', index=411, number=7538,
+      name='k_EMsgGCToClientHeroStatueCreateResult', index=411, number=7548,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientProfileCardUpdated', index=412, number=7539,
+      name='k_EMsgGCGCToLANServerRelayConnect', index=412, number=7549,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCVictoryPredictions', index=413, number=7540,
+      name='k_EMsgServerToGCGetIngameEventData', index=413, number=7551,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCMarkNotificationListRead', index=414, number=7542,
+      name='k_EMsgGCToGCUpdateIngameEventDataBroadcast', index=414, number=7552,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientNewNotificationAdded', index=415, number=7543,
+      name='k_EMsgGCToServerIngameEventData_OraclePA', index=415, number=7553,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCSuspiciousActivity', index=416, number=7544,
+      name='k_EMsgServerToGCReportKillSummaries', index=416, number=7554,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutCommunicationSummary', index=417, number=7545,
+      name='k_EMsgGCToGCReportKillSummaries', index=417, number=7555,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCRequestStatus_Response', index=418, number=7546,
+      name='k_EMsgGCToGCUpdateAssassinMinigame', index=418, number=7556,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCCreateHeroStatue', index=419, number=7547,
+      name='k_EMsgGCToGCFantasySetMatchLeague', index=419, number=7557,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientHeroStatueCreateResult', index=420, number=7548,
+      name='k_EMsgGCToGCUpdatePlayerPredictions', index=420, number=7561,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGCToLANServerRelayConnect', index=421, number=7549,
+      name='k_EMsgGCToServerPredictionResult', index=421, number=7562,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCGetIngameEventData', index=422, number=7551,
+      name='k_EMsgServerToGCSignoutAwardAdditionalDrops', index=422, number=7563,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateIngameEventDataBroadcast', index=423, number=7552,
+      name='k_EMsgGCToGCSignoutAwardAdditionalDrops', index=423, number=7564,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToServerIngameEventData_OraclePA', index=424, number=7553,
+      name='k_EMsgGCToClientEventStatusChanged', index=424, number=7565,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCReportKillSummaries', index=425, number=7554,
+      name='k_EMsgGCHasItemDefsQuery', index=425, number=7566,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCReportKillSummaries', index=426, number=7555,
+      name='k_EMsgGCHasItemDefsResponse', index=426, number=7567,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateAssassinMinigame', index=427, number=7556,
+      name='k_EMsgGCToGCReplayMonitorValidateReplay', index=427, number=7569,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCFantasySetMatchLeague', index=428, number=7557,
+      name='k_EMsgLobbyEventPoints', index=428, number=7572,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRecordCompendiumStats', index=429, number=7558,
+      name='k_EMsgGCToGCGetCustomGameTickets', index=429, number=7573,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCItemEditorRequestLeagueInfo', index=430, number=7559,
+      name='k_EMsgGCToGCGetCustomGameTicketsResponse', index=430, number=7574,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCItemEditorLeagueInfoResponse', index=431, number=7560,
+      name='k_EMsgGCToGCCustomGamePlayed', index=431, number=7576,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdatePlayerPredictions', index=432, number=7561,
+      name='k_EMsgGCToGCGrantEventPointsToUser', index=432, number=7577,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToServerPredictionResult', index=433, number=7562,
+      name='k_EMsgGCToGCSetEventMMPanicFlushTime', index=433, number=7578,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCSignoutAwardAdditionalDrops', index=434, number=7563,
+      name='k_EMsgGameserverCrashReport', index=434, number=7579,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSignoutAwardAdditionalDrops', index=435, number=7564,
+      name='k_EMsgGameserverCrashReportResponse', index=435, number=7580,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientEventStatusChanged', index=436, number=7565,
+      name='k_EMsgGCToClientSteamDatagramTicket', index=436, number=7581,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHasItemDefsQuery', index=437, number=7566,
+      name='k_EMsgGCToGCGrantEventOwnership', index=437, number=7582,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCHasItemDefsResponse', index=438, number=7567,
+      name='k_EMsgGCToGCSendAccountsEventPoints', index=438, number=7583,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCReplayMonitorValidateReplay', index=439, number=7569,
+      name='k_EMsgClientToGCRerollPlayerChallenge', index=439, number=7584,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgLobbyEventPoints', index=440, number=7572,
+      name='k_EMsgServerToGCRerollPlayerChallenge', index=440, number=7585,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetCustomGameTickets', index=441, number=7573,
+      name='k_EMsgGCRerollPlayerChallengeResponse', index=441, number=7586,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetCustomGameTicketsResponse', index=442, number=7574,
+      name='k_EMsgSignOutUpdatePlayerChallenge', index=442, number=7587,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCustomGamePlayed', index=443, number=7576,
+      name='k_EMsgClientToGCSetPartyLeader', index=443, number=7588,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantEventPointsToUser', index=444, number=7577,
+      name='k_EMsgClientToGCCancelPartyInvites', index=444, number=7589,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSetEventMMPanicFlushTime', index=445, number=7578,
+      name='k_EMsgGCToGCMasterReloadAccount', index=445, number=7590,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGameserverCrashReport', index=446, number=7579,
+      name='k_EMsgSQLGrantLeagueMatchToTicketHolders', index=446, number=7592,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGameserverCrashReportResponse', index=447, number=7580,
+      name='k_EMsgClientToGCSetAdditionalEquipsResponse', index=447, number=7593,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientSteamDatagramTicket', index=448, number=7581,
+      name='k_EMsgGCToGCEmoticonUnlockNoRollback', index=448, number=7594,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantEventOwnership', index=449, number=7582,
+      name='k_EMsgGCToGCGetCompendiumFanfare', index=449, number=7595,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSendAccountsEventPoints', index=450, number=7583,
+      name='k_EMsgServerToGCHoldEventPoints', index=450, number=7596,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRerollPlayerChallenge', index=451, number=7584,
+      name='k_EMsgSignOutReleaseEventPointHolds', index=451, number=7597,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCRerollPlayerChallenge', index=452, number=7585,
+      name='k_EMsgGCToGCChatNewUserSession', index=452, number=7598,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCRerollPlayerChallengeResponse', index=453, number=7586,
+      name='k_EMsgClientToGCApplyGemCombiner', index=453, number=7603,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutUpdatePlayerChallenge', index=454, number=7587,
+      name='k_EMsgClientToGCDOTACreateStaticRecipe', index=454, number=7604,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetPartyLeader', index=455, number=7588,
+      name='k_EMsgClientToGCDOTACreateStaticRecipeResponse', index=455, number=7605,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCCancelPartyInvites', index=456, number=7589,
+      name='k_EMsgClientToGCGetAllHeroOrder', index=456, number=7606,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCMasterReloadAccount', index=457, number=7590,
+      name='k_EMsgClientToGCGetAllHeroOrderResponse', index=457, number=7607,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSQLGrantLeagueMatchToTicketHolders', index=458, number=7592,
+      name='k_EMsgSQLGCToGCGrantBadgePoints', index=458, number=7608,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetAdditionalEquipsResponse', index=459, number=7593,
+      name='k_EMsgGCToGCGetAccountMatchStatus', index=459, number=7609,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCEmoticonUnlockNoRollback', index=460, number=7594,
+      name='k_EMsgGCToGCGetAccountMatchStatusResponse', index=460, number=7610,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetCompendiumFanfare', index=461, number=7595,
+      name='k_EMsgGCToGCCheckOwnsEntireEmoticonRange', index=461, number=7611,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCHoldEventPoints', index=462, number=7596,
+      name='k_EMsgGCToGCCheckOwnsEntireEmoticonRangeResponse', index=462, number=7612,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutReleaseEventPointHolds', index=463, number=7597,
+      name='k_EMsgClientToGCRecycleHeroRelic', index=463, number=7619,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCChatNewUserSession', index=464, number=7598,
+      name='k_EMsgClientToGCRecycleHeroRelicResponse', index=464, number=7620,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetLeagueSeries', index=465, number=7599,
+      name='k_EMsgGCToGCRevokeEventOwnership', index=465, number=7621,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetLeagueSeriesResponse', index=466, number=7600,
+      name='k_EMsgGCToGCUnlockEventPointSpending', index=466, number=7622,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSQLGCToGCSignoutUpdateLeagueSchedule', index=467, number=7601,
+      name='k_EMsgGCToClientRequestLaneSelection', index=467, number=7623,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToServerUpdateBroadcastCheers', index=468, number=7602,
+      name='k_EMsgGCToClientRequestLaneSelectionResponse', index=468, number=7624,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCApplyGemCombiner', index=469, number=7603,
+      name='k_EMsgServerToGCCavernCrawlIsHeroActive', index=469, number=7625,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCDOTACreateStaticRecipe', index=470, number=7604,
+      name='k_EMsgServerToGCCavernCrawlIsHeroActiveResponse', index=470, number=7626,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCDOTACreateStaticRecipeResponse', index=471, number=7605,
+      name='k_EMsgClientToGCPlayerCardSpecificPurchaseRequest', index=471, number=7627,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetAllHeroOrder', index=472, number=7606,
+      name='k_EMsgClientToGCPlayerCardSpecificPurchaseResponse', index=472, number=7628,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetAllHeroOrderResponse', index=473, number=7607,
+      name='k_EMsgGCtoServerTensorflowInstance', index=473, number=7629,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSQLGCToGCGrantBadgePoints', index=474, number=7608,
+      name='k_EMsgSQLSetIsLeagueAdmin', index=474, number=7630,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetAccountMatchStatus', index=475, number=7609,
+      name='k_EMsgGCToGCGetLiveLeagueMatches', index=475, number=7631,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetAccountMatchStatusResponse', index=476, number=7610,
+      name='k_EMsgGCToGCGetLiveLeagueMatchesResponse', index=476, number=7632,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCheckOwnsEntireEmoticonRange', index=477, number=7611,
+      name='k_EMsgDOTALeagueInfoListAdminsRequest', index=477, number=7633,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCheckOwnsEntireEmoticonRangeResponse', index=478, number=7612,
+      name='k_EMsgDOTALeagueInfoListAdminsReponse', index=478, number=7634,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRecycleHeroRelic', index=479, number=7619,
+      name='k_EMsgGCToGCLeagueMatchStarted', index=479, number=7645,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRecycleHeroRelicResponse', index=480, number=7620,
+      name='k_EMsgGCToGCLeagueMatchCompleted', index=480, number=7646,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCRevokeEventOwnership', index=481, number=7621,
+      name='k_EMsgGCToGCLeagueMatchStartedResponse', index=481, number=7647,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUnlockEventPointSpending', index=482, number=7622,
+      name='k_EMsgDOTALeagueNodeRequest', index=482, number=7648,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCDev_GrantWarKill', index=483, number=8001,
+      name='k_EMsgDOTALeagueNodeResponse', index=483, number=7649,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCLockCharmTrading', index=484, number=8004,
+      name='k_EMsgDOTALeagueAvailableLobbyNodesRequest', index=484, number=7650,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCPlayerStatsRequest', index=485, number=8006,
+      name='k_EMsgDOTALeagueAvailableLobbyNodes', index=485, number=7651,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientPlayerStatsResponse', index=486, number=8007,
+      name='k_EMsgGCToGCLeagueRequest', index=486, number=7652,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCClearPracticeLobbyTeam', index=487, number=8008,
+      name='k_EMsgGCToGCLeagueResponse', index=487, number=7653,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCFindTopSourceTVGames', index=488, number=8009,
+      name='k_EMsgGCToGCLeagueNodeGroupRequest', index=488, number=7654,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientFindTopSourceTVGamesResponse', index=489, number=8010,
+      name='k_EMsgGCToGCLeagueNodeGroupResponse', index=489, number=7655,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLobbyList', index=490, number=8011,
+      name='k_EMsgGCToGCLeagueNodeRequest', index=490, number=7656,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCLobbyListResponse', index=491, number=8012,
+      name='k_EMsgGCToGCLeagueNodeResponse', index=491, number=7657,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPlayerStatsMatchSignOut', index=492, number=8013,
+      name='k_EMsgGCToGCRealtimeStatsTerseRequest', index=492, number=7658,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCCustomGamePlayerCountRequest', index=493, number=8014,
+      name='k_EMsgGCToGCRealtimeStatsTerseResponse', index=493, number=7659,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientCustomGamePlayerCountResponse', index=494, number=8015,
+      name='k_EMsgGCDev_GrantWarKill', index=494, number=8001,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSocialFeedPostCommentRequest', index=495, number=8016,
+      name='k_EMsgServerToGCLockCharmTrading', index=495, number=8004,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientSocialFeedPostCommentResponse', index=496, number=8017,
+      name='k_EMsgClientToGCPlayerStatsRequest', index=496, number=8006,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCCustomGamesFriendsPlayedRequest', index=497, number=8018,
+      name='k_EMsgGCToClientPlayerStatsResponse', index=497, number=8007,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientCustomGamesFriendsPlayedResponse', index=498, number=8019,
+      name='k_EMsgGCClearPracticeLobbyTeam', index=498, number=8008,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCFriendsPlayedCustomGameRequest', index=499, number=8020,
+      name='k_EMsgClientToGCFindTopSourceTVGames', index=499, number=8009,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientFriendsPlayedCustomGameResponse', index=500, number=8021,
+      name='k_EMsgGCToClientFindTopSourceTVGamesResponse', index=500, number=8010,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCFeaturedHeroesRequest', index=501, number=8022,
+      name='k_EMsgGCLobbyList', index=501, number=8011,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientFeaturedHeroesResponse', index=502, number=8023,
+      name='k_EMsgGCLobbyListResponse', index=502, number=8012,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCTopCustomGamesList', index=503, number=8024,
+      name='k_EMsgGCPlayerStatsMatchSignOut', index=503, number=8013,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSocialMatchPostCommentRequest', index=504, number=8025,
+      name='k_EMsgClientToGCCustomGamePlayerCountRequest', index=504, number=8014,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientSocialMatchPostCommentResponse', index=505, number=8026,
+      name='k_EMsgGCToClientCustomGamePlayerCountResponse', index=505, number=8015,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSocialMatchDetailsRequest', index=506, number=8027,
+      name='k_EMsgClientToGCSocialFeedPostCommentRequest', index=506, number=8016,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientSocialMatchDetailsResponse', index=507, number=8028,
+      name='k_EMsgGCToClientSocialFeedPostCommentResponse', index=507, number=8017,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetPartyOpen', index=508, number=8029,
+      name='k_EMsgClientToGCCustomGamesFriendsPlayedRequest', index=508, number=8018,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCMergePartyInvite', index=509, number=8030,
+      name='k_EMsgGCToClientCustomGamesFriendsPlayedResponse', index=509, number=8019,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientMergeGroupInviteReply', index=510, number=8031,
+      name='k_EMsgClientToGCFriendsPlayedCustomGameRequest', index=510, number=8020,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCMergePartyResponse', index=511, number=8032,
+      name='k_EMsgGCToClientFriendsPlayedCustomGameResponse', index=511, number=8021,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientMergePartyResponseReply', index=512, number=8033,
+      name='k_EMsgGCTopCustomGamesList', index=512, number=8024,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetProfileCardStats', index=513, number=8034,
+      name='k_EMsgClientToGCSocialMatchPostCommentRequest', index=513, number=8025,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetProfileCardStatsResponse', index=514, number=8035,
+      name='k_EMsgGCToClientSocialMatchPostCommentResponse', index=514, number=8026,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCTopLeagueMatchesRequest', index=515, number=8036,
+      name='k_EMsgClientToGCSocialMatchDetailsRequest', index=515, number=8027,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCTopFriendMatchesRequest', index=516, number=8037,
+      name='k_EMsgGCToClientSocialMatchDetailsResponse', index=516, number=8028,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientProfileCardStatsUpdated', index=517, number=8040,
+      name='k_EMsgClientToGCSetPartyOpen', index=517, number=8029,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCRealtimeStats', index=518, number=8041,
+      name='k_EMsgClientToGCMergePartyInvite', index=518, number=8030,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToServerRealtimeStatsStartStop', index=519, number=8042,
+      name='k_EMsgGCToClientMergeGroupInviteReply', index=519, number=8031,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetServersForClients', index=520, number=8045,
+      name='k_EMsgClientToGCMergePartyResponse', index=520, number=8032,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetServersForClientsResponse', index=521, number=8046,
+      name='k_EMsgGCToClientMergePartyResponseReply', index=521, number=8033,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPracticeLobbyKickFromTeam', index=522, number=8047,
+      name='k_EMsgClientToGCGetProfileCardStats', index=522, number=8034,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAChatGetMemberCount', index=523, number=8048,
+      name='k_EMsgClientToGCGetProfileCardStatsResponse', index=523, number=8035,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAChatGetMemberCountResponse', index=524, number=8049,
+      name='k_EMsgClientToGCTopLeagueMatchesRequest', index=524, number=8036,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSocialFeedPostMessageRequest', index=525, number=8050,
+      name='k_EMsgClientToGCTopFriendMatchesRequest', index=525, number=8037,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientSocialFeedPostMessageResponse', index=526, number=8051,
+      name='k_EMsgGCToClientProfileCardStatsUpdated', index=526, number=8040,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgCustomGameListenServerStartedLoading', index=527, number=8052,
+      name='k_EMsgServerToGCRealtimeStats', index=527, number=8041,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgCustomGameClientFinishedLoading', index=528, number=8053,
+      name='k_EMsgGCToServerRealtimeStatsStartStop', index=528, number=8042,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCPracticeLobbyCloseBroadcastChannel', index=529, number=8054,
+      name='k_EMsgGCToGCGetServersForClients', index=529, number=8045,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCStartFindingMatchResponse', index=530, number=8055,
+      name='k_EMsgGCToGCGetServersForClientsResponse', index=530, number=8046,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSQLGCToGCGrantAccountFlag', index=531, number=8057,
+      name='k_EMsgGCPracticeLobbyKickFromTeam', index=531, number=8047,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetAccountFlags', index=532, number=8058,
+      name='k_EMsgDOTAChatGetMemberCount', index=532, number=8048,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetAccountFlagsResponse', index=533, number=8059,
+      name='k_EMsgDOTAChatGetMemberCountResponse', index=533, number=8049,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutWagerStats', index=534, number=8060,
+      name='k_EMsgClientToGCSocialFeedPostMessageRequest', index=534, number=8050,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientTopLeagueMatchesResponse', index=535, number=8061,
+      name='k_EMsgGCToClientSocialFeedPostMessageResponse', index=535, number=8051,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientTopFriendMatchesResponse', index=536, number=8062,
+      name='k_EMsgCustomGameListenServerStartedLoading', index=536, number=8052,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCMatchesMinimalRequest', index=537, number=8063,
+      name='k_EMsgCustomGameClientFinishedLoading', index=537, number=8053,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCMatchesMinimalResponse', index=538, number=8064,
+      name='k_EMsgGCPracticeLobbyCloseBroadcastChannel', index=538, number=8054,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetProfileBadgePoints', index=539, number=8065,
+      name='k_EMsgGCStartFindingMatchResponse', index=539, number=8055,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetProfileBadgePointsResponse', index=540, number=8066,
+      name='k_EMsgSQLGCToGCGrantAccountFlag', index=540, number=8057,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientChatRegionsEnabled', index=541, number=8067,
+      name='k_EMsgGCToGCGetAccountFlags', index=541, number=8058,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCPingData', index=542, number=8068,
+      name='k_EMsgGCToGCGetAccountFlagsResponse', index=542, number=8059,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCMatchDetailsRequest', index=543, number=8069,
+      name='k_EMsgSignOutWagerStats', index=543, number=8060,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToServerMatchDetailsResponse', index=544, number=8070,
+      name='k_EMsgGCToClientTopLeagueMatchesResponse', index=544, number=8061,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCEnsureAccountInParty', index=545, number=8071,
+      name='k_EMsgGCToClientTopFriendMatchesResponse', index=545, number=8062,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCEnsureAccountInPartyResponse', index=546, number=8072,
+      name='k_EMsgClientToGCMatchesMinimalRequest', index=546, number=8063,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetProfileTickets', index=547, number=8073,
+      name='k_EMsgClientToGCMatchesMinimalResponse', index=547, number=8064,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetProfileTicketsResponse', index=548, number=8074,
+      name='k_EMsgGCToGCGetProfileBadgePoints', index=548, number=8065,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientMatchGroupsVersion', index=549, number=8075,
+      name='k_EMsgGCToGCGetProfileBadgePointsResponse', index=549, number=8066,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCH264Unsupported', index=550, number=8076,
+      name='k_EMsgGCToClientChatRegionsEnabled', index=550, number=8067,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestH264Support', index=551, number=8077,
+      name='k_EMsgClientToGCPingData', index=551, number=8068,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetQuestProgress', index=552, number=8078,
+      name='k_EMsgServerToGCMatchDetailsRequest', index=552, number=8069,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetQuestProgressResponse', index=553, number=8079,
+      name='k_EMsgGCToServerMatchDetailsResponse', index=553, number=8070,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutXPCoins', index=554, number=8080,
+      name='k_EMsgGCToGCEnsureAccountInParty', index=554, number=8071,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientMatchSignedOut', index=555, number=8081,
+      name='k_EMsgGCToGCEnsureAccountInPartyResponse', index=555, number=8072,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGetHeroStatsHistory', index=556, number=8082,
+      name='k_EMsgClientToGCGetProfileTickets', index=556, number=8073,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGetHeroStatsHistoryResponse', index=557, number=8083,
+      name='k_EMsgClientToGCGetProfileTicketsResponse', index=557, number=8074,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCPrivateChatInvite', index=558, number=8084,
+      name='k_EMsgGCToClientMatchGroupsVersion', index=558, number=8075,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCPrivateChatKick', index=559, number=8088,
+      name='k_EMsgClientToGCH264Unsupported', index=559, number=8076,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCPrivateChatPromote', index=560, number=8089,
+      name='k_EMsgClientToGCRequestH264Support', index=560, number=8077,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCPrivateChatDemote', index=561, number=8090,
+      name='k_EMsgClientToGCGetQuestProgress', index=561, number=8078,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientPrivateChatResponse', index=562, number=8091,
+      name='k_EMsgClientToGCGetQuestProgressResponse', index=562, number=8079,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCPrivateChatInfoRequest', index=563, number=8092,
+      name='k_EMsgSignOutXPCoins', index=563, number=8080,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientPrivateChatInfoResponse', index=564, number=8093,
+      name='k_EMsgGCToClientMatchSignedOut', index=564, number=8081,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCLatestConductScorecardRequest', index=565, number=8095,
+      name='k_EMsgGCGetHeroStatsHistory', index=565, number=8082,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCLatestConductScorecard', index=566, number=8096,
+      name='k_EMsgGCGetHeroStatsHistoryResponse', index=566, number=8083,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCPostMatchTip', index=567, number=8097,
+      name='k_EMsgClientToGCPrivateChatInvite', index=567, number=8084,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCPostMatchTipResponse', index=568, number=8098,
+      name='k_EMsgClientToGCPrivateChatKick', index=568, number=8088,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCWageringRequest', index=569, number=8099,
+      name='k_EMsgClientToGCPrivateChatPromote', index=569, number=8089,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientWageringResponse', index=570, number=8100,
+      name='k_EMsgClientToGCPrivateChatDemote', index=570, number=8090,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCEventGoalsRequest', index=571, number=8103,
+      name='k_EMsgGCToClientPrivateChatResponse', index=571, number=8091,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCEventGoalsResponse', index=572, number=8104,
+      name='k_EMsgClientToGCPrivateChatInfoRequest', index=572, number=8092,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCLeaguePredictions', index=573, number=8106,
+      name='k_EMsgGCToClientPrivateChatInfoResponse', index=573, number=8093,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientLeaguePredictionsResponse', index=574, number=8107,
+      name='k_EMsgClientToGCLatestConductScorecardRequest', index=574, number=8095,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCLeaguePredictionsUpdate', index=575, number=8108,
+      name='k_EMsgClientToGCLatestConductScorecard', index=575, number=8096,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSuspiciousActivity', index=576, number=8109,
+      name='k_EMsgServerToGCPostMatchTip', index=576, number=8097,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCAddUserToPostGameChat', index=577, number=8110,
+      name='k_EMsgServerToGCPostMatchTipResponse', index=577, number=8098,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCHasPlayerVotedForMVP', index=578, number=8111,
+      name='k_EMsgClientToGCWageringRequest', index=578, number=8099,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCHasPlayerVotedForMVPResponse', index=579, number=8112,
+      name='k_EMsgGCToClientWageringResponse', index=579, number=8100,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCVoteForMVP', index=580, number=8113,
+      name='k_EMsgClientToGCEventGoalsRequest', index=580, number=8103,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCVoteForMVPResponse', index=581, number=8114,
+      name='k_EMsgClientToGCEventGoalsResponse', index=581, number=8104,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetEventOwnership', index=582, number=8115,
+      name='k_EMsgClientToGCLeaguePredictions', index=582, number=8106,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetEventOwnershipResponse', index=583, number=8116,
+      name='k_EMsgGCToClientLeaguePredictionsResponse', index=583, number=8107,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientAutomatedTournamentStateChange', index=584, number=8117,
+      name='k_EMsgGCToGCLeaguePredictionsUpdate', index=584, number=8108,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCWeekendTourneyOpts', index=585, number=8118,
+      name='k_EMsgClientToGCSuspiciousActivity', index=585, number=8109,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCWeekendTourneyOptsResponse', index=586, number=8119,
+      name='k_EMsgGCToGCAddUserToPostGameChat', index=586, number=8110,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCWeekendTourneyLeave', index=587, number=8120,
+      name='k_EMsgClientToGCHasPlayerVotedForMVP', index=587, number=8111,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCWeekendTourneyLeaveResponse', index=588, number=8121,
+      name='k_EMsgClientToGCHasPlayerVotedForMVPResponse', index=588, number=8112,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCTeammateStatsRequest', index=589, number=8124,
+      name='k_EMsgClientToGCVoteForMVP', index=589, number=8113,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCTeammateStatsResponse', index=590, number=8125,
+      name='k_EMsgClientToGCVoteForMVPResponse', index=590, number=8114,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetGiftPermissions', index=591, number=8126,
+      name='k_EMsgGCToGCGetEventOwnership', index=591, number=8115,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetGiftPermissionsResponse', index=592, number=8127,
+      name='k_EMsgGCToGCGetEventOwnershipResponse', index=592, number=8116,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCVoteForArcana', index=593, number=8128,
+      name='k_EMsgGCToClientAutomatedTournamentStateChange', index=593, number=8117,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCVoteForArcanaResponse', index=594, number=8129,
+      name='k_EMsgClientToGCWeekendTourneyOpts', index=594, number=8118,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestArcanaVotesRemaining', index=595, number=8130,
+      name='k_EMsgClientToGCWeekendTourneyOptsResponse', index=595, number=8119,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestArcanaVotesRemainingResponse', index=596, number=8131,
+      name='k_EMsgClientToGCWeekendTourneyLeave', index=596, number=8120,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCTransferTeamAdminResponse', index=597, number=8132,
+      name='k_EMsgClientToGCWeekendTourneyLeaveResponse', index=597, number=8121,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCChangeTeamSub', index=598, number=8133,
+      name='k_EMsgClientToGCTeammateStatsRequest', index=598, number=8124,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCChangeTeamSubResponse', index=599, number=8134,
+      name='k_EMsgClientToGCTeammateStatsResponse', index=599, number=8125,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientTeamInfo', index=600, number=8135,
+      name='k_EMsgClientToGCGetGiftPermissions', index=600, number=8126,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientTeamsInfo', index=601, number=8136,
+      name='k_EMsgClientToGCGetGiftPermissionsResponse', index=601, number=8127,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCMyTeamInfoRequest', index=602, number=8137,
+      name='k_EMsgClientToGCVoteForArcana', index=602, number=8128,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestEventPointLog', index=603, number=8138,
+      name='k_EMsgClientToGCVoteForArcanaResponse', index=603, number=8129,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestEventPointLogResponse', index=604, number=8139,
+      name='k_EMsgClientToGCRequestArcanaVotesRemaining', index=604, number=8130,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCPublishUserStat', index=605, number=8140,
+      name='k_EMsgClientToGCRequestArcanaVotesRemainingResponse', index=605, number=8131,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSignoutSpendWager', index=606, number=8141,
+      name='k_EMsgGCTransferTeamAdminResponse', index=606, number=8132,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCSubmitLobbyMVPVote', index=607, number=8144,
+      name='k_EMsgGCToClientTeamInfo', index=607, number=8135,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCSubmitLobbyMVPVoteResponse', index=608, number=8145,
+      name='k_EMsgGCToClientTeamsInfo', index=608, number=8136,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestLinaPlaysRemaining', index=609, number=8146,
+      name='k_EMsgClientToGCMyTeamInfoRequest', index=609, number=8137,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestLinaPlaysRemainingResponse', index=610, number=8147,
+      name='k_EMsgClientToGCPublishUserStat', index=610, number=8140,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestLinaGameResult', index=611, number=8148,
+      name='k_EMsgGCToGCSignoutSpendWager', index=611, number=8141,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestLinaGameResultResponse', index=612, number=8149,
+      name='k_EMsgGCSubmitLobbyMVPVote', index=612, number=8144,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutCommunityGoalProgress', index=613, number=8150,
+      name='k_EMsgGCSubmitLobbyMVPVoteResponse', index=613, number=8145,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientLobbyMVPNotifyRecipient', index=614, number=8151,
+      name='k_EMsgClientToGCRequestLinaPlaysRemaining', index=614, number=8146,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientLobbyMVPAwarded', index=615, number=8152,
+      name='k_EMsgClientToGCRequestLinaPlaysRemainingResponse', index=615, number=8147,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientQuestProgressUpdated', index=616, number=8153,
+      name='k_EMsgClientToGCRequestLinaGameResult', index=616, number=8148,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientWageringUpdate', index=617, number=8154,
+      name='k_EMsgClientToGCRequestLinaGameResultResponse', index=617, number=8149,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientArcanaVotesUpdate', index=618, number=8155,
+      name='k_EMsgSignOutCommunityGoalProgress', index=618, number=8150,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCAddTI6TreeProgress', index=619, number=8156,
+      name='k_EMsgGCToClientLobbyMVPNotifyRecipient', index=619, number=8151,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetSpectatorLobbyDetails', index=620, number=8157,
+      name='k_EMsgGCToClientLobbyMVPAwarded', index=620, number=8152,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetSpectatorLobbyDetailsResponse', index=621, number=8158,
+      name='k_EMsgGCToClientQuestProgressUpdated', index=621, number=8153,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCCreateSpectatorLobby', index=622, number=8159,
+      name='k_EMsgGCToClientWageringUpdate', index=622, number=8154,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCCreateSpectatorLobbyResponse', index=623, number=8160,
+      name='k_EMsgGCToClientArcanaVotesUpdate', index=623, number=8155,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSpectatorLobbyList', index=624, number=8161,
+      name='k_EMsgClientToGCAddTI6TreeProgress', index=624, number=8156,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSpectatorLobbyListResponse', index=625, number=8162,
+      name='k_EMsgClientToGCSetSpectatorLobbyDetails', index=625, number=8157,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSpectatorLobbyGameDetails', index=626, number=8163,
+      name='k_EMsgClientToGCSetSpectatorLobbyDetailsResponse', index=626, number=8158,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCCompendiumInGamePredictionResults', index=627, number=8166,
+      name='k_EMsgClientToGCCreateSpectatorLobby', index=627, number=8159,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCCloseCompendiumInGamePredictionVoting', index=628, number=8167,
+      name='k_EMsgClientToGCCreateSpectatorLobbyResponse', index=628, number=8160,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCOpenPlayerCardPack', index=629, number=8168,
+      name='k_EMsgClientToGCSpectatorLobbyList', index=629, number=8161,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCOpenPlayerCardPackResponse', index=630, number=8169,
+      name='k_EMsgClientToGCSpectatorLobbyListResponse', index=630, number=8162,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSelectCompendiumInGamePrediction', index=631, number=8170,
+      name='k_EMsgSpectatorLobbyGameDetails', index=631, number=8163,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSelectCompendiumInGamePredictionResponse', index=632, number=8171,
+      name='k_EMsgServerToGCCompendiumInGamePredictionResults', index=632, number=8166,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCWeekendTourneyGetPlayerStats', index=633, number=8172,
+      name='k_EMsgServerToGCCloseCompendiumInGamePredictionVoting', index=633, number=8167,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCWeekendTourneyGetPlayerStatsResponse', index=634, number=8173,
+      name='k_EMsgClientToGCOpenPlayerCardPack', index=634, number=8168,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRecyclePlayerCard', index=635, number=8174,
+      name='k_EMsgClientToGCOpenPlayerCardPackResponse', index=635, number=8169,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRecyclePlayerCardResponse', index=636, number=8175,
+      name='k_EMsgClientToGCSelectCompendiumInGamePrediction', index=636, number=8170,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCCreatePlayerCardPack', index=637, number=8176,
+      name='k_EMsgClientToGCSelectCompendiumInGamePredictionResponse', index=637, number=8171,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCCreatePlayerCardPackResponse', index=638, number=8177,
+      name='k_EMsgClientToGCWeekendTourneyGetPlayerStats', index=638, number=8172,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetPlayerCardRosterRequest', index=639, number=8178,
+      name='k_EMsgClientToGCWeekendTourneyGetPlayerStatsResponse', index=639, number=8173,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGetPlayerCardRosterResponse', index=640, number=8179,
+      name='k_EMsgClientToGCRecyclePlayerCard', index=640, number=8174,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetPlayerCardRosterRequest', index=641, number=8180,
+      name='k_EMsgClientToGCRecyclePlayerCardResponse', index=641, number=8175,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetPlayerCardRosterResponse', index=642, number=8181,
+      name='k_EMsgClientToGCCreatePlayerCardPack', index=642, number=8176,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCCloseCompendiumInGamePredictionVotingResponse', index=643, number=8183,
+      name='k_EMsgClientToGCCreatePlayerCardPackResponse', index=643, number=8177,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCCompendiumInGamePredictionResultsResponse', index=644, number=8185,
+      name='k_EMsgClientToGCGetPlayerCardRosterRequest', index=644, number=8178,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgLobbyBattleCupVictory', index=645, number=8186,
+      name='k_EMsgClientToGCGetPlayerCardRosterResponse', index=645, number=8179,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGetPlayerCardItemInfo', index=646, number=8187,
+      name='k_EMsgClientToGCSetPlayerCardRosterRequest', index=646, number=8180,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGetPlayerCardItemInfoResponse', index=647, number=8188,
+      name='k_EMsgClientToGCSetPlayerCardRosterResponse', index=647, number=8181,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestSteamDatagramTicket', index=648, number=8189,
+      name='k_EMsgServerToGCCloseCompendiumInGamePredictionVotingResponse', index=648, number=8183,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestSteamDatagramTicketResponse', index=649, number=8190,
+      name='k_EMsgServerToGCCompendiumInGamePredictionResultsResponse', index=649, number=8185,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientBattlePassRollupRequest', index=650, number=8191,
+      name='k_EMsgLobbyBattleCupVictory', index=650, number=8186,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientBattlePassRollupResponse', index=651, number=8192,
+      name='k_EMsgGCGetPlayerCardItemInfo', index=651, number=8187,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCTransferSeasonalMMRRequest', index=652, number=8193,
+      name='k_EMsgGCGetPlayerCardItemInfoResponse', index=652, number=8188,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCTransferSeasonalMMRResponse', index=653, number=8194,
+      name='k_EMsgClientToGCRequestSteamDatagramTicket', index=653, number=8189,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCPublicChatCommunicationBan', index=654, number=8195,
+      name='k_EMsgClientToGCRequestSteamDatagramTicketResponse', index=654, number=8190,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCUpdateAccountPublicChatBan', index=655, number=8196,
+      name='k_EMsgGCToClientBattlePassRollupRequest', index=655, number=8191,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCChatReportPublicSpam', index=656, number=8197,
+      name='k_EMsgGCToClientBattlePassRollupResponse', index=656, number=8192,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetPartyBuilderOptions', index=657, number=8198,
+      name='k_EMsgClientToGCTransferSeasonalMMRRequest', index=657, number=8193,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCSetPartyBuilderOptionsResponse', index=658, number=8199,
+      name='k_EMsgClientToGCTransferSeasonalMMRResponse', index=658, number=8194,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientPlaytestStatus', index=659, number=8200,
+      name='k_EMsgGCToGCPublicChatCommunicationBan', index=659, number=8195,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCJoinPlaytest', index=660, number=8201,
+      name='k_EMsgGCToGCUpdateAccountPublicChatBan', index=660, number=8196,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCJoinPlaytestResponse', index=661, number=8202,
+      name='k_EMsgGCChatReportPublicSpam', index=661, number=8197,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgLobbyPlaytestDetails', index=662, number=8203,
+      name='k_EMsgClientToGCSetPartyBuilderOptions', index=662, number=8198,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTASetFavoriteTeam', index=663, number=8204,
+      name='k_EMsgClientToGCSetPartyBuilderOptionsResponse', index=663, number=8199,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientBattlePassRollupListRequest', index=664, number=8205,
+      name='k_EMsgGCToClientPlaytestStatus', index=664, number=8200,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientBattlePassRollupListResponse', index=665, number=8206,
+      name='k_EMsgClientToGCJoinPlaytest', index=665, number=8201,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCIsProQuery', index=666, number=8207,
+      name='k_EMsgClientToGCJoinPlaytestResponse', index=666, number=8202,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCIsProResponse', index=667, number=8208,
+      name='k_EMsgLobbyPlaytestDetails', index=667, number=8203,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAClaimEventAction', index=668, number=8209,
+      name='k_EMsgDOTASetFavoriteTeam', index=668, number=8204,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAClaimEventActionResponse', index=669, number=8210,
+      name='k_EMsgGCToClientBattlePassRollupListRequest', index=669, number=8205,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAGetPeriodicResource', index=670, number=8211,
+      name='k_EMsgGCToClientBattlePassRollupListResponse', index=670, number=8206,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAGetPeriodicResourceResponse', index=671, number=8212,
+      name='k_EMsgGCIsProQuery', index=671, number=8207,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDOTAPeriodicResourceUpdated', index=672, number=8213,
+      name='k_EMsgGCIsProResponse', index=672, number=8208,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCSpendWager', index=673, number=8214,
+      name='k_EMsgDOTAClaimEventAction', index=673, number=8209,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSignoutSpendWagerToken', index=674, number=8215,
+      name='k_EMsgDOTAClaimEventActionResponse', index=674, number=8210,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSubmitTriviaQuestionAnswer', index=675, number=8216,
+      name='k_EMsgDOTAGetPeriodicResource', index=675, number=8211,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSubmitTriviaQuestionAnswerResponse', index=676, number=8217,
+      name='k_EMsgDOTAGetPeriodicResourceResponse', index=676, number=8212,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGiveTip', index=677, number=8218,
+      name='k_EMsgDOTAPeriodicResourceUpdated', index=677, number=8213,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCGiveTipResponse', index=678, number=8219,
+      name='k_EMsgServerToGCSpendWager', index=678, number=8214,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgStartTriviaSession', index=679, number=8220,
+      name='k_EMsgGCToGCSignoutSpendWagerToken', index=679, number=8215,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgStartTriviaSessionResponse', index=680, number=8221,
+      name='k_EMsgSubmitTriviaQuestionAnswer', index=680, number=8216,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgAnchorPhoneNumberRequest', index=681, number=8222,
+      name='k_EMsgSubmitTriviaQuestionAnswerResponse', index=681, number=8217,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgAnchorPhoneNumberResponse', index=682, number=8223,
+      name='k_EMsgClientToGCGiveTip', index=682, number=8218,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgUnanchorPhoneNumberRequest', index=683, number=8224,
+      name='k_EMsgClientToGCGiveTipResponse', index=683, number=8219,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgUnanchorPhoneNumberResponse', index=684, number=8225,
+      name='k_EMsgStartTriviaSession', index=684, number=8220,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientTipNotification', index=685, number=8226,
+      name='k_EMsgStartTriviaSessionResponse', index=685, number=8221,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestSlarkGameResult', index=686, number=8227,
+      name='k_EMsgAnchorPhoneNumberRequest', index=686, number=8222,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestSlarkGameResultResponse', index=687, number=8228,
+      name='k_EMsgAnchorPhoneNumberResponse', index=687, number=8223,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSignoutSpendRankWager', index=688, number=8229,
+      name='k_EMsgUnanchorPhoneNumberRequest', index=688, number=8224,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetFavoriteTeam', index=689, number=8230,
+      name='k_EMsgUnanchorPhoneNumberResponse', index=689, number=8225,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGetFavoriteTeamResponse', index=690, number=8231,
+      name='k_EMsgGCToClientTipNotification', index=690, number=8226,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSignOutEventGameData', index=691, number=8232,
+      name='k_EMsgClientToGCRequestSlarkGameResult', index=691, number=8227,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientAllStarVotesRequest', index=692, number=8233,
+      name='k_EMsgClientToGCRequestSlarkGameResultResponse', index=692, number=8228,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientAllStarVotesReply', index=693, number=8234,
+      name='k_EMsgGCToGCSignoutSpendRankWager', index=693, number=8229,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientAllStarVotesSubmit', index=694, number=8236,
+      name='k_EMsgGCToGCGetFavoriteTeam', index=694, number=8230,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientAllStarVotesSubmitReply', index=695, number=8237,
+      name='k_EMsgGCToGCGetFavoriteTeamResponse', index=695, number=8231,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCQuickStatsRequest', index=696, number=8238,
+      name='k_EMsgSignOutEventGameData', index=696, number=8232,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCQuickStatsResponse', index=697, number=8239,
+      name='k_EMsgGCToClientAllStarVotesRequest', index=697, number=8233,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCSubtractEventPointsFromUser', index=698, number=8240,
+      name='k_EMsgGCToClientAllStarVotesReply', index=698, number=8234,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSelectionPriorityChoiceRequest', index=699, number=8241,
+      name='k_EMsgGCToClientAllStarVotesSubmit', index=699, number=8236,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSelectionPriorityChoiceResponse', index=700, number=8242,
+      name='k_EMsgGCToClientAllStarVotesSubmitReply', index=700, number=8237,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCompendiumInGamePredictionResults', index=701, number=8243,
+      name='k_EMsgClientToGCQuickStatsRequest', index=701, number=8238,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGameAutographReward', index=702, number=8244,
+      name='k_EMsgClientToGCQuickStatsResponse', index=702, number=8239,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGameAutographRewardResponse', index=703, number=8245,
+      name='k_EMsgGCToGCSubtractEventPointsFromUser', index=703, number=8240,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDestroyLobbyRequest', index=704, number=8246,
+      name='k_EMsgSelectionPriorityChoiceRequest', index=704, number=8241,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgDestroyLobbyResponse', index=705, number=8247,
+      name='k_EMsgSelectionPriorityChoiceResponse', index=705, number=8242,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPurchaseItemWithEventPoints', index=706, number=8248,
+      name='k_EMsgGCToGCCompendiumInGamePredictionResults', index=706, number=8243,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPurchaseItemWithEventPointsResponse', index=707, number=8249,
+      name='k_EMsgGameAutographReward', index=707, number=8244,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCMatchPlayerItemPurchaseHistory', index=708, number=8250,
+      name='k_EMsgGameAutographRewardResponse', index=708, number=8245,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantPlusHeroMatchResults', index=709, number=8251,
+      name='k_EMsgDestroyLobbyRequest', index=709, number=8246,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGetHeroTimedStats', index=710, number=8252,
+      name='k_EMsgDestroyLobbyResponse', index=710, number=8247,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCGetHeroTimedStatsResponse', index=711, number=8253,
+      name='k_EMsgPurchaseItemWithEventPoints', index=711, number=8248,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgLobbyPlayerPlusSubscriptionData', index=712, number=8254,
+      name='k_EMsgPurchaseItemWithEventPointsResponse', index=712, number=8249,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgServerToGCMatchStateHistory', index=713, number=8255,
+      name='k_EMsgServerToGCMatchPlayerItemPurchaseHistory', index=713, number=8250,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPurchaseHeroRelic', index=714, number=8256,
+      name='k_EMsgGCToGCGrantPlusHeroMatchResults', index=714, number=8251,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPurchaseHeroRelicResponse', index=715, number=8257,
+      name='k_EMsgGCGetHeroTimedStats', index=715, number=8252,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPurchaseHeroRandomRelic', index=716, number=8258,
+      name='k_EMsgGCGetHeroTimedStatsResponse', index=716, number=8253,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPurchaseHeroRandomRelicResponse', index=717, number=8259,
+      name='k_EMsgLobbyPlayerPlusSubscriptionData', index=717, number=8254,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgLaneSuggestRequest', index=718, number=8260,
+      name='k_EMsgServerToGCMatchStateHistory', index=718, number=8255,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgLaneSuggestResponse', index=719, number=8261,
+      name='k_EMsgPurchaseHeroRelic', index=719, number=8256,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPartyReadyCheckRequest', index=720, number=8262,
+      name='k_EMsgPurchaseHeroRelicResponse', index=720, number=8257,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPartyReadyCheckResponse', index=721, number=8263,
+      name='k_EMsgPurchaseHeroRandomRelic', index=721, number=8258,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPartyReadyCheckAcknowledge', index=722, number=8264,
+      name='k_EMsgPurchaseHeroRandomRelicResponse', index=722, number=8259,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGetRecentPlayTimeFriendsRequest', index=723, number=8265,
+      name='k_EMsgPartyReadyCheckRequest', index=723, number=8262,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGetRecentPlayTimeFriendsResponse', index=724, number=8266,
+      name='k_EMsgPartyReadyCheckResponse', index=724, number=8263,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToClientCommendNotification', index=725, number=8267,
+      name='k_EMsgPartyReadyCheckAcknowledge', index=725, number=8264,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgProfileRequest', index=726, number=8268,
+      name='k_EMsgGetRecentPlayTimeFriendsRequest', index=726, number=8265,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgProfileResponse', index=727, number=8269,
+      name='k_EMsgGetRecentPlayTimeFriendsResponse', index=727, number=8266,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgProfileUpdate', index=728, number=8270,
+      name='k_EMsgGCToClientCommendNotification', index=728, number=8267,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgProfileUpdateResponse', index=729, number=8271,
+      name='k_EMsgProfileRequest', index=729, number=8268,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgSuccessfulHero', index=730, number=8273,
+      name='k_EMsgProfileResponse', index=730, number=8269,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgHeroGlobalDataRequest', index=731, number=8274,
+      name='k_EMsgProfileUpdate', index=731, number=8270,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgHeroGlobalDataResponse', index=732, number=8275,
+      name='k_EMsgProfileUpdateResponse', index=732, number=8271,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestPlusWeeklyChallengeResult', index=733, number=8276,
+      name='k_EMsgSuccessfulHero', index=733, number=8273,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgClientToGCRequestPlusWeeklyChallengeResultResponse', index=734, number=8277,
+      name='k_EMsgHeroGlobalDataRequest', index=734, number=8274,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCGrantPlusPrepaidTime', index=735, number=8278,
+      name='k_EMsgHeroGlobalDataResponse', index=735, number=8275,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPrivateMetadataKeyRequest', index=736, number=8279,
+      name='k_EMsgClientToGCRequestPlusWeeklyChallengeResult', index=736, number=8276,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgPrivateMetadataKeyResponse', index=737, number=8280,
+      name='k_EMsgClientToGCRequestPlusWeeklyChallengeResultResponse', index=737, number=8277,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCReconcilePlusStatus', index=738, number=8281,
+      name='k_EMsgGCToGCGrantPlusPrepaidTime', index=738, number=8278,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCheckPlusStatus', index=739, number=8282,
+      name='k_EMsgPrivateMetadataKeyRequest', index=739, number=8279,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCCheckPlusStatusResponse', index=740, number=8283,
+      name='k_EMsgPrivateMetadataKeyResponse', index=740, number=8280,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCReconcilePlusAutoGrantItems', index=741, number=8284,
+      name='k_EMsgGCToGCReconcilePlusStatus', index=741, number=8281,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgGCToGCReconcilePlusStatusUnreliable', index=742, number=8285,
+      name='k_EMsgGCToGCCheckPlusStatus', index=742, number=8282,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgActivatePlusFreeTrialRequest', index=743, number=8286,
+      name='k_EMsgGCToGCCheckPlusStatusResponse', index=743, number=8283,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_EMsgActivatePlusFreeTrialResponse', index=744, number=8287,
+      name='k_EMsgGCToGCReconcilePlusAutoGrantItems', index=744, number=8284,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCReconcilePlusStatusUnreliable', index=745, number=8285,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgActivatePlusFreeTrialRequest', index=746, number=8286,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgActivatePlusFreeTrialResponse', index=747, number=8287,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToClientCavernCrawlMapPathCompleted', index=748, number=8288,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlClaimRoom', index=749, number=8289,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlClaimRoomResponse', index=750, number=8290,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlUseItemOnRoom', index=751, number=8291,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlUseItemOnRoomResponse', index=752, number=8292,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlUseItemOnPath', index=753, number=8293,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlUseItemOnPathResponse', index=754, number=8294,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlRequestMapState', index=755, number=8295,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlRequestMapStateResponse', index=756, number=8296,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgSignOutTips', index=757, number=8297,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRequestEventPointLogV2', index=758, number=8298,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRequestEventPointLogResponseV2', index=759, number=8299,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRequestEventTipsSummary', index=760, number=8300,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRequestEventTipsSummaryResponse', index=761, number=8301,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgHeroGlobalDataAllHeroes', index=762, number=8302,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRequestSocialFeed', index=763, number=8303,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRequestSocialFeedResponse', index=764, number=8304,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRequestSocialFeedComments', index=765, number=8305,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRequestSocialFeedCommentsResponse', index=766, number=8306,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCSignoutAwardCappedUnderhollowEventGamePoints', index=767, number=8307,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlGetClaimedRoomCount', index=768, number=8308,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCCavernCrawlGetClaimedRoomCountResponse', index=769, number=8309,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCReconcilePlusAutoGrantItemsUnreliable', index=770, number=8310,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgServerToGCAddBroadcastTimelineEvent', index=771, number=8311,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToServerUpdateSteamBroadcasting', index=772, number=8312,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCRecordContestVote', index=773, number=8313,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToClientRecordContestVoteResponse', index=774, number=8314,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCGrantAutograph', index=775, number=8315,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCGrantAutographResponse', index=776, number=8316,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=39,
-  serialized_end=30016,
+  serialized_end=31614,
 )
 _sym_db.RegisterEnumDescriptor(_EDOTAGCMSG)
 
@@ -3104,8 +3232,6 @@ k_EMsgGCPlayerHeroesFavoritesAdd = 7133
 k_EMsgGCPlayerHeroesFavoritesRemove = 7134
 k_EMsgGCApplyTeamToPracticeLobby = 7142
 k_EMsgGCTransferTeamAdmin = 7144
-k_EMsgRequestLeagueInfo = 7147
-k_EMsgResponseLeagueInfo = 7148
 k_EMsgGCPracticeLobbyJoinBroadcastChannel = 7149
 k_EMsgGC_TournamentItemEvent = 7150
 k_EMsgGC_TournamentItemEventResponse = 7151
@@ -3239,8 +3365,6 @@ k_EMsgGCFantasyPlayerStandingsRequest = 7318
 k_EMsgGCFantasyPlayerStandingsResponse = 7319
 k_EMsgGCFlipLobbyTeams = 7320
 k_EMsgGCCustomGameCreate = 7321
-k_EMsgGCFantasyPlayerInfoRequest = 7322
-k_EMsgGCFantasyPlayerInfoResponse = 7323
 k_EMsgGCToGCProcessPlayerReportForTarget = 7324
 k_EMsgGCToGCProcessReportSuccess = 7325
 k_EMsgGCNotifyAccountFlagsChange = 7326
@@ -3326,7 +3450,6 @@ k_EMsgGCToGCUpdateMatchmakingStats = 7415
 k_EMsgGCToServerPingRequest = 7416
 k_EMsgGCToServerPingResponse = 7417
 k_EMsgGCToServerConsoleCommand = 7418
-k_EMsgGCToGCUpdateLiveLeagueGameInfo = 7420
 k_EMsgGCMakeOffering = 7423
 k_EMsgGCRequestOfferings = 7424
 k_EMsgGCRequestOfferingsResponse = 7425
@@ -3335,9 +3458,6 @@ k_EMsgGCNotificationsRequest = 7427
 k_EMsgGCNotificationsResponse = 7428
 k_EMsgGCToGCModifyNotification = 7429
 k_EMsgGCToGCSetNewNotifications = 7430
-k_EMsgGCToGCSetIsLeagueAdmin = 7431
-k_EMsgGCLeagueAdminState = 7432
-k_EMsgGCToGCSendLeagueAdminState = 7433
 k_EMsgGCLeagueAdminList = 7434
 k_EMsgGCNotificationsMarkReadRequest = 7435
 k_EMsgGCFantasyMessageAdd = 7436
@@ -3345,7 +3465,6 @@ k_EMsgGCFantasyMessagesRequest = 7437
 k_EMsgGCFantasyMessagesResponse = 7438
 k_EMsgGCFantasyScheduledMatchesRequest = 7439
 k_EMsgGCFantasyScheduledMatchesResponse = 7440
-k_EMsgGCToGCGrantLeagueAccess = 7441
 k_EMsgGCEventGameCreate = 7443
 k_EMsgGCPerfectWorldUserLookupRequest = 7444
 k_EMsgGCPerfectWorldUserLookupResponse = 7445
@@ -3448,9 +3567,6 @@ k_EMsgServerToGCReportKillSummaries = 7554
 k_EMsgGCToGCReportKillSummaries = 7555
 k_EMsgGCToGCUpdateAssassinMinigame = 7556
 k_EMsgGCToGCFantasySetMatchLeague = 7557
-k_EMsgClientToGCRecordCompendiumStats = 7558
-k_EMsgGCItemEditorRequestLeagueInfo = 7559
-k_EMsgGCItemEditorLeagueInfoResponse = 7560
 k_EMsgGCToGCUpdatePlayerPredictions = 7561
 k_EMsgGCToServerPredictionResult = 7562
 k_EMsgServerToGCSignoutAwardAdditionalDrops = 7563
@@ -3484,10 +3600,6 @@ k_EMsgGCToGCGetCompendiumFanfare = 7595
 k_EMsgServerToGCHoldEventPoints = 7596
 k_EMsgSignOutReleaseEventPointHolds = 7597
 k_EMsgGCToGCChatNewUserSession = 7598
-k_EMsgClientToGCGetLeagueSeries = 7599
-k_EMsgClientToGCGetLeagueSeriesResponse = 7600
-k_EMsgSQLGCToGCSignoutUpdateLeagueSchedule = 7601
-k_EMsgGCToServerUpdateBroadcastCheers = 7602
 k_EMsgClientToGCApplyGemCombiner = 7603
 k_EMsgClientToGCDOTACreateStaticRecipe = 7604
 k_EMsgClientToGCDOTACreateStaticRecipeResponse = 7605
@@ -3502,6 +3614,33 @@ k_EMsgClientToGCRecycleHeroRelic = 7619
 k_EMsgClientToGCRecycleHeroRelicResponse = 7620
 k_EMsgGCToGCRevokeEventOwnership = 7621
 k_EMsgGCToGCUnlockEventPointSpending = 7622
+k_EMsgGCToClientRequestLaneSelection = 7623
+k_EMsgGCToClientRequestLaneSelectionResponse = 7624
+k_EMsgServerToGCCavernCrawlIsHeroActive = 7625
+k_EMsgServerToGCCavernCrawlIsHeroActiveResponse = 7626
+k_EMsgClientToGCPlayerCardSpecificPurchaseRequest = 7627
+k_EMsgClientToGCPlayerCardSpecificPurchaseResponse = 7628
+k_EMsgGCtoServerTensorflowInstance = 7629
+k_EMsgSQLSetIsLeagueAdmin = 7630
+k_EMsgGCToGCGetLiveLeagueMatches = 7631
+k_EMsgGCToGCGetLiveLeagueMatchesResponse = 7632
+k_EMsgDOTALeagueInfoListAdminsRequest = 7633
+k_EMsgDOTALeagueInfoListAdminsReponse = 7634
+k_EMsgGCToGCLeagueMatchStarted = 7645
+k_EMsgGCToGCLeagueMatchCompleted = 7646
+k_EMsgGCToGCLeagueMatchStartedResponse = 7647
+k_EMsgDOTALeagueNodeRequest = 7648
+k_EMsgDOTALeagueNodeResponse = 7649
+k_EMsgDOTALeagueAvailableLobbyNodesRequest = 7650
+k_EMsgDOTALeagueAvailableLobbyNodes = 7651
+k_EMsgGCToGCLeagueRequest = 7652
+k_EMsgGCToGCLeagueResponse = 7653
+k_EMsgGCToGCLeagueNodeGroupRequest = 7654
+k_EMsgGCToGCLeagueNodeGroupResponse = 7655
+k_EMsgGCToGCLeagueNodeRequest = 7656
+k_EMsgGCToGCLeagueNodeResponse = 7657
+k_EMsgGCToGCRealtimeStatsTerseRequest = 7658
+k_EMsgGCToGCRealtimeStatsTerseResponse = 7659
 k_EMsgGCDev_GrantWarKill = 8001
 k_EMsgServerToGCLockCharmTrading = 8004
 k_EMsgClientToGCPlayerStatsRequest = 8006
@@ -3520,8 +3659,6 @@ k_EMsgClientToGCCustomGamesFriendsPlayedRequest = 8018
 k_EMsgGCToClientCustomGamesFriendsPlayedResponse = 8019
 k_EMsgClientToGCFriendsPlayedCustomGameRequest = 8020
 k_EMsgGCToClientFriendsPlayedCustomGameResponse = 8021
-k_EMsgClientToGCFeaturedHeroesRequest = 8022
-k_EMsgGCToClientFeaturedHeroesResponse = 8023
 k_EMsgGCTopCustomGamesList = 8024
 k_EMsgClientToGCSocialMatchPostCommentRequest = 8025
 k_EMsgGCToClientSocialMatchPostCommentResponse = 8026
@@ -3617,13 +3754,9 @@ k_EMsgClientToGCVoteForArcanaResponse = 8129
 k_EMsgClientToGCRequestArcanaVotesRemaining = 8130
 k_EMsgClientToGCRequestArcanaVotesRemainingResponse = 8131
 k_EMsgGCTransferTeamAdminResponse = 8132
-k_EMsgGCChangeTeamSub = 8133
-k_EMsgGCChangeTeamSubResponse = 8134
 k_EMsgGCToClientTeamInfo = 8135
 k_EMsgGCToClientTeamsInfo = 8136
 k_EMsgClientToGCMyTeamInfoRequest = 8137
-k_EMsgClientToGCRequestEventPointLog = 8138
-k_EMsgClientToGCRequestEventPointLogResponse = 8139
 k_EMsgClientToGCPublishUserStat = 8140
 k_EMsgGCToGCSignoutSpendWager = 8141
 k_EMsgGCSubmitLobbyMVPVote = 8144
@@ -3737,8 +3870,6 @@ k_EMsgPurchaseHeroRelic = 8256
 k_EMsgPurchaseHeroRelicResponse = 8257
 k_EMsgPurchaseHeroRandomRelic = 8258
 k_EMsgPurchaseHeroRandomRelicResponse = 8259
-k_EMsgLaneSuggestRequest = 8260
-k_EMsgLaneSuggestResponse = 8261
 k_EMsgPartyReadyCheckRequest = 8262
 k_EMsgPartyReadyCheckResponse = 8263
 k_EMsgPartyReadyCheckAcknowledge = 8264
@@ -3764,6 +3895,35 @@ k_EMsgGCToGCReconcilePlusAutoGrantItems = 8284
 k_EMsgGCToGCReconcilePlusStatusUnreliable = 8285
 k_EMsgActivatePlusFreeTrialRequest = 8286
 k_EMsgActivatePlusFreeTrialResponse = 8287
+k_EMsgGCToClientCavernCrawlMapPathCompleted = 8288
+k_EMsgClientToGCCavernCrawlClaimRoom = 8289
+k_EMsgClientToGCCavernCrawlClaimRoomResponse = 8290
+k_EMsgClientToGCCavernCrawlUseItemOnRoom = 8291
+k_EMsgClientToGCCavernCrawlUseItemOnRoomResponse = 8292
+k_EMsgClientToGCCavernCrawlUseItemOnPath = 8293
+k_EMsgClientToGCCavernCrawlUseItemOnPathResponse = 8294
+k_EMsgClientToGCCavernCrawlRequestMapState = 8295
+k_EMsgClientToGCCavernCrawlRequestMapStateResponse = 8296
+k_EMsgSignOutTips = 8297
+k_EMsgClientToGCRequestEventPointLogV2 = 8298
+k_EMsgClientToGCRequestEventPointLogResponseV2 = 8299
+k_EMsgClientToGCRequestEventTipsSummary = 8300
+k_EMsgClientToGCRequestEventTipsSummaryResponse = 8301
+k_EMsgHeroGlobalDataAllHeroes = 8302
+k_EMsgClientToGCRequestSocialFeed = 8303
+k_EMsgClientToGCRequestSocialFeedResponse = 8304
+k_EMsgClientToGCRequestSocialFeedComments = 8305
+k_EMsgClientToGCRequestSocialFeedCommentsResponse = 8306
+k_EMsgGCToGCSignoutAwardCappedUnderhollowEventGamePoints = 8307
+k_EMsgClientToGCCavernCrawlGetClaimedRoomCount = 8308
+k_EMsgClientToGCCavernCrawlGetClaimedRoomCountResponse = 8309
+k_EMsgGCToGCReconcilePlusAutoGrantItemsUnreliable = 8310
+k_EMsgServerToGCAddBroadcastTimelineEvent = 8311
+k_EMsgGCToServerUpdateSteamBroadcasting = 8312
+k_EMsgClientToGCRecordContestVote = 8313
+k_EMsgGCToClientRecordContestVoteResponse = 8314
+k_EMsgGCToGCGrantAutograph = 8315
+k_EMsgGCToGCGrantAutographResponse = 8316
 
 
 DESCRIPTOR.enum_types_by_name['EDOTAGCMsg'] = _EDOTAGCMSG

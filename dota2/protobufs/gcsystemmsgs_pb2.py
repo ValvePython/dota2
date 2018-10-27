@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='gcsystemmsgs.proto',
   package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x12gcsystemmsgs.proto\x12\x04\x64ota*\xc3\x17\n\x0c\x45GCSystemMsg\x12\x13\n\x0fk_EGCMsgInvalid\x10\x00\x12\x11\n\rk_EGCMsgMulti\x10\x01\x12\x18\n\x14k_EGCMsgGenericReply\x10\n\x12\x16\n\x12k_EGCMsgSystemBase\x10\x32\x12\x1e\n\x1ak_EGCMsgAchievementAwarded\x10\x33\x12\x16\n\x12k_EGCMsgConCommand\x10\x34\x12\x18\n\x14k_EGCMsgStartPlaying\x10\x35\x12\x17\n\x13k_EGCMsgStopPlaying\x10\x36\x12\x1b\n\x17k_EGCMsgStartGameserver\x10\x37\x12\x1a\n\x16k_EGCMsgStopGameserver\x10\x38\x12\x15\n\x11k_EGCMsgWGRequest\x10\x39\x12\x16\n\x12k_EGCMsgWGResponse\x10:\x12\"\n\x1ek_EGCMsgGetUserGameStatsSchema\x10;\x12*\n&k_EGCMsgGetUserGameStatsSchemaResponse\x10<\x12\"\n\x1ek_EGCMsgGetUserStatsDEPRECATED\x10=\x12 \n\x1ck_EGCMsgGetUserStatsResponse\x10>\x12\x1a\n\x16k_EGCMsgAppInfoUpdated\x10?\x12\x1b\n\x17k_EGCMsgValidateSession\x10@\x12#\n\x1fk_EGCMsgValidateSessionResponse\x10\x41\x12\"\n\x1ek_EGCMsgLookupAccountFromInput\x10\x42\x12\x1b\n\x17k_EGCMsgSendHTTPRequest\x10\x43\x12#\n\x1fk_EGCMsgSendHTTPRequestResponse\x10\x44\x12\x18\n\x14k_EGCMsgPreTestSetup\x10\x45\x12\x1f\n\x1bk_EGCMsgRecordSupportAction\x10\x46\x12(\n$k_EGCMsgGetAccountDetails_DEPRECATED\x10G\x12\"\n\x1ek_EGCMsgReceiveInterAppMessage\x10I\x12\x18\n\x14k_EGCMsgFindAccounts\x10J\x12\x15\n\x11k_EGCMsgPostAlert\x10K\x12\x17\n\x13k_EGCMsgGetLicenses\x10L\x12\x18\n\x14k_EGCMsgGetUserStats\x10M\x12\x17\n\x13k_EGCMsgGetCommands\x10N\x12\x1f\n\x1bk_EGCMsgGetCommandsResponse\x10O\x12\x1a\n\x16k_EGCMsgAddFreeLicense\x10P\x12\"\n\x1ek_EGCMsgAddFreeLicenseResponse\x10Q\x12\x19\n\x15k_EGCMsgGetIPLocation\x10R\x12!\n\x1dk_EGCMsgGetIPLocationResponse\x10S\x12\x1d\n\x19k_EGCMsgSystemStatsSchema\x10T\x12\x1a\n\x16k_EGCMsgGetSystemStats\x10U\x12\"\n\x1ek_EGCMsgGetSystemStatsResponse\x10V\x12\x15\n\x11k_EGCMsgSendEmail\x10W\x12\x1d\n\x19k_EGCMsgSendEmailResponse\x10X\x12\x1c\n\x18k_EGCMsgGetEmailTemplate\x10Y\x12$\n k_EGCMsgGetEmailTemplateResponse\x10Z\x12\x1a\n\x16k_EGCMsgGrantGuestPass\x10[\x12\"\n\x1ek_EGCMsgGrantGuestPassResponse\x10\\\x12\x1d\n\x19k_EGCMsgGetAccountDetails\x10]\x12%\n!k_EGCMsgGetAccountDetailsResponse\x10^\x12\x1b\n\x17k_EGCMsgGetPersonaNames\x10_\x12#\n\x1fk_EGCMsgGetPersonaNamesResponse\x10`\x12\x18\n\x14k_EGCMsgMultiplexMsg\x10\x61\x12$\n k_EGCMsgWebAPIRegisterInterfaces\x10\x65\x12\x1c\n\x18k_EGCMsgWebAPIJobRequest\x10\x66\x12(\n$k_EGCMsgWebAPIJobRequestHttpResponse\x10h\x12+\n\'k_EGCMsgWebAPIJobRequestForwardResponse\x10i\x12\x19\n\x14k_EGCMsgMemCachedGet\x10\xc8\x01\x12!\n\x1ck_EGCMsgMemCachedGetResponse\x10\xc9\x01\x12\x19\n\x14k_EGCMsgMemCachedSet\x10\xca\x01\x12\x1c\n\x17k_EGCMsgMemCachedDelete\x10\xcb\x01\x12\x1b\n\x16k_EGCMsgMemCachedStats\x10\xcc\x01\x12#\n\x1ek_EGCMsgMemCachedStatsResponse\x10\xcd\x01\x12\x15\n\x10k_EGCMsgSQLStats\x10\xd2\x01\x12\x1d\n\x18k_EGCMsgSQLStatsResponse\x10\xd3\x01\x12\x1f\n\x1ak_EGCMsgMasterSetDirectory\x10\xdc\x01\x12\'\n\"k_EGCMsgMasterSetDirectoryResponse\x10\xdd\x01\x12#\n\x1ek_EGCMsgMasterSetWebAPIRouting\x10\xde\x01\x12+\n&k_EGCMsgMasterSetWebAPIRoutingResponse\x10\xdf\x01\x12&\n!k_EGCMsgMasterSetClientMsgRouting\x10\xe0\x01\x12.\n)k_EGCMsgMasterSetClientMsgRoutingResponse\x10\xe1\x01\x12\x17\n\x12k_EGCMsgSetOptions\x10\xe2\x01\x12\x1f\n\x1ak_EGCMsgSetOptionsResponse\x10\xe3\x01\x12\x18\n\x13k_EGCMsgSystemBase2\x10\xf4\x03\x12#\n\x1ek_EGCMsgGetPurchaseTrustStatus\x10\xf5\x03\x12+\n&k_EGCMsgGetPurchaseTrustStatusResponse\x10\xf6\x03\x12\x1a\n\x15k_EGCMsgUpdateSession\x10\xf7\x03\x12%\n k_EGCMsgGCAccountVacStatusChange\x10\xf8\x03\x12\x1c\n\x17k_EGCMsgCheckFriendship\x10\xf9\x03\x12$\n\x1fk_EGCMsgCheckFriendshipResponse\x10\xfa\x03\x12\"\n\x1dk_EGCMsgGetPartnerAccountLink\x10\xfb\x03\x12*\n%k_EGCMsgGetPartnerAccountLinkResponse\x10\xfc\x03\x12)\n$k_EGCMsgVSReportedSuspiciousActivity\x10\xfd\x03\x12\x1f\n\x1ak_EGCMsgDPPartnerMicroTxns\x10\x80\x04\x12\'\n\"k_EGCMsgDPPartnerMicroTxnsResponse\x10\x81\x04\x12\x15\n\x10k_EGCMsgGetIPASN\x10\x82\x04\x12\x1d\n\x18k_EGCMsgGetIPASNResponse\x10\x83\x04\x12\x1e\n\x19k_EGCMsgGetAppFriendsList\x10\x84\x04\x12&\n!k_EGCMsgGetAppFriendsListResponse\x10\x85\x04\x12\"\n\x1dk_EGCMsgVacVerificationChange\x10\x86\x04\x12%\n k_EGCMsgAccountPhoneNumberChange\x10\x87\x04\x12#\n\x1ek_EGCMsgAccountTwoFactorChange\x10\x88\x04\x12 \n\x1bk_EGCMsgCheckClanMembership\x10\x89\x04\x12(\n#k_EGCMsgCheckClanMembershipResponse\x10\x8a\x04\x12\"\n\x1dk_EGCMsgCompressedMsgToClient\x10\x8b\x04*\xf0\x01\n\x06\x45SOMsg\x12\x13\n\x0fk_ESOMsg_Create\x10\x15\x12\x13\n\x0fk_ESOMsg_Update\x10\x16\x12\x14\n\x10k_ESOMsg_Destroy\x10\x17\x12\x1c\n\x18k_ESOMsg_CacheSubscribed\x10\x18\x12\x1e\n\x1ak_ESOMsg_CacheUnsubscribed\x10\x19\x12\x1b\n\x17k_ESOMsg_UpdateMultiple\x10\x1a\x12%\n!k_ESOMsg_CacheSubscriptionRefresh\x10\x1c\x12$\n k_ESOMsg_CacheSubscribedUpToDate\x10\x1d*\xce\x02\n\x10\x45GCBaseClientMsg\x12\x18\n\x13k_EMsgGCPingRequest\x10\xb9\x17\x12\x19\n\x14k_EMsgGCPingResponse\x10\xba\x17\x12&\n!k_EMsgGCToClientPollConvarRequest\x10\xbb\x17\x12\'\n\"k_EMsgGCToClientPollConvarResponse\x10\xbc\x17\x12\x1a\n\x15k_EMsgGCClientWelcome\x10\xa4\x1f\x12\x1a\n\x15k_EMsgGCServerWelcome\x10\xa5\x1f\x12\x18\n\x13k_EMsgGCClientHello\x10\xa6\x1f\x12\x18\n\x13k_EMsgGCServerHello\x10\xa7\x1f\x12#\n\x1ek_EMsgGCClientConnectionStatus\x10\xa9\x1f\x12#\n\x1ek_EMsgGCServerConnectionStatus\x10\xaa\x1f*\xd7\x04\n\nEGCToGCMsg\x12\x1a\n\x15k_EGCToGCMsgMasterAck\x10\x96\x01\x12\"\n\x1dk_EGCToGCMsgMasterAckResponse\x10\x97\x01\x12\x17\n\x12k_EGCToGCMsgRouted\x10\x98\x01\x12\x1c\n\x17k_EGCToGCMsgRoutedReply\x10\x99\x01\x12#\n\x1ek_EMsgGCUpdateSubGCSessionInfo\x10\x9a\x01\x12$\n\x1fk_EMsgGCRequestSubGCSessionInfo\x10\x9b\x01\x12,\n\'k_EMsgGCRequestSubGCSessionInfoResponse\x10\x9c\x01\x12&\n!k_EGCToGCMsgMasterStartupComplete\x10\x9d\x01\x12!\n\x1ck_EMsgGCToGCSOCacheSubscribe\x10\x9e\x01\x12#\n\x1ek_EMsgGCToGCSOCacheUnsubscribe\x10\x9f\x01\x12#\n\x1ek_EMsgGCToGCLoadSessionSOCache\x10\xa0\x01\x12+\n&k_EMsgGCToGCLoadSessionSOCacheResponse\x10\xa1\x01\x12#\n\x1ek_EMsgGCToGCUpdateSessionStats\x10\xa2\x01\x12 \n\x1bk_EMsgGCToGCUniverseStartup\x10\xa3\x01\x12(\n#k_EMsgGCToGCUniverseStartupResponse\x10\xa4\x01\x12&\n!k_EMsgGCToGCForwardAccountDetails\x10\xa5\x01\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x12gcsystemmsgs.proto\x12\x04\x64ota\"\xa6\x01\n\'CCommunity_GamePersonalDataCategoryInfo\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x1f\n\x17type_localization_token\x18\x02 \x01(\t\x12\x15\n\rtemplate_file\x18\x03 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x04 \x01(\t\x12#\n\x1b\x63\x61tegory_localization_token\x18\x05 \x01(\t\"A\n0CCommunity_GetGamePersonalDataCategories_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"\x93\x01\n1CCommunity_GetGamePersonalDataCategories_Response\x12\x41\n\ncategories\x18\x01 \x03(\x0b\x32-.dota.CCommunity_GamePersonalDataCategoryInfo\x12\x1b\n\x13\x61pp_assets_basename\x18\x02 \x01(\t\"u\n-CCommunity_GetGamePersonalDataEntries_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x04\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x16\n\x0e\x63ontinue_token\x18\x04 \x01(\t\"l\n.CCommunity_GetGamePersonalDataEntries_Response\x12\x11\n\tgceresult\x18\x01 \x01(\r\x12\x0f\n\x07\x65ntries\x18\x02 \x03(\t\x12\x16\n\x0e\x63ontinue_token\x18\x03 \x01(\t\"U\n3CCommunity_TerminateGamePersonalDataEntries_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x04\"I\n4CCommunity_TerminateGamePersonalDataEntries_Response\x12\x11\n\tgceresult\x18\x01 \x01(\r*\xf8\x19\n\x0c\x45GCSystemMsg\x12\x13\n\x0fk_EGCMsgInvalid\x10\x00\x12\x11\n\rk_EGCMsgMulti\x10\x01\x12\x18\n\x14k_EGCMsgGenericReply\x10\n\x12\x16\n\x12k_EGCMsgSystemBase\x10\x32\x12\x1e\n\x1ak_EGCMsgAchievementAwarded\x10\x33\x12\x16\n\x12k_EGCMsgConCommand\x10\x34\x12\x18\n\x14k_EGCMsgStartPlaying\x10\x35\x12\x17\n\x13k_EGCMsgStopPlaying\x10\x36\x12\x1b\n\x17k_EGCMsgStartGameserver\x10\x37\x12\x1a\n\x16k_EGCMsgStopGameserver\x10\x38\x12\x15\n\x11k_EGCMsgWGRequest\x10\x39\x12\x16\n\x12k_EGCMsgWGResponse\x10:\x12\"\n\x1ek_EGCMsgGetUserGameStatsSchema\x10;\x12*\n&k_EGCMsgGetUserGameStatsSchemaResponse\x10<\x12\"\n\x1ek_EGCMsgGetUserStatsDEPRECATED\x10=\x12 \n\x1ck_EGCMsgGetUserStatsResponse\x10>\x12\x1a\n\x16k_EGCMsgAppInfoUpdated\x10?\x12\x1b\n\x17k_EGCMsgValidateSession\x10@\x12#\n\x1fk_EGCMsgValidateSessionResponse\x10\x41\x12\"\n\x1ek_EGCMsgLookupAccountFromInput\x10\x42\x12\x1b\n\x17k_EGCMsgSendHTTPRequest\x10\x43\x12#\n\x1fk_EGCMsgSendHTTPRequestResponse\x10\x44\x12\x18\n\x14k_EGCMsgPreTestSetup\x10\x45\x12\x1f\n\x1bk_EGCMsgRecordSupportAction\x10\x46\x12(\n$k_EGCMsgGetAccountDetails_DEPRECATED\x10G\x12\"\n\x1ek_EGCMsgReceiveInterAppMessage\x10I\x12\x18\n\x14k_EGCMsgFindAccounts\x10J\x12\x15\n\x11k_EGCMsgPostAlert\x10K\x12\x17\n\x13k_EGCMsgGetLicenses\x10L\x12\x18\n\x14k_EGCMsgGetUserStats\x10M\x12\x17\n\x13k_EGCMsgGetCommands\x10N\x12\x1f\n\x1bk_EGCMsgGetCommandsResponse\x10O\x12\x1a\n\x16k_EGCMsgAddFreeLicense\x10P\x12\"\n\x1ek_EGCMsgAddFreeLicenseResponse\x10Q\x12\x19\n\x15k_EGCMsgGetIPLocation\x10R\x12!\n\x1dk_EGCMsgGetIPLocationResponse\x10S\x12\x1d\n\x19k_EGCMsgSystemStatsSchema\x10T\x12\x1a\n\x16k_EGCMsgGetSystemStats\x10U\x12\"\n\x1ek_EGCMsgGetSystemStatsResponse\x10V\x12\x15\n\x11k_EGCMsgSendEmail\x10W\x12\x1d\n\x19k_EGCMsgSendEmailResponse\x10X\x12\x1c\n\x18k_EGCMsgGetEmailTemplate\x10Y\x12$\n k_EGCMsgGetEmailTemplateResponse\x10Z\x12\x1a\n\x16k_EGCMsgGrantGuestPass\x10[\x12\"\n\x1ek_EGCMsgGrantGuestPassResponse\x10\\\x12\x1d\n\x19k_EGCMsgGetAccountDetails\x10]\x12%\n!k_EGCMsgGetAccountDetailsResponse\x10^\x12\x1b\n\x17k_EGCMsgGetPersonaNames\x10_\x12#\n\x1fk_EGCMsgGetPersonaNamesResponse\x10`\x12\x18\n\x14k_EGCMsgMultiplexMsg\x10\x61\x12$\n k_EGCMsgWebAPIRegisterInterfaces\x10\x65\x12\x1c\n\x18k_EGCMsgWebAPIJobRequest\x10\x66\x12(\n$k_EGCMsgWebAPIJobRequestHttpResponse\x10h\x12+\n\'k_EGCMsgWebAPIJobRequestForwardResponse\x10i\x12\x19\n\x14k_EGCMsgMemCachedGet\x10\xc8\x01\x12!\n\x1ck_EGCMsgMemCachedGetResponse\x10\xc9\x01\x12\x19\n\x14k_EGCMsgMemCachedSet\x10\xca\x01\x12\x1c\n\x17k_EGCMsgMemCachedDelete\x10\xcb\x01\x12\x1b\n\x16k_EGCMsgMemCachedStats\x10\xcc\x01\x12#\n\x1ek_EGCMsgMemCachedStatsResponse\x10\xcd\x01\x12\x15\n\x10k_EGCMsgSQLStats\x10\xd2\x01\x12\x1d\n\x18k_EGCMsgSQLStatsResponse\x10\xd3\x01\x12\x1f\n\x1ak_EGCMsgMasterSetDirectory\x10\xdc\x01\x12\'\n\"k_EGCMsgMasterSetDirectoryResponse\x10\xdd\x01\x12#\n\x1ek_EGCMsgMasterSetWebAPIRouting\x10\xde\x01\x12+\n&k_EGCMsgMasterSetWebAPIRoutingResponse\x10\xdf\x01\x12&\n!k_EGCMsgMasterSetClientMsgRouting\x10\xe0\x01\x12.\n)k_EGCMsgMasterSetClientMsgRoutingResponse\x10\xe1\x01\x12\x17\n\x12k_EGCMsgSetOptions\x10\xe2\x01\x12\x1f\n\x1ak_EGCMsgSetOptionsResponse\x10\xe3\x01\x12\x18\n\x13k_EGCMsgSystemBase2\x10\xf4\x03\x12#\n\x1ek_EGCMsgGetPurchaseTrustStatus\x10\xf5\x03\x12+\n&k_EGCMsgGetPurchaseTrustStatusResponse\x10\xf6\x03\x12\x1a\n\x15k_EGCMsgUpdateSession\x10\xf7\x03\x12%\n k_EGCMsgGCAccountVacStatusChange\x10\xf8\x03\x12\x1c\n\x17k_EGCMsgCheckFriendship\x10\xf9\x03\x12$\n\x1fk_EGCMsgCheckFriendshipResponse\x10\xfa\x03\x12\"\n\x1dk_EGCMsgGetPartnerAccountLink\x10\xfb\x03\x12*\n%k_EGCMsgGetPartnerAccountLinkResponse\x10\xfc\x03\x12)\n$k_EGCMsgVSReportedSuspiciousActivity\x10\xfd\x03\x12\x1f\n\x1ak_EGCMsgDPPartnerMicroTxns\x10\x80\x04\x12\'\n\"k_EGCMsgDPPartnerMicroTxnsResponse\x10\x81\x04\x12\x15\n\x10k_EGCMsgGetIPASN\x10\x82\x04\x12\x1d\n\x18k_EGCMsgGetIPASNResponse\x10\x83\x04\x12\x1e\n\x19k_EGCMsgGetAppFriendsList\x10\x84\x04\x12&\n!k_EGCMsgGetAppFriendsListResponse\x10\x85\x04\x12\"\n\x1dk_EGCMsgVacVerificationChange\x10\x86\x04\x12%\n k_EGCMsgAccountPhoneNumberChange\x10\x87\x04\x12#\n\x1ek_EGCMsgAccountTwoFactorChange\x10\x88\x04\x12 \n\x1bk_EGCMsgCheckClanMembership\x10\x89\x04\x12(\n#k_EGCMsgCheckClanMembershipResponse\x10\x8a\x04\x12\"\n\x1dk_EGCMsgCompressedMsgToClient\x10\x8b\x04\x12\x31\n,k_EGCMsgGetGamePersonalDataCategoriesRequest\x10\x8c\x04\x12\x32\n-k_EGCMsgGetGamePersonalDataCategoriesResponse\x10\x8d\x04\x12.\n)k_EGCMsgGetGamePersonalDataEntriesRequest\x10\x8e\x04\x12/\n*k_EGCMsgGetGamePersonalDataEntriesResponse\x10\x8f\x04\x12\x34\n/k_EGCMsgTerminateGamePersonalDataEntriesRequest\x10\x90\x04\x12\x35\n0k_EGCMsgTerminateGamePersonalDataEntriesResponse\x10\x91\x04*\xf0\x01\n\x06\x45SOMsg\x12\x13\n\x0fk_ESOMsg_Create\x10\x15\x12\x13\n\x0fk_ESOMsg_Update\x10\x16\x12\x14\n\x10k_ESOMsg_Destroy\x10\x17\x12\x1c\n\x18k_ESOMsg_CacheSubscribed\x10\x18\x12\x1e\n\x1ak_ESOMsg_CacheUnsubscribed\x10\x19\x12\x1b\n\x17k_ESOMsg_UpdateMultiple\x10\x1a\x12%\n!k_ESOMsg_CacheSubscriptionRefresh\x10\x1c\x12$\n k_ESOMsg_CacheSubscribedUpToDate\x10\x1d*\xce\x02\n\x10\x45GCBaseClientMsg\x12\x18\n\x13k_EMsgGCPingRequest\x10\xb9\x17\x12\x19\n\x14k_EMsgGCPingResponse\x10\xba\x17\x12&\n!k_EMsgGCToClientPollConvarRequest\x10\xbb\x17\x12\'\n\"k_EMsgGCToClientPollConvarResponse\x10\xbc\x17\x12\x1a\n\x15k_EMsgGCClientWelcome\x10\xa4\x1f\x12\x1a\n\x15k_EMsgGCServerWelcome\x10\xa5\x1f\x12\x18\n\x13k_EMsgGCClientHello\x10\xa6\x1f\x12\x18\n\x13k_EMsgGCServerHello\x10\xa7\x1f\x12#\n\x1ek_EMsgGCClientConnectionStatus\x10\xa9\x1f\x12#\n\x1ek_EMsgGCServerConnectionStatus\x10\xaa\x1f*\xda\x06\n\nEGCToGCMsg\x12\x1a\n\x15k_EGCToGCMsgMasterAck\x10\x96\x01\x12\"\n\x1dk_EGCToGCMsgMasterAckResponse\x10\x97\x01\x12\x17\n\x12k_EGCToGCMsgRouted\x10\x98\x01\x12\x1c\n\x17k_EGCToGCMsgRoutedReply\x10\x99\x01\x12#\n\x1ek_EMsgGCUpdateSubGCSessionInfo\x10\x9a\x01\x12$\n\x1fk_EMsgGCRequestSubGCSessionInfo\x10\x9b\x01\x12,\n\'k_EMsgGCRequestSubGCSessionInfoResponse\x10\x9c\x01\x12&\n!k_EGCToGCMsgMasterStartupComplete\x10\x9d\x01\x12!\n\x1ck_EMsgGCToGCSOCacheSubscribe\x10\x9e\x01\x12#\n\x1ek_EMsgGCToGCSOCacheUnsubscribe\x10\x9f\x01\x12#\n\x1ek_EMsgGCToGCLoadSessionSOCache\x10\xa0\x01\x12+\n&k_EMsgGCToGCLoadSessionSOCacheResponse\x10\xa1\x01\x12#\n\x1ek_EMsgGCToGCUpdateSessionStats\x10\xa2\x01\x12 \n\x1bk_EMsgGCToGCUniverseStartup\x10\xa3\x01\x12(\n#k_EMsgGCToGCUniverseStartupResponse\x10\xa4\x01\x12&\n!k_EMsgGCToGCForwardAccountDetails\x10\xa5\x01\x12\'\n\"k_EMsgGCToGCMasterBroadcastMessage\x10\xa6\x01\x12\'\n\"k_EMsgGCToGCMasterSubscribeToCache\x10\xa7\x01\x12/\n*k_EMsgGCToGCMasterSubscribeToCacheResponse\x10\xa8\x01\x12+\n&k_EMsgGCToGCMasterUnsubscribeFromCache\x10\xa9\x01\x12#\n\x1ek_EMsgGCToGCMasterDestroyCache\x10\xaa\x01\x12,\n\'k_EMsgGCToGCMasterSubscribeToCacheAsync\x10\xab\x01\x42\x05H\x01\x90\x01\x00')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -398,11 +398,35 @@ _EGCSYSTEMMSG = _descriptor.EnumDescriptor(
       name='k_EGCMsgCompressedMsgToClient', index=91, number=523,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGCMsgGetGamePersonalDataCategoriesRequest', index=92, number=524,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGCMsgGetGamePersonalDataCategoriesResponse', index=93, number=525,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGCMsgGetGamePersonalDataEntriesRequest', index=94, number=526,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGCMsgGetGamePersonalDataEntriesResponse', index=95, number=527,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGCMsgTerminateGamePersonalDataEntriesRequest', index=96, number=528,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGCMsgTerminateGamePersonalDataEntriesResponse', index=97, number=529,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=29,
-  serialized_end=3040,
+  serialized_start=806,
+  serialized_end=4126,
 )
 _sym_db.RegisterEnumDescriptor(_EGCSYSTEMMSG)
 
@@ -448,8 +472,8 @@ _ESOMSG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3043,
-  serialized_end=3283,
+  serialized_start=4129,
+  serialized_end=4369,
 )
 _sym_db.RegisterEnumDescriptor(_ESOMSG)
 
@@ -503,8 +527,8 @@ _EGCBASECLIENTMSG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3286,
-  serialized_end=3620,
+  serialized_start=4372,
+  serialized_end=4706,
 )
 _sym_db.RegisterEnumDescriptor(_EGCBASECLIENTMSG)
 
@@ -579,11 +603,35 @@ _EGCTOGCMSG = _descriptor.EnumDescriptor(
       name='k_EMsgGCToGCForwardAccountDetails', index=15, number=165,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCMasterBroadcastMessage', index=16, number=166,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCMasterSubscribeToCache', index=17, number=167,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCMasterSubscribeToCacheResponse', index=18, number=168,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCMasterUnsubscribeFromCache', index=19, number=169,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCMasterDestroyCache', index=20, number=170,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCMasterSubscribeToCacheAsync', index=21, number=171,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=3623,
-  serialized_end=4222,
+  serialized_start=4709,
+  serialized_end=5567,
 )
 _sym_db.RegisterEnumDescriptor(_EGCTOGCMSG)
 
@@ -680,6 +728,12 @@ k_EGCMsgAccountTwoFactorChange = 520
 k_EGCMsgCheckClanMembership = 521
 k_EGCMsgCheckClanMembershipResponse = 522
 k_EGCMsgCompressedMsgToClient = 523
+k_EGCMsgGetGamePersonalDataCategoriesRequest = 524
+k_EGCMsgGetGamePersonalDataCategoriesResponse = 525
+k_EGCMsgGetGamePersonalDataEntriesRequest = 526
+k_EGCMsgGetGamePersonalDataEntriesResponse = 527
+k_EGCMsgTerminateGamePersonalDataEntriesRequest = 528
+k_EGCMsgTerminateGamePersonalDataEntriesResponse = 529
 k_ESOMsg_Create = 21
 k_ESOMsg_Update = 22
 k_ESOMsg_Destroy = 23
@@ -714,12 +768,369 @@ k_EMsgGCToGCUpdateSessionStats = 162
 k_EMsgGCToGCUniverseStartup = 163
 k_EMsgGCToGCUniverseStartupResponse = 164
 k_EMsgGCToGCForwardAccountDetails = 165
+k_EMsgGCToGCMasterBroadcastMessage = 166
+k_EMsgGCToGCMasterSubscribeToCache = 167
+k_EMsgGCToGCMasterSubscribeToCacheResponse = 168
+k_EMsgGCToGCMasterUnsubscribeFromCache = 169
+k_EMsgGCToGCMasterDestroyCache = 170
+k_EMsgGCToGCMasterSubscribeToCacheAsync = 171
 
 
+
+_CCOMMUNITY_GAMEPERSONALDATACATEGORYINFO = _descriptor.Descriptor(
+  name='CCommunity_GamePersonalDataCategoryInfo',
+  full_name='dota.CCommunity_GamePersonalDataCategoryInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='dota.CCommunity_GamePersonalDataCategoryInfo.type', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='type_localization_token', full_name='dota.CCommunity_GamePersonalDataCategoryInfo.type_localization_token', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='template_file', full_name='dota.CCommunity_GamePersonalDataCategoryInfo.template_file', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='category', full_name='dota.CCommunity_GamePersonalDataCategoryInfo.category', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='category_localization_token', full_name='dota.CCommunity_GamePersonalDataCategoryInfo.category_localization_token', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=29,
+  serialized_end=195,
+)
+
+
+_CCOMMUNITY_GETGAMEPERSONALDATACATEGORIES_REQUEST = _descriptor.Descriptor(
+  name='CCommunity_GetGamePersonalDataCategories_Request',
+  full_name='dota.CCommunity_GetGamePersonalDataCategories_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='appid', full_name='dota.CCommunity_GetGamePersonalDataCategories_Request.appid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=197,
+  serialized_end=262,
+)
+
+
+_CCOMMUNITY_GETGAMEPERSONALDATACATEGORIES_RESPONSE = _descriptor.Descriptor(
+  name='CCommunity_GetGamePersonalDataCategories_Response',
+  full_name='dota.CCommunity_GetGamePersonalDataCategories_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='categories', full_name='dota.CCommunity_GetGamePersonalDataCategories_Response.categories', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='app_assets_basename', full_name='dota.CCommunity_GetGamePersonalDataCategories_Response.app_assets_basename', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=265,
+  serialized_end=412,
+)
+
+
+_CCOMMUNITY_GETGAMEPERSONALDATAENTRIES_REQUEST = _descriptor.Descriptor(
+  name='CCommunity_GetGamePersonalDataEntries_Request',
+  full_name='dota.CCommunity_GetGamePersonalDataEntries_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='appid', full_name='dota.CCommunity_GetGamePersonalDataEntries_Request.appid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='steamid', full_name='dota.CCommunity_GetGamePersonalDataEntries_Request.steamid', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='dota.CCommunity_GetGamePersonalDataEntries_Request.type', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='continue_token', full_name='dota.CCommunity_GetGamePersonalDataEntries_Request.continue_token', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=414,
+  serialized_end=531,
+)
+
+
+_CCOMMUNITY_GETGAMEPERSONALDATAENTRIES_RESPONSE = _descriptor.Descriptor(
+  name='CCommunity_GetGamePersonalDataEntries_Response',
+  full_name='dota.CCommunity_GetGamePersonalDataEntries_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gceresult', full_name='dota.CCommunity_GetGamePersonalDataEntries_Response.gceresult', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='entries', full_name='dota.CCommunity_GetGamePersonalDataEntries_Response.entries', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='continue_token', full_name='dota.CCommunity_GetGamePersonalDataEntries_Response.continue_token', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=533,
+  serialized_end=641,
+)
+
+
+_CCOMMUNITY_TERMINATEGAMEPERSONALDATAENTRIES_REQUEST = _descriptor.Descriptor(
+  name='CCommunity_TerminateGamePersonalDataEntries_Request',
+  full_name='dota.CCommunity_TerminateGamePersonalDataEntries_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='appid', full_name='dota.CCommunity_TerminateGamePersonalDataEntries_Request.appid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='steamid', full_name='dota.CCommunity_TerminateGamePersonalDataEntries_Request.steamid', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=643,
+  serialized_end=728,
+)
+
+
+_CCOMMUNITY_TERMINATEGAMEPERSONALDATAENTRIES_RESPONSE = _descriptor.Descriptor(
+  name='CCommunity_TerminateGamePersonalDataEntries_Response',
+  full_name='dota.CCommunity_TerminateGamePersonalDataEntries_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gceresult', full_name='dota.CCommunity_TerminateGamePersonalDataEntries_Response.gceresult', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=730,
+  serialized_end=803,
+)
+
+_CCOMMUNITY_GETGAMEPERSONALDATACATEGORIES_RESPONSE.fields_by_name['categories'].message_type = _CCOMMUNITY_GAMEPERSONALDATACATEGORYINFO
+DESCRIPTOR.message_types_by_name['CCommunity_GamePersonalDataCategoryInfo'] = _CCOMMUNITY_GAMEPERSONALDATACATEGORYINFO
+DESCRIPTOR.message_types_by_name['CCommunity_GetGamePersonalDataCategories_Request'] = _CCOMMUNITY_GETGAMEPERSONALDATACATEGORIES_REQUEST
+DESCRIPTOR.message_types_by_name['CCommunity_GetGamePersonalDataCategories_Response'] = _CCOMMUNITY_GETGAMEPERSONALDATACATEGORIES_RESPONSE
+DESCRIPTOR.message_types_by_name['CCommunity_GetGamePersonalDataEntries_Request'] = _CCOMMUNITY_GETGAMEPERSONALDATAENTRIES_REQUEST
+DESCRIPTOR.message_types_by_name['CCommunity_GetGamePersonalDataEntries_Response'] = _CCOMMUNITY_GETGAMEPERSONALDATAENTRIES_RESPONSE
+DESCRIPTOR.message_types_by_name['CCommunity_TerminateGamePersonalDataEntries_Request'] = _CCOMMUNITY_TERMINATEGAMEPERSONALDATAENTRIES_REQUEST
+DESCRIPTOR.message_types_by_name['CCommunity_TerminateGamePersonalDataEntries_Response'] = _CCOMMUNITY_TERMINATEGAMEPERSONALDATAENTRIES_RESPONSE
 DESCRIPTOR.enum_types_by_name['EGCSystemMsg'] = _EGCSYSTEMMSG
 DESCRIPTOR.enum_types_by_name['ESOMsg'] = _ESOMSG
 DESCRIPTOR.enum_types_by_name['EGCBaseClientMsg'] = _EGCBASECLIENTMSG
 DESCRIPTOR.enum_types_by_name['EGCToGCMsg'] = _EGCTOGCMSG
+
+CCommunity_GamePersonalDataCategoryInfo = _reflection.GeneratedProtocolMessageType('CCommunity_GamePersonalDataCategoryInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CCOMMUNITY_GAMEPERSONALDATACATEGORYINFO,
+  __module__ = 'gcsystemmsgs_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CCommunity_GamePersonalDataCategoryInfo)
+  ))
+_sym_db.RegisterMessage(CCommunity_GamePersonalDataCategoryInfo)
+
+CCommunity_GetGamePersonalDataCategories_Request = _reflection.GeneratedProtocolMessageType('CCommunity_GetGamePersonalDataCategories_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CCOMMUNITY_GETGAMEPERSONALDATACATEGORIES_REQUEST,
+  __module__ = 'gcsystemmsgs_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CCommunity_GetGamePersonalDataCategories_Request)
+  ))
+_sym_db.RegisterMessage(CCommunity_GetGamePersonalDataCategories_Request)
+
+CCommunity_GetGamePersonalDataCategories_Response = _reflection.GeneratedProtocolMessageType('CCommunity_GetGamePersonalDataCategories_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CCOMMUNITY_GETGAMEPERSONALDATACATEGORIES_RESPONSE,
+  __module__ = 'gcsystemmsgs_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CCommunity_GetGamePersonalDataCategories_Response)
+  ))
+_sym_db.RegisterMessage(CCommunity_GetGamePersonalDataCategories_Response)
+
+CCommunity_GetGamePersonalDataEntries_Request = _reflection.GeneratedProtocolMessageType('CCommunity_GetGamePersonalDataEntries_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CCOMMUNITY_GETGAMEPERSONALDATAENTRIES_REQUEST,
+  __module__ = 'gcsystemmsgs_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CCommunity_GetGamePersonalDataEntries_Request)
+  ))
+_sym_db.RegisterMessage(CCommunity_GetGamePersonalDataEntries_Request)
+
+CCommunity_GetGamePersonalDataEntries_Response = _reflection.GeneratedProtocolMessageType('CCommunity_GetGamePersonalDataEntries_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CCOMMUNITY_GETGAMEPERSONALDATAENTRIES_RESPONSE,
+  __module__ = 'gcsystemmsgs_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CCommunity_GetGamePersonalDataEntries_Response)
+  ))
+_sym_db.RegisterMessage(CCommunity_GetGamePersonalDataEntries_Response)
+
+CCommunity_TerminateGamePersonalDataEntries_Request = _reflection.GeneratedProtocolMessageType('CCommunity_TerminateGamePersonalDataEntries_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CCOMMUNITY_TERMINATEGAMEPERSONALDATAENTRIES_REQUEST,
+  __module__ = 'gcsystemmsgs_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CCommunity_TerminateGamePersonalDataEntries_Request)
+  ))
+_sym_db.RegisterMessage(CCommunity_TerminateGamePersonalDataEntries_Request)
+
+CCommunity_TerminateGamePersonalDataEntries_Response = _reflection.GeneratedProtocolMessageType('CCommunity_TerminateGamePersonalDataEntries_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CCOMMUNITY_TERMINATEGAMEPERSONALDATAENTRIES_RESPONSE,
+  __module__ = 'gcsystemmsgs_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CCommunity_TerminateGamePersonalDataEntries_Response)
+  ))
+_sym_db.RegisterMessage(CCommunity_TerminateGamePersonalDataEntries_Response)
 
 
 DESCRIPTOR.has_options = True

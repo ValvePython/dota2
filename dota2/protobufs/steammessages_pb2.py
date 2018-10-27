@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages.proto',
   package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x13steammessages.proto\x12\x04\x64ota\x1a google/protobuf/descriptor.proto\"\xf2\x02\n\x12\x43MsgProtoBufHeader\x12\x17\n\x0f\x63lient_steam_id\x18\x01 \x01(\x06\x12\x19\n\x11\x63lient_session_id\x18\x02 \x01(\x05\x12\x15\n\rsource_app_id\x18\x03 \x01(\r\x12+\n\rjob_id_source\x18\n \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\x12+\n\rjob_id_target\x18\x0b \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\x12\x17\n\x0ftarget_job_name\x18\x0c \x01(\t\x12\x12\n\x07\x65result\x18\r \x01(\x05:\x01\x32\x12\x15\n\rerror_message\x18\x0e \x01(\t\x12I\n\ngc_msg_src\x18\xc8\x01 \x01(\x0e\x32\x16.dota.GCProtoBufMsgSrc:\x1cGCProtoBufMsgSrc_Unspecified\x12\x1c\n\x13gc_dir_index_source\x18\xc9\x01 \x01(\r:\n\x80\x97\"\x80\x02\x88\x97\"\x80\x08\"z\n\rCMsgWebAPIKey\x12\x13\n\x06status\x18\x01 \x01(\r:\x03\x32\x35\x35\x12\x15\n\naccount_id\x18\x02 \x01(\r:\x01\x30\x12\x1d\n\x12publisher_group_id\x18\x03 \x01(\r:\x01\x30\x12\x0e\n\x06key_id\x18\x04 \x01(\r\x12\x0e\n\x06\x64omain\x18\x05 \x01(\t\"\xec\x02\n\x0f\x43MsgHttpRequest\x12\x16\n\x0erequest_method\x18\x01 \x01(\r\x12\x10\n\x08hostname\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\x12\x34\n\x07headers\x18\x04 \x03(\x0b\x32#.dota.CMsgHttpRequest.RequestHeader\x12\x34\n\nget_params\x18\x05 \x03(\x0b\x32 .dota.CMsgHttpRequest.QueryParam\x12\x35\n\x0bpost_params\x18\x06 \x03(\x0b\x32 .dota.CMsgHttpRequest.QueryParam\x12\x0c\n\x04\x62ody\x18\x07 \x01(\x0c\x12\x18\n\x10\x61\x62solute_timeout\x18\x08 \x01(\r\x1a,\n\rRequestHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a)\n\nQueryParam\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\"\xd0\x01\n\x11\x43MsgWebAPIRequest\x12\x17\n\x0fUNUSED_job_name\x18\x01 \x01(\t\x12\x16\n\x0einterface_name\x18\x02 \x01(\t\x12\x13\n\x0bmethod_name\x18\x03 \x01(\t\x12\x0f\n\x07version\x18\x04 \x01(\r\x12$\n\x07\x61pi_key\x18\x05 \x01(\x0b\x32\x13.dota.CMsgWebAPIKey\x12&\n\x07request\x18\x06 \x01(\x0b\x32\x15.dota.CMsgHttpRequest\x12\x16\n\x0erouting_app_id\x18\x07 \x01(\r\"\x9c\x01\n\x10\x43MsgHttpResponse\x12\x13\n\x0bstatus_code\x18\x01 \x01(\r\x12\x36\n\x07headers\x18\x02 \x03(\x0b\x32%.dota.CMsgHttpResponse.ResponseHeader\x12\x0c\n\x04\x62ody\x18\x03 \x01(\x0c\x1a-\n\x0eResponseHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"@\n\x12\x43MsgAMFindAccounts\x12\x13\n\x0bsearch_type\x18\x01 \x01(\r\x12\x15\n\rsearch_string\x18\x02 \x01(\t\".\n\x1a\x43MsgAMFindAccountsResponse\x12\x10\n\x08steam_id\x18\x01 \x03(\x06\"\x88\x01\n\x12\x43MsgNotifyWatchdog\x12\x0e\n\x06source\x18\x01 \x01(\r\x12\x12\n\nalert_type\x18\x02 \x01(\r\x12\x10\n\x08\x63ritical\x18\x04 \x01(\x08\x12\x0c\n\x04time\x18\x05 \x01(\r\x12\r\n\x05\x61ppid\x18\x06 \x01(\r\x12\x0c\n\x04text\x18\x07 \x01(\t\x12\x11\n\trecipient\x18\x0c \x01(\t\"$\n\x11\x43MsgAMGetLicenses\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"P\n\x12\x43MsgPackageLicense\x12\x12\n\npackage_id\x18\x01 \x01(\r\x12\x14\n\x0ctime_created\x18\x02 \x01(\r\x12\x10\n\x08owner_id\x18\x03 \x01(\r\"V\n\x19\x43MsgAMGetLicensesResponse\x12)\n\x07license\x18\x01 \x03(\x0b\x32\x18.dota.CMsgPackageLicense\x12\x0e\n\x06result\x18\x02 \x01(\r\"J\n\x16\x43MsgAMGetUserGameStats\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\r\n\x05stats\x18\x03 \x03(\r\"\xf4\x02\n\x1e\x43MsgAMGetUserGameStatsResponse\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\x12\x39\n\x05stats\x18\x04 \x03(\x0b\x32*.dota.CMsgAMGetUserGameStatsResponse.Stats\x12S\n\x12\x61\x63hievement_blocks\x18\x05 \x03(\x0b\x32\x37.dota.CMsgAMGetUserGameStatsResponse.Achievement_Blocks\x1a,\n\x05Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\x1a]\n\x12\x41\x63hievement_Blocks\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x1a\n\x12\x61\x63hievement_bit_id\x18\x02 \x01(\r\x12\x13\n\x0bunlock_time\x18\x03 \x01(\x07\">\n\x14\x43MsgGCGetCommandList\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63ommand_prefix\x18\x02 \x01(\t\"4\n\x1c\x43MsgGCGetCommandListResponse\x12\x14\n\x0c\x63ommand_name\x18\x01 \x03(\t\"\"\n\x12\x43GCMsgMemCachedGet\x12\x0c\n\x04keys\x18\x01 \x03(\t\"\x81\x01\n\x1a\x43GCMsgMemCachedGetResponse\x12\x39\n\x06values\x18\x01 \x03(\x0b\x32).dota.CGCMsgMemCachedGetResponse.ValueTag\x1a(\n\x08ValueTag\x12\r\n\x05\x66ound\x18\x01 \x01(\x08\x12\r\n\x05value\x18\x02 \x01(\x0c\"l\n\x12\x43GCMsgMemCachedSet\x12.\n\x04keys\x18\x01 \x03(\x0b\x32 .dota.CGCMsgMemCachedSet.KeyPair\x1a&\n\x07KeyPair\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\"%\n\x15\x43GCMsgMemCachedDelete\x12\x0c\n\x04keys\x18\x01 \x03(\t\"\x16\n\x14\x43GCMsgMemCachedStats\"\xb8\x02\n\x1c\x43GCMsgMemCachedStatsResponse\x12\x18\n\x10\x63urr_connections\x18\x01 \x01(\x04\x12\x0f\n\x07\x63md_get\x18\x02 \x01(\x04\x12\x0f\n\x07\x63md_set\x18\x03 \x01(\x04\x12\x11\n\tcmd_flush\x18\x04 \x01(\x04\x12\x10\n\x08get_hits\x18\x05 \x01(\x04\x12\x12\n\nget_misses\x18\x06 \x01(\x04\x12\x13\n\x0b\x64\x65lete_hits\x18\x07 \x01(\x04\x12\x15\n\rdelete_misses\x18\x08 \x01(\x04\x12\x12\n\nbytes_read\x18\t \x01(\x04\x12\x15\n\rbytes_written\x18\n \x01(\x04\x12\x16\n\x0elimit_maxbytes\x18\x0b \x01(\x04\x12\x12\n\ncurr_items\x18\x0c \x01(\x04\x12\x11\n\tevictions\x18\r \x01(\x04\x12\r\n\x05\x62ytes\x18\x0e \x01(\x04\"(\n\x0e\x43GCMsgSQLStats\x12\x16\n\x0eschema_catalog\x18\x01 \x01(\r\"\x9b\x02\n\x16\x43GCMsgSQLStatsResponse\x12\x0f\n\x07threads\x18\x01 \x01(\r\x12\x19\n\x11threads_connected\x18\x02 \x01(\r\x12\x16\n\x0ethreads_active\x18\x03 \x01(\r\x12\x1c\n\x14operations_submitted\x18\x04 \x01(\r\x12$\n\x1cprepared_statements_executed\x18\x05 \x01(\r\x12(\n non_prepared_statements_executed\x18\x06 \x01(\r\x12\x18\n\x10\x64\x65\x61\x64lock_retries\x18\x07 \x01(\r\x12%\n\x1doperations_timed_out_in_queue\x18\x08 \x01(\r\x12\x0e\n\x06\x65rrors\x18\t \x01(\r\"i\n\x14\x43MsgAMAddFreeLicense\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x11\n\tip_public\x18\x02 \x01(\r\x12\x11\n\tpackageid\x18\x03 \x01(\r\x12\x1a\n\x12store_country_code\x18\x04 \x01(\t\"c\n\x1c\x43MsgAMAddFreeLicenseResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x1e\n\x16purchase_result_detail\x18\x02 \x01(\x05\x12\x0f\n\x07transid\x18\x03 \x01(\x06\"\"\n\x13\x43GCMsgGetIPLocation\x12\x0b\n\x03ips\x18\x01 \x03(\x07\"p\n\x0f\x43IPLocationInfo\x12\n\n\x02ip\x18\x01 \x01(\r\x12\x10\n\x08latitude\x18\x02 \x01(\x02\x12\x11\n\tlongitude\x18\x03 \x01(\x02\x12\x0f\n\x07\x63ountry\x18\x04 \x01(\t\x12\r\n\x05state\x18\x05 \x01(\t\x12\x0c\n\x04\x63ity\x18\x06 \x01(\t\"C\n\x1b\x43GCMsgGetIPLocationResponse\x12$\n\x05infos\x18\x01 \x03(\x0b\x32\x15.dota.CIPLocationInfo\"\x1d\n\x0e\x43GCMsgGetIPASN\x12\x0b\n\x03ips\x18\x01 \x03(\x07\"%\n\nCIPASNInfo\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0b\n\x03\x61sn\x18\x02 \x01(\r\"9\n\x16\x43GCMsgGetIPASNResponse\x12\x1f\n\x05infos\x18\x01 \x03(\x0b\x32\x10.dota.CIPASNInfo\"?\n\x17\x43GCMsgSystemStatsSchema\x12\x11\n\tgc_app_id\x18\x01 \x01(\r\x12\x11\n\tschema_kv\x18\x02 \x01(\x0c\"\x16\n\x14\x43GCMsgGetSystemStats\"\xc5\x02\n\x1c\x43GCMsgGetSystemStatsResponse\x12\x11\n\tgc_app_id\x18\x01 \x01(\r\x12\x10\n\x08stats_kv\x18\x02 \x01(\x0c\x12\x13\n\x0b\x61\x63tive_jobs\x18\x03 \x01(\r\x12\x15\n\ryielding_jobs\x18\x04 \x01(\r\x12\x15\n\ruser_sessions\x18\x05 \x01(\r\x12\x1c\n\x14game_server_sessions\x18\x06 \x01(\r\x12\x10\n\x08socaches\x18\x07 \x01(\r\x12\x1a\n\x12socaches_to_unload\x18\x08 \x01(\r\x12\x18\n\x10socaches_loading\x18\t \x01(\r\x12\x17\n\x0fwriteback_queue\x18\n \x01(\r\x12\x15\n\rsteamid_locks\x18\x0b \x01(\r\x12\x13\n\x0blogon_queue\x18\x0c \x01(\r\x12\x12\n\nlogon_jobs\x18\r \x01(\r\"\xec\x02\n\x0f\x43MsgAMSendEmail\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x65mail_msg_type\x18\x02 \x01(\r\x12\x14\n\x0c\x65mail_format\x18\x03 \x01(\r\x12N\n\x13persona_name_tokens\x18\x05 \x03(\x0b\x32\x31.dota.CMsgAMSendEmail.PersonaNameReplacementToken\x12\x11\n\tsource_gc\x18\x06 \x01(\r\x12\x36\n\x06tokens\x18\x07 \x03(\x0b\x32&.dota.CMsgAMSendEmail.ReplacementToken\x1a;\n\x10ReplacementToken\x12\x12\n\ntoken_name\x18\x01 \x01(\t\x12\x13\n\x0btoken_value\x18\x02 \x01(\t\x1a\x42\n\x1bPersonaNameReplacementToken\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x12\n\ntoken_name\x18\x02 \x01(\t\"-\n\x17\x43MsgAMSendEmailResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"j\n\x16\x43MsgGCGetEmailTemplate\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0e\x65mail_msg_type\x18\x02 \x01(\r\x12\x12\n\nemail_lang\x18\x03 \x01(\x05\x12\x14\n\x0c\x65mail_format\x18\x04 \x01(\x05\"_\n\x1e\x43MsgGCGetEmailTemplateResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x17\n\x0ftemplate_exists\x18\x02 \x01(\x08\x12\x10\n\x08template\x18\x03 \x01(\t\"\x84\x01\n\x17\x43MsgAMGrantGuestPasses2\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x12\n\npackage_id\x18\x02 \x01(\r\x12\x17\n\x0fpasses_to_grant\x18\x03 \x01(\x05\x12\x1a\n\x12\x64\x61ys_to_expiration\x18\x04 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x05 \x01(\x05\"P\n\x1f\x43MsgAMGrantGuestPasses2Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x19\n\x0epasses_granted\x18\x02 \x01(\x05:\x01\x30\"L\n\x1e\x43GCSystemMsg_GetAccountDetails\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r:\n\x80\x97\"\x80\x01\x88\x97\"\x80\x04\"\x80\x07\n\'CGCSystemMsg_GetAccountDetails_Response\x12\x1d\n\x12\x65result_deprecated\x18\x01 \x01(\r:\x01\x32\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x02 \x01(\t\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x1a\n\x12is_profile_created\x18\x1a \x01(\x08\x12\x19\n\x11is_profile_public\x18\x04 \x01(\x08\x12\x1b\n\x13is_inventory_public\x18\x05 \x01(\x08\x12\x15\n\ris_vac_banned\x18\x07 \x01(\x08\x12\x15\n\ris_cyber_cafe\x18\x08 \x01(\x08\x12\x19\n\x11is_school_account\x18\t \x01(\x08\x12\x12\n\nis_limited\x18\n \x01(\x08\x12\x15\n\ris_subscribed\x18\x0b \x01(\x08\x12\x0f\n\x07package\x18\x0c \x01(\r\x12\x1d\n\x15is_free_trial_account\x18\r \x01(\x08\x12\x1d\n\x15\x66ree_trial_expiration\x18\x0e \x01(\r\x12\x17\n\x0fis_low_violence\x18\x0f \x01(\x08\x12\x1e\n\x16is_account_locked_down\x18\x10 \x01(\x08\x12\x1b\n\x13is_community_banned\x18\x11 \x01(\x08\x12\x17\n\x0fis_trade_banned\x18\x12 \x01(\x08\x12\x1c\n\x14trade_ban_expiration\x18\x13 \x01(\r\x12\x11\n\taccountid\x18\x14 \x01(\r\x12\x1b\n\x13suspension_end_time\x18\x15 \x01(\r\x12\x10\n\x08\x63urrency\x18\x16 \x01(\t\x12\x13\n\x0bsteam_level\x18\x17 \x01(\r\x12\x14\n\x0c\x66riend_count\x18\x18 \x01(\r\x12\x1d\n\x15\x61\x63\x63ount_creation_time\x18\x19 \x01(\r\x12\x1d\n\x15is_steamguard_enabled\x18\x1b \x01(\x08\x12\x19\n\x11is_phone_verified\x18\x1c \x01(\x08\x12\"\n\x1ais_two_factor_auth_enabled\x18\x1d \x01(\x08\x12\x1f\n\x17two_factor_enabled_time\x18\x1e \x01(\r\x12\x1f\n\x17phone_verification_time\x18\x1f \x01(\r\x12\x10\n\x08phone_id\x18! \x01(\x04\x12\x1c\n\x14is_phone_identifying\x18\" \x01(\x08:\n\x80\x97\"\x80\x01\x88\x97\"\x80\x04\")\n\x15\x43MsgGCGetPersonaNames\x12\x10\n\x08steamids\x18\x01 \x03(\x06\"\xc3\x01\n\x1e\x43MsgGCGetPersonaNames_Response\x12K\n\x11succeeded_lookups\x18\x01 \x03(\x0b\x32\x30.dota.CMsgGCGetPersonaNames_Response.PersonaName\x12\x1e\n\x16\x66\x61iled_lookup_steamids\x18\x02 \x03(\x06\x1a\x34\n\x0bPersonaName\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\"D\n\x15\x43MsgGCCheckFriendship\x12\x14\n\x0csteamid_left\x18\x01 \x01(\x06\x12\x15\n\rsteamid_right\x18\x02 \x01(\x06\"K\n\x1e\x43MsgGCCheckFriendship_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x18\n\x10\x66ound_friendship\x18\x02 \x01(\x08\"Q\n\x17\x43MsgGCGetAppFriendsList\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12%\n\x1dinclude_friendship_timestamps\x18\x02 \x01(\x08\"|\n CMsgGCGetAppFriendsList_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x10\n\x08steamids\x18\x02 \x03(\x06\x12\x1d\n\x15\x66riendship_timestamps\x18\x03 \x03(\x07\x12\x16\n\x0elast_playtimes\x18\x04 \x03(\x07\"\xcd\x01\n\x1b\x43MsgGCMsgMasterSetDirectory\x12\x18\n\x10master_dir_index\x18\x01 \x01(\r\x12\x34\n\x03\x64ir\x18\x02 \x03(\x0b\x32\'.dota.CMsgGCMsgMasterSetDirectory.SubGC\x1a^\n\x05SubGC\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x62ox\x18\x03 \x01(\t\x12\x14\n\x0c\x63ommand_line\x18\x04 \x01(\t\x12\x11\n\tgc_binary\x18\x05 \x01(\t\"K\n$CMsgGCMsgMasterSetDirectory_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0f\n\x07message\x18\x02 \x01(\t\"=\n(CMsgGCMsgWebAPIJobRequestForwardResponse\x12\x11\n\tdir_index\x18\x01 \x01(\r\"8\n%CGCSystemMsg_GetPurchaseTrust_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"\xad\x01\n&CGCSystemMsg_GetPurchaseTrust_Response\x12\"\n\x1ahas_prior_purchase_history\x18\x01 \x01(\x08\x12%\n\x1dhas_no_recent_password_resets\x18\x02 \x01(\x08\x12\x1e\n\x16is_wallet_cash_trusted\x18\x03 \x01(\x08\x12\x18\n\x10time_all_trusted\x18\x04 \x01(\r\"\x8f\x01\n\x1d\x43MsgGCHAccountVacStatusChange\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x1b\n\x13rtime_vacban_starts\x18\x03 \x01(\r\x12\x15\n\ris_banned_now\x18\x04 \x01(\x08\x12\x18\n\x10is_banned_future\x18\x05 \x01(\x08\".\n\x1b\x43MsgGCGetPartnerAccountLink\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"E\n$CMsgGCGetPartnerAccountLink_Response\x12\x0c\n\x04pwid\x18\x01 \x01(\r\x12\x0f\n\x07nexonid\x18\x02 \x01(\r\"\xe5\x02\n\x11\x43MsgGCRoutingInfo\x12\x11\n\tdir_index\x18\x01 \x03(\r\x12=\n\x06method\x18\x02 \x01(\x0e\x32%.dota.CMsgGCRoutingInfo.RoutingMethod:\x06RANDOM\x12@\n\x08\x66\x61llback\x18\x03 \x01(\x0e\x32%.dota.CMsgGCRoutingInfo.RoutingMethod:\x07\x44ISCARD\x12\x16\n\x0eprotobuf_field\x18\x04 \x01(\r\x12\x14\n\x0cwebapi_param\x18\x05 \x01(\t\"\x8d\x01\n\rRoutingMethod\x12\n\n\x06RANDOM\x10\x00\x12\x0b\n\x07\x44ISCARD\x10\x01\x12\x12\n\x0e\x43LIENT_STEAMID\x10\x02\x12\x19\n\x15PROTOBUF_FIELD_UINT64\x10\x03\x12\x10\n\x0cWEBAPI_PARAM\x10\x04\x12\"\n\x1eWEBAPI_PARAM_STEAMID_ACCOUNTID\x10\x05\"\xbf\x01\n\x1f\x43MsgGCMsgMasterSetWebAPIRouting\x12<\n\x07\x65ntries\x18\x01 \x03(\x0b\x32+.dota.CMsgGCMsgMasterSetWebAPIRouting.Entry\x1a^\n\x05\x45ntry\x12\x16\n\x0einterface_name\x18\x01 \x01(\t\x12\x13\n\x0bmethod_name\x18\x02 \x01(\t\x12(\n\x07routing\x18\x03 \x01(\x0b\x32\x17.dota.CMsgGCRoutingInfo\"\xaa\x01\n\"CMsgGCMsgMasterSetClientMsgRouting\x12?\n\x07\x65ntries\x18\x01 \x03(\x0b\x32..dota.CMsgGCMsgMasterSetClientMsgRouting.Entry\x1a\x43\n\x05\x45ntry\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12(\n\x07routing\x18\x02 \x01(\x0b\x32\x17.dota.CMsgGCRoutingInfo\">\n(CMsgGCMsgMasterSetWebAPIRouting_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"A\n+CMsgGCMsgMasterSetClientMsgRouting_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"\xc5\x03\n\x13\x43MsgGCMsgSetOptions\x12\x31\n\x07options\x18\x01 \x03(\x0e\x32 .dota.CMsgGCMsgSetOptions.Option\x12\x41\n\x11\x63lient_msg_ranges\x18\x02 \x03(\x0b\x32&.dota.CMsgGCMsgSetOptions.MessageRange\x12U\n\rgcsql_version\x18\x03 \x01(\x0e\x32&.dota.CMsgGCMsgSetOptions.GCSQLVersion:\x16GCSQL_VERSION_BASELINE\x1a)\n\x0cMessageRange\x12\x0b\n\x03low\x18\x01 \x02(\r\x12\x0c\n\x04high\x18\x02 \x02(\r\"n\n\x06Option\x12\x18\n\x14NOTIFY_USER_SESSIONS\x10\x00\x12\x1a\n\x16NOTIFY_SERVER_SESSIONS\x10\x01\x12\x17\n\x13NOTIFY_ACHIEVEMENTS\x10\x02\x12\x15\n\x11NOTIFY_VAC_ACTION\x10\x03\"F\n\x0cGCSQLVersion\x12\x1a\n\x16GCSQL_VERSION_BASELINE\x10\x01\x12\x1a\n\x16GCSQL_VERSION_BOOLTYPE\x10\x02\"\x99\x02\n\x14\x43MsgGCHUpdateSession\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x0e\n\x06online\x18\x03 \x01(\x08\x12\x17\n\x0fserver_steam_id\x18\x04 \x01(\x06\x12\x13\n\x0bserver_addr\x18\x05 \x01(\r\x12\x13\n\x0bserver_port\x18\x06 \x01(\r\x12\x0f\n\x07os_type\x18\x07 \x01(\r\x12\x13\n\x0b\x63lient_addr\x18\x08 \x01(\r\x12;\n\x0c\x65xtra_fields\x18\t \x03(\x0b\x32%.dota.CMsgGCHUpdateSession.ExtraField\x1a)\n\nExtraField\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xf1\x01\n$CMsgNotificationOfSuspiciousActivity\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\\\n\x12multiple_instances\x18\x03 \x01(\x0b\x32@.dota.CMsgNotificationOfSuspiciousActivity.MultipleGameInstances\x1aK\n\x15MultipleGameInstances\x12\x1a\n\x12\x61pp_instance_count\x18\x01 \x01(\r\x12\x16\n\x0eother_steamids\x18\x02 \x03(\x06\"\xfc\x04\n\x16\x43MsgDPPartnerMicroTxns\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07gc_name\x18\x02 \x01(\t\x12\x39\n\x07partner\x18\x03 \x01(\x0b\x32(.dota.CMsgDPPartnerMicroTxns.PartnerInfo\x12\x42\n\x0ctransactions\x18\x04 \x03(\x0b\x32,.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn\x1a\xdb\x02\n\x0fPartnerMicroTxn\x12\x11\n\tinit_time\x18\x01 \x01(\r\x12\x18\n\x10last_update_time\x18\x02 \x01(\r\x12\x0e\n\x06txn_id\x18\x03 \x01(\x04\x12\x12\n\naccount_id\x18\x04 \x01(\r\x12\x11\n\tline_item\x18\x05 \x01(\r\x12\x0f\n\x07item_id\x18\x06 \x01(\x04\x12\x11\n\tdef_index\x18\x07 \x01(\r\x12\r\n\x05price\x18\x08 \x01(\x04\x12\x0b\n\x03tax\x18\t \x01(\x04\x12\x11\n\tprice_usd\x18\n \x01(\x04\x12\x0f\n\x07tax_usd\x18\x0b \x01(\x04\x12\x15\n\rpurchase_type\x18\x0c \x01(\r\x12\x16\n\x0esteam_txn_type\x18\r \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x0e \x01(\t\x12\x13\n\x0bregion_code\x18\x0f \x01(\t\x12\x10\n\x08quantity\x18\x10 \x01(\x05\x12\x14\n\x0cref_trans_id\x18\x11 \x01(\x04\x1a\x65\n\x0bPartnerInfo\x12\x12\n\npartner_id\x18\x01 \x01(\r\x12\x14\n\x0cpartner_name\x18\x02 \x01(\t\x12\x15\n\rcurrency_code\x18\x03 \x01(\t\x12\x15\n\rcurrency_name\x18\x04 \x01(\t\"\x83\x03\n\x1e\x43MsgDPPartnerMicroTxnsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12O\n\neerrorcode\x18\x02 \x01(\x0e\x32/.dota.CMsgDPPartnerMicroTxnsResponse.EErrorCode:\nk_MsgValid\"\xfb\x01\n\nEErrorCode\x12\x0e\n\nk_MsgValid\x10\x00\x12\x15\n\x11k_MsgInvalidAppID\x10\x01\x12\x1b\n\x17k_MsgInvalidPartnerInfo\x10\x02\x12\x17\n\x13k_MsgNoTransactions\x10\x03\x12\x13\n\x0fk_MsgSQLFailure\x10\x04\x12\x1f\n\x1bk_MsgPartnerInfoDiscrepancy\x10\x05\x12 \n\x1ck_MsgTransactionInsertFailed\x10\x07\x12\x17\n\x13k_MsgAlreadyRunning\x10\x08\x12\x1f\n\x1bk_MsgInvalidTransactionData\x10\t\"S\n\x1c\x43MsgGCHVacVerificationChange\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\x13\n\x0bis_verified\x18\x03 \x01(\x08\"Z\n\x1d\x43MsgGCHAccountTwoFactorChange\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\x19\n\x11twofactor_enabled\x18\x03 \x01(\x08\"<\n\x19\x43MsgGCCheckClanMembership\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x0e\n\x06\x63lanid\x18\x02 \x01(\r\"6\n\"CMsgGCCheckClanMembership_Response\x12\x10\n\x08ismember\x18\x01 \x01(\x08*\xdb\x01\n\x10GCProtoBufMsgSrc\x12 \n\x1cGCProtoBufMsgSrc_Unspecified\x10\x00\x12\x1f\n\x1bGCProtoBufMsgSrc_FromSystem\x10\x01\x12 \n\x1cGCProtoBufMsgSrc_FromSteamID\x10\x02\x12\x1b\n\x17GCProtoBufMsgSrc_FromGC\x10\x03\x12 \n\x1cGCProtoBufMsgSrc_ReplySystem\x10\x04\x12#\n\x1fGCProtoBufMsgSrc_SpoofedSteamID\x10\x05:9\n\tkey_field\x12\x1d.google.protobuf.FieldOptions\x18\xf0\xa2\x04 \x01(\x08:\x05\x66\x61lse:A\n\x12msgpool_soft_limit\x12\x1f.google.protobuf.MessageOptions\x18\xf0\xa2\x04 \x01(\x05:\x02\x33\x32:B\n\x12msgpool_hard_limit\x12\x1f.google.protobuf.MessageOptions\x18\xf1\xa2\x04 \x01(\x05:\x03\x33\x38\x34\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x13steammessages.proto\x12\x04\x64ota\x1a google/protobuf/descriptor.proto\"\xf2\x02\n\x12\x43MsgProtoBufHeader\x12\x17\n\x0f\x63lient_steam_id\x18\x01 \x01(\x06\x12\x19\n\x11\x63lient_session_id\x18\x02 \x01(\x05\x12\x15\n\rsource_app_id\x18\x03 \x01(\r\x12+\n\rjob_id_source\x18\n \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\x12+\n\rjob_id_target\x18\x0b \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\x12\x17\n\x0ftarget_job_name\x18\x0c \x01(\t\x12\x12\n\x07\x65result\x18\r \x01(\x05:\x01\x32\x12\x15\n\rerror_message\x18\x0e \x01(\t\x12I\n\ngc_msg_src\x18\xc8\x01 \x01(\x0e\x32\x16.dota.GCProtoBufMsgSrc:\x1cGCProtoBufMsgSrc_Unspecified\x12\x1c\n\x13gc_dir_index_source\x18\xc9\x01 \x01(\r:\n\x80\x97\"\x80\x02\x88\x97\"\x80\x08\"z\n\rCMsgWebAPIKey\x12\x13\n\x06status\x18\x01 \x01(\r:\x03\x32\x35\x35\x12\x15\n\naccount_id\x18\x02 \x01(\r:\x01\x30\x12\x1d\n\x12publisher_group_id\x18\x03 \x01(\r:\x01\x30\x12\x0e\n\x06key_id\x18\x04 \x01(\r\x12\x0e\n\x06\x64omain\x18\x05 \x01(\t\"\xec\x02\n\x0f\x43MsgHttpRequest\x12\x16\n\x0erequest_method\x18\x01 \x01(\r\x12\x10\n\x08hostname\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\x12\x34\n\x07headers\x18\x04 \x03(\x0b\x32#.dota.CMsgHttpRequest.RequestHeader\x12\x34\n\nget_params\x18\x05 \x03(\x0b\x32 .dota.CMsgHttpRequest.QueryParam\x12\x35\n\x0bpost_params\x18\x06 \x03(\x0b\x32 .dota.CMsgHttpRequest.QueryParam\x12\x0c\n\x04\x62ody\x18\x07 \x01(\x0c\x12\x18\n\x10\x61\x62solute_timeout\x18\x08 \x01(\r\x1a,\n\rRequestHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a)\n\nQueryParam\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\"\xd0\x01\n\x11\x43MsgWebAPIRequest\x12\x17\n\x0fUNUSED_job_name\x18\x01 \x01(\t\x12\x16\n\x0einterface_name\x18\x02 \x01(\t\x12\x13\n\x0bmethod_name\x18\x03 \x01(\t\x12\x0f\n\x07version\x18\x04 \x01(\r\x12$\n\x07\x61pi_key\x18\x05 \x01(\x0b\x32\x13.dota.CMsgWebAPIKey\x12&\n\x07request\x18\x06 \x01(\x0b\x32\x15.dota.CMsgHttpRequest\x12\x16\n\x0erouting_app_id\x18\x07 \x01(\r\"\x9c\x01\n\x10\x43MsgHttpResponse\x12\x13\n\x0bstatus_code\x18\x01 \x01(\r\x12\x36\n\x07headers\x18\x02 \x03(\x0b\x32%.dota.CMsgHttpResponse.ResponseHeader\x12\x0c\n\x04\x62ody\x18\x03 \x01(\x0c\x1a-\n\x0eResponseHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"@\n\x12\x43MsgAMFindAccounts\x12\x13\n\x0bsearch_type\x18\x01 \x01(\r\x12\x15\n\rsearch_string\x18\x02 \x01(\t\".\n\x1a\x43MsgAMFindAccountsResponse\x12\x10\n\x08steam_id\x18\x01 \x03(\x06\"\x88\x01\n\x12\x43MsgNotifyWatchdog\x12\x0e\n\x06source\x18\x01 \x01(\r\x12\x12\n\nalert_type\x18\x02 \x01(\r\x12\x10\n\x08\x63ritical\x18\x04 \x01(\x08\x12\x0c\n\x04time\x18\x05 \x01(\r\x12\r\n\x05\x61ppid\x18\x06 \x01(\r\x12\x0c\n\x04text\x18\x07 \x01(\t\x12\x11\n\trecipient\x18\x0c \x01(\t\"$\n\x11\x43MsgAMGetLicenses\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"P\n\x12\x43MsgPackageLicense\x12\x12\n\npackage_id\x18\x01 \x01(\r\x12\x14\n\x0ctime_created\x18\x02 \x01(\r\x12\x10\n\x08owner_id\x18\x03 \x01(\r\"V\n\x19\x43MsgAMGetLicensesResponse\x12)\n\x07license\x18\x01 \x03(\x0b\x32\x18.dota.CMsgPackageLicense\x12\x0e\n\x06result\x18\x02 \x01(\r\"J\n\x16\x43MsgAMGetUserGameStats\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\r\n\x05stats\x18\x03 \x03(\r\"\xf4\x02\n\x1e\x43MsgAMGetUserGameStatsResponse\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\x12\x39\n\x05stats\x18\x04 \x03(\x0b\x32*.dota.CMsgAMGetUserGameStatsResponse.Stats\x12S\n\x12\x61\x63hievement_blocks\x18\x05 \x03(\x0b\x32\x37.dota.CMsgAMGetUserGameStatsResponse.Achievement_Blocks\x1a,\n\x05Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\x1a]\n\x12\x41\x63hievement_Blocks\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x1a\n\x12\x61\x63hievement_bit_id\x18\x02 \x01(\r\x12\x13\n\x0bunlock_time\x18\x03 \x01(\x07\">\n\x14\x43MsgGCGetCommandList\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63ommand_prefix\x18\x02 \x01(\t\"4\n\x1c\x43MsgGCGetCommandListResponse\x12\x14\n\x0c\x63ommand_name\x18\x01 \x03(\t\"\"\n\x12\x43GCMsgMemCachedGet\x12\x0c\n\x04keys\x18\x01 \x03(\t\"\x81\x01\n\x1a\x43GCMsgMemCachedGetResponse\x12\x39\n\x06values\x18\x01 \x03(\x0b\x32).dota.CGCMsgMemCachedGetResponse.ValueTag\x1a(\n\x08ValueTag\x12\r\n\x05\x66ound\x18\x01 \x01(\x08\x12\r\n\x05value\x18\x02 \x01(\x0c\"l\n\x12\x43GCMsgMemCachedSet\x12.\n\x04keys\x18\x01 \x03(\x0b\x32 .dota.CGCMsgMemCachedSet.KeyPair\x1a&\n\x07KeyPair\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\"%\n\x15\x43GCMsgMemCachedDelete\x12\x0c\n\x04keys\x18\x01 \x03(\t\"\x16\n\x14\x43GCMsgMemCachedStats\"\xb8\x02\n\x1c\x43GCMsgMemCachedStatsResponse\x12\x18\n\x10\x63urr_connections\x18\x01 \x01(\x04\x12\x0f\n\x07\x63md_get\x18\x02 \x01(\x04\x12\x0f\n\x07\x63md_set\x18\x03 \x01(\x04\x12\x11\n\tcmd_flush\x18\x04 \x01(\x04\x12\x10\n\x08get_hits\x18\x05 \x01(\x04\x12\x12\n\nget_misses\x18\x06 \x01(\x04\x12\x13\n\x0b\x64\x65lete_hits\x18\x07 \x01(\x04\x12\x15\n\rdelete_misses\x18\x08 \x01(\x04\x12\x12\n\nbytes_read\x18\t \x01(\x04\x12\x15\n\rbytes_written\x18\n \x01(\x04\x12\x16\n\x0elimit_maxbytes\x18\x0b \x01(\x04\x12\x12\n\ncurr_items\x18\x0c \x01(\x04\x12\x11\n\tevictions\x18\r \x01(\x04\x12\r\n\x05\x62ytes\x18\x0e \x01(\x04\"(\n\x0e\x43GCMsgSQLStats\x12\x16\n\x0eschema_catalog\x18\x01 \x01(\r\"\x9b\x02\n\x16\x43GCMsgSQLStatsResponse\x12\x0f\n\x07threads\x18\x01 \x01(\r\x12\x19\n\x11threads_connected\x18\x02 \x01(\r\x12\x16\n\x0ethreads_active\x18\x03 \x01(\r\x12\x1c\n\x14operations_submitted\x18\x04 \x01(\r\x12$\n\x1cprepared_statements_executed\x18\x05 \x01(\r\x12(\n non_prepared_statements_executed\x18\x06 \x01(\r\x12\x18\n\x10\x64\x65\x61\x64lock_retries\x18\x07 \x01(\r\x12%\n\x1doperations_timed_out_in_queue\x18\x08 \x01(\r\x12\x0e\n\x06\x65rrors\x18\t \x01(\r\"i\n\x14\x43MsgAMAddFreeLicense\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x11\n\tip_public\x18\x02 \x01(\r\x12\x11\n\tpackageid\x18\x03 \x01(\r\x12\x1a\n\x12store_country_code\x18\x04 \x01(\t\"c\n\x1c\x43MsgAMAddFreeLicenseResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x1e\n\x16purchase_result_detail\x18\x02 \x01(\x05\x12\x0f\n\x07transid\x18\x03 \x01(\x06\"\"\n\x13\x43GCMsgGetIPLocation\x12\x0b\n\x03ips\x18\x01 \x03(\x07\"p\n\x0f\x43IPLocationInfo\x12\n\n\x02ip\x18\x01 \x01(\r\x12\x10\n\x08latitude\x18\x02 \x01(\x02\x12\x11\n\tlongitude\x18\x03 \x01(\x02\x12\x0f\n\x07\x63ountry\x18\x04 \x01(\t\x12\r\n\x05state\x18\x05 \x01(\t\x12\x0c\n\x04\x63ity\x18\x06 \x01(\t\"C\n\x1b\x43GCMsgGetIPLocationResponse\x12$\n\x05infos\x18\x01 \x03(\x0b\x32\x15.dota.CIPLocationInfo\"\x1d\n\x0e\x43GCMsgGetIPASN\x12\x0b\n\x03ips\x18\x01 \x03(\x07\"%\n\nCIPASNInfo\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0b\n\x03\x61sn\x18\x02 \x01(\r\"9\n\x16\x43GCMsgGetIPASNResponse\x12\x1f\n\x05infos\x18\x01 \x03(\x0b\x32\x10.dota.CIPASNInfo\"?\n\x17\x43GCMsgSystemStatsSchema\x12\x11\n\tgc_app_id\x18\x01 \x01(\r\x12\x11\n\tschema_kv\x18\x02 \x01(\x0c\"\x16\n\x14\x43GCMsgGetSystemStats\"\xc5\x02\n\x1c\x43GCMsgGetSystemStatsResponse\x12\x11\n\tgc_app_id\x18\x01 \x01(\r\x12\x10\n\x08stats_kv\x18\x02 \x01(\x0c\x12\x13\n\x0b\x61\x63tive_jobs\x18\x03 \x01(\r\x12\x15\n\ryielding_jobs\x18\x04 \x01(\r\x12\x15\n\ruser_sessions\x18\x05 \x01(\r\x12\x1c\n\x14game_server_sessions\x18\x06 \x01(\r\x12\x10\n\x08socaches\x18\x07 \x01(\r\x12\x1a\n\x12socaches_to_unload\x18\x08 \x01(\r\x12\x18\n\x10socaches_loading\x18\t \x01(\r\x12\x17\n\x0fwriteback_queue\x18\n \x01(\r\x12\x15\n\rsteamid_locks\x18\x0b \x01(\r\x12\x13\n\x0blogon_queue\x18\x0c \x01(\r\x12\x12\n\nlogon_jobs\x18\r \x01(\r\"\xec\x02\n\x0f\x43MsgAMSendEmail\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x16\n\x0e\x65mail_msg_type\x18\x02 \x01(\r\x12\x14\n\x0c\x65mail_format\x18\x03 \x01(\r\x12N\n\x13persona_name_tokens\x18\x05 \x03(\x0b\x32\x31.dota.CMsgAMSendEmail.PersonaNameReplacementToken\x12\x11\n\tsource_gc\x18\x06 \x01(\r\x12\x36\n\x06tokens\x18\x07 \x03(\x0b\x32&.dota.CMsgAMSendEmail.ReplacementToken\x1a;\n\x10ReplacementToken\x12\x12\n\ntoken_name\x18\x01 \x01(\t\x12\x13\n\x0btoken_value\x18\x02 \x01(\t\x1a\x42\n\x1bPersonaNameReplacementToken\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x12\n\ntoken_name\x18\x02 \x01(\t\"-\n\x17\x43MsgAMSendEmailResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\"j\n\x16\x43MsgGCGetEmailTemplate\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0e\x65mail_msg_type\x18\x02 \x01(\r\x12\x12\n\nemail_lang\x18\x03 \x01(\x05\x12\x14\n\x0c\x65mail_format\x18\x04 \x01(\x05\"_\n\x1e\x43MsgGCGetEmailTemplateResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x17\n\x0ftemplate_exists\x18\x02 \x01(\x08\x12\x10\n\x08template\x18\x03 \x01(\t\"\x84\x01\n\x17\x43MsgAMGrantGuestPasses2\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x12\n\npackage_id\x18\x02 \x01(\r\x12\x17\n\x0fpasses_to_grant\x18\x03 \x01(\x05\x12\x1a\n\x12\x64\x61ys_to_expiration\x18\x04 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x05 \x01(\x05\"P\n\x1f\x43MsgAMGrantGuestPasses2Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x19\n\x0epasses_granted\x18\x02 \x01(\x05:\x01\x30\"L\n\x1e\x43GCSystemMsg_GetAccountDetails\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r:\n\x80\x97\"\x80\x01\x88\x97\"\x80\x04\"\xcd\x07\n\'CGCSystemMsg_GetAccountDetails_Response\x12\x1d\n\x12\x65result_deprecated\x18\x01 \x01(\r:\x01\x32\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x02 \x01(\t\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\x12\x1a\n\x12is_profile_created\x18\x1a \x01(\x08\x12\x19\n\x11is_profile_public\x18\x04 \x01(\x08\x12\x1b\n\x13is_inventory_public\x18\x05 \x01(\x08\x12\x15\n\ris_vac_banned\x18\x07 \x01(\x08\x12\x15\n\ris_cyber_cafe\x18\x08 \x01(\x08\x12\x19\n\x11is_school_account\x18\t \x01(\x08\x12\x12\n\nis_limited\x18\n \x01(\x08\x12\x15\n\ris_subscribed\x18\x0b \x01(\x08\x12\x0f\n\x07package\x18\x0c \x01(\r\x12\x1d\n\x15is_free_trial_account\x18\r \x01(\x08\x12\x1d\n\x15\x66ree_trial_expiration\x18\x0e \x01(\r\x12\x17\n\x0fis_low_violence\x18\x0f \x01(\x08\x12\x1e\n\x16is_account_locked_down\x18\x10 \x01(\x08\x12\x1b\n\x13is_community_banned\x18\x11 \x01(\x08\x12\x17\n\x0fis_trade_banned\x18\x12 \x01(\x08\x12\x1c\n\x14trade_ban_expiration\x18\x13 \x01(\r\x12\x11\n\taccountid\x18\x14 \x01(\r\x12\x1b\n\x13suspension_end_time\x18\x15 \x01(\r\x12\x10\n\x08\x63urrency\x18\x16 \x01(\t\x12\x13\n\x0bsteam_level\x18\x17 \x01(\r\x12\x14\n\x0c\x66riend_count\x18\x18 \x01(\r\x12\x1d\n\x15\x61\x63\x63ount_creation_time\x18\x19 \x01(\r\x12\x1d\n\x15is_steamguard_enabled\x18\x1b \x01(\x08\x12\x19\n\x11is_phone_verified\x18\x1c \x01(\x08\x12\"\n\x1ais_two_factor_auth_enabled\x18\x1d \x01(\x08\x12\x1f\n\x17two_factor_enabled_time\x18\x1e \x01(\r\x12\x1f\n\x17phone_verification_time\x18\x1f \x01(\r\x12\x10\n\x08phone_id\x18! \x01(\x04\x12\x1c\n\x14is_phone_identifying\x18\" \x01(\x08\x12\x1a\n\x12rt_identity_linked\x18# \x01(\r\x12\x15\n\rrt_birth_date\x18$ \x01(\r\x12\x18\n\x10txn_country_code\x18% \x01(\t:\n\x80\x97\"\x80\x01\x88\x97\"\x80\x04\")\n\x15\x43MsgGCGetPersonaNames\x12\x10\n\x08steamids\x18\x01 \x03(\x06\"\xc3\x01\n\x1e\x43MsgGCGetPersonaNames_Response\x12K\n\x11succeeded_lookups\x18\x01 \x03(\x0b\x32\x30.dota.CMsgGCGetPersonaNames_Response.PersonaName\x12\x1e\n\x16\x66\x61iled_lookup_steamids\x18\x02 \x03(\x06\x1a\x34\n\x0bPersonaName\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\"D\n\x15\x43MsgGCCheckFriendship\x12\x14\n\x0csteamid_left\x18\x01 \x01(\x06\x12\x15\n\rsteamid_right\x18\x02 \x01(\x06\"K\n\x1e\x43MsgGCCheckFriendship_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x18\n\x10\x66ound_friendship\x18\x02 \x01(\x08\"Q\n\x17\x43MsgGCGetAppFriendsList\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12%\n\x1dinclude_friendship_timestamps\x18\x02 \x01(\x08\"|\n CMsgGCGetAppFriendsList_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x10\n\x08steamids\x18\x02 \x03(\x06\x12\x1d\n\x15\x66riendship_timestamps\x18\x03 \x03(\x07\x12\x16\n\x0elast_playtimes\x18\x04 \x03(\x07\"\xcd\x01\n\x1b\x43MsgGCMsgMasterSetDirectory\x12\x18\n\x10master_dir_index\x18\x01 \x01(\r\x12\x34\n\x03\x64ir\x18\x02 \x03(\x0b\x32\'.dota.CMsgGCMsgMasterSetDirectory.SubGC\x1a^\n\x05SubGC\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03\x62ox\x18\x03 \x01(\t\x12\x14\n\x0c\x63ommand_line\x18\x04 \x01(\t\x12\x11\n\tgc_binary\x18\x05 \x01(\t\"K\n$CMsgGCMsgMasterSetDirectory_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0f\n\x07message\x18\x02 \x01(\t\"=\n(CMsgGCMsgWebAPIJobRequestForwardResponse\x12\x11\n\tdir_index\x18\x01 \x01(\r\"8\n%CGCSystemMsg_GetPurchaseTrust_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"\xad\x01\n&CGCSystemMsg_GetPurchaseTrust_Response\x12\"\n\x1ahas_prior_purchase_history\x18\x01 \x01(\x08\x12%\n\x1dhas_no_recent_password_resets\x18\x02 \x01(\x08\x12\x1e\n\x16is_wallet_cash_trusted\x18\x03 \x01(\x08\x12\x18\n\x10time_all_trusted\x18\x04 \x01(\r\"\x8f\x01\n\x1d\x43MsgGCHAccountVacStatusChange\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x1b\n\x13rtime_vacban_starts\x18\x03 \x01(\r\x12\x15\n\ris_banned_now\x18\x04 \x01(\x08\x12\x18\n\x10is_banned_future\x18\x05 \x01(\x08\".\n\x1b\x43MsgGCGetPartnerAccountLink\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"E\n$CMsgGCGetPartnerAccountLink_Response\x12\x0c\n\x04pwid\x18\x01 \x01(\r\x12\x0f\n\x07nexonid\x18\x02 \x01(\r\"\xe5\x02\n\x11\x43MsgGCRoutingInfo\x12\x11\n\tdir_index\x18\x01 \x03(\r\x12=\n\x06method\x18\x02 \x01(\x0e\x32%.dota.CMsgGCRoutingInfo.RoutingMethod:\x06RANDOM\x12@\n\x08\x66\x61llback\x18\x03 \x01(\x0e\x32%.dota.CMsgGCRoutingInfo.RoutingMethod:\x07\x44ISCARD\x12\x16\n\x0eprotobuf_field\x18\x04 \x01(\r\x12\x14\n\x0cwebapi_param\x18\x05 \x01(\t\"\x8d\x01\n\rRoutingMethod\x12\n\n\x06RANDOM\x10\x00\x12\x0b\n\x07\x44ISCARD\x10\x01\x12\x12\n\x0e\x43LIENT_STEAMID\x10\x02\x12\x19\n\x15PROTOBUF_FIELD_UINT64\x10\x03\x12\x10\n\x0cWEBAPI_PARAM\x10\x04\x12\"\n\x1eWEBAPI_PARAM_STEAMID_ACCOUNTID\x10\x05\"\xbf\x01\n\x1f\x43MsgGCMsgMasterSetWebAPIRouting\x12<\n\x07\x65ntries\x18\x01 \x03(\x0b\x32+.dota.CMsgGCMsgMasterSetWebAPIRouting.Entry\x1a^\n\x05\x45ntry\x12\x16\n\x0einterface_name\x18\x01 \x01(\t\x12\x13\n\x0bmethod_name\x18\x02 \x01(\t\x12(\n\x07routing\x18\x03 \x01(\x0b\x32\x17.dota.CMsgGCRoutingInfo\"\xaa\x01\n\"CMsgGCMsgMasterSetClientMsgRouting\x12?\n\x07\x65ntries\x18\x01 \x03(\x0b\x32..dota.CMsgGCMsgMasterSetClientMsgRouting.Entry\x1a\x43\n\x05\x45ntry\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12(\n\x07routing\x18\x02 \x01(\x0b\x32\x17.dota.CMsgGCRoutingInfo\">\n(CMsgGCMsgMasterSetWebAPIRouting_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"A\n+CMsgGCMsgMasterSetClientMsgRouting_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"\xc5\x03\n\x13\x43MsgGCMsgSetOptions\x12\x31\n\x07options\x18\x01 \x03(\x0e\x32 .dota.CMsgGCMsgSetOptions.Option\x12\x41\n\x11\x63lient_msg_ranges\x18\x02 \x03(\x0b\x32&.dota.CMsgGCMsgSetOptions.MessageRange\x12U\n\rgcsql_version\x18\x03 \x01(\x0e\x32&.dota.CMsgGCMsgSetOptions.GCSQLVersion:\x16GCSQL_VERSION_BASELINE\x1a)\n\x0cMessageRange\x12\x0b\n\x03low\x18\x01 \x02(\r\x12\x0c\n\x04high\x18\x02 \x02(\r\"n\n\x06Option\x12\x18\n\x14NOTIFY_USER_SESSIONS\x10\x00\x12\x1a\n\x16NOTIFY_SERVER_SESSIONS\x10\x01\x12\x17\n\x13NOTIFY_ACHIEVEMENTS\x10\x02\x12\x15\n\x11NOTIFY_VAC_ACTION\x10\x03\"F\n\x0cGCSQLVersion\x12\x1a\n\x16GCSQL_VERSION_BASELINE\x10\x01\x12\x1a\n\x16GCSQL_VERSION_BOOLTYPE\x10\x02\"\x99\x02\n\x14\x43MsgGCHUpdateSession\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x0e\n\x06online\x18\x03 \x01(\x08\x12\x17\n\x0fserver_steam_id\x18\x04 \x01(\x06\x12\x13\n\x0bserver_addr\x18\x05 \x01(\r\x12\x13\n\x0bserver_port\x18\x06 \x01(\r\x12\x0f\n\x07os_type\x18\x07 \x01(\r\x12\x13\n\x0b\x63lient_addr\x18\x08 \x01(\r\x12;\n\x0c\x65xtra_fields\x18\t \x03(\x0b\x32%.dota.CMsgGCHUpdateSession.ExtraField\x1a)\n\nExtraField\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xf1\x01\n$CMsgNotificationOfSuspiciousActivity\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\\\n\x12multiple_instances\x18\x03 \x01(\x0b\x32@.dota.CMsgNotificationOfSuspiciousActivity.MultipleGameInstances\x1aK\n\x15MultipleGameInstances\x12\x1a\n\x12\x61pp_instance_count\x18\x01 \x01(\r\x12\x16\n\x0eother_steamids\x18\x02 \x03(\x06\"\xfc\x04\n\x16\x43MsgDPPartnerMicroTxns\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07gc_name\x18\x02 \x01(\t\x12\x39\n\x07partner\x18\x03 \x01(\x0b\x32(.dota.CMsgDPPartnerMicroTxns.PartnerInfo\x12\x42\n\x0ctransactions\x18\x04 \x03(\x0b\x32,.dota.CMsgDPPartnerMicroTxns.PartnerMicroTxn\x1a\xdb\x02\n\x0fPartnerMicroTxn\x12\x11\n\tinit_time\x18\x01 \x01(\r\x12\x18\n\x10last_update_time\x18\x02 \x01(\r\x12\x0e\n\x06txn_id\x18\x03 \x01(\x04\x12\x12\n\naccount_id\x18\x04 \x01(\r\x12\x11\n\tline_item\x18\x05 \x01(\r\x12\x0f\n\x07item_id\x18\x06 \x01(\x04\x12\x11\n\tdef_index\x18\x07 \x01(\r\x12\r\n\x05price\x18\x08 \x01(\x04\x12\x0b\n\x03tax\x18\t \x01(\x04\x12\x11\n\tprice_usd\x18\n \x01(\x04\x12\x0f\n\x07tax_usd\x18\x0b \x01(\x04\x12\x15\n\rpurchase_type\x18\x0c \x01(\r\x12\x16\n\x0esteam_txn_type\x18\r \x01(\r\x12\x14\n\x0c\x63ountry_code\x18\x0e \x01(\t\x12\x13\n\x0bregion_code\x18\x0f \x01(\t\x12\x10\n\x08quantity\x18\x10 \x01(\x05\x12\x14\n\x0cref_trans_id\x18\x11 \x01(\x04\x1a\x65\n\x0bPartnerInfo\x12\x12\n\npartner_id\x18\x01 \x01(\r\x12\x14\n\x0cpartner_name\x18\x02 \x01(\t\x12\x15\n\rcurrency_code\x18\x03 \x01(\t\x12\x15\n\rcurrency_name\x18\x04 \x01(\t\"\x83\x03\n\x1e\x43MsgDPPartnerMicroTxnsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12O\n\neerrorcode\x18\x02 \x01(\x0e\x32/.dota.CMsgDPPartnerMicroTxnsResponse.EErrorCode:\nk_MsgValid\"\xfb\x01\n\nEErrorCode\x12\x0e\n\nk_MsgValid\x10\x00\x12\x15\n\x11k_MsgInvalidAppID\x10\x01\x12\x1b\n\x17k_MsgInvalidPartnerInfo\x10\x02\x12\x17\n\x13k_MsgNoTransactions\x10\x03\x12\x13\n\x0fk_MsgSQLFailure\x10\x04\x12\x1f\n\x1bk_MsgPartnerInfoDiscrepancy\x10\x05\x12 \n\x1ck_MsgTransactionInsertFailed\x10\x07\x12\x17\n\x13k_MsgAlreadyRunning\x10\x08\x12\x1f\n\x1bk_MsgInvalidTransactionData\x10\t\"S\n\x1c\x43MsgGCHVacVerificationChange\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\x13\n\x0bis_verified\x18\x03 \x01(\x08\"Z\n\x1d\x43MsgGCHAccountTwoFactorChange\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\x19\n\x11twofactor_enabled\x18\x03 \x01(\x08\"<\n\x19\x43MsgGCCheckClanMembership\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x0e\n\x06\x63lanid\x18\x02 \x01(\r\"6\n\"CMsgGCCheckClanMembership_Response\x12\x10\n\x08ismember\x18\x01 \x01(\x08*\xdb\x01\n\x10GCProtoBufMsgSrc\x12 \n\x1cGCProtoBufMsgSrc_Unspecified\x10\x00\x12\x1f\n\x1bGCProtoBufMsgSrc_FromSystem\x10\x01\x12 \n\x1cGCProtoBufMsgSrc_FromSteamID\x10\x02\x12\x1b\n\x17GCProtoBufMsgSrc_FromGC\x10\x03\x12 \n\x1cGCProtoBufMsgSrc_ReplySystem\x10\x04\x12#\n\x1fGCProtoBufMsgSrc_SpoofedSteamID\x10\x05:9\n\tkey_field\x12\x1d.google.protobuf.FieldOptions\x18\xf0\xa2\x04 \x01(\x08:\x05\x66\x61lse:A\n\x12msgpool_soft_limit\x12\x1f.google.protobuf.MessageOptions\x18\xf0\xa2\x04 \x01(\x05:\x02\x33\x32:B\n\x12msgpool_hard_limit\x12\x1f.google.protobuf.MessageOptions\x18\xf1\xa2\x04 \x01(\x05:\x03\x33\x38\x34\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[google_dot_protobuf_dot_descriptor__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -59,8 +59,8 @@ _GCPROTOBUFMSGSRC = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10708,
-  serialized_end=10927,
+  serialized_start=10785,
+  serialized_end=11004,
 )
 _sym_db.RegisterEnumDescriptor(_GCPROTOBUFMSGSRC)
 
@@ -130,8 +130,8 @@ _CMSGGCROUTINGINFO_ROUTINGMETHOD = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7758,
-  serialized_end=7899,
+  serialized_start=7835,
+  serialized_end=7976,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGGCROUTINGINFO_ROUTINGMETHOD)
 
@@ -160,8 +160,8 @@ _CMSGGCMSGSETOPTIONS_OPTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8671,
-  serialized_end=8781,
+  serialized_start=8748,
+  serialized_end=8858,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGGCMSGSETOPTIONS_OPTION)
 
@@ -182,8 +182,8 @@ _CMSGGCMSGSETOPTIONS_GCSQLVERSION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=8783,
-  serialized_end=8853,
+  serialized_start=8860,
+  serialized_end=8930,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGGCMSGSETOPTIONS_GCSQLVERSION)
 
@@ -232,8 +232,8 @@ _CMSGDPPARTNERMICROTXNSRESPONSE_EERRORCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=10159,
-  serialized_end=10410,
+  serialized_start=10236,
+  serialized_end=10487,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDPPARTNERMICROTXNSRESPONSE_EERRORCODE)
 
@@ -2808,6 +2808,27 @@ _CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='rt_identity_linked', full_name='dota.CGCSystemMsg_GetAccountDetails_Response.rt_identity_linked', index=32,
+      number=35, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rt_birth_date', full_name='dota.CGCSystemMsg_GetAccountDetails_Response.rt_birth_date', index=33,
+      number=36, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='txn_country_code', full_name='dota.CGCSystemMsg_GetAccountDetails_Response.txn_country_code', index=34,
+      number=37, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2821,7 +2842,7 @@ _CGCSYSTEMMSG_GETACCOUNTDETAILS_RESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=5199,
-  serialized_end=6095,
+  serialized_end=6172,
 )
 
 
@@ -2851,8 +2872,8 @@ _CMSGGCGETPERSONANAMES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6097,
-  serialized_end=6138,
+  serialized_start=6174,
+  serialized_end=6215,
 )
 
 
@@ -2889,8 +2910,8 @@ _CMSGGCGETPERSONANAMES_RESPONSE_PERSONANAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6284,
-  serialized_end=6336,
+  serialized_start=6361,
+  serialized_end=6413,
 )
 
 _CMSGGCGETPERSONANAMES_RESPONSE = _descriptor.Descriptor(
@@ -2926,8 +2947,8 @@ _CMSGGCGETPERSONANAMES_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6141,
-  serialized_end=6336,
+  serialized_start=6218,
+  serialized_end=6413,
 )
 
 
@@ -2964,8 +2985,8 @@ _CMSGGCCHECKFRIENDSHIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6338,
-  serialized_end=6406,
+  serialized_start=6415,
+  serialized_end=6483,
 )
 
 
@@ -3002,8 +3023,8 @@ _CMSGGCCHECKFRIENDSHIP_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6408,
-  serialized_end=6483,
+  serialized_start=6485,
+  serialized_end=6560,
 )
 
 
@@ -3040,8 +3061,8 @@ _CMSGGCGETAPPFRIENDSLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6485,
-  serialized_end=6566,
+  serialized_start=6562,
+  serialized_end=6643,
 )
 
 
@@ -3092,8 +3113,8 @@ _CMSGGCGETAPPFRIENDSLIST_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6568,
-  serialized_end=6692,
+  serialized_start=6645,
+  serialized_end=6769,
 )
 
 
@@ -3151,8 +3172,8 @@ _CMSGGCMSGMASTERSETDIRECTORY_SUBGC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6806,
-  serialized_end=6900,
+  serialized_start=6883,
+  serialized_end=6977,
 )
 
 _CMSGGCMSGMASTERSETDIRECTORY = _descriptor.Descriptor(
@@ -3188,8 +3209,8 @@ _CMSGGCMSGMASTERSETDIRECTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6695,
-  serialized_end=6900,
+  serialized_start=6772,
+  serialized_end=6977,
 )
 
 
@@ -3226,8 +3247,8 @@ _CMSGGCMSGMASTERSETDIRECTORY_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6902,
-  serialized_end=6977,
+  serialized_start=6979,
+  serialized_end=7054,
 )
 
 
@@ -3257,8 +3278,8 @@ _CMSGGCMSGWEBAPIJOBREQUESTFORWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6979,
-  serialized_end=7040,
+  serialized_start=7056,
+  serialized_end=7117,
 )
 
 
@@ -3288,8 +3309,8 @@ _CGCSYSTEMMSG_GETPURCHASETRUST_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7042,
-  serialized_end=7098,
+  serialized_start=7119,
+  serialized_end=7175,
 )
 
 
@@ -3340,8 +3361,8 @@ _CGCSYSTEMMSG_GETPURCHASETRUST_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7101,
-  serialized_end=7274,
+  serialized_start=7178,
+  serialized_end=7351,
 )
 
 
@@ -3399,8 +3420,8 @@ _CMSGGCHACCOUNTVACSTATUSCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7277,
-  serialized_end=7420,
+  serialized_start=7354,
+  serialized_end=7497,
 )
 
 
@@ -3430,8 +3451,8 @@ _CMSGGCGETPARTNERACCOUNTLINK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7422,
-  serialized_end=7468,
+  serialized_start=7499,
+  serialized_end=7545,
 )
 
 
@@ -3468,8 +3489,8 @@ _CMSGGCGETPARTNERACCOUNTLINK_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7470,
-  serialized_end=7539,
+  serialized_start=7547,
+  serialized_end=7616,
 )
 
 
@@ -3528,8 +3549,8 @@ _CMSGGCROUTINGINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7542,
-  serialized_end=7899,
+  serialized_start=7619,
+  serialized_end=7976,
 )
 
 
@@ -3573,8 +3594,8 @@ _CMSGGCMSGMASTERSETWEBAPIROUTING_ENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7999,
-  serialized_end=8093,
+  serialized_start=8076,
+  serialized_end=8170,
 )
 
 _CMSGGCMSGMASTERSETWEBAPIROUTING = _descriptor.Descriptor(
@@ -3603,8 +3624,8 @@ _CMSGGCMSGMASTERSETWEBAPIROUTING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7902,
-  serialized_end=8093,
+  serialized_start=7979,
+  serialized_end=8170,
 )
 
 
@@ -3641,8 +3662,8 @@ _CMSGGCMSGMASTERSETCLIENTMSGROUTING_ENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8199,
-  serialized_end=8266,
+  serialized_start=8276,
+  serialized_end=8343,
 )
 
 _CMSGGCMSGMASTERSETCLIENTMSGROUTING = _descriptor.Descriptor(
@@ -3671,8 +3692,8 @@ _CMSGGCMSGMASTERSETCLIENTMSGROUTING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8096,
-  serialized_end=8266,
+  serialized_start=8173,
+  serialized_end=8343,
 )
 
 
@@ -3702,8 +3723,8 @@ _CMSGGCMSGMASTERSETWEBAPIROUTING_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8268,
-  serialized_end=8330,
+  serialized_start=8345,
+  serialized_end=8407,
 )
 
 
@@ -3733,8 +3754,8 @@ _CMSGGCMSGMASTERSETCLIENTMSGROUTING_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8332,
-  serialized_end=8397,
+  serialized_start=8409,
+  serialized_end=8474,
 )
 
 
@@ -3771,8 +3792,8 @@ _CMSGGCMSGSETOPTIONS_MESSAGERANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8628,
-  serialized_end=8669,
+  serialized_start=8705,
+  serialized_end=8746,
 )
 
 _CMSGGCMSGSETOPTIONS = _descriptor.Descriptor(
@@ -3817,8 +3838,8 @@ _CMSGGCMSGSETOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8400,
-  serialized_end=8853,
+  serialized_start=8477,
+  serialized_end=8930,
 )
 
 
@@ -3855,8 +3876,8 @@ _CMSGGCHUPDATESESSION_EXTRAFIELD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9096,
-  serialized_end=9137,
+  serialized_start=9173,
+  serialized_end=9214,
 )
 
 _CMSGGCHUPDATESESSION = _descriptor.Descriptor(
@@ -3941,8 +3962,8 @@ _CMSGGCHUPDATESESSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8856,
-  serialized_end=9137,
+  serialized_start=8933,
+  serialized_end=9214,
 )
 
 
@@ -3979,8 +4000,8 @@ _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY_MULTIPLEGAMEINSTANCES = _descriptor.Descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9306,
-  serialized_end=9381,
+  serialized_start=9383,
+  serialized_end=9458,
 )
 
 _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY = _descriptor.Descriptor(
@@ -4023,8 +4044,8 @@ _CMSGNOTIFICATIONOFSUSPICIOUSACTIVITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9140,
-  serialized_end=9381,
+  serialized_start=9217,
+  serialized_end=9458,
 )
 
 
@@ -4166,8 +4187,8 @@ _CMSGDPPARTNERMICROTXNS_PARTNERMICROTXN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9570,
-  serialized_end=9917,
+  serialized_start=9647,
+  serialized_end=9994,
 )
 
 _CMSGDPPARTNERMICROTXNS_PARTNERINFO = _descriptor.Descriptor(
@@ -4217,8 +4238,8 @@ _CMSGDPPARTNERMICROTXNS_PARTNERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9919,
-  serialized_end=10020,
+  serialized_start=9996,
+  serialized_end=10097,
 )
 
 _CMSGDPPARTNERMICROTXNS = _descriptor.Descriptor(
@@ -4268,8 +4289,8 @@ _CMSGDPPARTNERMICROTXNS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9384,
-  serialized_end=10020,
+  serialized_start=9461,
+  serialized_end=10097,
 )
 
 
@@ -4307,8 +4328,8 @@ _CMSGDPPARTNERMICROTXNSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10023,
-  serialized_end=10410,
+  serialized_start=10100,
+  serialized_end=10487,
 )
 
 
@@ -4352,8 +4373,8 @@ _CMSGGCHVACVERIFICATIONCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10412,
-  serialized_end=10495,
+  serialized_start=10489,
+  serialized_end=10572,
 )
 
 
@@ -4397,8 +4418,8 @@ _CMSGGCHACCOUNTTWOFACTORCHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10497,
-  serialized_end=10587,
+  serialized_start=10574,
+  serialized_end=10664,
 )
 
 
@@ -4435,8 +4456,8 @@ _CMSGGCCHECKCLANMEMBERSHIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10589,
-  serialized_end=10649,
+  serialized_start=10666,
+  serialized_end=10726,
 )
 
 
@@ -4466,8 +4487,8 @@ _CMSGGCCHECKCLANMEMBERSHIP_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10651,
-  serialized_end=10705,
+  serialized_start=10728,
+  serialized_end=10782,
 )
 
 _CMSGPROTOBUFHEADER.fields_by_name['gc_msg_src'].enum_type = _GCPROTOBUFMSGSRC
