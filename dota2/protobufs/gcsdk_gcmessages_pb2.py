@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='gcsdk_gcmessages.proto',
   package='dota',
   syntax='proto2',
-  serialized_pb=_b('\n\x16gcsdk_gcmessages.proto\x12\x04\x64ota\x1a\x13steammessages.proto\"@\n\x0e\x43MsgSHA1Digest\x12\x0e\n\x06\x62lock1\x18\x01 \x02(\x06\x12\x0e\n\x06\x62lock2\x18\x02 \x02(\x06\x12\x0e\n\x06\x62lock3\x18\x03 \x02(\x07\")\n\rCMsgSOIDOwner\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\"\x88\x01\n\x12\x43MsgSOSingleObject\x12\x0f\n\x07type_id\x18\x02 \x01(\x05\x12\x13\n\x0bobject_data\x18\x03 \x01(\x0c\x12\x0f\n\x07version\x18\x04 \x01(\x06\x12\'\n\nowner_soid\x18\x05 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x06 \x01(\r\"\xef\x02\n\x15\x43MsgSOMultipleObjects\x12\x42\n\x10objects_modified\x18\x02 \x03(\x0b\x32(.dota.CMsgSOMultipleObjects.SingleObject\x12\x0f\n\x07version\x18\x03 \x01(\x06\x12?\n\robjects_added\x18\x04 \x03(\x0b\x32(.dota.CMsgSOMultipleObjects.SingleObject\x12\x41\n\x0fobjects_removed\x18\x05 \x03(\x0b\x32(.dota.CMsgSOMultipleObjects.SingleObject\x12\'\n\nowner_soid\x18\x06 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x07 \x01(\r\x1a@\n\x0cSingleObject\x12\x0f\n\x07type_id\x18\x01 \x01(\x05\x12\x13\n\x0bobject_data\x18\x02 \x01(\x0c:\n\x80\x97\"\x80\x02\x88\x97\"\x80\x08\"\x86\x02\n\x15\x43MsgSOCacheSubscribed\x12;\n\x07objects\x18\x02 \x03(\x0b\x32*.dota.CMsgSOCacheSubscribed.SubscribedType\x12\x0f\n\x07version\x18\x03 \x01(\x06\x12\'\n\nowner_soid\x18\x04 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x05 \x01(\r\x12\x14\n\x0cservice_list\x18\x06 \x03(\r\x12\x14\n\x0csync_version\x18\x07 \x01(\x06\x1a\x36\n\x0eSubscribedType\x12\x0f\n\x07type_id\x18\x01 \x01(\x05\x12\x13\n\x0bobject_data\x18\x02 \x03(\x0c\"\x99\x01\n\x1d\x43MsgSOCacheSubscribedUpToDate\x12\x0f\n\x07version\x18\x01 \x01(\x06\x12\'\n\nowner_soid\x18\x02 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x03 \x01(\r\x12\x14\n\x0cservice_list\x18\x04 \x03(\r\x12\x14\n\x0csync_version\x18\x05 \x01(\x06\"B\n\x17\x43MsgSOCacheUnsubscribed\x12\'\n\nowner_soid\x18\x02 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\"\x98\x01\n\x1c\x43MsgSOCacheSubscriptionCheck\x12\x0f\n\x07version\x18\x02 \x01(\x06\x12\'\n\nowner_soid\x18\x03 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x04 \x01(\r\x12\x14\n\x0cservice_list\x18\x05 \x03(\r\x12\x14\n\x0csync_version\x18\x06 \x01(\x06\"I\n\x1e\x43MsgSOCacheSubscriptionRefresh\x12\'\n\nowner_soid\x18\x02 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\"%\n\x12\x43MsgSOCacheVersion\x12\x0f\n\x07version\x18\x01 \x01(\x06\"L\n\x16\x43MsgGCMultiplexMessage\x12\x0f\n\x07msgtype\x18\x01 \x01(\r\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\x12\x10\n\x08steamids\x18\x03 \x03(\x06\"\xc0\x01\n\x13\x43GCToGCMsgMasterAck\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x14\n\x0cmachine_name\x18\x03 \x01(\t\x12\x14\n\x0cprocess_name\x18\x04 \x01(\t\x12\x34\n\tdirectory\x18\x06 \x03(\x0b\x32!.dota.CGCToGCMsgMasterAck.Process\x1a\x34\n\x07Process\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x16\n\x0etype_instances\x18\x02 \x03(\r\"2\n\x1c\x43GCToGCMsgMasterAck_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"7\n\x19\x43MsgGCToGCUniverseStartup\x12\x1a\n\x12is_initial_startup\x18\x01 \x01(\x08\"4\n!CMsgGCToGCUniverseStartupResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\x05\"\x93\x01\n\x1f\x43GCToGCMsgMasterStartupComplete\x12=\n\x07gc_info\x18\x01 \x03(\x0b\x32,.dota.CGCToGCMsgMasterStartupComplete.GCInfo\x1a\x31\n\x06GCInfo\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x14\n\x0cmachine_name\x18\x02 \x01(\t\"L\n\x10\x43GCToGCMsgRouted\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x13\n\x0bnet_message\x18\x03 \x01(\x0c\">\n\x15\x43GCToGCMsgRoutedReply\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x13\n\x0bnet_message\x18\x02 \x01(\x0c\"\x9a\x01\n\x1c\x43MsgGCUpdateSubGCSessionInfo\x12>\n\x07updates\x18\x01 \x03(\x0b\x32-.dota.CMsgGCUpdateSubGCSessionInfo.CMsgUpdate\x1a:\n\nCMsgUpdate\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\n\n\x02ip\x18\x02 \x01(\x07\x12\x0f\n\x07trusted\x18\x03 \x01(\x08\"0\n\x1d\x43MsgGCRequestSubGCSessionInfo\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"c\n%CMsgGCRequestSubGCSessionInfoResponse\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0f\n\x07trusted\x18\x02 \x01(\x08\x12\x0c\n\x04port\x18\x03 \x01(\r\x12\x0f\n\x07success\x18\x04 \x01(\x08\"}\n\x16\x43MsgSOCacheHaveVersion\x12!\n\x04soid\x18\x01 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x0f\n\x07version\x18\x02 \x01(\x06\x12\x12\n\nservice_id\x18\x03 \x01(\r\x12\x1b\n\x13\x63\x61\x63hed_file_version\x18\x04 \x01(\r\"\x9e\x02\n\x0f\x43MsgClientHello\x12\x0f\n\x07version\x18\x01 \x01(\r\x12;\n\x15socache_have_versions\x18\x02 \x03(\x0b\x32\x1c.dota.CMsgSOCacheHaveVersion\x12\x1b\n\x13\x63lient_session_need\x18\x03 \x01(\r\x12?\n\x0f\x63lient_launcher\x18\x04 \x01(\x0e\x32\x18.dota.PartnerAccountType:\x0cPARTNER_NONE\x12\x12\n\nsecret_key\x18\x05 \x01(\t\x12\x17\n\x0f\x63lient_language\x18\x06 \x01(\r\x12\x32\n\x06\x65ngine\x18\x07 \x01(\x0e\x32\x13.dota.ESourceEngine:\rk_ESE_Source1\"\xa0\x03\n\x11\x43MsgClientWelcome\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x11\n\tgame_data\x18\x02 \x01(\x0c\x12@\n\x1boutofdate_subscribed_caches\x18\x03 \x03(\x0b\x32\x1b.dota.CMsgSOCacheSubscribed\x12\x46\n\x1auptodate_subscribed_caches\x18\x04 \x03(\x0b\x32\".dota.CMsgSOCacheSubscriptionCheck\x12\x32\n\x08location\x18\x05 \x01(\x0b\x32 .dota.CMsgClientWelcome.Location\x12\x15\n\rsave_game_key\x18\x06 \x01(\x0c\x12\x17\n\x0fitem_schema_crc\x18\x07 \x01(\x07\x12\x16\n\x0eitems_game_url\x18\x08 \x01(\t\x12\x1f\n\x17gc_socache_file_version\x18\t \x01(\r\x1a@\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\"\xea\x01\n\x14\x43MsgConnectionStatus\x12I\n\x06status\x18\x01 \x01(\x0e\x32\x18.dota.GCConnectionStatus:\x1fGCConnectionStatus_HAVE_SESSION\x12\x1b\n\x13\x63lient_session_need\x18\x02 \x01(\r\x12\x16\n\x0equeue_position\x18\x03 \x01(\x05\x12\x12\n\nqueue_size\x18\x04 \x01(\x05\x12\x14\n\x0cwait_seconds\x18\x05 \x01(\x05\x12(\n estimated_wait_seconds_remaining\x18\x06 \x01(\x05\"\xfd\x01\n\x1a\x43MsgGCToGCSOCacheSubscribe\x12\x12\n\nsubscriber\x18\x01 \x01(\x06\x12\x17\n\x0fsubscribe_to_id\x18\x02 \x01(\x06\x12\x14\n\x0csync_version\x18\x03 \x01(\x06\x12H\n\rhave_versions\x18\x04 \x03(\x0b\x32\x31.dota.CMsgGCToGCSOCacheSubscribe.CMsgHaveVersions\x12\x19\n\x11subscribe_to_type\x18\x05 \x01(\r\x1a\x37\n\x10\x43MsgHaveVersions\x12\x12\n\nservice_id\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"n\n\x1c\x43MsgGCToGCSOCacheUnsubscribe\x12\x12\n\nsubscriber\x18\x01 \x01(\x06\x12\x1b\n\x13unsubscribe_from_id\x18\x02 \x01(\x06\x12\x1d\n\x15unsubscribe_from_type\x18\x03 \x01(\r\"\x12\n\x10\x43MsgGCClientPing\"\x8f\x01\n\x1f\x43MsgGCToGCForwardAccountDetails\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x46\n\x0f\x61\x63\x63ount_details\x18\x02 \x01(\x0b\x32-.dota.CGCSystemMsg_GetAccountDetails_Response\x12\x13\n\x0b\x61ge_seconds\x18\x03 \x01(\r\"z\n\x1c\x43MsgGCToGCLoadSessionSOCache\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x46\n\x17\x66orward_account_details\x18\x02 \x01(\x0b\x32%.dota.CMsgGCToGCForwardAccountDetails\"&\n$CMsgGCToGCLoadSessionSOCacheResponse\"f\n\x1c\x43MsgGCToGCUpdateSessionStats\x12\x15\n\ruser_sessions\x18\x01 \x01(\r\x12\x17\n\x0fserver_sessions\x18\x02 \x01(\r\x12\x16\n\x0ein_logon_surge\x18\x03 \x01(\x08\"\xf7\x02\n*CWorkshop_PopulateItemDescriptions_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x61\n\tlanguages\x18\x02 \x03(\x0b\x32N.dota.CWorkshop_PopulateItemDescriptions_Request.ItemDescriptionsLanguageBlock\x1a\x45\n\x15SingleItemDescription\x12\x12\n\ngameitemid\x18\x01 \x01(\r\x12\x18\n\x10item_description\x18\x02 \x01(\t\x1a\x8f\x01\n\x1dItemDescriptionsLanguageBlock\x12\x10\n\x08language\x18\x01 \x01(\t\x12\\\n\x0c\x64\x65scriptions\x18\x02 \x03(\x0b\x32\x46.dota.CWorkshop_PopulateItemDescriptions_Request.SingleItemDescription\"F\n!CWorkshop_GetContributors_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\ngameitemid\x18\x02 \x01(\r\":\n\"CWorkshop_GetContributors_Response\x12\x14\n\x0c\x63ontributors\x18\x01 \x03(\x06\"\xdf\x03\n%CWorkshop_SetItemPaymentRules_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\ngameitemid\x18\x02 \x01(\r\x12\x66\n\x19\x61ssociated_workshop_files\x18\x03 \x03(\x0b\x32\x43.dota.CWorkshop_SetItemPaymentRules_Request.WorkshopItemPaymentRule\x12\\\n\x10partner_accounts\x18\x04 \x03(\x0b\x32\x42.dota.CWorkshop_SetItemPaymentRules_Request.PartnerItemPaymentRule\x1ai\n\x17WorkshopItemPaymentRule\x12\x18\n\x10workshop_file_id\x18\x01 \x01(\x04\x12\x1a\n\x12revenue_percentage\x18\x02 \x01(\x02\x12\x18\n\x10rule_description\x18\x03 \x01(\t\x1a\x62\n\x16PartnerItemPaymentRule\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1a\n\x12revenue_percentage\x18\x02 \x01(\x02\x12\x18\n\x10rule_description\x18\x03 \x01(\t\"(\n&CWorkshop_SetItemPaymentRules_Response\"p\n$CBroadcast_PostGameDataFrame_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x06\x12\x14\n\x0c\x62roadcast_id\x18\x03 \x01(\x06\x12\x12\n\nframe_data\x18\x04 \x01(\x0c\"\x8b\x03\n\x15\x43MsgSerializedSOCache\x12\x14\n\x0c\x66ile_version\x18\x01 \x01(\r\x12\x31\n\x06\x63\x61\x63hes\x18\x02 \x03(\x0b\x32!.dota.CMsgSerializedSOCache.Cache\x12\x1f\n\x17gc_socache_file_version\x18\x03 \x01(\r\x1a>\n\tTypeCache\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07objects\x18\x02 \x03(\x0c\x12\x12\n\nservice_id\x18\x03 \x01(\r\x1a\xc7\x01\n\x05\x43\x61\x63he\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\x12;\n\x08versions\x18\x03 \x03(\x0b\x32).dota.CMsgSerializedSOCache.Cache.Version\x12:\n\x0btype_caches\x18\x04 \x03(\x0b\x32%.dota.CMsgSerializedSOCache.TypeCache\x1a+\n\x07Version\x12\x0f\n\x07service\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"G\n\x1f\x43MsgGCToClientPollConvarRequest\x12\x13\n\x0b\x63onvar_name\x18\x01 \x01(\t\x12\x0f\n\x07poll_id\x18\x02 \x01(\r\"I\n CMsgGCToClientPollConvarResponse\x12\x0f\n\x07poll_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63onvar_value\x18\x02 \x01(\t\"E\n\x1b\x43GCMsgCompressedMsgToClient\x12\x0e\n\x06msg_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63ompressed_msg\x18\x02 \x01(\x0c*5\n\rESourceEngine\x12\x11\n\rk_ESE_Source1\x10\x00\x12\x11\n\rk_ESE_Source2\x10\x01*i\n\x12PartnerAccountType\x12\x10\n\x0cPARTNER_NONE\x10\x00\x12\x19\n\x15PARTNER_PERFECT_WORLD\x10\x01\x12\x11\n\rPARTNER_NEXON\x10\x02\x12\x13\n\x0fPARTNER_INVALID\x10\x03*\xa0\x02\n\x12GCConnectionStatus\x12#\n\x1fGCConnectionStatus_HAVE_SESSION\x10\x00\x12$\n GCConnectionStatus_GC_GOING_DOWN\x10\x01\x12!\n\x1dGCConnectionStatus_NO_SESSION\x10\x02\x12\x30\n,GCConnectionStatus_NO_SESSION_IN_LOGON_QUEUE\x10\x03\x12\x1f\n\x1bGCConnectionStatus_NO_STEAM\x10\x04\x12 \n\x1cGCConnectionStatus_SUSPENDED\x10\x05\x12\'\n#GCConnectionStatus_STEAM_GOING_DOWN\x10\x06\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x16gcsdk_gcmessages.proto\x12\x04\x64ota\x1a\x13steammessages.proto\"@\n\x0e\x43MsgSHA1Digest\x12\x0e\n\x06\x62lock1\x18\x01 \x02(\x06\x12\x0e\n\x06\x62lock2\x18\x02 \x02(\x06\x12\x0e\n\x06\x62lock3\x18\x03 \x02(\x07\")\n\rCMsgSOIDOwner\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\"\x88\x01\n\x12\x43MsgSOSingleObject\x12\x0f\n\x07type_id\x18\x02 \x01(\x05\x12\x13\n\x0bobject_data\x18\x03 \x01(\x0c\x12\x0f\n\x07version\x18\x04 \x01(\x06\x12\'\n\nowner_soid\x18\x05 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x06 \x01(\r\"\xef\x02\n\x15\x43MsgSOMultipleObjects\x12\x42\n\x10objects_modified\x18\x02 \x03(\x0b\x32(.dota.CMsgSOMultipleObjects.SingleObject\x12\x0f\n\x07version\x18\x03 \x01(\x06\x12?\n\robjects_added\x18\x04 \x03(\x0b\x32(.dota.CMsgSOMultipleObjects.SingleObject\x12\x41\n\x0fobjects_removed\x18\x05 \x03(\x0b\x32(.dota.CMsgSOMultipleObjects.SingleObject\x12\'\n\nowner_soid\x18\x06 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x07 \x01(\r\x1a@\n\x0cSingleObject\x12\x0f\n\x07type_id\x18\x01 \x01(\x05\x12\x13\n\x0bobject_data\x18\x02 \x01(\x0c:\n\x80\x97\"\x80\x02\x88\x97\"\x80\x08\"\x86\x02\n\x15\x43MsgSOCacheSubscribed\x12;\n\x07objects\x18\x02 \x03(\x0b\x32*.dota.CMsgSOCacheSubscribed.SubscribedType\x12\x0f\n\x07version\x18\x03 \x01(\x06\x12\'\n\nowner_soid\x18\x04 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x05 \x01(\r\x12\x14\n\x0cservice_list\x18\x06 \x03(\r\x12\x14\n\x0csync_version\x18\x07 \x01(\x06\x1a\x36\n\x0eSubscribedType\x12\x0f\n\x07type_id\x18\x01 \x01(\x05\x12\x13\n\x0bobject_data\x18\x02 \x03(\x0c\"\x99\x01\n\x1d\x43MsgSOCacheSubscribedUpToDate\x12\x0f\n\x07version\x18\x01 \x01(\x06\x12\'\n\nowner_soid\x18\x02 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x03 \x01(\r\x12\x14\n\x0cservice_list\x18\x04 \x03(\r\x12\x14\n\x0csync_version\x18\x05 \x01(\x06\"B\n\x17\x43MsgSOCacheUnsubscribed\x12\'\n\nowner_soid\x18\x02 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\"\x98\x01\n\x1c\x43MsgSOCacheSubscriptionCheck\x12\x0f\n\x07version\x18\x02 \x01(\x06\x12\'\n\nowner_soid\x18\x03 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x12\n\nservice_id\x18\x04 \x01(\r\x12\x14\n\x0cservice_list\x18\x05 \x03(\r\x12\x14\n\x0csync_version\x18\x06 \x01(\x06\"I\n\x1e\x43MsgSOCacheSubscriptionRefresh\x12\'\n\nowner_soid\x18\x02 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\"%\n\x12\x43MsgSOCacheVersion\x12\x0f\n\x07version\x18\x01 \x01(\x06\"L\n\x16\x43MsgGCMultiplexMessage\x12\x0f\n\x07msgtype\x18\x01 \x01(\r\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\x12\x10\n\x08steamids\x18\x03 \x03(\x06\"\xc0\x01\n\x13\x43GCToGCMsgMasterAck\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x14\n\x0cmachine_name\x18\x03 \x01(\t\x12\x14\n\x0cprocess_name\x18\x04 \x01(\t\x12\x34\n\tdirectory\x18\x06 \x03(\x0b\x32!.dota.CGCToGCMsgMasterAck.Process\x1a\x34\n\x07Process\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x16\n\x0etype_instances\x18\x02 \x03(\r\"2\n\x1c\x43GCToGCMsgMasterAck_Response\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"7\n\x19\x43MsgGCToGCUniverseStartup\x12\x1a\n\x12is_initial_startup\x18\x01 \x01(\x08\"4\n!CMsgGCToGCUniverseStartupResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\x05\"\x93\x01\n\x1f\x43GCToGCMsgMasterStartupComplete\x12=\n\x07gc_info\x18\x01 \x03(\x0b\x32,.dota.CGCToGCMsgMasterStartupComplete.GCInfo\x1a\x31\n\x06GCInfo\x12\x11\n\tdir_index\x18\x01 \x01(\r\x12\x14\n\x0cmachine_name\x18\x02 \x01(\t\"L\n\x10\x43GCToGCMsgRouted\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x13\n\x0bnet_message\x18\x03 \x01(\x0c\">\n\x15\x43GCToGCMsgRoutedReply\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x13\n\x0bnet_message\x18\x02 \x01(\x0c\"\x9a\x01\n\x1c\x43MsgGCUpdateSubGCSessionInfo\x12>\n\x07updates\x18\x01 \x03(\x0b\x32-.dota.CMsgGCUpdateSubGCSessionInfo.CMsgUpdate\x1a:\n\nCMsgUpdate\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\n\n\x02ip\x18\x02 \x01(\x07\x12\x0f\n\x07trusted\x18\x03 \x01(\x08\"0\n\x1d\x43MsgGCRequestSubGCSessionInfo\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"c\n%CMsgGCRequestSubGCSessionInfoResponse\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0f\n\x07trusted\x18\x02 \x01(\x08\x12\x0c\n\x04port\x18\x03 \x01(\r\x12\x0f\n\x07success\x18\x04 \x01(\x08\"}\n\x16\x43MsgSOCacheHaveVersion\x12!\n\x04soid\x18\x01 \x01(\x0b\x32\x13.dota.CMsgSOIDOwner\x12\x0f\n\x07version\x18\x02 \x01(\x06\x12\x12\n\nservice_id\x18\x03 \x01(\r\x12\x1b\n\x13\x63\x61\x63hed_file_version\x18\x04 \x01(\r\"\x9e\x02\n\x0f\x43MsgClientHello\x12\x0f\n\x07version\x18\x01 \x01(\r\x12;\n\x15socache_have_versions\x18\x02 \x03(\x0b\x32\x1c.dota.CMsgSOCacheHaveVersion\x12\x1b\n\x13\x63lient_session_need\x18\x03 \x01(\r\x12?\n\x0f\x63lient_launcher\x18\x04 \x01(\x0e\x32\x18.dota.PartnerAccountType:\x0cPARTNER_NONE\x12\x12\n\nsecret_key\x18\x05 \x01(\t\x12\x17\n\x0f\x63lient_language\x18\x06 \x01(\r\x12\x32\n\x06\x65ngine\x18\x07 \x01(\x0e\x32\x13.dota.ESourceEngine:\rk_ESE_Source1\"\xba\x03\n\x11\x43MsgClientWelcome\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x11\n\tgame_data\x18\x02 \x01(\x0c\x12@\n\x1boutofdate_subscribed_caches\x18\x03 \x03(\x0b\x32\x1b.dota.CMsgSOCacheSubscribed\x12\x46\n\x1auptodate_subscribed_caches\x18\x04 \x03(\x0b\x32\".dota.CMsgSOCacheSubscriptionCheck\x12\x32\n\x08location\x18\x05 \x01(\x0b\x32 .dota.CMsgClientWelcome.Location\x12\x15\n\rsave_game_key\x18\x06 \x01(\x0c\x12\x17\n\x0fitem_schema_crc\x18\x07 \x01(\x07\x12\x16\n\x0eitems_game_url\x18\x08 \x01(\t\x12\x1f\n\x17gc_socache_file_version\x18\t \x01(\r\x12\x18\n\x10txn_country_code\x18\n \x01(\t\x1a@\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\"\xea\x01\n\x14\x43MsgConnectionStatus\x12I\n\x06status\x18\x01 \x01(\x0e\x32\x18.dota.GCConnectionStatus:\x1fGCConnectionStatus_HAVE_SESSION\x12\x1b\n\x13\x63lient_session_need\x18\x02 \x01(\r\x12\x16\n\x0equeue_position\x18\x03 \x01(\x05\x12\x12\n\nqueue_size\x18\x04 \x01(\x05\x12\x14\n\x0cwait_seconds\x18\x05 \x01(\x05\x12(\n estimated_wait_seconds_remaining\x18\x06 \x01(\x05\"\xfd\x01\n\x1a\x43MsgGCToGCSOCacheSubscribe\x12\x12\n\nsubscriber\x18\x01 \x01(\x06\x12\x17\n\x0fsubscribe_to_id\x18\x02 \x01(\x06\x12\x14\n\x0csync_version\x18\x03 \x01(\x06\x12H\n\rhave_versions\x18\x04 \x03(\x0b\x32\x31.dota.CMsgGCToGCSOCacheSubscribe.CMsgHaveVersions\x12\x19\n\x11subscribe_to_type\x18\x05 \x01(\r\x1a\x37\n\x10\x43MsgHaveVersions\x12\x12\n\nservice_id\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"n\n\x1c\x43MsgGCToGCSOCacheUnsubscribe\x12\x12\n\nsubscriber\x18\x01 \x01(\x06\x12\x1b\n\x13unsubscribe_from_id\x18\x02 \x01(\x06\x12\x1d\n\x15unsubscribe_from_type\x18\x03 \x01(\r\"\x12\n\x10\x43MsgGCClientPing\"\x8f\x01\n\x1f\x43MsgGCToGCForwardAccountDetails\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x46\n\x0f\x61\x63\x63ount_details\x18\x02 \x01(\x0b\x32-.dota.CGCSystemMsg_GetAccountDetails_Response\x12\x13\n\x0b\x61ge_seconds\x18\x03 \x01(\r\"z\n\x1c\x43MsgGCToGCLoadSessionSOCache\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x46\n\x17\x66orward_account_details\x18\x02 \x01(\x0b\x32%.dota.CMsgGCToGCForwardAccountDetails\"&\n$CMsgGCToGCLoadSessionSOCacheResponse\"f\n\x1c\x43MsgGCToGCUpdateSessionStats\x12\x15\n\ruser_sessions\x18\x01 \x01(\r\x12\x17\n\x0fserver_sessions\x18\x02 \x01(\r\x12\x16\n\x0ein_logon_surge\x18\x03 \x01(\x08\"\xf7\x02\n*CWorkshop_PopulateItemDescriptions_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x61\n\tlanguages\x18\x02 \x03(\x0b\x32N.dota.CWorkshop_PopulateItemDescriptions_Request.ItemDescriptionsLanguageBlock\x1a\x45\n\x15SingleItemDescription\x12\x12\n\ngameitemid\x18\x01 \x01(\r\x12\x18\n\x10item_description\x18\x02 \x01(\t\x1a\x8f\x01\n\x1dItemDescriptionsLanguageBlock\x12\x10\n\x08language\x18\x01 \x01(\t\x12\\\n\x0c\x64\x65scriptions\x18\x02 \x03(\x0b\x32\x46.dota.CWorkshop_PopulateItemDescriptions_Request.SingleItemDescription\"F\n!CWorkshop_GetContributors_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\ngameitemid\x18\x02 \x01(\r\":\n\"CWorkshop_GetContributors_Response\x12\x14\n\x0c\x63ontributors\x18\x01 \x03(\x06\"\xdf\x03\n%CWorkshop_SetItemPaymentRules_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\ngameitemid\x18\x02 \x01(\r\x12\x66\n\x19\x61ssociated_workshop_files\x18\x03 \x03(\x0b\x32\x43.dota.CWorkshop_SetItemPaymentRules_Request.WorkshopItemPaymentRule\x12\\\n\x10partner_accounts\x18\x04 \x03(\x0b\x32\x42.dota.CWorkshop_SetItemPaymentRules_Request.PartnerItemPaymentRule\x1ai\n\x17WorkshopItemPaymentRule\x12\x18\n\x10workshop_file_id\x18\x01 \x01(\x04\x12\x1a\n\x12revenue_percentage\x18\x02 \x01(\x02\x12\x18\n\x10rule_description\x18\x03 \x01(\t\x1a\x62\n\x16PartnerItemPaymentRule\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1a\n\x12revenue_percentage\x18\x02 \x01(\x02\x12\x18\n\x10rule_description\x18\x03 \x01(\t\"(\n&CWorkshop_SetItemPaymentRules_Response\"p\n$CBroadcast_PostGameDataFrame_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x06\x12\x14\n\x0c\x62roadcast_id\x18\x03 \x01(\x06\x12\x12\n\nframe_data\x18\x04 \x01(\x0c\"\x8b\x03\n\x15\x43MsgSerializedSOCache\x12\x14\n\x0c\x66ile_version\x18\x01 \x01(\r\x12\x31\n\x06\x63\x61\x63hes\x18\x02 \x03(\x0b\x32!.dota.CMsgSerializedSOCache.Cache\x12\x1f\n\x17gc_socache_file_version\x18\x03 \x01(\r\x1a>\n\tTypeCache\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07objects\x18\x02 \x03(\x0c\x12\x12\n\nservice_id\x18\x03 \x01(\r\x1a\xc7\x01\n\x05\x43\x61\x63he\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\x04\x12;\n\x08versions\x18\x03 \x03(\x0b\x32).dota.CMsgSerializedSOCache.Cache.Version\x12:\n\x0btype_caches\x18\x04 \x03(\x0b\x32%.dota.CMsgSerializedSOCache.TypeCache\x1a+\n\x07Version\x12\x0f\n\x07service\x18\x01 \x01(\r\x12\x0f\n\x07version\x18\x02 \x01(\x04\"G\n\x1f\x43MsgGCToClientPollConvarRequest\x12\x13\n\x0b\x63onvar_name\x18\x01 \x01(\t\x12\x0f\n\x07poll_id\x18\x02 \x01(\r\"I\n CMsgGCToClientPollConvarResponse\x12\x0f\n\x07poll_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63onvar_value\x18\x02 \x01(\t\"E\n\x1b\x43GCMsgCompressedMsgToClient\x12\x0e\n\x06msg_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63ompressed_msg\x18\x02 \x01(\x0c\"\x8e\x01\n CMsgGCToGCMasterBroadcastMessage\x12\x18\n\x10users_per_second\x18\x01 \x01(\r\x12\x15\n\rsend_to_users\x18\x02 \x01(\x08\x12\x17\n\x0fsend_to_servers\x18\x03 \x01(\x08\x12\x0e\n\x06msg_id\x18\x04 \x01(\r\x12\x10\n\x08msg_data\x18\x05 \x01(\x0c\"n\n CMsgGCToGCMasterSubscribeToCache\x12\x11\n\tsoid_type\x18\x01 \x01(\r\x12\x0f\n\x07soid_id\x18\x02 \x01(\x06\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x03 \x03(\r\x12\x11\n\tsteam_ids\x18\x04 \x03(\x06\"*\n(CMsgGCToGCMasterSubscribeToCacheResponse\"f\n%CMsgGCToGCMasterSubscribeToCacheAsync\x12=\n\rsubscribe_msg\x18\x01 \x01(\x0b\x32&.dota.CMsgGCToGCMasterSubscribeToCache\"r\n$CMsgGCToGCMasterUnsubscribeFromCache\x12\x11\n\tsoid_type\x18\x01 \x01(\r\x12\x0f\n\x07soid_id\x18\x02 \x01(\x06\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x03 \x03(\r\x12\x11\n\tsteam_ids\x18\x04 \x03(\x06\"B\n\x1c\x43MsgGCToGCMasterDestroyCache\x12\x11\n\tsoid_type\x18\x01 \x01(\r\x12\x0f\n\x07soid_id\x18\x02 \x01(\x06*5\n\rESourceEngine\x12\x11\n\rk_ESE_Source1\x10\x00\x12\x11\n\rk_ESE_Source2\x10\x01*i\n\x12PartnerAccountType\x12\x10\n\x0cPARTNER_NONE\x10\x00\x12\x19\n\x15PARTNER_PERFECT_WORLD\x10\x01\x12\x11\n\rPARTNER_NEXON\x10\x02\x12\x13\n\x0fPARTNER_INVALID\x10\x03*\xa0\x02\n\x12GCConnectionStatus\x12#\n\x1fGCConnectionStatus_HAVE_SESSION\x10\x00\x12$\n GCConnectionStatus_GC_GOING_DOWN\x10\x01\x12!\n\x1dGCConnectionStatus_NO_SESSION\x10\x02\x12\x30\n,GCConnectionStatus_NO_SESSION_IN_LOGON_QUEUE\x10\x03\x12\x1f\n\x1bGCConnectionStatus_NO_STEAM\x10\x04\x12 \n\x1cGCConnectionStatus_SUSPENDED\x10\x05\x12\'\n#GCConnectionStatus_STEAM_GOING_DOWN\x10\x06\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[steammessages__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -43,8 +43,8 @@ _ESOURCEENGINE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6104,
-  serialized_end=6157,
+  serialized_start=6719,
+  serialized_end=6772,
 )
 _sym_db.RegisterEnumDescriptor(_ESOURCEENGINE)
 
@@ -74,8 +74,8 @@ _PARTNERACCOUNTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6159,
-  serialized_end=6264,
+  serialized_start=6774,
+  serialized_end=6879,
 )
 _sym_db.RegisterEnumDescriptor(_PARTNERACCOUNTTYPE)
 
@@ -117,8 +117,8 @@ _GCCONNECTIONSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6267,
-  serialized_end=6555,
+  serialized_start=6882,
+  serialized_end=7170,
 )
 _sym_db.RegisterEnumDescriptor(_GCCONNECTIONSTATUS)
 
@@ -1399,8 +1399,8 @@ _CMSGCLIENTWELCOME_LOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3234,
-  serialized_end=3298,
+  serialized_start=3260,
+  serialized_end=3324,
 )
 
 _CMSGCLIENTWELCOME = _descriptor.Descriptor(
@@ -1473,6 +1473,13 @@ _CMSGCLIENTWELCOME = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='txn_country_code', full_name='dota.CMsgClientWelcome.txn_country_code', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1486,7 +1493,7 @@ _CMSGCLIENTWELCOME = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=2882,
-  serialized_end=3298,
+  serialized_end=3324,
 )
 
 
@@ -1551,8 +1558,8 @@ _CMSGCONNECTIONSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3301,
-  serialized_end=3535,
+  serialized_start=3327,
+  serialized_end=3561,
 )
 
 
@@ -1589,8 +1596,8 @@ _CMSGGCTOGCSOCACHESUBSCRIBE_CMSGHAVEVERSIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3736,
-  serialized_end=3791,
+  serialized_start=3762,
+  serialized_end=3817,
 )
 
 _CMSGGCTOGCSOCACHESUBSCRIBE = _descriptor.Descriptor(
@@ -1647,8 +1654,8 @@ _CMSGGCTOGCSOCACHESUBSCRIBE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3538,
-  serialized_end=3791,
+  serialized_start=3564,
+  serialized_end=3817,
 )
 
 
@@ -1692,8 +1699,8 @@ _CMSGGCTOGCSOCACHEUNSUBSCRIBE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3793,
-  serialized_end=3903,
+  serialized_start=3819,
+  serialized_end=3929,
 )
 
 
@@ -1716,8 +1723,8 @@ _CMSGGCCLIENTPING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3905,
-  serialized_end=3923,
+  serialized_start=3931,
+  serialized_end=3949,
 )
 
 
@@ -1761,8 +1768,8 @@ _CMSGGCTOGCFORWARDACCOUNTDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3926,
-  serialized_end=4069,
+  serialized_start=3952,
+  serialized_end=4095,
 )
 
 
@@ -1799,8 +1806,8 @@ _CMSGGCTOGCLOADSESSIONSOCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4071,
-  serialized_end=4193,
+  serialized_start=4097,
+  serialized_end=4219,
 )
 
 
@@ -1823,8 +1830,8 @@ _CMSGGCTOGCLOADSESSIONSOCACHERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4195,
-  serialized_end=4233,
+  serialized_start=4221,
+  serialized_end=4259,
 )
 
 
@@ -1868,8 +1875,8 @@ _CMSGGCTOGCUPDATESESSIONSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4235,
-  serialized_end=4337,
+  serialized_start=4261,
+  serialized_end=4363,
 )
 
 
@@ -1906,8 +1913,8 @@ _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_SINGLEITEMDESCRIPTION = _descriptor.
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4500,
-  serialized_end=4569,
+  serialized_start=4526,
+  serialized_end=4595,
 )
 
 _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_ITEMDESCRIPTIONSLANGUAGEBLOCK = _descriptor.Descriptor(
@@ -1943,8 +1950,8 @@ _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST_ITEMDESCRIPTIONSLANGUAGEBLOCK = _des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4572,
-  serialized_end=4715,
+  serialized_start=4598,
+  serialized_end=4741,
 )
 
 _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST = _descriptor.Descriptor(
@@ -1980,8 +1987,8 @@ _CWORKSHOP_POPULATEITEMDESCRIPTIONS_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4340,
-  serialized_end=4715,
+  serialized_start=4366,
+  serialized_end=4741,
 )
 
 
@@ -2018,8 +2025,8 @@ _CWORKSHOP_GETCONTRIBUTORS_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4717,
-  serialized_end=4787,
+  serialized_start=4743,
+  serialized_end=4813,
 )
 
 
@@ -2049,8 +2056,8 @@ _CWORKSHOP_GETCONTRIBUTORS_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4789,
-  serialized_end=4847,
+  serialized_start=4815,
+  serialized_end=4873,
 )
 
 
@@ -2094,8 +2101,8 @@ _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST_WORKSHOPITEMPAYMENTRULE = _descriptor.Des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5124,
-  serialized_end=5229,
+  serialized_start=5150,
+  serialized_end=5255,
 )
 
 _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST_PARTNERITEMPAYMENTRULE = _descriptor.Descriptor(
@@ -2138,8 +2145,8 @@ _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST_PARTNERITEMPAYMENTRULE = _descriptor.Desc
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5231,
-  serialized_end=5329,
+  serialized_start=5257,
+  serialized_end=5355,
 )
 
 _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST = _descriptor.Descriptor(
@@ -2189,8 +2196,8 @@ _CWORKSHOP_SETITEMPAYMENTRULES_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4850,
-  serialized_end=5329,
+  serialized_start=4876,
+  serialized_end=5355,
 )
 
 
@@ -2213,8 +2220,8 @@ _CWORKSHOP_SETITEMPAYMENTRULES_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5331,
-  serialized_end=5371,
+  serialized_start=5357,
+  serialized_end=5397,
 )
 
 
@@ -2265,8 +2272,8 @@ _CBROADCAST_POSTGAMEDATAFRAME_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5373,
-  serialized_end=5485,
+  serialized_start=5399,
+  serialized_end=5511,
 )
 
 
@@ -2310,8 +2317,8 @@ _CMSGSERIALIZEDSOCACHE_TYPECACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5619,
-  serialized_end=5681,
+  serialized_start=5645,
+  serialized_end=5707,
 )
 
 _CMSGSERIALIZEDSOCACHE_CACHE_VERSION = _descriptor.Descriptor(
@@ -2347,8 +2354,8 @@ _CMSGSERIALIZEDSOCACHE_CACHE_VERSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5840,
-  serialized_end=5883,
+  serialized_start=5866,
+  serialized_end=5909,
 )
 
 _CMSGSERIALIZEDSOCACHE_CACHE = _descriptor.Descriptor(
@@ -2398,8 +2405,8 @@ _CMSGSERIALIZEDSOCACHE_CACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5684,
-  serialized_end=5883,
+  serialized_start=5710,
+  serialized_end=5909,
 )
 
 _CMSGSERIALIZEDSOCACHE = _descriptor.Descriptor(
@@ -2442,8 +2449,8 @@ _CMSGSERIALIZEDSOCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5488,
-  serialized_end=5883,
+  serialized_start=5514,
+  serialized_end=5909,
 )
 
 
@@ -2480,8 +2487,8 @@ _CMSGGCTOCLIENTPOLLCONVARREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5885,
-  serialized_end=5956,
+  serialized_start=5911,
+  serialized_end=5982,
 )
 
 
@@ -2518,8 +2525,8 @@ _CMSGGCTOCLIENTPOLLCONVARRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5958,
-  serialized_end=6031,
+  serialized_start=5984,
+  serialized_end=6057,
 )
 
 
@@ -2556,8 +2563,264 @@ _CGCMSGCOMPRESSEDMSGTOCLIENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6033,
-  serialized_end=6102,
+  serialized_start=6059,
+  serialized_end=6128,
+)
+
+
+_CMSGGCTOGCMASTERBROADCASTMESSAGE = _descriptor.Descriptor(
+  name='CMsgGCToGCMasterBroadcastMessage',
+  full_name='dota.CMsgGCToGCMasterBroadcastMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='users_per_second', full_name='dota.CMsgGCToGCMasterBroadcastMessage.users_per_second', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='send_to_users', full_name='dota.CMsgGCToGCMasterBroadcastMessage.send_to_users', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='send_to_servers', full_name='dota.CMsgGCToGCMasterBroadcastMessage.send_to_servers', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='msg_id', full_name='dota.CMsgGCToGCMasterBroadcastMessage.msg_id', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='msg_data', full_name='dota.CMsgGCToGCMasterBroadcastMessage.msg_data', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6131,
+  serialized_end=6273,
+)
+
+
+_CMSGGCTOGCMASTERSUBSCRIBETOCACHE = _descriptor.Descriptor(
+  name='CMsgGCToGCMasterSubscribeToCache',
+  full_name='dota.CMsgGCToGCMasterSubscribeToCache',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='soid_type', full_name='dota.CMsgGCToGCMasterSubscribeToCache.soid_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='soid_id', full_name='dota.CMsgGCToGCMasterSubscribeToCache.soid_id', index=1,
+      number=2, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='account_ids', full_name='dota.CMsgGCToGCMasterSubscribeToCache.account_ids', index=2,
+      number=3, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='steam_ids', full_name='dota.CMsgGCToGCMasterSubscribeToCache.steam_ids', index=3,
+      number=4, type=6, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6275,
+  serialized_end=6385,
+)
+
+
+_CMSGGCTOGCMASTERSUBSCRIBETOCACHERESPONSE = _descriptor.Descriptor(
+  name='CMsgGCToGCMasterSubscribeToCacheResponse',
+  full_name='dota.CMsgGCToGCMasterSubscribeToCacheResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6387,
+  serialized_end=6429,
+)
+
+
+_CMSGGCTOGCMASTERSUBSCRIBETOCACHEASYNC = _descriptor.Descriptor(
+  name='CMsgGCToGCMasterSubscribeToCacheAsync',
+  full_name='dota.CMsgGCToGCMasterSubscribeToCacheAsync',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='subscribe_msg', full_name='dota.CMsgGCToGCMasterSubscribeToCacheAsync.subscribe_msg', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6431,
+  serialized_end=6533,
+)
+
+
+_CMSGGCTOGCMASTERUNSUBSCRIBEFROMCACHE = _descriptor.Descriptor(
+  name='CMsgGCToGCMasterUnsubscribeFromCache',
+  full_name='dota.CMsgGCToGCMasterUnsubscribeFromCache',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='soid_type', full_name='dota.CMsgGCToGCMasterUnsubscribeFromCache.soid_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='soid_id', full_name='dota.CMsgGCToGCMasterUnsubscribeFromCache.soid_id', index=1,
+      number=2, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='account_ids', full_name='dota.CMsgGCToGCMasterUnsubscribeFromCache.account_ids', index=2,
+      number=3, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='steam_ids', full_name='dota.CMsgGCToGCMasterUnsubscribeFromCache.steam_ids', index=3,
+      number=4, type=6, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6535,
+  serialized_end=6649,
+)
+
+
+_CMSGGCTOGCMASTERDESTROYCACHE = _descriptor.Descriptor(
+  name='CMsgGCToGCMasterDestroyCache',
+  full_name='dota.CMsgGCToGCMasterDestroyCache',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='soid_type', full_name='dota.CMsgGCToGCMasterDestroyCache.soid_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='soid_id', full_name='dota.CMsgGCToGCMasterDestroyCache.soid_id', index=1,
+      number=2, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6651,
+  serialized_end=6717,
 )
 
 _CMSGSOSINGLEOBJECT.fields_by_name['owner_soid'].message_type = _CMSGSOIDOWNER
@@ -2606,6 +2869,7 @@ _CMSGSERIALIZEDSOCACHE_CACHE.fields_by_name['versions'].message_type = _CMSGSERI
 _CMSGSERIALIZEDSOCACHE_CACHE.fields_by_name['type_caches'].message_type = _CMSGSERIALIZEDSOCACHE_TYPECACHE
 _CMSGSERIALIZEDSOCACHE_CACHE.containing_type = _CMSGSERIALIZEDSOCACHE
 _CMSGSERIALIZEDSOCACHE.fields_by_name['caches'].message_type = _CMSGSERIALIZEDSOCACHE_CACHE
+_CMSGGCTOGCMASTERSUBSCRIBETOCACHEASYNC.fields_by_name['subscribe_msg'].message_type = _CMSGGCTOGCMASTERSUBSCRIBETOCACHE
 DESCRIPTOR.message_types_by_name['CMsgSHA1Digest'] = _CMSGSHA1DIGEST
 DESCRIPTOR.message_types_by_name['CMsgSOIDOwner'] = _CMSGSOIDOWNER
 DESCRIPTOR.message_types_by_name['CMsgSOSingleObject'] = _CMSGSOSINGLEOBJECT
@@ -2648,6 +2912,12 @@ DESCRIPTOR.message_types_by_name['CMsgSerializedSOCache'] = _CMSGSERIALIZEDSOCAC
 DESCRIPTOR.message_types_by_name['CMsgGCToClientPollConvarRequest'] = _CMSGGCTOCLIENTPOLLCONVARREQUEST
 DESCRIPTOR.message_types_by_name['CMsgGCToClientPollConvarResponse'] = _CMSGGCTOCLIENTPOLLCONVARRESPONSE
 DESCRIPTOR.message_types_by_name['CGCMsgCompressedMsgToClient'] = _CGCMSGCOMPRESSEDMSGTOCLIENT
+DESCRIPTOR.message_types_by_name['CMsgGCToGCMasterBroadcastMessage'] = _CMSGGCTOGCMASTERBROADCASTMESSAGE
+DESCRIPTOR.message_types_by_name['CMsgGCToGCMasterSubscribeToCache'] = _CMSGGCTOGCMASTERSUBSCRIBETOCACHE
+DESCRIPTOR.message_types_by_name['CMsgGCToGCMasterSubscribeToCacheResponse'] = _CMSGGCTOGCMASTERSUBSCRIBETOCACHERESPONSE
+DESCRIPTOR.message_types_by_name['CMsgGCToGCMasterSubscribeToCacheAsync'] = _CMSGGCTOGCMASTERSUBSCRIBETOCACHEASYNC
+DESCRIPTOR.message_types_by_name['CMsgGCToGCMasterUnsubscribeFromCache'] = _CMSGGCTOGCMASTERUNSUBSCRIBEFROMCACHE
+DESCRIPTOR.message_types_by_name['CMsgGCToGCMasterDestroyCache'] = _CMSGGCTOGCMASTERDESTROYCACHE
 DESCRIPTOR.enum_types_by_name['ESourceEngine'] = _ESOURCEENGINE
 DESCRIPTOR.enum_types_by_name['PartnerAccountType'] = _PARTNERACCOUNTTYPE
 DESCRIPTOR.enum_types_by_name['GCConnectionStatus'] = _GCCONNECTIONSTATUS
@@ -3057,6 +3327,48 @@ CGCMsgCompressedMsgToClient = _reflection.GeneratedProtocolMessageType('CGCMsgCo
   # @@protoc_insertion_point(class_scope:dota.CGCMsgCompressedMsgToClient)
   ))
 _sym_db.RegisterMessage(CGCMsgCompressedMsgToClient)
+
+CMsgGCToGCMasterBroadcastMessage = _reflection.GeneratedProtocolMessageType('CMsgGCToGCMasterBroadcastMessage', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOGCMASTERBROADCASTMESSAGE,
+  __module__ = 'gcsdk_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCMasterBroadcastMessage)
+  ))
+_sym_db.RegisterMessage(CMsgGCToGCMasterBroadcastMessage)
+
+CMsgGCToGCMasterSubscribeToCache = _reflection.GeneratedProtocolMessageType('CMsgGCToGCMasterSubscribeToCache', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOGCMASTERSUBSCRIBETOCACHE,
+  __module__ = 'gcsdk_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCMasterSubscribeToCache)
+  ))
+_sym_db.RegisterMessage(CMsgGCToGCMasterSubscribeToCache)
+
+CMsgGCToGCMasterSubscribeToCacheResponse = _reflection.GeneratedProtocolMessageType('CMsgGCToGCMasterSubscribeToCacheResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOGCMASTERSUBSCRIBETOCACHERESPONSE,
+  __module__ = 'gcsdk_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCMasterSubscribeToCacheResponse)
+  ))
+_sym_db.RegisterMessage(CMsgGCToGCMasterSubscribeToCacheResponse)
+
+CMsgGCToGCMasterSubscribeToCacheAsync = _reflection.GeneratedProtocolMessageType('CMsgGCToGCMasterSubscribeToCacheAsync', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOGCMASTERSUBSCRIBETOCACHEASYNC,
+  __module__ = 'gcsdk_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCMasterSubscribeToCacheAsync)
+  ))
+_sym_db.RegisterMessage(CMsgGCToGCMasterSubscribeToCacheAsync)
+
+CMsgGCToGCMasterUnsubscribeFromCache = _reflection.GeneratedProtocolMessageType('CMsgGCToGCMasterUnsubscribeFromCache', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOGCMASTERUNSUBSCRIBEFROMCACHE,
+  __module__ = 'gcsdk_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCMasterUnsubscribeFromCache)
+  ))
+_sym_db.RegisterMessage(CMsgGCToGCMasterUnsubscribeFromCache)
+
+CMsgGCToGCMasterDestroyCache = _reflection.GeneratedProtocolMessageType('CMsgGCToGCMasterDestroyCache', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOGCMASTERDESTROYCACHE,
+  __module__ = 'gcsdk_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCMasterDestroyCache)
+  ))
+_sym_db.RegisterMessage(CMsgGCToGCMasterDestroyCache)
 
 
 DESCRIPTOR.has_options = True

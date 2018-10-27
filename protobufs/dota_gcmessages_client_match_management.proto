@@ -54,6 +54,8 @@ message CMsgStartFindingMatch {
 	optional bool solo_queue = 14;
 	optional uint32 bot_script_index = 15;
 	optional uint32 steam_clan_account_id = 16;
+	optional bool is_challenge_match = 17;
+	optional uint32 lane_selection_flags = 18;
 }
 
 message CMsgStartFindingMatchResult {
@@ -120,11 +122,8 @@ message CMsgPracticeLobbySetDetails {
 	optional uint64 custom_game_id = 29;
 	optional uint32 custom_min_players = 30;
 	optional uint32 custom_max_players = 31;
-	optional uint32 lan_host_ping_to_server_region = 32;
 	optional dota.DOTALobbyVisibility visibility = 33 [default = DOTALobbyVisibility_Public];
 	optional fixed64 custom_game_crc = 34;
-	optional uint32 league_series_id = 35;
-	optional uint32 league_game_id = 36;
 	optional fixed32 custom_game_timestamp = 37;
 	optional uint64 previous_match_override = 38;
 	optional dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
@@ -133,6 +132,8 @@ message CMsgPracticeLobbySetDetails {
 	optional uint64 bot_dire = 45;
 	optional dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
 	optional bool custom_game_penalties = 47;
+	optional string lan_host_ping_location = 48;
+	optional uint32 league_node_id = 49;
 }
 
 message CMsgPracticeLobbyCreate {
@@ -222,8 +223,8 @@ message CMsgPracticeLobbyListResponseEntry {
 	optional string custom_map_name = 15;
 	optional uint32 max_player_count = 16;
 	optional uint32 server_region = 17;
-	optional uint32 lan_host_ping_to_server_region = 18;
 	optional uint32 league_id = 19;
+	optional string lan_host_ping_location = 20;
 }
 
 message CMsgPracticeLobbyListResponse {
@@ -296,8 +297,8 @@ message CMsgJoinableCustomLobbiesResponseEntry {
 	optional string custom_map_name = 7;
 	optional uint32 max_player_count = 8;
 	optional uint32 server_region = 9;
-	optional uint32 lan_host_ping_to_server_region = 10;
 	optional bool has_pass_key = 11;
+	optional string lan_host_ping_location = 12;
 }
 
 message CMsgJoinableCustomLobbiesResponse {
@@ -447,5 +448,12 @@ message CMsgGCToClientSteamDatagramTicket {
 	optional uint32 legacy_app_id = 7;
 	repeated bytes legacy_extra_fields = 8;
 	optional bytes serialized_ticket = 16;
+}
+
+message CMsgGCToClientRequestLaneSelection {
+}
+
+message CMsgGCToClientRequestLaneSelectionResponse {
+	optional uint32 lane_selection_flags = 1;
 }
 
