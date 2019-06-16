@@ -260,7 +260,7 @@ class Dota2Client(GameCoordinator, FeatureBase):
         Alternatively, ``connection_status`` event can be monitored for changes.
         """
         if not self.steam.logged_on:
-            self.steam.wait_event('logged_on')
+            return
 
         if not self._retry_welcome_loop and self.app_id not in self.steam.current_games_played:
             self.steam.games_played(self.steam.current_games_played + [self.app_id])
