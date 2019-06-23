@@ -1,208 +1,5 @@
 from enum import IntEnum
 
-class EGCBaseMsg(IntEnum):
-    EMsgGCSystemMessage = 4001
-    EMsgGCReplicateConVars = 4002
-    EMsgGCConVarUpdated = 4003
-    EMsgGCInviteToParty = 4501
-    EMsgGCInvitationCreated = 4502
-    EMsgGCPartyInviteResponse = 4503
-    EMsgGCKickFromParty = 4504
-    EMsgGCLeaveParty = 4505
-    EMsgGCServerAvailable = 4506
-    EMsgGCClientConnectToServer = 4507
-    EMsgGCGameServerInfo = 4508
-    EMsgGCError = 4509
-    EMsgGCLANServerAvailable = 4511
-    EMsgGCInviteToLobby = 4512
-    EMsgGCLobbyInviteResponse = 4513
-    EMsgGCToClientPollFileRequest = 4514
-    EMsgGCToClientPollFileResponse = 4515
-    EMsgGCToGCPerformManualOp = 4516
-    EMsgGCToGCPerformManualOpCompleted = 4517
-
-class EGCBaseProtoObjectTypes(IntEnum):
-    EProtoObjectPartyInvite = 1001
-    EProtoObjectLobbyInvite = 1002
-
-class ECustomGameInstallStatus(IntEnum):
-    Unknown = 0
-    Ready = 1
-    Busy = 2
-    FailedGeneric = 101
-    FailedInternalError = 102
-    RequestedTimestampTooOld = 103
-    RequestedTimestampTooNew = 104
-    CRCMismatch = 105
-    FailedSteam = 106
-    FailedCanceled = 107
-
-class GC_BannedWordType(IntEnum):
-    GC_BANNED_WORD_DISABLE_WORD = 0
-    GC_BANNED_WORD_ENABLE_WORD = 1
-
-ETournamentTemplate = IntEnum('ETournamentTemplate', {
-    'None': 0,
-    'AutomatedWin3': 1,
-    })
-
-class ETournamentGameState(IntEnum):
-    Unknown = 0
-    Canceled = 1
-    Scheduled = 2
-    Active = 3
-    RadVictory = 20
-    DireVictory = 21
-    RadVictoryByForfeit = 22
-    DireVictoryByForfeit = 23
-    ServerFailure = 40
-    NotNeeded = 41
-
-class ETournamentTeamState(IntEnum):
-    Unknown = 0
-    Node1 = 1
-    NodeMax = 1024
-    Eliminated = 14003
-    Forfeited = 14004
-    Finished1st = 15001
-    Finished2nd = 15002
-    Finished3rd = 15003
-    Finished4th = 15004
-    Finished5th = 15005
-    Finished6th = 15006
-    Finished7th = 15007
-    Finished8th = 15008
-    Finished9th = 15009
-    Finished10th = 15010
-    Finished11th = 15011
-    Finished12th = 15012
-    Finished13th = 15013
-    Finished14th = 15014
-    Finished15th = 15015
-    Finished16th = 15016
-
-class ETournamentState(IntEnum):
-    Unknown = 0
-    CanceledByAdmin = 1
-    Completed = 2
-    Merged = 3
-    ServerFailure = 4
-    TeamAbandoned = 5
-    TeamTimeoutForfeit = 6
-    TeamTimeoutRefund = 7
-    ServerFailureGrantedVictory = 8
-    TeamTimeoutGrantedVictory = 9
-    InProgress = 100
-    WaitingToMerge = 101
-
-class ETournamentNodeState(IntEnum):
-    Unknown = 0
-    Canceled = 1
-    TeamsNotYetAssigned = 2
-    InBetweenGames = 3
-    GameInProgress = 4
-    A_Won = 5
-    B_Won = 6
-    A_WonByForfeit = 7
-    B_WonByForfeit = 8
-    A_Bye = 9
-    A_Abandoned = 10
-    ServerFailure = 11
-    A_TimeoutForfeit = 12
-    A_TimeoutRefund = 13
-
-class EDOTAGroupMergeResult(IntEnum):
-    OK = 0
-    FAILED_GENERIC = 1
-    NOT_LEADER = 2
-    TOO_MANY_PLAYERS = 3
-    TOO_MANY_COACHES = 4
-    ENGINE_MISMATCH = 5
-    NO_SUCH_GROUP = 6
-    OTHER_GROUP_NOT_OPEN = 7
-    ALREADY_INVITED = 8
-    NOT_INVITED = 9
-
-class DOTA_WatchReplayType(IntEnum):
-    DOTA_WATCH_REPLAY_NORMAL = 0
-    DOTA_WATCH_REPLAY_HIGHLIGHTS = 1
-
-class EItemEditorReservationResult(IntEnum):
-    OK = 1
-    AlreadyExists = 2
-    Reserved = 3
-    TimedOut = 4
-
-class EFeaturedHeroTextField(IntEnum):
-    NewHero = 0
-    NewItem = 1
-    ItemSetDescription = 2
-    ItemDescription = 3
-    Hype = 4
-    HeroWinLoss = 5
-    FrequentlyPlayedHero = 6
-    FeaturedItem = 7
-    PopularItem = 8
-    SaleItem = 9
-    SaleDiscount = 10
-    Container = 11
-
-class EFeaturedHeroDataType(IntEnum):
-    HeroID = 0
-    ItemDef = 1
-    HypeString = 2
-    StartTimestamp = 3
-    ExpireTimestamp = 4
-    HeroWins = 5
-    HeroLosses = 6
-    SaleDiscount = 7
-    ContainerItemDef = 8
-
-EWeekendTourneyRichPresenceEvent = IntEnum('EWeekendTourneyRichPresenceEvent', {
-    'None': 0,
-    'StartedMatch': 1,
-    'WonMatch': 2,
-    'Eliminated': 3,
-    })
-
-class EDOTAEventInviteType(IntEnum):
-    Direct = 0
-    OpenQualifier = 1
-    ChampionsCup = 2
-
-class EDOTATriviaQuestionCategory(IntEnum):
-    AbilityIcon = 0
-    AbilityCooldown = 1
-    HeroAttributes = 2
-    HeroMovementSpeed = 3
-    TalentTree = 4
-    HeroStats = 5
-    ItemPrice = 6
-    AbilitySound = 7
-    InvokerSpells = 8
-    AbilityManaCost = 9
-    HeroAttackSound = 10
-    AbilityName = 11
-    ItemComponents = 12
-    ItemLore = 13
-
-class EDOTATriviaAnswerResult(IntEnum):
-    Success = 0
-    InvalidQuestion = 1
-    InvalidAnswer = 2
-    QuestionLocked = 3
-    AlreadyAnswered = 4
-    TriviaDisabled = 5
-
-class EPurchaseHeroRelicResult(IntEnum):
-    Success = 0
-    FailedToSend = 1
-    NotEnoughPoints = 2
-    InternalServerError = 3
-    PurchaseNotAllowed = 4
-    InvalidRelic = 5
-    AlreadyOwned = 6
-
 class DOTA_2013PassportSelectionIndices(IntEnum):
     PP13_SEL_ALLSTAR_PLAYER_0 = 0
     PP13_SEL_ALLSTAR_PLAYER_1 = 1
@@ -301,84 +98,140 @@ class DOTA_2013PassportSelectionIndices(IntEnum):
     PP13_SEL_SOLO_6 = 94
     PP13_SEL_SOLO_7 = 95
 
-class EStartFindingMatchResult(IntEnum):
-    Invalid = 0
-    OK = 1
-    AlreadySearching = 2
-    FailGeneric = 100
-    FailedIgnore = 101
-    MatchmakingDisabled = 102
-    RegionOffline = 103
-    MatchmakingCooldown = 104
-    ClientOutOfDate = 105
-    CompetitiveNoLowPriority = 106
-    CompetitiveNotUnlocked = 107
-    GameModeNotUnlocked = 108
-    CompetitiveNotEnoughSkillData = 109
-    MissingInitialSkill = 110
-    CompetitiveRankSpreadTooLarge = 111
-    MemberAlreadyInLobby = 112
-    MemberNotVACVerified = 113
-    WeekendTourneyBadPartySize = 114
-    WeekendTourneyTeamBuyInTooSmall = 115
-    WeekendTourneyIndividualBuyInTooLarge = 116
-    WeekendTourneyTeamBuyInTooLarge = 117
-    MemberMissingEventOwnership = 118
-    WeekendTourneyNotUnlocked = 119
-    WeekendTourneyRecentParticipation = 120
-    MemberMissingAnchoredPhoneNumber = 121
-    NotMemberOfClan = 122
+class DOTA_BOT_MODE(IntEnum):
+    NONE = 0
+    LANING = 1
+    ATTACK = 2
+    ROAM = 3
+    RETREAT = 4
+    SECRET_SHOP = 5
+    SIDE_SHOP = 6
+    RUNE = 7
+    PUSH_TOWER_TOP = 8
+    PUSH_TOWER_MID = 9
+    PUSH_TOWER_BOT = 10
+    DEFEND_TOWER_TOP = 11
+    DEFEND_TOWER_MID = 12
+    DEFEND_TOWER_BOT = 13
+    ASSEMBLE = 14
+    ASSEMBLE_WITH_HUMANS = 15
+    TEAM_ROAM = 16
+    FARM = 17
+    DEFEND_ALLY = 18
+    EVASIVE_MANEUVERS = 19
+    ROSHAN = 20
+    ITEM = 21
+    WARD = 22
+    COMPANION = 23
+    TUTORIAL_BOSS = 24
+    MINION = 25
 
-class ETeamInviteResult(IntEnum):
-    TEAM_INVITE_SUCCESS = 0
-    TEAM_INVITE_FAILURE_INVITE_REJECTED = 1
-    TEAM_INVITE_FAILURE_INVITE_TIMEOUT = 2
-    TEAM_INVITE_ERROR_TEAM_AT_MEMBER_LIMIT = 3
-    TEAM_INVITE_ERROR_TEAM_LOCKED = 4
-    TEAM_INVITE_ERROR_INVITEE_NOT_AVAILABLE = 5
-    TEAM_INVITE_ERROR_INVITEE_BUSY = 6
-    TEAM_INVITE_ERROR_INVITEE_ALREADY_MEMBER = 7
-    TEAM_INVITE_ERROR_INVITEE_AT_TEAM_LIMIT = 8
-    TEAM_INVITE_ERROR_INVITEE_INSUFFICIENT_LEVEL = 9
-    TEAM_INVITE_ERROR_INVITER_INVALID_ACCOUNT_TYPE = 10
-    TEAM_INVITE_ERROR_INVITER_NOT_ADMIN = 11
-    TEAM_INVITE_ERROR_INCORRECT_USER_RESPONDED = 12
-    TEAM_INVITE_ERROR_UNSPECIFIED = 13
+class DOTA_CM_PICK(IntEnum):
+    DOTA_CM_RANDOM = 0
+    DOTA_CM_GOOD_GUYS = 1
+    DOTA_CM_BAD_GUYS = 2
 
-ETournamentEvent = IntEnum('ETournamentEvent', {
-    'None': 0,
-    'TournamentCreated': 1,
-    'TournamentsMerged': 2,
-    'GameOutcome': 3,
-    'TeamGivenBye': 4,
-    'TournamentCanceledByAdmin': 5,
-    'TeamAbandoned': 6,
-    'ScheduledGameStarted': 7,
-    'Canceled': 8,
-    'TeamParticipationTimedOut_EntryFeeRefund': 9,
-    'TeamParticipationTimedOut_EntryFeeForfeit': 10,
-    'TeamParticipationTimedOut_GrantedVictory': 11,
-    })
+class DOTA_COMBATLOG_TYPES(IntEnum):
+    DOTA_COMBATLOG_INVALID = -1
+    DOTA_COMBATLOG_DAMAGE = 0
+    DOTA_COMBATLOG_HEAL = 1
+    DOTA_COMBATLOG_MODIFIER_ADD = 2
+    DOTA_COMBATLOG_MODIFIER_REMOVE = 3
+    DOTA_COMBATLOG_DEATH = 4
+    DOTA_COMBATLOG_ABILITY = 5
+    DOTA_COMBATLOG_ITEM = 6
+    DOTA_COMBATLOG_LOCATION = 7
+    DOTA_COMBATLOG_GOLD = 8
+    DOTA_COMBATLOG_GAME_STATE = 9
+    DOTA_COMBATLOG_XP = 10
+    DOTA_COMBATLOG_PURCHASE = 11
+    DOTA_COMBATLOG_BUYBACK = 12
+    DOTA_COMBATLOG_ABILITY_TRIGGER = 13
+    DOTA_COMBATLOG_PLAYERSTATS = 14
+    DOTA_COMBATLOG_MULTIKILL = 15
+    DOTA_COMBATLOG_KILLSTREAK = 16
+    DOTA_COMBATLOG_TEAM_BUILDING_KILL = 17
+    DOTA_COMBATLOG_FIRST_BLOOD = 18
+    DOTA_COMBATLOG_MODIFIER_STACK_EVENT = 19
+    DOTA_COMBATLOG_NEUTRAL_CAMP_STACK = 20
+    DOTA_COMBATLOG_PICKUP_RUNE = 21
+    DOTA_COMBATLOG_REVEALED_INVISIBLE = 22
+    DOTA_COMBATLOG_HERO_SAVED = 23
+    DOTA_COMBATLOG_MANA_RESTORED = 24
+    DOTA_COMBATLOG_HERO_LEVELUP = 25
+    DOTA_COMBATLOG_BOTTLE_HEAL_ALLY = 26
+    DOTA_COMBATLOG_ENDGAME_STATS = 27
+    DOTA_COMBATLOG_INTERRUPT_CHANNEL = 28
+    DOTA_COMBATLOG_ALLIED_GOLD = 29
+    DOTA_COMBATLOG_AEGIS_TAKEN = 30
+    DOTA_COMBATLOG_MANA_DAMAGE = 31
+    DOTA_COMBATLOG_PHYSICAL_DAMAGE_PREVENTED = 32
+    DOTA_COMBATLOG_UNIT_SUMMONED = 33
+    DOTA_COMBATLOG_ATTACK_EVADE = 34
+    DOTA_COMBATLOG_TREE_CUT = 35
+    DOTA_COMBATLOG_SUCCESSFUL_SCAN = 36
+    DOTA_COMBATLOG_END_KILLSTREAK = 37
+    DOTA_COMBATLOG_BLOODSTONE_CHARGE = 38
+    DOTA_COMBATLOG_CRITICAL_DAMAGE = 39
+    DOTA_COMBATLOG_SPELL_ABSORB = 40
+    DOTA_COMBATLOG_UNIT_TELEPORTED = 41
+    DOTA_COMBATLOG_KILL_EATER_EVENT = 42
 
-class ESpecialPingValue(IntEnum):
-    NoData = 16382
-    Failed = 16383
+class DOTA_GameMode(IntEnum):
+    DOTA_GAMEMODE_NONE = 0
+    DOTA_GAMEMODE_AP = 1
+    DOTA_GAMEMODE_CM = 2
+    DOTA_GAMEMODE_RD = 3
+    DOTA_GAMEMODE_SD = 4
+    DOTA_GAMEMODE_AR = 5
+    DOTA_GAMEMODE_INTRO = 6
+    DOTA_GAMEMODE_HW = 7
+    DOTA_GAMEMODE_REVERSE_CM = 8
+    DOTA_GAMEMODE_XMAS = 9
+    DOTA_GAMEMODE_TUTORIAL = 10
+    DOTA_GAMEMODE_MO = 11
+    DOTA_GAMEMODE_LP = 12
+    DOTA_GAMEMODE_POOL1 = 13
+    DOTA_GAMEMODE_FH = 14
+    DOTA_GAMEMODE_CUSTOM = 15
+    DOTA_GAMEMODE_CD = 16
+    DOTA_GAMEMODE_BD = 17
+    DOTA_GAMEMODE_ABILITY_DRAFT = 18
+    DOTA_GAMEMODE_EVENT = 19
+    DOTA_GAMEMODE_ARDM = 20
+    DOTA_GAMEMODE_1V1MID = 21
+    DOTA_GAMEMODE_ALL_DRAFT = 22
+    DOTA_GAMEMODE_TURBO = 23
 
-class EDOTAGCSessionNeed(IntEnum):
-    Unknown = 0
-    UserNoSessionNeeded = 100
-    UserInOnlineGame = 101
-    UserInLocalGame = 102
-    UserInUIWasConnected = 103
-    UserInUINeverConnected = 104
-    UserTutorials = 105
-    UserInUIWasConnectedIdle = 106
-    UserInUINeverConnectedIdle = 107
-    GameServerOnline = 200
-    GameServerLocal = 201
-    GameServerIdle = 202
-    GameServerRelay = 203
-    GameServerLocalUpload = 204
+class DOTA_GameState(IntEnum):
+    DOTA_GAMERULES_STATE_INIT = 0
+    DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD = 1
+    DOTA_GAMERULES_STATE_HERO_SELECTION = 2
+    DOTA_GAMERULES_STATE_STRATEGY_TIME = 3
+    DOTA_GAMERULES_STATE_PRE_GAME = 4
+    DOTA_GAMERULES_STATE_GAME_IN_PROGRESS = 5
+    DOTA_GAMERULES_STATE_POST_GAME = 6
+    DOTA_GAMERULES_STATE_DISCONNECT = 7
+    DOTA_GAMERULES_STATE_TEAM_SHOWCASE = 8
+    DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP = 9
+    DOTA_GAMERULES_STATE_WAIT_FOR_MAP_TO_LOAD = 10
+    DOTA_GAMERULES_STATE_LAST = 11
+
+class DOTA_GC_TEAM(IntEnum):
+    GOOD_GUYS = 0
+    BAD_GUYS = 1
+    BROADCASTER = 2
+    SPECTATOR = 3
+    PLAYER_POOL = 4
+    NOTEAM = 5
+
+class DOTA_LobbyMemberXPBonus(IntEnum):
+    DEFAULT = 0
+    BATTLE_BOOSTER = 1
+    SHARE_BONUS = 2
+    PARTY = 3
+    RECRUITMENT = 4
+    PCBANG = 5
 
 class DOTA_TournamentEvents(IntEnum):
     TE_FIRST_BLOOD = 0
@@ -394,27 +247,136 @@ class DOTA_TournamentEvents(IntEnum):
     TE_EARLY_ROSHAN = 10
     TE_BLACK_HOLE = 11
 
-class LobbyDotaTVDelay(IntEnum):
-    LobbyDotaTV_10 = 0
-    LobbyDotaTV_120 = 1
-    LobbyDotaTV_300 = 2
+class DOTA_WatchReplayType(IntEnum):
+    DOTA_WATCH_REPLAY_NORMAL = 0
+    DOTA_WATCH_REPLAY_HIGHLIGHTS = 1
 
-class LobbyDotaPauseSetting(IntEnum):
-    Unlimited = 0
-    Limited = 1
-    Disabled = 2
+class DOTABotDifficulty(IntEnum):
+    BOT_DIFFICULTY_PASSIVE = 0
+    BOT_DIFFICULTY_EASY = 1
+    BOT_DIFFICULTY_MEDIUM = 2
+    BOT_DIFFICULTY_HARD = 3
+    BOT_DIFFICULTY_UNFAIR = 4
+    BOT_DIFFICULTY_INVALID = 5
+    BOT_DIFFICULTY_EXTRA1 = 6
+    BOT_DIFFICULTY_EXTRA2 = 7
+    BOT_DIFFICULTY_EXTRA3 = 8
 
-class EReadyCheckStatus(IntEnum):
+class DOTAChatChannelType_t(IntEnum):
+    DOTAChannelType_Regional = 0
+    DOTAChannelType_Custom = 1
+    DOTAChannelType_Party = 2
+    DOTAChannelType_Lobby = 3
+    DOTAChannelType_Team = 4
+    DOTAChannelType_Guild = 5
+    DOTAChannelType_Fantasy = 6
+    DOTAChannelType_Whisper = 7
+    DOTAChannelType_Console = 8
+    DOTAChannelType_Tab = 9
+    DOTAChannelType_Invalid = 10
+    DOTAChannelType_GameAll = 11
+    DOTAChannelType_GameAllies = 12
+    DOTAChannelType_GameSpectator = 13
+    DOTAChannelType_Cafe = 15
+    DOTAChannelType_CustomGame = 16
+    DOTAChannelType_Private = 17
+    DOTAChannelType_PostGame = 18
+    DOTAChannelType_BattleCup = 19
+    DOTAChannelType_HLTVSpectator = 20
+    DOTAChannelType_GameEvents = 21
+    DOTAChannelType_Trivia = 22
+
+class DOTAConnectionState_t(IntEnum):
+    DOTA_CONNECTION_STATE_UNKNOWN = 0
+    DOTA_CONNECTION_STATE_NOT_YET_CONNECTED = 1
+    DOTA_CONNECTION_STATE_CONNECTED = 2
+    DOTA_CONNECTION_STATE_DISCONNECTED = 3
+    DOTA_CONNECTION_STATE_ABANDONED = 4
+    DOTA_CONNECTION_STATE_LOADING = 5
+    DOTA_CONNECTION_STATE_FAILED = 6
+
+class DOTAGameVersion(IntEnum):
+    GAME_VERSION_CURRENT = 0
+    GAME_VERSION_STABLE = 1
+
+class DOTAJoinLobbyResult(IntEnum):
+    DOTA_JOIN_RESULT_SUCCESS = 0
+    DOTA_JOIN_RESULT_ALREADY_IN_GAME = 1
+    DOTA_JOIN_RESULT_INVALID_LOBBY = 2
+    DOTA_JOIN_RESULT_INCORRECT_PASSWORD = 3
+    DOTA_JOIN_RESULT_ACCESS_DENIED = 4
+    DOTA_JOIN_RESULT_GENERIC_ERROR = 5
+    DOTA_JOIN_RESULT_INCORRECT_VERSION = 6
+    DOTA_JOIN_RESULT_IN_TEAM_PARTY = 7
+    DOTA_JOIN_RESULT_NO_LOBBY_FOUND = 8
+    DOTA_JOIN_RESULT_LOBBY_FULL = 9
+    DOTA_JOIN_RESULT_CUSTOM_GAME_INCORRECT_VERSION = 10
+    DOTA_JOIN_RESULT_TIMEOUT = 11
+    DOTA_JOIN_RESULT_CUSTOM_GAME_COOLDOWN = 12
+
+class DOTALeaverStatus_t(IntEnum):
+    DOTA_LEAVER_NONE = 0
+    DOTA_LEAVER_DISCONNECTED = 1
+    DOTA_LEAVER_DISCONNECTED_TOO_LONG = 2
+    DOTA_LEAVER_ABANDONED = 3
+    DOTA_LEAVER_AFK = 4
+    DOTA_LEAVER_NEVER_CONNECTED = 5
+    DOTA_LEAVER_NEVER_CONNECTED_TOO_LONG = 6
+    DOTA_LEAVER_FAILED_TO_READY_UP = 7
+    DOTA_LEAVER_DECLINED = 8
+
+class DOTALobbyReadyState(IntEnum):
+    UNDECLARED = 0
+    ACCEPTED = 1
+    DECLINED = 2
+
+class DOTALobbyVisibility(IntEnum):
+    Public = 0
+    Friends = 1
+    Unlisted = 2
+
+class DOTALowPriorityBanType(IntEnum):
+    DOTA_LOW_PRIORITY_BAN_ABANDON = 0
+    DOTA_LOW_PRIORITY_BAN_REPORTS = 1
+    DOTA_LOW_PRIORITY_BAN_SECONDARY_ABANDON = 2
+
+class DOTAMatchVote(IntEnum):
+    INVALID = 0
+    POSITIVE = 1
+    NEGATIVE = 2
+
+class DOTASelectionPriorityChoice(IntEnum):
+    Invalid = 0
+    FirstPick = 1
+    SecondPick = 2
+    Radiant = 3
+    Dire = 4
+
+class DOTASelectionPriorityRules(IntEnum):
+    Manual = 0
+    Automatic = 1
+
+class EBadgeType(IntEnum):
+    TI7_Midweek = 1
+    TI7_Finals = 2
+    TI7_AllEvent = 3
+
+class ECustomGameInstallStatus(IntEnum):
     Unknown = 0
-    NotReady = 1
-    Ready = 2
+    Ready = 1
+    Busy = 2
+    FailedGeneric = 101
+    FailedInternalError = 102
+    RequestedTimestampTooOld = 103
+    RequestedTimestampTooNew = 104
+    CRCMismatch = 105
+    FailedSteam = 106
+    FailedCanceled = 107
 
-class EReadyCheckRequestResult(IntEnum):
-    Success = 0
-    AlreadyInProgress = 1
-    NotInParty = 2
-    SendError = 3
-    UnknownError = 4
+class EDOTAEventInviteType(IntEnum):
+    Direct = 0
+    OpenQualifier = 1
+    ChampionsCup = 2
 
 class EDOTAGCMsg(IntEnum):
     EMsgGCDOTABase = 7000
@@ -1163,53 +1125,68 @@ class EDOTAGCMsg(IntEnum):
     EMsgActivatePlusFreeTrialRequest = 8286
     EMsgActivatePlusFreeTrialResponse = 8287
 
-class DOTA_GameMode(IntEnum):
-    DOTA_GAMEMODE_NONE = 0
-    DOTA_GAMEMODE_AP = 1
-    DOTA_GAMEMODE_CM = 2
-    DOTA_GAMEMODE_RD = 3
-    DOTA_GAMEMODE_SD = 4
-    DOTA_GAMEMODE_AR = 5
-    DOTA_GAMEMODE_INTRO = 6
-    DOTA_GAMEMODE_HW = 7
-    DOTA_GAMEMODE_REVERSE_CM = 8
-    DOTA_GAMEMODE_XMAS = 9
-    DOTA_GAMEMODE_TUTORIAL = 10
-    DOTA_GAMEMODE_MO = 11
-    DOTA_GAMEMODE_LP = 12
-    DOTA_GAMEMODE_POOL1 = 13
-    DOTA_GAMEMODE_FH = 14
-    DOTA_GAMEMODE_CUSTOM = 15
-    DOTA_GAMEMODE_CD = 16
-    DOTA_GAMEMODE_BD = 17
-    DOTA_GAMEMODE_ABILITY_DRAFT = 18
-    DOTA_GAMEMODE_EVENT = 19
-    DOTA_GAMEMODE_ARDM = 20
-    DOTA_GAMEMODE_1V1MID = 21
-    DOTA_GAMEMODE_ALL_DRAFT = 22
-    DOTA_GAMEMODE_TURBO = 23
+class EDOTAGCSessionNeed(IntEnum):
+    Unknown = 0
+    UserNoSessionNeeded = 100
+    UserInOnlineGame = 101
+    UserInLocalGame = 102
+    UserInUIWasConnected = 103
+    UserInUINeverConnected = 104
+    UserTutorials = 105
+    UserInUIWasConnectedIdle = 106
+    UserInUINeverConnectedIdle = 107
+    GameServerOnline = 200
+    GameServerLocal = 201
+    GameServerIdle = 202
+    GameServerRelay = 203
+    GameServerLocalUpload = 204
 
-class DOTA_GameState(IntEnum):
-    DOTA_GAMERULES_STATE_INIT = 0
-    DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD = 1
-    DOTA_GAMERULES_STATE_HERO_SELECTION = 2
-    DOTA_GAMERULES_STATE_STRATEGY_TIME = 3
-    DOTA_GAMERULES_STATE_PRE_GAME = 4
-    DOTA_GAMERULES_STATE_GAME_IN_PROGRESS = 5
-    DOTA_GAMERULES_STATE_POST_GAME = 6
-    DOTA_GAMERULES_STATE_DISCONNECT = 7
-    DOTA_GAMERULES_STATE_TEAM_SHOWCASE = 8
-    DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP = 9
-    DOTA_GAMERULES_STATE_WAIT_FOR_MAP_TO_LOAD = 10
-    DOTA_GAMERULES_STATE_LAST = 11
+class EDOTAGroupMergeResult(IntEnum):
+    OK = 0
+    FAILED_GENERIC = 1
+    NOT_LEADER = 2
+    TOO_MANY_PLAYERS = 3
+    TOO_MANY_COACHES = 4
+    ENGINE_MISMATCH = 5
+    NO_SUCH_GROUP = 6
+    OTHER_GROUP_NOT_OPEN = 7
+    ALREADY_INVITED = 8
+    NOT_INVITED = 9
 
-class DOTA_GC_TEAM(IntEnum):
-    GOOD_GUYS = 0
-    BAD_GUYS = 1
-    BROADCASTER = 2
-    SPECTATOR = 3
-    PLAYER_POOL = 4
-    NOTEAM = 5
+EDOTAPlayerMMRType = IntEnum('EDOTAPlayerMMRType', {
+    'Invalid': 0,
+    'GeneralHidden': 1,
+    'SoloHidden': 2,
+    'GeneralCompetitive': 3,
+    'SoloCompetitive': 4,
+    '1v1Competitive_UNUSED': 5,
+    'GeneralSeasonalRanked': 6,
+    'SoloSeasonalRanked': 7,
+    })
+
+class EDOTATriviaAnswerResult(IntEnum):
+    Success = 0
+    InvalidQuestion = 1
+    InvalidAnswer = 2
+    QuestionLocked = 3
+    AlreadyAnswered = 4
+    TriviaDisabled = 5
+
+class EDOTATriviaQuestionCategory(IntEnum):
+    AbilityIcon = 0
+    AbilityCooldown = 1
+    HeroAttributes = 2
+    HeroMovementSpeed = 3
+    TalentTree = 4
+    HeroStats = 5
+    ItemPrice = 6
+    AbilitySound = 7
+    InvokerSpells = 8
+    AbilityManaCost = 9
+    HeroAttackSound = 10
+    AbilityName = 11
+    ItemComponents = 12
+    ItemLore = 13
 
 class EEvent(IntEnum):
     EVENT_ID_NONE = 0
@@ -1236,492 +1213,30 @@ class EEvent(IntEnum):
     EVENT_ID_FROSTIVUS_2017 = 21
     EVENT_ID_COUNT = 22
 
-class DOTALeaverStatus_t(IntEnum):
-    DOTA_LEAVER_NONE = 0
-    DOTA_LEAVER_DISCONNECTED = 1
-    DOTA_LEAVER_DISCONNECTED_TOO_LONG = 2
-    DOTA_LEAVER_ABANDONED = 3
-    DOTA_LEAVER_AFK = 4
-    DOTA_LEAVER_NEVER_CONNECTED = 5
-    DOTA_LEAVER_NEVER_CONNECTED_TOO_LONG = 6
-    DOTA_LEAVER_FAILED_TO_READY_UP = 7
-    DOTA_LEAVER_DECLINED = 8
+class EFeaturedHeroDataType(IntEnum):
+    HeroID = 0
+    ItemDef = 1
+    HypeString = 2
+    StartTimestamp = 3
+    ExpireTimestamp = 4
+    HeroWins = 5
+    HeroLosses = 6
+    SaleDiscount = 7
+    ContainerItemDef = 8
 
-class DOTAConnectionState_t(IntEnum):
-    DOTA_CONNECTION_STATE_UNKNOWN = 0
-    DOTA_CONNECTION_STATE_NOT_YET_CONNECTED = 1
-    DOTA_CONNECTION_STATE_CONNECTED = 2
-    DOTA_CONNECTION_STATE_DISCONNECTED = 3
-    DOTA_CONNECTION_STATE_ABANDONED = 4
-    DOTA_CONNECTION_STATE_LOADING = 5
-    DOTA_CONNECTION_STATE_FAILED = 6
-
-class Fantasy_Roles(IntEnum):
-    FANTASY_ROLE_UNDEFINED = 0
-    FANTASY_ROLE_CORE = 1
-    FANTASY_ROLE_SUPPORT = 2
-    FANTASY_ROLE_OFFLANE = 3
-
-class Fantasy_Team_Slots(IntEnum):
-    FANTASY_SLOT_NONE = 0
-    FANTASY_SLOT_CORE = 1
-    FANTASY_SLOT_SUPPORT = 2
-    FANTASY_SLOT_ANY = 3
-    FANTASY_SLOT_BENCH = 4
-
-class Fantasy_Selection_Mode(IntEnum):
-    FANTASY_SELECTION_INVALID = 0
-    FANTASY_SELECTION_LOCKED = 1
-    FANTASY_SELECTION_SHUFFLE = 2
-    FANTASY_SELECTION_FREE_PICK = 3
-    FANTASY_SELECTION_ENDED = 4
-    FANTASY_SELECTION_PRE_SEASON = 5
-    FANTASY_SELECTION_PRE_DRAFT = 6
-    FANTASY_SELECTION_DRAFTING = 7
-    FANTASY_SELECTION_REGULAR_SEASON = 8
-    FANTASY_SELECTION_CARD_BASED = 9
-
-class DOTAChatChannelType_t(IntEnum):
-    DOTAChannelType_Regional = 0
-    DOTAChannelType_Custom = 1
-    DOTAChannelType_Party = 2
-    DOTAChannelType_Lobby = 3
-    DOTAChannelType_Team = 4
-    DOTAChannelType_Guild = 5
-    DOTAChannelType_Fantasy = 6
-    DOTAChannelType_Whisper = 7
-    DOTAChannelType_Console = 8
-    DOTAChannelType_Tab = 9
-    DOTAChannelType_Invalid = 10
-    DOTAChannelType_GameAll = 11
-    DOTAChannelType_GameAllies = 12
-    DOTAChannelType_GameSpectator = 13
-    DOTAChannelType_Cafe = 15
-    DOTAChannelType_CustomGame = 16
-    DOTAChannelType_Private = 17
-    DOTAChannelType_PostGame = 18
-    DOTAChannelType_BattleCup = 19
-    DOTAChannelType_HLTVSpectator = 20
-    DOTAChannelType_GameEvents = 21
-    DOTAChannelType_Trivia = 22
-
-class EProfileCardSlotType(IntEnum):
-    Empty = 0
-    Stat = 1
-    Trophy = 2
-    Item = 3
-    Hero = 4
-    Emoticon = 5
-    Team = 6
-
-class EMatchGroupServerStatus(IntEnum):
-    OK = 0
-    LimitedAvailability = 1
-    Offline = 2
-
-class DOTA_CM_PICK(IntEnum):
-    DOTA_CM_RANDOM = 0
-    DOTA_CM_GOOD_GUYS = 1
-    DOTA_CM_BAD_GUYS = 2
-
-class DOTALowPriorityBanType(IntEnum):
-    DOTA_LOW_PRIORITY_BAN_ABANDON = 0
-    DOTA_LOW_PRIORITY_BAN_REPORTS = 1
-    DOTA_LOW_PRIORITY_BAN_SECONDARY_ABANDON = 2
-
-class DOTALobbyReadyState(IntEnum):
-    UNDECLARED = 0
-    ACCEPTED = 1
-    DECLINED = 2
-
-class DOTAGameVersion(IntEnum):
-    GAME_VERSION_CURRENT = 0
-    GAME_VERSION_STABLE = 1
-
-class DOTAJoinLobbyResult(IntEnum):
-    DOTA_JOIN_RESULT_SUCCESS = 0
-    DOTA_JOIN_RESULT_ALREADY_IN_GAME = 1
-    DOTA_JOIN_RESULT_INVALID_LOBBY = 2
-    DOTA_JOIN_RESULT_INCORRECT_PASSWORD = 3
-    DOTA_JOIN_RESULT_ACCESS_DENIED = 4
-    DOTA_JOIN_RESULT_GENERIC_ERROR = 5
-    DOTA_JOIN_RESULT_INCORRECT_VERSION = 6
-    DOTA_JOIN_RESULT_IN_TEAM_PARTY = 7
-    DOTA_JOIN_RESULT_NO_LOBBY_FOUND = 8
-    DOTA_JOIN_RESULT_LOBBY_FULL = 9
-    DOTA_JOIN_RESULT_CUSTOM_GAME_INCORRECT_VERSION = 10
-    DOTA_JOIN_RESULT_TIMEOUT = 11
-    DOTA_JOIN_RESULT_CUSTOM_GAME_COOLDOWN = 12
-
-class DOTASelectionPriorityRules(IntEnum):
-    Manual = 0
-    Automatic = 1
-
-class DOTASelectionPriorityChoice(IntEnum):
-    Invalid = 0
-    FirstPick = 1
-    SecondPick = 2
-    Radiant = 3
-    Dire = 4
-
-class DOTAMatchVote(IntEnum):
-    INVALID = 0
-    POSITIVE = 1
-    NEGATIVE = 2
-
-class DOTA_LobbyMemberXPBonus(IntEnum):
-    DEFAULT = 0
-    BATTLE_BOOSTER = 1
-    SHARE_BONUS = 2
-    PARTY = 3
-    RECRUITMENT = 4
-    PCBANG = 5
-
-class DOTALobbyVisibility(IntEnum):
-    Public = 0
-    Friends = 1
-    Unlisted = 2
-
-EDOTAPlayerMMRType = IntEnum('EDOTAPlayerMMRType', {
-    'Invalid': 0,
-    'GeneralHidden': 1,
-    'SoloHidden': 2,
-    'GeneralCompetitive': 3,
-    'SoloCompetitive': 4,
-    '1v1Competitive_UNUSED': 5,
-    'GeneralSeasonalRanked': 6,
-    'SoloSeasonalRanked': 7,
-    })
-
-class MatchType(IntEnum):
-    MATCH_TYPE_CASUAL = 0
-    MATCH_TYPE_COOP_BOTS = 1
-    MATCH_TYPE_TEAM_RANKED = 2
-    MATCH_TYPE_LEGACY_SOLO_QUEUE = 3
-    MATCH_TYPE_COMPETITIVE = 4
-    MATCH_TYPE_WEEKEND_TOURNEY = 5
-    MATCH_TYPE_CASUAL_1V1 = 6
-    MATCH_TYPE_EVENT = 7
-    MATCH_TYPE_SEASONAL_RANKED = 8
-    MATCH_TYPE_LOWPRI_DEPRECATED = 9
-    MATCH_TYPE_STEAM_GROUP = 10
-
-class DOTABotDifficulty(IntEnum):
-    BOT_DIFFICULTY_PASSIVE = 0
-    BOT_DIFFICULTY_EASY = 1
-    BOT_DIFFICULTY_MEDIUM = 2
-    BOT_DIFFICULTY_HARD = 3
-    BOT_DIFFICULTY_UNFAIR = 4
-    BOT_DIFFICULTY_INVALID = 5
-    BOT_DIFFICULTY_EXTRA1 = 6
-    BOT_DIFFICULTY_EXTRA2 = 7
-    BOT_DIFFICULTY_EXTRA3 = 8
-
-class DOTA_BOT_MODE(IntEnum):
-    NONE = 0
-    LANING = 1
-    ATTACK = 2
-    ROAM = 3
-    RETREAT = 4
-    SECRET_SHOP = 5
-    SIDE_SHOP = 6
-    RUNE = 7
-    PUSH_TOWER_TOP = 8
-    PUSH_TOWER_MID = 9
-    PUSH_TOWER_BOT = 10
-    DEFEND_TOWER_TOP = 11
-    DEFEND_TOWER_MID = 12
-    DEFEND_TOWER_BOT = 13
-    ASSEMBLE = 14
-    ASSEMBLE_WITH_HUMANS = 15
-    TEAM_ROAM = 16
-    FARM = 17
-    DEFEND_ALLY = 18
-    EVASIVE_MANEUVERS = 19
-    ROSHAN = 20
-    ITEM = 21
-    WARD = 22
-    COMPANION = 23
-    TUTORIAL_BOSS = 24
-    MINION = 25
-
-class MatchLanguages(IntEnum):
-    MATCH_LANGUAGE_INVALID = 0
-    MATCH_LANGUAGE_ENGLISH = 1
-    MATCH_LANGUAGE_RUSSIAN = 2
-    MATCH_LANGUAGE_CHINESE = 3
-    MATCH_LANGUAGE_KOREAN = 4
-    MATCH_LANGUAGE_SPANISH = 5
-    MATCH_LANGUAGE_PORTUGUESE = 6
-    MATCH_LANGUAGE_ENGLISH2 = 7
-
-class ETourneyQueueDeadlineState(IntEnum):
-    Normal = 0
-    Missed = 1
-    ExpiredOK = 2
-    SeekingBye = 3
-    EligibleForRefund = 4
-    NA = -1
-    ExpiringSoon = 101
-
-class EMatchOutcome(IntEnum):
-    Unknown = 0
-    RadVictory = 2
-    DireVictory = 3
-    NotScored_PoorNetworkConditions = 64
-    NotScored_Leaver = 65
-    NotScored_ServerCrash = 66
-    NotScored_NeverStarted = 67
-    NotScored_Canceled = 68
-
-class ELaneType(IntEnum):
-    LANE_TYPE_UNKNOWN = 0
-    LANE_TYPE_SAFE = 1
-    LANE_TYPE_OFF = 2
-    LANE_TYPE_MID = 3
-    LANE_TYPE_JUNGLE = 4
-    LANE_TYPE_ROAM = 5
-
-class EBadgeType(IntEnum):
-    TI7_Midweek = 1
-    TI7_Finals = 2
-    TI7_AllEvent = 3
-
-class ELeagueStatus(IntEnum):
-    LEAGUE_STATUS_UNSET = 0
-    LEAGUE_STATUS_NEW = 1
-    LEAGUE_STATUS_PUBLISHED = 2
-    LEAGUE_STATUS_ACCEPTED = 3
-    LEAGUE_STATUS_REJECTED = 4
-    LEAGUE_STATUS_CONCLUDED = 5
-    LEAGUE_STATUS_DELETED = 6
-    LEAGUE_STATUS_RELEASED = 10
-    LEAGUE_STATUS_HIDDEN = 11
-    LEAGUE_STATUS_READY = 12
-    LEAGUE_STATUS_COMPLETE = 13
-
-class ELeagueRegion(IntEnum):
-    LEAGUE_REGION_UNSET = 0
-    LEAGUE_REGION_NA = 1
-    LEAGUE_REGION_SA = 2
-    LEAGUE_REGION_EUROPE = 3
-    LEAGUE_REGION_CIS = 4
-    LEAGUE_REGION_CHINA = 5
-    LEAGUE_REGION_SEA = 6
-
-class ELeagueTier(IntEnum):
-    LEAGUE_TIER_UNSET = 0
-    LEAGUE_TIER_AMATEUR = 1
-    LEAGUE_TIER_PROFESSIONAL = 2
-    LEAGUE_TIER_PREMIUM = 3
-    LEAGUE_TIER_MINOR = 4
-    LEAGUE_TIER_MAJOR = 5
-
-class ELeagueFlags(IntEnum):
-    LEAGUE_FLAGS_NONE = 0
-    LEAGUE_ACCEPTED_AGREEMENT = 1
-    LEAGUE_PAYMENT_EMAIL_SENT = 2
-    LEAGUE_COMPENDIUM_ALLOWED = 4
-    LEAGUE_COMPENDIUM_PUBLIC = 8
-
-class ELeagueBroadcastProvider(IntEnum):
-    LEAGUE_BROADCAST_UNKNOWN = 0
-    LEAGUE_BROADCAST_STEAM = 1
-    LEAGUE_BROADCAST_TWITCH = 2
-    LEAGUE_BROADCAST_YOUTUBE = 3
-    LEAGUE_BROADCAST_OTHER = 100
-
-class ELeagueAuditAction(IntEnum):
-    LEAGUE_AUDIT_ACTION_INVALID = 0
-    LEAGUE_AUDIT_ACTION_LEAGUE_CREATE = 1
-    LEAGUE_AUDIT_ACTION_LEAGUE_EDIT = 2
-    LEAGUE_AUDIT_ACTION_LEAGUE_DELETE = 3
-    LEAGUE_AUDIT_ACTION_LEAGUE_ADMIN_ADD = 4
-    LEAGUE_AUDIT_ACTION_LEAGUE_ADMIN_REVOKE = 5
-    LEAGUE_AUDIT_ACTION_LEAGUE_ADMIN_PROMOTE = 6
-    LEAGUE_AUDIT_ACTION_LEAGUE_STREAM_ADD = 7
-    LEAGUE_AUDIT_ACTION_LEAGUE_STREAM_REMOVE = 8
-    LEAGUE_AUDIT_ACTION_NODEGROUP_CREATE = 100
-    LEAGUE_AUDIT_ACTION_NODEGROUP_DESTROY = 101
-    LEAGUE_AUDIT_ACTION_NODEGROUP_ADD_TEAM = 102
-    LEAGUE_AUDIT_ACTION_NODE_CREATE = 200
-    LEAGUE_AUDIT_ACTION_NODE_DESTROY = 201
-    LEAGUE_AUDIT_ACTION_NODE_AUTOCREATE = 202
-    LEAGUE_AUDIT_ACTION_NODE_SET_TEAM = 203
-    LEAGUE_AUDIT_ACTION_NODE_SET_SERIES_ID = 204
-    LEAGUE_AUDIT_ACTION_NODE_SET_ADVANCING = 205
-    LEAGUE_AUDIT_ACTION_NODE_SET_TIME = 206
-    LEAGUE_AUDIT_ACTION_NODE_MATCH_COMPLETED = 207
-    LEAGUE_AUDIT_ACTION_NODE_COMPLETED = 208
-
-class DOTA_COMBATLOG_TYPES(IntEnum):
-    DOTA_COMBATLOG_INVALID = -1
-    DOTA_COMBATLOG_DAMAGE = 0
-    DOTA_COMBATLOG_HEAL = 1
-    DOTA_COMBATLOG_MODIFIER_ADD = 2
-    DOTA_COMBATLOG_MODIFIER_REMOVE = 3
-    DOTA_COMBATLOG_DEATH = 4
-    DOTA_COMBATLOG_ABILITY = 5
-    DOTA_COMBATLOG_ITEM = 6
-    DOTA_COMBATLOG_LOCATION = 7
-    DOTA_COMBATLOG_GOLD = 8
-    DOTA_COMBATLOG_GAME_STATE = 9
-    DOTA_COMBATLOG_XP = 10
-    DOTA_COMBATLOG_PURCHASE = 11
-    DOTA_COMBATLOG_BUYBACK = 12
-    DOTA_COMBATLOG_ABILITY_TRIGGER = 13
-    DOTA_COMBATLOG_PLAYERSTATS = 14
-    DOTA_COMBATLOG_MULTIKILL = 15
-    DOTA_COMBATLOG_KILLSTREAK = 16
-    DOTA_COMBATLOG_TEAM_BUILDING_KILL = 17
-    DOTA_COMBATLOG_FIRST_BLOOD = 18
-    DOTA_COMBATLOG_MODIFIER_STACK_EVENT = 19
-    DOTA_COMBATLOG_NEUTRAL_CAMP_STACK = 20
-    DOTA_COMBATLOG_PICKUP_RUNE = 21
-    DOTA_COMBATLOG_REVEALED_INVISIBLE = 22
-    DOTA_COMBATLOG_HERO_SAVED = 23
-    DOTA_COMBATLOG_MANA_RESTORED = 24
-    DOTA_COMBATLOG_HERO_LEVELUP = 25
-    DOTA_COMBATLOG_BOTTLE_HEAL_ALLY = 26
-    DOTA_COMBATLOG_ENDGAME_STATS = 27
-    DOTA_COMBATLOG_INTERRUPT_CHANNEL = 28
-    DOTA_COMBATLOG_ALLIED_GOLD = 29
-    DOTA_COMBATLOG_AEGIS_TAKEN = 30
-    DOTA_COMBATLOG_MANA_DAMAGE = 31
-    DOTA_COMBATLOG_PHYSICAL_DAMAGE_PREVENTED = 32
-    DOTA_COMBATLOG_UNIT_SUMMONED = 33
-    DOTA_COMBATLOG_ATTACK_EVADE = 34
-    DOTA_COMBATLOG_TREE_CUT = 35
-    DOTA_COMBATLOG_SUCCESSFUL_SCAN = 36
-    DOTA_COMBATLOG_END_KILLSTREAK = 37
-    DOTA_COMBATLOG_BLOODSTONE_CHARGE = 38
-    DOTA_COMBATLOG_CRITICAL_DAMAGE = 39
-    DOTA_COMBATLOG_SPELL_ABSORB = 40
-    DOTA_COMBATLOG_UNIT_TELEPORTED = 41
-    DOTA_COMBATLOG_KILL_EATER_EVENT = 42
-
-class ESourceEngine(IntEnum):
-    ESE_Source1 = 0
-    ESE_Source2 = 1
-
-class PartnerAccountType(IntEnum):
-    PARTNER_NONE = 0
-    PARTNER_PERFECT_WORLD = 1
-    PARTNER_NEXON = 2
-    PARTNER_INVALID = 3
-
-class GCConnectionStatus(IntEnum):
-    HAVE_SESSION = 0
-    GC_GOING_DOWN = 1
-    NO_SESSION = 2
-    NO_SESSION_IN_LOGON_QUEUE = 3
-    NO_STEAM = 4
-    SUSPENDED = 5
-    STEAM_GOING_DOWN = 6
-
-class EGCSystemMsg(IntEnum):
-    EGCMsgInvalid = 0
-    EGCMsgMulti = 1
-    EGCMsgGenericReply = 10
-    EGCMsgSystemBase = 50
-    EGCMsgAchievementAwarded = 51
-    EGCMsgConCommand = 52
-    EGCMsgStartPlaying = 53
-    EGCMsgStopPlaying = 54
-    EGCMsgStartGameserver = 55
-    EGCMsgStopGameserver = 56
-    EGCMsgWGRequest = 57
-    EGCMsgWGResponse = 58
-    EGCMsgGetUserGameStatsSchema = 59
-    EGCMsgGetUserGameStatsSchemaResponse = 60
-    EGCMsgGetUserStatsDEPRECATED = 61
-    EGCMsgGetUserStatsResponse = 62
-    EGCMsgAppInfoUpdated = 63
-    EGCMsgValidateSession = 64
-    EGCMsgValidateSessionResponse = 65
-    EGCMsgLookupAccountFromInput = 66
-    EGCMsgSendHTTPRequest = 67
-    EGCMsgSendHTTPRequestResponse = 68
-    EGCMsgPreTestSetup = 69
-    EGCMsgRecordSupportAction = 70
-    EGCMsgGetAccountDetails_DEPRECATED = 71
-    EGCMsgReceiveInterAppMessage = 73
-    EGCMsgFindAccounts = 74
-    EGCMsgPostAlert = 75
-    EGCMsgGetLicenses = 76
-    EGCMsgGetUserStats = 77
-    EGCMsgGetCommands = 78
-    EGCMsgGetCommandsResponse = 79
-    EGCMsgAddFreeLicense = 80
-    EGCMsgAddFreeLicenseResponse = 81
-    EGCMsgGetIPLocation = 82
-    EGCMsgGetIPLocationResponse = 83
-    EGCMsgSystemStatsSchema = 84
-    EGCMsgGetSystemStats = 85
-    EGCMsgGetSystemStatsResponse = 86
-    EGCMsgSendEmail = 87
-    EGCMsgSendEmailResponse = 88
-    EGCMsgGetEmailTemplate = 89
-    EGCMsgGetEmailTemplateResponse = 90
-    EGCMsgGrantGuestPass = 91
-    EGCMsgGrantGuestPassResponse = 92
-    EGCMsgGetAccountDetails = 93
-    EGCMsgGetAccountDetailsResponse = 94
-    EGCMsgGetPersonaNames = 95
-    EGCMsgGetPersonaNamesResponse = 96
-    EGCMsgMultiplexMsg = 97
-    EGCMsgWebAPIRegisterInterfaces = 101
-    EGCMsgWebAPIJobRequest = 102
-    EGCMsgWebAPIJobRequestHttpResponse = 104
-    EGCMsgWebAPIJobRequestForwardResponse = 105
-    EGCMsgMemCachedGet = 200
-    EGCMsgMemCachedGetResponse = 201
-    EGCMsgMemCachedSet = 202
-    EGCMsgMemCachedDelete = 203
-    EGCMsgMemCachedStats = 204
-    EGCMsgMemCachedStatsResponse = 205
-    EGCMsgSQLStats = 210
-    EGCMsgSQLStatsResponse = 211
-    EGCMsgMasterSetDirectory = 220
-    EGCMsgMasterSetDirectoryResponse = 221
-    EGCMsgMasterSetWebAPIRouting = 222
-    EGCMsgMasterSetWebAPIRoutingResponse = 223
-    EGCMsgMasterSetClientMsgRouting = 224
-    EGCMsgMasterSetClientMsgRoutingResponse = 225
-    EGCMsgSetOptions = 226
-    EGCMsgSetOptionsResponse = 227
-    EGCMsgSystemBase2 = 500
-    EGCMsgGetPurchaseTrustStatus = 501
-    EGCMsgGetPurchaseTrustStatusResponse = 502
-    EGCMsgUpdateSession = 503
-    EGCMsgGCAccountVacStatusChange = 504
-    EGCMsgCheckFriendship = 505
-    EGCMsgCheckFriendshipResponse = 506
-    EGCMsgGetPartnerAccountLink = 507
-    EGCMsgGetPartnerAccountLinkResponse = 508
-    EGCMsgVSReportedSuspiciousActivity = 509
-    EGCMsgDPPartnerMicroTxns = 512
-    EGCMsgDPPartnerMicroTxnsResponse = 513
-    EGCMsgGetIPASN = 514
-    EGCMsgGetIPASNResponse = 515
-    EGCMsgGetAppFriendsList = 516
-    EGCMsgGetAppFriendsListResponse = 517
-    EGCMsgVacVerificationChange = 518
-    EGCMsgAccountPhoneNumberChange = 519
-    EGCMsgAccountTwoFactorChange = 520
-    EGCMsgCheckClanMembership = 521
-    EGCMsgCheckClanMembershipResponse = 522
-    EGCMsgCompressedMsgToClient = 523
-
-class ESOMsg(IntEnum):
-    Create = 21
-    Update = 22
-    Destroy = 23
-    CacheSubscribed = 24
-    CacheUnsubscribed = 25
-    UpdateMultiple = 26
-    CacheSubscriptionRefresh = 28
-    CacheSubscribedUpToDate = 29
+class EFeaturedHeroTextField(IntEnum):
+    NewHero = 0
+    NewItem = 1
+    ItemSetDescription = 2
+    ItemDescription = 3
+    Hype = 4
+    HeroWinLoss = 5
+    FrequentlyPlayedHero = 6
+    FeaturedItem = 7
+    PopularItem = 8
+    SaleItem = 9
+    SaleDiscount = 10
+    Container = 11
 
 class EGCBaseClientMsg(IntEnum):
     EMsgGCPingRequest = 3001
@@ -1735,31 +1250,33 @@ class EGCBaseClientMsg(IntEnum):
     EMsgGCClientConnectionStatus = 4009
     EMsgGCServerConnectionStatus = 4010
 
-class EGCToGCMsg(IntEnum):
-    EGCToGCMsgMasterAck = 150
-    EGCToGCMsgMasterAckResponse = 151
-    EGCToGCMsgRouted = 152
-    EGCToGCMsgRoutedReply = 153
-    EMsgGCUpdateSubGCSessionInfo = 154
-    EMsgGCRequestSubGCSessionInfo = 155
-    EMsgGCRequestSubGCSessionInfoResponse = 156
-    EGCToGCMsgMasterStartupComplete = 157
-    EMsgGCToGCSOCacheSubscribe = 158
-    EMsgGCToGCSOCacheUnsubscribe = 159
-    EMsgGCToGCLoadSessionSOCache = 160
-    EMsgGCToGCLoadSessionSOCacheResponse = 161
-    EMsgGCToGCUpdateSessionStats = 162
-    EMsgGCToGCUniverseStartup = 163
-    EMsgGCToGCUniverseStartupResponse = 164
-    EMsgGCToGCForwardAccountDetails = 165
+class EGCBaseMsg(IntEnum):
+    EMsgGCSystemMessage = 4001
+    EMsgGCReplicateConVars = 4002
+    EMsgGCConVarUpdated = 4003
+    EMsgGCInviteToParty = 4501
+    EMsgGCInvitationCreated = 4502
+    EMsgGCPartyInviteResponse = 4503
+    EMsgGCKickFromParty = 4504
+    EMsgGCLeaveParty = 4505
+    EMsgGCServerAvailable = 4506
+    EMsgGCClientConnectToServer = 4507
+    EMsgGCGameServerInfo = 4508
+    EMsgGCError = 4509
+    EMsgGCLANServerAvailable = 4511
+    EMsgGCInviteToLobby = 4512
+    EMsgGCLobbyInviteResponse = 4513
+    EMsgGCToClientPollFileRequest = 4514
+    EMsgGCToClientPollFileResponse = 4515
+    EMsgGCToGCPerformManualOp = 4516
+    EMsgGCToGCPerformManualOpCompleted = 4517
 
-class GCProtoBufMsgSrc(IntEnum):
-    Unspecified = 0
-    FromSystem = 1
-    FromSteamID = 2
-    FromGC = 3
-    ReplySystem = 4
-    SpoofedSteamID = 5
+class EGCBaseProtoObjectTypes(IntEnum):
+    EProtoObjectPartyInvite = 1001
+    EProtoObjectLobbyInvite = 1002
+
+class EGCEconBaseMsg(IntEnum):
+    EMsgGCGenericResult = 2579
 
 class EGCItemMsg(IntEnum):
     EMsgGCBase = 1000
@@ -1940,22 +1457,6 @@ class EGCItemMsg(IntEnum):
     EMsgGCToGCBroadcastMessageFromSub = 2598
     EMsgGCToClientCurrencyPricePoints = 2599
 
-class EItemPurgatoryResponse_Finalize(IntEnum):
-    ItemPurgatoryResponse_Finalize_Succeeded = 0
-    ItemPurgatoryResponse_Finalize_Failed_Incomplete = 1
-    ItemPurgatoryResponse_Finalize_Failed_ItemsNotInPurgatory = 2
-    ItemPurgatoryResponse_Finalize_Failed_CouldNotFindItems = 3
-    ItemPurgatoryResponse_Finalize_Failed_NoSOCache = 4
-    ItemPurgatoryResponse_Finalize_BackpackFull = 5
-
-class EItemPurgatoryResponse_Refund(IntEnum):
-    ItemPurgatoryResponse_Refund_Succeeded = 0
-    ItemPurgatoryResponse_Refund_Failed_ItemNotInPurgatory = 1
-    ItemPurgatoryResponse_Refund_Failed_CouldNotFindItem = 2
-    ItemPurgatoryResponse_Refund_Failed_NoSOCache = 3
-    ItemPurgatoryResponse_Refund_Failed_NoDetail = 4
-    ItemPurgatoryResponse_Refund_Failed_NexonWebAPI = 5
-
 class EGCMsgInitiateTradeResponse(IntEnum):
     Accepted = 0
     Declined = 1
@@ -1983,9 +1484,6 @@ class EGCMsgInitiateTradeResponse(IntEnum):
     TooRecentFriend = 23
     WalledFundsNotTrusted = 24
 
-class EGCEconBaseMsg(IntEnum):
-    EMsgGCGenericResult = 2579
-
 class EGCMsgResponse(IntEnum):
     EGCMsgResponseOK = 0
     EGCMsgResponseDenied = 1
@@ -1996,12 +1494,6 @@ class EGCMsgResponse(IntEnum):
     EGCMsgResponseUnknownError = 6
     EGCMsgResponseNotLoggedOn = 7
     EGCMsgFailedToCreate = 8
-
-class EGCPartnerRequestResponse(IntEnum):
-    EPartnerRequestOK = 1
-    EPartnerRequestBadAccount = 2
-    EPartnerRequestNotLinked = 3
-    EPartnerRequestUnsupportedPartnerType = 4
 
 class EGCMsgUseItemResponse(IntEnum):
     ItemUsed = 0
@@ -2019,90 +1511,598 @@ class EGCMsgUseItemResponse(IntEnum):
     EmoticonUnlock_Complete = 12
     ItemUsed_Compendium = 13
 
+class EGCPartnerRequestResponse(IntEnum):
+    EPartnerRequestOK = 1
+    EPartnerRequestBadAccount = 2
+    EPartnerRequestNotLinked = 3
+    EPartnerRequestUnsupportedPartnerType = 4
+
+class EGCSystemMsg(IntEnum):
+    EGCMsgInvalid = 0
+    EGCMsgMulti = 1
+    EGCMsgGenericReply = 10
+    EGCMsgSystemBase = 50
+    EGCMsgAchievementAwarded = 51
+    EGCMsgConCommand = 52
+    EGCMsgStartPlaying = 53
+    EGCMsgStopPlaying = 54
+    EGCMsgStartGameserver = 55
+    EGCMsgStopGameserver = 56
+    EGCMsgWGRequest = 57
+    EGCMsgWGResponse = 58
+    EGCMsgGetUserGameStatsSchema = 59
+    EGCMsgGetUserGameStatsSchemaResponse = 60
+    EGCMsgGetUserStatsDEPRECATED = 61
+    EGCMsgGetUserStatsResponse = 62
+    EGCMsgAppInfoUpdated = 63
+    EGCMsgValidateSession = 64
+    EGCMsgValidateSessionResponse = 65
+    EGCMsgLookupAccountFromInput = 66
+    EGCMsgSendHTTPRequest = 67
+    EGCMsgSendHTTPRequestResponse = 68
+    EGCMsgPreTestSetup = 69
+    EGCMsgRecordSupportAction = 70
+    EGCMsgGetAccountDetails_DEPRECATED = 71
+    EGCMsgReceiveInterAppMessage = 73
+    EGCMsgFindAccounts = 74
+    EGCMsgPostAlert = 75
+    EGCMsgGetLicenses = 76
+    EGCMsgGetUserStats = 77
+    EGCMsgGetCommands = 78
+    EGCMsgGetCommandsResponse = 79
+    EGCMsgAddFreeLicense = 80
+    EGCMsgAddFreeLicenseResponse = 81
+    EGCMsgGetIPLocation = 82
+    EGCMsgGetIPLocationResponse = 83
+    EGCMsgSystemStatsSchema = 84
+    EGCMsgGetSystemStats = 85
+    EGCMsgGetSystemStatsResponse = 86
+    EGCMsgSendEmail = 87
+    EGCMsgSendEmailResponse = 88
+    EGCMsgGetEmailTemplate = 89
+    EGCMsgGetEmailTemplateResponse = 90
+    EGCMsgGrantGuestPass = 91
+    EGCMsgGrantGuestPassResponse = 92
+    EGCMsgGetAccountDetails = 93
+    EGCMsgGetAccountDetailsResponse = 94
+    EGCMsgGetPersonaNames = 95
+    EGCMsgGetPersonaNamesResponse = 96
+    EGCMsgMultiplexMsg = 97
+    EGCMsgWebAPIRegisterInterfaces = 101
+    EGCMsgWebAPIJobRequest = 102
+    EGCMsgWebAPIJobRequestHttpResponse = 104
+    EGCMsgWebAPIJobRequestForwardResponse = 105
+    EGCMsgMemCachedGet = 200
+    EGCMsgMemCachedGetResponse = 201
+    EGCMsgMemCachedSet = 202
+    EGCMsgMemCachedDelete = 203
+    EGCMsgMemCachedStats = 204
+    EGCMsgMemCachedStatsResponse = 205
+    EGCMsgSQLStats = 210
+    EGCMsgSQLStatsResponse = 211
+    EGCMsgMasterSetDirectory = 220
+    EGCMsgMasterSetDirectoryResponse = 221
+    EGCMsgMasterSetWebAPIRouting = 222
+    EGCMsgMasterSetWebAPIRoutingResponse = 223
+    EGCMsgMasterSetClientMsgRouting = 224
+    EGCMsgMasterSetClientMsgRoutingResponse = 225
+    EGCMsgSetOptions = 226
+    EGCMsgSetOptionsResponse = 227
+    EGCMsgSystemBase2 = 500
+    EGCMsgGetPurchaseTrustStatus = 501
+    EGCMsgGetPurchaseTrustStatusResponse = 502
+    EGCMsgUpdateSession = 503
+    EGCMsgGCAccountVacStatusChange = 504
+    EGCMsgCheckFriendship = 505
+    EGCMsgCheckFriendshipResponse = 506
+    EGCMsgGetPartnerAccountLink = 507
+    EGCMsgGetPartnerAccountLinkResponse = 508
+    EGCMsgVSReportedSuspiciousActivity = 509
+    EGCMsgDPPartnerMicroTxns = 512
+    EGCMsgDPPartnerMicroTxnsResponse = 513
+    EGCMsgGetIPASN = 514
+    EGCMsgGetIPASNResponse = 515
+    EGCMsgGetAppFriendsList = 516
+    EGCMsgGetAppFriendsListResponse = 517
+    EGCMsgVacVerificationChange = 518
+    EGCMsgAccountPhoneNumberChange = 519
+    EGCMsgAccountTwoFactorChange = 520
+    EGCMsgCheckClanMembership = 521
+    EGCMsgCheckClanMembershipResponse = 522
+    EGCMsgCompressedMsgToClient = 523
+
+class EGCToGCMsg(IntEnum):
+    EGCToGCMsgMasterAck = 150
+    EGCToGCMsgMasterAckResponse = 151
+    EGCToGCMsgRouted = 152
+    EGCToGCMsgRoutedReply = 153
+    EMsgGCUpdateSubGCSessionInfo = 154
+    EMsgGCRequestSubGCSessionInfo = 155
+    EMsgGCRequestSubGCSessionInfoResponse = 156
+    EGCToGCMsgMasterStartupComplete = 157
+    EMsgGCToGCSOCacheSubscribe = 158
+    EMsgGCToGCSOCacheUnsubscribe = 159
+    EMsgGCToGCLoadSessionSOCache = 160
+    EMsgGCToGCLoadSessionSOCacheResponse = 161
+    EMsgGCToGCUpdateSessionStats = 162
+    EMsgGCToGCUniverseStartup = 163
+    EMsgGCToGCUniverseStartupResponse = 164
+    EMsgGCToGCForwardAccountDetails = 165
+
+class EItemEditorReservationResult(IntEnum):
+    OK = 1
+    AlreadyExists = 2
+    Reserved = 3
+    TimedOut = 4
+
+class EItemPurgatoryResponse_Finalize(IntEnum):
+    ItemPurgatoryResponse_Finalize_Succeeded = 0
+    ItemPurgatoryResponse_Finalize_Failed_Incomplete = 1
+    ItemPurgatoryResponse_Finalize_Failed_ItemsNotInPurgatory = 2
+    ItemPurgatoryResponse_Finalize_Failed_CouldNotFindItems = 3
+    ItemPurgatoryResponse_Finalize_Failed_NoSOCache = 4
+    ItemPurgatoryResponse_Finalize_BackpackFull = 5
+
+class EItemPurgatoryResponse_Refund(IntEnum):
+    ItemPurgatoryResponse_Refund_Succeeded = 0
+    ItemPurgatoryResponse_Refund_Failed_ItemNotInPurgatory = 1
+    ItemPurgatoryResponse_Refund_Failed_CouldNotFindItem = 2
+    ItemPurgatoryResponse_Refund_Failed_NoSOCache = 3
+    ItemPurgatoryResponse_Refund_Failed_NoDetail = 4
+    ItemPurgatoryResponse_Refund_Failed_NexonWebAPI = 5
+
+class ELaneType(IntEnum):
+    LANE_TYPE_UNKNOWN = 0
+    LANE_TYPE_SAFE = 1
+    LANE_TYPE_OFF = 2
+    LANE_TYPE_MID = 3
+    LANE_TYPE_JUNGLE = 4
+    LANE_TYPE_ROAM = 5
+
+class ELeagueAuditAction(IntEnum):
+    LEAGUE_AUDIT_ACTION_INVALID = 0
+    LEAGUE_AUDIT_ACTION_LEAGUE_CREATE = 1
+    LEAGUE_AUDIT_ACTION_LEAGUE_EDIT = 2
+    LEAGUE_AUDIT_ACTION_LEAGUE_DELETE = 3
+    LEAGUE_AUDIT_ACTION_LEAGUE_ADMIN_ADD = 4
+    LEAGUE_AUDIT_ACTION_LEAGUE_ADMIN_REVOKE = 5
+    LEAGUE_AUDIT_ACTION_LEAGUE_ADMIN_PROMOTE = 6
+    LEAGUE_AUDIT_ACTION_LEAGUE_STREAM_ADD = 7
+    LEAGUE_AUDIT_ACTION_LEAGUE_STREAM_REMOVE = 8
+    LEAGUE_AUDIT_ACTION_NODEGROUP_CREATE = 100
+    LEAGUE_AUDIT_ACTION_NODEGROUP_DESTROY = 101
+    LEAGUE_AUDIT_ACTION_NODEGROUP_ADD_TEAM = 102
+    LEAGUE_AUDIT_ACTION_NODE_CREATE = 200
+    LEAGUE_AUDIT_ACTION_NODE_DESTROY = 201
+    LEAGUE_AUDIT_ACTION_NODE_AUTOCREATE = 202
+    LEAGUE_AUDIT_ACTION_NODE_SET_TEAM = 203
+    LEAGUE_AUDIT_ACTION_NODE_SET_SERIES_ID = 204
+    LEAGUE_AUDIT_ACTION_NODE_SET_ADVANCING = 205
+    LEAGUE_AUDIT_ACTION_NODE_SET_TIME = 206
+    LEAGUE_AUDIT_ACTION_NODE_MATCH_COMPLETED = 207
+    LEAGUE_AUDIT_ACTION_NODE_COMPLETED = 208
+
+class ELeagueBroadcastProvider(IntEnum):
+    LEAGUE_BROADCAST_UNKNOWN = 0
+    LEAGUE_BROADCAST_STEAM = 1
+    LEAGUE_BROADCAST_TWITCH = 2
+    LEAGUE_BROADCAST_YOUTUBE = 3
+    LEAGUE_BROADCAST_OTHER = 100
+
+class ELeagueFlags(IntEnum):
+    LEAGUE_FLAGS_NONE = 0
+    LEAGUE_ACCEPTED_AGREEMENT = 1
+    LEAGUE_PAYMENT_EMAIL_SENT = 2
+    LEAGUE_COMPENDIUM_ALLOWED = 4
+    LEAGUE_COMPENDIUM_PUBLIC = 8
+
+class ELeagueRegion(IntEnum):
+    LEAGUE_REGION_UNSET = 0
+    LEAGUE_REGION_NA = 1
+    LEAGUE_REGION_SA = 2
+    LEAGUE_REGION_EUROPE = 3
+    LEAGUE_REGION_CIS = 4
+    LEAGUE_REGION_CHINA = 5
+    LEAGUE_REGION_SEA = 6
+
+class ELeagueStatus(IntEnum):
+    LEAGUE_STATUS_UNSET = 0
+    LEAGUE_STATUS_NEW = 1
+    LEAGUE_STATUS_PUBLISHED = 2
+    LEAGUE_STATUS_ACCEPTED = 3
+    LEAGUE_STATUS_REJECTED = 4
+    LEAGUE_STATUS_CONCLUDED = 5
+    LEAGUE_STATUS_DELETED = 6
+    LEAGUE_STATUS_RELEASED = 10
+    LEAGUE_STATUS_HIDDEN = 11
+    LEAGUE_STATUS_READY = 12
+    LEAGUE_STATUS_COMPLETE = 13
+
+class ELeagueTier(IntEnum):
+    LEAGUE_TIER_UNSET = 0
+    LEAGUE_TIER_AMATEUR = 1
+    LEAGUE_TIER_PROFESSIONAL = 2
+    LEAGUE_TIER_PREMIUM = 3
+    LEAGUE_TIER_MINOR = 4
+    LEAGUE_TIER_MAJOR = 5
+
+class EMatchGroupServerStatus(IntEnum):
+    OK = 0
+    LimitedAvailability = 1
+    Offline = 2
+
+class EMatchOutcome(IntEnum):
+    Unknown = 0
+    RadVictory = 2
+    DireVictory = 3
+    NotScored_PoorNetworkConditions = 64
+    NotScored_Leaver = 65
+    NotScored_ServerCrash = 66
+    NotScored_NeverStarted = 67
+    NotScored_Canceled = 68
+
+class EProfileCardSlotType(IntEnum):
+    Empty = 0
+    Stat = 1
+    Trophy = 2
+    Item = 3
+    Hero = 4
+    Emoticon = 5
+    Team = 6
+
+class EPurchaseHeroRelicResult(IntEnum):
+    Success = 0
+    FailedToSend = 1
+    NotEnoughPoints = 2
+    InternalServerError = 3
+    PurchaseNotAllowed = 4
+    InvalidRelic = 5
+    AlreadyOwned = 6
+
+class EReadyCheckRequestResult(IntEnum):
+    Success = 0
+    AlreadyInProgress = 1
+    NotInParty = 2
+    SendError = 3
+    UnknownError = 4
+
+class EReadyCheckStatus(IntEnum):
+    Unknown = 0
+    NotReady = 1
+    Ready = 2
+
+class ESOMsg(IntEnum):
+    Create = 21
+    Update = 22
+    Destroy = 23
+    CacheSubscribed = 24
+    CacheUnsubscribed = 25
+    UpdateMultiple = 26
+    CacheSubscriptionRefresh = 28
+    CacheSubscribedUpToDate = 29
+
+class ESourceEngine(IntEnum):
+    ESE_Source1 = 0
+    ESE_Source2 = 1
+
+class ESpecialPingValue(IntEnum):
+    NoData = 16382
+    Failed = 16383
+
+class EStartFindingMatchResult(IntEnum):
+    Invalid = 0
+    OK = 1
+    AlreadySearching = 2
+    FailGeneric = 100
+    FailedIgnore = 101
+    MatchmakingDisabled = 102
+    RegionOffline = 103
+    MatchmakingCooldown = 104
+    ClientOutOfDate = 105
+    CompetitiveNoLowPriority = 106
+    CompetitiveNotUnlocked = 107
+    GameModeNotUnlocked = 108
+    CompetitiveNotEnoughSkillData = 109
+    MissingInitialSkill = 110
+    CompetitiveRankSpreadTooLarge = 111
+    MemberAlreadyInLobby = 112
+    MemberNotVACVerified = 113
+    WeekendTourneyBadPartySize = 114
+    WeekendTourneyTeamBuyInTooSmall = 115
+    WeekendTourneyIndividualBuyInTooLarge = 116
+    WeekendTourneyTeamBuyInTooLarge = 117
+    MemberMissingEventOwnership = 118
+    WeekendTourneyNotUnlocked = 119
+    WeekendTourneyRecentParticipation = 120
+    MemberMissingAnchoredPhoneNumber = 121
+    NotMemberOfClan = 122
+
+class ETeamInviteResult(IntEnum):
+    TEAM_INVITE_SUCCESS = 0
+    TEAM_INVITE_FAILURE_INVITE_REJECTED = 1
+    TEAM_INVITE_FAILURE_INVITE_TIMEOUT = 2
+    TEAM_INVITE_ERROR_TEAM_AT_MEMBER_LIMIT = 3
+    TEAM_INVITE_ERROR_TEAM_LOCKED = 4
+    TEAM_INVITE_ERROR_INVITEE_NOT_AVAILABLE = 5
+    TEAM_INVITE_ERROR_INVITEE_BUSY = 6
+    TEAM_INVITE_ERROR_INVITEE_ALREADY_MEMBER = 7
+    TEAM_INVITE_ERROR_INVITEE_AT_TEAM_LIMIT = 8
+    TEAM_INVITE_ERROR_INVITEE_INSUFFICIENT_LEVEL = 9
+    TEAM_INVITE_ERROR_INVITER_INVALID_ACCOUNT_TYPE = 10
+    TEAM_INVITE_ERROR_INVITER_NOT_ADMIN = 11
+    TEAM_INVITE_ERROR_INCORRECT_USER_RESPONDED = 12
+    TEAM_INVITE_ERROR_UNSPECIFIED = 13
+
+ETournamentEvent = IntEnum('ETournamentEvent', {
+    'None': 0,
+    'TournamentCreated': 1,
+    'TournamentsMerged': 2,
+    'GameOutcome': 3,
+    'TeamGivenBye': 4,
+    'TournamentCanceledByAdmin': 5,
+    'TeamAbandoned': 6,
+    'ScheduledGameStarted': 7,
+    'Canceled': 8,
+    'TeamParticipationTimedOut_EntryFeeRefund': 9,
+    'TeamParticipationTimedOut_EntryFeeForfeit': 10,
+    'TeamParticipationTimedOut_GrantedVictory': 11,
+    })
+
+class ETournamentGameState(IntEnum):
+    Unknown = 0
+    Canceled = 1
+    Scheduled = 2
+    Active = 3
+    RadVictory = 20
+    DireVictory = 21
+    RadVictoryByForfeit = 22
+    DireVictoryByForfeit = 23
+    ServerFailure = 40
+    NotNeeded = 41
+
+class ETournamentNodeState(IntEnum):
+    Unknown = 0
+    Canceled = 1
+    TeamsNotYetAssigned = 2
+    InBetweenGames = 3
+    GameInProgress = 4
+    A_Won = 5
+    B_Won = 6
+    A_WonByForfeit = 7
+    B_WonByForfeit = 8
+    A_Bye = 9
+    A_Abandoned = 10
+    ServerFailure = 11
+    A_TimeoutForfeit = 12
+    A_TimeoutRefund = 13
+
+class ETournamentState(IntEnum):
+    Unknown = 0
+    CanceledByAdmin = 1
+    Completed = 2
+    Merged = 3
+    ServerFailure = 4
+    TeamAbandoned = 5
+    TeamTimeoutForfeit = 6
+    TeamTimeoutRefund = 7
+    ServerFailureGrantedVictory = 8
+    TeamTimeoutGrantedVictory = 9
+    InProgress = 100
+    WaitingToMerge = 101
+
+class ETournamentTeamState(IntEnum):
+    Unknown = 0
+    Node1 = 1
+    NodeMax = 1024
+    Eliminated = 14003
+    Forfeited = 14004
+    Finished1st = 15001
+    Finished2nd = 15002
+    Finished3rd = 15003
+    Finished4th = 15004
+    Finished5th = 15005
+    Finished6th = 15006
+    Finished7th = 15007
+    Finished8th = 15008
+    Finished9th = 15009
+    Finished10th = 15010
+    Finished11th = 15011
+    Finished12th = 15012
+    Finished13th = 15013
+    Finished14th = 15014
+    Finished15th = 15015
+    Finished16th = 15016
+
+ETournamentTemplate = IntEnum('ETournamentTemplate', {
+    'None': 0,
+    'AutomatedWin3': 1,
+    })
+
+class ETourneyQueueDeadlineState(IntEnum):
+    Normal = 0
+    Missed = 1
+    ExpiredOK = 2
+    SeekingBye = 3
+    EligibleForRefund = 4
+    NA = -1
+    ExpiringSoon = 101
+
+EWeekendTourneyRichPresenceEvent = IntEnum('EWeekendTourneyRichPresenceEvent', {
+    'None': 0,
+    'StartedMatch': 1,
+    'WonMatch': 2,
+    'Eliminated': 3,
+    })
+
+class Fantasy_Roles(IntEnum):
+    FANTASY_ROLE_UNDEFINED = 0
+    FANTASY_ROLE_CORE = 1
+    FANTASY_ROLE_SUPPORT = 2
+    FANTASY_ROLE_OFFLANE = 3
+
+class Fantasy_Selection_Mode(IntEnum):
+    FANTASY_SELECTION_INVALID = 0
+    FANTASY_SELECTION_LOCKED = 1
+    FANTASY_SELECTION_SHUFFLE = 2
+    FANTASY_SELECTION_FREE_PICK = 3
+    FANTASY_SELECTION_ENDED = 4
+    FANTASY_SELECTION_PRE_SEASON = 5
+    FANTASY_SELECTION_PRE_DRAFT = 6
+    FANTASY_SELECTION_DRAFTING = 7
+    FANTASY_SELECTION_REGULAR_SEASON = 8
+    FANTASY_SELECTION_CARD_BASED = 9
+
+class Fantasy_Team_Slots(IntEnum):
+    FANTASY_SLOT_NONE = 0
+    FANTASY_SLOT_CORE = 1
+    FANTASY_SLOT_SUPPORT = 2
+    FANTASY_SLOT_ANY = 3
+    FANTASY_SLOT_BENCH = 4
+
+class GC_BannedWordType(IntEnum):
+    GC_BANNED_WORD_DISABLE_WORD = 0
+    GC_BANNED_WORD_ENABLE_WORD = 1
+
+class GCConnectionStatus(IntEnum):
+    HAVE_SESSION = 0
+    GC_GOING_DOWN = 1
+    NO_SESSION = 2
+    NO_SESSION_IN_LOGON_QUEUE = 3
+    NO_STEAM = 4
+    SUSPENDED = 5
+    STEAM_GOING_DOWN = 6
+
+class GCProtoBufMsgSrc(IntEnum):
+    Unspecified = 0
+    FromSystem = 1
+    FromSteamID = 2
+    FromGC = 3
+    ReplySystem = 4
+    SpoofedSteamID = 5
+
+class LobbyDotaPauseSetting(IntEnum):
+    Unlimited = 0
+    Limited = 1
+    Disabled = 2
+
+class LobbyDotaTVDelay(IntEnum):
+    LobbyDotaTV_10 = 0
+    LobbyDotaTV_120 = 1
+    LobbyDotaTV_300 = 2
+
+class MatchLanguages(IntEnum):
+    MATCH_LANGUAGE_INVALID = 0
+    MATCH_LANGUAGE_ENGLISH = 1
+    MATCH_LANGUAGE_RUSSIAN = 2
+    MATCH_LANGUAGE_CHINESE = 3
+    MATCH_LANGUAGE_KOREAN = 4
+    MATCH_LANGUAGE_SPANISH = 5
+    MATCH_LANGUAGE_PORTUGUESE = 6
+    MATCH_LANGUAGE_ENGLISH2 = 7
+
+class MatchType(IntEnum):
+    MATCH_TYPE_CASUAL = 0
+    MATCH_TYPE_COOP_BOTS = 1
+    MATCH_TYPE_TEAM_RANKED = 2
+    MATCH_TYPE_LEGACY_SOLO_QUEUE = 3
+    MATCH_TYPE_COMPETITIVE = 4
+    MATCH_TYPE_WEEKEND_TOURNEY = 5
+    MATCH_TYPE_CASUAL_1V1 = 6
+    MATCH_TYPE_EVENT = 7
+    MATCH_TYPE_SEASONAL_RANKED = 8
+    MATCH_TYPE_LOWPRI_DEPRECATED = 9
+    MATCH_TYPE_STEAM_GROUP = 10
+
+class PartnerAccountType(IntEnum):
+    PARTNER_NONE = 0
+    PARTNER_PERFECT_WORLD = 1
+    PARTNER_NEXON = 2
+    PARTNER_INVALID = 3
+
 __all__ = [
-    'EGCBaseMsg',
-    'EGCBaseProtoObjectTypes',
-    'ECustomGameInstallStatus',
-    'GC_BannedWordType',
-    'ETournamentTemplate',
-    'ETournamentGameState',
-    'ETournamentTeamState',
-    'ETournamentState',
-    'ETournamentNodeState',
-    'EDOTAGroupMergeResult',
-    'DOTA_WatchReplayType',
-    'EItemEditorReservationResult',
-    'EFeaturedHeroTextField',
-    'EFeaturedHeroDataType',
-    'EWeekendTourneyRichPresenceEvent',
-    'EDOTAEventInviteType',
-    'EDOTATriviaQuestionCategory',
-    'EDOTATriviaAnswerResult',
-    'EPurchaseHeroRelicResult',
     'DOTA_2013PassportSelectionIndices',
-    'EStartFindingMatchResult',
-    'ETeamInviteResult',
-    'ETournamentEvent',
-    'ESpecialPingValue',
-    'EDOTAGCSessionNeed',
-    'DOTA_TournamentEvents',
-    'LobbyDotaTVDelay',
-    'LobbyDotaPauseSetting',
-    'EReadyCheckStatus',
-    'EReadyCheckRequestResult',
-    'EDOTAGCMsg',
+    'DOTA_BOT_MODE',
+    'DOTA_CM_PICK',
+    'DOTA_COMBATLOG_TYPES',
     'DOTA_GameMode',
     'DOTA_GameState',
     'DOTA_GC_TEAM',
-    'EEvent',
-    'DOTALeaverStatus_t',
-    'DOTAConnectionState_t',
-    'Fantasy_Roles',
-    'Fantasy_Team_Slots',
-    'Fantasy_Selection_Mode',
+    'DOTA_LobbyMemberXPBonus',
+    'DOTA_TournamentEvents',
+    'DOTA_WatchReplayType',
+    'DOTABotDifficulty',
     'DOTAChatChannelType_t',
-    'EProfileCardSlotType',
-    'EMatchGroupServerStatus',
-    'DOTA_CM_PICK',
-    'DOTALowPriorityBanType',
-    'DOTALobbyReadyState',
+    'DOTAConnectionState_t',
     'DOTAGameVersion',
     'DOTAJoinLobbyResult',
-    'DOTASelectionPriorityRules',
-    'DOTASelectionPriorityChoice',
-    'DOTAMatchVote',
-    'DOTA_LobbyMemberXPBonus',
+    'DOTALeaverStatus_t',
+    'DOTALobbyReadyState',
     'DOTALobbyVisibility',
-    'EDOTAPlayerMMRType',
-    'MatchType',
-    'DOTABotDifficulty',
-    'DOTA_BOT_MODE',
-    'MatchLanguages',
-    'ETourneyQueueDeadlineState',
-    'EMatchOutcome',
-    'ELaneType',
+    'DOTALowPriorityBanType',
+    'DOTAMatchVote',
+    'DOTASelectionPriorityChoice',
+    'DOTASelectionPriorityRules',
     'EBadgeType',
-    'ELeagueStatus',
-    'ELeagueRegion',
-    'ELeagueTier',
-    'ELeagueFlags',
-    'ELeagueBroadcastProvider',
-    'ELeagueAuditAction',
-    'DOTA_COMBATLOG_TYPES',
-    'ESourceEngine',
-    'PartnerAccountType',
-    'GCConnectionStatus',
-    'EGCSystemMsg',
-    'ESOMsg',
+    'ECustomGameInstallStatus',
+    'EDOTAEventInviteType',
+    'EDOTAGCMsg',
+    'EDOTAGCSessionNeed',
+    'EDOTAGroupMergeResult',
+    'EDOTAPlayerMMRType',
+    'EDOTATriviaAnswerResult',
+    'EDOTATriviaQuestionCategory',
+    'EEvent',
+    'EFeaturedHeroDataType',
+    'EFeaturedHeroTextField',
     'EGCBaseClientMsg',
-    'EGCToGCMsg',
-    'GCProtoBufMsgSrc',
+    'EGCBaseMsg',
+    'EGCBaseProtoObjectTypes',
+    'EGCEconBaseMsg',
     'EGCItemMsg',
+    'EGCMsgInitiateTradeResponse',
+    'EGCMsgResponse',
+    'EGCMsgUseItemResponse',
+    'EGCPartnerRequestResponse',
+    'EGCSystemMsg',
+    'EGCToGCMsg',
+    'EItemEditorReservationResult',
     'EItemPurgatoryResponse_Finalize',
     'EItemPurgatoryResponse_Refund',
-    'EGCMsgInitiateTradeResponse',
-    'EGCEconBaseMsg',
-    'EGCMsgResponse',
-    'EGCPartnerRequestResponse',
-    'EGCMsgUseItemResponse',
+    'ELaneType',
+    'ELeagueAuditAction',
+    'ELeagueBroadcastProvider',
+    'ELeagueFlags',
+    'ELeagueRegion',
+    'ELeagueStatus',
+    'ELeagueTier',
+    'EMatchGroupServerStatus',
+    'EMatchOutcome',
+    'EProfileCardSlotType',
+    'EPurchaseHeroRelicResult',
+    'EReadyCheckRequestResult',
+    'EReadyCheckStatus',
+    'ESOMsg',
+    'ESourceEngine',
+    'ESpecialPingValue',
+    'EStartFindingMatchResult',
+    'ETeamInviteResult',
+    'ETournamentEvent',
+    'ETournamentGameState',
+    'ETournamentNodeState',
+    'ETournamentState',
+    'ETournamentTeamState',
+    'ETournamentTemplate',
+    'ETourneyQueueDeadlineState',
+    'EWeekendTourneyRichPresenceEvent',
+    'Fantasy_Roles',
+    'Fantasy_Selection_Mode',
+    'Fantasy_Team_Slots',
+    'GC_BannedWordType',
+    'GCConnectionStatus',
+    'GCProtoBufMsgSrc',
+    'LobbyDotaPauseSetting',
+    'LobbyDotaTVDelay',
+    'MatchLanguages',
+    'MatchType',
+    'PartnerAccountType',
     ]

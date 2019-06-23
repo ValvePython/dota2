@@ -3,6 +3,7 @@
 import re
 from keyword import kwlist
 from google.protobuf.internal.enum_type_wrapper import EnumTypeWrapper
+from dota2 import common_enums
 
 kwlist = set(kwlist + ['None'])
 
@@ -27,9 +28,7 @@ _proto_modules = [
 
 _proto_module = __import__("dota2.protobufs", globals(), locals(), _proto_modules, 0)
 
-classes = []
-
-print("from enum import IntEnum")
+classes = {}
 
 for name in _proto_modules:
 
@@ -37,10 +36,9 @@ for name in _proto_modules:
     gvars = globals()
 
     for class_name, value in proto.__dict__.items():
-        if not isinstance(value, EnumTypeWrapper):
+        if not isinstance(value, EnumTypeWrapper) or hasattr(common_enums, class_name):
             continue
 
-        classes.append(class_name)
         attrs_starting_with_number = False
         attrs = {}
 
@@ -51,6 +49,13 @@ for name in _proto_modules:
             if ikey[0:1].isdigit() or ikey in kwlist:
                 attrs_starting_with_number = True
 
+        classes[class_name] = attrs, attrs_starting_with_number
+
+# Generate print out
+
+print("from enum import IntEnum")
+
+for class_name, (attrs, attrs_starting_with_number) in sorted(classes.items(), key=lambda x: x[0].lower()):
         if attrs_starting_with_number:
             print("\n%s = IntEnum(%r, {" % (class_name, class_name))
             for ikey, ivalue in attrs.items():
@@ -63,7 +68,7 @@ for name in _proto_modules:
 
 print("\n__all__ = [")
 
-for name in classes:
-    print("    %r," % name)
+for class_name in sorted(classes, key=lambda x: x.lower()):
+    print("    %r," % class_name)
 
 print("    ]")
