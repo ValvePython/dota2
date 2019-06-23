@@ -188,6 +188,9 @@ enum EGCItemMsg {
 	k_EMsgGCRequestCrateEscalationLevel = 2602;
 	k_EMsgGCRequestCrateEscalationLevelResponse = 2603;
 	k_EMsgGCToGCUpdateSubscriptionItems = 2604;
+	k_EMsgGCToGCSelfPing = 2605;
+	k_EMsgGCToGCGetInfuxIntervalStats = 2606;
+	k_EMsgGCToGCGetInfuxIntervalStatsResponse = 2607;
 }
 
 enum EItemPurgatoryResponse_Finalize {
@@ -205,7 +208,6 @@ enum EItemPurgatoryResponse_Refund {
 	k_ItemPurgatoryResponse_Refund_Failed_CouldNotFindItem = 2;
 	k_ItemPurgatoryResponse_Refund_Failed_NoSOCache = 3;
 	k_ItemPurgatoryResponse_Refund_Failed_NoDetail = 4;
-	k_ItemPurgatoryResponse_Refund_Failed_NexonWebAPI = 5;
 }
 
 enum EGCMsgInitiateTradeResponse {
@@ -257,6 +259,7 @@ message CMsgEconPlayerStrangeCountAdjustment {
 
 	optional uint32 account_id = 1;
 	repeated dota.CMsgEconPlayerStrangeCountAdjustment.CStrangeCountAdjustment strange_count_adjustments = 2;
+	optional bool turbo_mode = 3;
 }
 
 message CMsgRequestItemPurgatory_FinalizePurchase {
@@ -336,14 +339,6 @@ message CMsgLookupMultipleAccountNamesResponse {
 	}
 
 	repeated dota.CMsgLookupMultipleAccountNamesResponse.Account accounts = 1;
-}
-
-message CMsgGCToGCGetUserPCBangNo {
-	optional uint32 account_id = 1;
-}
-
-message CMsgGCToGCGetUserPCBangNoResponse {
-	optional uint32 pc_bang_no = 1;
 }
 
 message CMsgRequestCrateItems {
@@ -430,6 +425,7 @@ message CMsgGCToGCGrantAccountRolledItems {
 			optional string name = 1;
 			optional uint32 value_uint32 = 2;
 			optional float value_float = 3;
+			optional string value_string = 4;
 		}
 
 		message AdditionalAuditEntry {
@@ -501,6 +497,9 @@ message CMsgGCPartnerRechargeRedirectURLResponse {
 message CMsgGCEconSQLWorkItemEmbeddedRollbackData {
 	optional uint32 account_id = 1;
 	optional uint64 deleted_item_id = 2;
+	optional uint32 old_audit_action = 3;
+	optional uint32 new_audit_action = 4;
+	optional uint32 expected_audit_action = 5;
 }
 
 message CMsgCraftStatue {
@@ -614,6 +613,7 @@ message CMsgClientToGCUnpackBundleResponse {
 
 	repeated uint64 unpacked_item_ids = 1;
 	optional dota.CMsgClientToGCUnpackBundleResponse.EUnpackBundle response = 2 [default = k_UnpackBundle_Succeeded];
+	repeated uint32 unpacked_item_def_indexes = 3;
 }
 
 message CMsgGCToClientStoreTransactionCompleted {
@@ -1035,5 +1035,20 @@ message CMsgGCToGCFlushSteamInventoryCache {
 message CMsgGCToGCUpdateSubscriptionItems {
 	optional uint32 account_id = 1;
 	optional bool always_notify = 2;
+}
+
+message CMsgGCToGCSelfPing {
+	optional uint32 sample_id = 1;
+}
+
+message CMsgGCToGCGetInfuxIntervalStats {
+}
+
+message CMsgGCToGCGetInfuxIntervalStatsResponse {
+	repeated fixed32 stat_ids = 1 [packed = true];
+	repeated uint64 stat_total = 2 [packed = true];
+	repeated uint32 stat_samples = 3 [packed = true];
+	repeated uint32 stat_max = 4 [packed = true];
+	optional uint32 sample_duration_ms = 5;
 }
 

@@ -202,6 +202,8 @@ class DOTA_GameMode(IntEnum):
     DOTA_GAMEMODE_1V1MID = 21
     DOTA_GAMEMODE_ALL_DRAFT = 22
     DOTA_GAMEMODE_TURBO = 23
+    DOTA_GAMEMODE_MUTATION = 24
+    DOTA_GAMEMODE_COACHES_CHALLENGE = 25
 
 class DOTA_GameState(IntEnum):
     DOTA_GAMERULES_STATE_INIT = 0
@@ -313,6 +315,7 @@ class DOTAJoinLobbyResult(IntEnum):
     DOTA_JOIN_RESULT_CUSTOM_GAME_INCORRECT_VERSION = 10
     DOTA_JOIN_RESULT_TIMEOUT = 11
     DOTA_JOIN_RESULT_CUSTOM_GAME_COOLDOWN = 12
+    DOTA_JOIN_RESULT_BUSY = 13
 
 class DOTALeaverStatus_t(IntEnum):
     DOTA_LEAVER_NONE = 0
@@ -360,6 +363,27 @@ class EBadgeType(IntEnum):
     TI7_Midweek = 1
     TI7_Finals = 2
     TI7_AllEvent = 3
+    TI8_Midweek = 4
+    TI8_Finals = 5
+    TI8_AllEvent = 6
+
+class EBroadcastTimelineEvent(IntEnum):
+    MatchStarted = 1
+    GameStateChanged = 2
+    TowerDeath = 3
+    BarracksDeath = 4
+    AncientDeath = 5
+    RoshanDeath = 6
+    HeroDeath = 7
+    TeamFight = 8
+    FirstBlood = 9
+
+ECoachTeammateRating = IntEnum('ECoachTeammateRating', {
+    'None': 0,
+    'Positive': 1,
+    'Negative': 2,
+    'Abusive': 3,
+    })
 
 class ECustomGameInstallStatus(IntEnum):
     Unknown = 0
@@ -373,10 +397,19 @@ class ECustomGameInstallStatus(IntEnum):
     FailedSteam = 106
     FailedCanceled = 107
 
-class EDOTAEventInviteType(IntEnum):
-    Direct = 0
-    OpenQualifier = 1
-    ChampionsCup = 2
+class ECustomGameWhitelistState(IntEnum):
+    CUSTOM_GAME_WHITELIST_STATE_UNKNOWN = 0
+    CUSTOM_GAME_WHITELIST_STATE_APPROVED = 1
+    CUSTOM_GAME_WHITELIST_STATE_REJECTED = 2
+
+class EDevEventRequestResult(IntEnum):
+    Success = 0
+    NotAllowed = 1
+    InvalidEvent = 2
+    SqlFailure = 3
+    Timeout = 4
+    LockFailure = 5
+    SDOLoadFailure = 6
 
 class EDOTAGCMsg(IntEnum):
     EMsgGCDOTABase = 7000
@@ -464,8 +497,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCPlayerHeroesFavoritesRemove = 7134
     EMsgGCApplyTeamToPracticeLobby = 7142
     EMsgGCTransferTeamAdmin = 7144
-    EMsgRequestLeagueInfo = 7147
-    EMsgResponseLeagueInfo = 7148
     EMsgGCPracticeLobbyJoinBroadcastChannel = 7149
     EMsgGC_TournamentItemEvent = 7150
     EMsgGC_TournamentItemEventResponse = 7151
@@ -599,8 +630,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCFantasyPlayerStandingsResponse = 7319
     EMsgGCFlipLobbyTeams = 7320
     EMsgGCCustomGameCreate = 7321
-    EMsgGCFantasyPlayerInfoRequest = 7322
-    EMsgGCFantasyPlayerInfoResponse = 7323
     EMsgGCToGCProcessPlayerReportForTarget = 7324
     EMsgGCToGCProcessReportSuccess = 7325
     EMsgGCNotifyAccountFlagsChange = 7326
@@ -634,8 +663,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCFantasyTeamRosterSwapResponse = 7356
     EMsgGCFantasyTeamRosterRequest = 7357
     EMsgGCFantasyTeamRosterResponse = 7358
-    EMsgGCNexonPartnerUpdate = 7359
-    EMsgGCToGCProcessPCBangRewardPoints = 7360
     EMsgGCFantasyTeamRosterAddDropRequest = 7361
     EMsgGCFantasyTeamRosterAddDropResponse = 7362
     EMsgPresentedClientTerminateDlg = 7363
@@ -649,7 +676,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCFantasyTeamTradeCancelResponse = 7371
     EMsgGCToGCGrantTournamentItem = 7372
     EMsgGCProcessFantasyScheduledEvent = 7373
-    EMsgGCToGCGrantPCBangRewardItem = 7374
     EMsgGCToGCUpgradeTwitchViewerItems = 7375
     EMsgGCToGCGetLiveMatchAffiliates = 7376
     EMsgGCToGCGetLiveMatchAffiliatesResponse = 7377
@@ -686,7 +712,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCToServerPingRequest = 7416
     EMsgGCToServerPingResponse = 7417
     EMsgGCToServerConsoleCommand = 7418
-    EMsgGCToGCUpdateLiveLeagueGameInfo = 7420
     EMsgGCMakeOffering = 7423
     EMsgGCRequestOfferings = 7424
     EMsgGCRequestOfferingsResponse = 7425
@@ -695,9 +720,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCNotificationsResponse = 7428
     EMsgGCToGCModifyNotification = 7429
     EMsgGCToGCSetNewNotifications = 7430
-    EMsgGCToGCSetIsLeagueAdmin = 7431
-    EMsgGCLeagueAdminState = 7432
-    EMsgGCToGCSendLeagueAdminState = 7433
     EMsgGCLeagueAdminList = 7434
     EMsgGCNotificationsMarkReadRequest = 7435
     EMsgGCFantasyMessageAdd = 7436
@@ -705,7 +727,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCFantasyMessagesResponse = 7438
     EMsgGCFantasyScheduledMatchesRequest = 7439
     EMsgGCFantasyScheduledMatchesResponse = 7440
-    EMsgGCToGCGrantLeagueAccess = 7441
     EMsgGCEventGameCreate = 7443
     EMsgGCPerfectWorldUserLookupRequest = 7444
     EMsgGCPerfectWorldUserLookupResponse = 7445
@@ -808,9 +829,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCToGCReportKillSummaries = 7555
     EMsgGCToGCUpdateAssassinMinigame = 7556
     EMsgGCToGCFantasySetMatchLeague = 7557
-    EMsgClientToGCRecordCompendiumStats = 7558
-    EMsgGCItemEditorRequestLeagueInfo = 7559
-    EMsgGCItemEditorLeagueInfoResponse = 7560
     EMsgGCToGCUpdatePlayerPredictions = 7561
     EMsgGCToServerPredictionResult = 7562
     EMsgServerToGCSignoutAwardAdditionalDrops = 7563
@@ -844,10 +862,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgServerToGCHoldEventPoints = 7596
     EMsgSignOutReleaseEventPointHolds = 7597
     EMsgGCToGCChatNewUserSession = 7598
-    EMsgClientToGCGetLeagueSeries = 7599
-    EMsgClientToGCGetLeagueSeriesResponse = 7600
-    EMsgSQLGCToGCSignoutUpdateLeagueSchedule = 7601
-    EMsgGCToServerUpdateBroadcastCheers = 7602
     EMsgClientToGCApplyGemCombiner = 7603
     EMsgClientToGCDOTACreateStaticRecipe = 7604
     EMsgClientToGCDOTACreateStaticRecipeResponse = 7605
@@ -862,6 +876,54 @@ class EDOTAGCMsg(IntEnum):
     EMsgClientToGCRecycleHeroRelicResponse = 7620
     EMsgGCToGCRevokeEventOwnership = 7621
     EMsgGCToGCUnlockEventPointSpending = 7622
+    EMsgGCToClientRequestLaneSelection = 7623
+    EMsgGCToClientRequestLaneSelectionResponse = 7624
+    EMsgServerToGCCavernCrawlIsHeroActive = 7625
+    EMsgServerToGCCavernCrawlIsHeroActiveResponse = 7626
+    EMsgClientToGCPlayerCardSpecificPurchaseRequest = 7627
+    EMsgClientToGCPlayerCardSpecificPurchaseResponse = 7628
+    EMsgGCtoServerTensorflowInstance = 7629
+    EMsgSQLSetIsLeagueAdmin = 7630
+    EMsgGCToGCGetLiveLeagueMatches = 7631
+    EMsgGCToGCGetLiveLeagueMatchesResponse = 7632
+    EMsgDOTALeagueInfoListAdminsRequest = 7633
+    EMsgDOTALeagueInfoListAdminsReponse = 7634
+    EMsgGCToGCLeagueMatchStarted = 7645
+    EMsgGCToGCLeagueMatchCompleted = 7646
+    EMsgGCToGCLeagueMatchStartedResponse = 7647
+    EMsgDOTALeagueNodeRequest = 7648
+    EMsgDOTALeagueNodeResponse = 7649
+    EMsgDOTALeagueAvailableLobbyNodesRequest = 7650
+    EMsgDOTALeagueAvailableLobbyNodes = 7651
+    EMsgGCToGCLeagueRequest = 7652
+    EMsgGCToGCLeagueResponse = 7653
+    EMsgGCToGCLeagueNodeGroupRequest = 7654
+    EMsgGCToGCLeagueNodeGroupResponse = 7655
+    EMsgGCToGCLeagueNodeRequest = 7656
+    EMsgGCToGCLeagueNodeResponse = 7657
+    EMsgGCToGCRealtimeStatsTerseRequest = 7658
+    EMsgGCToGCRealtimeStatsTerseResponse = 7659
+    EMsgGCToGCGetTopMatchesRequest = 7660
+    EMsgGCToGCGetTopMatchesResponse = 7661
+    EMsgClientToGCGetFilteredPlayers = 7662
+    EMsgGCToClientGetFilteredPlayersResponse = 7663
+    EMsgClientToGCRemoveFilteredPlayer = 7664
+    EMsgGCToClientRemoveFilteredPlayerResponse = 7665
+    EMsgGCToClientPlayerBeaconState = 7666
+    EMsgGCToClientPartyBeaconUpdate = 7667
+    EMsgGCToClientPartySearchInvite = 7668
+    EMsgClientToGCUpdatePartyBeacon = 7669
+    EMsgClientToGCRequestActiveBeaconParties = 7670
+    EMsgGCToClientRequestActiveBeaconPartiesResponse = 7671
+    EMsgClientToGCManageFavorites = 7672
+    EMsgGCToClientManageFavoritesResponse = 7673
+    EMsgClientToGCJoinPartyFromBeacon = 7674
+    EMsgGCToClientJoinPartyFromBeaconResponse = 7675
+    EMsgClientToGCGetFavoritePlayers = 7676
+    EMsgGCToClientGetFavoritePlayersResponse = 7677
+    EMsgClientToGCVerifyFavoritePlayers = 7678
+    EMsgGCToClientVerifyFavoritePlayersResponse = 7679
+    EMsgGCToClientPartySearchInvites = 7680
     EMsgGCDev_GrantWarKill = 8001
     EMsgServerToGCLockCharmTrading = 8004
     EMsgClientToGCPlayerStatsRequest = 8006
@@ -880,8 +942,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCToClientCustomGamesFriendsPlayedResponse = 8019
     EMsgClientToGCFriendsPlayedCustomGameRequest = 8020
     EMsgGCToClientFriendsPlayedCustomGameResponse = 8021
-    EMsgClientToGCFeaturedHeroesRequest = 8022
-    EMsgGCToClientFeaturedHeroesResponse = 8023
     EMsgGCTopCustomGamesList = 8024
     EMsgClientToGCSocialMatchPostCommentRequest = 8025
     EMsgGCToClientSocialMatchPostCommentResponse = 8026
@@ -977,13 +1037,9 @@ class EDOTAGCMsg(IntEnum):
     EMsgClientToGCRequestArcanaVotesRemaining = 8130
     EMsgClientToGCRequestArcanaVotesRemainingResponse = 8131
     EMsgGCTransferTeamAdminResponse = 8132
-    EMsgGCChangeTeamSub = 8133
-    EMsgGCChangeTeamSubResponse = 8134
     EMsgGCToClientTeamInfo = 8135
     EMsgGCToClientTeamsInfo = 8136
     EMsgClientToGCMyTeamInfoRequest = 8137
-    EMsgClientToGCRequestEventPointLog = 8138
-    EMsgClientToGCRequestEventPointLogResponse = 8139
     EMsgClientToGCPublishUserStat = 8140
     EMsgGCToGCSignoutSpendWager = 8141
     EMsgGCSubmitLobbyMVPVote = 8144
@@ -1097,8 +1153,8 @@ class EDOTAGCMsg(IntEnum):
     EMsgPurchaseHeroRelicResponse = 8257
     EMsgPurchaseHeroRandomRelic = 8258
     EMsgPurchaseHeroRandomRelicResponse = 8259
-    EMsgLaneSuggestRequest = 8260
-    EMsgLaneSuggestResponse = 8261
+    EMsgClientToGCClaimEventActionUsingItem = 8260
+    EMsgClientToGCClaimEventActionUsingItemResponse = 8261
     EMsgPartyReadyCheckRequest = 8262
     EMsgPartyReadyCheckResponse = 8263
     EMsgPartyReadyCheckAcknowledge = 8264
@@ -1124,6 +1180,71 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCToGCReconcilePlusStatusUnreliable = 8285
     EMsgActivatePlusFreeTrialRequest = 8286
     EMsgActivatePlusFreeTrialResponse = 8287
+    EMsgGCToClientCavernCrawlMapPathCompleted = 8288
+    EMsgClientToGCCavernCrawlClaimRoom = 8289
+    EMsgClientToGCCavernCrawlClaimRoomResponse = 8290
+    EMsgClientToGCCavernCrawlUseItemOnRoom = 8291
+    EMsgClientToGCCavernCrawlUseItemOnRoomResponse = 8292
+    EMsgClientToGCCavernCrawlUseItemOnPath = 8293
+    EMsgClientToGCCavernCrawlUseItemOnPathResponse = 8294
+    EMsgClientToGCCavernCrawlRequestMapState = 8295
+    EMsgClientToGCCavernCrawlRequestMapStateResponse = 8296
+    EMsgSignOutTips = 8297
+    EMsgClientToGCRequestEventPointLogV2 = 8298
+    EMsgClientToGCRequestEventPointLogResponseV2 = 8299
+    EMsgClientToGCRequestEventTipsSummary = 8300
+    EMsgClientToGCRequestEventTipsSummaryResponse = 8301
+    EMsgHeroGlobalDataAllHeroes = 8302
+    EMsgClientToGCRequestSocialFeed = 8303
+    EMsgClientToGCRequestSocialFeedResponse = 8304
+    EMsgClientToGCRequestSocialFeedComments = 8305
+    EMsgClientToGCRequestSocialFeedCommentsResponse = 8306
+    EMsgGCToGCSignoutAwardCappedUnderhollowEventGamePoints = 8307
+    EMsgClientToGCCavernCrawlGetClaimedRoomCount = 8308
+    EMsgClientToGCCavernCrawlGetClaimedRoomCountResponse = 8309
+    EMsgGCToGCReconcilePlusAutoGrantItemsUnreliable = 8310
+    EMsgServerToGCAddBroadcastTimelineEvent = 8311
+    EMsgGCToServerUpdateSteamBroadcasting = 8312
+    EMsgClientToGCRecordContestVote = 8313
+    EMsgGCToClientRecordContestVoteResponse = 8314
+    EMsgGCToGCGrantAutograph = 8315
+    EMsgGCToGCGrantAutographResponse = 8316
+    EMsgSignOutConsumableUsage = 8317
+    EMsgLobbyEventGameDetails = 8318
+    EMsgDevGrantEventPoints = 8319
+    EMsgDevGrantEventPointsResponse = 8320
+    EMsgDevGrantEventAction = 8321
+    EMsgDevGrantEventActionResponse = 8322
+    EMsgDevResetEventState = 8323
+    EMsgDevResetEventStateResponse = 8324
+    EMsgGCToGCReconcileEventOwnership = 8325
+    EMsgConsumeEventSupportGrantItem = 8326
+    EMsgConsumeEventSupportGrantItemResponse = 8327
+    EMsgGCToClientClaimEventActionUsingItemCompleted = 8328
+    EMsgGCToClientCavernCrawlMapUpdated = 8329
+    EMsgServerToGCRequestPlayerRecentAccomplishments = 8330
+    EMsgServerToGCRequestPlayerRecentAccomplishmentsResponse = 8331
+    EMsgClientToGCRequestPlayerRecentAccomplishments = 8332
+    EMsgClientToGCRequestPlayerRecentAccomplishmentsResponse = 8333
+    EMsgClientToGCRequestPlayerHeroRecentAccomplishments = 8334
+    EMsgClientToGCRequestPlayerHeroRecentAccomplishmentsResponse = 8335
+    EMsgSignOutEventActionGrants = 8336
+    EMsgClientToGCRequestPlayerCoachMatches = 8337
+    EMsgClientToGCRequestPlayerCoachMatchesResponse = 8338
+    EMsgClientToGCGetTicketCodesRequest = 8339
+    EMsgClientToGCGetTicketCodesResponse = 8340
+    EMsgClientToGCSubmitCoachTeammateRating = 8341
+    EMsgClientToGCSubmitCoachTeammateRatingResponse = 8342
+    EMsgGCToClientCoachTeammateRatingsChanged = 8343
+    EMsgClientToGCVoteForLeagueGameMVP = 8344
+    EMsgClientToGCRequestPlayerCoachMatch = 8345
+    EMsgClientToGCRequestPlayerCoachMatchResponse = 8346
+    EMsgClientToGCRequestContestVotes = 8347
+    EMsgClientToGCRequestContestVotesResponse = 8348
+    EMsgClientToGCMVPVoteTimeout = 8349
+    EMsgClientToGCMVPVoteTimeoutResponse = 8350
+    EMsgClientToGCGetUnderlordsCDKeyRequest = 8351
+    EMsgClientToGCGetUnderlordsCDKeyResponse = 8352
 
 class EDOTAGCSessionNeed(IntEnum):
     Unknown = 0
@@ -1156,7 +1277,6 @@ class EDOTAGroupMergeResult(IntEnum):
 EDOTAPlayerMMRType = IntEnum('EDOTAPlayerMMRType', {
     'Invalid': 0,
     'GeneralHidden': 1,
-    'SoloHidden': 2,
     'GeneralCompetitive': 3,
     'SoloCompetitive': 4,
     '1v1Competitive_UNUSED': 5,
@@ -1188,13 +1308,29 @@ class EDOTATriviaQuestionCategory(IntEnum):
     ItemComponents = 12
     ItemLore = 13
 
+class EDPCFavoriteType(IntEnum):
+    FAVORITE_TYPE_ALL = 0
+    FAVORITE_TYPE_PLAYER = 1
+    FAVORITE_TYPE_TEAM = 2
+    FAVORITE_TYPE_LEAGUE = 3
+
+class EDPCPushNotification(IntEnum):
+    DPC_PUSH_NOTIFICATION_MATCH_STARTING = 1
+    DPC_PUSH_NOTIFICATION_PLAYER_LEFT_TEAM = 10
+    DPC_PUSH_NOTIFICATION_PLAYER_JOINED_TEAM = 11
+    DPC_PUSH_NOTIFICATION_LEAGUE_RESULT = 20
+    DPC_PUSH_NOTIFICATION_PREDICTION_MATCHES_AVAILABLE = 30
+    DPC_PUSH_NOTIFICATION_PREDICTION_RESULT = 31
+    DPC_PUSH_NOTIFICATION_FANTASY_PLAYER_CLEARED = 40
+    DPC_PUSH_NOTIFICATION_FANTASY_DAILY_SUMMARY = 41
+    DPC_PUSH_NOTIFICATION_FANTASY_FINAL_RESULTS = 42
+
 class EEvent(IntEnum):
     EVENT_ID_NONE = 0
     EVENT_ID_DIRETIDE = 1
     EVENT_ID_SPRING_FESTIVAL = 2
     EVENT_ID_FROSTIVUS_2013 = 3
     EVENT_ID_COMPENDIUM_2014 = 4
-    EVENT_ID_NEXON_PC_BANG = 5
     EVENT_ID_PWRD_DAC_2015 = 6
     EVENT_ID_NEW_BLOOM_2015 = 7
     EVENT_ID_INTERNATIONAL_2015 = 8
@@ -1211,7 +1347,11 @@ class EEvent(IntEnum):
     EVENT_ID_PLUS_SUBSCRIPTION = 19
     EVENT_ID_SINGLES_DAY_2017 = 20
     EVENT_ID_FROSTIVUS_2017 = 21
-    EVENT_ID_COUNT = 22
+    EVENT_ID_INTERNATIONAL_2018 = 22
+    EVENT_ID_FROSTIVUS_2018 = 23
+    EVENT_ID_NEW_BLOOM_2019 = 24
+    EVENT_ID_INTERNATIONAL_2019 = 25
+    EVENT_ID_COUNT = 26
 
 class EFeaturedHeroDataType(IntEnum):
     HeroID = 0
@@ -1243,6 +1383,9 @@ class EGCBaseClientMsg(IntEnum):
     EMsgGCPingResponse = 3002
     EMsgGCToClientPollConvarRequest = 3003
     EMsgGCToClientPollConvarResponse = 3004
+    EMsgGCCompressedMsgToClient = 3005
+    EMsgGCCompressedMsgToClient_Legacy = 523
+    EMsgGCToClientRequestDropped = 3006
     EMsgGCClientWelcome = 4004
     EMsgGCServerWelcome = 4005
     EMsgGCClientHello = 4006
@@ -1270,6 +1413,7 @@ class EGCBaseMsg(IntEnum):
     EMsgGCToClientPollFileResponse = 4515
     EMsgGCToGCPerformManualOp = 4516
     EMsgGCToGCPerformManualOpCompleted = 4517
+    EMsgGCToGCReloadServerRegionSettings = 4518
 
 class EGCBaseProtoObjectTypes(IntEnum):
     EProtoObjectPartyInvite = 1001
@@ -1372,15 +1516,14 @@ class EGCItemMsg(IntEnum):
     EMsgGCServerRentalsBase = 1700
     EMsgGCDev_NewItemRequest = 2001
     EMsgGCDev_NewItemRequestResponse = 2002
+    EMsgGCDev_UnlockAllItemStylesRequest = 2003
+    EMsgGCDev_UnlockAllItemStylesResponse = 2004
     EMsgGCStorePurchaseFinalize = 2504
     EMsgGCStorePurchaseFinalizeResponse = 2505
     EMsgGCStorePurchaseCancel = 2506
     EMsgGCStorePurchaseCancelResponse = 2507
     EMsgGCStorePurchaseInit = 2510
     EMsgGCStorePurchaseInitResponse = 2511
-    EMsgGCBannedWordListRequest = 2512
-    EMsgGCBannedWordListResponse = 2513
-    EMsgGCToGCBannedWordListBroadcast = 2514
     EMsgGCToGCBannedWordListUpdated = 2515
     EMsgGCToGCDirtySDOCache = 2516
     EMsgGCToGCDirtyMultipleSDOCache = 2517
@@ -1456,6 +1599,14 @@ class EGCItemMsg(IntEnum):
     EMsgGCGetAccountSubscriptionItemResponse = 2596
     EMsgGCToGCBroadcastMessageFromSub = 2598
     EMsgGCToClientCurrencyPricePoints = 2599
+    EMsgGCToGCAddSubscriptionTime = 2600
+    EMsgGCToGCFlushSteamInventoryCache = 2601
+    EMsgGCRequestCrateEscalationLevel = 2602
+    EMsgGCRequestCrateEscalationLevelResponse = 2603
+    EMsgGCToGCUpdateSubscriptionItems = 2604
+    EMsgGCToGCSelfPing = 2605
+    EMsgGCToGCGetInfuxIntervalStats = 2606
+    EMsgGCToGCGetInfuxIntervalStatsResponse = 2607
 
 class EGCMsgInitiateTradeResponse(IntEnum):
     Accepted = 0
@@ -1517,118 +1668,6 @@ class EGCPartnerRequestResponse(IntEnum):
     EPartnerRequestNotLinked = 3
     EPartnerRequestUnsupportedPartnerType = 4
 
-class EGCSystemMsg(IntEnum):
-    EGCMsgInvalid = 0
-    EGCMsgMulti = 1
-    EGCMsgGenericReply = 10
-    EGCMsgSystemBase = 50
-    EGCMsgAchievementAwarded = 51
-    EGCMsgConCommand = 52
-    EGCMsgStartPlaying = 53
-    EGCMsgStopPlaying = 54
-    EGCMsgStartGameserver = 55
-    EGCMsgStopGameserver = 56
-    EGCMsgWGRequest = 57
-    EGCMsgWGResponse = 58
-    EGCMsgGetUserGameStatsSchema = 59
-    EGCMsgGetUserGameStatsSchemaResponse = 60
-    EGCMsgGetUserStatsDEPRECATED = 61
-    EGCMsgGetUserStatsResponse = 62
-    EGCMsgAppInfoUpdated = 63
-    EGCMsgValidateSession = 64
-    EGCMsgValidateSessionResponse = 65
-    EGCMsgLookupAccountFromInput = 66
-    EGCMsgSendHTTPRequest = 67
-    EGCMsgSendHTTPRequestResponse = 68
-    EGCMsgPreTestSetup = 69
-    EGCMsgRecordSupportAction = 70
-    EGCMsgGetAccountDetails_DEPRECATED = 71
-    EGCMsgReceiveInterAppMessage = 73
-    EGCMsgFindAccounts = 74
-    EGCMsgPostAlert = 75
-    EGCMsgGetLicenses = 76
-    EGCMsgGetUserStats = 77
-    EGCMsgGetCommands = 78
-    EGCMsgGetCommandsResponse = 79
-    EGCMsgAddFreeLicense = 80
-    EGCMsgAddFreeLicenseResponse = 81
-    EGCMsgGetIPLocation = 82
-    EGCMsgGetIPLocationResponse = 83
-    EGCMsgSystemStatsSchema = 84
-    EGCMsgGetSystemStats = 85
-    EGCMsgGetSystemStatsResponse = 86
-    EGCMsgSendEmail = 87
-    EGCMsgSendEmailResponse = 88
-    EGCMsgGetEmailTemplate = 89
-    EGCMsgGetEmailTemplateResponse = 90
-    EGCMsgGrantGuestPass = 91
-    EGCMsgGrantGuestPassResponse = 92
-    EGCMsgGetAccountDetails = 93
-    EGCMsgGetAccountDetailsResponse = 94
-    EGCMsgGetPersonaNames = 95
-    EGCMsgGetPersonaNamesResponse = 96
-    EGCMsgMultiplexMsg = 97
-    EGCMsgWebAPIRegisterInterfaces = 101
-    EGCMsgWebAPIJobRequest = 102
-    EGCMsgWebAPIJobRequestHttpResponse = 104
-    EGCMsgWebAPIJobRequestForwardResponse = 105
-    EGCMsgMemCachedGet = 200
-    EGCMsgMemCachedGetResponse = 201
-    EGCMsgMemCachedSet = 202
-    EGCMsgMemCachedDelete = 203
-    EGCMsgMemCachedStats = 204
-    EGCMsgMemCachedStatsResponse = 205
-    EGCMsgSQLStats = 210
-    EGCMsgSQLStatsResponse = 211
-    EGCMsgMasterSetDirectory = 220
-    EGCMsgMasterSetDirectoryResponse = 221
-    EGCMsgMasterSetWebAPIRouting = 222
-    EGCMsgMasterSetWebAPIRoutingResponse = 223
-    EGCMsgMasterSetClientMsgRouting = 224
-    EGCMsgMasterSetClientMsgRoutingResponse = 225
-    EGCMsgSetOptions = 226
-    EGCMsgSetOptionsResponse = 227
-    EGCMsgSystemBase2 = 500
-    EGCMsgGetPurchaseTrustStatus = 501
-    EGCMsgGetPurchaseTrustStatusResponse = 502
-    EGCMsgUpdateSession = 503
-    EGCMsgGCAccountVacStatusChange = 504
-    EGCMsgCheckFriendship = 505
-    EGCMsgCheckFriendshipResponse = 506
-    EGCMsgGetPartnerAccountLink = 507
-    EGCMsgGetPartnerAccountLinkResponse = 508
-    EGCMsgVSReportedSuspiciousActivity = 509
-    EGCMsgDPPartnerMicroTxns = 512
-    EGCMsgDPPartnerMicroTxnsResponse = 513
-    EGCMsgGetIPASN = 514
-    EGCMsgGetIPASNResponse = 515
-    EGCMsgGetAppFriendsList = 516
-    EGCMsgGetAppFriendsListResponse = 517
-    EGCMsgVacVerificationChange = 518
-    EGCMsgAccountPhoneNumberChange = 519
-    EGCMsgAccountTwoFactorChange = 520
-    EGCMsgCheckClanMembership = 521
-    EGCMsgCheckClanMembershipResponse = 522
-    EGCMsgCompressedMsgToClient = 523
-
-class EGCToGCMsg(IntEnum):
-    EGCToGCMsgMasterAck = 150
-    EGCToGCMsgMasterAckResponse = 151
-    EGCToGCMsgRouted = 152
-    EGCToGCMsgRoutedReply = 153
-    EMsgGCUpdateSubGCSessionInfo = 154
-    EMsgGCRequestSubGCSessionInfo = 155
-    EMsgGCRequestSubGCSessionInfoResponse = 156
-    EGCToGCMsgMasterStartupComplete = 157
-    EMsgGCToGCSOCacheSubscribe = 158
-    EMsgGCToGCSOCacheUnsubscribe = 159
-    EMsgGCToGCLoadSessionSOCache = 160
-    EMsgGCToGCLoadSessionSOCacheResponse = 161
-    EMsgGCToGCUpdateSessionStats = 162
-    EMsgGCToGCUniverseStartup = 163
-    EMsgGCToGCUniverseStartupResponse = 164
-    EMsgGCToGCForwardAccountDetails = 165
-
 class EItemEditorReservationResult(IntEnum):
     OK = 1
     AlreadyExists = 2
@@ -1649,7 +1688,12 @@ class EItemPurgatoryResponse_Refund(IntEnum):
     ItemPurgatoryResponse_Refund_Failed_CouldNotFindItem = 2
     ItemPurgatoryResponse_Refund_Failed_NoSOCache = 3
     ItemPurgatoryResponse_Refund_Failed_NoDetail = 4
-    ItemPurgatoryResponse_Refund_Failed_NexonWebAPI = 5
+
+class ELaneSelectionFlags(IntEnum):
+    LANE_SELECTION_SAFELANE = 1
+    LANE_SELECTION_OFFLANE = 2
+    LANE_SELECTION_MIDLANE = 4
+    LANE_SELECTION_OTHER = 8
 
 class ELaneType(IntEnum):
     LANE_TYPE_UNKNOWN = 0
@@ -1669,9 +1713,26 @@ class ELeagueAuditAction(IntEnum):
     LEAGUE_AUDIT_ACTION_LEAGUE_ADMIN_PROMOTE = 6
     LEAGUE_AUDIT_ACTION_LEAGUE_STREAM_ADD = 7
     LEAGUE_AUDIT_ACTION_LEAGUE_STREAM_REMOVE = 8
+    LEAGUE_AUDIT_ACTION_LEAGUE_IMAGE_UPDATED = 9
+    LEAGUE_AUDIT_ACTION_LEAGUE_MESSAGE_ADDED = 10
+    LEAGUE_AUDIT_ACTION_LEAGUE_SUBMITTED = 11
+    LEAGUE_AUDIT_ACTION_LEAGUE_SET_PRIZE_POOL = 12
+    LEAGUE_AUDIT_ACTION_LEAGUE_ADD_PRIZE_POOL_ITEM = 13
+    LEAGUE_AUDIT_ACTION_LEAGUE_REMOVE_PRIZE_POOL_ITEM = 14
+    LEAGUE_AUDIT_ACTION_LEAGUE_MATCH_START = 15
+    LEAGUE_AUDIT_ACTION_LEAGUE_MATCH_END = 16
+    LEAGUE_AUDIT_ACTION_LEAGUE_ADD_INVITED_TEAM = 17
+    LEAGUE_AUDIT_ACTION_LEAGUE_REMOVE_INVITED_TEAM = 18
+    LEAGUE_AUDIT_ACTION_LEAGUE_STATUS_CHANGED = 19
+    LEAGUE_AUDIT_ACTION_LEAGUE_STREAM_EDIT = 20
     LEAGUE_AUDIT_ACTION_NODEGROUP_CREATE = 100
     LEAGUE_AUDIT_ACTION_NODEGROUP_DESTROY = 101
     LEAGUE_AUDIT_ACTION_NODEGROUP_ADD_TEAM = 102
+    LEAGUE_AUDIT_ACTION_NODEGROUP_REMOVE_TEAM = 103
+    LEAGUE_AUDIT_ACTION_NODEGROUP_SET_ADVANCING = 104
+    LEAGUE_AUDIT_ACTION_NODEGROUP_EDIT = 105
+    LEAGUE_AUDIT_ACTION_NODEGROUP_POPULATE = 106
+    LEAGUE_AUDIT_ACTION_NODEGROUP_COMPLETED = 107
     LEAGUE_AUDIT_ACTION_NODE_CREATE = 200
     LEAGUE_AUDIT_ACTION_NODE_DESTROY = 201
     LEAGUE_AUDIT_ACTION_NODE_AUTOCREATE = 202
@@ -1681,6 +1742,7 @@ class ELeagueAuditAction(IntEnum):
     LEAGUE_AUDIT_ACTION_NODE_SET_TIME = 206
     LEAGUE_AUDIT_ACTION_NODE_MATCH_COMPLETED = 207
     LEAGUE_AUDIT_ACTION_NODE_COMPLETED = 208
+    LEAGUE_AUDIT_ACTION_NODE_EDIT = 209
 
 class ELeagueBroadcastProvider(IntEnum):
     LEAGUE_BROADCAST_UNKNOWN = 0
@@ -1689,12 +1751,28 @@ class ELeagueBroadcastProvider(IntEnum):
     LEAGUE_BROADCAST_YOUTUBE = 3
     LEAGUE_BROADCAST_OTHER = 100
 
+class ELeagueFantasyPhase(IntEnum):
+    LEAGUE_FANTASY_PHASE_UNSET = 0
+    LEAGUE_FANTASY_PHASE_MAIN = 1
+    LEAGUE_FANTASY_PHASE_QUALIFIER_NA = 2
+    LEAGUE_FANTASY_PHASE_QUALIFIER_SA = 3
+    LEAGUE_FANTASY_PHASE_QUALIFIER_EUROPE = 4
+    LEAGUE_FANTASY_PHASE_QUALIFIER_CIS = 5
+    LEAGUE_FANTASY_PHASE_QUALIFIER_CHINA = 6
+    LEAGUE_FANTASY_PHASE_QUALIFIER_SEA = 7
+
 class ELeagueFlags(IntEnum):
     LEAGUE_FLAGS_NONE = 0
     LEAGUE_ACCEPTED_AGREEMENT = 1
     LEAGUE_PAYMENT_EMAIL_SENT = 2
     LEAGUE_COMPENDIUM_ALLOWED = 4
     LEAGUE_COMPENDIUM_PUBLIC = 8
+
+class ELeaguePhase(IntEnum):
+    LEAGUE_PHASE_UNSET = 0
+    LEAGUE_PHASE_REGIONAL_QUALIFIER = 1
+    LEAGUE_PHASE_GROUP_STAGE = 2
+    LEAGUE_PHASE_MAIN_EVENT = 3
 
 class ELeagueRegion(IntEnum):
     LEAGUE_REGION_UNSET = 0
@@ -1707,24 +1785,25 @@ class ELeagueRegion(IntEnum):
 
 class ELeagueStatus(IntEnum):
     LEAGUE_STATUS_UNSET = 0
-    LEAGUE_STATUS_NEW = 1
-    LEAGUE_STATUS_PUBLISHED = 2
+    LEAGUE_STATUS_UNSUBMITTED = 1
+    LEAGUE_STATUS_SUBMITTED = 2
     LEAGUE_STATUS_ACCEPTED = 3
     LEAGUE_STATUS_REJECTED = 4
     LEAGUE_STATUS_CONCLUDED = 5
     LEAGUE_STATUS_DELETED = 6
-    LEAGUE_STATUS_RELEASED = 10
-    LEAGUE_STATUS_HIDDEN = 11
-    LEAGUE_STATUS_READY = 12
-    LEAGUE_STATUS_COMPLETE = 13
 
 class ELeagueTier(IntEnum):
     LEAGUE_TIER_UNSET = 0
     LEAGUE_TIER_AMATEUR = 1
     LEAGUE_TIER_PROFESSIONAL = 2
-    LEAGUE_TIER_PREMIUM = 3
-    LEAGUE_TIER_MINOR = 4
-    LEAGUE_TIER_MAJOR = 5
+    LEAGUE_TIER_MINOR = 3
+    LEAGUE_TIER_MAJOR = 4
+    LEAGUE_TIER_INTERNATIONAL = 5
+
+class ELeagueTierCategory(IntEnum):
+    LEAGUE_TIER_CATEGORY_AMATEUR = 1
+    LEAGUE_TIER_CATEGORY_PROFESSIONAL = 2
+    LEAGUE_TIER_CATEGORY_DPC = 3
 
 class EMatchGroupServerStatus(IntEnum):
     OK = 0
@@ -1740,6 +1819,13 @@ class EMatchOutcome(IntEnum):
     NotScored_ServerCrash = 66
     NotScored_NeverStarted = 67
     NotScored_Canceled = 68
+
+class EPartyBeaconType(IntEnum):
+    Available = 0
+    Joinable = 1
+
+class EPlayerCoachMatchFlag(IntEnum):
+    EligibleForRewards = 1
 
 class EProfileCardSlotType(IntEnum):
     Empty = 0
@@ -1816,6 +1902,24 @@ class EStartFindingMatchResult(IntEnum):
     WeekendTourneyRecentParticipation = 120
     MemberMissingAnchoredPhoneNumber = 121
     NotMemberOfClan = 122
+    CoachesChallengeBadPartySize = 123
+    CoachesChallengeRequirementsNotMet = 124
+
+class ESupportEventRequestResult(IntEnum):
+    Success = 0
+    Timeout = 1
+    CantLockSOCache = 2
+    ItemNotInInventory = 3
+    InvalidItemDef = 4
+    InvalidEvent = 5
+    EventExpired = 6
+    InvalidSupportAccount = 7
+    InvalidSupportMessage = 8
+    InvalidEventPoints = 9
+    InvalidPremiumPoints = 10
+    InvalidActionID = 11
+    InvalidActionScore = 12
+    TransactionFailed = 13
 
 class ETeamInviteResult(IntEnum):
     TEAM_INVITE_SUCCESS = 0
@@ -1939,6 +2043,7 @@ class Fantasy_Roles(IntEnum):
     FANTASY_ROLE_CORE = 1
     FANTASY_ROLE_SUPPORT = 2
     FANTASY_ROLE_OFFLANE = 3
+    FANTASY_ROLE_MID = 4
 
 class Fantasy_Selection_Mode(IntEnum):
     FANTASY_SELECTION_INVALID = 0
@@ -1958,10 +2063,6 @@ class Fantasy_Team_Slots(IntEnum):
     FANTASY_SLOT_SUPPORT = 2
     FANTASY_SLOT_ANY = 3
     FANTASY_SLOT_BENCH = 4
-
-class GC_BannedWordType(IntEnum):
-    GC_BANNED_WORD_DISABLE_WORD = 0
-    GC_BANNED_WORD_ENABLE_WORD = 1
 
 class GCConnectionStatus(IntEnum):
     HAVE_SESSION = 0
@@ -2012,11 +2113,12 @@ class MatchType(IntEnum):
     MATCH_TYPE_SEASONAL_RANKED = 8
     MATCH_TYPE_LOWPRI_DEPRECATED = 9
     MATCH_TYPE_STEAM_GROUP = 10
+    MATCH_TYPE_MUTATION = 11
+    MATCH_TYPE_COACHES_CHALLENGE = 12
 
 class PartnerAccountType(IntEnum):
     PARTNER_NONE = 0
     PARTNER_PERFECT_WORLD = 1
-    PARTNER_NEXON = 2
     PARTNER_INVALID = 3
 
 __all__ = [
@@ -2043,14 +2145,19 @@ __all__ = [
     'DOTASelectionPriorityChoice',
     'DOTASelectionPriorityRules',
     'EBadgeType',
+    'EBroadcastTimelineEvent',
+    'ECoachTeammateRating',
     'ECustomGameInstallStatus',
-    'EDOTAEventInviteType',
+    'ECustomGameWhitelistState',
+    'EDevEventRequestResult',
     'EDOTAGCMsg',
     'EDOTAGCSessionNeed',
     'EDOTAGroupMergeResult',
     'EDOTAPlayerMMRType',
     'EDOTATriviaAnswerResult',
     'EDOTATriviaQuestionCategory',
+    'EDPCFavoriteType',
+    'EDPCPushNotification',
     'EEvent',
     'EFeaturedHeroDataType',
     'EFeaturedHeroTextField',
@@ -2063,20 +2170,24 @@ __all__ = [
     'EGCMsgResponse',
     'EGCMsgUseItemResponse',
     'EGCPartnerRequestResponse',
-    'EGCSystemMsg',
-    'EGCToGCMsg',
     'EItemEditorReservationResult',
     'EItemPurgatoryResponse_Finalize',
     'EItemPurgatoryResponse_Refund',
+    'ELaneSelectionFlags',
     'ELaneType',
     'ELeagueAuditAction',
     'ELeagueBroadcastProvider',
+    'ELeagueFantasyPhase',
     'ELeagueFlags',
+    'ELeaguePhase',
     'ELeagueRegion',
     'ELeagueStatus',
     'ELeagueTier',
+    'ELeagueTierCategory',
     'EMatchGroupServerStatus',
     'EMatchOutcome',
+    'EPartyBeaconType',
+    'EPlayerCoachMatchFlag',
     'EProfileCardSlotType',
     'EPurchaseHeroRelicResult',
     'EReadyCheckRequestResult',
@@ -2085,6 +2196,7 @@ __all__ = [
     'ESourceEngine',
     'ESpecialPingValue',
     'EStartFindingMatchResult',
+    'ESupportEventRequestResult',
     'ETeamInviteResult',
     'ETournamentEvent',
     'ETournamentGameState',
@@ -2097,7 +2209,6 @@ __all__ = [
     'Fantasy_Roles',
     'Fantasy_Selection_Mode',
     'Fantasy_Team_Slots',
-    'GC_BannedWordType',
     'GCConnectionStatus',
     'GCProtoBufMsgSrc',
     'LobbyDotaPauseSetting',
