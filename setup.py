@@ -15,7 +15,7 @@ with open(path.join(here, 'dota2/__init__.py'), encoding='utf-8') as f:
     __version__ = f.readline().split('"')[1]
 
 install_requires = [
-    'steam[client]>=0.8.15',
+    'steam[client]>=0.8.15,<1.0.0',
     'gevent-eventemitter>=2.0',
     'gevent>=1.1',
     'protobuf>=3.0.0',
