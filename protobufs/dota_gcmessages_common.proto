@@ -56,6 +56,12 @@ enum EBroadcastTimelineEvent {
 	EBroadcastTimelineEvent_FirstBlood = 9;
 }
 
+enum ECustomGameWhitelistState {
+	CUSTOM_GAME_WHITELIST_STATE_UNKNOWN = 0;
+	CUSTOM_GAME_WHITELIST_STATE_APPROVED = 1;
+	CUSTOM_GAME_WHITELIST_STATE_REJECTED = 2;
+}
+
 message CSODOTAGameAccountClient {
 	optional uint32 account_id = 1 [(key_field) = true];
 	optional uint32 wins = 3;
@@ -128,6 +134,7 @@ message CSODOTAGameAccountClient {
 	optional uint32 recent_win_time_1 = 106;
 	optional uint32 recent_win_time_2 = 107;
 	optional uint32 recent_win_time_3 = 108;
+	optional uint32 coach_rating = 109;
 }
 
 message CSODOTAGameAccountPlus {
@@ -178,6 +185,7 @@ message CMsgLobbyEventPoints {
 		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues rank_wager_tokens = 18;
 		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues tip_tokens = 19;
 		optional uint32 tip_amount = 20;
+		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues periodic_point_adjustments = 21;
 	}
 
 	optional uint32 event_id = 1;
@@ -263,6 +271,12 @@ message CMatchHeroSelectEvent {
 	optional bool is_pick = 1;
 	optional uint32 team = 2;
 	optional uint32 hero_id = 3;
+}
+
+message CPartySearchClientParty {
+	optional fixed64 party_id = 1;
+	optional int32 beacon_type = 2;
+	repeated fixed32 party_members = 3;
 }
 
 message CMsgDOTAProcessFantasyScheduledEvent {
@@ -474,6 +488,7 @@ message CMsgDOTARealtimeGameStats {
 		repeated dota.CMsgDOTARealtimeGameStats.PlayerDetails players = 6;
 		optional bool only_team = 7;
 		optional uint32 cheers = 8;
+		optional string team_logo_url = 11;
 	}
 
 	message ItemDetails {
@@ -652,6 +667,7 @@ message CMsgDOTARealtimeGameStatsTerse {
 		optional fixed64 team_logo = 4;
 		optional uint32 score = 5;
 		optional uint32 net_worth = 7;
+		optional string team_logo_url = 9;
 		repeated dota.CMsgDOTARealtimeGameStatsTerse.PlayerDetails players = 6;
 	}
 
@@ -671,6 +687,8 @@ message CMsgDOTARealtimeGameStatsTerse {
 		optional float x = 13;
 		optional float y = 14;
 		optional uint32 net_worth = 15;
+		repeated uint32 abilities = 16;
+		repeated uint32 items = 17;
 	}
 
 	message BuildingDetails {
@@ -684,6 +702,11 @@ message CMsgDOTARealtimeGameStatsTerse {
 		optional bool destroyed = 8;
 	}
 
+	message PickBanDetails {
+		optional uint32 hero = 1;
+		optional uint32 team = 2;
+	}
+
 	message MatchDetails {
 		optional fixed64 server_steam_id = 1;
 		optional uint64 matchid = 2;
@@ -694,6 +717,8 @@ message CMsgDOTARealtimeGameStatsTerse {
 		optional uint32 league_id = 8;
 		optional uint32 league_node_id = 9;
 		optional uint32 game_state = 10;
+		repeated dota.CMsgDOTARealtimeGameStatsTerse.PickBanDetails picks = 11;
+		repeated dota.CMsgDOTARealtimeGameStatsTerse.PickBanDetails bans = 12;
 	}
 
 	message GraphData {
@@ -800,11 +825,12 @@ message CMsgDOTASeasonPredictions {
 		optional uint32 answer_id = 9;
 		repeated dota.CMsgDOTASeasonPredictions.Answers answers = 10;
 		optional string query_name = 11;
-		repeated uint32 query_bind_params = 12;
 		optional uint32 lock_on_selection_id = 13;
 		optional uint32 lock_on_selection_value = 14;
 		optional bool lock_on_selection_set = 15;
 		optional bool use_answer_value_ranges = 16;
+		optional dota.ELeagueRegion region = 17 [default = LEAGUE_REGION_UNSET];
+		repeated dota.ELeaguePhase phases = 18;
 	}
 
 	message InGamePrediction {
@@ -831,6 +857,7 @@ message CMsgDOTASeasonPredictions {
 		Player = 3;
 		Special = 4;
 		YesNo = 5;
+		QualifiersTeam = 6;
 	}
 
 	enum eAnswerType {
@@ -879,6 +906,18 @@ message CMsgDOTAMatch {
 		message CustomGameData {
 			optional uint32 dota_team = 1;
 			optional bool winner = 2;
+		}
+
+		message HeroDamageReceived {
+			optional uint32 pre_reduction = 1;
+			optional uint32 post_reduction = 2;
+			optional dota.CMsgDOTAMatch.Player.HeroDamageType damage_type = 3 [default = HERO_DAMAGE_PHYSICAL];
+		}
+
+		enum HeroDamageType {
+			HERO_DAMAGE_PHYSICAL = 0;
+			HERO_DAMAGE_MAGICAL = 1;
+			HERO_DAMAGE_PURE = 2;
 		}
 
 		optional uint32 account_id = 1;
@@ -937,16 +976,16 @@ message CMsgDOTAMatch {
 		repeated dota.CMatchPlayerAbilityUpgrade ability_upgrades = 47;
 		repeated dota.CMatchAdditionalUnitInventory additional_units_inventory = 48;
 		repeated dota.CMatchPlayerPermanentBuff permanent_buffs = 57;
+		optional string pro_name = 72;
+		optional string real_name = 73;
 		optional dota.CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;
 		optional bool active_plus_subscription = 51;
 		optional uint32 net_worth = 52;
 		optional uint32 bot_difficulty = 58;
 		optional uint32 hero_pick_order = 63;
 		optional bool hero_was_randomed = 64;
-		optional bool hero_was_bonus = 65;
 		optional bool hero_was_dota_plus_suggestion = 69;
-		optional uint32 hero_damage_received_pre_reduction = 67;
-		optional uint32 hero_damage_received_post_reduction = 68;
+		repeated dota.CMsgDOTAMatch.Player.HeroDamageReceived hero_damage_received = 67;
 		optional uint32 seconds_dead = 70;
 		optional uint32 gold_lost_to_death = 71;
 	}
@@ -961,6 +1000,14 @@ message CMsgDOTAMatch {
 		optional string description = 2;
 		repeated dota.CMsgDOTAMatch.BroadcasterInfo broadcaster_infos = 3;
 		optional string language_code = 4;
+	}
+
+	message Coach {
+		optional uint32 account_id = 1;
+		optional string coach_name = 2;
+		optional uint32 coach_rating = 3;
+		optional uint32 coach_team = 4;
+		optional uint64 coach_party_id = 5;
 	}
 
 	message CustomGameData {
@@ -996,6 +1043,8 @@ message CMsgDOTAMatch {
 	optional string dire_team_name = 24;
 	optional uint64 radiant_team_logo = 25;
 	optional uint64 dire_team_logo = 26;
+	optional string radiant_team_logo_url = 54;
+	optional string dire_team_logo_url = 55;
 	optional uint32 radiant_team_complete = 27;
 	optional uint32 dire_team_complete = 28;
 	optional uint32 positive_votes = 29;
@@ -1021,6 +1070,8 @@ message CMsgDOTAMatch {
 	optional uint32 tournament_id = 51;
 	optional uint32 tournament_round = 52;
 	optional uint32 pre_game_duration = 53;
+	repeated uint32 mvp_account_id = 56;
+	repeated dota.CMsgDOTAMatch.Coach coaches = 57;
 }
 
 message CMsgPlayerCard {
@@ -1132,5 +1183,156 @@ message CMsgMatchTips {
 	}
 
 	repeated dota.CMsgMatchTips.SingleTip tips = 2;
+}
+
+message CMsgDOTAMatchMinimal {
+	message Player {
+		optional uint32 account_id = 1;
+		optional uint32 hero_id = 2;
+		optional uint32 kills = 3;
+		optional uint32 deaths = 4;
+		optional uint32 assists = 5;
+		repeated uint32 items = 6;
+		optional uint32 player_slot = 7;
+		optional string pro_name = 8;
+	}
+
+	message Tourney {
+		optional uint32 league_id = 1;
+		optional uint32 series_type = 8;
+		optional uint32 series_game = 9;
+		optional uint32 weekend_tourney_tournament_id = 10;
+		optional uint32 weekend_tourney_season_trophy_id = 11;
+		optional uint32 weekend_tourney_division = 12;
+		optional uint32 weekend_tourney_skill_level = 13;
+		optional uint32 radiant_team_id = 2;
+		optional string radiant_team_name = 3;
+		optional fixed64 radiant_team_logo = 4;
+		optional string radiant_team_logo_url = 14;
+		optional uint32 dire_team_id = 5;
+		optional string dire_team_name = 6;
+		optional fixed64 dire_team_logo = 7;
+		optional string dire_team_logo_url = 15;
+	}
+
+	optional uint64 match_id = 1;
+	optional fixed32 start_time = 2;
+	optional uint32 duration = 3;
+	optional dota.DOTA_GameMode game_mode = 4 [default = DOTA_GAMEMODE_NONE];
+	repeated dota.CMsgDOTAMatchMinimal.Player players = 6;
+	optional dota.CMsgDOTAMatchMinimal.Tourney tourney = 7;
+	optional dota.EMatchOutcome match_outcome = 8 [default = k_EMatchOutcome_Unknown];
+	optional uint32 radiant_score = 9;
+	optional uint32 dire_score = 10;
+}
+
+message CMsgConsumableUsage {
+	optional uint32 item_def = 1;
+	optional int32 quantity_change = 2;
+}
+
+message CMsgMatchConsumableUsage {
+	message PlayerUsage {
+		optional uint32 account_id = 1;
+		repeated dota.CMsgConsumableUsage consumables_used = 2;
+	}
+
+	repeated dota.CMsgMatchConsumableUsage.PlayerUsage player_consumables_used = 1;
+}
+
+message CMsgMatchEventActionGrants {
+	message Grant {
+		optional uint32 event_id = 1;
+		optional uint32 action_id = 2;
+		optional uint32 audit = 3;
+		optional uint32 quantity = 4;
+	}
+
+	message PlayerGrants {
+		optional uint32 account_id = 1;
+		repeated dota.CMsgMatchEventActionGrants.Grant actions_granted = 2;
+	}
+
+	repeated dota.CMsgMatchEventActionGrants.PlayerGrants player_grants = 1;
+}
+
+message CMsgCustomGameWhitelist {
+	optional uint32 version = 1;
+	repeated uint64 custom_games_whitelist = 2;
+	optional bool disable_whitelist = 3;
+}
+
+message CMsgCustomGameWhitelistForEdit {
+	message WhitelistEntry {
+		optional uint64 custom_game_id = 1;
+		optional dota.ECustomGameWhitelistState whitelist_state = 2 [default = CUSTOM_GAME_WHITELIST_STATE_UNKNOWN];
+	}
+
+	repeated dota.CMsgCustomGameWhitelistForEdit.WhitelistEntry whitelist_entries = 1;
+}
+
+message CMsgPlayerRecentMatchInfo {
+	optional uint64 match_id = 1;
+	optional uint32 timestamp = 2;
+	optional uint32 duration = 3;
+	optional bool win = 4;
+	optional uint32 hero_id = 5;
+	optional uint32 kills = 6;
+	optional uint32 deaths = 7;
+	optional uint32 assists = 8;
+}
+
+message CMsgPlayerMatchRecord {
+	optional uint32 wins = 1;
+	optional uint32 losses = 2;
+}
+
+message CMsgPlayerRecentMatchOutcomes {
+	optional uint32 outcomes = 1;
+	optional uint32 match_count = 2;
+}
+
+message CMsgPlayerRecentCommends {
+	optional uint32 commends = 1;
+	optional uint32 match_count = 2;
+}
+
+message CMsgPlayerRecentAccomplishments {
+	optional dota.CMsgPlayerRecentMatchOutcomes recent_outcomes = 1;
+	optional dota.CMsgPlayerMatchRecord total_record = 2;
+	optional uint32 prediction_streak = 3;
+	optional uint32 plus_prediction_streak = 4;
+	optional dota.CMsgPlayerRecentCommends recent_commends = 5;
+	optional uint32 first_match_timestamp = 6;
+	optional dota.CMsgPlayerRecentMatchInfo last_match = 7;
+	optional dota.CMsgPlayerRecentMatchOutcomes recent_mvps = 8;
+}
+
+message CMsgPlayerHeroRecentAccomplishments {
+	optional dota.CMsgPlayerRecentMatchOutcomes recent_outcomes = 1;
+	optional dota.CMsgPlayerMatchRecord total_record = 2;
+	optional dota.CMsgPlayerRecentMatchInfo last_match = 3;
+}
+
+message CMsgRecentAccomplishments {
+	optional dota.CMsgPlayerRecentAccomplishments player_accomplishments = 1;
+	optional dota.CMsgPlayerHeroRecentAccomplishments hero_accomplishments = 2;
+}
+
+message CMsgRequestPlayerRecentAccomplishments {
+	optional uint32 account_id = 1;
+	optional uint32 hero_id = 2;
+}
+
+message CMsgRequestPlayerRecentAccomplishmentsResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+	}
+
+	optional dota.CMsgRequestPlayerRecentAccomplishmentsResponse.EResponse result = 1 [default = k_eInternalError];
+	optional dota.CMsgRecentAccomplishments player_accomplishments = 2;
 }
 

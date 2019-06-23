@@ -13,7 +13,6 @@ enum ESourceEngine {
 enum PartnerAccountType {
 	PARTNER_NONE = 0;
 	PARTNER_PERFECT_WORLD = 1;
-	PARTNER_NEXON = 2;
 	PARTNER_INVALID = 3;
 }
 
@@ -110,6 +109,10 @@ message CMsgGCMultiplexMessage {
 	repeated fixed64 steamids = 3;
 }
 
+message CMsgGCToGCSubGCStarting {
+	optional uint32 dir_index = 1;
+}
+
 message CGCToGCMsgMasterAck {
 	message Process {
 		optional uint32 dir_index = 1;
@@ -190,6 +193,7 @@ message CMsgClientHello {
 	optional string secret_key = 5;
 	optional uint32 client_language = 6;
 	optional dota.ESourceEngine engine = 7 [default = k_ESE_Source1];
+	optional bytes steamdatagram_login = 8;
 }
 
 message CMsgClientWelcome {
@@ -260,6 +264,9 @@ message CMsgGCToGCUpdateSessionStats {
 	optional uint32 user_sessions = 1;
 	optional uint32 server_sessions = 2;
 	optional bool in_logon_surge = 3;
+}
+
+message CMsgGCToClientRequestDropped {
 }
 
 message CWorkshop_PopulateItemDescriptions_Request {
