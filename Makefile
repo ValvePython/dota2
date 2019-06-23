@@ -69,4 +69,7 @@ pb_compile:
 pb_clear:
 	rm -f ./protobufs/*.proto ./dota2/protobufs/*_pb2.py
 
-pb_update: pb_fetch pb_compile
+gen_enums:
+	python gen_enum_from_protos.py > dota2/proto_enums.py
+
+pb_update: pb_fetch pb_compile gen_enums
