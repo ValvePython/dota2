@@ -23,7 +23,7 @@ class Player(object):
 
         :param account_id: account_id from request
         :type account_id: :class:`int`
-        :param message: `CMsgProfileResponse https://github.com/ValvePython/dota2/blob/98763e7b748a588462387469db65ea1a3e19a3af/protobufs/dota_gcmessages_client.proto#L2519-L2539`_
+        :param message: `CMsgProfileResponse <https://github.com/ValvePython/dota2/blob/98763e7b748a588462387469db65ea1a3e19a3af/protobufs/dota_gcmessages_client.proto#L2519-L2539>`_
         :type  message: proto message
 
         """
@@ -57,7 +57,7 @@ class Player(object):
         :param account_id: account_id from request
         :type account_id: :class:`int`
         :param eresult: result enum
-        :type eresult: :class:`steam.enums.EResult`
+        :type eresult: :class:`steam.enums.common.EResult`
         :param message: `CMsgDOTAProfileResponse <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_client.proto#L282-L323>`_
         :type  message: proto message
 

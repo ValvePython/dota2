@@ -42,7 +42,7 @@ class Match(object):
         :param match_id: match_id for response
         :type  match_id: :class:`int`
         :param eresult: result enum
-        :type  eresult: :class:`steam.enums.EResult`
+        :type  eresult: :class:`steam.enums.common.EResult`
         :param match: `CMsgDOTAMatch <https://github.com/ValvePython/dota2/blob/e06c81c03579a912fcca829766ee590075ae97dc/protobufs/dota_gcmessages_common.proto#L866-L1001>`_
         :type  match: proto message
         """

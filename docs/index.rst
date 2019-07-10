@@ -25,7 +25,6 @@ API Documentation
 .. toctree::
    :maxdepth: 4
 
-   quick_start
    dota2
 
 

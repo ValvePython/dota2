@@ -360,10 +360,10 @@ epub_exclude_files = ['search.html']
 
 # LINK EXT DOCS
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3.4', None),
+    'python': ('https://docs.python.org/3.6', None),
     'gevent': ('http://www.gevent.org', None),
-    'requests': ('http://docs.python-requests.org/en/master', None),
-    'steam': ('http://steam.readthedocs.io/en/stable/', None),
+    'requests': ('https://2.python-requests.org/en/master', None),
+    'steam': ('https://steam.readthedocs.io/en/stable/', None),
     }
 
 # AUTODOC
