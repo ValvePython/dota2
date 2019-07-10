@@ -143,7 +143,7 @@ class Dota2Client(GameCoordinator, FeatureBase):
         :type raises: :class:`bool`
         :return: returns a message or :class:`None`
         :rtype: :class:`None`, or `proto message`
-        :raises: ``gevent.Timeout``
+        :raises: ``gevent.Timeout`
         """
         resp = self.wait_event(event, timeout, raises)
 
@@ -183,7 +183,7 @@ class Dota2Client(GameCoordinator, FeatureBase):
         :param raises: (optional) On timeout if this is ``False`` method will return ``None``, else raises ``gevent.Timeout``
         :type raises: :class:`bool`
         :return: response proto message
-        :raises: ``gevent.Timeout``
+        :raises: :class:`gevent.Timeout``
         """
         job_id = self.send_job(emsg, data, proto)
         return self.wait_msg(job_id, timeout, raises=raises)

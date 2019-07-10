@@ -51,7 +51,7 @@ master_doc = 'index'
 # General information about the project.
 from dota2 import __version__, __author__
 project = u'dota2'
-copyright = u'2016, %s' % __author__
+copyright = u'2019, %s' % __author__
 author = __author__
 
 # The version info for the project you're documenting, acts as replacement for
