@@ -158,8 +158,8 @@ enum EDOTAGCMsg {
 	k_EMsgGCToGCGetUserRank = 7236;
 	k_EMsgGCToGCGetUserRankResponse = 7237;
 	k_EMsgGCToGCUpdateTeamStats = 7240;
-	k_EMsgGCToGCGetTeamRank = 7241;
-	k_EMsgGCToGCGetTeamRankResponse = 7242;
+	k_EMsgGCToGCValidateTeam = 7241;
+	k_EMsgGCToGCValidateTeamResponse = 7242;
 	k_EMsgGCPassportDataRequest = 7248;
 	k_EMsgGCPassportDataResponse = 7249;
 	k_EMsgGCNotInGuildData = 7251;
@@ -791,7 +791,6 @@ enum EDOTAGCMsg {
 	k_EMsgClientToGCRequestSocialFeedResponse = 8304;
 	k_EMsgClientToGCRequestSocialFeedComments = 8305;
 	k_EMsgClientToGCRequestSocialFeedCommentsResponse = 8306;
-	k_EMsgGCToGCSignoutAwardCappedUnderhollowEventGamePoints = 8307;
 	k_EMsgClientToGCCavernCrawlGetClaimedRoomCount = 8308;
 	k_EMsgClientToGCCavernCrawlGetClaimedRoomCountResponse = 8309;
 	k_EMsgGCToGCReconcilePlusAutoGrantItemsUnreliable = 8310;
@@ -837,5 +836,12 @@ enum EDOTAGCMsg {
 	k_EMsgClientToGCMVPVoteTimeoutResponse = 8350;
 	k_EMsgClientToGCGetUnderlordsCDKeyRequest = 8351;
 	k_EMsgClientToGCGetUnderlordsCDKeyResponse = 8352;
+	k_EMsgDetailedGameStats = 8353;
+	k_EMsgClientToGCSetFavoriteAllStarPlayer = 8354;
+	k_EMsgClientToGCSetFavoriteAllStarPlayerResponse = 8355;
+	k_EMsgAllStarStats = 8356;
+	k_EMsgClientToGCGetFavoriteAllStarPlayerRequest = 8357;
+	k_EMsgClientToGCGetFavoriteAllStarPlayerResponse = 8358;
+	k_EMsgClientToGCVerifyIntegrity = 8359;
 }
 

@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dota',
   syntax='proto2',
   serialized_options=_b('H\001\220\001\000'),
-  serialized_pb=_b('\n\x1c\x64ota_gcmessages_common.proto\x12\x04\x64ota\x1a\x13steammessages.proto\x1a\x16gcsdk_gcmessages.proto\x1a\x17\x64ota_shared_enums.proto\"\xe5\x12\n\x18\x43SODOTAGameAccountClient\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x0c\n\x04wins\x18\x03 \x01(\r\x12\x0e\n\x06losses\x18\x04 \x01(\r\x12\n\n\x02xp\x18\x0c \x01(\r\x12\r\n\x05level\x18\r \x01(\r\x12\x15\n\rinitial_skill\x18\x0e \x01(\r\x12\x14\n\x0cleaver_count\x18\x0f \x01(\r\x12\x1e\n\x16secondary_leaver_count\x18: \x01(\r\x12\x1f\n\x17low_priority_until_date\x18\x12 \x01(\r\x12$\n\x1cprevent_text_chat_until_date\x18\x14 \x01(\r\x12 \n\x18prevent_voice_until_date\x18\x15 \x01(\r\x12+\n#prevent_public_text_chat_until_date\x18V \x01(\r\x12 \n\x18last_abandoned_game_date\x18\x16 \x01(\r\x12*\n\"last_secondary_abandoned_game_date\x18; \x01(\r\x12\x1c\n\x14leaver_penalty_count\x18\x17 \x01(\r\x12\x1d\n\x15\x63ompleted_game_streak\x18\x18 \x01(\r\x12\x10\n\x08teaching\x18\x1c \x01(\r\x12\x12\n\nleadership\x18\x1d \x01(\r\x12\x10\n\x08\x66riendly\x18\x1e \x01(\r\x12\x11\n\tforgiving\x18\x1f \x01(\r\x12#\n\x1b\x61\x63\x63ount_disabled_until_date\x18& \x01(\r\x12\x1e\n\x16\x61\x63\x63ount_disabled_count\x18\' \x01(\r\x12!\n\x19match_disabled_until_date\x18) \x01(\r\x12\x1c\n\x14match_disabled_count\x18* \x01(\r\x12\x44\n\x14partner_account_type\x18, \x01(\x0e\x32\x18.dota.PartnerAccountType:\x0cPARTNER_NONE\x12\x1d\n\x15partner_account_state\x18- \x01(\r\x12%\n\x1dshutdownlawterminatetimestamp\x18/ \x01(\r\x12$\n\x1clow_priority_games_remaining\x18\x30 \x01(\r\x12\x18\n\x10\x63ompetitive_rank\x18\x31 \x01(\r\x12#\n\x1b\x63\x61libration_games_remaining\x18\x33 \x01(\r\x12\x1d\n\x15solo_competitive_rank\x18\x34 \x01(\r\x12(\n solo_calibration_games_remaining\x18\x36 \x01(\r\x12\x19\n\x11recruitment_level\x18\x37 \x01(\r\x12\x1d\n\x15has_new_notifications\x18\x38 \x01(\x08\x12\x17\n\x0fis_league_admin\x18\x39 \x01(\x08\x12\x1b\n\x13\x63\x61sual_games_played\x18< \x01(\r\x12%\n\x1dsolo_competitive_games_played\x18= \x01(\r\x12&\n\x1eparty_competitive_games_played\x18> \x01(\r\x12\x1f\n\x17\x63\x61sual_1v1_games_played\x18\x41 \x01(\r\x12%\n\x1d\x63ompetitive_team_games_played\x18\x42 \x01(\r\x12\"\n\x1a\x63urr_all_hero_challenge_id\x18\x43 \x01(\r\x12\x18\n\x10play_time_points\x18\x44 \x01(\r\x12\x15\n\raccount_flags\x18\x45 \x01(\r\x12\x17\n\x0fplay_time_level\x18\x46 \x01(\r\x12+\n#player_behavior_seq_num_last_report\x18G \x01(\r\x12)\n!player_behavior_score_last_report\x18H \x01(\r\x12\'\n\x1fplayer_behavior_report_old_data\x18I \x01(\x08\x12\x1b\n\x13tourney_skill_level\x18J \x01(\r\x12)\n!tourney_recent_participation_date\x18U \x01(\r\x12\x15\n\rfavorite_team\x18W \x01(\r\x12 \n\x18\x61nchored_phone_number_id\x18X \x01(\x04\x12)\n!ranked_matchmaking_ban_until_date\x18Y \x01(\r\x12\x1a\n\x12recent_game_time_1\x18Z \x01(\r\x12\x1a\n\x12recent_game_time_2\x18[ \x01(\r\x12\x1a\n\x12recent_game_time_3\x18\\ \x01(\r\x12$\n\x1cgeneral_seasonal_ranked_rank\x18] \x01(\r\x12;\n3general_seasonal_ranked_calibration_games_remaining\x18^ \x01(\r\x12,\n$general_seasonal_ranked_games_played\x18_ \x01(\r\x12)\n!general_seasonal_ranked_rank_peak\x18` \x01(\r\x12)\n!general_seasonal_rank_transferred\x18\x61 \x01(\x08\x12!\n\x19solo_seasonal_ranked_rank\x18\x62 \x01(\r\x12\x38\n0solo_seasonal_ranked_calibration_games_remaining\x18\x63 \x01(\r\x12)\n!solo_seasonal_ranked_games_played\x18\x64 \x01(\r\x12&\n\x1esolo_seasonal_ranked_rank_peak\x18\x65 \x01(\r\x12&\n\x1esolo_seasonal_rank_transferred\x18\x66 \x01(\x08\x12\x1c\n\x14\x66\x61vorite_team_packed\x18g \x01(\x04\x12\x1a\n\x12recent_report_time\x18h \x01(\r\x12\'\n\x1f\x63ustom_game_disabled_until_date\x18i \x01(\r\x12\x19\n\x11recent_win_time_1\x18j \x01(\r\x12\x19\n\x11recent_win_time_2\x18k \x01(\r\x12\x19\n\x11recent_win_time_3\x18l \x01(\r\x12\x14\n\x0c\x63oach_rating\x18m \x01(\r\"\xe9\x01\n\x16\x43SODOTAGameAccountPlus\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x1b\n\x13original_start_date\x18\x02 \x01(\r\x12\x12\n\nplus_flags\x18\x03 \x01(\r\x12\x13\n\x0bplus_status\x18\x04 \x01(\r\x12\x1a\n\x12prepaid_time_start\x18\x05 \x01(\r\x12\x1c\n\x14prepaid_time_balance\x18\x06 \x01(\r\x12\x19\n\x11next_payment_date\x18\x07 \x01(\x07\x12\x1a\n\x12steam_agreement_id\x18\x08 \x01(\x06\"\xa4\x01\n#CMsgLobbyPlayerPlusSubscriptionData\x12H\n\x0bhero_badges\x18\x01 \x03(\x0b\x32\x33.dota.CMsgLobbyPlayerPlusSubscriptionData.HeroBadge\x1a\x33\n\tHeroBadge\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x15\n\rhero_badge_xp\x18\x02 \x01(\r\"\xea\x07\n\x14\x43MsgLobbyEventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12@\n\x0e\x61\x63\x63ount_points\x18\x02 \x03(\x0b\x32(.dota.CMsgLobbyEventPoints.AccountPoints\x1aI\n\x15\x43hatWheelMessageRange\x12\x18\n\x10message_id_start\x18\x01 \x01(\r\x12\x16\n\x0emessage_id_end\x18\x02 \x01(\r\x1a\x38\n\x16PeriodicResourceValues\x12\x11\n\tremaining\x18\x01 \x01(\r\x12\x0b\n\x03max\x18\x02 \x01(\r\x1a\xf8\x05\n\rAccountPoints\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x15\n\rnormal_points\x18\x02 \x01(\r\x12\x16\n\x0epremium_points\x18\x03 \x01(\r\x12\r\n\x05owned\x18\x04 \x01(\x08\x12\x15\n\rfavorite_team\x18\x05 \x01(\r\x12\x1b\n\x13\x66\x61vorite_team_level\x18\x06 \x01(\r\x12\x13\n\x0bpoints_held\x18\x07 \x01(\r\x12\x1b\n\x13premium_points_held\x18\x08 \x01(\r\x12 \n\x18\x66\x61vorite_team_foil_level\x18\t \x01(\r\x12\x1b\n\x13\x61\x63tive_effects_mask\x18\x0c \x01(\x04\x12\\\n\"unlocked_chat_wheel_message_ranges\x18\r \x03(\x0b\x32\x30.dota.CMsgLobbyEventPoints.ChatWheelMessageRange\x12I\n\x16plus_subscription_data\x18\x10 \x01(\x0b\x32).dota.CMsgLobbyPlayerPlusSubscriptionData\x12G\n\x0cwager_tokens\x18\x11 \x01(\x0b\x32\x31.dota.CMsgLobbyEventPoints.PeriodicResourceValues\x12L\n\x11rank_wager_tokens\x18\x12 \x01(\x0b\x32\x31.dota.CMsgLobbyEventPoints.PeriodicResourceValues\x12\x45\n\ntip_tokens\x18\x13 \x01(\x0b\x32\x31.dota.CMsgLobbyEventPoints.PeriodicResourceValues\x12\x12\n\ntip_amount\x18\x14 \x01(\r\x12U\n\x1aperiodic_point_adjustments\x18\x15 \x01(\x0b\x32\x31.dota.CMsgLobbyEventPoints.PeriodicResourceValues\"\xd0\x01\n\x1c\x43MsgLocalServerFakeLobbyData\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x30\n\x0c\x65vent_points\x18\x02 \x03(\x0b\x32\x1a.dota.CMsgLobbyEventPoints\x12\x1a\n\x12is_plus_subscriber\x18\x03 \x01(\x08\x12\x18\n\x10primary_event_id\x18\x04 \x01(\r\x12\x15\n\rfavorite_team\x18\x05 \x01(\r\x12\x1d\n\x15\x66\x61vorite_team_quality\x18\x06 \x01(\r\"\xc6\x01\n\x14\x43MsgBattleCupVictory\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08win_date\x18\x02 \x01(\r\x12\x13\n\x0bvalid_until\x18\x03 \x01(\r\x12\x13\n\x0bskill_level\x18\x04 \x01(\r\x12\x15\n\rtournament_id\x18\x05 \x01(\r\x12\x13\n\x0b\x64ivision_id\x18\x06 \x01(\r\x12\x0f\n\x07team_id\x18\x07 \x01(\r\x12\x0e\n\x06streak\x18\x08 \x01(\r\x12\x11\n\ttrophy_id\x18\t \x01(\r\"L\n\x1d\x43MsgLobbyBattleCupVictoryList\x12+\n\x07winners\x18\x01 \x03(\x0b\x32\x1a.dota.CMsgBattleCupVictory\"0\n\x1d\x43MsgDOTABroadcastNotification\x12\x0f\n\x07message\x18\x01 \x01(\t\"\xb9\x01\n\x14\x43ProtoItemHeroStatue\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x1b\n\x13status_effect_index\x18\x02 \x01(\r\x12\x15\n\rsequence_name\x18\x03 \x01(\t\x12\r\n\x05\x63ycle\x18\x04 \x01(\x02\x12\x10\n\x08wearable\x18\x05 \x03(\r\x12\x13\n\x0binscription\x18\x06 \x01(\t\x12\r\n\x05style\x18\x07 \x03(\r\x12\x17\n\x0ftournament_drop\x18\x08 \x01(\x08\"\xa2\x01\n\x16\x43ProtoItemTeamShowcase\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x1b\n\x13status_effect_index\x18\x02 \x01(\r\x12\x15\n\rsequence_name\x18\x03 \x01(\t\x12\r\n\x05\x63ycle\x18\x04 \x01(\x02\x12\x10\n\x08wearable\x18\x05 \x03(\r\x12\x13\n\x0binscription\x18\x06 \x01(\t\x12\r\n\x05style\x18\x07 \x03(\r\";\n\x1a\x43MatchPlayerAbilityUpgrade\x12\x0f\n\x07\x61\x62ility\x18\x01 \x01(\r\x12\x0c\n\x04time\x18\x02 \x01(\r\"\x8c\x01\n\x16\x43MatchPlayerTimedStats\x12\x0c\n\x04time\x18\x01 \x01(\r\x12\r\n\x05kills\x18\x02 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x03 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x04 \x01(\r\x12\x11\n\tnet_worth\x18\x05 \x01(\r\x12\x11\n\tlast_hits\x18\x06 \x01(\r\x12\x0e\n\x06\x64\x65nies\x18\x07 \x01(\r\"A\n\x1d\x43MatchAdditionalUnitInventory\x12\x11\n\tunit_name\x18\x01 \x01(\t\x12\r\n\x05items\x18\x02 \x03(\r\"H\n\x19\x43MatchPlayerPermanentBuff\x12\x16\n\x0epermanent_buff\x18\x01 \x01(\r\x12\x13\n\x0bstack_count\x18\x02 \x01(\r\"G\n\x15\x43MatchHeroSelectEvent\x12\x0f\n\x07is_pick\x18\x01 \x01(\x08\x12\x0c\n\x04team\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\"W\n\x17\x43PartySearchClientParty\x12\x10\n\x08party_id\x18\x01 \x01(\x06\x12\x13\n\x0b\x62\x65\x61\x63on_type\x18\x02 \x01(\x05\x12\x15\n\rparty_members\x18\x03 \x03(\x07\"\x8b\x01\n$CMsgDOTAProcessFantasyScheduledEvent\x12\r\n\x05\x65vent\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x03 \x01(\r\x12\x0e\n\x06season\x18\x04 \x01(\r\x12\x16\n\x0ereference_data\x18\x05 \x01(\r\";\n\x14\x43MsgDOTAHasItemQuery\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"+\n\x17\x43MsgDOTAHasItemResponse\x12\x10\n\x08has_item\x18\x01 \x01(\x08\"&\n\x10\x43MsgGCIsProQuery\x12\x12\n\naccount_id\x18\x01 \x01(\r\"%\n\x13\x43MsgGCIsProResponse\x12\x0e\n\x06is_pro\x18\x01 \x01(\x08\"C\n\x18\x43MsgDOTAHasItemDefsQuery\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bitemdef_ids\x18\x02 \x03(\r\"0\n\x1b\x43MsgDOTAHasItemDefsResponse\x12\x11\n\thas_items\x18\x01 \x01(\x08\"f\n\x1b\x43MsgGCGetPlayerCardItemInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1c\n\x14player_card_item_ids\x18\x02 \x03(\x04\x12\x15\n\rall_for_event\x18\x03 \x01(\r\"\xd5\x01\n#CMsgGCGetPlayerCardItemInfoResponse\x12S\n\x11player_card_infos\x18\x01 \x03(\x0b\x32\x38.dota.CMsgGCGetPlayerCardItemInfoResponse.PlayerCardInfo\x1aY\n\x0ePlayerCardInfo\x12\x1b\n\x13player_card_item_id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12\x16\n\x0epacked_bonuses\x18\x03 \x01(\x04\"F\n\x1f\x43MsgGCToGCFantasySetMatchLeague\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tleague_id\x18\x02 \x01(\r\"a\n\x17\x43SODOTAMapLocationState\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x19\n\x0blocation_id\x18\x02 \x01(\x05\x42\x04\x80\x97\"\x01\x12\x11\n\tcompleted\x18\x03 \x01(\x08\"*\n\x13\x43MsgLeagueAdminList\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\x80\x01\n\x1a\x43\x43ompendiumTimestampedData\x12\x11\n\tgame_time\x18\x01 \x01(\r\x12\x0b\n\x03gpm\x18\x02 \x01(\r\x12\x0b\n\x03xpm\x18\x03 \x01(\r\x12\r\n\x05kills\x18\x04 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x05 \x01(\r\x12\x16\n\x0eitem_purchases\x18\x06 \x03(\r\"W\n\x17\x43\x43ompendiumGameTimeline\x12.\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32 .dota.CCompendiumTimestampedData\x12\x0c\n\x04tags\x18\x02 \x03(\t\"C\n\x13\x43\x43ompendiumGameList\x12,\n\x05games\x18\x01 \x03(\x0b\x32\x1d.dota.CCompendiumGameTimeline\"L\n\x14\x43\x41\x64\x64itionalEquipSlot\x12\x10\n\x08\x63lass_id\x18\x01 \x01(\r\x12\x0f\n\x07slot_id\x18\x02 \x01(\r\x12\x11\n\tdef_index\x18\x03 \x01(\r\"\xe3\t\n\x13\x43MsgDOTAProfileCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1c\n\x14\x62\x61\x63kground_def_index\x18\x02 \x01(\r\x12-\n\x05slots\x18\x03 \x03(\x0b\x32\x1e.dota.CMsgDOTAProfileCard.Slot\x12\x14\n\x0c\x62\x61\x64ge_points\x18\x04 \x01(\r\x12\x14\n\x0c\x65vent_points\x18\x05 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x06 \x01(\r\x12=\n\x19recent_battle_cup_victory\x18\x07 \x01(\x0b\x32\x1a.dota.CMsgBattleCupVictory\x12\x11\n\trank_tier\x18\x08 \x01(\r\x12\x18\n\x10leaderboard_rank\x18\t \x01(\r\x12\x1a\n\x12is_plus_subscriber\x18\n \x01(\x08\x12 \n\x18plus_original_start_date\x18\x0b \x01(\r\x12\x17\n\x0frank_tier_score\x18\x0c \x01(\r\x12\x1a\n\x12previous_rank_tier\x18\r \x01(\r\x1a\x97\x05\n\x04Slot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x35\n\x06trophy\x18\x02 \x01(\x0b\x32%.dota.CMsgDOTAProfileCard.Slot.Trophy\x12\x31\n\x04stat\x18\x03 \x01(\x0b\x32#.dota.CMsgDOTAProfileCard.Slot.Stat\x12\x31\n\x04item\x18\x04 \x01(\x0b\x32#.dota.CMsgDOTAProfileCard.Slot.Item\x12\x31\n\x04hero\x18\x05 \x01(\x0b\x32#.dota.CMsgDOTAProfileCard.Slot.Hero\x12\x39\n\x08\x65moticon\x18\x06 \x01(\x0b\x32\'.dota.CMsgDOTAProfileCard.Slot.Emoticon\x12\x31\n\x04team\x18\x07 \x01(\x0b\x32#.dota.CMsgDOTAProfileCard.Slot.Team\x1a\x31\n\x06Trophy\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x1a`\n\x04Stat\x12\x44\n\x07stat_id\x18\x01 \x01(\x0e\x32!.dota.CMsgDOTAProfileCard.EStatID:\x10k_eStat_SoloRank\x12\x12\n\nstat_score\x18\x02 \x01(\r\x1a\x30\n\x04Item\x12\x17\n\x0fserialized_item\x18\x01 \x01(\x0c\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x1a?\n\x04Hero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\thero_wins\x18\x02 \x01(\r\x12\x13\n\x0bhero_losses\x18\x03 \x01(\r\x1a\x1f\n\x08\x45moticon\x12\x13\n\x0b\x65moticon_id\x18\x01 \x01(\r\x1a\x17\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\xb3\x01\n\x07\x45StatID\x12\x14\n\x10k_eStat_SoloRank\x10\x01\x12\x15\n\x11k_eStat_PartyRank\x10\x02\x12\x10\n\x0ck_eStat_Wins\x10\x03\x12\x14\n\x10k_eStat_Commends\x10\x04\x12\x17\n\x13k_eStat_GamesPlayed\x10\x05\x12\x1a\n\x16k_eStat_FirstMatchDate\x10\x06\x12\x1e\n\x1ak_eStat_PreviousSeasonRank\x10\x07\"\x81\x03\n\x16\x43SODOTAPlayerChallenge\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x16\n\x08\x65vent_id\x18\x02 \x01(\rB\x04\x80\x97\"\x01\x12\x15\n\x07slot_id\x18\x03 \x01(\rB\x04\x80\x97\"\x01\x12\x13\n\x0bint_param_0\x18\x05 \x01(\r\x12\x13\n\x0bint_param_1\x18\x06 \x01(\r\x12\x14\n\x0c\x63reated_time\x18\x07 \x01(\r\x12\x11\n\tcompleted\x18\x08 \x01(\r\x12\x13\n\x0bsequence_id\x18\t \x01(\r\x12\x16\n\x0e\x63hallenge_tier\x18\n \x01(\r\x12\r\n\x05\x66lags\x18\x0b \x01(\r\x12\x10\n\x08\x61ttempts\x18\x0c \x01(\r\x12\x16\n\x0e\x63omplete_limit\x18\r \x01(\r\x12\x12\n\nquest_rank\x18\x0e \x01(\r\x12\x16\n\x0emax_quest_rank\x18\x0f \x01(\r\x12\x13\n\x0binstance_id\x18\x10 \x01(\r\x12\x0f\n\x07hero_id\x18\x11 \x01(\r\x12\x13\n\x0btemplate_id\x18\x12 \x01(\r\"z\n#CMsgClientToGCRerollPlayerChallenge\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x13\n\x0bsequence_id\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\"\xf5\x01\n#CMsgGCRerollPlayerChallengeResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgGCRerollPlayerChallengeResponse.EResult:\x0f\x65Result_Success\"z\n\x07\x45Result\x12\x13\n\x0f\x65Result_Success\x10\x00\x12\x13\n\x0f\x65Result_Dropped\x10\x01\x12\x14\n\x10\x65Result_NotFound\x10\x02\x12\x16\n\x12\x65Result_CantReroll\x10\x03\x12\x17\n\x13\x65Result_ServerError\x10\x04\"M\n\x18\x43MsgGCTopCustomGamesList\x12\x18\n\x10top_custom_games\x18\x01 \x03(\x04\x12\x17\n\x0fgame_of_the_day\x18\x02 \x01(\x04\"\xfe\x1b\n\x19\x43MsgDOTARealtimeGameStats\x12;\n\x05match\x18\x01 \x01(\x0b\x32,.dota.CMsgDOTARealtimeGameStats.MatchDetails\x12:\n\x05teams\x18\x02 \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.TeamDetails\x12\x42\n\tbuildings\x18\x03 \x03(\x0b\x32/.dota.CMsgDOTARealtimeGameStats.BuildingDetails\x12=\n\ngraph_data\x18\x04 \x01(\x0b\x32).dota.CMsgDOTARealtimeGameStats.GraphData\x12\x13\n\x0b\x64\x65lta_frame\x18\x05 \x01(\x08\x1a\x87\x02\n\x0bTeamDetails\x12\x13\n\x0bteam_number\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x06\x12\x10\n\x08team_tag\x18\n \x01(\t\x12\r\n\x05score\x18\x05 \x01(\r\x12\x11\n\tnet_worth\x18\t \x01(\r\x12>\n\x07players\x18\x06 \x03(\x0b\x32-.dota.CMsgDOTARealtimeGameStats.PlayerDetails\x12\x11\n\tonly_team\x18\x07 \x01(\x08\x12\x0e\n\x06\x63heers\x18\x08 \x01(\r\x12\x15\n\rteam_logo_url\x18\x0b \x01(\t\x1a\x64\n\x0bItemDetails\x12\x17\n\x0fitem_ability_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04time\x18\x03 \x01(\x05\x12\x0c\n\x04sold\x18\x04 \x01(\x08\x12\x12\n\nstackcount\x18\x05 \x01(\r\x1a\x61\n\x0e\x41\x62ilityDetails\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05level\x18\x03 \x01(\r\x12\x10\n\x08\x63ooldown\x18\x04 \x01(\x02\x12\x14\n\x0c\x63ooldown_max\x18\x05 \x01(\x02\x1a\x43\n\x0fHeroToHeroStats\x12\x10\n\x08victimid\x18\x01 \x01(\r\x12\r\n\x05kills\x18\x02 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x03 \x01(\r\x1a\x19\n\x0b\x41\x62ilityList\x12\n\n\x02id\x18\x01 \x03(\r\x1a\x83\n\n\rPlayerDetails\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x10\n\x08playerid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04team\x18\x04 \x01(\r\x12\x0e\n\x06heroid\x18\x05 \x01(\r\x12\x14\n\x0chealthpoints\x18\x06 \x01(\r\x12\x17\n\x0fmaxhealthpoints\x18\x07 \x01(\r\x12\x17\n\x0fhealthregenrate\x18\x08 \x01(\x02\x12\x12\n\nmanapoints\x18\t \x01(\r\x12\x15\n\rmaxmanapoints\x18\n \x01(\r\x12\x15\n\rmanaregenrate\x18\x0b \x01(\x02\x12\x15\n\rbase_strength\x18\x0c \x01(\r\x12\x14\n\x0c\x62\x61se_agility\x18\r \x01(\r\x12\x19\n\x11\x62\x61se_intelligence\x18\x0e \x01(\r\x12\x12\n\nbase_armor\x18\x0f \x01(\x05\x12\x16\n\x0e\x62\x61se_movespeed\x18\x10 \x01(\r\x12\x13\n\x0b\x62\x61se_damage\x18\x11 \x01(\r\x12\x10\n\x08strength\x18\x12 \x01(\r\x12\x0f\n\x07\x61gility\x18\x13 \x01(\r\x12\x14\n\x0cintelligence\x18\x14 \x01(\r\x12\r\n\x05\x61rmor\x18\x15 \x01(\x05\x12\x11\n\tmovespeed\x18\x16 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x17 \x01(\r\x12\x13\n\x0bhero_damage\x18\x18 \x01(\r\x12\x14\n\x0ctower_damage\x18\x19 \x01(\r\x12\x41\n\tabilities\x18\x1a \x03(\x0b\x32..dota.CMsgDOTARealtimeGameStats.AbilityDetails\x12\r\n\x05level\x18\x1b \x01(\r\x12\x12\n\nkill_count\x18\x1c \x01(\r\x12\x13\n\x0b\x64\x65\x61th_count\x18\x1d \x01(\r\x12\x15\n\rassists_count\x18\x1e \x01(\r\x12\x14\n\x0c\x64\x65nies_count\x18\x1f \x01(\r\x12\x10\n\x08lh_count\x18  \x01(\r\x12\x14\n\x0chero_healing\x18! \x01(\r\x12\x14\n\x0cgold_per_min\x18\" \x01(\r\x12\x12\n\nxp_per_min\x18# \x01(\r\x12\x10\n\x08net_gold\x18$ \x01(\r\x12\x0c\n\x04gold\x18% \x01(\r\x12\t\n\x01x\x18& \x01(\x02\x12\t\n\x01y\x18\' \x01(\x02\x12\x14\n\x0crespawn_time\x18( \x01(\x05\x12\x19\n\x11ultimate_cooldown\x18) \x01(\r\x12\x13\n\x0bhas_buyback\x18* \x01(\x08\x12:\n\x05items\x18+ \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.ItemDetails\x12?\n\nstashitems\x18, \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.ItemDetails\x12\x45\n\x10itemshoppinglist\x18- \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.ItemDetails\x12@\n\x0blevelpoints\x18. \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.AbilityList\x12K\n\x12hero_to_hero_stats\x18/ \x03(\x0b\x32/.dota.CMsgDOTARealtimeGameStats.HeroToHeroStats\x12\x14\n\x0chas_ultimate\x18\x30 \x01(\x08\x12\x19\n\x11has_ultimate_mana\x18\x31 \x01(\x08\x1a\x83\x01\n\x0f\x42uildingDetails\x12\x0c\n\x04team\x18\x02 \x01(\r\x12\x0f\n\x07heading\x18\x03 \x01(\x02\x12\x0c\n\x04lane\x18\x04 \x01(\r\x12\x0c\n\x04tier\x18\x05 \x01(\r\x12\x0c\n\x04type\x18\x06 \x01(\r\x12\t\n\x01x\x18\x07 \x01(\x02\x12\t\n\x01y\x18\x08 \x01(\x02\x12\x11\n\tdestroyed\x18\t \x01(\x08\x1aN\n\x0bKillDetails\x12\x11\n\tplayer_id\x18\x01 \x01(\r\x12\x12\n\ndeath_time\x18\x02 \x01(\x05\x12\x18\n\x10killer_player_id\x18\x03 \x01(\r\x1aV\n\x12\x42roadcasterDetails\x12\x11\n\tplayer_id\x18\x01 \x01(\r\x12\x15\n\rselected_hero\x18\x02 \x01(\r\x12\x16\n\x0eselected_graph\x18\x03 \x01(\r\x1a,\n\x0ePickBanDetails\x12\x0c\n\x04hero\x18\x01 \x01(\r\x12\x0c\n\x04team\x18\x02 \x01(\r\x1a\xbe\x04\n\x0cMatchDetails\x12\x17\n\x0fserver_steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07matchid\x18\x02 \x01(\x04\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x13\n\x0btime_of_day\x18\x04 \x01(\x02\x12\x1d\n\x15is_nightstalker_night\x18\x05 \x01(\x08\x12\x11\n\tgame_time\x18\x06 \x01(\x05\x12\x12\n\ngame_state\x18\x13 \x01(\r\x12\x16\n\x0eteamid_radiant\x18\x08 \x01(\r\x12\x13\n\x0bteamid_dire\x18\t \x01(\r\x12=\n\x05picks\x18\n \x03(\x0b\x32..dota.CMsgDOTARealtimeGameStats.PickBanDetails\x12<\n\x04\x62\x61ns\x18\x0b \x03(\x0b\x32..dota.CMsgDOTARealtimeGameStats.PickBanDetails\x12:\n\x05kills\x18\x0c \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.KillDetails\x12H\n\x0c\x62roadcasters\x18\r \x03(\x0b\x32\x32.dota.CMsgDOTARealtimeGameStats.BroadcasterDetails\x12\x11\n\tgame_mode\x18\x0e \x01(\r\x12\x11\n\tleague_id\x18\x0f \x01(\r\x12\x16\n\x0eleague_node_id\x18\x12 \x01(\r\x12\x13\n\x0bsingle_team\x18\x10 \x01(\x08\x12\x13\n\x0b\x63heers_peak\x18\x11 \x01(\r\x1a\xf9\x03\n\tGraphData\x12\x12\n\ngraph_gold\x18\x01 \x03(\x05\x12\x10\n\x08graph_xp\x18\x02 \x03(\x05\x12\x12\n\ngraph_kill\x18\x03 \x03(\x05\x12\x13\n\x0bgraph_tower\x18\x04 \x03(\x05\x12\x11\n\tgraph_rax\x18\x05 \x03(\x05\x12S\n\x0eteam_loc_stats\x18\x06 \x03(\x0b\x32;.dota.CMsgDOTARealtimeGameStats.GraphData.TeamLocationStats\x1a\x1e\n\rLocationStats\x12\r\n\x05stats\x18\x01 \x03(\x05\x1a_\n\x11TeamLocationStats\x12J\n\tloc_stats\x18\x01 \x03(\x0b\x32\x37.dota.CMsgDOTARealtimeGameStats.GraphData.LocationStats\"[\n\x05\x65Stat\x12\x13\n\x0f\x43reepGoldEarned\x10\x00\x12\x12\n\x0eKillGoldEarned\x10\x01\x12\x1b\n\x17\x44\x65\x61thAndBuybackGoldLost\x10\x02\x12\x0c\n\x08XPEarned\x10\x03\"W\n\teLocation\x12\x0b\n\x07\x42otLane\x10\x00\x12\x0b\n\x07MidLane\x10\x01\x12\x0b\n\x07TopLane\x10\x02\x12\n\n\x06Jungle\x10\x03\x12\x0c\n\x08\x41ncients\x10\x04\x12\t\n\x05Other\x10\x05\"\x9a\x0b\n\x1e\x43MsgDOTARealtimeGameStatsTerse\x12@\n\x05match\x18\x01 \x01(\x0b\x32\x31.dota.CMsgDOTARealtimeGameStatsTerse.MatchDetails\x12?\n\x05teams\x18\x02 \x03(\x0b\x32\x30.dota.CMsgDOTARealtimeGameStatsTerse.TeamDetails\x12G\n\tbuildings\x18\x03 \x03(\x0b\x32\x34.dota.CMsgDOTARealtimeGameStatsTerse.BuildingDetails\x12\x42\n\ngraph_data\x18\x04 \x01(\x0b\x32..dota.CMsgDOTARealtimeGameStatsTerse.GraphData\x12\x13\n\x0b\x64\x65lta_frame\x18\x05 \x01(\x08\x1a\xe9\x01\n\x0bTeamDetails\x12\x13\n\x0bteam_number\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x10\n\x08team_tag\x18\x08 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x06\x12\r\n\x05score\x18\x05 \x01(\r\x12\x11\n\tnet_worth\x18\x07 \x01(\r\x12\x15\n\rteam_logo_url\x18\t \x01(\t\x12\x43\n\x07players\x18\x06 \x03(\x0b\x32\x32.dota.CMsgDOTARealtimeGameStatsTerse.PlayerDetails\x1a\xb0\x02\n\rPlayerDetails\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x10\n\x08playerid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04team\x18\x04 \x01(\r\x12\x0e\n\x06heroid\x18\x05 \x01(\r\x12\r\n\x05level\x18\x06 \x01(\r\x12\x12\n\nkill_count\x18\x07 \x01(\r\x12\x13\n\x0b\x64\x65\x61th_count\x18\x08 \x01(\r\x12\x15\n\rassists_count\x18\t \x01(\r\x12\x14\n\x0c\x64\x65nies_count\x18\n \x01(\r\x12\x10\n\x08lh_count\x18\x0b \x01(\r\x12\x0c\n\x04gold\x18\x0c \x01(\r\x12\t\n\x01x\x18\r \x01(\x02\x12\t\n\x01y\x18\x0e \x01(\x02\x12\x11\n\tnet_worth\x18\x0f \x01(\r\x12\x11\n\tabilities\x18\x10 \x03(\r\x12\r\n\x05items\x18\x11 \x03(\r\x1a\x83\x01\n\x0f\x42uildingDetails\x12\x0c\n\x04team\x18\x01 \x01(\r\x12\x0f\n\x07heading\x18\x02 \x01(\x02\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x0c\n\x04lane\x18\x04 \x01(\r\x12\x0c\n\x04tier\x18\x05 \x01(\r\x12\t\n\x01x\x18\x06 \x01(\x02\x12\t\n\x01y\x18\x07 \x01(\x02\x12\x11\n\tdestroyed\x18\x08 \x01(\x08\x1a,\n\x0ePickBanDetails\x12\x0c\n\x04hero\x18\x01 \x01(\r\x12\x0c\n\x04team\x18\x02 \x01(\r\x1a\xde\x02\n\x0cMatchDetails\x12\x17\n\x0fserver_steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07matchid\x18\x02 \x01(\x04\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x11\n\tgame_time\x18\x04 \x01(\x05\x12%\n\x1dsteam_broadcaster_account_ids\x18\x06 \x03(\r\x12\x11\n\tgame_mode\x18\x07 \x01(\r\x12\x11\n\tleague_id\x18\x08 \x01(\r\x12\x16\n\x0eleague_node_id\x18\t \x01(\r\x12\x12\n\ngame_state\x18\n \x01(\r\x12\x42\n\x05picks\x18\x0b \x03(\x0b\x32\x33.dota.CMsgDOTARealtimeGameStatsTerse.PickBanDetails\x12\x41\n\x04\x62\x61ns\x18\x0c \x03(\x0b\x32\x33.dota.CMsgDOTARealtimeGameStatsTerse.PickBanDetails\x1a\x1f\n\tGraphData\x12\x12\n\ngraph_gold\x18\x01 \x03(\x05\"\xaa\x01\n\x1e\x43MsgDOTABroadcastTimelineEvent\x12R\n\x05\x65vent\x18\x01 \x01(\x0e\x32\x1d.dota.EBroadcastTimelineEvent:$EBroadcastTimelineEvent_MatchStarted\x12\x11\n\ttimestamp\x18\x02 \x01(\x07\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\r\x12\x13\n\x0bstring_data\x18\x04 \x01(\t\"?\n CMsgGCToClientMatchGroupsVersion\x12\x1b\n\x13matchgroups_version\x18\x01 \x01(\r\"\xc1\x01\n\x1b\x43MsgDOTASDOHeroStatsHistory\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tgame_mode\x18\x02 \x01(\r\x12\x12\n\nlobby_type\x18\x03 \x01(\r\x12\x12\n\nstart_time\x18\x04 \x01(\r\x12\x0b\n\x03won\x18\x05 \x01(\x08\x12\x0b\n\x03gpm\x18\x06 \x01(\r\x12\x0b\n\x03xpm\x18\x07 \x01(\r\x12\r\n\x05kills\x18\x08 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\t \x01(\r\x12\x0f\n\x07\x61ssists\x18\n \x01(\r\"\x9e\x03\n\x15\x43MsgDOTASeasonRewards\x12\x33\n\x07rewards\x18\x01 \x03(\x0b\x32\".dota.CMsgDOTASeasonRewards.Reward\x1a\xe5\x01\n\x06Reward\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07itemdef\x18\x02 \x01(\r\x12\x12\n\nimportance\x18\x03 \x01(\r\x12\x12\n\nbase_level\x18\x04 \x01(\r\x12\x14\n\x0crepeat_level\x18\x05 \x01(\r\x12\x46\n\x0breward_type\x18\x06 \x01(\x0e\x32\'.dota.CMsgDOTASeasonRewards.ERewardType:\x08\x45\x63onItem\x12\r\n\x05image\x18\x07 \x01(\t\x12\x11\n\taction_id\x18\x08 \x01(\r\x12\x14\n\x0c\x65\x66\x66\x65\x63t_index\x18\t \x01(\r\"h\n\x0b\x45RewardType\x12\x0c\n\x08\x45\x63onItem\x10\x00\x12\x10\n\x0cMysteryWheel\x10\x01\x12\x11\n\rAbilityEffect\x10\x02\x12\t\n\x05Other\x10\x03\x12\x1b\n\x17MysteryWheelPointsBased\x10\x04\"\xb3\x02\n\x1a\x43MsgDOTASeasonAchievements\x12\x42\n\x0c\x61\x63hievements\x18\x01 \x03(\x0b\x32,.dota.CMsgDOTASeasonAchievements.Achievement\x1a\xd0\x01\n\x0b\x41\x63hievement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\r\n\x05image\x18\x03 \x01(\t\x12\x11\n\taction_id\x18\x04 \x01(\r\x12\x12\n\nmax_grants\x18\x05 \x01(\r\x12\x15\n\rnormal_points\x18\x06 \x01(\r\x12\x1c\n\x14tracking_achievement\x18\x07 \x01(\r\x12\x18\n\x10\x61\x63hievement_goal\x18\x08 \x01(\r\x12\x19\n\x11\x61\x63hievement_level\x18\t \x01(\r\"\xfd\x11\n\x19\x43MsgDOTASeasonPredictions\x12?\n\x0bpredictions\x18\x01 \x03(\x0b\x32*.dota.CMsgDOTASeasonPredictions.Prediction\x12M\n\x13in_game_predictions\x18\x02 \x03(\x0b\x32\x30.dota.CMsgDOTASeasonPredictions.InGamePrediction\x12)\n!in_game_prediction_count_per_game\x18\x03 \x01(\r\x12\x30\n(in_game_prediction_voting_period_minutes\x18\x04 \x01(\r\x1aS\n\x06\x43hoice\x12\r\n\x05value\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x15\n\rmin_raw_value\x18\x03 \x01(\r\x12\x15\n\rmax_raw_value\x18\x04 \x01(\r\x1a\x1c\n\x07\x41nswers\x12\x11\n\tanswer_id\x18\x01 \x01(\r\x1a-\n\x0eQueryKeyValues\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a\xf7\x04\n\nPrediction\x12\x46\n\x04type\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTASeasonPredictions.ePredictionType:\x07Generic\x12\x10\n\x08question\x18\x02 \x01(\t\x12\x37\n\x07\x63hoices\x18\x03 \x03(\x0b\x32&.dota.CMsgDOTASeasonPredictions.Choice\x12\x14\n\x0cselection_id\x18\x04 \x01(\r\x12\x12\n\nstart_date\x18\x05 \x01(\r\x12\x11\n\tlock_date\x18\x06 \x01(\r\x12\x0e\n\x06reward\x18\x07 \x01(\r\x12K\n\x0b\x61nswer_type\x18\x08 \x01(\x0e\x32+.dota.CMsgDOTASeasonPredictions.eAnswerType:\tSingleInt\x12\x11\n\tanswer_id\x18\t \x01(\r\x12\x38\n\x07\x61nswers\x18\n \x03(\x0b\x32\'.dota.CMsgDOTASeasonPredictions.Answers\x12\x12\n\nquery_name\x18\x0b \x01(\t\x12\x1c\n\x14lock_on_selection_id\x18\r \x01(\r\x12\x1f\n\x17lock_on_selection_value\x18\x0e \x01(\r\x12\x1d\n\x15lock_on_selection_set\x18\x0f \x01(\x08\x12\x1f\n\x17use_answer_value_ranges\x18\x10 \x01(\x08\x12\x38\n\x06region\x18\x11 \x01(\x0e\x32\x13.dota.ELeagueRegion:\x13LEAGUE_REGION_UNSET\x12\"\n\x06phases\x18\x12 \x03(\x0e\x32\x12.dota.ELeaguePhase\x1a\x86\x05\n\x10InGamePrediction\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x46\n\x04type\x18\x03 \x01(\x0e\x32/.dota.CMsgDOTASeasonPredictions.ePredictionType:\x07Generic\x12Q\n\x05group\x18\x04 \x01(\x0e\x32\x37.dota.CMsgDOTASeasonPredictions.eRandomSelectionGroup_t:\tEarlyGame\x12\x10\n\x08question\x18\x05 \x01(\t\x12\x37\n\x07\x63hoices\x18\x06 \x03(\x0b\x32&.dota.CMsgDOTASeasonPredictions.Choice\x12\x17\n\x0frequired_heroes\x18\x07 \x03(\t\x12\x12\n\nquery_name\x18\x08 \x01(\t\x12\x44\n\x0cquery_values\x18\t \x03(\x0b\x32..dota.CMsgDOTASeasonPredictions.QueryKeyValues\x12_\n\x16\x61nswer_resolution_type\x18\n \x01(\x0e\x32\x31.dota.CMsgDOTASeasonPredictions.eResolutionType_t:\x0cInvalidQuery\x12\x17\n\x0fpoints_to_grant\x18\x0b \x01(\r\x12\x15\n\rreward_action\x18\x0c \x01(\r\x12\x1d\n\x15\x64\x65\x62ug_force_selection\x18\r \x01(\r\x12O\n\x0eraw_value_type\x18\x0e \x01(\x0e\x32/.dota.CMsgDOTASeasonPredictions.eRawValueType_t:\x06Number\"j\n\x0f\x65PredictionType\x12\x0b\n\x07Generic\x10\x00\x12\x08\n\x04Hero\x10\x01\x12\x08\n\x04Team\x10\x02\x12\n\n\x06Player\x10\x03\x12\x0b\n\x07Special\x10\x04\x12\t\n\x05YesNo\x10\x05\x12\x12\n\x0eQualifiersTeam\x10\x06\"\x91\x01\n\x0b\x65\x41nswerType\x12\r\n\tSingleInt\x10\x00\x12\x0f\n\x0bSingleFloat\x10\x01\x12\x0f\n\x0bMultipleInt\x10\x02\x12\x11\n\rMultipleFloat\x10\x03\x12\x0e\n\nAnswerTeam\x10\x04\x12\x0e\n\nSingleTime\x10\x05\x12\x10\n\x0cMultipleTime\x10\x06\x12\x0c\n\x08NoAnswer\x10\x07\"\xd4\x01\n\x11\x65ResolutionType_t\x12\x10\n\x0cInvalidQuery\x10\x00\x12\x14\n\x10\x46irstToPassQuery\x10\x01\x12\x13\n\x0fLastToPassQuery\x10\x02\x12\x16\n\x12LastRemainingQuery\x10\x03\x12\x12\n\x0eMaxToPassQuery\x10\x04\x12\x12\n\x0eMinToPassQuery\x10\x05\x12\x0c\n\x08SumQuery\x10\x06\x12\x19\n\x15MaxTeamSumToPassQuery\x10\x07\x12\x19\n\x15MinTeamSumToPassQuery\x10\x08\"N\n\x17\x65RandomSelectionGroup_t\x12\r\n\tEarlyGame\x10\x00\x12\x0b\n\x07MidGame\x10\x01\x12\x0c\n\x08LateGame\x10\x02\x12\t\n\x05\x43ount\x10\x03\"\'\n\x0f\x65RawValueType_t\x12\n\n\x06Number\x10\x00\x12\x08\n\x04Time\x10\x01\"\x9d\x1f\n\rCMsgDOTAMatch\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x11\n\tstartTime\x18\x04 \x01(\x07\x12+\n\x07players\x18\x05 \x03(\x0b\x32\x1a.dota.CMsgDOTAMatch.Player\x12\x10\n\x08match_id\x18\x06 \x01(\x04\x12\x14\n\x0ctower_status\x18\x08 \x03(\r\x12\x17\n\x0f\x62\x61rracks_status\x18\t \x03(\r\x12\x0f\n\x07\x63luster\x18\n \x01(\r\x12\x18\n\x10\x66irst_blood_time\x18\x0c \x01(\r\x12\x13\n\x0breplay_salt\x18\r \x01(\x07\x12\x11\n\tserver_ip\x18\x0e \x01(\x07\x12\x13\n\x0bserver_port\x18\x0f \x01(\r\x12\x12\n\nlobby_type\x18\x10 \x01(\r\x12\x15\n\rhuman_players\x18\x11 \x01(\r\x12\x15\n\raverage_skill\x18\x12 \x01(\r\x12\x14\n\x0cgame_balance\x18\x13 \x01(\x02\x12\x17\n\x0fradiant_team_id\x18\x14 \x01(\r\x12\x14\n\x0c\x64ire_team_id\x18\x15 \x01(\r\x12\x10\n\x08leagueid\x18\x16 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x17 \x01(\t\x12\x16\n\x0e\x64ire_team_name\x18\x18 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x19 \x01(\x04\x12\x16\n\x0e\x64ire_team_logo\x18\x1a \x01(\x04\x12\x1d\n\x15radiant_team_logo_url\x18\x36 \x01(\t\x12\x1a\n\x12\x64ire_team_logo_url\x18\x37 \x01(\t\x12\x1d\n\x15radiant_team_complete\x18\x1b \x01(\r\x12\x1a\n\x12\x64ire_team_complete\x18\x1c \x01(\r\x12\x16\n\x0epositive_votes\x18\x1d \x01(\r\x12\x16\n\x0enegative_votes\x18\x1e \x01(\r\x12:\n\tgame_mode\x18\x1f \x01(\x0e\x32\x13.dota.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12/\n\npicks_bans\x18  \x03(\x0b\x32\x1b.dota.CMatchHeroSelectEvent\x12\x15\n\rmatch_seq_num\x18! \x01(\x04\x12G\n\x0creplay_state\x18\" \x01(\x0e\x32\x1f.dota.CMsgDOTAMatch.ReplayState:\x10REPLAY_AVAILABLE\x12\x18\n\x10radiant_guild_id\x18# \x01(\r\x12\x15\n\rdire_guild_id\x18$ \x01(\r\x12\x18\n\x10radiant_team_tag\x18% \x01(\t\x12\x15\n\rdire_team_tag\x18& \x01(\t\x12\x11\n\tseries_id\x18\' \x01(\r\x12\x13\n\x0bseries_type\x18( \x01(\r\x12\x44\n\x14\x62roadcaster_channels\x18+ \x03(\x0b\x32&.dota.CMsgDOTAMatch.BroadcasterChannel\x12\x0e\n\x06\x65ngine\x18, \x01(\r\x12<\n\x10\x63ustom_game_data\x18- \x01(\x0b\x32\".dota.CMsgDOTAMatch.CustomGameData\x12\x13\n\x0bmatch_flags\x18. \x01(\r\x12\x1c\n\x14private_metadata_key\x18/ \x01(\x07\x12\x1a\n\x12radiant_team_score\x18\x30 \x01(\r\x12\x17\n\x0f\x64ire_team_score\x18\x31 \x01(\r\x12\x43\n\rmatch_outcome\x18\x32 \x01(\x0e\x32\x13.dota.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x12\x15\n\rtournament_id\x18\x33 \x01(\r\x12\x18\n\x10tournament_round\x18\x34 \x01(\r\x12\x19\n\x11pre_game_duration\x18\x35 \x01(\r\x12\x16\n\x0emvp_account_id\x18\x38 \x03(\r\x12*\n\x07\x63oaches\x18\x39 \x03(\x0b\x32\x19.dota.CMsgDOTAMatch.Coach\x1a\xf4\x0f\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06item_0\x18\x04 \x01(\r\x12\x0e\n\x06item_1\x18\x05 \x01(\r\x12\x0e\n\x06item_2\x18\x06 \x01(\r\x12\x0e\n\x06item_3\x18\x07 \x01(\r\x12\x0e\n\x06item_4\x18\x08 \x01(\r\x12\x0e\n\x06item_5\x18\t \x01(\r\x12\x0e\n\x06item_6\x18; \x01(\r\x12\x0e\n\x06item_7\x18< \x01(\r\x12\x0e\n\x06item_8\x18= \x01(\r\x12\"\n\x1a\x65xpected_team_contribution\x18\n \x01(\x02\x12\x15\n\rscaled_metric\x18\x0b \x01(\x02\x12\x15\n\rprevious_rank\x18\x0c \x01(\r\x12\x13\n\x0brank_change\x18\r \x01(\x11\x12\x11\n\tsolo_rank\x18\x31 \x01(\x08\x12\x15\n\rseasonal_rank\x18\x35 \x01(\x08\x12\x19\n\x11rank_tier_updated\x18\x42 \x01(\x08\x12\r\n\x05kills\x18\x0e \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x0f \x01(\r\x12\x0f\n\x07\x61ssists\x18\x10 \x01(\r\x12\x15\n\rleaver_status\x18\x11 \x01(\r\x12\x0c\n\x04gold\x18\x12 \x01(\r\x12\x11\n\tlast_hits\x18\x13 \x01(\r\x12\x0e\n\x06\x64\x65nies\x18\x14 \x01(\r\x12\x14\n\x0cgold_per_min\x18\x15 \x01(\r\x12\x12\n\nXP_per_min\x18\x16 \x01(\r\x12\x12\n\ngold_spent\x18\x17 \x01(\r\x12\x13\n\x0bhero_damage\x18\x18 \x01(\r\x12\x14\n\x0ctower_damage\x18\x19 \x01(\r\x12\x14\n\x0chero_healing\x18\x1a \x01(\r\x12\r\n\x05level\x18\x1b \x01(\r\x12\x16\n\x0etime_last_seen\x18\x1c \x01(\r\x12\x13\n\x0bplayer_name\x18\x1d \x01(\t\x12\x1d\n\x15support_ability_value\x18\x1e \x01(\r\x12\x18\n\x10\x66\x65\x65\x64ing_detected\x18  \x01(\x08\x12\x13\n\x0bsearch_rank\x18\" \x01(\r\x12\x1f\n\x17search_rank_uncertainty\x18# \x01(\r\x12\x1f\n\x17rank_uncertainty_change\x18$ \x01(\x05\x12\x17\n\x0fhero_play_count\x18% \x01(\r\x12\x10\n\x08party_id\x18& \x01(\x06\x12\x1a\n\x12scaled_hero_damage\x18\x36 \x01(\r\x12\x1b\n\x13scaled_tower_damage\x18\x37 \x01(\r\x12\x1b\n\x13scaled_hero_healing\x18\x38 \x01(\r\x12\x14\n\x0cscaled_kills\x18\' \x01(\x02\x12\x15\n\rscaled_deaths\x18( \x01(\x02\x12\x16\n\x0escaled_assists\x18) \x01(\x02\x12\x19\n\x11\x63laimed_farm_gold\x18* \x01(\r\x12\x14\n\x0csupport_gold\x18+ \x01(\r\x12\x16\n\x0e\x63laimed_denies\x18, \x01(\r\x12\x16\n\x0e\x63laimed_misses\x18- \x01(\r\x12\x0e\n\x06misses\x18. \x01(\r\x12:\n\x10\x61\x62ility_upgrades\x18/ \x03(\x0b\x32 .dota.CMatchPlayerAbilityUpgrade\x12G\n\x1a\x61\x64\x64itional_units_inventory\x18\x30 \x03(\x0b\x32#.dota.CMatchAdditionalUnitInventory\x12\x38\n\x0fpermanent_buffs\x18\x39 \x03(\x0b\x32\x1f.dota.CMatchPlayerPermanentBuff\x12\x10\n\x08pro_name\x18H \x01(\t\x12\x11\n\treal_name\x18I \x01(\t\x12\x43\n\x10\x63ustom_game_data\x18\x32 \x01(\x0b\x32).dota.CMsgDOTAMatch.Player.CustomGameData\x12 \n\x18\x61\x63tive_plus_subscription\x18\x33 \x01(\x08\x12\x11\n\tnet_worth\x18\x34 \x01(\r\x12\x16\n\x0e\x62ot_difficulty\x18: \x01(\r\x12\x17\n\x0fhero_pick_order\x18? \x01(\r\x12\x19\n\x11hero_was_randomed\x18@ \x01(\x08\x12%\n\x1dhero_was_dota_plus_suggestion\x18\x45 \x01(\x08\x12K\n\x14hero_damage_received\x18\x43 \x03(\x0b\x32-.dota.CMsgDOTAMatch.Player.HeroDamageReceived\x12\x14\n\x0cseconds_dead\x18\x46 \x01(\r\x12\x1a\n\x12gold_lost_to_death\x18G \x01(\r\x1a\x33\n\x0e\x43ustomGameData\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x0e\n\x06winner\x18\x02 \x01(\x08\x1a\x99\x01\n\x12HeroDamageReceived\x12\x15\n\rpre_reduction\x18\x01 \x01(\r\x12\x16\n\x0epost_reduction\x18\x02 \x01(\r\x12T\n\x0b\x64\x61mage_type\x18\x03 \x01(\x0e\x32).dota.CMsgDOTAMatch.Player.HeroDamageType:\x14HERO_DAMAGE_PHYSICAL\"Y\n\x0eHeroDamageType\x12\x18\n\x14HERO_DAMAGE_PHYSICAL\x10\x00\x12\x17\n\x13HERO_DAMAGE_MAGICAL\x10\x01\x12\x14\n\x10HERO_DAMAGE_PURE\x10\x02\x1a\x33\n\x0f\x42roadcasterInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x1a\x96\x01\n\x12\x42roadcasterChannel\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12>\n\x11\x62roadcaster_infos\x18\x03 \x03(\x0b\x32#.dota.CMsgDOTAMatch.BroadcasterInfo\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\x1aq\n\x05\x43oach\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\ncoach_name\x18\x02 \x01(\t\x12\x14\n\x0c\x63oach_rating\x18\x03 \x01(\r\x12\x12\n\ncoach_team\x18\x04 \x01(\r\x12\x16\n\x0e\x63oach_party_id\x18\x05 \x01(\x04\x1a:\n\x0e\x43ustomGameData\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x10\n\x08map_name\x18\x02 \x01(\t\"P\n\x0bReplayState\x12\x14\n\x10REPLAY_AVAILABLE\x10\x00\x12\x17\n\x13REPLAY_NOT_RECORDED\x10\x01\x12\x12\n\x0eREPLAY_EXPIRED\x10\x02\"\x8b\x01\n\x0e\x43MsgPlayerCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x38\n\rstat_modifier\x18\x02 \x03(\x0b\x32!.dota.CMsgPlayerCard.StatModifier\x1a+\n\x0cStatModifier\x12\x0c\n\x04stat\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\"\xa9\x03\n\x1a\x43MsgDOTAFantasyPlayerStats\x12\x19\n\x11player_account_id\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x17\n\x0fmatch_completed\x18\x03 \x01(\x08\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x11\n\tleague_id\x18\x05 \x01(\r\x12\r\n\x05\x64\x65lay\x18\x06 \x01(\r\x12\x11\n\tseries_id\x18\x07 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\r\n\x05kills\x18\n \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x0b \x01(\r\x12\n\n\x02\x63s\x18\x0c \x01(\r\x12\x0b\n\x03gpm\x18\r \x01(\x02\x12\x13\n\x0btower_kills\x18\x0e \x01(\r\x12\x14\n\x0croshan_kills\x18\x0f \x01(\r\x12\x1f\n\x17teamfight_participation\x18\x10 \x01(\x02\x12\x14\n\x0cwards_placed\x18\x11 \x01(\r\x12\x15\n\rcamps_stacked\x18\x12 \x01(\r\x12\x15\n\rrunes_grabbed\x18\x13 \x01(\r\x12\x13\n\x0b\x66irst_blood\x18\x14 \x01(\r\x12\r\n\x05stuns\x18\x15 \x01(\x02\"T\n\x1f\x43MsgDOTAFantasyPlayerMatchStats\x12\x31\n\x07matches\x18\x01 \x03(\x0b\x32 .dota.CMsgDOTAFantasyPlayerStats\"\x9b\x07\n\x14\x43MsgDOTABotDebugInfo\x12,\n\x04\x62ots\x18\x01 \x03(\x0b\x32\x1e.dota.CMsgDOTABotDebugInfo.Bot\x12\x1c\n\x14\x64\x65sire_push_lane_top\x18\x02 \x01(\x02\x12\x1c\n\x14\x64\x65sire_push_lane_mid\x18\x03 \x01(\x02\x12\x1c\n\x14\x64\x65sire_push_lane_bot\x18\x04 \x01(\x02\x12\x1e\n\x16\x64\x65sire_defend_lane_top\x18\x05 \x01(\x02\x12\x1e\n\x16\x64\x65sire_defend_lane_mid\x18\x06 \x01(\x02\x12\x1e\n\x16\x64\x65sire_defend_lane_bot\x18\x07 \x01(\x02\x12\x1c\n\x14\x64\x65sire_farm_lane_top\x18\x08 \x01(\x02\x12\x1c\n\x14\x64\x65sire_farm_lane_mid\x18\t \x01(\x02\x12\x1c\n\x14\x64\x65sire_farm_lane_bot\x18\n \x01(\x02\x12\x1a\n\x12\x64\x65sire_farm_roshan\x18\x0b \x01(\x02\x12\x16\n\x0e\x65xecution_time\x18\x0c \x01(\x02\x12\x13\n\x0brune_status\x18\r \x03(\r\x1a\xf7\x03\n\x03\x42ot\x12\x17\n\x0fplayer_owner_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ndifficulty\x18\x03 \x01(\r\x12\x15\n\rpower_current\x18\x04 \x01(\r\x12\x11\n\tpower_max\x18\x05 \x01(\r\x12\x15\n\rmove_target_x\x18\x06 \x01(\r\x12\x15\n\rmove_target_y\x18\x07 \x01(\r\x12\x15\n\rmove_target_z\x18\x08 \x01(\r\x12\x16\n\x0e\x61\x63tive_mode_id\x18\t \x01(\r\x12\x16\n\x0e\x65xecution_time\x18\n \x01(\x02\x12\x32\n\x05modes\x18\x0b \x03(\x0b\x32#.dota.CMsgDOTABotDebugInfo.Bot.Mode\x12\x35\n\x06\x61\x63tion\x18\x0c \x01(\x0b\x32%.dota.CMsgDOTABotDebugInfo.Bot.Action\x1at\n\x04Mode\x12\x0f\n\x07mode_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x65sire\x18\x02 \x01(\x02\x12\x15\n\rtarget_entity\x18\x03 \x01(\r\x12\x10\n\x08target_x\x18\x04 \x01(\r\x12\x10\n\x08target_y\x18\x05 \x01(\r\x12\x10\n\x08target_z\x18\x06 \x01(\r\x1a\x32\n\x06\x41\x63tion\x12\x11\n\taction_id\x18\x01 \x01(\r\x12\x15\n\raction_target\x18\x02 \x01(\t\"R\n\x12\x43MsgSuccessfulHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bwin_percent\x18\x02 \x01(\x02\x12\x16\n\x0elongest_streak\x18\x03 \x01(\r\"\x92\x02\n\x13\x43MsgRecentMatchInfo\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12:\n\tgame_mode\x18\x02 \x01(\x0e\x32\x13.dota.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\x10\n\x08\x64uration\x18\x06 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x07 \x01(\r\x12\x43\n\rmatch_outcome\x18\x08 \x01(\x0e\x32\x13.dota.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x12\x11\n\ttimestamp\x18\t \x01(\r\"\xc3\x01\n\rCMsgMatchTips\x12+\n\x04tips\x18\x02 \x03(\x0b\x32\x1d.dota.CMsgMatchTips.SingleTip\x1a\x84\x01\n\tSingleTip\x12\x19\n\x11source_account_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x12\n\ntip_amount\x18\x03 \x01(\r\x12-\n\x08\x65vent_id\x18\x04 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\"\xaa\x07\n\x14\x43MsgDOTAMatchMinimal\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\x07\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12:\n\tgame_mode\x18\x04 \x01(\x0e\x32\x13.dota.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x32\n\x07players\x18\x06 \x03(\x0b\x32!.dota.CMsgDOTAMatchMinimal.Player\x12\x33\n\x07tourney\x18\x07 \x01(\x0b\x32\".dota.CMsgDOTAMatchMinimal.Tourney\x12\x43\n\rmatch_outcome\x18\x08 \x01(\x0e\x32\x13.dota.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x12\x15\n\rradiant_score\x18\t \x01(\r\x12\x12\n\ndire_score\x18\n \x01(\r\x1a\x93\x01\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05items\x18\x06 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x07 \x01(\r\x12\x10\n\x08pro_name\x18\x08 \x01(\t\x1a\xae\x03\n\x07Tourney\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\x13\n\x0bseries_game\x18\t \x01(\r\x12%\n\x1dweekend_tourney_tournament_id\x18\n \x01(\r\x12(\n weekend_tourney_season_trophy_id\x18\x0b \x01(\r\x12 \n\x18weekend_tourney_division\x18\x0c \x01(\r\x12#\n\x1bweekend_tourney_skill_level\x18\r \x01(\r\x12\x17\n\x0fradiant_team_id\x18\x02 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x03 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x04 \x01(\x06\x12\x1d\n\x15radiant_team_logo_url\x18\x0e \x01(\t\x12\x14\n\x0c\x64ire_team_id\x18\x05 \x01(\r\x12\x16\n\x0e\x64ire_team_name\x18\x06 \x01(\t\x12\x16\n\x0e\x64ire_team_logo\x18\x07 \x01(\x06\x12\x1a\n\x12\x64ire_team_logo_url\x18\x0f \x01(\t\"@\n\x13\x43MsgConsumableUsage\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x17\n\x0fquantity_change\x18\x02 \x01(\x05\"\xbf\x01\n\x18\x43MsgMatchConsumableUsage\x12K\n\x17player_consumables_used\x18\x01 \x03(\x0b\x32*.dota.CMsgMatchConsumableUsage.PlayerUsage\x1aV\n\x0bPlayerUsage\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x33\n\x10\x63onsumables_used\x18\x02 \x03(\x0b\x32\x19.dota.CMsgConsumableUsage\"\x96\x02\n\x1a\x43MsgMatchEventActionGrants\x12\x44\n\rplayer_grants\x18\x01 \x03(\x0b\x32-.dota.CMsgMatchEventActionGrants.PlayerGrants\x1aM\n\x05Grant\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x11\n\taction_id\x18\x02 \x01(\r\x12\r\n\x05\x61udit\x18\x03 \x01(\r\x12\x10\n\x08quantity\x18\x04 \x01(\r\x1a\x63\n\x0cPlayerGrants\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12?\n\x0f\x61\x63tions_granted\x18\x02 \x03(\x0b\x32&.dota.CMsgMatchEventActionGrants.Grant\"e\n\x17\x43MsgCustomGameWhitelist\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x1e\n\x16\x63ustom_games_whitelist\x18\x02 \x03(\x04\x12\x19\n\x11\x64isable_whitelist\x18\x03 \x01(\x08\"\xfa\x01\n\x1e\x43MsgCustomGameWhitelistForEdit\x12N\n\x11whitelist_entries\x18\x01 \x03(\x0b\x32\x33.dota.CMsgCustomGameWhitelistForEdit.WhitelistEntry\x1a\x87\x01\n\x0eWhitelistEntry\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12]\n\x0fwhitelist_state\x18\x02 \x01(\x0e\x32\x1f.dota.ECustomGameWhitelistState:#CUSTOM_GAME_WHITELIST_STATE_UNKNOWN\"\xa0\x01\n\x19\x43MsgPlayerRecentMatchInfo\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x0b\n\x03win\x18\x04 \x01(\x08\x12\x0f\n\x07hero_id\x18\x05 \x01(\r\x12\r\n\x05kills\x18\x06 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x07 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x08 \x01(\r\"5\n\x15\x43MsgPlayerMatchRecord\x12\x0c\n\x04wins\x18\x01 \x01(\r\x12\x0e\n\x06losses\x18\x02 \x01(\r\"F\n\x1d\x43MsgPlayerRecentMatchOutcomes\x12\x10\n\x08outcomes\x18\x01 \x01(\r\x12\x13\n\x0bmatch_count\x18\x02 \x01(\r\"A\n\x18\x43MsgPlayerRecentCommends\x12\x10\n\x08\x63ommends\x18\x01 \x01(\r\x12\x13\n\x0bmatch_count\x18\x02 \x01(\r\"\x94\x03\n\x1f\x43MsgPlayerRecentAccomplishments\x12<\n\x0frecent_outcomes\x18\x01 \x01(\x0b\x32#.dota.CMsgPlayerRecentMatchOutcomes\x12\x31\n\x0ctotal_record\x18\x02 \x01(\x0b\x32\x1b.dota.CMsgPlayerMatchRecord\x12\x19\n\x11prediction_streak\x18\x03 \x01(\r\x12\x1e\n\x16plus_prediction_streak\x18\x04 \x01(\r\x12\x37\n\x0frecent_commends\x18\x05 \x01(\x0b\x32\x1e.dota.CMsgPlayerRecentCommends\x12\x1d\n\x15\x66irst_match_timestamp\x18\x06 \x01(\r\x12\x33\n\nlast_match\x18\x07 \x01(\x0b\x32\x1f.dota.CMsgPlayerRecentMatchInfo\x12\x38\n\x0brecent_mvps\x18\x08 \x01(\x0b\x32#.dota.CMsgPlayerRecentMatchOutcomes\"\xcb\x01\n#CMsgPlayerHeroRecentAccomplishments\x12<\n\x0frecent_outcomes\x18\x01 \x01(\x0b\x32#.dota.CMsgPlayerRecentMatchOutcomes\x12\x31\n\x0ctotal_record\x18\x02 \x01(\x0b\x32\x1b.dota.CMsgPlayerMatchRecord\x12\x33\n\nlast_match\x18\x03 \x01(\x0b\x32\x1f.dota.CMsgPlayerRecentMatchInfo\"\xab\x01\n\x19\x43MsgRecentAccomplishments\x12\x45\n\x16player_accomplishments\x18\x01 \x01(\x0b\x32%.dota.CMsgPlayerRecentAccomplishments\x12G\n\x14hero_accomplishments\x18\x02 \x01(\x0b\x32).dota.CMsgPlayerHeroRecentAccomplishments\"M\n&CMsgRequestPlayerRecentAccomplishments\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\xa7\x02\n.CMsgRequestPlayerRecentAccomplishmentsResponse\x12`\n\x06result\x18\x01 \x01(\x0e\x32>.dota.CMsgRequestPlayerRecentAccomplishmentsResponse.EResponse:\x10k_eInternalError\x12?\n\x16player_accomplishments\x18\x02 \x01(\x0b\x32\x1f.dota.CMsgRecentAccomplishments\"R\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03*U\n\x11\x45SpecialPingValue\x12\x1f\n\x1ak_ESpecialPingValue_NoData\x10\xfe\x7f\x12\x1f\n\x1ak_ESpecialPingValue_Failed\x10\xff\x7f*\x86\x05\n\x12\x45\x44OTAGCSessionNeed\x12 \n\x1ck_EDOTAGCSessionNeed_Unknown\x10\x00\x12,\n(k_EDOTAGCSessionNeed_UserNoSessionNeeded\x10\x64\x12)\n%k_EDOTAGCSessionNeed_UserInOnlineGame\x10\x65\x12(\n$k_EDOTAGCSessionNeed_UserInLocalGame\x10\x66\x12-\n)k_EDOTAGCSessionNeed_UserInUIWasConnected\x10g\x12/\n+k_EDOTAGCSessionNeed_UserInUINeverConnected\x10h\x12&\n\"k_EDOTAGCSessionNeed_UserTutorials\x10i\x12\x31\n-k_EDOTAGCSessionNeed_UserInUIWasConnectedIdle\x10j\x12\x33\n/k_EDOTAGCSessionNeed_UserInUINeverConnectedIdle\x10k\x12*\n%k_EDOTAGCSessionNeed_GameServerOnline\x10\xc8\x01\x12)\n$k_EDOTAGCSessionNeed_GameServerLocal\x10\xc9\x01\x12(\n#k_EDOTAGCSessionNeed_GameServerIdle\x10\xca\x01\x12)\n$k_EDOTAGCSessionNeed_GameServerRelay\x10\xcb\x01\x12/\n*k_EDOTAGCSessionNeed_GameServerLocalUpload\x10\xcc\x01*\xf6\x01\n\x15\x44OTA_TournamentEvents\x12\x12\n\x0eTE_FIRST_BLOOD\x10\x00\x12\x0f\n\x0bTE_GAME_END\x10\x01\x12\x11\n\rTE_MULTI_KILL\x10\x02\x12\x10\n\x0cTE_HERO_DENY\x10\x03\x12\x11\n\rTE_AEGIS_DENY\x10\x04\x12\x13\n\x0fTE_AEGIS_STOLEN\x10\x05\x12\x0e\n\nTE_GODLIKE\x10\x06\x12\x13\n\x0fTE_COURIER_KILL\x10\x07\x12\x0f\n\x0bTE_ECHOSLAM\x10\x08\x12\r\n\tTE_RAPIER\x10\t\x12\x13\n\x0fTE_EARLY_ROSHAN\x10\n\x12\x11\n\rTE_BLACK_HOLE\x10\x0b*\x8d\x03\n\x17\x45\x42roadcastTimelineEvent\x12(\n$EBroadcastTimelineEvent_MatchStarted\x10\x01\x12,\n(EBroadcastTimelineEvent_GameStateChanged\x10\x02\x12&\n\"EBroadcastTimelineEvent_TowerDeath\x10\x03\x12)\n%EBroadcastTimelineEvent_BarracksDeath\x10\x04\x12(\n$EBroadcastTimelineEvent_AncientDeath\x10\x05\x12\'\n#EBroadcastTimelineEvent_RoshanDeath\x10\x06\x12%\n!EBroadcastTimelineEvent_HeroDeath\x10\x07\x12%\n!EBroadcastTimelineEvent_TeamFight\x10\x08\x12&\n\"EBroadcastTimelineEvent_FirstBlood\x10\t*\x98\x01\n\x19\x45\x43ustomGameWhitelistState\x12\'\n#CUSTOM_GAME_WHITELIST_STATE_UNKNOWN\x10\x00\x12(\n$CUSTOM_GAME_WHITELIST_STATE_APPROVED\x10\x01\x12(\n$CUSTOM_GAME_WHITELIST_STATE_REJECTED\x10\x02\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x1c\x64ota_gcmessages_common.proto\x12\x04\x64ota\x1a\x13steammessages.proto\x1a\x16gcsdk_gcmessages.proto\x1a\x17\x64ota_shared_enums.proto\"\x9a\x14\n\x18\x43SODOTAGameAccountClient\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x0c\n\x04wins\x18\x03 \x01(\r\x12\x0e\n\x06losses\x18\x04 \x01(\r\x12\n\n\x02xp\x18\x0c \x01(\r\x12\r\n\x05level\x18\r \x01(\r\x12\x15\n\rinitial_skill\x18\x0e \x01(\r\x12\x14\n\x0cleaver_count\x18\x0f \x01(\r\x12\x1e\n\x16secondary_leaver_count\x18: \x01(\r\x12\x1f\n\x17low_priority_until_date\x18\x12 \x01(\r\x12$\n\x1cprevent_text_chat_until_date\x18\x14 \x01(\r\x12 \n\x18prevent_voice_until_date\x18\x15 \x01(\r\x12+\n#prevent_public_text_chat_until_date\x18V \x01(\r\x12 \n\x18last_abandoned_game_date\x18\x16 \x01(\r\x12*\n\"last_secondary_abandoned_game_date\x18; \x01(\r\x12\x1c\n\x14leaver_penalty_count\x18\x17 \x01(\r\x12\x1d\n\x15\x63ompleted_game_streak\x18\x18 \x01(\r\x12\x10\n\x08teaching\x18\x1c \x01(\r\x12\x12\n\nleadership\x18\x1d \x01(\r\x12\x10\n\x08\x66riendly\x18\x1e \x01(\r\x12\x11\n\tforgiving\x18\x1f \x01(\r\x12#\n\x1b\x61\x63\x63ount_disabled_until_date\x18& \x01(\r\x12\x1e\n\x16\x61\x63\x63ount_disabled_count\x18\' \x01(\r\x12!\n\x19match_disabled_until_date\x18) \x01(\r\x12\x1c\n\x14match_disabled_count\x18* \x01(\r\x12\x44\n\x14partner_account_type\x18, \x01(\x0e\x32\x18.dota.PartnerAccountType:\x0cPARTNER_NONE\x12\x1d\n\x15partner_account_state\x18- \x01(\r\x12%\n\x1dshutdownlawterminatetimestamp\x18/ \x01(\r\x12$\n\x1clow_priority_games_remaining\x18\x30 \x01(\r\x12\x1d\n\x15\x63ompetitive_2019_rank\x18\x31 \x01(\r\x12\x34\n,competitive_2019_calibration_games_remaining\x18\x33 \x01(\r\x12\"\n\x1asolo_competitive_2019_rank\x18\x34 \x01(\r\x12\x39\n1solo_competitive_2019_calibration_games_remaining\x18\x36 \x01(\r\x12\x19\n\x11recruitment_level\x18\x37 \x01(\r\x12\x1d\n\x15has_new_notifications\x18\x38 \x01(\x08\x12\x17\n\x0fis_league_admin\x18\x39 \x01(\x08\x12\x1b\n\x13\x63\x61sual_games_played\x18< \x01(\r\x12%\n\x1dsolo_competitive_games_played\x18= \x01(\r\x12&\n\x1eparty_competitive_games_played\x18> \x01(\r\x12\x1f\n\x17\x63\x61sual_1v1_games_played\x18\x41 \x01(\r\x12\"\n\x1a\x63urr_all_hero_challenge_id\x18\x43 \x01(\r\x12\x18\n\x10play_time_points\x18\x44 \x01(\r\x12\x15\n\raccount_flags\x18\x45 \x01(\r\x12\x17\n\x0fplay_time_level\x18\x46 \x01(\r\x12+\n#player_behavior_seq_num_last_report\x18G \x01(\r\x12)\n!player_behavior_score_last_report\x18H \x01(\r\x12\'\n\x1fplayer_behavior_report_old_data\x18I \x01(\x08\x12\x1b\n\x13tourney_skill_level\x18J \x01(\r\x12)\n!tourney_recent_participation_date\x18U \x01(\r\x12\x15\n\rfavorite_team\x18W \x01(\r\x12 \n\x18\x61nchored_phone_number_id\x18X \x01(\x04\x12)\n!ranked_matchmaking_ban_until_date\x18Y \x01(\r\x12\x1a\n\x12recent_game_time_1\x18Z \x01(\r\x12\x1a\n\x12recent_game_time_2\x18[ \x01(\r\x12\x1a\n\x12recent_game_time_3\x18\\ \x01(\r\x12$\n\x1cgeneral_seasonal_ranked_rank\x18] \x01(\r\x12;\n3general_seasonal_ranked_calibration_games_remaining\x18^ \x01(\r\x12,\n$general_seasonal_ranked_games_played\x18_ \x01(\r\x12)\n!general_seasonal_ranked_rank_peak\x18` \x01(\r\x12)\n!general_seasonal_rank_transferred\x18\x61 \x01(\x08\x12!\n\x19solo_seasonal_ranked_rank\x18\x62 \x01(\r\x12\x38\n0solo_seasonal_ranked_calibration_games_remaining\x18\x63 \x01(\r\x12)\n!solo_seasonal_ranked_games_played\x18\x64 \x01(\r\x12&\n\x1esolo_seasonal_ranked_rank_peak\x18\x65 \x01(\r\x12&\n\x1esolo_seasonal_rank_transferred\x18\x66 \x01(\x08\x12\x1c\n\x14\x66\x61vorite_team_packed\x18g \x01(\x04\x12\x1a\n\x12recent_report_time\x18h \x01(\r\x12\'\n\x1f\x63ustom_game_disabled_until_date\x18i \x01(\r\x12\x19\n\x11recent_win_time_1\x18j \x01(\r\x12\x19\n\x11recent_win_time_2\x18k \x01(\r\x12\x19\n\x11recent_win_time_3\x18l \x01(\r\x12\x14\n\x0c\x63oach_rating\x18m \x01(\r\x12\x1d\n\x15\x63ompetitive_core_rank\x18n \x01(\r\x12\x34\n,competitive_core_calibration_games_remaining\x18o \x01(\r\x12 \n\x18\x63ompetitive_support_rank\x18p \x01(\r\x12\x37\n/competitive_support_calibration_games_remaining\x18q \x01(\r\"\xe9\x01\n\x16\x43SODOTAGameAccountPlus\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x1b\n\x13original_start_date\x18\x02 \x01(\r\x12\x12\n\nplus_flags\x18\x03 \x01(\r\x12\x13\n\x0bplus_status\x18\x04 \x01(\r\x12\x1a\n\x12prepaid_time_start\x18\x05 \x01(\r\x12\x1c\n\x14prepaid_time_balance\x18\x06 \x01(\r\x12\x19\n\x11next_payment_date\x18\x07 \x01(\x07\x12\x1a\n\x12steam_agreement_id\x18\x08 \x01(\x06\"\xa4\x01\n#CMsgLobbyPlayerPlusSubscriptionData\x12H\n\x0bhero_badges\x18\x01 \x03(\x0b\x32\x33.dota.CMsgLobbyPlayerPlusSubscriptionData.HeroBadge\x1a\x33\n\tHeroBadge\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x15\n\rhero_badge_xp\x18\x02 \x01(\r\"\xea\x07\n\x14\x43MsgLobbyEventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12@\n\x0e\x61\x63\x63ount_points\x18\x02 \x03(\x0b\x32(.dota.CMsgLobbyEventPoints.AccountPoints\x1aI\n\x15\x43hatWheelMessageRange\x12\x18\n\x10message_id_start\x18\x01 \x01(\r\x12\x16\n\x0emessage_id_end\x18\x02 \x01(\r\x1a\x38\n\x16PeriodicResourceValues\x12\x11\n\tremaining\x18\x01 \x01(\r\x12\x0b\n\x03max\x18\x02 \x01(\r\x1a\xf8\x05\n\rAccountPoints\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x15\n\rnormal_points\x18\x02 \x01(\r\x12\x16\n\x0epremium_points\x18\x03 \x01(\r\x12\r\n\x05owned\x18\x04 \x01(\x08\x12\x15\n\rfavorite_team\x18\x05 \x01(\r\x12\x1b\n\x13\x66\x61vorite_team_level\x18\x06 \x01(\r\x12\x13\n\x0bpoints_held\x18\x07 \x01(\r\x12\x1b\n\x13premium_points_held\x18\x08 \x01(\r\x12 \n\x18\x66\x61vorite_team_foil_level\x18\t \x01(\r\x12\x1b\n\x13\x61\x63tive_effects_mask\x18\x0c \x01(\x04\x12\\\n\"unlocked_chat_wheel_message_ranges\x18\r \x03(\x0b\x32\x30.dota.CMsgLobbyEventPoints.ChatWheelMessageRange\x12I\n\x16plus_subscription_data\x18\x10 \x01(\x0b\x32).dota.CMsgLobbyPlayerPlusSubscriptionData\x12G\n\x0cwager_tokens\x18\x11 \x01(\x0b\x32\x31.dota.CMsgLobbyEventPoints.PeriodicResourceValues\x12L\n\x11rank_wager_tokens\x18\x12 \x01(\x0b\x32\x31.dota.CMsgLobbyEventPoints.PeriodicResourceValues\x12\x45\n\ntip_tokens\x18\x13 \x01(\x0b\x32\x31.dota.CMsgLobbyEventPoints.PeriodicResourceValues\x12\x12\n\ntip_amount\x18\x14 \x01(\r\x12U\n\x1aperiodic_point_adjustments\x18\x15 \x01(\x0b\x32\x31.dota.CMsgLobbyEventPoints.PeriodicResourceValues\"\xd0\x01\n\x1c\x43MsgLocalServerFakeLobbyData\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x30\n\x0c\x65vent_points\x18\x02 \x03(\x0b\x32\x1a.dota.CMsgLobbyEventPoints\x12\x1a\n\x12is_plus_subscriber\x18\x03 \x01(\x08\x12\x18\n\x10primary_event_id\x18\x04 \x01(\r\x12\x15\n\rfavorite_team\x18\x05 \x01(\r\x12\x1d\n\x15\x66\x61vorite_team_quality\x18\x06 \x01(\r\"\xc6\x01\n\x14\x43MsgBattleCupVictory\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08win_date\x18\x02 \x01(\r\x12\x13\n\x0bvalid_until\x18\x03 \x01(\r\x12\x13\n\x0bskill_level\x18\x04 \x01(\r\x12\x15\n\rtournament_id\x18\x05 \x01(\r\x12\x13\n\x0b\x64ivision_id\x18\x06 \x01(\r\x12\x0f\n\x07team_id\x18\x07 \x01(\r\x12\x0e\n\x06streak\x18\x08 \x01(\r\x12\x11\n\ttrophy_id\x18\t \x01(\r\"L\n\x1d\x43MsgLobbyBattleCupVictoryList\x12+\n\x07winners\x18\x01 \x03(\x0b\x32\x1a.dota.CMsgBattleCupVictory\"0\n\x1d\x43MsgDOTABroadcastNotification\x12\x0f\n\x07message\x18\x01 \x01(\t\"\xb9\x01\n\x14\x43ProtoItemHeroStatue\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x1b\n\x13status_effect_index\x18\x02 \x01(\r\x12\x15\n\rsequence_name\x18\x03 \x01(\t\x12\r\n\x05\x63ycle\x18\x04 \x01(\x02\x12\x10\n\x08wearable\x18\x05 \x03(\r\x12\x13\n\x0binscription\x18\x06 \x01(\t\x12\r\n\x05style\x18\x07 \x03(\r\x12\x17\n\x0ftournament_drop\x18\x08 \x01(\x08\"\xa2\x01\n\x16\x43ProtoItemTeamShowcase\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x1b\n\x13status_effect_index\x18\x02 \x01(\r\x12\x15\n\rsequence_name\x18\x03 \x01(\t\x12\r\n\x05\x63ycle\x18\x04 \x01(\x02\x12\x10\n\x08wearable\x18\x05 \x03(\r\x12\x13\n\x0binscription\x18\x06 \x01(\t\x12\r\n\x05style\x18\x07 \x03(\r\";\n\x1a\x43MatchPlayerAbilityUpgrade\x12\x0f\n\x07\x61\x62ility\x18\x01 \x01(\r\x12\x0c\n\x04time\x18\x02 \x01(\r\"\x8c\x01\n\x16\x43MatchPlayerTimedStats\x12\x0c\n\x04time\x18\x01 \x01(\r\x12\r\n\x05kills\x18\x02 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x03 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x04 \x01(\r\x12\x11\n\tnet_worth\x18\x05 \x01(\r\x12\x11\n\tlast_hits\x18\x06 \x01(\r\x12\x0e\n\x06\x64\x65nies\x18\x07 \x01(\r\"A\n\x1d\x43MatchAdditionalUnitInventory\x12\x11\n\tunit_name\x18\x01 \x01(\t\x12\r\n\x05items\x18\x02 \x03(\r\"H\n\x19\x43MatchPlayerPermanentBuff\x12\x16\n\x0epermanent_buff\x18\x01 \x01(\r\x12\x13\n\x0bstack_count\x18\x02 \x01(\r\"G\n\x15\x43MatchHeroSelectEvent\x12\x0f\n\x07is_pick\x18\x01 \x01(\x08\x12\x0c\n\x04team\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\"W\n\x17\x43PartySearchClientParty\x12\x10\n\x08party_id\x18\x01 \x01(\x06\x12\x13\n\x0b\x62\x65\x61\x63on_type\x18\x02 \x01(\x05\x12\x15\n\rparty_members\x18\x03 \x03(\x07\"\x8b\x01\n$CMsgDOTAProcessFantasyScheduledEvent\x12\r\n\x05\x65vent\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x19\n\x11\x66\x61ntasy_league_id\x18\x03 \x01(\r\x12\x0e\n\x06season\x18\x04 \x01(\r\x12\x16\n\x0ereference_data\x18\x05 \x01(\r\";\n\x14\x43MsgDOTAHasItemQuery\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"+\n\x17\x43MsgDOTAHasItemResponse\x12\x10\n\x08has_item\x18\x01 \x01(\x08\"&\n\x10\x43MsgGCIsProQuery\x12\x12\n\naccount_id\x18\x01 \x01(\r\"%\n\x13\x43MsgGCIsProResponse\x12\x0e\n\x06is_pro\x18\x01 \x01(\x08\"C\n\x18\x43MsgDOTAHasItemDefsQuery\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bitemdef_ids\x18\x02 \x03(\r\"0\n\x1b\x43MsgDOTAHasItemDefsResponse\x12\x11\n\thas_items\x18\x01 \x01(\x08\"f\n\x1b\x43MsgGCGetPlayerCardItemInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1c\n\x14player_card_item_ids\x18\x02 \x03(\x04\x12\x15\n\rall_for_event\x18\x03 \x01(\r\"\xd5\x01\n#CMsgGCGetPlayerCardItemInfoResponse\x12S\n\x11player_card_infos\x18\x01 \x03(\x0b\x32\x38.dota.CMsgGCGetPlayerCardItemInfoResponse.PlayerCardInfo\x1aY\n\x0ePlayerCardInfo\x12\x1b\n\x13player_card_item_id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12\x16\n\x0epacked_bonuses\x18\x03 \x01(\x04\"F\n\x1f\x43MsgGCToGCFantasySetMatchLeague\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tleague_id\x18\x02 \x01(\r\"a\n\x17\x43SODOTAMapLocationState\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x19\n\x0blocation_id\x18\x02 \x01(\x05\x42\x04\x80\x97\"\x01\x12\x11\n\tcompleted\x18\x03 \x01(\x08\"*\n\x13\x43MsgLeagueAdminList\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\x80\x01\n\x1a\x43\x43ompendiumTimestampedData\x12\x11\n\tgame_time\x18\x01 \x01(\r\x12\x0b\n\x03gpm\x18\x02 \x01(\r\x12\x0b\n\x03xpm\x18\x03 \x01(\r\x12\r\n\x05kills\x18\x04 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x05 \x01(\r\x12\x16\n\x0eitem_purchases\x18\x06 \x03(\r\"W\n\x17\x43\x43ompendiumGameTimeline\x12.\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32 .dota.CCompendiumTimestampedData\x12\x0c\n\x04tags\x18\x02 \x03(\t\"C\n\x13\x43\x43ompendiumGameList\x12,\n\x05games\x18\x01 \x03(\x0b\x32\x1d.dota.CCompendiumGameTimeline\"L\n\x14\x43\x41\x64\x64itionalEquipSlot\x12\x10\n\x08\x63lass_id\x18\x01 \x01(\r\x12\x0f\n\x07slot_id\x18\x02 \x01(\r\x12\x11\n\tdef_index\x18\x03 \x01(\r\"\xca\x0b\n\x13\x43MsgDOTAProfileCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x1c\n\x14\x62\x61\x63kground_def_index\x18\x02 \x01(\r\x12-\n\x05slots\x18\x03 \x03(\x0b\x32\x1e.dota.CMsgDOTAProfileCard.Slot\x12\x14\n\x0c\x62\x61\x64ge_points\x18\x04 \x01(\r\x12\x14\n\x0c\x65vent_points\x18\x05 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x06 \x01(\r\x12=\n\x19recent_battle_cup_victory\x18\x07 \x01(\x0b\x32\x1a.dota.CMsgBattleCupVictory\x12\x11\n\trank_tier\x18\x08 \x01(\r\x12\x18\n\x10leaderboard_rank\x18\t \x01(\r\x12\x1a\n\x12is_plus_subscriber\x18\n \x01(\x08\x12 \n\x18plus_original_start_date\x18\x0b \x01(\r\x12\x17\n\x0frank_tier_score\x18\x0c \x01(\r\x12\x1a\n\x12previous_rank_tier\x18\r \x01(\r\x12\x1a\n\x12rank_tier_mmr_type\x18\x0e \x01(\r\x12\x16\n\x0erank_tier_core\x18\x0f \x01(\r\x12\x1c\n\x14rank_tier_core_score\x18\x10 \x01(\r\x12\x1d\n\x15leaderboard_rank_core\x18\x11 \x01(\r\x12\x19\n\x11rank_tier_support\x18\x12 \x01(\r\x12\x1f\n\x17rank_tier_support_score\x18\x13 \x01(\r\x12 \n\x18leaderboard_rank_support\x18\x14 \x01(\r\x1a\x97\x05\n\x04Slot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x35\n\x06trophy\x18\x02 \x01(\x0b\x32%.dota.CMsgDOTAProfileCard.Slot.Trophy\x12\x31\n\x04stat\x18\x03 \x01(\x0b\x32#.dota.CMsgDOTAProfileCard.Slot.Stat\x12\x31\n\x04item\x18\x04 \x01(\x0b\x32#.dota.CMsgDOTAProfileCard.Slot.Item\x12\x31\n\x04hero\x18\x05 \x01(\x0b\x32#.dota.CMsgDOTAProfileCard.Slot.Hero\x12\x39\n\x08\x65moticon\x18\x06 \x01(\x0b\x32\'.dota.CMsgDOTAProfileCard.Slot.Emoticon\x12\x31\n\x04team\x18\x07 \x01(\x0b\x32#.dota.CMsgDOTAProfileCard.Slot.Team\x1a\x31\n\x06Trophy\x12\x11\n\ttrophy_id\x18\x01 \x01(\r\x12\x14\n\x0ctrophy_score\x18\x02 \x01(\r\x1a`\n\x04Stat\x12\x44\n\x07stat_id\x18\x01 \x01(\x0e\x32!.dota.CMsgDOTAProfileCard.EStatID:\x10k_eStat_CoreRank\x12\x12\n\nstat_score\x18\x02 \x01(\r\x1a\x30\n\x04Item\x12\x17\n\x0fserialized_item\x18\x01 \x01(\x0c\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x1a?\n\x04Hero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\thero_wins\x18\x02 \x01(\r\x12\x13\n\x0bhero_losses\x18\x03 \x01(\r\x1a\x1f\n\x08\x45moticon\x12\x13\n\x0b\x65moticon_id\x18\x01 \x01(\r\x1a\x17\n\x04Team\x12\x0f\n\x07team_id\x18\x01 \x01(\r\"\xcb\x01\n\x07\x45StatID\x12\x14\n\x10k_eStat_CoreRank\x10\x01\x12\x17\n\x13k_eStat_SupportRank\x10\x02\x12\x10\n\x0ck_eStat_Wins\x10\x03\x12\x14\n\x10k_eStat_Commends\x10\x04\x12\x17\n\x13k_eStat_GamesPlayed\x10\x05\x12\x1a\n\x16k_eStat_FirstMatchDate\x10\x06\x12\x1e\n\x1ak_eStat_PreviousSeasonRank\x10\x07\x12\x14\n\x10k_eStat_GamesMVP\x10\x08\"\x81\x03\n\x16\x43SODOTAPlayerChallenge\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x16\n\x08\x65vent_id\x18\x02 \x01(\rB\x04\x80\x97\"\x01\x12\x15\n\x07slot_id\x18\x03 \x01(\rB\x04\x80\x97\"\x01\x12\x13\n\x0bint_param_0\x18\x05 \x01(\r\x12\x13\n\x0bint_param_1\x18\x06 \x01(\r\x12\x14\n\x0c\x63reated_time\x18\x07 \x01(\r\x12\x11\n\tcompleted\x18\x08 \x01(\r\x12\x13\n\x0bsequence_id\x18\t \x01(\r\x12\x16\n\x0e\x63hallenge_tier\x18\n \x01(\r\x12\r\n\x05\x66lags\x18\x0b \x01(\r\x12\x10\n\x08\x61ttempts\x18\x0c \x01(\r\x12\x16\n\x0e\x63omplete_limit\x18\r \x01(\r\x12\x12\n\nquest_rank\x18\x0e \x01(\r\x12\x16\n\x0emax_quest_rank\x18\x0f \x01(\r\x12\x13\n\x0binstance_id\x18\x10 \x01(\r\x12\x0f\n\x07hero_id\x18\x11 \x01(\r\x12\x13\n\x0btemplate_id\x18\x12 \x01(\r\"z\n#CMsgClientToGCRerollPlayerChallenge\x12-\n\x08\x65vent_id\x18\x01 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\x12\x13\n\x0bsequence_id\x18\x03 \x01(\r\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\"\xf5\x01\n#CMsgGCRerollPlayerChallengeResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgGCRerollPlayerChallengeResponse.EResult:\x0f\x65Result_Success\"z\n\x07\x45Result\x12\x13\n\x0f\x65Result_Success\x10\x00\x12\x13\n\x0f\x65Result_Dropped\x10\x01\x12\x14\n\x10\x65Result_NotFound\x10\x02\x12\x16\n\x12\x65Result_CantReroll\x10\x03\x12\x17\n\x13\x65Result_ServerError\x10\x04\"M\n\x18\x43MsgGCTopCustomGamesList\x12\x18\n\x10top_custom_games\x18\x01 \x03(\x04\x12\x17\n\x0fgame_of_the_day\x18\x02 \x01(\x04\"\xfe\x1b\n\x19\x43MsgDOTARealtimeGameStats\x12;\n\x05match\x18\x01 \x01(\x0b\x32,.dota.CMsgDOTARealtimeGameStats.MatchDetails\x12:\n\x05teams\x18\x02 \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.TeamDetails\x12\x42\n\tbuildings\x18\x03 \x03(\x0b\x32/.dota.CMsgDOTARealtimeGameStats.BuildingDetails\x12=\n\ngraph_data\x18\x04 \x01(\x0b\x32).dota.CMsgDOTARealtimeGameStats.GraphData\x12\x13\n\x0b\x64\x65lta_frame\x18\x05 \x01(\x08\x1a\x87\x02\n\x0bTeamDetails\x12\x13\n\x0bteam_number\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x06\x12\x10\n\x08team_tag\x18\n \x01(\t\x12\r\n\x05score\x18\x05 \x01(\r\x12\x11\n\tnet_worth\x18\t \x01(\r\x12>\n\x07players\x18\x06 \x03(\x0b\x32-.dota.CMsgDOTARealtimeGameStats.PlayerDetails\x12\x11\n\tonly_team\x18\x07 \x01(\x08\x12\x0e\n\x06\x63heers\x18\x08 \x01(\r\x12\x15\n\rteam_logo_url\x18\x0b \x01(\t\x1a\x64\n\x0bItemDetails\x12\x17\n\x0fitem_ability_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04time\x18\x03 \x01(\x05\x12\x0c\n\x04sold\x18\x04 \x01(\x08\x12\x12\n\nstackcount\x18\x05 \x01(\r\x1a\x61\n\x0e\x41\x62ilityDetails\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05level\x18\x03 \x01(\r\x12\x10\n\x08\x63ooldown\x18\x04 \x01(\x02\x12\x14\n\x0c\x63ooldown_max\x18\x05 \x01(\x02\x1a\x43\n\x0fHeroToHeroStats\x12\x10\n\x08victimid\x18\x01 \x01(\r\x12\r\n\x05kills\x18\x02 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x03 \x01(\r\x1a\x19\n\x0b\x41\x62ilityList\x12\n\n\x02id\x18\x01 \x03(\r\x1a\x83\n\n\rPlayerDetails\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x10\n\x08playerid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04team\x18\x04 \x01(\r\x12\x0e\n\x06heroid\x18\x05 \x01(\r\x12\x14\n\x0chealthpoints\x18\x06 \x01(\r\x12\x17\n\x0fmaxhealthpoints\x18\x07 \x01(\r\x12\x17\n\x0fhealthregenrate\x18\x08 \x01(\x02\x12\x12\n\nmanapoints\x18\t \x01(\r\x12\x15\n\rmaxmanapoints\x18\n \x01(\r\x12\x15\n\rmanaregenrate\x18\x0b \x01(\x02\x12\x15\n\rbase_strength\x18\x0c \x01(\r\x12\x14\n\x0c\x62\x61se_agility\x18\r \x01(\r\x12\x19\n\x11\x62\x61se_intelligence\x18\x0e \x01(\r\x12\x12\n\nbase_armor\x18\x0f \x01(\x05\x12\x16\n\x0e\x62\x61se_movespeed\x18\x10 \x01(\r\x12\x13\n\x0b\x62\x61se_damage\x18\x11 \x01(\r\x12\x10\n\x08strength\x18\x12 \x01(\r\x12\x0f\n\x07\x61gility\x18\x13 \x01(\r\x12\x14\n\x0cintelligence\x18\x14 \x01(\r\x12\r\n\x05\x61rmor\x18\x15 \x01(\x05\x12\x11\n\tmovespeed\x18\x16 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x17 \x01(\r\x12\x13\n\x0bhero_damage\x18\x18 \x01(\r\x12\x14\n\x0ctower_damage\x18\x19 \x01(\r\x12\x41\n\tabilities\x18\x1a \x03(\x0b\x32..dota.CMsgDOTARealtimeGameStats.AbilityDetails\x12\r\n\x05level\x18\x1b \x01(\r\x12\x12\n\nkill_count\x18\x1c \x01(\r\x12\x13\n\x0b\x64\x65\x61th_count\x18\x1d \x01(\r\x12\x15\n\rassists_count\x18\x1e \x01(\r\x12\x14\n\x0c\x64\x65nies_count\x18\x1f \x01(\r\x12\x10\n\x08lh_count\x18  \x01(\r\x12\x14\n\x0chero_healing\x18! \x01(\r\x12\x14\n\x0cgold_per_min\x18\" \x01(\r\x12\x12\n\nxp_per_min\x18# \x01(\r\x12\x10\n\x08net_gold\x18$ \x01(\r\x12\x0c\n\x04gold\x18% \x01(\r\x12\t\n\x01x\x18& \x01(\x02\x12\t\n\x01y\x18\' \x01(\x02\x12\x14\n\x0crespawn_time\x18( \x01(\x05\x12\x19\n\x11ultimate_cooldown\x18) \x01(\r\x12\x13\n\x0bhas_buyback\x18* \x01(\x08\x12:\n\x05items\x18+ \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.ItemDetails\x12?\n\nstashitems\x18, \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.ItemDetails\x12\x45\n\x10itemshoppinglist\x18- \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.ItemDetails\x12@\n\x0blevelpoints\x18. \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.AbilityList\x12K\n\x12hero_to_hero_stats\x18/ \x03(\x0b\x32/.dota.CMsgDOTARealtimeGameStats.HeroToHeroStats\x12\x14\n\x0chas_ultimate\x18\x30 \x01(\x08\x12\x19\n\x11has_ultimate_mana\x18\x31 \x01(\x08\x1a\x83\x01\n\x0f\x42uildingDetails\x12\x0c\n\x04team\x18\x02 \x01(\r\x12\x0f\n\x07heading\x18\x03 \x01(\x02\x12\x0c\n\x04lane\x18\x04 \x01(\r\x12\x0c\n\x04tier\x18\x05 \x01(\r\x12\x0c\n\x04type\x18\x06 \x01(\r\x12\t\n\x01x\x18\x07 \x01(\x02\x12\t\n\x01y\x18\x08 \x01(\x02\x12\x11\n\tdestroyed\x18\t \x01(\x08\x1aN\n\x0bKillDetails\x12\x11\n\tplayer_id\x18\x01 \x01(\r\x12\x12\n\ndeath_time\x18\x02 \x01(\x05\x12\x18\n\x10killer_player_id\x18\x03 \x01(\r\x1aV\n\x12\x42roadcasterDetails\x12\x11\n\tplayer_id\x18\x01 \x01(\r\x12\x15\n\rselected_hero\x18\x02 \x01(\r\x12\x16\n\x0eselected_graph\x18\x03 \x01(\r\x1a,\n\x0ePickBanDetails\x12\x0c\n\x04hero\x18\x01 \x01(\r\x12\x0c\n\x04team\x18\x02 \x01(\r\x1a\xbe\x04\n\x0cMatchDetails\x12\x17\n\x0fserver_steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07matchid\x18\x02 \x01(\x04\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x13\n\x0btime_of_day\x18\x04 \x01(\x02\x12\x1d\n\x15is_nightstalker_night\x18\x05 \x01(\x08\x12\x11\n\tgame_time\x18\x06 \x01(\x05\x12\x12\n\ngame_state\x18\x13 \x01(\r\x12\x16\n\x0eteamid_radiant\x18\x08 \x01(\r\x12\x13\n\x0bteamid_dire\x18\t \x01(\r\x12=\n\x05picks\x18\n \x03(\x0b\x32..dota.CMsgDOTARealtimeGameStats.PickBanDetails\x12<\n\x04\x62\x61ns\x18\x0b \x03(\x0b\x32..dota.CMsgDOTARealtimeGameStats.PickBanDetails\x12:\n\x05kills\x18\x0c \x03(\x0b\x32+.dota.CMsgDOTARealtimeGameStats.KillDetails\x12H\n\x0c\x62roadcasters\x18\r \x03(\x0b\x32\x32.dota.CMsgDOTARealtimeGameStats.BroadcasterDetails\x12\x11\n\tgame_mode\x18\x0e \x01(\r\x12\x11\n\tleague_id\x18\x0f \x01(\r\x12\x16\n\x0eleague_node_id\x18\x12 \x01(\r\x12\x13\n\x0bsingle_team\x18\x10 \x01(\x08\x12\x13\n\x0b\x63heers_peak\x18\x11 \x01(\r\x1a\xf9\x03\n\tGraphData\x12\x12\n\ngraph_gold\x18\x01 \x03(\x05\x12\x10\n\x08graph_xp\x18\x02 \x03(\x05\x12\x12\n\ngraph_kill\x18\x03 \x03(\x05\x12\x13\n\x0bgraph_tower\x18\x04 \x03(\x05\x12\x11\n\tgraph_rax\x18\x05 \x03(\x05\x12S\n\x0eteam_loc_stats\x18\x06 \x03(\x0b\x32;.dota.CMsgDOTARealtimeGameStats.GraphData.TeamLocationStats\x1a\x1e\n\rLocationStats\x12\r\n\x05stats\x18\x01 \x03(\x05\x1a_\n\x11TeamLocationStats\x12J\n\tloc_stats\x18\x01 \x03(\x0b\x32\x37.dota.CMsgDOTARealtimeGameStats.GraphData.LocationStats\"[\n\x05\x65Stat\x12\x13\n\x0f\x43reepGoldEarned\x10\x00\x12\x12\n\x0eKillGoldEarned\x10\x01\x12\x1b\n\x17\x44\x65\x61thAndBuybackGoldLost\x10\x02\x12\x0c\n\x08XPEarned\x10\x03\"W\n\teLocation\x12\x0b\n\x07\x42otLane\x10\x00\x12\x0b\n\x07MidLane\x10\x01\x12\x0b\n\x07TopLane\x10\x02\x12\n\n\x06Jungle\x10\x03\x12\x0c\n\x08\x41ncients\x10\x04\x12\t\n\x05Other\x10\x05\"\x9a\x0b\n\x1e\x43MsgDOTARealtimeGameStatsTerse\x12@\n\x05match\x18\x01 \x01(\x0b\x32\x31.dota.CMsgDOTARealtimeGameStatsTerse.MatchDetails\x12?\n\x05teams\x18\x02 \x03(\x0b\x32\x30.dota.CMsgDOTARealtimeGameStatsTerse.TeamDetails\x12G\n\tbuildings\x18\x03 \x03(\x0b\x32\x34.dota.CMsgDOTARealtimeGameStatsTerse.BuildingDetails\x12\x42\n\ngraph_data\x18\x04 \x01(\x0b\x32..dota.CMsgDOTARealtimeGameStatsTerse.GraphData\x12\x13\n\x0b\x64\x65lta_frame\x18\x05 \x01(\x08\x1a\xe9\x01\n\x0bTeamDetails\x12\x13\n\x0bteam_number\x18\x01 \x01(\r\x12\x0f\n\x07team_id\x18\x02 \x01(\r\x12\x11\n\tteam_name\x18\x03 \x01(\t\x12\x10\n\x08team_tag\x18\x08 \x01(\t\x12\x11\n\tteam_logo\x18\x04 \x01(\x06\x12\r\n\x05score\x18\x05 \x01(\r\x12\x11\n\tnet_worth\x18\x07 \x01(\r\x12\x15\n\rteam_logo_url\x18\t \x01(\t\x12\x43\n\x07players\x18\x06 \x03(\x0b\x32\x32.dota.CMsgDOTARealtimeGameStatsTerse.PlayerDetails\x1a\xb0\x02\n\rPlayerDetails\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x10\n\x08playerid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04team\x18\x04 \x01(\r\x12\x0e\n\x06heroid\x18\x05 \x01(\r\x12\r\n\x05level\x18\x06 \x01(\r\x12\x12\n\nkill_count\x18\x07 \x01(\r\x12\x13\n\x0b\x64\x65\x61th_count\x18\x08 \x01(\r\x12\x15\n\rassists_count\x18\t \x01(\r\x12\x14\n\x0c\x64\x65nies_count\x18\n \x01(\r\x12\x10\n\x08lh_count\x18\x0b \x01(\r\x12\x0c\n\x04gold\x18\x0c \x01(\r\x12\t\n\x01x\x18\r \x01(\x02\x12\t\n\x01y\x18\x0e \x01(\x02\x12\x11\n\tnet_worth\x18\x0f \x01(\r\x12\x11\n\tabilities\x18\x10 \x03(\r\x12\r\n\x05items\x18\x11 \x03(\r\x1a\x83\x01\n\x0f\x42uildingDetails\x12\x0c\n\x04team\x18\x01 \x01(\r\x12\x0f\n\x07heading\x18\x02 \x01(\x02\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x0c\n\x04lane\x18\x04 \x01(\r\x12\x0c\n\x04tier\x18\x05 \x01(\r\x12\t\n\x01x\x18\x06 \x01(\x02\x12\t\n\x01y\x18\x07 \x01(\x02\x12\x11\n\tdestroyed\x18\x08 \x01(\x08\x1a,\n\x0ePickBanDetails\x12\x0c\n\x04hero\x18\x01 \x01(\r\x12\x0c\n\x04team\x18\x02 \x01(\r\x1a\xde\x02\n\x0cMatchDetails\x12\x17\n\x0fserver_steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07matchid\x18\x02 \x01(\x04\x12\x11\n\ttimestamp\x18\x03 \x01(\r\x12\x11\n\tgame_time\x18\x04 \x01(\x05\x12%\n\x1dsteam_broadcaster_account_ids\x18\x06 \x03(\r\x12\x11\n\tgame_mode\x18\x07 \x01(\r\x12\x11\n\tleague_id\x18\x08 \x01(\r\x12\x16\n\x0eleague_node_id\x18\t \x01(\r\x12\x12\n\ngame_state\x18\n \x01(\r\x12\x42\n\x05picks\x18\x0b \x03(\x0b\x32\x33.dota.CMsgDOTARealtimeGameStatsTerse.PickBanDetails\x12\x41\n\x04\x62\x61ns\x18\x0c \x03(\x0b\x32\x33.dota.CMsgDOTARealtimeGameStatsTerse.PickBanDetails\x1a\x1f\n\tGraphData\x12\x12\n\ngraph_gold\x18\x01 \x03(\x05\"\xaa\x01\n\x1e\x43MsgDOTABroadcastTimelineEvent\x12R\n\x05\x65vent\x18\x01 \x01(\x0e\x32\x1d.dota.EBroadcastTimelineEvent:$EBroadcastTimelineEvent_MatchStarted\x12\x11\n\ttimestamp\x18\x02 \x01(\x07\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\r\x12\x13\n\x0bstring_data\x18\x04 \x01(\t\"?\n CMsgGCToClientMatchGroupsVersion\x12\x1b\n\x13matchgroups_version\x18\x01 \x01(\r\"\xc1\x01\n\x1b\x43MsgDOTASDOHeroStatsHistory\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\tgame_mode\x18\x02 \x01(\r\x12\x12\n\nlobby_type\x18\x03 \x01(\r\x12\x12\n\nstart_time\x18\x04 \x01(\r\x12\x0b\n\x03won\x18\x05 \x01(\x08\x12\x0b\n\x03gpm\x18\x06 \x01(\r\x12\x0b\n\x03xpm\x18\x07 \x01(\r\x12\r\n\x05kills\x18\x08 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\t \x01(\r\x12\x0f\n\x07\x61ssists\x18\n \x01(\r\"\x9e\x03\n\x15\x43MsgDOTASeasonRewards\x12\x33\n\x07rewards\x18\x01 \x03(\x0b\x32\".dota.CMsgDOTASeasonRewards.Reward\x1a\xe5\x01\n\x06Reward\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07itemdef\x18\x02 \x01(\r\x12\x12\n\nimportance\x18\x03 \x01(\r\x12\x12\n\nbase_level\x18\x04 \x01(\r\x12\x14\n\x0crepeat_level\x18\x05 \x01(\r\x12\x46\n\x0breward_type\x18\x06 \x01(\x0e\x32\'.dota.CMsgDOTASeasonRewards.ERewardType:\x08\x45\x63onItem\x12\r\n\x05image\x18\x07 \x01(\t\x12\x11\n\taction_id\x18\x08 \x01(\r\x12\x14\n\x0c\x65\x66\x66\x65\x63t_index\x18\t \x01(\r\"h\n\x0b\x45RewardType\x12\x0c\n\x08\x45\x63onItem\x10\x00\x12\x10\n\x0cMysteryWheel\x10\x01\x12\x11\n\rAbilityEffect\x10\x02\x12\t\n\x05Other\x10\x03\x12\x1b\n\x17MysteryWheelPointsBased\x10\x04\"\xb3\x02\n\x1a\x43MsgDOTASeasonAchievements\x12\x42\n\x0c\x61\x63hievements\x18\x01 \x03(\x0b\x32,.dota.CMsgDOTASeasonAchievements.Achievement\x1a\xd0\x01\n\x0b\x41\x63hievement\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\r\n\x05image\x18\x03 \x01(\t\x12\x11\n\taction_id\x18\x04 \x01(\r\x12\x12\n\nmax_grants\x18\x05 \x01(\r\x12\x15\n\rnormal_points\x18\x06 \x01(\r\x12\x1c\n\x14tracking_achievement\x18\x07 \x01(\r\x12\x18\n\x10\x61\x63hievement_goal\x18\x08 \x01(\r\x12\x19\n\x11\x61\x63hievement_level\x18\t \x01(\r\"\xfd\x11\n\x19\x43MsgDOTASeasonPredictions\x12?\n\x0bpredictions\x18\x01 \x03(\x0b\x32*.dota.CMsgDOTASeasonPredictions.Prediction\x12M\n\x13in_game_predictions\x18\x02 \x03(\x0b\x32\x30.dota.CMsgDOTASeasonPredictions.InGamePrediction\x12)\n!in_game_prediction_count_per_game\x18\x03 \x01(\r\x12\x30\n(in_game_prediction_voting_period_minutes\x18\x04 \x01(\r\x1aS\n\x06\x43hoice\x12\r\n\x05value\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x15\n\rmin_raw_value\x18\x03 \x01(\r\x12\x15\n\rmax_raw_value\x18\x04 \x01(\r\x1a\x1c\n\x07\x41nswers\x12\x11\n\tanswer_id\x18\x01 \x01(\r\x1a-\n\x0eQueryKeyValues\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a\xf7\x04\n\nPrediction\x12\x46\n\x04type\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTASeasonPredictions.ePredictionType:\x07Generic\x12\x10\n\x08question\x18\x02 \x01(\t\x12\x37\n\x07\x63hoices\x18\x03 \x03(\x0b\x32&.dota.CMsgDOTASeasonPredictions.Choice\x12\x14\n\x0cselection_id\x18\x04 \x01(\r\x12\x12\n\nstart_date\x18\x05 \x01(\r\x12\x11\n\tlock_date\x18\x06 \x01(\r\x12\x0e\n\x06reward\x18\x07 \x01(\r\x12K\n\x0b\x61nswer_type\x18\x08 \x01(\x0e\x32+.dota.CMsgDOTASeasonPredictions.eAnswerType:\tSingleInt\x12\x11\n\tanswer_id\x18\t \x01(\r\x12\x38\n\x07\x61nswers\x18\n \x03(\x0b\x32\'.dota.CMsgDOTASeasonPredictions.Answers\x12\x12\n\nquery_name\x18\x0b \x01(\t\x12\x1c\n\x14lock_on_selection_id\x18\r \x01(\r\x12\x1f\n\x17lock_on_selection_value\x18\x0e \x01(\r\x12\x1d\n\x15lock_on_selection_set\x18\x0f \x01(\x08\x12\x1f\n\x17use_answer_value_ranges\x18\x10 \x01(\x08\x12\x38\n\x06region\x18\x11 \x01(\x0e\x32\x13.dota.ELeagueRegion:\x13LEAGUE_REGION_UNSET\x12\"\n\x06phases\x18\x12 \x03(\x0e\x32\x12.dota.ELeaguePhase\x1a\x86\x05\n\x10InGamePrediction\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x46\n\x04type\x18\x03 \x01(\x0e\x32/.dota.CMsgDOTASeasonPredictions.ePredictionType:\x07Generic\x12Q\n\x05group\x18\x04 \x01(\x0e\x32\x37.dota.CMsgDOTASeasonPredictions.eRandomSelectionGroup_t:\tEarlyGame\x12\x10\n\x08question\x18\x05 \x01(\t\x12\x37\n\x07\x63hoices\x18\x06 \x03(\x0b\x32&.dota.CMsgDOTASeasonPredictions.Choice\x12\x17\n\x0frequired_heroes\x18\x07 \x03(\t\x12\x12\n\nquery_name\x18\x08 \x01(\t\x12\x44\n\x0cquery_values\x18\t \x03(\x0b\x32..dota.CMsgDOTASeasonPredictions.QueryKeyValues\x12_\n\x16\x61nswer_resolution_type\x18\n \x01(\x0e\x32\x31.dota.CMsgDOTASeasonPredictions.eResolutionType_t:\x0cInvalidQuery\x12\x17\n\x0fpoints_to_grant\x18\x0b \x01(\r\x12\x15\n\rreward_action\x18\x0c \x01(\r\x12\x1d\n\x15\x64\x65\x62ug_force_selection\x18\r \x01(\r\x12O\n\x0eraw_value_type\x18\x0e \x01(\x0e\x32/.dota.CMsgDOTASeasonPredictions.eRawValueType_t:\x06Number\"j\n\x0f\x65PredictionType\x12\x0b\n\x07Generic\x10\x00\x12\x08\n\x04Hero\x10\x01\x12\x08\n\x04Team\x10\x02\x12\n\n\x06Player\x10\x03\x12\x0b\n\x07Special\x10\x04\x12\t\n\x05YesNo\x10\x05\x12\x12\n\x0eQualifiersTeam\x10\x06\"\x91\x01\n\x0b\x65\x41nswerType\x12\r\n\tSingleInt\x10\x00\x12\x0f\n\x0bSingleFloat\x10\x01\x12\x0f\n\x0bMultipleInt\x10\x02\x12\x11\n\rMultipleFloat\x10\x03\x12\x0e\n\nAnswerTeam\x10\x04\x12\x0e\n\nSingleTime\x10\x05\x12\x10\n\x0cMultipleTime\x10\x06\x12\x0c\n\x08NoAnswer\x10\x07\"\xd4\x01\n\x11\x65ResolutionType_t\x12\x10\n\x0cInvalidQuery\x10\x00\x12\x14\n\x10\x46irstToPassQuery\x10\x01\x12\x13\n\x0fLastToPassQuery\x10\x02\x12\x16\n\x12LastRemainingQuery\x10\x03\x12\x12\n\x0eMaxToPassQuery\x10\x04\x12\x12\n\x0eMinToPassQuery\x10\x05\x12\x0c\n\x08SumQuery\x10\x06\x12\x19\n\x15MaxTeamSumToPassQuery\x10\x07\x12\x19\n\x15MinTeamSumToPassQuery\x10\x08\"N\n\x17\x65RandomSelectionGroup_t\x12\r\n\tEarlyGame\x10\x00\x12\x0b\n\x07MidGame\x10\x01\x12\x0c\n\x08LateGame\x10\x02\x12\t\n\x05\x43ount\x10\x03\"\'\n\x0f\x65RawValueType_t\x12\n\n\x06Number\x10\x00\x12\x08\n\x04Time\x10\x01\"\xa3\x1f\n\rCMsgDOTAMatch\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x11\n\tstartTime\x18\x04 \x01(\x07\x12+\n\x07players\x18\x05 \x03(\x0b\x32\x1a.dota.CMsgDOTAMatch.Player\x12\x10\n\x08match_id\x18\x06 \x01(\x04\x12\x14\n\x0ctower_status\x18\x08 \x03(\r\x12\x17\n\x0f\x62\x61rracks_status\x18\t \x03(\r\x12\x0f\n\x07\x63luster\x18\n \x01(\r\x12\x18\n\x10\x66irst_blood_time\x18\x0c \x01(\r\x12\x13\n\x0breplay_salt\x18\r \x01(\x07\x12\x11\n\tserver_ip\x18\x0e \x01(\x07\x12\x13\n\x0bserver_port\x18\x0f \x01(\r\x12\x12\n\nlobby_type\x18\x10 \x01(\r\x12\x15\n\rhuman_players\x18\x11 \x01(\r\x12\x15\n\raverage_skill\x18\x12 \x01(\r\x12\x14\n\x0cgame_balance\x18\x13 \x01(\x02\x12\x17\n\x0fradiant_team_id\x18\x14 \x01(\r\x12\x14\n\x0c\x64ire_team_id\x18\x15 \x01(\r\x12\x10\n\x08leagueid\x18\x16 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x17 \x01(\t\x12\x16\n\x0e\x64ire_team_name\x18\x18 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x19 \x01(\x04\x12\x16\n\x0e\x64ire_team_logo\x18\x1a \x01(\x04\x12\x1d\n\x15radiant_team_logo_url\x18\x36 \x01(\t\x12\x1a\n\x12\x64ire_team_logo_url\x18\x37 \x01(\t\x12\x1d\n\x15radiant_team_complete\x18\x1b \x01(\r\x12\x1a\n\x12\x64ire_team_complete\x18\x1c \x01(\r\x12\x16\n\x0epositive_votes\x18\x1d \x01(\r\x12\x16\n\x0enegative_votes\x18\x1e \x01(\r\x12:\n\tgame_mode\x18\x1f \x01(\x0e\x32\x13.dota.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12/\n\npicks_bans\x18  \x03(\x0b\x32\x1b.dota.CMatchHeroSelectEvent\x12\x15\n\rmatch_seq_num\x18! \x01(\x04\x12G\n\x0creplay_state\x18\" \x01(\x0e\x32\x1f.dota.CMsgDOTAMatch.ReplayState:\x10REPLAY_AVAILABLE\x12\x18\n\x10radiant_guild_id\x18# \x01(\r\x12\x15\n\rdire_guild_id\x18$ \x01(\r\x12\x18\n\x10radiant_team_tag\x18% \x01(\t\x12\x15\n\rdire_team_tag\x18& \x01(\t\x12\x11\n\tseries_id\x18\' \x01(\r\x12\x13\n\x0bseries_type\x18( \x01(\r\x12\x44\n\x14\x62roadcaster_channels\x18+ \x03(\x0b\x32&.dota.CMsgDOTAMatch.BroadcasterChannel\x12\x0e\n\x06\x65ngine\x18, \x01(\r\x12<\n\x10\x63ustom_game_data\x18- \x01(\x0b\x32\".dota.CMsgDOTAMatch.CustomGameData\x12\x13\n\x0bmatch_flags\x18. \x01(\r\x12\x1c\n\x14private_metadata_key\x18/ \x01(\x07\x12\x1a\n\x12radiant_team_score\x18\x30 \x01(\r\x12\x17\n\x0f\x64ire_team_score\x18\x31 \x01(\r\x12\x43\n\rmatch_outcome\x18\x32 \x01(\x0e\x32\x13.dota.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x12\x15\n\rtournament_id\x18\x33 \x01(\r\x12\x18\n\x10tournament_round\x18\x34 \x01(\r\x12\x19\n\x11pre_game_duration\x18\x35 \x01(\r\x12\x16\n\x0emvp_account_id\x18\x38 \x03(\r\x12*\n\x07\x63oaches\x18\x39 \x03(\x0b\x32\x19.dota.CMsgDOTAMatch.Coach\x1a\xfa\x0f\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06item_0\x18\x04 \x01(\r\x12\x0e\n\x06item_1\x18\x05 \x01(\r\x12\x0e\n\x06item_2\x18\x06 \x01(\r\x12\x0e\n\x06item_3\x18\x07 \x01(\r\x12\x0e\n\x06item_4\x18\x08 \x01(\r\x12\x0e\n\x06item_5\x18\t \x01(\r\x12\x0e\n\x06item_6\x18; \x01(\r\x12\x0e\n\x06item_7\x18< \x01(\r\x12\x0e\n\x06item_8\x18= \x01(\r\x12\"\n\x1a\x65xpected_team_contribution\x18\n \x01(\x02\x12\x15\n\rscaled_metric\x18\x0b \x01(\x02\x12\x15\n\rprevious_rank\x18\x0c \x01(\r\x12\x13\n\x0brank_change\x18\r \x01(\x11\x12\x10\n\x08mmr_type\x18J \x01(\r\x12\x19\n\x11rank_tier_updated\x18\x42 \x01(\x08\x12\r\n\x05kills\x18\x0e \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x0f \x01(\r\x12\x0f\n\x07\x61ssists\x18\x10 \x01(\r\x12\x15\n\rleaver_status\x18\x11 \x01(\r\x12\x0c\n\x04gold\x18\x12 \x01(\r\x12\x11\n\tlast_hits\x18\x13 \x01(\r\x12\x0e\n\x06\x64\x65nies\x18\x14 \x01(\r\x12\x14\n\x0cgold_per_min\x18\x15 \x01(\r\x12\x12\n\nXP_per_min\x18\x16 \x01(\r\x12\x12\n\ngold_spent\x18\x17 \x01(\r\x12\x13\n\x0bhero_damage\x18\x18 \x01(\r\x12\x14\n\x0ctower_damage\x18\x19 \x01(\r\x12\x14\n\x0chero_healing\x18\x1a \x01(\r\x12\r\n\x05level\x18\x1b \x01(\r\x12\x16\n\x0etime_last_seen\x18\x1c \x01(\r\x12\x13\n\x0bplayer_name\x18\x1d \x01(\t\x12\x1d\n\x15support_ability_value\x18\x1e \x01(\r\x12\x18\n\x10\x66\x65\x65\x64ing_detected\x18  \x01(\x08\x12\x13\n\x0bsearch_rank\x18\" \x01(\r\x12\x1f\n\x17search_rank_uncertainty\x18# \x01(\r\x12\x1f\n\x17rank_uncertainty_change\x18$ \x01(\x05\x12\x17\n\x0fhero_play_count\x18% \x01(\r\x12\x10\n\x08party_id\x18& \x01(\x06\x12\x1a\n\x12scaled_hero_damage\x18\x36 \x01(\r\x12\x1b\n\x13scaled_tower_damage\x18\x37 \x01(\r\x12\x1b\n\x13scaled_hero_healing\x18\x38 \x01(\r\x12\x14\n\x0cscaled_kills\x18\' \x01(\x02\x12\x15\n\rscaled_deaths\x18( \x01(\x02\x12\x16\n\x0escaled_assists\x18) \x01(\x02\x12\x19\n\x11\x63laimed_farm_gold\x18* \x01(\r\x12\x14\n\x0csupport_gold\x18+ \x01(\r\x12\x16\n\x0e\x63laimed_denies\x18, \x01(\r\x12\x16\n\x0e\x63laimed_misses\x18- \x01(\r\x12\x0e\n\x06misses\x18. \x01(\r\x12:\n\x10\x61\x62ility_upgrades\x18/ \x03(\x0b\x32 .dota.CMatchPlayerAbilityUpgrade\x12G\n\x1a\x61\x64\x64itional_units_inventory\x18\x30 \x03(\x0b\x32#.dota.CMatchAdditionalUnitInventory\x12\x38\n\x0fpermanent_buffs\x18\x39 \x03(\x0b\x32\x1f.dota.CMatchPlayerPermanentBuff\x12\x10\n\x08pro_name\x18H \x01(\t\x12\x11\n\treal_name\x18I \x01(\t\x12\x43\n\x10\x63ustom_game_data\x18\x32 \x01(\x0b\x32).dota.CMsgDOTAMatch.Player.CustomGameData\x12 \n\x18\x61\x63tive_plus_subscription\x18\x33 \x01(\x08\x12\x11\n\tnet_worth\x18\x34 \x01(\r\x12\x16\n\x0e\x62ot_difficulty\x18: \x01(\r\x12\x17\n\x0fhero_pick_order\x18? \x01(\r\x12\x19\n\x11hero_was_randomed\x18@ \x01(\x08\x12%\n\x1dhero_was_dota_plus_suggestion\x18\x45 \x01(\x08\x12K\n\x14hero_damage_received\x18\x43 \x03(\x0b\x32-.dota.CMsgDOTAMatch.Player.HeroDamageReceived\x12\x14\n\x0cseconds_dead\x18\x46 \x01(\r\x12\x1a\n\x12gold_lost_to_death\x18G \x01(\r\x12\x1c\n\x14lane_selection_flags\x18K \x01(\r\x1a\x33\n\x0e\x43ustomGameData\x12\x11\n\tdota_team\x18\x01 \x01(\r\x12\x0e\n\x06winner\x18\x02 \x01(\x08\x1a\x99\x01\n\x12HeroDamageReceived\x12\x15\n\rpre_reduction\x18\x01 \x01(\r\x12\x16\n\x0epost_reduction\x18\x02 \x01(\r\x12T\n\x0b\x64\x61mage_type\x18\x03 \x01(\x0e\x32).dota.CMsgDOTAMatch.Player.HeroDamageType:\x14HERO_DAMAGE_PHYSICAL\"Y\n\x0eHeroDamageType\x12\x18\n\x14HERO_DAMAGE_PHYSICAL\x10\x00\x12\x17\n\x13HERO_DAMAGE_MAGICAL\x10\x01\x12\x14\n\x10HERO_DAMAGE_PURE\x10\x02\x1a\x33\n\x0f\x42roadcasterInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x1a\x96\x01\n\x12\x42roadcasterChannel\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12>\n\x11\x62roadcaster_infos\x18\x03 \x03(\x0b\x32#.dota.CMsgDOTAMatch.BroadcasterInfo\x12\x15\n\rlanguage_code\x18\x04 \x01(\t\x1aq\n\x05\x43oach\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x12\n\ncoach_name\x18\x02 \x01(\t\x12\x14\n\x0c\x63oach_rating\x18\x03 \x01(\r\x12\x12\n\ncoach_team\x18\x04 \x01(\r\x12\x16\n\x0e\x63oach_party_id\x18\x05 \x01(\x04\x1a:\n\x0e\x43ustomGameData\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12\x10\n\x08map_name\x18\x02 \x01(\t\"P\n\x0bReplayState\x12\x14\n\x10REPLAY_AVAILABLE\x10\x00\x12\x17\n\x13REPLAY_NOT_RECORDED\x10\x01\x12\x12\n\x0eREPLAY_EXPIRED\x10\x02\"\x8b\x01\n\x0e\x43MsgPlayerCard\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x38\n\rstat_modifier\x18\x02 \x03(\x0b\x32!.dota.CMsgPlayerCard.StatModifier\x1a+\n\x0cStatModifier\x12\x0c\n\x04stat\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\"\xa9\x03\n\x1a\x43MsgDOTAFantasyPlayerStats\x12\x19\n\x11player_account_id\x18\x01 \x01(\r\x12\x10\n\x08match_id\x18\x02 \x01(\x04\x12\x17\n\x0fmatch_completed\x18\x03 \x01(\x08\x12\x0f\n\x07team_id\x18\x04 \x01(\r\x12\x11\n\tleague_id\x18\x05 \x01(\r\x12\r\n\x05\x64\x65lay\x18\x06 \x01(\r\x12\x11\n\tseries_id\x18\x07 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\r\n\x05kills\x18\n \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x0b \x01(\r\x12\n\n\x02\x63s\x18\x0c \x01(\r\x12\x0b\n\x03gpm\x18\r \x01(\x02\x12\x13\n\x0btower_kills\x18\x0e \x01(\r\x12\x14\n\x0croshan_kills\x18\x0f \x01(\r\x12\x1f\n\x17teamfight_participation\x18\x10 \x01(\x02\x12\x14\n\x0cwards_placed\x18\x11 \x01(\r\x12\x15\n\rcamps_stacked\x18\x12 \x01(\r\x12\x15\n\rrunes_grabbed\x18\x13 \x01(\r\x12\x13\n\x0b\x66irst_blood\x18\x14 \x01(\r\x12\r\n\x05stuns\x18\x15 \x01(\x02\"T\n\x1f\x43MsgDOTAFantasyPlayerMatchStats\x12\x31\n\x07matches\x18\x01 \x03(\x0b\x32 .dota.CMsgDOTAFantasyPlayerStats\"\x9b\x07\n\x14\x43MsgDOTABotDebugInfo\x12,\n\x04\x62ots\x18\x01 \x03(\x0b\x32\x1e.dota.CMsgDOTABotDebugInfo.Bot\x12\x1c\n\x14\x64\x65sire_push_lane_top\x18\x02 \x01(\x02\x12\x1c\n\x14\x64\x65sire_push_lane_mid\x18\x03 \x01(\x02\x12\x1c\n\x14\x64\x65sire_push_lane_bot\x18\x04 \x01(\x02\x12\x1e\n\x16\x64\x65sire_defend_lane_top\x18\x05 \x01(\x02\x12\x1e\n\x16\x64\x65sire_defend_lane_mid\x18\x06 \x01(\x02\x12\x1e\n\x16\x64\x65sire_defend_lane_bot\x18\x07 \x01(\x02\x12\x1c\n\x14\x64\x65sire_farm_lane_top\x18\x08 \x01(\x02\x12\x1c\n\x14\x64\x65sire_farm_lane_mid\x18\t \x01(\x02\x12\x1c\n\x14\x64\x65sire_farm_lane_bot\x18\n \x01(\x02\x12\x1a\n\x12\x64\x65sire_farm_roshan\x18\x0b \x01(\x02\x12\x16\n\x0e\x65xecution_time\x18\x0c \x01(\x02\x12\x13\n\x0brune_status\x18\r \x03(\r\x1a\xf7\x03\n\x03\x42ot\x12\x17\n\x0fplayer_owner_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ndifficulty\x18\x03 \x01(\r\x12\x15\n\rpower_current\x18\x04 \x01(\r\x12\x11\n\tpower_max\x18\x05 \x01(\r\x12\x15\n\rmove_target_x\x18\x06 \x01(\r\x12\x15\n\rmove_target_y\x18\x07 \x01(\r\x12\x15\n\rmove_target_z\x18\x08 \x01(\r\x12\x16\n\x0e\x61\x63tive_mode_id\x18\t \x01(\r\x12\x16\n\x0e\x65xecution_time\x18\n \x01(\x02\x12\x32\n\x05modes\x18\x0b \x03(\x0b\x32#.dota.CMsgDOTABotDebugInfo.Bot.Mode\x12\x35\n\x06\x61\x63tion\x18\x0c \x01(\x0b\x32%.dota.CMsgDOTABotDebugInfo.Bot.Action\x1at\n\x04Mode\x12\x0f\n\x07mode_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x65sire\x18\x02 \x01(\x02\x12\x15\n\rtarget_entity\x18\x03 \x01(\r\x12\x10\n\x08target_x\x18\x04 \x01(\r\x12\x10\n\x08target_y\x18\x05 \x01(\r\x12\x10\n\x08target_z\x18\x06 \x01(\r\x1a\x32\n\x06\x41\x63tion\x12\x11\n\taction_id\x18\x01 \x01(\r\x12\x15\n\raction_target\x18\x02 \x01(\t\"R\n\x12\x43MsgSuccessfulHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bwin_percent\x18\x02 \x01(\x02\x12\x16\n\x0elongest_streak\x18\x03 \x01(\r\"\x92\x02\n\x13\x43MsgRecentMatchInfo\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12:\n\tgame_mode\x18\x02 \x01(\x0e\x32\x13.dota.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\x10\n\x08\x64uration\x18\x06 \x01(\r\x12\x13\n\x0bplayer_slot\x18\x07 \x01(\r\x12\x43\n\rmatch_outcome\x18\x08 \x01(\x0e\x32\x13.dota.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x12\x11\n\ttimestamp\x18\t \x01(\r\"\xc3\x01\n\rCMsgMatchTips\x12+\n\x04tips\x18\x02 \x03(\x0b\x32\x1d.dota.CMsgMatchTips.SingleTip\x1a\x84\x01\n\tSingleTip\x12\x19\n\x11source_account_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x12\n\ntip_amount\x18\x03 \x01(\r\x12-\n\x08\x65vent_id\x18\x04 \x01(\x0e\x32\x0c.dota.EEvent:\rEVENT_ID_NONE\"\xaa\x07\n\x14\x43MsgDOTAMatchMinimal\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x12\n\nstart_time\x18\x02 \x01(\x07\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12:\n\tgame_mode\x18\x04 \x01(\x0e\x32\x13.dota.DOTA_GameMode:\x12\x44OTA_GAMEMODE_NONE\x12\x32\n\x07players\x18\x06 \x03(\x0b\x32!.dota.CMsgDOTAMatchMinimal.Player\x12\x33\n\x07tourney\x18\x07 \x01(\x0b\x32\".dota.CMsgDOTAMatchMinimal.Tourney\x12\x43\n\rmatch_outcome\x18\x08 \x01(\x0e\x32\x13.dota.EMatchOutcome:\x17k_EMatchOutcome_Unknown\x12\x15\n\rradiant_score\x18\t \x01(\r\x12\x12\n\ndire_score\x18\n \x01(\r\x1a\x93\x01\n\x06Player\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\r\n\x05kills\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x04 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x05 \x01(\r\x12\r\n\x05items\x18\x06 \x03(\r\x12\x13\n\x0bplayer_slot\x18\x07 \x01(\r\x12\x10\n\x08pro_name\x18\x08 \x01(\t\x1a\xae\x03\n\x07Tourney\x12\x11\n\tleague_id\x18\x01 \x01(\r\x12\x13\n\x0bseries_type\x18\x08 \x01(\r\x12\x13\n\x0bseries_game\x18\t \x01(\r\x12%\n\x1dweekend_tourney_tournament_id\x18\n \x01(\r\x12(\n weekend_tourney_season_trophy_id\x18\x0b \x01(\r\x12 \n\x18weekend_tourney_division\x18\x0c \x01(\r\x12#\n\x1bweekend_tourney_skill_level\x18\r \x01(\r\x12\x17\n\x0fradiant_team_id\x18\x02 \x01(\r\x12\x19\n\x11radiant_team_name\x18\x03 \x01(\t\x12\x19\n\x11radiant_team_logo\x18\x04 \x01(\x06\x12\x1d\n\x15radiant_team_logo_url\x18\x0e \x01(\t\x12\x14\n\x0c\x64ire_team_id\x18\x05 \x01(\r\x12\x16\n\x0e\x64ire_team_name\x18\x06 \x01(\t\x12\x16\n\x0e\x64ire_team_logo\x18\x07 \x01(\x06\x12\x1a\n\x12\x64ire_team_logo_url\x18\x0f \x01(\t\"@\n\x13\x43MsgConsumableUsage\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x17\n\x0fquantity_change\x18\x02 \x01(\x05\"\xbf\x01\n\x18\x43MsgMatchConsumableUsage\x12K\n\x17player_consumables_used\x18\x01 \x03(\x0b\x32*.dota.CMsgMatchConsumableUsage.PlayerUsage\x1aV\n\x0bPlayerUsage\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x33\n\x10\x63onsumables_used\x18\x02 \x03(\x0b\x32\x19.dota.CMsgConsumableUsage\"\x96\x02\n\x1a\x43MsgMatchEventActionGrants\x12\x44\n\rplayer_grants\x18\x01 \x03(\x0b\x32-.dota.CMsgMatchEventActionGrants.PlayerGrants\x1aM\n\x05Grant\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x11\n\taction_id\x18\x02 \x01(\r\x12\r\n\x05\x61udit\x18\x03 \x01(\r\x12\x10\n\x08quantity\x18\x04 \x01(\r\x1a\x63\n\x0cPlayerGrants\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12?\n\x0f\x61\x63tions_granted\x18\x02 \x03(\x0b\x32&.dota.CMsgMatchEventActionGrants.Grant\"e\n\x17\x43MsgCustomGameWhitelist\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x1e\n\x16\x63ustom_games_whitelist\x18\x02 \x03(\x04\x12\x19\n\x11\x64isable_whitelist\x18\x03 \x01(\x08\"\xfa\x01\n\x1e\x43MsgCustomGameWhitelistForEdit\x12N\n\x11whitelist_entries\x18\x01 \x03(\x0b\x32\x33.dota.CMsgCustomGameWhitelistForEdit.WhitelistEntry\x1a\x87\x01\n\x0eWhitelistEntry\x12\x16\n\x0e\x63ustom_game_id\x18\x01 \x01(\x04\x12]\n\x0fwhitelist_state\x18\x02 \x01(\x0e\x32\x1f.dota.ECustomGameWhitelistState:#CUSTOM_GAME_WHITELIST_STATE_UNKNOWN\"\xa0\x01\n\x19\x43MsgPlayerRecentMatchInfo\x12\x10\n\x08match_id\x18\x01 \x01(\x04\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x10\n\x08\x64uration\x18\x03 \x01(\r\x12\x0b\n\x03win\x18\x04 \x01(\x08\x12\x0f\n\x07hero_id\x18\x05 \x01(\r\x12\r\n\x05kills\x18\x06 \x01(\r\x12\x0e\n\x06\x64\x65\x61ths\x18\x07 \x01(\r\x12\x0f\n\x07\x61ssists\x18\x08 \x01(\r\"5\n\x15\x43MsgPlayerMatchRecord\x12\x0c\n\x04wins\x18\x01 \x01(\r\x12\x0e\n\x06losses\x18\x02 \x01(\r\"F\n\x1d\x43MsgPlayerRecentMatchOutcomes\x12\x10\n\x08outcomes\x18\x01 \x01(\r\x12\x13\n\x0bmatch_count\x18\x02 \x01(\r\"A\n\x18\x43MsgPlayerRecentCommends\x12\x10\n\x08\x63ommends\x18\x01 \x01(\r\x12\x13\n\x0bmatch_count\x18\x02 \x01(\r\"\x94\x03\n\x1f\x43MsgPlayerRecentAccomplishments\x12<\n\x0frecent_outcomes\x18\x01 \x01(\x0b\x32#.dota.CMsgPlayerRecentMatchOutcomes\x12\x31\n\x0ctotal_record\x18\x02 \x01(\x0b\x32\x1b.dota.CMsgPlayerMatchRecord\x12\x19\n\x11prediction_streak\x18\x03 \x01(\r\x12\x1e\n\x16plus_prediction_streak\x18\x04 \x01(\r\x12\x37\n\x0frecent_commends\x18\x05 \x01(\x0b\x32\x1e.dota.CMsgPlayerRecentCommends\x12\x1d\n\x15\x66irst_match_timestamp\x18\x06 \x01(\r\x12\x33\n\nlast_match\x18\x07 \x01(\x0b\x32\x1f.dota.CMsgPlayerRecentMatchInfo\x12\x38\n\x0brecent_mvps\x18\x08 \x01(\x0b\x32#.dota.CMsgPlayerRecentMatchOutcomes\"\xcb\x01\n#CMsgPlayerHeroRecentAccomplishments\x12<\n\x0frecent_outcomes\x18\x01 \x01(\x0b\x32#.dota.CMsgPlayerRecentMatchOutcomes\x12\x31\n\x0ctotal_record\x18\x02 \x01(\x0b\x32\x1b.dota.CMsgPlayerMatchRecord\x12\x33\n\nlast_match\x18\x03 \x01(\x0b\x32\x1f.dota.CMsgPlayerRecentMatchInfo\"\xab\x01\n\x19\x43MsgRecentAccomplishments\x12\x45\n\x16player_accomplishments\x18\x01 \x01(\x0b\x32%.dota.CMsgPlayerRecentAccomplishments\x12G\n\x14hero_accomplishments\x18\x02 \x01(\x0b\x32).dota.CMsgPlayerHeroRecentAccomplishments\"M\n&CMsgRequestPlayerRecentAccomplishments\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\xa7\x02\n.CMsgRequestPlayerRecentAccomplishmentsResponse\x12`\n\x06result\x18\x01 \x01(\x0e\x32>.dota.CMsgRequestPlayerRecentAccomplishmentsResponse.EResponse:\x10k_eInternalError\x12?\n\x16player_accomplishments\x18\x02 \x01(\x0b\x32\x1f.dota.CMsgRecentAccomplishments\"R\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03*U\n\x11\x45SpecialPingValue\x12\x1f\n\x1ak_ESpecialPingValue_NoData\x10\xfe\x7f\x12\x1f\n\x1ak_ESpecialPingValue_Failed\x10\xff\x7f*\x86\x05\n\x12\x45\x44OTAGCSessionNeed\x12 \n\x1ck_EDOTAGCSessionNeed_Unknown\x10\x00\x12,\n(k_EDOTAGCSessionNeed_UserNoSessionNeeded\x10\x64\x12)\n%k_EDOTAGCSessionNeed_UserInOnlineGame\x10\x65\x12(\n$k_EDOTAGCSessionNeed_UserInLocalGame\x10\x66\x12-\n)k_EDOTAGCSessionNeed_UserInUIWasConnected\x10g\x12/\n+k_EDOTAGCSessionNeed_UserInUINeverConnected\x10h\x12&\n\"k_EDOTAGCSessionNeed_UserTutorials\x10i\x12\x31\n-k_EDOTAGCSessionNeed_UserInUIWasConnectedIdle\x10j\x12\x33\n/k_EDOTAGCSessionNeed_UserInUINeverConnectedIdle\x10k\x12*\n%k_EDOTAGCSessionNeed_GameServerOnline\x10\xc8\x01\x12)\n$k_EDOTAGCSessionNeed_GameServerLocal\x10\xc9\x01\x12(\n#k_EDOTAGCSessionNeed_GameServerIdle\x10\xca\x01\x12)\n$k_EDOTAGCSessionNeed_GameServerRelay\x10\xcb\x01\x12/\n*k_EDOTAGCSessionNeed_GameServerLocalUpload\x10\xcc\x01*\xf6\x01\n\x15\x44OTA_TournamentEvents\x12\x12\n\x0eTE_FIRST_BLOOD\x10\x00\x12\x0f\n\x0bTE_GAME_END\x10\x01\x12\x11\n\rTE_MULTI_KILL\x10\x02\x12\x10\n\x0cTE_HERO_DENY\x10\x03\x12\x11\n\rTE_AEGIS_DENY\x10\x04\x12\x13\n\x0fTE_AEGIS_STOLEN\x10\x05\x12\x0e\n\nTE_GODLIKE\x10\x06\x12\x13\n\x0fTE_COURIER_KILL\x10\x07\x12\x0f\n\x0bTE_ECHOSLAM\x10\x08\x12\r\n\tTE_RAPIER\x10\t\x12\x13\n\x0fTE_EARLY_ROSHAN\x10\n\x12\x11\n\rTE_BLACK_HOLE\x10\x0b*\x8d\x03\n\x17\x45\x42roadcastTimelineEvent\x12(\n$EBroadcastTimelineEvent_MatchStarted\x10\x01\x12,\n(EBroadcastTimelineEvent_GameStateChanged\x10\x02\x12&\n\"EBroadcastTimelineEvent_TowerDeath\x10\x03\x12)\n%EBroadcastTimelineEvent_BarracksDeath\x10\x04\x12(\n$EBroadcastTimelineEvent_AncientDeath\x10\x05\x12\'\n#EBroadcastTimelineEvent_RoshanDeath\x10\x06\x12%\n!EBroadcastTimelineEvent_HeroDeath\x10\x07\x12%\n!EBroadcastTimelineEvent_TeamFight\x10\x08\x12&\n\"EBroadcastTimelineEvent_FirstBlood\x10\t*\x98\x01\n\x19\x45\x43ustomGameWhitelistState\x12\'\n#CUSTOM_GAME_WHITELIST_STATE_UNKNOWN\x10\x00\x12(\n$CUSTOM_GAME_WHITELIST_STATE_APPROVED\x10\x01\x12(\n$CUSTOM_GAME_WHITELIST_STATE_REJECTED\x10\x02\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[steammessages__pb2.DESCRIPTOR,gcsdk__gcmessages__pb2.DESCRIPTOR,dota__shared__enums__pb2.DESCRIPTOR,])
 
@@ -45,8 +45,8 @@ _ESPECIALPINGVALUE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=26752,
-  serialized_end=26837,
+  serialized_start=27170,
+  serialized_end=27255,
 )
 _sym_db.RegisterEnumDescriptor(_ESPECIALPINGVALUE)
 
@@ -116,8 +116,8 @@ _EDOTAGCSESSIONNEED = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=26840,
-  serialized_end=27486,
+  serialized_start=27258,
+  serialized_end=27904,
 )
 _sym_db.RegisterEnumDescriptor(_EDOTAGCSESSIONNEED)
 
@@ -179,8 +179,8 @@ _DOTA_TOURNAMENTEVENTS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=27489,
-  serialized_end=27735,
+  serialized_start=27907,
+  serialized_end=28153,
 )
 _sym_db.RegisterEnumDescriptor(_DOTA_TOURNAMENTEVENTS)
 
@@ -230,8 +230,8 @@ _EBROADCASTTIMELINEEVENT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=27738,
-  serialized_end=28135,
+  serialized_start=28156,
+  serialized_end=28553,
 )
 _sym_db.RegisterEnumDescriptor(_EBROADCASTTIMELINEEVENT)
 
@@ -257,8 +257,8 @@ _ECUSTOMGAMEWHITELISTSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=28138,
-  serialized_end=28290,
+  serialized_start=28556,
+  serialized_end=28708,
 )
 _sym_db.RegisterEnumDescriptor(_ECUSTOMGAMEWHITELISTSTATE)
 
@@ -312,11 +312,11 @@ _CMSGDOTAPROFILECARD_ESTATID = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='k_eStat_SoloRank', index=0, number=1,
+      name='k_eStat_CoreRank', index=0, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='k_eStat_PartyRank', index=1, number=2,
+      name='k_eStat_SupportRank', index=1, number=2,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
@@ -339,11 +339,15 @@ _CMSGDOTAPROFILECARD_ESTATID = _descriptor.EnumDescriptor(
       name='k_eStat_PreviousSeasonRank', index=6, number=7,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eStat_GamesMVP', index=7, number=8,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7745,
-  serialized_end=7924,
+  serialized_start=8133,
+  serialized_end=8336,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAPROFILECARD_ESTATID)
 
@@ -376,8 +380,8 @@ _CMSGGCREROLLPLAYERCHALLENGERESPONSE_ERESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8562,
-  serialized_end=8684,
+  serialized_start=8974,
+  serialized_end=9096,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGGCREROLLPLAYERCHALLENGERESPONSE_ERESULT)
 
@@ -406,8 +410,8 @@ _CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA_ESTAT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=12168,
-  serialized_end=12259,
+  serialized_start=12580,
+  serialized_end=12671,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA_ESTAT)
 
@@ -444,8 +448,8 @@ _CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA_ELOCATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=12261,
-  serialized_end=12348,
+  serialized_start=12673,
+  serialized_end=12760,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA_ELOCATION)
 
@@ -478,8 +482,8 @@ _CMSGDOTASEASONREWARDS_EREWARDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=14532,
-  serialized_end=14636,
+  serialized_start=14944,
+  serialized_end=15048,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTASEASONREWARDS_EREWARDTYPE)
 
@@ -520,8 +524,8 @@ _CMSGDOTASEASONPREDICTIONS_EPREDICTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=16660,
-  serialized_end=16766,
+  serialized_start=17072,
+  serialized_end=17178,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTASEASONPREDICTIONS_EPREDICTIONTYPE)
 
@@ -566,8 +570,8 @@ _CMSGDOTASEASONPREDICTIONS_EANSWERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=16769,
-  serialized_end=16914,
+  serialized_start=17181,
+  serialized_end=17326,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTASEASONPREDICTIONS_EANSWERTYPE)
 
@@ -616,8 +620,8 @@ _CMSGDOTASEASONPREDICTIONS_ERESOLUTIONTYPE_T = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=16917,
-  serialized_end=17129,
+  serialized_start=17329,
+  serialized_end=17541,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTASEASONPREDICTIONS_ERESOLUTIONTYPE_T)
 
@@ -646,8 +650,8 @@ _CMSGDOTASEASONPREDICTIONS_ERANDOMSELECTIONGROUP_T = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=17131,
-  serialized_end=17209,
+  serialized_start=17543,
+  serialized_end=17621,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTASEASONPREDICTIONS_ERANDOMSELECTIONGROUP_T)
 
@@ -668,8 +672,8 @@ _CMSGDOTASEASONPREDICTIONS_ERAWVALUETYPE_T = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=17211,
-  serialized_end=17250,
+  serialized_start=17623,
+  serialized_end=17662,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTASEASONPREDICTIONS_ERAWVALUETYPE_T)
 
@@ -694,8 +698,8 @@ _CMSGDOTAMATCH_PLAYER_HERODAMAGETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=20698,
-  serialized_end=20787,
+  serialized_start=21116,
+  serialized_end=21205,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAMATCH_PLAYER_HERODAMAGETYPE)
 
@@ -720,8 +724,8 @@ _CMSGDOTAMATCH_REPLAYSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=21170,
-  serialized_end=21250,
+  serialized_start=21588,
+  serialized_end=21668,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGDOTAMATCH_REPLAYSTATE)
 
@@ -750,8 +754,8 @@ _CMSGREQUESTPLAYERRECENTACCOMPLISHMENTSRESPONSE_ERESPONSE = _descriptor.EnumDesc
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=26668,
-  serialized_end=26750,
+  serialized_start=27086,
+  serialized_end=27168,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGREQUESTPLAYERRECENTACCOMPLISHMENTSRESPONSE_ERESPONSE)
 
@@ -960,28 +964,28 @@ _CSODOTAGAMEACCOUNTCLIENT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='competitive_rank', full_name='dota.CSODOTAGameAccountClient.competitive_rank', index=28,
+      name='competitive_2019_rank', full_name='dota.CSODOTAGameAccountClient.competitive_2019_rank', index=28,
       number=49, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.calibration_games_remaining', index=29,
+      name='competitive_2019_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.competitive_2019_calibration_games_remaining', index=29,
       number=51, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='solo_competitive_rank', full_name='dota.CSODOTAGameAccountClient.solo_competitive_rank', index=30,
+      name='solo_competitive_2019_rank', full_name='dota.CSODOTAGameAccountClient.solo_competitive_2019_rank', index=30,
       number=52, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='solo_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.solo_calibration_games_remaining', index=31,
+      name='solo_competitive_2019_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.solo_competitive_2019_calibration_games_remaining', index=31,
       number=54, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1037,232 +1041,253 @@ _CSODOTAGAMEACCOUNTCLIENT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='competitive_team_games_played', full_name='dota.CSODOTAGameAccountClient.competitive_team_games_played', index=39,
-      number=66, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='curr_all_hero_challenge_id', full_name='dota.CSODOTAGameAccountClient.curr_all_hero_challenge_id', index=40,
+      name='curr_all_hero_challenge_id', full_name='dota.CSODOTAGameAccountClient.curr_all_hero_challenge_id', index=39,
       number=67, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='play_time_points', full_name='dota.CSODOTAGameAccountClient.play_time_points', index=41,
+      name='play_time_points', full_name='dota.CSODOTAGameAccountClient.play_time_points', index=40,
       number=68, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='account_flags', full_name='dota.CSODOTAGameAccountClient.account_flags', index=42,
+      name='account_flags', full_name='dota.CSODOTAGameAccountClient.account_flags', index=41,
       number=69, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='play_time_level', full_name='dota.CSODOTAGameAccountClient.play_time_level', index=43,
+      name='play_time_level', full_name='dota.CSODOTAGameAccountClient.play_time_level', index=42,
       number=70, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='player_behavior_seq_num_last_report', full_name='dota.CSODOTAGameAccountClient.player_behavior_seq_num_last_report', index=44,
+      name='player_behavior_seq_num_last_report', full_name='dota.CSODOTAGameAccountClient.player_behavior_seq_num_last_report', index=43,
       number=71, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='player_behavior_score_last_report', full_name='dota.CSODOTAGameAccountClient.player_behavior_score_last_report', index=45,
+      name='player_behavior_score_last_report', full_name='dota.CSODOTAGameAccountClient.player_behavior_score_last_report', index=44,
       number=72, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='player_behavior_report_old_data', full_name='dota.CSODOTAGameAccountClient.player_behavior_report_old_data', index=46,
+      name='player_behavior_report_old_data', full_name='dota.CSODOTAGameAccountClient.player_behavior_report_old_data', index=45,
       number=73, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tourney_skill_level', full_name='dota.CSODOTAGameAccountClient.tourney_skill_level', index=47,
+      name='tourney_skill_level', full_name='dota.CSODOTAGameAccountClient.tourney_skill_level', index=46,
       number=74, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tourney_recent_participation_date', full_name='dota.CSODOTAGameAccountClient.tourney_recent_participation_date', index=48,
+      name='tourney_recent_participation_date', full_name='dota.CSODOTAGameAccountClient.tourney_recent_participation_date', index=47,
       number=85, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='favorite_team', full_name='dota.CSODOTAGameAccountClient.favorite_team', index=49,
+      name='favorite_team', full_name='dota.CSODOTAGameAccountClient.favorite_team', index=48,
       number=87, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='anchored_phone_number_id', full_name='dota.CSODOTAGameAccountClient.anchored_phone_number_id', index=50,
+      name='anchored_phone_number_id', full_name='dota.CSODOTAGameAccountClient.anchored_phone_number_id', index=49,
       number=88, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ranked_matchmaking_ban_until_date', full_name='dota.CSODOTAGameAccountClient.ranked_matchmaking_ban_until_date', index=51,
+      name='ranked_matchmaking_ban_until_date', full_name='dota.CSODOTAGameAccountClient.ranked_matchmaking_ban_until_date', index=50,
       number=89, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='recent_game_time_1', full_name='dota.CSODOTAGameAccountClient.recent_game_time_1', index=52,
+      name='recent_game_time_1', full_name='dota.CSODOTAGameAccountClient.recent_game_time_1', index=51,
       number=90, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='recent_game_time_2', full_name='dota.CSODOTAGameAccountClient.recent_game_time_2', index=53,
+      name='recent_game_time_2', full_name='dota.CSODOTAGameAccountClient.recent_game_time_2', index=52,
       number=91, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='recent_game_time_3', full_name='dota.CSODOTAGameAccountClient.recent_game_time_3', index=54,
+      name='recent_game_time_3', full_name='dota.CSODOTAGameAccountClient.recent_game_time_3', index=53,
       number=92, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='general_seasonal_ranked_rank', full_name='dota.CSODOTAGameAccountClient.general_seasonal_ranked_rank', index=55,
+      name='general_seasonal_ranked_rank', full_name='dota.CSODOTAGameAccountClient.general_seasonal_ranked_rank', index=54,
       number=93, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='general_seasonal_ranked_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.general_seasonal_ranked_calibration_games_remaining', index=56,
+      name='general_seasonal_ranked_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.general_seasonal_ranked_calibration_games_remaining', index=55,
       number=94, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='general_seasonal_ranked_games_played', full_name='dota.CSODOTAGameAccountClient.general_seasonal_ranked_games_played', index=57,
+      name='general_seasonal_ranked_games_played', full_name='dota.CSODOTAGameAccountClient.general_seasonal_ranked_games_played', index=56,
       number=95, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='general_seasonal_ranked_rank_peak', full_name='dota.CSODOTAGameAccountClient.general_seasonal_ranked_rank_peak', index=58,
+      name='general_seasonal_ranked_rank_peak', full_name='dota.CSODOTAGameAccountClient.general_seasonal_ranked_rank_peak', index=57,
       number=96, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='general_seasonal_rank_transferred', full_name='dota.CSODOTAGameAccountClient.general_seasonal_rank_transferred', index=59,
+      name='general_seasonal_rank_transferred', full_name='dota.CSODOTAGameAccountClient.general_seasonal_rank_transferred', index=58,
       number=97, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='solo_seasonal_ranked_rank', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_ranked_rank', index=60,
+      name='solo_seasonal_ranked_rank', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_ranked_rank', index=59,
       number=98, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='solo_seasonal_ranked_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_ranked_calibration_games_remaining', index=61,
+      name='solo_seasonal_ranked_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_ranked_calibration_games_remaining', index=60,
       number=99, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='solo_seasonal_ranked_games_played', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_ranked_games_played', index=62,
+      name='solo_seasonal_ranked_games_played', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_ranked_games_played', index=61,
       number=100, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='solo_seasonal_ranked_rank_peak', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_ranked_rank_peak', index=63,
+      name='solo_seasonal_ranked_rank_peak', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_ranked_rank_peak', index=62,
       number=101, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='solo_seasonal_rank_transferred', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_rank_transferred', index=64,
+      name='solo_seasonal_rank_transferred', full_name='dota.CSODOTAGameAccountClient.solo_seasonal_rank_transferred', index=63,
       number=102, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='favorite_team_packed', full_name='dota.CSODOTAGameAccountClient.favorite_team_packed', index=65,
+      name='favorite_team_packed', full_name='dota.CSODOTAGameAccountClient.favorite_team_packed', index=64,
       number=103, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='recent_report_time', full_name='dota.CSODOTAGameAccountClient.recent_report_time', index=66,
+      name='recent_report_time', full_name='dota.CSODOTAGameAccountClient.recent_report_time', index=65,
       number=104, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='custom_game_disabled_until_date', full_name='dota.CSODOTAGameAccountClient.custom_game_disabled_until_date', index=67,
+      name='custom_game_disabled_until_date', full_name='dota.CSODOTAGameAccountClient.custom_game_disabled_until_date', index=66,
       number=105, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='recent_win_time_1', full_name='dota.CSODOTAGameAccountClient.recent_win_time_1', index=68,
+      name='recent_win_time_1', full_name='dota.CSODOTAGameAccountClient.recent_win_time_1', index=67,
       number=106, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='recent_win_time_2', full_name='dota.CSODOTAGameAccountClient.recent_win_time_2', index=69,
+      name='recent_win_time_2', full_name='dota.CSODOTAGameAccountClient.recent_win_time_2', index=68,
       number=107, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='recent_win_time_3', full_name='dota.CSODOTAGameAccountClient.recent_win_time_3', index=70,
+      name='recent_win_time_3', full_name='dota.CSODOTAGameAccountClient.recent_win_time_3', index=69,
       number=108, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='coach_rating', full_name='dota.CSODOTAGameAccountClient.coach_rating', index=71,
+      name='coach_rating', full_name='dota.CSODOTAGameAccountClient.coach_rating', index=70,
       number=109, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='competitive_core_rank', full_name='dota.CSODOTAGameAccountClient.competitive_core_rank', index=71,
+      number=110, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='competitive_core_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.competitive_core_calibration_games_remaining', index=72,
+      number=111, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='competitive_support_rank', full_name='dota.CSODOTAGameAccountClient.competitive_support_rank', index=73,
+      number=112, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='competitive_support_calibration_games_remaining', full_name='dota.CSODOTAGameAccountClient.competitive_support_calibration_games_remaining', index=74,
+      number=113, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1280,7 +1305,7 @@ _CSODOTAGAMEACCOUNTCLIENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=109,
-  serialized_end=2514,
+  serialized_end=2695,
 )
 
 
@@ -1359,8 +1384,8 @@ _CSODOTAGAMEACCOUNTPLUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2517,
-  serialized_end=2750,
+  serialized_start=2698,
+  serialized_end=2931,
 )
 
 
@@ -1397,8 +1422,8 @@ _CMSGLOBBYPLAYERPLUSSUBSCRIPTIONDATA_HEROBADGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2866,
-  serialized_end=2917,
+  serialized_start=3047,
+  serialized_end=3098,
 )
 
 _CMSGLOBBYPLAYERPLUSSUBSCRIPTIONDATA = _descriptor.Descriptor(
@@ -1427,8 +1452,8 @@ _CMSGLOBBYPLAYERPLUSSUBSCRIPTIONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2753,
-  serialized_end=2917,
+  serialized_start=2934,
+  serialized_end=3098,
 )
 
 
@@ -1465,8 +1490,8 @@ _CMSGLOBBYEVENTPOINTS_CHATWHEELMESSAGERANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3028,
-  serialized_end=3101,
+  serialized_start=3209,
+  serialized_end=3282,
 )
 
 _CMSGLOBBYEVENTPOINTS_PERIODICRESOURCEVALUES = _descriptor.Descriptor(
@@ -1502,8 +1527,8 @@ _CMSGLOBBYEVENTPOINTS_PERIODICRESOURCEVALUES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3103,
-  serialized_end=3159,
+  serialized_start=3284,
+  serialized_end=3340,
 )
 
 _CMSGLOBBYEVENTPOINTS_ACCOUNTPOINTS = _descriptor.Descriptor(
@@ -1644,8 +1669,8 @@ _CMSGLOBBYEVENTPOINTS_ACCOUNTPOINTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3162,
-  serialized_end=3922,
+  serialized_start=3343,
+  serialized_end=4103,
 )
 
 _CMSGLOBBYEVENTPOINTS = _descriptor.Descriptor(
@@ -1681,8 +1706,8 @@ _CMSGLOBBYEVENTPOINTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2920,
-  serialized_end=3922,
+  serialized_start=3101,
+  serialized_end=4103,
 )
 
 
@@ -1747,8 +1772,8 @@ _CMSGLOCALSERVERFAKELOBBYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3925,
-  serialized_end=4133,
+  serialized_start=4106,
+  serialized_end=4314,
 )
 
 
@@ -1834,8 +1859,8 @@ _CMSGBATTLECUPVICTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4136,
-  serialized_end=4334,
+  serialized_start=4317,
+  serialized_end=4515,
 )
 
 
@@ -1865,8 +1890,8 @@ _CMSGLOBBYBATTLECUPVICTORYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4336,
-  serialized_end=4412,
+  serialized_start=4517,
+  serialized_end=4593,
 )
 
 
@@ -1896,8 +1921,8 @@ _CMSGDOTABROADCASTNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4414,
-  serialized_end=4462,
+  serialized_start=4595,
+  serialized_end=4643,
 )
 
 
@@ -1976,8 +2001,8 @@ _CPROTOITEMHEROSTATUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4465,
-  serialized_end=4650,
+  serialized_start=4646,
+  serialized_end=4831,
 )
 
 
@@ -2049,8 +2074,8 @@ _CPROTOITEMTEAMSHOWCASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4653,
-  serialized_end=4815,
+  serialized_start=4834,
+  serialized_end=4996,
 )
 
 
@@ -2087,8 +2112,8 @@ _CMATCHPLAYERABILITYUPGRADE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4817,
-  serialized_end=4876,
+  serialized_start=4998,
+  serialized_end=5057,
 )
 
 
@@ -2160,8 +2185,8 @@ _CMATCHPLAYERTIMEDSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4879,
-  serialized_end=5019,
+  serialized_start=5060,
+  serialized_end=5200,
 )
 
 
@@ -2198,8 +2223,8 @@ _CMATCHADDITIONALUNITINVENTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5021,
-  serialized_end=5086,
+  serialized_start=5202,
+  serialized_end=5267,
 )
 
 
@@ -2236,8 +2261,8 @@ _CMATCHPLAYERPERMANENTBUFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5088,
-  serialized_end=5160,
+  serialized_start=5269,
+  serialized_end=5341,
 )
 
 
@@ -2281,8 +2306,8 @@ _CMATCHHEROSELECTEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5162,
-  serialized_end=5233,
+  serialized_start=5343,
+  serialized_end=5414,
 )
 
 
@@ -2326,8 +2351,8 @@ _CPARTYSEARCHCLIENTPARTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5235,
-  serialized_end=5322,
+  serialized_start=5416,
+  serialized_end=5503,
 )
 
 
@@ -2385,8 +2410,8 @@ _CMSGDOTAPROCESSFANTASYSCHEDULEDEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5325,
-  serialized_end=5464,
+  serialized_start=5506,
+  serialized_end=5645,
 )
 
 
@@ -2423,8 +2448,8 @@ _CMSGDOTAHASITEMQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5466,
-  serialized_end=5525,
+  serialized_start=5647,
+  serialized_end=5706,
 )
 
 
@@ -2454,8 +2479,8 @@ _CMSGDOTAHASITEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5527,
-  serialized_end=5570,
+  serialized_start=5708,
+  serialized_end=5751,
 )
 
 
@@ -2485,8 +2510,8 @@ _CMSGGCISPROQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5572,
-  serialized_end=5610,
+  serialized_start=5753,
+  serialized_end=5791,
 )
 
 
@@ -2516,8 +2541,8 @@ _CMSGGCISPRORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5612,
-  serialized_end=5649,
+  serialized_start=5793,
+  serialized_end=5830,
 )
 
 
@@ -2554,8 +2579,8 @@ _CMSGDOTAHASITEMDEFSQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5651,
-  serialized_end=5718,
+  serialized_start=5832,
+  serialized_end=5899,
 )
 
 
@@ -2585,8 +2610,8 @@ _CMSGDOTAHASITEMDEFSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5720,
-  serialized_end=5768,
+  serialized_start=5901,
+  serialized_end=5949,
 )
 
 
@@ -2630,8 +2655,8 @@ _CMSGGCGETPLAYERCARDITEMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5770,
-  serialized_end=5872,
+  serialized_start=5951,
+  serialized_end=6053,
 )
 
 
@@ -2675,8 +2700,8 @@ _CMSGGCGETPLAYERCARDITEMINFORESPONSE_PLAYERCARDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5999,
-  serialized_end=6088,
+  serialized_start=6180,
+  serialized_end=6269,
 )
 
 _CMSGGCGETPLAYERCARDITEMINFORESPONSE = _descriptor.Descriptor(
@@ -2705,8 +2730,8 @@ _CMSGGCGETPLAYERCARDITEMINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5875,
-  serialized_end=6088,
+  serialized_start=6056,
+  serialized_end=6269,
 )
 
 
@@ -2743,8 +2768,8 @@ _CMSGGCTOGCFANTASYSETMATCHLEAGUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6090,
-  serialized_end=6160,
+  serialized_start=6271,
+  serialized_end=6341,
 )
 
 
@@ -2788,8 +2813,8 @@ _CSODOTAMAPLOCATIONSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6162,
-  serialized_end=6259,
+  serialized_start=6343,
+  serialized_end=6440,
 )
 
 
@@ -2819,8 +2844,8 @@ _CMSGLEAGUEADMINLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6261,
-  serialized_end=6303,
+  serialized_start=6442,
+  serialized_end=6484,
 )
 
 
@@ -2885,8 +2910,8 @@ _CCOMPENDIUMTIMESTAMPEDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6306,
-  serialized_end=6434,
+  serialized_start=6487,
+  serialized_end=6615,
 )
 
 
@@ -2923,8 +2948,8 @@ _CCOMPENDIUMGAMETIMELINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6436,
-  serialized_end=6523,
+  serialized_start=6617,
+  serialized_end=6704,
 )
 
 
@@ -2954,8 +2979,8 @@ _CCOMPENDIUMGAMELIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6525,
-  serialized_end=6592,
+  serialized_start=6706,
+  serialized_end=6773,
 )
 
 
@@ -2999,8 +3024,8 @@ _CADDITIONALEQUIPSLOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6594,
-  serialized_end=6670,
+  serialized_start=6775,
+  serialized_end=6851,
 )
 
 
@@ -3037,8 +3062,8 @@ _CMSGDOTAPROFILECARD_SLOT_TROPHY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7422,
-  serialized_end=7471,
+  serialized_start=7810,
+  serialized_end=7859,
 )
 
 _CMSGDOTAPROFILECARD_SLOT_STAT = _descriptor.Descriptor(
@@ -3074,8 +3099,8 @@ _CMSGDOTAPROFILECARD_SLOT_STAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7473,
-  serialized_end=7569,
+  serialized_start=7861,
+  serialized_end=7957,
 )
 
 _CMSGDOTAPROFILECARD_SLOT_ITEM = _descriptor.Descriptor(
@@ -3111,8 +3136,8 @@ _CMSGDOTAPROFILECARD_SLOT_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7571,
-  serialized_end=7619,
+  serialized_start=7959,
+  serialized_end=8007,
 )
 
 _CMSGDOTAPROFILECARD_SLOT_HERO = _descriptor.Descriptor(
@@ -3155,8 +3180,8 @@ _CMSGDOTAPROFILECARD_SLOT_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7621,
-  serialized_end=7684,
+  serialized_start=8009,
+  serialized_end=8072,
 )
 
 _CMSGDOTAPROFILECARD_SLOT_EMOTICON = _descriptor.Descriptor(
@@ -3185,8 +3210,8 @@ _CMSGDOTAPROFILECARD_SLOT_EMOTICON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7686,
-  serialized_end=7717,
+  serialized_start=8074,
+  serialized_end=8105,
 )
 
 _CMSGDOTAPROFILECARD_SLOT_TEAM = _descriptor.Descriptor(
@@ -3215,8 +3240,8 @@ _CMSGDOTAPROFILECARD_SLOT_TEAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7719,
-  serialized_end=7742,
+  serialized_start=8107,
+  serialized_end=8130,
 )
 
 _CMSGDOTAPROFILECARD_SLOT = _descriptor.Descriptor(
@@ -3287,8 +3312,8 @@ _CMSGDOTAPROFILECARD_SLOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7079,
-  serialized_end=7742,
+  serialized_start=7467,
+  serialized_end=8130,
 )
 
 _CMSGDOTAPROFILECARD = _descriptor.Descriptor(
@@ -3389,6 +3414,55 @@ _CMSGDOTAPROFILECARD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rank_tier_mmr_type', full_name='dota.CMsgDOTAProfileCard.rank_tier_mmr_type', index=13,
+      number=14, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rank_tier_core', full_name='dota.CMsgDOTAProfileCard.rank_tier_core', index=14,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rank_tier_core_score', full_name='dota.CMsgDOTAProfileCard.rank_tier_core_score', index=15,
+      number=16, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='leaderboard_rank_core', full_name='dota.CMsgDOTAProfileCard.leaderboard_rank_core', index=16,
+      number=17, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rank_tier_support', full_name='dota.CMsgDOTAProfileCard.rank_tier_support', index=17,
+      number=18, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='rank_tier_support_score', full_name='dota.CMsgDOTAProfileCard.rank_tier_support_score', index=18,
+      number=19, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='leaderboard_rank_support', full_name='dota.CMsgDOTAProfileCard.leaderboard_rank_support', index=19,
+      number=20, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -3402,8 +3476,8 @@ _CMSGDOTAPROFILECARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6673,
-  serialized_end=7924,
+  serialized_start=6854,
+  serialized_end=8336,
 )
 
 
@@ -3545,8 +3619,8 @@ _CSODOTAPLAYERCHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7927,
-  serialized_end=8312,
+  serialized_start=8339,
+  serialized_end=8724,
 )
 
 
@@ -3590,8 +3664,8 @@ _CMSGCLIENTTOGCREROLLPLAYERCHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8314,
-  serialized_end=8436,
+  serialized_start=8726,
+  serialized_end=8848,
 )
 
 
@@ -3622,8 +3696,8 @@ _CMSGGCREROLLPLAYERCHALLENGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8439,
-  serialized_end=8684,
+  serialized_start=8851,
+  serialized_end=9096,
 )
 
 
@@ -3660,8 +3734,8 @@ _CMSGGCTOPCUSTOMGAMESLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8686,
-  serialized_end=8763,
+  serialized_start=9098,
+  serialized_end=9175,
 )
 
 
@@ -3761,8 +3835,8 @@ _CMSGDOTAREALTIMEGAMESTATS_TEAMDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9069,
-  serialized_end=9332,
+  serialized_start=9481,
+  serialized_end=9744,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_ITEMDETAILS = _descriptor.Descriptor(
@@ -3819,8 +3893,8 @@ _CMSGDOTAREALTIMEGAMESTATS_ITEMDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9334,
-  serialized_end=9434,
+  serialized_start=9746,
+  serialized_end=9846,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_ABILITYDETAILS = _descriptor.Descriptor(
@@ -3877,8 +3951,8 @@ _CMSGDOTAREALTIMEGAMESTATS_ABILITYDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9436,
-  serialized_end=9533,
+  serialized_start=9848,
+  serialized_end=9945,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_HEROTOHEROSTATS = _descriptor.Descriptor(
@@ -3921,8 +3995,8 @@ _CMSGDOTAREALTIMEGAMESTATS_HEROTOHEROSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9535,
-  serialized_end=9602,
+  serialized_start=9947,
+  serialized_end=10014,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_ABILITYLIST = _descriptor.Descriptor(
@@ -3951,8 +4025,8 @@ _CMSGDOTAREALTIMEGAMESTATS_ABILITYLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9604,
-  serialized_end=9629,
+  serialized_start=10016,
+  serialized_end=10041,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_PLAYERDETAILS = _descriptor.Descriptor(
@@ -4317,8 +4391,8 @@ _CMSGDOTAREALTIMEGAMESTATS_PLAYERDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9632,
-  serialized_end=10915,
+  serialized_start=10044,
+  serialized_end=11327,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_BUILDINGDETAILS = _descriptor.Descriptor(
@@ -4396,8 +4470,8 @@ _CMSGDOTAREALTIMEGAMESTATS_BUILDINGDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10918,
-  serialized_end=11049,
+  serialized_start=11330,
+  serialized_end=11461,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_KILLDETAILS = _descriptor.Descriptor(
@@ -4440,8 +4514,8 @@ _CMSGDOTAREALTIMEGAMESTATS_KILLDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11051,
-  serialized_end=11129,
+  serialized_start=11463,
+  serialized_end=11541,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_BROADCASTERDETAILS = _descriptor.Descriptor(
@@ -4484,8 +4558,8 @@ _CMSGDOTAREALTIMEGAMESTATS_BROADCASTERDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11131,
-  serialized_end=11217,
+  serialized_start=11543,
+  serialized_end=11629,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_PICKBANDETAILS = _descriptor.Descriptor(
@@ -4521,8 +4595,8 @@ _CMSGDOTAREALTIMEGAMESTATS_PICKBANDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11219,
-  serialized_end=11263,
+  serialized_start=11631,
+  serialized_end=11675,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_MATCHDETAILS = _descriptor.Descriptor(
@@ -4670,8 +4744,8 @@ _CMSGDOTAREALTIMEGAMESTATS_MATCHDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11266,
-  serialized_end=11840,
+  serialized_start=11678,
+  serialized_end=12252,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA_LOCATIONSTATS = _descriptor.Descriptor(
@@ -4700,8 +4774,8 @@ _CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA_LOCATIONSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12039,
-  serialized_end=12069,
+  serialized_start=12451,
+  serialized_end=12481,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA_TEAMLOCATIONSTATS = _descriptor.Descriptor(
@@ -4730,8 +4804,8 @@ _CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA_TEAMLOCATIONSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12071,
-  serialized_end=12166,
+  serialized_start=12483,
+  serialized_end=12578,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA = _descriptor.Descriptor(
@@ -4797,8 +4871,8 @@ _CMSGDOTAREALTIMEGAMESTATS_GRAPHDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11843,
-  serialized_end=12348,
+  serialized_start=12255,
+  serialized_end=12760,
 )
 
 _CMSGDOTAREALTIMEGAMESTATS = _descriptor.Descriptor(
@@ -4855,8 +4929,8 @@ _CMSGDOTAREALTIMEGAMESTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8766,
-  serialized_end=12348,
+  serialized_start=9178,
+  serialized_end=12760,
 )
 
 
@@ -4942,8 +5016,8 @@ _CMSGDOTAREALTIMEGAMESTATSTERSE_TEAMDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12679,
-  serialized_end=12912,
+  serialized_start=13091,
+  serialized_end=13324,
 )
 
 _CMSGDOTAREALTIMEGAMESTATSTERSE_PLAYERDETAILS = _descriptor.Descriptor(
@@ -5084,8 +5158,8 @@ _CMSGDOTAREALTIMEGAMESTATSTERSE_PLAYERDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12915,
-  serialized_end=13219,
+  serialized_start=13327,
+  serialized_end=13631,
 )
 
 _CMSGDOTAREALTIMEGAMESTATSTERSE_BUILDINGDETAILS = _descriptor.Descriptor(
@@ -5163,8 +5237,8 @@ _CMSGDOTAREALTIMEGAMESTATSTERSE_BUILDINGDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13222,
-  serialized_end=13353,
+  serialized_start=13634,
+  serialized_end=13765,
 )
 
 _CMSGDOTAREALTIMEGAMESTATSTERSE_PICKBANDETAILS = _descriptor.Descriptor(
@@ -5200,8 +5274,8 @@ _CMSGDOTAREALTIMEGAMESTATSTERSE_PICKBANDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11219,
-  serialized_end=11263,
+  serialized_start=11631,
+  serialized_end=11675,
 )
 
 _CMSGDOTAREALTIMEGAMESTATSTERSE_MATCHDETAILS = _descriptor.Descriptor(
@@ -5300,8 +5374,8 @@ _CMSGDOTAREALTIMEGAMESTATSTERSE_MATCHDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13402,
-  serialized_end=13752,
+  serialized_start=13814,
+  serialized_end=14164,
 )
 
 _CMSGDOTAREALTIMEGAMESTATSTERSE_GRAPHDATA = _descriptor.Descriptor(
@@ -5330,8 +5404,8 @@ _CMSGDOTAREALTIMEGAMESTATSTERSE_GRAPHDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11843,
-  serialized_end=11874,
+  serialized_start=12255,
+  serialized_end=12286,
 )
 
 _CMSGDOTAREALTIMEGAMESTATSTERSE = _descriptor.Descriptor(
@@ -5388,8 +5462,8 @@ _CMSGDOTAREALTIMEGAMESTATSTERSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12351,
-  serialized_end=13785,
+  serialized_start=12763,
+  serialized_end=14197,
 )
 
 
@@ -5440,8 +5514,8 @@ _CMSGDOTABROADCASTTIMELINEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13788,
-  serialized_end=13958,
+  serialized_start=14200,
+  serialized_end=14370,
 )
 
 
@@ -5471,8 +5545,8 @@ _CMSGGCTOCLIENTMATCHGROUPSVERSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13960,
-  serialized_end=14023,
+  serialized_start=14372,
+  serialized_end=14435,
 )
 
 
@@ -5565,8 +5639,8 @@ _CMSGDOTASDOHEROSTATSHISTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14026,
-  serialized_end=14219,
+  serialized_start=14438,
+  serialized_end=14631,
 )
 
 
@@ -5652,8 +5726,8 @@ _CMSGDOTASEASONREWARDS_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14301,
-  serialized_end=14530,
+  serialized_start=14713,
+  serialized_end=14942,
 )
 
 _CMSGDOTASEASONREWARDS = _descriptor.Descriptor(
@@ -5683,8 +5757,8 @@ _CMSGDOTASEASONREWARDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14222,
-  serialized_end=14636,
+  serialized_start=14634,
+  serialized_end=15048,
 )
 
 
@@ -5770,8 +5844,8 @@ _CMSGDOTASEASONACHIEVEMENTS_ACHIEVEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14738,
-  serialized_end=14946,
+  serialized_start=15150,
+  serialized_end=15358,
 )
 
 _CMSGDOTASEASONACHIEVEMENTS = _descriptor.Descriptor(
@@ -5800,8 +5874,8 @@ _CMSGDOTASEASONACHIEVEMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14639,
-  serialized_end=14946,
+  serialized_start=15051,
+  serialized_end=15358,
 )
 
 
@@ -5852,8 +5926,8 @@ _CMSGDOTASEASONPREDICTIONS_CHOICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15215,
-  serialized_end=15298,
+  serialized_start=15627,
+  serialized_end=15710,
 )
 
 _CMSGDOTASEASONPREDICTIONS_ANSWERS = _descriptor.Descriptor(
@@ -5882,8 +5956,8 @@ _CMSGDOTASEASONPREDICTIONS_ANSWERS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15300,
-  serialized_end=15328,
+  serialized_start=15712,
+  serialized_end=15740,
 )
 
 _CMSGDOTASEASONPREDICTIONS_QUERYKEYVALUES = _descriptor.Descriptor(
@@ -5919,8 +5993,8 @@ _CMSGDOTASEASONPREDICTIONS_QUERYKEYVALUES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15330,
-  serialized_end=15375,
+  serialized_start=15742,
+  serialized_end=15787,
 )
 
 _CMSGDOTASEASONPREDICTIONS_PREDICTION = _descriptor.Descriptor(
@@ -6061,8 +6135,8 @@ _CMSGDOTASEASONPREDICTIONS_PREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15378,
-  serialized_end=16009,
+  serialized_start=15790,
+  serialized_end=16421,
 )
 
 _CMSGDOTASEASONPREDICTIONS_INGAMEPREDICTION = _descriptor.Descriptor(
@@ -6182,8 +6256,8 @@ _CMSGDOTASEASONPREDICTIONS_INGAMEPREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16012,
-  serialized_end=16658,
+  serialized_start=16424,
+  serialized_end=17070,
 )
 
 _CMSGDOTASEASONPREDICTIONS = _descriptor.Descriptor(
@@ -6238,8 +6312,8 @@ _CMSGDOTASEASONPREDICTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14949,
-  serialized_end=17250,
+  serialized_start=15361,
+  serialized_end=17662,
 )
 
 
@@ -6276,8 +6350,8 @@ _CMSGDOTAMATCH_PLAYER_CUSTOMGAMEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20489,
-  serialized_end=20540,
+  serialized_start=20907,
+  serialized_end=20958,
 )
 
 _CMSGDOTAMATCH_PLAYER_HERODAMAGERECEIVED = _descriptor.Descriptor(
@@ -6320,8 +6394,8 @@ _CMSGDOTAMATCH_PLAYER_HERODAMAGERECEIVED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20543,
-  serialized_end=20696,
+  serialized_start=20961,
+  serialized_end=21114,
 )
 
 _CMSGDOTAMATCH_PLAYER = _descriptor.Descriptor(
@@ -6444,365 +6518,365 @@ _CMSGDOTAMATCH_PLAYER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='solo_rank', full_name='dota.CMsgDOTAMatch.Player.solo_rank', index=16,
-      number=49, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='mmr_type', full_name='dota.CMsgDOTAMatch.Player.mmr_type', index=16,
+      number=74, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='seasonal_rank', full_name='dota.CMsgDOTAMatch.Player.seasonal_rank', index=17,
-      number=53, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='rank_tier_updated', full_name='dota.CMsgDOTAMatch.Player.rank_tier_updated', index=18,
+      name='rank_tier_updated', full_name='dota.CMsgDOTAMatch.Player.rank_tier_updated', index=17,
       number=66, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='kills', full_name='dota.CMsgDOTAMatch.Player.kills', index=19,
+      name='kills', full_name='dota.CMsgDOTAMatch.Player.kills', index=18,
       number=14, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='deaths', full_name='dota.CMsgDOTAMatch.Player.deaths', index=20,
+      name='deaths', full_name='dota.CMsgDOTAMatch.Player.deaths', index=19,
       number=15, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='assists', full_name='dota.CMsgDOTAMatch.Player.assists', index=21,
+      name='assists', full_name='dota.CMsgDOTAMatch.Player.assists', index=20,
       number=16, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='leaver_status', full_name='dota.CMsgDOTAMatch.Player.leaver_status', index=22,
+      name='leaver_status', full_name='dota.CMsgDOTAMatch.Player.leaver_status', index=21,
       number=17, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='gold', full_name='dota.CMsgDOTAMatch.Player.gold', index=23,
+      name='gold', full_name='dota.CMsgDOTAMatch.Player.gold', index=22,
       number=18, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='last_hits', full_name='dota.CMsgDOTAMatch.Player.last_hits', index=24,
+      name='last_hits', full_name='dota.CMsgDOTAMatch.Player.last_hits', index=23,
       number=19, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='denies', full_name='dota.CMsgDOTAMatch.Player.denies', index=25,
+      name='denies', full_name='dota.CMsgDOTAMatch.Player.denies', index=24,
       number=20, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='gold_per_min', full_name='dota.CMsgDOTAMatch.Player.gold_per_min', index=26,
+      name='gold_per_min', full_name='dota.CMsgDOTAMatch.Player.gold_per_min', index=25,
       number=21, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='XP_per_min', full_name='dota.CMsgDOTAMatch.Player.XP_per_min', index=27,
+      name='XP_per_min', full_name='dota.CMsgDOTAMatch.Player.XP_per_min', index=26,
       number=22, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='gold_spent', full_name='dota.CMsgDOTAMatch.Player.gold_spent', index=28,
+      name='gold_spent', full_name='dota.CMsgDOTAMatch.Player.gold_spent', index=27,
       number=23, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hero_damage', full_name='dota.CMsgDOTAMatch.Player.hero_damage', index=29,
+      name='hero_damage', full_name='dota.CMsgDOTAMatch.Player.hero_damage', index=28,
       number=24, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tower_damage', full_name='dota.CMsgDOTAMatch.Player.tower_damage', index=30,
+      name='tower_damage', full_name='dota.CMsgDOTAMatch.Player.tower_damage', index=29,
       number=25, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hero_healing', full_name='dota.CMsgDOTAMatch.Player.hero_healing', index=31,
+      name='hero_healing', full_name='dota.CMsgDOTAMatch.Player.hero_healing', index=30,
       number=26, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='level', full_name='dota.CMsgDOTAMatch.Player.level', index=32,
+      name='level', full_name='dota.CMsgDOTAMatch.Player.level', index=31,
       number=27, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_last_seen', full_name='dota.CMsgDOTAMatch.Player.time_last_seen', index=33,
+      name='time_last_seen', full_name='dota.CMsgDOTAMatch.Player.time_last_seen', index=32,
       number=28, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='player_name', full_name='dota.CMsgDOTAMatch.Player.player_name', index=34,
+      name='player_name', full_name='dota.CMsgDOTAMatch.Player.player_name', index=33,
       number=29, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='support_ability_value', full_name='dota.CMsgDOTAMatch.Player.support_ability_value', index=35,
+      name='support_ability_value', full_name='dota.CMsgDOTAMatch.Player.support_ability_value', index=34,
       number=30, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='feeding_detected', full_name='dota.CMsgDOTAMatch.Player.feeding_detected', index=36,
+      name='feeding_detected', full_name='dota.CMsgDOTAMatch.Player.feeding_detected', index=35,
       number=32, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='search_rank', full_name='dota.CMsgDOTAMatch.Player.search_rank', index=37,
+      name='search_rank', full_name='dota.CMsgDOTAMatch.Player.search_rank', index=36,
       number=34, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='search_rank_uncertainty', full_name='dota.CMsgDOTAMatch.Player.search_rank_uncertainty', index=38,
+      name='search_rank_uncertainty', full_name='dota.CMsgDOTAMatch.Player.search_rank_uncertainty', index=37,
       number=35, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='rank_uncertainty_change', full_name='dota.CMsgDOTAMatch.Player.rank_uncertainty_change', index=39,
+      name='rank_uncertainty_change', full_name='dota.CMsgDOTAMatch.Player.rank_uncertainty_change', index=38,
       number=36, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hero_play_count', full_name='dota.CMsgDOTAMatch.Player.hero_play_count', index=40,
+      name='hero_play_count', full_name='dota.CMsgDOTAMatch.Player.hero_play_count', index=39,
       number=37, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='party_id', full_name='dota.CMsgDOTAMatch.Player.party_id', index=41,
+      name='party_id', full_name='dota.CMsgDOTAMatch.Player.party_id', index=40,
       number=38, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scaled_hero_damage', full_name='dota.CMsgDOTAMatch.Player.scaled_hero_damage', index=42,
+      name='scaled_hero_damage', full_name='dota.CMsgDOTAMatch.Player.scaled_hero_damage', index=41,
       number=54, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scaled_tower_damage', full_name='dota.CMsgDOTAMatch.Player.scaled_tower_damage', index=43,
+      name='scaled_tower_damage', full_name='dota.CMsgDOTAMatch.Player.scaled_tower_damage', index=42,
       number=55, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scaled_hero_healing', full_name='dota.CMsgDOTAMatch.Player.scaled_hero_healing', index=44,
+      name='scaled_hero_healing', full_name='dota.CMsgDOTAMatch.Player.scaled_hero_healing', index=43,
       number=56, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scaled_kills', full_name='dota.CMsgDOTAMatch.Player.scaled_kills', index=45,
+      name='scaled_kills', full_name='dota.CMsgDOTAMatch.Player.scaled_kills', index=44,
       number=39, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scaled_deaths', full_name='dota.CMsgDOTAMatch.Player.scaled_deaths', index=46,
+      name='scaled_deaths', full_name='dota.CMsgDOTAMatch.Player.scaled_deaths', index=45,
       number=40, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scaled_assists', full_name='dota.CMsgDOTAMatch.Player.scaled_assists', index=47,
+      name='scaled_assists', full_name='dota.CMsgDOTAMatch.Player.scaled_assists', index=46,
       number=41, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='claimed_farm_gold', full_name='dota.CMsgDOTAMatch.Player.claimed_farm_gold', index=48,
+      name='claimed_farm_gold', full_name='dota.CMsgDOTAMatch.Player.claimed_farm_gold', index=47,
       number=42, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='support_gold', full_name='dota.CMsgDOTAMatch.Player.support_gold', index=49,
+      name='support_gold', full_name='dota.CMsgDOTAMatch.Player.support_gold', index=48,
       number=43, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='claimed_denies', full_name='dota.CMsgDOTAMatch.Player.claimed_denies', index=50,
+      name='claimed_denies', full_name='dota.CMsgDOTAMatch.Player.claimed_denies', index=49,
       number=44, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='claimed_misses', full_name='dota.CMsgDOTAMatch.Player.claimed_misses', index=51,
+      name='claimed_misses', full_name='dota.CMsgDOTAMatch.Player.claimed_misses', index=50,
       number=45, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='misses', full_name='dota.CMsgDOTAMatch.Player.misses', index=52,
+      name='misses', full_name='dota.CMsgDOTAMatch.Player.misses', index=51,
       number=46, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ability_upgrades', full_name='dota.CMsgDOTAMatch.Player.ability_upgrades', index=53,
+      name='ability_upgrades', full_name='dota.CMsgDOTAMatch.Player.ability_upgrades', index=52,
       number=47, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='additional_units_inventory', full_name='dota.CMsgDOTAMatch.Player.additional_units_inventory', index=54,
+      name='additional_units_inventory', full_name='dota.CMsgDOTAMatch.Player.additional_units_inventory', index=53,
       number=48, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='permanent_buffs', full_name='dota.CMsgDOTAMatch.Player.permanent_buffs', index=55,
+      name='permanent_buffs', full_name='dota.CMsgDOTAMatch.Player.permanent_buffs', index=54,
       number=57, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='pro_name', full_name='dota.CMsgDOTAMatch.Player.pro_name', index=56,
+      name='pro_name', full_name='dota.CMsgDOTAMatch.Player.pro_name', index=55,
       number=72, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='real_name', full_name='dota.CMsgDOTAMatch.Player.real_name', index=57,
+      name='real_name', full_name='dota.CMsgDOTAMatch.Player.real_name', index=56,
       number=73, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='custom_game_data', full_name='dota.CMsgDOTAMatch.Player.custom_game_data', index=58,
+      name='custom_game_data', full_name='dota.CMsgDOTAMatch.Player.custom_game_data', index=57,
       number=50, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='active_plus_subscription', full_name='dota.CMsgDOTAMatch.Player.active_plus_subscription', index=59,
+      name='active_plus_subscription', full_name='dota.CMsgDOTAMatch.Player.active_plus_subscription', index=58,
       number=51, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='net_worth', full_name='dota.CMsgDOTAMatch.Player.net_worth', index=60,
+      name='net_worth', full_name='dota.CMsgDOTAMatch.Player.net_worth', index=59,
       number=52, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='bot_difficulty', full_name='dota.CMsgDOTAMatch.Player.bot_difficulty', index=61,
+      name='bot_difficulty', full_name='dota.CMsgDOTAMatch.Player.bot_difficulty', index=60,
       number=58, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hero_pick_order', full_name='dota.CMsgDOTAMatch.Player.hero_pick_order', index=62,
+      name='hero_pick_order', full_name='dota.CMsgDOTAMatch.Player.hero_pick_order', index=61,
       number=63, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hero_was_randomed', full_name='dota.CMsgDOTAMatch.Player.hero_was_randomed', index=63,
+      name='hero_was_randomed', full_name='dota.CMsgDOTAMatch.Player.hero_was_randomed', index=62,
       number=64, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hero_was_dota_plus_suggestion', full_name='dota.CMsgDOTAMatch.Player.hero_was_dota_plus_suggestion', index=64,
+      name='hero_was_dota_plus_suggestion', full_name='dota.CMsgDOTAMatch.Player.hero_was_dota_plus_suggestion', index=63,
       number=69, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hero_damage_received', full_name='dota.CMsgDOTAMatch.Player.hero_damage_received', index=65,
+      name='hero_damage_received', full_name='dota.CMsgDOTAMatch.Player.hero_damage_received', index=64,
       number=67, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='seconds_dead', full_name='dota.CMsgDOTAMatch.Player.seconds_dead', index=66,
+      name='seconds_dead', full_name='dota.CMsgDOTAMatch.Player.seconds_dead', index=65,
       number=70, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='gold_lost_to_death', full_name='dota.CMsgDOTAMatch.Player.gold_lost_to_death', index=67,
+      name='gold_lost_to_death', full_name='dota.CMsgDOTAMatch.Player.gold_lost_to_death', index=66,
       number=71, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='lane_selection_flags', full_name='dota.CMsgDOTAMatch.Player.lane_selection_flags', index=67,
+      number=75, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -6820,8 +6894,8 @@ _CMSGDOTAMATCH_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18751,
-  serialized_end=20787,
+  serialized_start=19163,
+  serialized_end=21205,
 )
 
 _CMSGDOTAMATCH_BROADCASTERINFO = _descriptor.Descriptor(
@@ -6857,8 +6931,8 @@ _CMSGDOTAMATCH_BROADCASTERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20789,
-  serialized_end=20840,
+  serialized_start=21207,
+  serialized_end=21258,
 )
 
 _CMSGDOTAMATCH_BROADCASTERCHANNEL = _descriptor.Descriptor(
@@ -6908,8 +6982,8 @@ _CMSGDOTAMATCH_BROADCASTERCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20843,
-  serialized_end=20993,
+  serialized_start=21261,
+  serialized_end=21411,
 )
 
 _CMSGDOTAMATCH_COACH = _descriptor.Descriptor(
@@ -6966,8 +7040,8 @@ _CMSGDOTAMATCH_COACH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20995,
-  serialized_end=21108,
+  serialized_start=21413,
+  serialized_end=21526,
 )
 
 _CMSGDOTAMATCH_CUSTOMGAMEDATA = _descriptor.Descriptor(
@@ -7003,8 +7077,8 @@ _CMSGDOTAMATCH_CUSTOMGAMEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21110,
-  serialized_end=21168,
+  serialized_start=21528,
+  serialized_end=21586,
 )
 
 _CMSGDOTAMATCH = _descriptor.Descriptor(
@@ -7384,8 +7458,8 @@ _CMSGDOTAMATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17253,
-  serialized_end=21250,
+  serialized_start=17665,
+  serialized_end=21668,
 )
 
 
@@ -7422,8 +7496,8 @@ _CMSGPLAYERCARD_STATMODIFIER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21349,
-  serialized_end=21392,
+  serialized_start=21767,
+  serialized_end=21810,
 )
 
 _CMSGPLAYERCARD = _descriptor.Descriptor(
@@ -7459,8 +7533,8 @@ _CMSGPLAYERCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21253,
-  serialized_end=21392,
+  serialized_start=21671,
+  serialized_end=21810,
 )
 
 
@@ -7623,8 +7697,8 @@ _CMSGDOTAFANTASYPLAYERSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21395,
-  serialized_end=21820,
+  serialized_start=21813,
+  serialized_end=22238,
 )
 
 
@@ -7654,8 +7728,8 @@ _CMSGDOTAFANTASYPLAYERMATCHSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21822,
-  serialized_end=21906,
+  serialized_start=22240,
+  serialized_end=22324,
 )
 
 
@@ -7720,8 +7794,8 @@ _CMSGDOTABOTDEBUGINFO_BOT_MODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22664,
-  serialized_end=22780,
+  serialized_start=23082,
+  serialized_end=23198,
 )
 
 _CMSGDOTABOTDEBUGINFO_BOT_ACTION = _descriptor.Descriptor(
@@ -7757,8 +7831,8 @@ _CMSGDOTABOTDEBUGINFO_BOT_ACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22782,
-  serialized_end=22832,
+  serialized_start=23200,
+  serialized_end=23250,
 )
 
 _CMSGDOTABOTDEBUGINFO_BOT = _descriptor.Descriptor(
@@ -7864,8 +7938,8 @@ _CMSGDOTABOTDEBUGINFO_BOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22329,
-  serialized_end=22832,
+  serialized_start=22747,
+  serialized_end=23250,
 )
 
 _CMSGDOTABOTDEBUGINFO = _descriptor.Descriptor(
@@ -7978,8 +8052,8 @@ _CMSGDOTABOTDEBUGINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21909,
-  serialized_end=22832,
+  serialized_start=22327,
+  serialized_end=23250,
 )
 
 
@@ -8023,8 +8097,8 @@ _CMSGSUCCESSFULHERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22834,
-  serialized_end=22916,
+  serialized_start=23252,
+  serialized_end=23334,
 )
 
 
@@ -8110,8 +8184,8 @@ _CMSGRECENTMATCHINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22919,
-  serialized_end=23193,
+  serialized_start=23337,
+  serialized_end=23611,
 )
 
 
@@ -8162,8 +8236,8 @@ _CMSGMATCHTIPS_SINGLETIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23259,
-  serialized_end=23391,
+  serialized_start=23677,
+  serialized_end=23809,
 )
 
 _CMSGMATCHTIPS = _descriptor.Descriptor(
@@ -8192,8 +8266,8 @@ _CMSGMATCHTIPS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23196,
-  serialized_end=23391,
+  serialized_start=23614,
+  serialized_end=23809,
 )
 
 
@@ -8272,8 +8346,8 @@ _CMSGDOTAMATCHMINIMAL_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23752,
-  serialized_end=23899,
+  serialized_start=24170,
+  serialized_end=24317,
 )
 
 _CMSGDOTAMATCHMINIMAL_TOURNEY = _descriptor.Descriptor(
@@ -8400,8 +8474,8 @@ _CMSGDOTAMATCHMINIMAL_TOURNEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23902,
-  serialized_end=24332,
+  serialized_start=24320,
+  serialized_end=24750,
 )
 
 _CMSGDOTAMATCHMINIMAL = _descriptor.Descriptor(
@@ -8486,8 +8560,8 @@ _CMSGDOTAMATCHMINIMAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23394,
-  serialized_end=24332,
+  serialized_start=23812,
+  serialized_end=24750,
 )
 
 
@@ -8524,8 +8598,8 @@ _CMSGCONSUMABLEUSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24334,
-  serialized_end=24398,
+  serialized_start=24752,
+  serialized_end=24816,
 )
 
 
@@ -8562,8 +8636,8 @@ _CMSGMATCHCONSUMABLEUSAGE_PLAYERUSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24506,
-  serialized_end=24592,
+  serialized_start=24924,
+  serialized_end=25010,
 )
 
 _CMSGMATCHCONSUMABLEUSAGE = _descriptor.Descriptor(
@@ -8592,8 +8666,8 @@ _CMSGMATCHCONSUMABLEUSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24401,
-  serialized_end=24592,
+  serialized_start=24819,
+  serialized_end=25010,
 )
 
 
@@ -8644,8 +8718,8 @@ _CMSGMATCHEVENTACTIONGRANTS_GRANT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24695,
-  serialized_end=24772,
+  serialized_start=25113,
+  serialized_end=25190,
 )
 
 _CMSGMATCHEVENTACTIONGRANTS_PLAYERGRANTS = _descriptor.Descriptor(
@@ -8681,8 +8755,8 @@ _CMSGMATCHEVENTACTIONGRANTS_PLAYERGRANTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24774,
-  serialized_end=24873,
+  serialized_start=25192,
+  serialized_end=25291,
 )
 
 _CMSGMATCHEVENTACTIONGRANTS = _descriptor.Descriptor(
@@ -8711,8 +8785,8 @@ _CMSGMATCHEVENTACTIONGRANTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24595,
-  serialized_end=24873,
+  serialized_start=25013,
+  serialized_end=25291,
 )
 
 
@@ -8756,8 +8830,8 @@ _CMSGCUSTOMGAMEWHITELIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24875,
-  serialized_end=24976,
+  serialized_start=25293,
+  serialized_end=25394,
 )
 
 
@@ -8794,8 +8868,8 @@ _CMSGCUSTOMGAMEWHITELISTFOREDIT_WHITELISTENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25094,
-  serialized_end=25229,
+  serialized_start=25512,
+  serialized_end=25647,
 )
 
 _CMSGCUSTOMGAMEWHITELISTFOREDIT = _descriptor.Descriptor(
@@ -8824,8 +8898,8 @@ _CMSGCUSTOMGAMEWHITELISTFOREDIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24979,
-  serialized_end=25229,
+  serialized_start=25397,
+  serialized_end=25647,
 )
 
 
@@ -8904,8 +8978,8 @@ _CMSGPLAYERRECENTMATCHINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25232,
-  serialized_end=25392,
+  serialized_start=25650,
+  serialized_end=25810,
 )
 
 
@@ -8942,8 +9016,8 @@ _CMSGPLAYERMATCHRECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25394,
-  serialized_end=25447,
+  serialized_start=25812,
+  serialized_end=25865,
 )
 
 
@@ -8980,8 +9054,8 @@ _CMSGPLAYERRECENTMATCHOUTCOMES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25449,
-  serialized_end=25519,
+  serialized_start=25867,
+  serialized_end=25937,
 )
 
 
@@ -9018,8 +9092,8 @@ _CMSGPLAYERRECENTCOMMENDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25521,
-  serialized_end=25586,
+  serialized_start=25939,
+  serialized_end=26004,
 )
 
 
@@ -9098,8 +9172,8 @@ _CMSGPLAYERRECENTACCOMPLISHMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25589,
-  serialized_end=25993,
+  serialized_start=26007,
+  serialized_end=26411,
 )
 
 
@@ -9143,8 +9217,8 @@ _CMSGPLAYERHERORECENTACCOMPLISHMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25996,
-  serialized_end=26199,
+  serialized_start=26414,
+  serialized_end=26617,
 )
 
 
@@ -9181,8 +9255,8 @@ _CMSGRECENTACCOMPLISHMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26202,
-  serialized_end=26373,
+  serialized_start=26620,
+  serialized_end=26791,
 )
 
 
@@ -9219,8 +9293,8 @@ _CMSGREQUESTPLAYERRECENTACCOMPLISHMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26375,
-  serialized_end=26452,
+  serialized_start=26793,
+  serialized_end=26870,
 )
 
 
@@ -9258,8 +9332,8 @@ _CMSGREQUESTPLAYERRECENTACCOMPLISHMENTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26455,
-  serialized_end=26750,
+  serialized_start=26873,
+  serialized_end=27168,
 )
 
 _CSODOTAGAMEACCOUNTCLIENT.fields_by_name['partner_account_type'].enum_type = gcsdk__gcmessages__pb2._PARTNERACCOUNTTYPE

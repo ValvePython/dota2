@@ -91,10 +91,10 @@ message CSODOTAGameAccountClient {
 	optional uint32 partner_account_state = 45;
 	optional uint32 shutdownlawterminatetimestamp = 47;
 	optional uint32 low_priority_games_remaining = 48;
-	optional uint32 competitive_rank = 49;
-	optional uint32 calibration_games_remaining = 51;
-	optional uint32 solo_competitive_rank = 52;
-	optional uint32 solo_calibration_games_remaining = 54;
+	optional uint32 competitive_2019_rank = 49;
+	optional uint32 competitive_2019_calibration_games_remaining = 51;
+	optional uint32 solo_competitive_2019_rank = 52;
+	optional uint32 solo_competitive_2019_calibration_games_remaining = 54;
 	optional uint32 recruitment_level = 55;
 	optional bool has_new_notifications = 56;
 	optional bool is_league_admin = 57;
@@ -102,7 +102,6 @@ message CSODOTAGameAccountClient {
 	optional uint32 solo_competitive_games_played = 61;
 	optional uint32 party_competitive_games_played = 62;
 	optional uint32 casual_1v1_games_played = 65;
-	optional uint32 competitive_team_games_played = 66;
 	optional uint32 curr_all_hero_challenge_id = 67;
 	optional uint32 play_time_points = 68;
 	optional uint32 account_flags = 69;
@@ -135,6 +134,10 @@ message CSODOTAGameAccountClient {
 	optional uint32 recent_win_time_2 = 107;
 	optional uint32 recent_win_time_3 = 108;
 	optional uint32 coach_rating = 109;
+	optional uint32 competitive_core_rank = 110;
+	optional uint32 competitive_core_calibration_games_remaining = 111;
+	optional uint32 competitive_support_rank = 112;
+	optional uint32 competitive_support_calibration_games_remaining = 113;
 }
 
 message CSODOTAGameAccountPlus {
@@ -376,7 +379,7 @@ message CMsgDOTAProfileCard {
 		}
 
 		message Stat {
-			optional dota.CMsgDOTAProfileCard.EStatID stat_id = 1 [default = k_eStat_SoloRank];
+			optional dota.CMsgDOTAProfileCard.EStatID stat_id = 1 [default = k_eStat_CoreRank];
 			optional uint32 stat_score = 2;
 		}
 
@@ -409,13 +412,14 @@ message CMsgDOTAProfileCard {
 	}
 
 	enum EStatID {
-		k_eStat_SoloRank = 1;
-		k_eStat_PartyRank = 2;
+		k_eStat_CoreRank = 1;
+		k_eStat_SupportRank = 2;
 		k_eStat_Wins = 3;
 		k_eStat_Commends = 4;
 		k_eStat_GamesPlayed = 5;
 		k_eStat_FirstMatchDate = 6;
 		k_eStat_PreviousSeasonRank = 7;
+		k_eStat_GamesMVP = 8;
 	}
 
 	optional uint32 account_id = 1;
@@ -431,6 +435,13 @@ message CMsgDOTAProfileCard {
 	optional uint32 plus_original_start_date = 11;
 	optional uint32 rank_tier_score = 12;
 	optional uint32 previous_rank_tier = 13;
+	optional uint32 rank_tier_mmr_type = 14;
+	optional uint32 rank_tier_core = 15;
+	optional uint32 rank_tier_core_score = 16;
+	optional uint32 leaderboard_rank_core = 17;
+	optional uint32 rank_tier_support = 18;
+	optional uint32 rank_tier_support_score = 19;
+	optional uint32 leaderboard_rank_support = 20;
 }
 
 message CSODOTAPlayerChallenge {
@@ -936,8 +947,7 @@ message CMsgDOTAMatch {
 		optional float scaled_metric = 11;
 		optional uint32 previous_rank = 12;
 		optional sint32 rank_change = 13;
-		optional bool solo_rank = 49;
-		optional bool seasonal_rank = 53;
+		optional uint32 mmr_type = 74;
 		optional bool rank_tier_updated = 66;
 		optional uint32 kills = 14;
 		optional uint32 deaths = 15;
@@ -988,6 +998,7 @@ message CMsgDOTAMatch {
 		repeated dota.CMsgDOTAMatch.Player.HeroDamageReceived hero_damage_received = 67;
 		optional uint32 seconds_dead = 70;
 		optional uint32 gold_lost_to_death = 71;
+		optional uint32 lane_selection_flags = 75;
 	}
 
 	message BroadcasterInfo {

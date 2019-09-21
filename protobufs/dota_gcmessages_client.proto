@@ -71,6 +71,7 @@ enum EDOTATriviaQuestionCategory {
 	k_EDOTATriviaQuestionCategory_AbilityName = 11;
 	k_EDOTATriviaQuestionCategory_ItemComponents = 12;
 	k_EDOTATriviaQuestionCategory_ItemLore = 13;
+	k_EDOTATriviaQuestionCategory_ItemPassives = 14;
 }
 
 enum EDOTATriviaAnswerResult {
@@ -242,7 +243,7 @@ message CMsgDOTAPopup {
 		CLIENT_OUT_OF_DATE = 32;
 		SAVE_GAME_CORRUPT = 38;
 		INSUFFICIENT_INGOTS = 39;
-		COMPETITIVE_MM_NOT_ENOUGH_SKILL_DATA_PLAY_MORE_CASUAL = 42;
+		COMPETITIVE_MM_NOT_ENOUGH_PLAY_TIME_PLAY_MORE_CASUAL = 42;
 		PARTY_LEADER_JOINED_LOBBY = 44;
 		WEEKEND_TOURNEY_UNMATCHED = 48;
 		POST_MATCH_SURVEY = 49;
@@ -895,7 +896,6 @@ message CMsgDOTACompendiumSelection {
 
 message CMsgDOTACompendiumSelectionResponse {
 	optional uint32 eresult = 1 [default = 2];
-	repeated dota.CMsgDOTACompendiumSelection extra_selections = 2;
 }
 
 message CMsgDOTACompendiumData {
@@ -3202,5 +3202,48 @@ message CMsgClientToGCGetUnderlordsCDKeyResponse {
 
 	optional dota.CMsgClientToGCGetUnderlordsCDKeyResponse.EResponse result = 1 [default = Success];
 	repeated string cd_keys = 2;
+}
+
+message CMsgClientToGCSetFavoriteAllStarPlayer {
+	optional uint32 player_id = 1;
+	optional uint32 event_id = 2;
+}
+
+message CMsgClientToGCSetFavoriteAllStarPlayerResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eAlreadySubmitted = 4;
+		k_ePlayerNotValid = 5;
+		k_eDoesntOwnEvent = 6;
+		k_eEventNotValid = 7;
+	}
+
+	optional dota.CMsgClientToGCSetFavoriteAllStarPlayerResponse.EResponse result = 1 [default = k_eInternalError];
+	optional uint32 player_id = 2;
+}
+
+message CMsgClientToGCGetFavoriteAllStarPlayerRequest {
+}
+
+message CMsgClientToGCGetFavoriteAllStarPlayerResponse {
+	enum EResponse {
+		k_eSuccess = 0;
+		k_eNoPick = 1;
+		k_eInternalError = 2;
+	}
+
+	optional dota.CMsgClientToGCGetFavoriteAllStarPlayerResponse.EResponse result = 1 [default = k_eSuccess];
+	optional uint32 player_id = 2;
+	optional uint32 picking_allowed_until = 3;
+	optional uint32 earned_battle_points = 4;
+}
+
+message CMsgClientToGCVerifyIntegrity {
+	optional uint32 currency = 1;
+	optional uint32 additional_user_message = 2;
+	optional bytes acked = 3;
 }
 
