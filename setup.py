@@ -15,9 +15,9 @@ with open(path.join(here, 'dota2/__init__.py'), encoding='utf-8') as f:
     __version__ = f.readline().split('"')[1]
 
 install_requires = [
-    'steam[client]>=0.8.15,<1.0.0',
-    'gevent-eventemitter>=2.0',
-    'gevent>=1.1',
+    'steam[client]~=1.0',
+    'gevent-eventemitter>=2.1',
+    'gevent>=1.3.0',
     'protobuf>=3.0.0',
 ]
 
@@ -43,6 +43,9 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
     ],
     keywords='valve steam steamid api webapi',
     packages=['dota2'] + ['dota2.'+x for x in find_packages(where='dota2')],

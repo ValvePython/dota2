@@ -10,7 +10,7 @@ from eventemitter import EventEmitter
 from steam.core.msg import GCMsgHdrProto
 from steam.client.gc import GameCoordinator
 from steam.enums.emsg import EMsg
-from steam.util import proto_fill_from_dict
+from steam.utils.proto import proto_fill_from_dict
 from dota2.features import FeatureBase
 from dota2.enums import EGCBaseClientMsg, EDOTAGCSessionNeed, GCConnectionStatus, ESourceEngine
 from dota2.msg import get_emsg_enum, find_proto
