@@ -20,8 +20,8 @@ for details about :class:`SteamClient <steam:steam.client.SteamClient>`.
 
 .. code:: python
 
-    from steam import SteamClient
-    from dota2 import Dota2Client
+    from steam.client import SteamClient
+    from dota2.client import Dota2Client
 
     client = SteamClient()
     dota = Dota2Client(client)
