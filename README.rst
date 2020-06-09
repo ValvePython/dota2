@@ -1,4 +1,5 @@
-|pypi| |license| |docs|
+| |pypi| |license| |docs|
+| |sonar_maintainability| |sonar_reliability| |sonar_security|
 
 Supports Python ``2.7+`` and ``3.4+``.
 
@@ -37,3 +38,15 @@ Install the current dev version from ``github``::
 .. |docs| image:: https://readthedocs.org/projects/dota2/badge/?version=latest
     :target: http://dota2.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation status
+
+.. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=ValvePython_dota2&metric=sqale_rating
+    :target: https://sonarcloud.io/dashboard?id=ValvePython_dota2
+    :alt: SonarCloud Rating
+
+.. |sonar_reliability| image:: https://sonarcloud.io/api/project_badges/measure?project=ValvePython_dota2&metric=reliability_rating
+    :target: https://sonarcloud.io/dashboard?id=ValvePython_dota2
+    :alt: SonarCloud Rating
+
+.. |sonar_security| image:: https://sonarcloud.io/api/project_badges/measure?project=ValvePython_dota2&metric=security_rating
+    :target: https://sonarcloud.io/dashboard?id=ValvePython_dota2
+    :alt: SonarCloud Rating
