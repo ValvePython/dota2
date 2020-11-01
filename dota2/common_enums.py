@@ -47,6 +47,7 @@ class EServerRegion(IntEnum):
     Peru = 15
     India = 16
     Japan = 19
+    Taiwan = 37
 
 
 # Do not remove
