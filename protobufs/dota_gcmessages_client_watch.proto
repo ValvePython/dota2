@@ -41,6 +41,7 @@ message CSourceTVGameSmall {
 	optional uint32 weekend_tourney_division = 27;
 	optional uint32 weekend_tourney_skill_level = 28;
 	optional uint32 weekend_tourney_bracket_round = 29;
+	optional uint32 custom_game_difficulty = 32;
 }
 
 message CMsgClientToGCFindTopSourceTVGames {
@@ -227,4 +228,3 @@ message CMsgDOTASeries {
 	repeated dota.CMsgDOTAMatchMinimal match_minimal = 5;
 	optional dota.CMsgDOTASeries.LiveGame live_game = 6;
 }
-

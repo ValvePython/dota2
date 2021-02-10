@@ -83,7 +83,14 @@ enum EEvent {
 	EVENT_ID_FROSTIVUS_2018 = 23;
 	EVENT_ID_NEW_BLOOM_2019 = 24;
 	EVENT_ID_INTERNATIONAL_2019 = 25;
-	EVENT_ID_COUNT = 26;
+	EVENT_ID_NEW_PLAYER_EXPERIENCE = 26;
+	EVENT_ID_FROSTIVUS_2019 = 27;
+	EVENT_ID_NEW_BLOOM_2020 = 28;
+	EVENT_ID_INTERNATIONAL_2020 = 29;
+	EVENT_ID_TEAM_FANDOM = 30;
+	EVENT_ID_DIRETIDE_2020 = 31;
+	EVENT_ID_SPRING_2021 = 32;
+	EVENT_ID_COUNT = 33;
 }
 
 enum DOTALeaverStatus_t {
@@ -188,6 +195,7 @@ enum DOTALowPriorityBanType {
 	DOTA_LOW_PRIORITY_BAN_ABANDON = 0;
 	DOTA_LOW_PRIORITY_BAN_REPORTS = 1;
 	DOTA_LOW_PRIORITY_BAN_SECONDARY_ABANDON = 2;
+	DOTA_LOW_PRIORITY_BAN_PRE_GAME_ROLE = 3;
 }
 
 enum DOTALobbyReadyState {
@@ -216,6 +224,7 @@ enum DOTAJoinLobbyResult {
 	DOTA_JOIN_RESULT_TIMEOUT = 11;
 	DOTA_JOIN_RESULT_CUSTOM_GAME_COOLDOWN = 12;
 	DOTA_JOIN_RESULT_BUSY = 13;
+	DOTA_JOIN_RESULT_NO_PLAYTIME = 14;
 }
 
 enum DOTASelectionPriorityRules {
@@ -237,15 +246,6 @@ enum DOTAMatchVote {
 	DOTAMatchVote_NEGATIVE = 2;
 }
 
-enum DOTA_LobbyMemberXPBonus {
-	DOTA_LobbyMemberXPBonus_DEFAULT = 0;
-	DOTA_LobbyMemberXPBonus_BATTLE_BOOSTER = 1;
-	DOTA_LobbyMemberXPBonus_SHARE_BONUS = 2;
-	DOTA_LobbyMemberXPBonus_PARTY = 3;
-	DOTA_LobbyMemberXPBonus_RECRUITMENT = 4;
-	DOTA_LobbyMemberXPBonus_PCBANG = 5;
-}
-
 enum DOTALobbyVisibility {
 	DOTALobbyVisibility_Public = 0;
 	DOTALobbyVisibility_Friends = 1;
@@ -255,13 +255,20 @@ enum DOTALobbyVisibility {
 enum EDOTAPlayerMMRType {
 	k_EDOTAPlayerMMRType_Invalid = 0;
 	k_EDOTAPlayerMMRType_GeneralHidden = 1;
-	k_EDOTAPlayerMMRType_GeneralCompetitive2019 = 3;
+	k_EDOTAPlayerMMRType_GeneralCompetitive = 3;
 	k_EDOTAPlayerMMRType_SoloCompetitive2019 = 4;
 	k_EDOTAPlayerMMRType_1v1Competitive_UNUSED = 5;
 	k_EDOTAPlayerMMRType_GeneralSeasonalRanked = 6;
 	k_EDOTAPlayerMMRType_SoloSeasonalRanked = 7;
 	k_EDOTAPlayerMMRType_Competitive_Core = 8;
 	k_EDOTAPlayerMMRType_Competitive_Support = 9;
+	k_EDOTAPlayerMMRType_Competitive_Classic = 10;
+}
+
+enum EDOTAMMRBoostType {
+	k_EDOTAMMRBoostType_None = 0;
+	k_EDOTAMMRBoostType_Leader = 1;
+	k_EDOTAMMRBoostType_Follower = 2;
 }
 
 enum MatchType {
@@ -278,6 +285,7 @@ enum MatchType {
 	MATCH_TYPE_STEAM_GROUP = 10;
 	MATCH_TYPE_MUTATION = 11;
 	MATCH_TYPE_COACHES_CHALLENGE = 12;
+	MATCH_TYPE_GAUNTLET = 13;
 }
 
 enum DOTABotDifficulty {
@@ -351,6 +359,7 @@ enum EMatchOutcome {
 	k_EMatchOutcome_NotScored_ServerCrash = 66;
 	k_EMatchOutcome_NotScored_NeverStarted = 67;
 	k_EMatchOutcome_NotScored_Canceled = 68;
+	k_EMatchOutcome_NotScored_Suspicious = 69;
 }
 
 enum ELaneType {
@@ -398,6 +407,9 @@ enum ELeagueTier {
 	LEAGUE_TIER_MINOR = 3;
 	LEAGUE_TIER_MAJOR = 4;
 	LEAGUE_TIER_INTERNATIONAL = 5;
+	LEAGUE_TIER_DPC_QUALIFIER = 6;
+	LEAGUE_TIER_DPC_LEAGUE_QUALIFIER = 7;
+	LEAGUE_TIER_DPC_LEAGUE = 8;
 }
 
 enum ELeagueTierCategory {
@@ -429,17 +441,6 @@ enum ELeaguePhase {
 	LEAGUE_PHASE_MAIN_EVENT = 3;
 }
 
-enum ELeagueFantasyPhase {
-	LEAGUE_FANTASY_PHASE_UNSET = 0;
-	LEAGUE_FANTASY_PHASE_MAIN = 1;
-	LEAGUE_FANTASY_PHASE_QUALIFIER_NA = 2;
-	LEAGUE_FANTASY_PHASE_QUALIFIER_SA = 3;
-	LEAGUE_FANTASY_PHASE_QUALIFIER_EUROPE = 4;
-	LEAGUE_FANTASY_PHASE_QUALIFIER_CIS = 5;
-	LEAGUE_FANTASY_PHASE_QUALIFIER_CHINA = 6;
-	LEAGUE_FANTASY_PHASE_QUALIFIER_SEA = 7;
-}
-
 enum ELeagueAuditAction {
 	LEAGUE_AUDIT_ACTION_INVALID = 0;
 	LEAGUE_AUDIT_ACTION_LEAGUE_CREATE = 1;
@@ -462,6 +463,7 @@ enum ELeagueAuditAction {
 	LEAGUE_AUDIT_ACTION_LEAGUE_REMOVE_INVITED_TEAM = 18;
 	LEAGUE_AUDIT_ACTION_LEAGUE_STATUS_CHANGED = 19;
 	LEAGUE_AUDIT_ACTION_LEAGUE_STREAM_EDIT = 20;
+	LEAGUE_AUDIT_ACTION_LEAGUE_TEAM_SWAP = 21;
 	LEAGUE_AUDIT_ACTION_NODEGROUP_CREATE = 100;
 	LEAGUE_AUDIT_ACTION_NODEGROUP_DESTROY = 101;
 	LEAGUE_AUDIT_ACTION_NODEGROUP_ADD_TEAM = 102;
@@ -470,6 +472,8 @@ enum ELeagueAuditAction {
 	LEAGUE_AUDIT_ACTION_NODEGROUP_EDIT = 105;
 	LEAGUE_AUDIT_ACTION_NODEGROUP_POPULATE = 106;
 	LEAGUE_AUDIT_ACTION_NODEGROUP_COMPLETED = 107;
+	LEAGUE_AUDIT_ACTION_NODEGROUP_SET_SECONDARY_ADVANCING = 108;
+	LEAGUE_AUDIT_ACTION_NODEGROUP_SET_TERTIARY_ADVANCING = 109;
 	LEAGUE_AUDIT_ACTION_NODE_CREATE = 200;
 	LEAGUE_AUDIT_ACTION_NODE_DESTROY = 201;
 	LEAGUE_AUDIT_ACTION_NODE_AUTOCREATE = 202;
@@ -546,6 +550,20 @@ enum EDPCPushNotification {
 	DPC_PUSH_NOTIFICATION_FANTASY_PLAYER_CLEARED = 40;
 	DPC_PUSH_NOTIFICATION_FANTASY_DAILY_SUMMARY = 41;
 	DPC_PUSH_NOTIFICATION_FANTASY_FINAL_RESULTS = 42;
+}
+
+enum EEventActionScoreMode {
+	k_eEventActionScoreMode_Add = 0;
+	k_eEventActionScoreMode_Min = 1;
+}
+
+enum EOverwatchReportReason {
+	k_EOverwatchReportReason_Unknown = 0;
+	k_EOverwatchReportReason_Cheating = 1;
+	k_EOverwatchReportReason_Feeding = 2;
+	k_EOverwatchReportReason_Griefing = 3;
+	k_EOverwatchReportReason_Suspicious = 4;
+	k_EOverwatchReportReason_AbilityAbuse = 5;
 }
 
 message CDOTAClientHardwareSpecs {
@@ -658,5 +676,14 @@ message CMsgDOTACombatLogEntry {
 	optional uint32 kill_eater_event = 71;
 	optional uint32 unit_status_label = 72;
 	optional bool spell_generated_attack = 73;
+	optional bool at_night_time = 74;
+	optional bool attacker_has_scepter = 75;
 }
 
+message CMsgPendingEventAward {
+	optional dota.EEvent event_id = 1 [default = EVENT_ID_NONE];
+	optional uint32 action_id = 2;
+	optional uint32 num_to_grant = 3;
+	optional dota.EEventActionScoreMode score_mode = 4 [default = k_eEventActionScoreMode_Add];
+	optional uint32 audit_action = 5;
+}

@@ -263,4 +263,3 @@ message CMsgDOTAWeekendTourneyParticipationDetails {
 
 	repeated dota.CMsgDOTAWeekendTourneyParticipationDetails.Division divisions = 1;
 }
-

@@ -4,6 +4,7 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -20,459 +21,1562 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dota',
   syntax='proto2',
   serialized_options=_b('H\001\220\001\000'),
-  serialized_pb=_b('\n\"dota_gcmessages_client_guild.proto\x12\x04\x64ota\"\xc2\x03\n\x10\x43MsgDOTAGuildSDO\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03tag\x18\x03 \x01(\t\x12\x14\n\x0ctime_created\x18\x04 \x01(\r\x12\x16\n\x0etime_disbanded\x18\x05 \x01(\r\x12\x0c\n\x04logo\x18\x06 \x01(\x04\x12\x11\n\tbase_logo\x18\x07 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x08 \x01(\x04\x12.\n\x07members\x18\t \x03(\x0b\x32\x1d.dota.CMsgDOTAGuildSDO.Member\x12\x36\n\x0binvitations\x18\n \x03(\x0b\x32!.dota.CMsgDOTAGuildSDO.Invitation\x12\x0f\n\x07message\x18\x0b \x01(\t\x12\x13\n\x0bincremental\x18\x0c \x01(\x08\x1a?\n\x06Member\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x13\n\x0btime_joined\x18\x02 \x01(\r\x12\x0c\n\x04role\x18\x03 \x01(\r\x1aN\n\nInvitation\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\ttime_sent\x18\x02 \x01(\r\x12\x19\n\x11\x61\x63\x63ount_id_sender\x18\x03 \x01(\r\"\x8c\x02\n\x15\x43MsgDOTAGuildAuditSDO\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x32\n\x07\x65ntries\x18\x02 \x03(\x0b\x32!.dota.CMsgDOTAGuildAuditSDO.Entry\x1a\xac\x01\n\x05\x45ntry\x12\x13\n\x0b\x65vent_index\x18\x01 \x01(\r\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x0e\n\x06\x61\x63tion\x18\x03 \x01(\r\x12\x1c\n\x14\x61\x63\x63ount_id_requestor\x18\x04 \x01(\r\x12\x19\n\x11\x61\x63\x63ount_id_target\x18\x05 \x01(\r\x12\x18\n\x10reference_data_a\x18\x06 \x01(\r\x12\x18\n\x10reference_data_b\x18\x07 \x01(\r\"\xc8\x02\n\"CMsgDOTAAccountGuildMembershipsSDO\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12H\n\x0bmemberships\x18\x02 \x03(\x0b\x32\x33.dota.CMsgDOTAAccountGuildMembershipsSDO.Membership\x12H\n\x0binvitations\x18\x03 \x03(\x0b\x32\x33.dota.CMsgDOTAAccountGuildMembershipsSDO.Invitation\x1a,\n\nMembership\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0c\n\x04role\x18\x02 \x01(\r\x1aL\n\nInvitation\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\ttime_sent\x18\x02 \x01(\r\x12\x19\n\x11\x61\x63\x63ount_id_sender\x18\x03 \x01(\r\"m\n\x1a\x43MsgDOTAGuildCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\x0c\n\x04logo\x18\x03 \x01(\x04\x12\x11\n\tbase_logo\x18\x04 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x05 \x01(\x04\"\xbf\x02\n\x1b\x43MsgDOTAGuildCreateResponse\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x38\n\x06\x65rrors\x18\x02 \x03(\x0e\x32(.dota.CMsgDOTAGuildCreateResponse.EError\"\xd3\x01\n\x06\x45\x45rror\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0e\n\nNAME_EMPTY\x10\x01\x12\x17\n\x13NAME_BAD_CHARACTERS\x10\x02\x12\x11\n\rNAME_TOO_LONG\x10\x03\x12\x0e\n\nNAME_TAKEN\x10\x04\x12\r\n\tTAG_EMPTY\x10\x05\x12\x16\n\x12TAG_BAD_CHARACTERS\x10\x06\x12\x10\n\x0cTAG_TOO_LONG\x10\x07\x12\x1b\n\x17\x41\x43\x43OUNT_TOO_MANY_GUILDS\x10\x08\x12\x16\n\x12LOGO_UPLOAD_FAILED\x10\t\"f\n\"CMsgDOTAGuildSetAccountRoleRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x13\n\x0btarget_role\x18\x03 \x01(\r\"\x9a\x02\n#CMsgDOTAGuildSetAccountRoleResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgDOTAGuildSetAccountRoleResponse.EResult:\x07SUCCESS\"\xa6\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12\x19\n\x15\x45RROR_NO_OTHER_LEADER\x10\x03\x12!\n\x1d\x45RROR_ACCOUNT_TOO_MANY_GUILDS\x10\x04\x12 \n\x1c\x45RROR_GUILD_TOO_MANY_MEMBERS\x10\x05\"P\n!CMsgDOTAGuildInviteAccountRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xe8\x02\n\"CMsgDOTAGuildInviteAccountResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAGuildInviteAccountResponse.EResult:\x07SUCCESS\"\xf6\x01\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\x12!\n\x1d\x45RROR_ACCOUNT_ALREADY_INVITED\x10\x03\x12\"\n\x1e\x45RROR_ACCOUNT_ALREADY_IN_GUILD\x10\x04\x12\"\n\x1e\x45RROR_ACCOUNT_TOO_MANY_INVITES\x10\x05\x12 \n\x1c\x45RROR_GUILD_TOO_MANY_INVITES\x10\x06\x12!\n\x1d\x45RROR_ACCOUNT_TOO_MANY_GUILDS\x10\x07\"O\n CMsgDOTAGuildCancelInviteRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xb5\x01\n!CMsgDOTAGuildCancelInviteResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAGuildCancelInviteResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"k\n!CMsgDOTAGuildUpdateDetailsRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0c\n\x04logo\x18\x02 \x01(\x04\x12\x11\n\tbase_logo\x18\x03 \x01(\x04\x12\x13\n\x0b\x62\x61nner_logo\x18\x04 \x01(\x04\"\xb7\x01\n\"CMsgDOTAGuildUpdateDetailsResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAGuildUpdateDetailsResponse.EResult:\x07SUCCESS\"F\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\x12\x17\n\x13\x45RROR_NO_PERMISSION\x10\x02\"\x80\x01\n)CMsgDOTAGCToGCUpdateOpenGuildPartyRequest\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12\x1a\n\x12member_account_ids\x18\x03 \x03(\r\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"J\n*CMsgDOTAGCToGCUpdateOpenGuildPartyResponse\x12\x1c\n\x14maintain_association\x18\x01 \x01(\x08\"P\n*CMsgDOTAGCToGCDestroyOpenGuildPartyRequest\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x10\n\x08guild_id\x18\x02 \x01(\r\"-\n+CMsgDOTAGCToGCDestroyOpenGuildPartyResponse\"I\n CMsgDOTAPartySetOpenGuildRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x9c\x01\n!CMsgDOTAPartySetOpenGuildResponse\x12H\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgDOTAPartySetOpenGuildResponse.EResult:\x07SUCCESS\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"5\n!CMsgDOTAJoinOpenGuildPartyRequest\x12\x10\n\x08party_id\x18\x01 \x01(\x04\"\x9e\x01\n\"CMsgDOTAJoinOpenGuildPartyResponse\x12I\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgDOTAJoinOpenGuildPartyResponse.EResult:\x07SUCCESS\"-\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x45RROR_UNSPECIFIED\x10\x01\"\xdc\x01\n\x1d\x43MsgDOTAGuildOpenPartyRefresh\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x43\n\x0copen_parties\x18\x02 \x03(\x0b\x32-.dota.CMsgDOTAGuildOpenPartyRefresh.OpenParty\x1a\x64\n\tOpenParty\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x1a\n\x12member_account_ids\x18\x02 \x03(\r\x12\x14\n\x0ctime_created\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"\x1a\n\x18\x43MsgDOTARequestGuildData\"\xb7\x01\n\x17\x43MsgDOTAGuildInviteData\x12\x18\n\x10invited_to_guild\x18\x01 \x01(\x08\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12\x12\n\nguild_name\x18\x03 \x01(\t\x12\x11\n\tguild_tag\x18\x04 \x01(\t\x12\x0c\n\x04logo\x18\x05 \x01(\x04\x12\x0f\n\x07inviter\x18\x06 \x01(\r\x12\x14\n\x0cinviter_name\x18\x07 \x01(\t\x12\x14\n\x0cmember_count\x18\x08 \x01(\r\"?\n\x1a\x43MsgDOTAGuildUpdateMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x10\n\x08guild_id\x18\x02 \x01(\r\">\n\x1c\x43MsgDOTAGuildEditLogoRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0c\n\x04logo\x18\x02 \x01(\x04\"\xd1\x01\n\x1d\x43MsgDOTAGuildEditLogoResponse\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x44\n\x06result\x18\x02 \x01(\x0e\x32+.dota.CMsgDOTAGuildEditLogoResponse.EResult:\x07SUCCESS\"X\n\x07\x45Result\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rNO_PERMISSION\x10\x01\x12\x16\n\x12LOGO_UPLOAD_FAILED\x10\x02\x12\x15\n\x11UNSPECIFIED_ERROR\x10\x03\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\"dota_gcmessages_client_guild.proto\x12\x04\x64ota\"\xcb\x03\n\rCMsgGuildInfo\x12\x12\n\nguild_name\x18\x01 \x01(\t\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x19\n\x11\x63reated_timestamp\x18\x03 \x01(\r\x12\x16\n\x0eguild_language\x18\x04 \x01(\r\x12\x13\n\x0bguild_flags\x18\x05 \x01(\r\x12\x12\n\nguild_logo\x18\x07 \x01(\x04\x12\x14\n\x0cguild_region\x18\x08 \x01(\r\x12\x1b\n\x13guild_chat_group_id\x18\t \x01(\x04\x12\x19\n\x11guild_description\x18\n \x01(\t\x12\x1f\n\x17\x64\x65\x66\x61ult_chat_channel_id\x18\x0b \x01(\x04\x12\x1b\n\x13guild_primary_color\x18\x0c \x01(\r\x12\x1d\n\x15guild_secondary_color\x18\r \x01(\r\x12\x15\n\rguild_pattern\x18\x0e \x01(\r\x12!\n\x19guild_refresh_time_offset\x18\x0f \x01(\r\x12 \n\x18guild_required_rank_tier\x18\x10 \x01(\r\x12\x1c\n\x14guild_motd_timestamp\x18\x11 \x01(\r\x12\x12\n\nguild_motd\x18\x12 \x01(\t\"\xb5\x02\n\x10\x43MsgGuildSummary\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12\x14\n\x0cmember_count\x18\x02 \x01(\r\x12\x38\n\x0c\x65vent_points\x18\x03 \x03(\x0b\x32\".dota.CMsgGuildSummary.EventPoints\x1a\xa7\x01\n\x0b\x45ventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x14\n\x0cguild_points\x18\x02 \x01(\r\x12\x12\n\nguild_rank\x18\x03 \x01(\r\x12\x19\n\x11guild_weekly_rank\x18\x04 \x01(\r\x12\x1f\n\x17guild_weekly_percentile\x18\x05 \x01(\r\x12 \n\x18guild_current_percentile\x18\x06 \x01(\r\"[\n\rCMsgGuildRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\x12\x12\n\nrole_order\x18\x04 \x01(\r\"\x8b\x01\n\x0f\x43MsgGuildMember\x12\x19\n\x11member_account_id\x18\x01 \x01(\r\x12\x16\n\x0emember_role_id\x18\x02 \x01(\r\x12\x1f\n\x17member_joined_timestamp\x18\x03 \x01(\r\x12$\n\x1cmember_last_active_timestamp\x18\x04 \x01(\r\"b\n\x0f\x43MsgGuildInvite\x12\x1c\n\x14requester_account_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"\xd0\x01\n\rCMsgGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12(\n\x0bguild_roles\x18\x03 \x03(\x0b\x32\x13.dota.CMsgGuildRole\x12,\n\rguild_members\x18\x04 \x03(\x0b\x32\x15.dota.CMsgGuildMember\x12,\n\rguild_invites\x18\x05 \x03(\x0b\x32\x15.dota.CMsgGuildInvite\"`\n\x16\x43MsgAccountGuildInvite\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1c\n\x14requester_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"e\n\x1b\x43MsgAccountGuildMemberships\x12\x11\n\tguild_ids\x18\x01 \x03(\r\x12\x33\n\rguild_invites\x18\x02 \x03(\x0b\x32\x1c.dota.CMsgAccountGuildInvite\"P\n\x14\x43MsgGuildPersonaInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x13\n\x0bguild_flags\x18\x03 \x01(\r\"W\n\x1c\x43MsgAccountGuildsPersonaInfo\x12\x37\n\x13guild_persona_infos\x18\x01 \x03(\x0b\x32\x1a.dota.CMsgGuildPersonaInfo\"\x94\x01\n\x12\x43MsgGuildFeedEvent\x12\x15\n\rfeed_event_id\x18\x01 \x01(\x04\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x12\n\nevent_type\x18\x03 \x01(\r\x12\x14\n\x0cparam_uint_1\x18\x04 \x01(\r\x12\x14\n\x0cparam_uint_2\x18\x05 \x01(\r\x12\x14\n\x0cparam_uint_3\x18\x06 \x01(\r\"\x91\x01\n\x19\x43MsgClientToGCCreateGuild\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x02 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xd9\x03\n!CMsgClientToGCCreateGuildResponse\x12S\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgClientToGCCreateGuildResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\"\xcc\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x12\n\x0ek_eInvalidName\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x11\n\rk_eInvalidTag\x10\x07\x12\x15\n\x11k_eTagAlreadyUsed\x10\x08\x12\x19\n\x15k_eInvalidDescription\x10\t\x12\x14\n\x10k_eInvalidRegion\x10\n\x12\x12\n\x0ek_eInvalidLogo\x10\x0b\x12\x16\n\x12k_eDoesNotOwnEvent\x10\x0c\x12\x11\n\rk_eGuildLimit\x10\r\x12\x12\n\x0ek_eInvalidMotD\x10\x0e\x12\x0e\n\nk_eBlocked\x10\x0f\"\xa4\x01\n\x1a\x43MsgClientToGCSetGuildInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x03 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xc0\x03\n\"CMsgClientToGCSetGuildInfoResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCSetGuildInfoResponse.EResponse:\x10k_eInternalError\"\xc3\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x13\n\x0fk_eNoPermission\x10\x07\x12\x12\n\x0ek_eMotDTooLong\x10\x08\x12\x1e\n\x1ak_eNameChangeNoPermissions\x10\t\x12\x1d\n\x19k_eTagChangeNoPermissions\x10\n\x12\x12\n\x0ek_eNameInvalid\x10\x0b\x12\x11\n\rk_eTagInvalid\x10\x0c\x12\x19\n\x15k_eDescriptionInvalid\x10\r\x12\x0e\n\nk_eBlocked\x10\x0e\"2\n\x1e\x43MsgClientToGCRequestGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb7\x02\n&CMsgClientToGCRequestGuildDataResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildDataResponse.EResponse:\x10k_eInternalError\x12\'\n\nguild_data\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildData\"\x89\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\"_\n\x1e\x43MsgGCToClientGuildDataUpdated\x12\'\n\nguild_data\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildData\x12\x14\n\x0cupdate_flags\x18\x02 \x01(\r\"f\n%CMsgGCToClientGuildMembersDataUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12+\n\x0cmembers_data\x18\x02 \x03(\x0b\x32\x15.dota.CMsgGuildMember\"&\n$CMsgClientToGCRequestGuildMembership\"\xb0\x02\n,CMsgClientToGCRequestGuildMembershipResponse\x12^\n\x06result\x18\x01 \x01(\x0e\x32<.dota.CMsgClientToGCRequestGuildMembershipResponse.EResponse:\x10k_eInternalError\x12<\n\x11guild_memberships\x18\x02 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"d\n$CMsgGCToClientGuildMembershipUpdated\x12<\n\x11guild_memberships\x18\x01 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"5\n!CMsgClientToGCRequestGuildSummary\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb0\x02\n)CMsgClientToGCRequestGuildSummaryResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCRequestGuildSummaryResponse.EResponse:\x10k_eInternalError\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"w\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\"+\n\x17\x43MsgClientToGCJoinGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xdd\x02\n\x1f\x43MsgClientToGCJoinGuildResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgClientToGCJoinGuildResponse.EResponse:\x10k_eInternalError\"\xe6\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x14\n\x10k_eAlreadyMember\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x1a\n\x16k_eGuildRequiresInvite\x10\t\x12\x16\n\x12k_eGuildRankTooLow\x10\n\",\n\x18\x43MsgClientToGCLeaveGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x94\x02\n CMsgClientToGCLeaveGuildResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgClientToGCLeaveGuildResponse.EResponse:\x10k_eInternalError\"\x9b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x10\n\x0ck_eLastAdmin\x10\x07\"L\n\x1d\x43MsgClientToGCKickGuildMember\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xd7\x02\n%CMsgClientToGCKickGuildMemberResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCKickGuildMemberResponse.EResponse:\x10k_eInternalError\"\xd4\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x13\n\x0fk_eCantKickSelf\x10\t\"g\n CMsgClientToGCSetGuildMemberRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_role_id\x18\x03 \x01(\r\"\xf3\x02\n(CMsgClientToGCSetGuildMemberRoleResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCSetGuildMemberRoleResponse.EResponse:\x10k_eInternalError\"\xea\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x12\n\x0ek_eInvalidRole\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\"J\n\x1b\x43MsgClientToGCInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\x84\x03\n#CMsgClientToGCInviteToGuildResponse\x12U\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgClientToGCInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x85\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x19\n\x15k_eRequesterNotMember\x10\x07\x12\x15\n\x11k_eAlreadyAMember\x10\x08\x12\x15\n\x11k_eAlreadyInvited\x10\t\x12\x1a\n\x16k_eNoInvitePermissions\x10\n\x12\x15\n\x11k_eTooManyInvites\x10\x0b\"6\n\"CMsgClientToGCDeclineInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x9a\x02\n*CMsgClientToGCDeclineInviteToGuildResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCDeclineInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\"5\n!CMsgClientToGCAcceptInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xeb\x02\n)CMsgClientToGCAcceptInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCAcceptInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xe0\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x10\n\x0ck_eGuildFull\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x15\n\x11k_eInvalidInviter\x10\t\x12\x15\n\x11k_eAlreadyInGuild\x10\n\"P\n!CMsgClientToGCCancelInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xae\x02\n)CMsgClientToGCCancelInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCCancelInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xa3\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\"U\n\x1a\x43MsgClientToGCAddGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\"\x98\x03\n\"CMsgClientToGCAddGuildRoleResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCAddGuildRoleResponse.EResponse:\x10k_eInternalError\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\x8a\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\x12\x13\n\x0fk_eTooManyRoles\x10\x0b\x12\x0e\n\nk_eBlocked\x10\x0c\"i\n\x1d\x43MsgClientToGCModifyGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x12\n\nrole_flags\x18\x04 \x01(\r\"\x8c\x03\n%CMsgClientToGCModifyGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCModifyGuildRoleResponse.EResponse:\x10k_eInternalError\"\x89\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x16\n\x12k_eNameAlreadyUsed\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x14\n\x10k_eNoPermissions\x10\n\x12\x15\n\x11k_eAdminViolation\x10\x0b\x12\x0e\n\nk_eBlocked\x10\x0c\"B\n\x1d\x43MsgClientToGCRemoveGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\xee\x02\n%CMsgClientToGCRemoveGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCRemoveGuildRoleResponse.EResponse:\x10k_eInternalError\"\xeb\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eRoleNotEmpty\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\x12\x1c\n\x18k_eCantRemoveDefaultRole\x10\n\"j\n\x1f\x43MsgClientToGCSetGuildRoleOrder\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1a\n\x12requested_role_ids\x18\x02 \x03(\r\x12\x19\n\x11previous_role_ids\x18\x03 \x03(\r\"\xf0\x02\n\'CMsgClientToGCSetGuildRoleOrderResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgClientToGCSetGuildRoleOrderResponse.EResponse:\x10k_eInternalError\x12\x1a\n\x12\x63onfirmed_role_ids\x18\x02 \x03(\r\"\xcd\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eInvalidOrder\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\"H\n\x1e\x43MsgClientToGCGuildFeedRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x14\n\x0clast_seen_id\x18\x02 \x01(\x04\"\xd3\x02\n&CMsgClientToGCRequestGuildFeedResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildFeedResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\x0b\x66\x65\x65\x64_events\x18\x03 \x03(\x0b\x32\x18.dota.CMsgGuildFeedEvent\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoPermissions\x10\x06\"2\n\x1e\x43MsgGCToClientGuildFeedUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"6\n\"CMsgClientToGCAddPlayerToGuildChat\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb2\x02\n*CMsgClientToGCAddPlayerToGuildChatResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCAddPlayerToGuildChatResponse.EResponse:\x10k_eInternalError\"\xa5\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x1a\n\x16k_eSteamChatNotEnabled\x10\x07\"\xb9\x02\n\x1a\x43MsgFindGuildByTagResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32*.dota.CMsgFindGuildByTagResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\rguild_summary\x18\x03 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"\x8b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x11\n\rk_eInvalidTag\x10\x05\x12\x14\n\x10k_eGuildNotFound\x10\x06\"\x8c\x03\n\x1f\x43MsgSearchForOpenGuildsResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgSearchForOpenGuildsResponse.EResponse:\x10k_eInternalError\x12J\n\x0esearch_results\x18\x02 \x03(\x0b\x32\x32.dota.CMsgSearchForOpenGuildsResponse.SearchResult\x12\x15\n\ruse_whitelist\x18\x03 \x01(\x08\x1aO\n\x0cSearchResult\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"\xcf\x01\n CMsgClientToGCReportGuildContent\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1b\n\x13guild_content_flags\x18\x02 \x01(\r\"|\n\rEContentFlags\x12\x0b\n\x07k_eNone\x10\x00\x12\x18\n\x14k_eInappropriateName\x10\x01\x12\x17\n\x13k_eInappropriateTag\x10\x02\x12\x18\n\x14k_eInappropriateLogo\x10\x04\x12\x11\n\rk_eValidFlags\x10\x07\"\x96\x02\n(CMsgClientToGCReportGuildContentResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCReportGuildContentResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x14\n\x10k_eGuildNotFound\x10\x05\x12\x13\n\x0fk_eFlagsInvalid\x10\x06\"B\n,CMsgClientToGCRequestAccountGuildPersonaInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd3\x02\n4CMsgClientToGCRequestAccountGuildPersonaInfoResponse\x12\x66\n\x06result\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.EResponse:\x10k_eInternalError\x12\x38\n\x0cpersona_info\x18\x02 \x01(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidAccount\x10\x05\"H\n1CMsgClientToGCRequestAccountGuildPersonaInfoBatch\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\xde\x02\n9CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse\x12k\n\x06result\x18\x01 \x01(\x0e\x32I.dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.EResponse:\x10k_eInternalError\x12\x39\n\rpersona_infos\x18\x02 \x03(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidRequest\x10\x05*\xbe\x08\n\x11\x45GuildAuditAction\x12\x1f\n\x1bk_EGuildAuditAction_Invalid\x10\x00\x12$\n k_EGuildAuditAction_GuildCreated\x10\x01\x12,\n(k_EGuildAuditAction_GuildLanguageChanged\x10\x02\x12)\n%k_EGuildAuditAction_GuildFlagsChanged\x10\x03\x12)\n%k_EGuildAuditAction_GuildMemberJoined\x10\x05\x12\'\n#k_EGuildAuditAction_GuildMemberLeft\x10\x06\x12)\n%k_EGuildAuditAction_GuildMemberKicked\x10\x07\x12.\n*k_EGuildAuditAction_GuildMemberRoleChanged\x10\x08\x12(\n$k_EGuildAuditAction_GuildLogoChanged\x10\t\x12*\n&k_EGuildAuditAction_GuildRegionChanged\x10\n\x12/\n+k_EGuildAuditAction_GuildDescriptionChanged\x10\x0b\x12\x30\n,k_EGuildAuditAction_GuildPrimaryColorChanged\x10\x0c\x12\x32\n.k_EGuildAuditAction_GuildSecondaryColorChanged\x10\r\x12+\n\'k_EGuildAuditAction_GuildPatternChanged\x10\x0e\x12(\n$k_EGuildAuditAction_AdminClearedLogo\x10\x0f\x12\x30\n,k_EGuildAuditAction_GuildRequiredRankChanged\x10\x10\x12(\n$k_EGuildAuditAction_GuildMotDChanged\x10\x12\x12&\n\"k_EGuildAuditAction_AdminResetName\x10\x13\x12%\n!k_EGuildAuditAction_AdminResetTag\x10\x14\x12!\n\x1dk_EGuildAuditAction_AdminLock\x10\x15\x12(\n$k_EGuildAuditAction_GuildNameChanged\x10\x16\x12\'\n#k_EGuildAuditAction_GuildTagChanged\x10\x17\x12&\n\"k_EGuildAuditAction_AdminPermitted\x10\x18\x12$\n k_EGuildAuditAction_AdminBlocked\x10\x19\x12\'\n#k_EGuildAuditAction_AdminBannedUser\x10\x1a*p\n\x0e\x45GuildChatType\x12 \n\x1ck_EGuildChatType_Unspecified\x10\x00\x12#\n\x1fk_EGuildChatType_SteamChatGroup\x10\x01\x12\x17\n\x13k_EGuildChatType_GC\x10\x02\x42\x05H\x01\x90\x01\x00')
 )
 
-
-
-_CMSGDOTAGUILDCREATERESPONSE_EERROR = _descriptor.EnumDescriptor(
-  name='EError',
-  full_name='dota.CMsgDOTAGuildCreateResponse.EError',
+_EGUILDAUDITACTION = _descriptor.EnumDescriptor(
+  name='EGuildAuditAction',
+  full_name='dota.EGuildAuditAction',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED', index=0, number=0,
+      name='k_EGuildAuditAction_Invalid', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='NAME_EMPTY', index=1, number=1,
+      name='k_EGuildAuditAction_GuildCreated', index=1, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='NAME_BAD_CHARACTERS', index=2, number=2,
+      name='k_EGuildAuditAction_GuildLanguageChanged', index=2, number=2,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='NAME_TOO_LONG', index=3, number=3,
+      name='k_EGuildAuditAction_GuildFlagsChanged', index=3, number=3,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='NAME_TAKEN', index=4, number=4,
+      name='k_EGuildAuditAction_GuildMemberJoined', index=4, number=5,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TAG_EMPTY', index=5, number=5,
+      name='k_EGuildAuditAction_GuildMemberLeft', index=5, number=6,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TAG_BAD_CHARACTERS', index=6, number=6,
+      name='k_EGuildAuditAction_GuildMemberKicked', index=6, number=7,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TAG_TOO_LONG', index=7, number=7,
+      name='k_EGuildAuditAction_GuildMemberRoleChanged', index=7, number=8,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ACCOUNT_TOO_MANY_GUILDS', index=8, number=8,
+      name='k_EGuildAuditAction_GuildLogoChanged', index=8, number=9,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='LOGO_UPLOAD_FAILED', index=9, number=9,
+      name='k_EGuildAuditAction_GuildRegionChanged', index=9, number=10,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_GuildDescriptionChanged', index=10, number=11,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_GuildPrimaryColorChanged', index=11, number=12,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_GuildSecondaryColorChanged', index=12, number=13,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_GuildPatternChanged', index=13, number=14,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminClearedLogo', index=14, number=15,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_GuildRequiredRankChanged', index=15, number=16,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_GuildMotDChanged', index=16, number=18,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminResetName', index=17, number=19,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminResetTag', index=18, number=20,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminLock', index=19, number=21,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_GuildNameChanged', index=20, number=22,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_GuildTagChanged', index=21, number=23,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminPermitted', index=22, number=24,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminBlocked', index=23, number=25,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminBannedUser', index=24, number=26,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1319,
-  serialized_end=1530,
+  serialized_start=12545,
+  serialized_end=13631,
 )
-_sym_db.RegisterEnumDescriptor(_CMSGDOTAGUILDCREATERESPONSE_EERROR)
+_sym_db.RegisterEnumDescriptor(_EGUILDAUDITACTION)
 
-_CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='dota.CMsgDOTAGuildSetAccountRoleResponse.EResult',
+EGuildAuditAction = enum_type_wrapper.EnumTypeWrapper(_EGUILDAUDITACTION)
+_EGUILDCHATTYPE = _descriptor.EnumDescriptor(
+  name='EGuildChatType',
+  full_name='dota.EGuildChatType',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='k_EGuildChatType_Unspecified', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
+      name='k_EGuildChatType_SteamChatGroup', index=1, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PERMISSION', index=2, number=2,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_OTHER_LEADER', index=3, number=3,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_TOO_MANY_GUILDS', index=4, number=4,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_GUILD_TOO_MANY_MEMBERS', index=5, number=5,
+      name='k_EGuildChatType_GC', index=2, number=2,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1753,
-  serialized_end=1919,
+  serialized_start=13633,
+  serialized_end=13745,
 )
-_sym_db.RegisterEnumDescriptor(_CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT)
+_sym_db.RegisterEnumDescriptor(_EGUILDCHATTYPE)
 
-_CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='dota.CMsgDOTAGuildInviteAccountResponse.EResult',
+EGuildChatType = enum_type_wrapper.EnumTypeWrapper(_EGUILDCHATTYPE)
+k_EGuildAuditAction_Invalid = 0
+k_EGuildAuditAction_GuildCreated = 1
+k_EGuildAuditAction_GuildLanguageChanged = 2
+k_EGuildAuditAction_GuildFlagsChanged = 3
+k_EGuildAuditAction_GuildMemberJoined = 5
+k_EGuildAuditAction_GuildMemberLeft = 6
+k_EGuildAuditAction_GuildMemberKicked = 7
+k_EGuildAuditAction_GuildMemberRoleChanged = 8
+k_EGuildAuditAction_GuildLogoChanged = 9
+k_EGuildAuditAction_GuildRegionChanged = 10
+k_EGuildAuditAction_GuildDescriptionChanged = 11
+k_EGuildAuditAction_GuildPrimaryColorChanged = 12
+k_EGuildAuditAction_GuildSecondaryColorChanged = 13
+k_EGuildAuditAction_GuildPatternChanged = 14
+k_EGuildAuditAction_AdminClearedLogo = 15
+k_EGuildAuditAction_GuildRequiredRankChanged = 16
+k_EGuildAuditAction_GuildMotDChanged = 18
+k_EGuildAuditAction_AdminResetName = 19
+k_EGuildAuditAction_AdminResetTag = 20
+k_EGuildAuditAction_AdminLock = 21
+k_EGuildAuditAction_GuildNameChanged = 22
+k_EGuildAuditAction_GuildTagChanged = 23
+k_EGuildAuditAction_AdminPermitted = 24
+k_EGuildAuditAction_AdminBlocked = 25
+k_EGuildAuditAction_AdminBannedUser = 26
+k_EGuildChatType_Unspecified = 0
+k_EGuildChatType_SteamChatGroup = 1
+k_EGuildChatType_GC = 2
+
+
+_CMSGCLIENTTOGCCREATEGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCCreateGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='k_eInternalError', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
+      name='k_eSuccess', index=1, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PERMISSION', index=2, number=2,
+      name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_ALREADY_INVITED', index=3, number=3,
+      name='k_eDisabled', index=3, number=3,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_ALREADY_IN_GUILD', index=4, number=4,
+      name='k_eTimeout', index=4, number=4,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_TOO_MANY_INVITES', index=5, number=5,
+      name='k_eInvalidName', index=5, number=5,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_GUILD_TOO_MANY_INVITES', index=6, number=6,
+      name='k_eNameAlreadyUsed', index=6, number=6,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_ACCOUNT_TOO_MANY_GUILDS', index=7, number=7,
+      name='k_eInvalidTag', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTagAlreadyUsed', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidDescription', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidRegion', index=10, number=10,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidLogo', index=11, number=11,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDoesNotOwnEvent', index=12, number=12,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildLimit', index=13, number=13,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidMotD', index=14, number=14,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eBlocked', index=15, number=15,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2118,
-  serialized_end=2364,
+  serialized_start=2177,
+  serialized_end=2509,
 )
-_sym_db.RegisterEnumDescriptor(_CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCCREATEGUILDRESPONSE_ERESPONSE)
 
-_CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='dota.CMsgDOTAGuildCancelInviteResponse.EResult',
+_CMSGCLIENTTOGCSETGUILDINFORESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCSetGuildInfoResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='k_eInternalError', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
+      name='k_eSuccess', index=1, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PERMISSION', index=2, number=2,
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNotMember', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermission', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eMotDTooLong', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNameChangeNoPermissions', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTagChangeNoPermissions', index=10, number=10,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNameInvalid', index=11, number=11,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTagInvalid', index=12, number=12,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDescriptionInvalid', index=13, number=13,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eBlocked', index=14, number=14,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1753,
-  serialized_end=1823,
+  serialized_start=2804,
+  serialized_end=3127,
 )
-_sym_db.RegisterEnumDescriptor(_CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETGUILDINFORESPONSE_ERESPONSE)
 
-_CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='dota.CMsgDOTAGuildUpdateDetailsResponse.EResult',
+_CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCRequestGuildDataResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='k_eInternalError', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
+      name='k_eSuccess', index=1, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_NO_PERMISSION', index=2, number=2,
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNotMember', index=6, number=6,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1753,
-  serialized_end=1823,
+  serialized_start=2804,
+  serialized_end=2941,
 )
-_sym_db.RegisterEnumDescriptor(_CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE_ERESPONSE)
 
-_CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='dota.CMsgDOTAPartySetOpenGuildResponse.EResult',
+_CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCRequestGuildMembershipResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='k_eInternalError', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1753,
-  serialized_end=1798,
+  serialized_start=2177,
+  serialized_end=2275,
 )
-_sym_db.RegisterEnumDescriptor(_CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE)
 
-_CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='dota.CMsgDOTAJoinOpenGuildPartyResponse.EResult',
+_CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCRequestGuildSummaryResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='k_eInternalError', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ERROR_UNSPECIFIED', index=1, number=1,
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1753,
-  serialized_end=1798,
+  serialized_start=2804,
+  serialized_end=2923,
 )
-_sym_db.RegisterEnumDescriptor(_CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE_ERESPONSE)
 
-_CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT = _descriptor.EnumDescriptor(
-  name='EResult',
-  full_name='dota.CMsgDOTAGuildEditLogoResponse.EResult',
+_CMSGCLIENTTOGCJOINGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCJoinGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='k_eInternalError', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='NO_PERMISSION', index=1, number=1,
+      name='k_eSuccess', index=1, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='LOGO_UPLOAD_FAILED', index=2, number=2,
+      name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='UNSPECIFIED_ERROR', index=3, number=3,
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildFull', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAlreadyMember', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildLimit', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildRequiresInvite', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildRankTooLow', index=10, number=10,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4400,
-  serialized_end=4488,
+  serialized_start=4672,
+  serialized_end=4902,
 )
-_sym_db.RegisterEnumDescriptor(_CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCJOINGUILDRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCLEAVEGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCLeaveGuildResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNotMember', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eLastAdmin', index=7, number=7,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=5072,
+  serialized_end=5227,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCLEAVEGUILDRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCKickGuildMemberResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eRequesterNotMember', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTargetNotMember', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermission', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eCantKickSelf', index=9, number=9,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=5439,
+  serialized_end=5651,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCSetGuildMemberRoleResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eRequesterNotMember', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTargetNotMember', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermission', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidRole', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAdminViolation', index=10, number=10,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=5896,
+  serialized_end=6130,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCInviteToGuildResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildFull', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eRequesterNotMember', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAlreadyAMember', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAlreadyInvited', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoInvitePermissions', index=10, number=10,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooManyInvites', index=11, number=11,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=6336,
+  serialized_end=6597,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCDeclineInviteToGuildResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoInviteFound', index=6, number=6,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=6797,
+  serialized_end=6938,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCAcceptInviteToGuildResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoInviteFound', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildFull', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildLimit', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidInviter', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAlreadyInGuild', index=10, number=10,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=7135,
+  serialized_end=7359,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCCancelInviteToGuildResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoInviteFound', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermissions', index=7, number=7,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=7583,
+  serialized_end=7746,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCAddGuildRoleResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNameAlreadyUsed', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermissions', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidFlags', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidName', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAdminViolation', index=10, number=10,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooManyRoles', index=11, number=11,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eBlocked', index=12, number=12,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=7978,
+  serialized_end=8244,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCModifyGuildRoleResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidRole', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNameAlreadyUsed', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidFlags', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidName', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermissions', index=10, number=10,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAdminViolation', index=11, number=11,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eBlocked', index=12, number=12,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=8485,
+  serialized_end=8750,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCRemoveGuildRoleResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidRole', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eRoleNotEmpty', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermissions', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAdminViolation', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eCantRemoveDefaultRole', index=10, number=10,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=8952,
+  serialized_end=9187,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCSetGuildRoleOrderResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidRole', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidOrder', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermissions', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eAdminViolation', index=9, number=9,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=9461,
+  serialized_end=9666,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCRequestGuildFeedResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNoPermissions', index=6, number=6,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=9941,
+  serialized_end=10082,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCAddPlayerToGuildChatResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidGuild', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eNotMember', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSteamChatNotEnabled', index=7, number=7,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=10334,
+  serialized_end=10499,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE)
+
+_CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgFindGuildByTagResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidTag', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildNotFound', index=6, number=6,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=10676,
+  serialized_end=10815,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE)
+
+_CMSGSEARCHFOROPENGUILDSRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgSearchForOpenGuildsResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=2177,
+  serialized_end=2275,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGSEARCHFOROPENGUILDSRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCREPORTGUILDCONTENT_ECONTENTFLAGS = _descriptor.EnumDescriptor(
+  name='EContentFlags',
+  full_name='dota.CMsgClientToGCReportGuildContent.EContentFlags',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eNone', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInappropriateName', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInappropriateTag', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInappropriateLogo', index=3, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eValidFlags', index=4, number=7,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=11300,
+  serialized_end=11424,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREPORTGUILDCONTENT_ECONTENTFLAGS)
+
+_CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCReportGuildContentResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eGuildNotFound', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eFlagsInvalid', index=6, number=6,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=11564,
+  serialized_end=11705,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidAccount', index=5, number=5,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=11994,
+  serialized_end=12115,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidRequest', index=5, number=5,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=12421,
+  serialized_end=12542,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE)
 
 
-_CMSGDOTAGUILDSDO_MEMBER = _descriptor.Descriptor(
-  name='Member',
-  full_name='dota.CMsgDOTAGuildSDO.Member',
+_CMSGGUILDINFO = _descriptor.Descriptor(
+  name='CMsgGuildInfo',
+  full_name='dota.CMsgGuildInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_id', full_name='dota.CMsgDOTAGuildSDO.Member.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='guild_name', full_name='dota.CMsgGuildInfo.guild_name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_joined', full_name='dota.CMsgDOTAGuildSDO.Member.time_joined', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='role', full_name='dota.CMsgDOTAGuildSDO.Member.role', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=352,
-  serialized_end=415,
-)
-
-_CMSGDOTAGUILDSDO_INVITATION = _descriptor.Descriptor(
-  name='Invitation',
-  full_name='dota.CMsgDOTAGuildSDO.Invitation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='dota.CMsgDOTAGuildSDO.Invitation.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='time_sent', full_name='dota.CMsgDOTAGuildSDO.Invitation.time_sent', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='account_id_sender', full_name='dota.CMsgDOTAGuildSDO.Invitation.account_id_sender', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=417,
-  serialized_end=495,
-)
-
-_CMSGDOTAGUILDSDO = _descriptor.Descriptor(
-  name='CMsgDOTAGuildSDO',
-  full_name='dota.CMsgDOTAGuildSDO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildSDO.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='dota.CMsgDOTAGuildSDO.name', index=1,
+      name='guild_tag', full_name='dota.CMsgGuildInfo.guild_tag', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tag', full_name='dota.CMsgDOTAGuildSDO.tag', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='created_timestamp', full_name='dota.CMsgGuildInfo.created_timestamp', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_created', full_name='dota.CMsgDOTAGuildSDO.time_created', index=3,
+      name='guild_language', full_name='dota.CMsgGuildInfo.guild_language', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_disbanded', full_name='dota.CMsgDOTAGuildSDO.time_disbanded', index=4,
+      name='guild_flags', full_name='dota.CMsgGuildInfo.guild_flags', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='logo', full_name='dota.CMsgDOTAGuildSDO.logo', index=5,
-      number=6, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='dota.CMsgDOTAGuildSDO.base_logo', index=6,
+      name='guild_logo', full_name='dota.CMsgGuildInfo.guild_logo', index=5,
       number=7, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='dota.CMsgDOTAGuildSDO.banner_logo', index=7,
-      number=8, type=4, cpp_type=4, label=1,
+      name='guild_region', full_name='dota.CMsgGuildInfo.guild_region', index=6,
+      number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='members', full_name='dota.CMsgDOTAGuildSDO.members', index=8,
-      number=9, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='guild_chat_group_id', full_name='dota.CMsgGuildInfo.guild_chat_group_id', index=7,
+      number=9, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='invitations', full_name='dota.CMsgDOTAGuildSDO.invitations', index=9,
-      number=10, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='message', full_name='dota.CMsgDOTAGuildSDO.message', index=10,
-      number=11, type=9, cpp_type=9, label=1,
+      name='guild_description', full_name='dota.CMsgGuildInfo.guild_description', index=8,
+      number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='incremental', full_name='dota.CMsgDOTAGuildSDO.incremental', index=11,
-      number=12, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='default_chat_channel_id', full_name='dota.CMsgGuildInfo.default_chat_channel_id', index=9,
+      number=11, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_primary_color', full_name='dota.CMsgGuildInfo.guild_primary_color', index=10,
+      number=12, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_secondary_color', full_name='dota.CMsgGuildInfo.guild_secondary_color', index=11,
+      number=13, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_pattern', full_name='dota.CMsgGuildInfo.guild_pattern', index=12,
+      number=14, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_refresh_time_offset', full_name='dota.CMsgGuildInfo.guild_refresh_time_offset', index=13,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_required_rank_tier', full_name='dota.CMsgGuildInfo.guild_required_rank_tier', index=14,
+      number=16, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_motd_timestamp', full_name='dota.CMsgGuildInfo.guild_motd_timestamp', index=15,
+      number=17, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_motd', full_name='dota.CMsgGuildInfo.guild_motd', index=16,
+      number=18, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
-  nested_types=[_CMSGDOTAGUILDSDO_MEMBER, _CMSGDOTAGUILDSDO_INVITATION, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -482,66 +1586,59 @@ _CMSGDOTAGUILDSDO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=45,
-  serialized_end=495,
+  serialized_end=504,
 )
 
 
-_CMSGDOTAGUILDAUDITSDO_ENTRY = _descriptor.Descriptor(
-  name='Entry',
-  full_name='dota.CMsgDOTAGuildAuditSDO.Entry',
+_CMSGGUILDSUMMARY_EVENTPOINTS = _descriptor.Descriptor(
+  name='EventPoints',
+  full_name='dota.CMsgGuildSummary.EventPoints',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='event_index', full_name='dota.CMsgDOTAGuildAuditSDO.Entry.event_index', index=0,
+      name='event_id', full_name='dota.CMsgGuildSummary.EventPoints.event_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='dota.CMsgDOTAGuildAuditSDO.Entry.timestamp', index=1,
+      name='guild_points', full_name='dota.CMsgGuildSummary.EventPoints.guild_points', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='action', full_name='dota.CMsgDOTAGuildAuditSDO.Entry.action', index=2,
+      name='guild_rank', full_name='dota.CMsgGuildSummary.EventPoints.guild_rank', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='account_id_requestor', full_name='dota.CMsgDOTAGuildAuditSDO.Entry.account_id_requestor', index=3,
+      name='guild_weekly_rank', full_name='dota.CMsgGuildSummary.EventPoints.guild_weekly_rank', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='account_id_target', full_name='dota.CMsgDOTAGuildAuditSDO.Entry.account_id_target', index=4,
+      name='guild_weekly_percentile', full_name='dota.CMsgGuildSummary.EventPoints.guild_weekly_percentile', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reference_data_a', full_name='dota.CMsgDOTAGuildAuditSDO.Entry.reference_data_a', index=5,
+      name='guild_current_percentile', full_name='dota.CMsgGuildSummary.EventPoints.guild_current_percentile', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='reference_data_b', full_name='dota.CMsgDOTAGuildAuditSDO.Entry.reference_data_b', index=6,
-      number=7, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -554,152 +1651,33 @@ _CMSGDOTAGUILDAUDITSDO_ENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=594,
-  serialized_end=766,
+  serialized_start=649,
+  serialized_end=816,
 )
 
-_CMSGDOTAGUILDAUDITSDO = _descriptor.Descriptor(
-  name='CMsgDOTAGuildAuditSDO',
-  full_name='dota.CMsgDOTAGuildAuditSDO',
+_CMSGGUILDSUMMARY = _descriptor.Descriptor(
+  name='CMsgGuildSummary',
+  full_name='dota.CMsgGuildSummary',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildAuditSDO.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='guild_info', full_name='dota.CMsgGuildSummary.guild_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='entries', full_name='dota.CMsgDOTAGuildAuditSDO.entries', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[_CMSGDOTAGUILDAUDITSDO_ENTRY, ],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=498,
-  serialized_end=766,
-)
-
-
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP = _descriptor.Descriptor(
-  name='Membership',
-  full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.Membership',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.Membership.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='role', full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.Membership.role', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=975,
-  serialized_end=1019,
-)
-
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION = _descriptor.Descriptor(
-  name='Invitation',
-  full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.Invitation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.Invitation.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='time_sent', full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.Invitation.time_sent', index=1,
+      name='member_count', full_name='dota.CMsgGuildSummary.member_count', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='account_id_sender', full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.Invitation.account_id_sender', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1021,
-  serialized_end=1097,
-)
-
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO = _descriptor.Descriptor(
-  name='CMsgDOTAAccountGuildMembershipsSDO',
-  full_name='dota.CMsgDOTAAccountGuildMembershipsSDO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account_id', full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.account_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='memberships', full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.memberships', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='invitations', full_name='dota.CMsgDOTAAccountGuildMembershipsSDO.invitations', index=2,
+      name='event_points', full_name='dota.CMsgGuildSummary.event_points', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -708,7 +1686,7 @@ _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP, _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION, ],
+  nested_types=[_CMSGGUILDSUMMARY_EVENTPOINTS, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -717,49 +1695,42 @@ _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=769,
-  serialized_end=1097,
+  serialized_start=507,
+  serialized_end=816,
 )
 
 
-_CMSGDOTAGUILDCREATEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildCreateRequest',
-  full_name='dota.CMsgDOTAGuildCreateRequest',
+_CMSGGUILDROLE = _descriptor.Descriptor(
+  name='CMsgGuildRole',
+  full_name='dota.CMsgGuildRole',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='dota.CMsgDOTAGuildCreateRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='role_id', full_name='dota.CMsgGuildRole.role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tag', full_name='dota.CMsgDOTAGuildCreateRequest.tag', index=1,
+      name='role_name', full_name='dota.CMsgGuildRole.role_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='logo', full_name='dota.CMsgDOTAGuildCreateRequest.logo', index=2,
-      number=3, type=4, cpp_type=4, label=1,
+      name='role_flags', full_name='dota.CMsgGuildRole.role_flags', index=2,
+      number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='base_logo', full_name='dota.CMsgDOTAGuildCreateRequest.base_logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='dota.CMsgDOTAGuildCreateRequest.banner_logo', index=4,
-      number=5, type=4, cpp_type=4, label=1,
+      name='role_order', full_name='dota.CMsgGuildRole.role_order', index=3,
+      number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -776,73 +1747,86 @@ _CMSGDOTAGUILDCREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1099,
-  serialized_end=1208,
+  serialized_start=818,
+  serialized_end=909,
 )
 
 
-_CMSGDOTAGUILDCREATERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildCreateResponse',
-  full_name='dota.CMsgDOTAGuildCreateResponse',
+_CMSGGUILDMEMBER = _descriptor.Descriptor(
+  name='CMsgGuildMember',
+  full_name='dota.CMsgGuildMember',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildCreateResponse.guild_id', index=0,
+      name='member_account_id', full_name='dota.CMsgGuildMember.member_account_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='errors', full_name='dota.CMsgDOTAGuildCreateResponse.errors', index=1,
-      number=2, type=14, cpp_type=8, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDCREATERESPONSE_EERROR,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1211,
-  serialized_end=1530,
-)
-
-
-_CMSGDOTAGUILDSETACCOUNTROLEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildSetAccountRoleRequest',
-  full_name='dota.CMsgDOTAGuildSetAccountRoleRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildSetAccountRoleRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='target_account_id', full_name='dota.CMsgDOTAGuildSetAccountRoleRequest.target_account_id', index=1,
+      name='member_role_id', full_name='dota.CMsgGuildMember.member_role_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='target_role', full_name='dota.CMsgDOTAGuildSetAccountRoleRequest.target_role', index=2,
+      name='member_joined_timestamp', full_name='dota.CMsgGuildMember.member_joined_timestamp', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='member_last_active_timestamp', full_name='dota.CMsgGuildMember.member_last_active_timestamp', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=912,
+  serialized_end=1051,
+)
+
+
+_CMSGGUILDINVITE = _descriptor.Descriptor(
+  name='CMsgGuildInvite',
+  full_name='dota.CMsgGuildInvite',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='requester_account_id', full_name='dota.CMsgGuildInvite.requester_account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='target_account_id', full_name='dota.CMsgGuildInvite.target_account_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='timestamp_sent', full_name='dota.CMsgGuildInvite.timestamp_sent', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -860,299 +1844,50 @@ _CMSGDOTAGUILDSETACCOUNTROLEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1532,
-  serialized_end=1634,
+  serialized_start=1053,
+  serialized_end=1151,
 )
 
 
-_CMSGDOTAGUILDSETACCOUNTROLERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildSetAccountRoleResponse',
-  full_name='dota.CMsgDOTAGuildSetAccountRoleResponse',
+_CMSGGUILDDATA = _descriptor.Descriptor(
+  name='CMsgGuildData',
+  full_name='dota.CMsgGuildData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='dota.CMsgDOTAGuildSetAccountRoleResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1637,
-  serialized_end=1919,
-)
-
-
-_CMSGDOTAGUILDINVITEACCOUNTREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildInviteAccountRequest',
-  full_name='dota.CMsgDOTAGuildInviteAccountRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildInviteAccountRequest.guild_id', index=0,
+      name='guild_id', full_name='dota.CMsgGuildData.guild_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='target_account_id', full_name='dota.CMsgDOTAGuildInviteAccountRequest.target_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1921,
-  serialized_end=2001,
-)
-
-
-_CMSGDOTAGUILDINVITEACCOUNTRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildInviteAccountResponse',
-  full_name='dota.CMsgDOTAGuildInviteAccountResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='dota.CMsgDOTAGuildInviteAccountResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2004,
-  serialized_end=2364,
-)
-
-
-_CMSGDOTAGUILDCANCELINVITEREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildCancelInviteRequest',
-  full_name='dota.CMsgDOTAGuildCancelInviteRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildCancelInviteRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='guild_info', full_name='dota.CMsgGuildData.guild_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='target_account_id', full_name='dota.CMsgDOTAGuildCancelInviteRequest.target_account_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2366,
-  serialized_end=2445,
-)
-
-
-_CMSGDOTAGUILDCANCELINVITERESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildCancelInviteResponse',
-  full_name='dota.CMsgDOTAGuildCancelInviteResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='dota.CMsgDOTAGuildCancelInviteResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2448,
-  serialized_end=2629,
-)
-
-
-_CMSGDOTAGUILDUPDATEDETAILSREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildUpdateDetailsRequest',
-  full_name='dota.CMsgDOTAGuildUpdateDetailsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildUpdateDetailsRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='dota.CMsgDOTAGuildUpdateDetailsRequest.logo', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='base_logo', full_name='dota.CMsgDOTAGuildUpdateDetailsRequest.base_logo', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='banner_logo', full_name='dota.CMsgDOTAGuildUpdateDetailsRequest.banner_logo', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2631,
-  serialized_end=2738,
-)
-
-
-_CMSGDOTAGUILDUPDATEDETAILSRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildUpdateDetailsResponse',
-  full_name='dota.CMsgDOTAGuildUpdateDetailsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='dota.CMsgDOTAGuildUpdateDetailsResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2741,
-  serialized_end=2924,
-)
-
-
-_CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGCToGCUpdateOpenGuildPartyRequest',
-  full_name='dota.CMsgDOTAGCToGCUpdateOpenGuildPartyRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='dota.CMsgDOTAGCToGCUpdateOpenGuildPartyRequest.party_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGCToGCUpdateOpenGuildPartyRequest.guild_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='member_account_ids', full_name='dota.CMsgDOTAGCToGCUpdateOpenGuildPartyRequest.member_account_ids', index=2,
-      number=3, type=13, cpp_type=3, label=3,
+      name='guild_roles', full_name='dota.CMsgGuildData.guild_roles', index=2,
+      number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='description', full_name='dota.CMsgDOTAGCToGCUpdateOpenGuildPartyRequest.description', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='guild_members', full_name='dota.CMsgGuildData.guild_members', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_invites', full_name='dota.CMsgGuildData.guild_invites', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -1168,272 +1903,39 @@ _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2927,
-  serialized_end=3055,
+  serialized_start=1154,
+  serialized_end=1362,
 )
 
 
-_CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGCToGCUpdateOpenGuildPartyResponse',
-  full_name='dota.CMsgDOTAGCToGCUpdateOpenGuildPartyResponse',
+_CMSGACCOUNTGUILDINVITE = _descriptor.Descriptor(
+  name='CMsgAccountGuildInvite',
+  full_name='dota.CMsgAccountGuildInvite',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='maintain_association', full_name='dota.CMsgDOTAGCToGCUpdateOpenGuildPartyResponse.maintain_association', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3057,
-  serialized_end=3131,
-)
-
-
-_CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGCToGCDestroyOpenGuildPartyRequest',
-  full_name='dota.CMsgDOTAGCToGCDestroyOpenGuildPartyRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='dota.CMsgDOTAGCToGCDestroyOpenGuildPartyRequest.party_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGCToGCDestroyOpenGuildPartyRequest.guild_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3133,
-  serialized_end=3213,
-)
-
-
-_CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGCToGCDestroyOpenGuildPartyResponse',
-  full_name='dota.CMsgDOTAGCToGCDestroyOpenGuildPartyResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3215,
-  serialized_end=3260,
-)
-
-
-_CMSGDOTAPARTYSETOPENGUILDREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAPartySetOpenGuildRequest',
-  full_name='dota.CMsgDOTAPartySetOpenGuildRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAPartySetOpenGuildRequest.guild_id', index=0,
+      name='guild_id', full_name='dota.CMsgAccountGuildInvite.guild_id', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='description', full_name='dota.CMsgDOTAPartySetOpenGuildRequest.description', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3262,
-  serialized_end=3335,
-)
-
-
-_CMSGDOTAPARTYSETOPENGUILDRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAPartySetOpenGuildResponse',
-  full_name='dota.CMsgDOTAPartySetOpenGuildResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='dota.CMsgDOTAPartySetOpenGuildResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3338,
-  serialized_end=3494,
-)
-
-
-_CMSGDOTAJOINOPENGUILDPARTYREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAJoinOpenGuildPartyRequest',
-  full_name='dota.CMsgDOTAJoinOpenGuildPartyRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='dota.CMsgDOTAJoinOpenGuildPartyRequest.party_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3496,
-  serialized_end=3549,
-)
-
-
-_CMSGDOTAJOINOPENGUILDPARTYRESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAJoinOpenGuildPartyResponse',
-  full_name='dota.CMsgDOTAJoinOpenGuildPartyResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='dota.CMsgDOTAJoinOpenGuildPartyResponse.result', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=True, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3552,
-  serialized_end=3710,
-)
-
-
-_CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY = _descriptor.Descriptor(
-  name='OpenParty',
-  full_name='dota.CMsgDOTAGuildOpenPartyRefresh.OpenParty',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='party_id', full_name='dota.CMsgDOTAGuildOpenPartyRefresh.OpenParty.party_id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      name='requester_account_id', full_name='dota.CMsgAccountGuildInvite.requester_account_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='member_account_ids', full_name='dota.CMsgDOTAGuildOpenPartyRefresh.OpenParty.member_account_ids', index=1,
-      number=2, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='time_created', full_name='dota.CMsgDOTAGuildOpenPartyRefresh.OpenParty.time_created', index=2,
+      name='timestamp_sent', full_name='dota.CMsgAccountGuildInvite.timestamp_sent', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='dota.CMsgDOTAGuildOpenPartyRefresh.OpenParty.description', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1446,26 +1948,27 @@ _CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3833,
-  serialized_end=3933,
+  serialized_start=1364,
+  serialized_end=1460,
 )
 
-_CMSGDOTAGUILDOPENPARTYREFRESH = _descriptor.Descriptor(
-  name='CMsgDOTAGuildOpenPartyRefresh',
-  full_name='dota.CMsgDOTAGuildOpenPartyRefresh',
+
+_CMSGACCOUNTGUILDMEMBERSHIPS = _descriptor.Descriptor(
+  name='CMsgAccountGuildMemberships',
+  full_name='dota.CMsgAccountGuildMemberships',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildOpenPartyRefresh.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='guild_ids', full_name='dota.CMsgAccountGuildMemberships.guild_ids', index=0,
+      number=1, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='open_parties', full_name='dota.CMsgDOTAGuildOpenPartyRefresh.open_parties', index=1,
+      name='guild_invites', full_name='dota.CMsgAccountGuildMemberships.guild_invites', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1474,7 +1977,7 @@ _CMSGDOTAGUILDOPENPARTYREFRESH = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -1483,18 +1986,39 @@ _CMSGDOTAGUILDOPENPARTYREFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3713,
-  serialized_end=3933,
+  serialized_start=1462,
+  serialized_end=1563,
 )
 
 
-_CMSGDOTAREQUESTGUILDDATA = _descriptor.Descriptor(
-  name='CMsgDOTARequestGuildData',
-  full_name='dota.CMsgDOTARequestGuildData',
+_CMSGGUILDPERSONAINFO = _descriptor.Descriptor(
+  name='CMsgGuildPersonaInfo',
+  full_name='dota.CMsgGuildPersonaInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgGuildPersonaInfo.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_tag', full_name='dota.CMsgGuildPersonaInfo.guild_tag', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_flags', full_name='dota.CMsgGuildPersonaInfo.guild_flags', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1507,74 +2031,91 @@ _CMSGDOTAREQUESTGUILDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3935,
-  serialized_end=3961,
+  serialized_start=1565,
+  serialized_end=1645,
 )
 
 
-_CMSGDOTAGUILDINVITEDATA = _descriptor.Descriptor(
-  name='CMsgDOTAGuildInviteData',
-  full_name='dota.CMsgDOTAGuildInviteData',
+_CMSGACCOUNTGUILDSPERSONAINFO = _descriptor.Descriptor(
+  name='CMsgAccountGuildsPersonaInfo',
+  full_name='dota.CMsgAccountGuildsPersonaInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='invited_to_guild', full_name='dota.CMsgDOTAGuildInviteData.invited_to_guild', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='guild_persona_infos', full_name='dota.CMsgAccountGuildsPersonaInfo.guild_persona_infos', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1647,
+  serialized_end=1734,
+)
+
+
+_CMSGGUILDFEEDEVENT = _descriptor.Descriptor(
+  name='CMsgGuildFeedEvent',
+  full_name='dota.CMsgGuildFeedEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='feed_event_id', full_name='dota.CMsgGuildFeedEvent.feed_event_id', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildInviteData.guild_id', index=1,
+      name='timestamp', full_name='dota.CMsgGuildFeedEvent.timestamp', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='guild_name', full_name='dota.CMsgDOTAGuildInviteData.guild_name', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='guild_tag', full_name='dota.CMsgDOTAGuildInviteData.guild_tag', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='dota.CMsgDOTAGuildInviteData.logo', index=4,
-      number=5, type=4, cpp_type=4, label=1,
+      name='event_type', full_name='dota.CMsgGuildFeedEvent.event_type', index=2,
+      number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='inviter', full_name='dota.CMsgDOTAGuildInviteData.inviter', index=5,
+      name='param_uint_1', full_name='dota.CMsgGuildFeedEvent.param_uint_1', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='param_uint_2', full_name='dota.CMsgGuildFeedEvent.param_uint_2', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='param_uint_3', full_name='dota.CMsgGuildFeedEvent.param_uint_3', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='inviter_name', full_name='dota.CMsgDOTAGuildInviteData.inviter_name', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='member_count', full_name='dota.CMsgDOTAGuildInviteData.member_count', index=7,
-      number=8, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1587,103 +2128,27 @@ _CMSGDOTAGUILDINVITEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3964,
-  serialized_end=4147,
+  serialized_start=1737,
+  serialized_end=1885,
 )
 
 
-_CMSGDOTAGUILDUPDATEMESSAGE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildUpdateMessage',
-  full_name='dota.CMsgDOTAGuildUpdateMessage',
+_CMSGCLIENTTOGCCREATEGUILD = _descriptor.Descriptor(
+  name='CMsgClientToGCCreateGuild',
+  full_name='dota.CMsgClientToGCCreateGuild',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='dota.CMsgDOTAGuildUpdateMessage.message', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='guild_info', full_name='dota.CMsgClientToGCCreateGuild.guild_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildUpdateMessage.guild_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4149,
-  serialized_end=4212,
-)
-
-
-_CMSGDOTAGUILDEDITLOGOREQUEST = _descriptor.Descriptor(
-  name='CMsgDOTAGuildEditLogoRequest',
-  full_name='dota.CMsgDOTAGuildEditLogoRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildEditLogoRequest.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='logo', full_name='dota.CMsgDOTAGuildEditLogoRequest.logo', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4214,
-  serialized_end=4276,
-)
-
-
-_CMSGDOTAGUILDEDITLOGORESPONSE = _descriptor.Descriptor(
-  name='CMsgDOTAGuildEditLogoResponse',
-  full_name='dota.CMsgDOTAGuildEditLogoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='guild_id', full_name='dota.CMsgDOTAGuildEditLogoResponse.guild_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='result', full_name='dota.CMsgDOTAGuildEditLogoResponse.result', index=1,
+      name='guild_chat_type', full_name='dota.CMsgClientToGCCreateGuild.guild_chat_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1694,7 +2159,6 @@ _CMSGDOTAGUILDEDITLOGORESPONSE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -1702,303 +2166,2397 @@ _CMSGDOTAGUILDEDITLOGORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4279,
-  serialized_end=4488,
+  serialized_start=1888,
+  serialized_end=2033,
 )
 
-_CMSGDOTAGUILDSDO_MEMBER.containing_type = _CMSGDOTAGUILDSDO
-_CMSGDOTAGUILDSDO_INVITATION.containing_type = _CMSGDOTAGUILDSDO
-_CMSGDOTAGUILDSDO.fields_by_name['members'].message_type = _CMSGDOTAGUILDSDO_MEMBER
-_CMSGDOTAGUILDSDO.fields_by_name['invitations'].message_type = _CMSGDOTAGUILDSDO_INVITATION
-_CMSGDOTAGUILDAUDITSDO_ENTRY.containing_type = _CMSGDOTAGUILDAUDITSDO
-_CMSGDOTAGUILDAUDITSDO.fields_by_name['entries'].message_type = _CMSGDOTAGUILDAUDITSDO_ENTRY
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP.containing_type = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION.containing_type = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO.fields_by_name['memberships'].message_type = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP
-_CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO.fields_by_name['invitations'].message_type = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION
-_CMSGDOTAGUILDCREATERESPONSE.fields_by_name['errors'].enum_type = _CMSGDOTAGUILDCREATERESPONSE_EERROR
-_CMSGDOTAGUILDCREATERESPONSE_EERROR.containing_type = _CMSGDOTAGUILDCREATERESPONSE
-_CMSGDOTAGUILDSETACCOUNTROLERESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT
-_CMSGDOTAGUILDSETACCOUNTROLERESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDSETACCOUNTROLERESPONSE
-_CMSGDOTAGUILDINVITEACCOUNTRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT
-_CMSGDOTAGUILDINVITEACCOUNTRESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDINVITEACCOUNTRESPONSE
-_CMSGDOTAGUILDCANCELINVITERESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT
-_CMSGDOTAGUILDCANCELINVITERESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDCANCELINVITERESPONSE
-_CMSGDOTAGUILDUPDATEDETAILSRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT
-_CMSGDOTAGUILDUPDATEDETAILSRESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDUPDATEDETAILSRESPONSE
-_CMSGDOTAPARTYSETOPENGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT
-_CMSGDOTAPARTYSETOPENGUILDRESPONSE_ERESULT.containing_type = _CMSGDOTAPARTYSETOPENGUILDRESPONSE
-_CMSGDOTAJOINOPENGUILDPARTYRESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT
-_CMSGDOTAJOINOPENGUILDPARTYRESPONSE_ERESULT.containing_type = _CMSGDOTAJOINOPENGUILDPARTYRESPONSE
-_CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY.containing_type = _CMSGDOTAGUILDOPENPARTYREFRESH
-_CMSGDOTAGUILDOPENPARTYREFRESH.fields_by_name['open_parties'].message_type = _CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY
-_CMSGDOTAGUILDEDITLOGORESPONSE.fields_by_name['result'].enum_type = _CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT
-_CMSGDOTAGUILDEDITLOGORESPONSE_ERESULT.containing_type = _CMSGDOTAGUILDEDITLOGORESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildSDO'] = _CMSGDOTAGUILDSDO
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildAuditSDO'] = _CMSGDOTAGUILDAUDITSDO
-DESCRIPTOR.message_types_by_name['CMsgDOTAAccountGuildMembershipsSDO'] = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildCreateRequest'] = _CMSGDOTAGUILDCREATEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildCreateResponse'] = _CMSGDOTAGUILDCREATERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildSetAccountRoleRequest'] = _CMSGDOTAGUILDSETACCOUNTROLEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildSetAccountRoleResponse'] = _CMSGDOTAGUILDSETACCOUNTROLERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildInviteAccountRequest'] = _CMSGDOTAGUILDINVITEACCOUNTREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildInviteAccountResponse'] = _CMSGDOTAGUILDINVITEACCOUNTRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildCancelInviteRequest'] = _CMSGDOTAGUILDCANCELINVITEREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildCancelInviteResponse'] = _CMSGDOTAGUILDCANCELINVITERESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildUpdateDetailsRequest'] = _CMSGDOTAGUILDUPDATEDETAILSREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildUpdateDetailsResponse'] = _CMSGDOTAGUILDUPDATEDETAILSRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGCToGCUpdateOpenGuildPartyRequest'] = _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGCToGCUpdateOpenGuildPartyResponse'] = _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGCToGCDestroyOpenGuildPartyRequest'] = _CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGCToGCDestroyOpenGuildPartyResponse'] = _CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAPartySetOpenGuildRequest'] = _CMSGDOTAPARTYSETOPENGUILDREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAPartySetOpenGuildResponse'] = _CMSGDOTAPARTYSETOPENGUILDRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAJoinOpenGuildPartyRequest'] = _CMSGDOTAJOINOPENGUILDPARTYREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAJoinOpenGuildPartyResponse'] = _CMSGDOTAJOINOPENGUILDPARTYRESPONSE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildOpenPartyRefresh'] = _CMSGDOTAGUILDOPENPARTYREFRESH
-DESCRIPTOR.message_types_by_name['CMsgDOTARequestGuildData'] = _CMSGDOTAREQUESTGUILDDATA
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildInviteData'] = _CMSGDOTAGUILDINVITEDATA
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildUpdateMessage'] = _CMSGDOTAGUILDUPDATEMESSAGE
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildEditLogoRequest'] = _CMSGDOTAGUILDEDITLOGOREQUEST
-DESCRIPTOR.message_types_by_name['CMsgDOTAGuildEditLogoResponse'] = _CMSGDOTAGUILDEDITLOGORESPONSE
+
+_CMSGCLIENTTOGCCREATEGUILDRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCCreateGuildResponse',
+  full_name='dota.CMsgClientToGCCreateGuildResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCCreateGuildResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCCreateGuildResponse.guild_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCCREATEGUILDRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2036,
+  serialized_end=2509,
+)
+
+
+_CMSGCLIENTTOGCSETGUILDINFO = _descriptor.Descriptor(
+  name='CMsgClientToGCSetGuildInfo',
+  full_name='dota.CMsgClientToGCSetGuildInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCSetGuildInfo.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_info', full_name='dota.CMsgClientToGCSetGuildInfo.guild_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_chat_type', full_name='dota.CMsgClientToGCSetGuildInfo.guild_chat_type', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2512,
+  serialized_end=2676,
+)
+
+
+_CMSGCLIENTTOGCSETGUILDINFORESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCSetGuildInfoResponse',
+  full_name='dota.CMsgClientToGCSetGuildInfoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCSetGuildInfoResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCSETGUILDINFORESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2679,
+  serialized_end=3127,
+)
+
+
+_CMSGCLIENTTOGCREQUESTGUILDDATA = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestGuildData',
+  full_name='dota.CMsgClientToGCRequestGuildData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCRequestGuildData.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3129,
+  serialized_end=3179,
+)
+
+
+_CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestGuildDataResponse',
+  full_name='dota.CMsgClientToGCRequestGuildDataResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCRequestGuildDataResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_data', full_name='dota.CMsgClientToGCRequestGuildDataResponse.guild_data', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3182,
+  serialized_end=3493,
+)
+
+
+_CMSGGCTOCLIENTGUILDDATAUPDATED = _descriptor.Descriptor(
+  name='CMsgGCToClientGuildDataUpdated',
+  full_name='dota.CMsgGCToClientGuildDataUpdated',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_data', full_name='dota.CMsgGCToClientGuildDataUpdated.guild_data', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='update_flags', full_name='dota.CMsgGCToClientGuildDataUpdated.update_flags', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3495,
+  serialized_end=3590,
+)
+
+
+_CMSGGCTOCLIENTGUILDMEMBERSDATAUPDATED = _descriptor.Descriptor(
+  name='CMsgGCToClientGuildMembersDataUpdated',
+  full_name='dota.CMsgGCToClientGuildMembersDataUpdated',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgGCToClientGuildMembersDataUpdated.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='members_data', full_name='dota.CMsgGCToClientGuildMembersDataUpdated.members_data', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3592,
+  serialized_end=3694,
+)
+
+
+_CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIP = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestGuildMembership',
+  full_name='dota.CMsgClientToGCRequestGuildMembership',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3696,
+  serialized_end=3734,
+)
+
+
+_CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestGuildMembershipResponse',
+  full_name='dota.CMsgClientToGCRequestGuildMembershipResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCRequestGuildMembershipResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_memberships', full_name='dota.CMsgClientToGCRequestGuildMembershipResponse.guild_memberships', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3737,
+  serialized_end=4041,
+)
+
+
+_CMSGGCTOCLIENTGUILDMEMBERSHIPUPDATED = _descriptor.Descriptor(
+  name='CMsgGCToClientGuildMembershipUpdated',
+  full_name='dota.CMsgGCToClientGuildMembershipUpdated',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_memberships', full_name='dota.CMsgGCToClientGuildMembershipUpdated.guild_memberships', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4043,
+  serialized_end=4143,
+)
+
+
+_CMSGCLIENTTOGCREQUESTGUILDSUMMARY = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestGuildSummary',
+  full_name='dota.CMsgClientToGCRequestGuildSummary',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCRequestGuildSummary.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4145,
+  serialized_end=4198,
+)
+
+
+_CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestGuildSummaryResponse',
+  full_name='dota.CMsgClientToGCRequestGuildSummaryResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCRequestGuildSummaryResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_summary', full_name='dota.CMsgClientToGCRequestGuildSummaryResponse.guild_summary', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4201,
+  serialized_end=4505,
+)
+
+
+_CMSGCLIENTTOGCJOINGUILD = _descriptor.Descriptor(
+  name='CMsgClientToGCJoinGuild',
+  full_name='dota.CMsgClientToGCJoinGuild',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCJoinGuild.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4507,
+  serialized_end=4550,
+)
+
+
+_CMSGCLIENTTOGCJOINGUILDRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCJoinGuildResponse',
+  full_name='dota.CMsgClientToGCJoinGuildResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCJoinGuildResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCJOINGUILDRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4553,
+  serialized_end=4902,
+)
+
+
+_CMSGCLIENTTOGCLEAVEGUILD = _descriptor.Descriptor(
+  name='CMsgClientToGCLeaveGuild',
+  full_name='dota.CMsgClientToGCLeaveGuild',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCLeaveGuild.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4904,
+  serialized_end=4948,
+)
+
+
+_CMSGCLIENTTOGCLEAVEGUILDRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCLeaveGuildResponse',
+  full_name='dota.CMsgClientToGCLeaveGuildResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCLeaveGuildResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCLEAVEGUILDRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4951,
+  serialized_end=5227,
+)
+
+
+_CMSGCLIENTTOGCKICKGUILDMEMBER = _descriptor.Descriptor(
+  name='CMsgClientToGCKickGuildMember',
+  full_name='dota.CMsgClientToGCKickGuildMember',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCKickGuildMember.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='target_account_id', full_name='dota.CMsgClientToGCKickGuildMember.target_account_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5229,
+  serialized_end=5305,
+)
+
+
+_CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCKickGuildMemberResponse',
+  full_name='dota.CMsgClientToGCKickGuildMemberResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCKickGuildMemberResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5308,
+  serialized_end=5651,
+)
+
+
+_CMSGCLIENTTOGCSETGUILDMEMBERROLE = _descriptor.Descriptor(
+  name='CMsgClientToGCSetGuildMemberRole',
+  full_name='dota.CMsgClientToGCSetGuildMemberRole',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCSetGuildMemberRole.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='target_account_id', full_name='dota.CMsgClientToGCSetGuildMemberRole.target_account_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='target_role_id', full_name='dota.CMsgClientToGCSetGuildMemberRole.target_role_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5653,
+  serialized_end=5756,
+)
+
+
+_CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCSetGuildMemberRoleResponse',
+  full_name='dota.CMsgClientToGCSetGuildMemberRoleResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCSetGuildMemberRoleResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5759,
+  serialized_end=6130,
+)
+
+
+_CMSGCLIENTTOGCINVITETOGUILD = _descriptor.Descriptor(
+  name='CMsgClientToGCInviteToGuild',
+  full_name='dota.CMsgClientToGCInviteToGuild',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCInviteToGuild.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='target_account_id', full_name='dota.CMsgClientToGCInviteToGuild.target_account_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6132,
+  serialized_end=6206,
+)
+
+
+_CMSGCLIENTTOGCINVITETOGUILDRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCInviteToGuildResponse',
+  full_name='dota.CMsgClientToGCInviteToGuildResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCInviteToGuildResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6209,
+  serialized_end=6597,
+)
+
+
+_CMSGCLIENTTOGCDECLINEINVITETOGUILD = _descriptor.Descriptor(
+  name='CMsgClientToGCDeclineInviteToGuild',
+  full_name='dota.CMsgClientToGCDeclineInviteToGuild',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCDeclineInviteToGuild.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6599,
+  serialized_end=6653,
+)
+
+
+_CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCDeclineInviteToGuildResponse',
+  full_name='dota.CMsgClientToGCDeclineInviteToGuildResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCDeclineInviteToGuildResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6656,
+  serialized_end=6938,
+)
+
+
+_CMSGCLIENTTOGCACCEPTINVITETOGUILD = _descriptor.Descriptor(
+  name='CMsgClientToGCAcceptInviteToGuild',
+  full_name='dota.CMsgClientToGCAcceptInviteToGuild',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCAcceptInviteToGuild.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6940,
+  serialized_end=6993,
+)
+
+
+_CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCAcceptInviteToGuildResponse',
+  full_name='dota.CMsgClientToGCAcceptInviteToGuildResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCAcceptInviteToGuildResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6996,
+  serialized_end=7359,
+)
+
+
+_CMSGCLIENTTOGCCANCELINVITETOGUILD = _descriptor.Descriptor(
+  name='CMsgClientToGCCancelInviteToGuild',
+  full_name='dota.CMsgClientToGCCancelInviteToGuild',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCCancelInviteToGuild.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='target_account_id', full_name='dota.CMsgClientToGCCancelInviteToGuild.target_account_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7361,
+  serialized_end=7441,
+)
+
+
+_CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCCancelInviteToGuildResponse',
+  full_name='dota.CMsgClientToGCCancelInviteToGuildResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCCancelInviteToGuildResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7444,
+  serialized_end=7746,
+)
+
+
+_CMSGCLIENTTOGCADDGUILDROLE = _descriptor.Descriptor(
+  name='CMsgClientToGCAddGuildRole',
+  full_name='dota.CMsgClientToGCAddGuildRole',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCAddGuildRole.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='role_name', full_name='dota.CMsgClientToGCAddGuildRole.role_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='role_flags', full_name='dota.CMsgClientToGCAddGuildRole.role_flags', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7748,
+  serialized_end=7833,
+)
+
+
+_CMSGCLIENTTOGCADDGUILDROLERESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCAddGuildRoleResponse',
+  full_name='dota.CMsgClientToGCAddGuildRoleResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCAddGuildRoleResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='role_id', full_name='dota.CMsgClientToGCAddGuildRoleResponse.role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7836,
+  serialized_end=8244,
+)
+
+
+_CMSGCLIENTTOGCMODIFYGUILDROLE = _descriptor.Descriptor(
+  name='CMsgClientToGCModifyGuildRole',
+  full_name='dota.CMsgClientToGCModifyGuildRole',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCModifyGuildRole.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='role_id', full_name='dota.CMsgClientToGCModifyGuildRole.role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='role_name', full_name='dota.CMsgClientToGCModifyGuildRole.role_name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='role_flags', full_name='dota.CMsgClientToGCModifyGuildRole.role_flags', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8246,
+  serialized_end=8351,
+)
+
+
+_CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCModifyGuildRoleResponse',
+  full_name='dota.CMsgClientToGCModifyGuildRoleResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCModifyGuildRoleResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8354,
+  serialized_end=8750,
+)
+
+
+_CMSGCLIENTTOGCREMOVEGUILDROLE = _descriptor.Descriptor(
+  name='CMsgClientToGCRemoveGuildRole',
+  full_name='dota.CMsgClientToGCRemoveGuildRole',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCRemoveGuildRole.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='role_id', full_name='dota.CMsgClientToGCRemoveGuildRole.role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8752,
+  serialized_end=8818,
+)
+
+
+_CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRemoveGuildRoleResponse',
+  full_name='dota.CMsgClientToGCRemoveGuildRoleResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCRemoveGuildRoleResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8821,
+  serialized_end=9187,
+)
+
+
+_CMSGCLIENTTOGCSETGUILDROLEORDER = _descriptor.Descriptor(
+  name='CMsgClientToGCSetGuildRoleOrder',
+  full_name='dota.CMsgClientToGCSetGuildRoleOrder',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCSetGuildRoleOrder.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='requested_role_ids', full_name='dota.CMsgClientToGCSetGuildRoleOrder.requested_role_ids', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='previous_role_ids', full_name='dota.CMsgClientToGCSetGuildRoleOrder.previous_role_ids', index=2,
+      number=3, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9189,
+  serialized_end=9295,
+)
+
+
+_CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCSetGuildRoleOrderResponse',
+  full_name='dota.CMsgClientToGCSetGuildRoleOrderResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCSetGuildRoleOrderResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='confirmed_role_ids', full_name='dota.CMsgClientToGCSetGuildRoleOrderResponse.confirmed_role_ids', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9298,
+  serialized_end=9666,
+)
+
+
+_CMSGCLIENTTOGCGUILDFEEDREQUEST = _descriptor.Descriptor(
+  name='CMsgClientToGCGuildFeedRequest',
+  full_name='dota.CMsgClientToGCGuildFeedRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCGuildFeedRequest.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='last_seen_id', full_name='dota.CMsgClientToGCGuildFeedRequest.last_seen_id', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9668,
+  serialized_end=9740,
+)
+
+
+_CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestGuildFeedResponse',
+  full_name='dota.CMsgClientToGCRequestGuildFeedResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCRequestGuildFeedResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCRequestGuildFeedResponse.guild_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='feed_events', full_name='dota.CMsgClientToGCRequestGuildFeedResponse.feed_events', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9743,
+  serialized_end=10082,
+)
+
+
+_CMSGGCTOCLIENTGUILDFEEDUPDATED = _descriptor.Descriptor(
+  name='CMsgGCToClientGuildFeedUpdated',
+  full_name='dota.CMsgGCToClientGuildFeedUpdated',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgGCToClientGuildFeedUpdated.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10084,
+  serialized_end=10134,
+)
+
+
+_CMSGCLIENTTOGCADDPLAYERTOGUILDCHAT = _descriptor.Descriptor(
+  name='CMsgClientToGCAddPlayerToGuildChat',
+  full_name='dota.CMsgClientToGCAddPlayerToGuildChat',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCAddPlayerToGuildChat.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10136,
+  serialized_end=10190,
+)
+
+
+_CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCAddPlayerToGuildChatResponse',
+  full_name='dota.CMsgClientToGCAddPlayerToGuildChatResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCAddPlayerToGuildChatResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10193,
+  serialized_end=10499,
+)
+
+
+_CMSGFINDGUILDBYTAGRESPONSE = _descriptor.Descriptor(
+  name='CMsgFindGuildByTagResponse',
+  full_name='dota.CMsgFindGuildByTagResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgFindGuildByTagResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgFindGuildByTagResponse.guild_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_summary', full_name='dota.CMsgFindGuildByTagResponse.guild_summary', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10502,
+  serialized_end=10815,
+)
+
+
+_CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT = _descriptor.Descriptor(
+  name='SearchResult',
+  full_name='dota.CMsgSearchForOpenGuildsResponse.SearchResult',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgSearchForOpenGuildsResponse.SearchResult.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_summary', full_name='dota.CMsgSearchForOpenGuildsResponse.SearchResult.guild_summary', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11035,
+  serialized_end=11114,
+)
+
+_CMSGSEARCHFOROPENGUILDSRESPONSE = _descriptor.Descriptor(
+  name='CMsgSearchForOpenGuildsResponse',
+  full_name='dota.CMsgSearchForOpenGuildsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgSearchForOpenGuildsResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='search_results', full_name='dota.CMsgSearchForOpenGuildsResponse.search_results', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='use_whitelist', full_name='dota.CMsgSearchForOpenGuildsResponse.use_whitelist', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT, ],
+  enum_types=[
+    _CMSGSEARCHFOROPENGUILDSRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10818,
+  serialized_end=11214,
+)
+
+
+_CMSGCLIENTTOGCREPORTGUILDCONTENT = _descriptor.Descriptor(
+  name='CMsgClientToGCReportGuildContent',
+  full_name='dota.CMsgClientToGCReportGuildContent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgClientToGCReportGuildContent.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='guild_content_flags', full_name='dota.CMsgClientToGCReportGuildContent.guild_content_flags', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREPORTGUILDCONTENT_ECONTENTFLAGS,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11217,
+  serialized_end=11424,
+)
+
+
+_CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCReportGuildContentResponse',
+  full_name='dota.CMsgClientToGCReportGuildContentResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCReportGuildContentResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11427,
+  serialized_end=11705,
+)
+
+
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFO = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestAccountGuildPersonaInfo',
+  full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_id', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfo.account_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11707,
+  serialized_end=11773,
+)
+
+
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestAccountGuildPersonaInfoResponse',
+  full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='persona_info', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.persona_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11776,
+  serialized_end=12115,
+)
+
+
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCH = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestAccountGuildPersonaInfoBatch',
+  full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatch',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_ids', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatch.account_ids', index=0,
+      number=1, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=12117,
+  serialized_end=12189,
+)
+
+
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse',
+  full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='persona_infos', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.persona_infos', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=12192,
+  serialized_end=12542,
+)
+
+_CMSGGUILDSUMMARY_EVENTPOINTS.containing_type = _CMSGGUILDSUMMARY
+_CMSGGUILDSUMMARY.fields_by_name['guild_info'].message_type = _CMSGGUILDINFO
+_CMSGGUILDSUMMARY.fields_by_name['event_points'].message_type = _CMSGGUILDSUMMARY_EVENTPOINTS
+_CMSGGUILDDATA.fields_by_name['guild_info'].message_type = _CMSGGUILDINFO
+_CMSGGUILDDATA.fields_by_name['guild_roles'].message_type = _CMSGGUILDROLE
+_CMSGGUILDDATA.fields_by_name['guild_members'].message_type = _CMSGGUILDMEMBER
+_CMSGGUILDDATA.fields_by_name['guild_invites'].message_type = _CMSGGUILDINVITE
+_CMSGACCOUNTGUILDMEMBERSHIPS.fields_by_name['guild_invites'].message_type = _CMSGACCOUNTGUILDINVITE
+_CMSGACCOUNTGUILDSPERSONAINFO.fields_by_name['guild_persona_infos'].message_type = _CMSGGUILDPERSONAINFO
+_CMSGCLIENTTOGCCREATEGUILD.fields_by_name['guild_info'].message_type = _CMSGGUILDINFO
+_CMSGCLIENTTOGCCREATEGUILD.fields_by_name['guild_chat_type'].enum_type = _EGUILDCHATTYPE
+_CMSGCLIENTTOGCCREATEGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCCREATEGUILDRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCCREATEGUILDRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCCREATEGUILDRESPONSE
+_CMSGCLIENTTOGCSETGUILDINFO.fields_by_name['guild_info'].message_type = _CMSGGUILDINFO
+_CMSGCLIENTTOGCSETGUILDINFO.fields_by_name['guild_chat_type'].enum_type = _EGUILDCHATTYPE
+_CMSGCLIENTTOGCSETGUILDINFORESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCSETGUILDINFORESPONSE_ERESPONSE
+_CMSGCLIENTTOGCSETGUILDINFORESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCSETGUILDINFORESPONSE
+_CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE_ERESPONSE
+_CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE.fields_by_name['guild_data'].message_type = _CMSGGUILDDATA
+_CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE
+_CMSGGCTOCLIENTGUILDDATAUPDATED.fields_by_name['guild_data'].message_type = _CMSGGUILDDATA
+_CMSGGCTOCLIENTGUILDMEMBERSDATAUPDATED.fields_by_name['members_data'].message_type = _CMSGGUILDMEMBER
+_CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE.fields_by_name['guild_memberships'].message_type = _CMSGACCOUNTGUILDMEMBERSHIPS
+_CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE
+_CMSGGCTOCLIENTGUILDMEMBERSHIPUPDATED.fields_by_name['guild_memberships'].message_type = _CMSGACCOUNTGUILDMEMBERSHIPS
+_CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE.fields_by_name['guild_summary'].message_type = _CMSGGUILDSUMMARY
+_CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE
+_CMSGCLIENTTOGCJOINGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCJOINGUILDRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCJOINGUILDRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCJOINGUILDRESPONSE
+_CMSGCLIENTTOGCLEAVEGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCLEAVEGUILDRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCLEAVEGUILDRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCLEAVEGUILDRESPONSE
+_CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE
+_CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE_ERESPONSE
+_CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE
+_CMSGCLIENTTOGCINVITETOGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCINVITETOGUILDRESPONSE
+_CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE
+_CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE
+_CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE
+_CMSGCLIENTTOGCADDGUILDROLERESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE
+_CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCADDGUILDROLERESPONSE
+_CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE
+_CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE
+_CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE
+_CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE
+_CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE
+_CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE.fields_by_name['feed_events'].message_type = _CMSGGUILDFEEDEVENT
+_CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE
+_CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE
+_CMSGFINDGUILDBYTAGRESPONSE.fields_by_name['result'].enum_type = _CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE
+_CMSGFINDGUILDBYTAGRESPONSE.fields_by_name['guild_summary'].message_type = _CMSGGUILDSUMMARY
+_CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE.containing_type = _CMSGFINDGUILDBYTAGRESPONSE
+_CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT.fields_by_name['guild_summary'].message_type = _CMSGGUILDSUMMARY
+_CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT.containing_type = _CMSGSEARCHFOROPENGUILDSRESPONSE
+_CMSGSEARCHFOROPENGUILDSRESPONSE.fields_by_name['result'].enum_type = _CMSGSEARCHFOROPENGUILDSRESPONSE_ERESPONSE
+_CMSGSEARCHFOROPENGUILDSRESPONSE.fields_by_name['search_results'].message_type = _CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT
+_CMSGSEARCHFOROPENGUILDSRESPONSE_ERESPONSE.containing_type = _CMSGSEARCHFOROPENGUILDSRESPONSE
+_CMSGCLIENTTOGCREPORTGUILDCONTENT_ECONTENTFLAGS.containing_type = _CMSGCLIENTTOGCREPORTGUILDCONTENT
+_CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE.fields_by_name['persona_info'].message_type = _CMSGACCOUNTGUILDSPERSONAINFO
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE.fields_by_name['persona_infos'].message_type = _CMSGACCOUNTGUILDSPERSONAINFO
+_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgGuildInfo'] = _CMSGGUILDINFO
+DESCRIPTOR.message_types_by_name['CMsgGuildSummary'] = _CMSGGUILDSUMMARY
+DESCRIPTOR.message_types_by_name['CMsgGuildRole'] = _CMSGGUILDROLE
+DESCRIPTOR.message_types_by_name['CMsgGuildMember'] = _CMSGGUILDMEMBER
+DESCRIPTOR.message_types_by_name['CMsgGuildInvite'] = _CMSGGUILDINVITE
+DESCRIPTOR.message_types_by_name['CMsgGuildData'] = _CMSGGUILDDATA
+DESCRIPTOR.message_types_by_name['CMsgAccountGuildInvite'] = _CMSGACCOUNTGUILDINVITE
+DESCRIPTOR.message_types_by_name['CMsgAccountGuildMemberships'] = _CMSGACCOUNTGUILDMEMBERSHIPS
+DESCRIPTOR.message_types_by_name['CMsgGuildPersonaInfo'] = _CMSGGUILDPERSONAINFO
+DESCRIPTOR.message_types_by_name['CMsgAccountGuildsPersonaInfo'] = _CMSGACCOUNTGUILDSPERSONAINFO
+DESCRIPTOR.message_types_by_name['CMsgGuildFeedEvent'] = _CMSGGUILDFEEDEVENT
+DESCRIPTOR.message_types_by_name['CMsgClientToGCCreateGuild'] = _CMSGCLIENTTOGCCREATEGUILD
+DESCRIPTOR.message_types_by_name['CMsgClientToGCCreateGuildResponse'] = _CMSGCLIENTTOGCCREATEGUILDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCSetGuildInfo'] = _CMSGCLIENTTOGCSETGUILDINFO
+DESCRIPTOR.message_types_by_name['CMsgClientToGCSetGuildInfoResponse'] = _CMSGCLIENTTOGCSETGUILDINFORESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildData'] = _CMSGCLIENTTOGCREQUESTGUILDDATA
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildDataResponse'] = _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE
+DESCRIPTOR.message_types_by_name['CMsgGCToClientGuildDataUpdated'] = _CMSGGCTOCLIENTGUILDDATAUPDATED
+DESCRIPTOR.message_types_by_name['CMsgGCToClientGuildMembersDataUpdated'] = _CMSGGCTOCLIENTGUILDMEMBERSDATAUPDATED
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildMembership'] = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIP
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildMembershipResponse'] = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgGCToClientGuildMembershipUpdated'] = _CMSGGCTOCLIENTGUILDMEMBERSHIPUPDATED
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildSummary'] = _CMSGCLIENTTOGCREQUESTGUILDSUMMARY
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildSummaryResponse'] = _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCJoinGuild'] = _CMSGCLIENTTOGCJOINGUILD
+DESCRIPTOR.message_types_by_name['CMsgClientToGCJoinGuildResponse'] = _CMSGCLIENTTOGCJOINGUILDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCLeaveGuild'] = _CMSGCLIENTTOGCLEAVEGUILD
+DESCRIPTOR.message_types_by_name['CMsgClientToGCLeaveGuildResponse'] = _CMSGCLIENTTOGCLEAVEGUILDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCKickGuildMember'] = _CMSGCLIENTTOGCKICKGUILDMEMBER
+DESCRIPTOR.message_types_by_name['CMsgClientToGCKickGuildMemberResponse'] = _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCSetGuildMemberRole'] = _CMSGCLIENTTOGCSETGUILDMEMBERROLE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCSetGuildMemberRoleResponse'] = _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCInviteToGuild'] = _CMSGCLIENTTOGCINVITETOGUILD
+DESCRIPTOR.message_types_by_name['CMsgClientToGCInviteToGuildResponse'] = _CMSGCLIENTTOGCINVITETOGUILDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCDeclineInviteToGuild'] = _CMSGCLIENTTOGCDECLINEINVITETOGUILD
+DESCRIPTOR.message_types_by_name['CMsgClientToGCDeclineInviteToGuildResponse'] = _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCAcceptInviteToGuild'] = _CMSGCLIENTTOGCACCEPTINVITETOGUILD
+DESCRIPTOR.message_types_by_name['CMsgClientToGCAcceptInviteToGuildResponse'] = _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCCancelInviteToGuild'] = _CMSGCLIENTTOGCCANCELINVITETOGUILD
+DESCRIPTOR.message_types_by_name['CMsgClientToGCCancelInviteToGuildResponse'] = _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCAddGuildRole'] = _CMSGCLIENTTOGCADDGUILDROLE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCAddGuildRoleResponse'] = _CMSGCLIENTTOGCADDGUILDROLERESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCModifyGuildRole'] = _CMSGCLIENTTOGCMODIFYGUILDROLE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCModifyGuildRoleResponse'] = _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRemoveGuildRole'] = _CMSGCLIENTTOGCREMOVEGUILDROLE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRemoveGuildRoleResponse'] = _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCSetGuildRoleOrder'] = _CMSGCLIENTTOGCSETGUILDROLEORDER
+DESCRIPTOR.message_types_by_name['CMsgClientToGCSetGuildRoleOrderResponse'] = _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCGuildFeedRequest'] = _CMSGCLIENTTOGCGUILDFEEDREQUEST
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildFeedResponse'] = _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgGCToClientGuildFeedUpdated'] = _CMSGGCTOCLIENTGUILDFEEDUPDATED
+DESCRIPTOR.message_types_by_name['CMsgClientToGCAddPlayerToGuildChat'] = _CMSGCLIENTTOGCADDPLAYERTOGUILDCHAT
+DESCRIPTOR.message_types_by_name['CMsgClientToGCAddPlayerToGuildChatResponse'] = _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgFindGuildByTagResponse'] = _CMSGFINDGUILDBYTAGRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgSearchForOpenGuildsResponse'] = _CMSGSEARCHFOROPENGUILDSRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCReportGuildContent'] = _CMSGCLIENTTOGCREPORTGUILDCONTENT
+DESCRIPTOR.message_types_by_name['CMsgClientToGCReportGuildContentResponse'] = _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestAccountGuildPersonaInfo'] = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFO
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestAccountGuildPersonaInfoResponse'] = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestAccountGuildPersonaInfoBatch'] = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCH
+DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse'] = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE
+DESCRIPTOR.enum_types_by_name['EGuildAuditAction'] = _EGUILDAUDITACTION
+DESCRIPTOR.enum_types_by_name['EGuildChatType'] = _EGUILDCHATTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-CMsgDOTAGuildSDO = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildSDO', (_message.Message,), dict(
+CMsgGuildInfo = _reflection.GeneratedProtocolMessageType('CMsgGuildInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGUILDINFO,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGuildInfo)
+  ))
+_sym_db.RegisterMessage(CMsgGuildInfo)
 
-  Member = _reflection.GeneratedProtocolMessageType('Member', (_message.Message,), dict(
-    DESCRIPTOR = _CMSGDOTAGUILDSDO_MEMBER,
+CMsgGuildSummary = _reflection.GeneratedProtocolMessageType('CMsgGuildSummary', (_message.Message,), dict(
+
+  EventPoints = _reflection.GeneratedProtocolMessageType('EventPoints', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGGUILDSUMMARY_EVENTPOINTS,
     __module__ = 'dota_gcmessages_client_guild_pb2'
-    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildSDO.Member)
+    # @@protoc_insertion_point(class_scope:dota.CMsgGuildSummary.EventPoints)
     ))
   ,
+  DESCRIPTOR = _CMSGGUILDSUMMARY,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGuildSummary)
+  ))
+_sym_db.RegisterMessage(CMsgGuildSummary)
+_sym_db.RegisterMessage(CMsgGuildSummary.EventPoints)
 
-  Invitation = _reflection.GeneratedProtocolMessageType('Invitation', (_message.Message,), dict(
-    DESCRIPTOR = _CMSGDOTAGUILDSDO_INVITATION,
+CMsgGuildRole = _reflection.GeneratedProtocolMessageType('CMsgGuildRole', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGUILDROLE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGuildRole)
+  ))
+_sym_db.RegisterMessage(CMsgGuildRole)
+
+CMsgGuildMember = _reflection.GeneratedProtocolMessageType('CMsgGuildMember', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGUILDMEMBER,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGuildMember)
+  ))
+_sym_db.RegisterMessage(CMsgGuildMember)
+
+CMsgGuildInvite = _reflection.GeneratedProtocolMessageType('CMsgGuildInvite', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGUILDINVITE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGuildInvite)
+  ))
+_sym_db.RegisterMessage(CMsgGuildInvite)
+
+CMsgGuildData = _reflection.GeneratedProtocolMessageType('CMsgGuildData', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGUILDDATA,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGuildData)
+  ))
+_sym_db.RegisterMessage(CMsgGuildData)
+
+CMsgAccountGuildInvite = _reflection.GeneratedProtocolMessageType('CMsgAccountGuildInvite', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGACCOUNTGUILDINVITE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgAccountGuildInvite)
+  ))
+_sym_db.RegisterMessage(CMsgAccountGuildInvite)
+
+CMsgAccountGuildMemberships = _reflection.GeneratedProtocolMessageType('CMsgAccountGuildMemberships', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGACCOUNTGUILDMEMBERSHIPS,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgAccountGuildMemberships)
+  ))
+_sym_db.RegisterMessage(CMsgAccountGuildMemberships)
+
+CMsgGuildPersonaInfo = _reflection.GeneratedProtocolMessageType('CMsgGuildPersonaInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGUILDPERSONAINFO,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGuildPersonaInfo)
+  ))
+_sym_db.RegisterMessage(CMsgGuildPersonaInfo)
+
+CMsgAccountGuildsPersonaInfo = _reflection.GeneratedProtocolMessageType('CMsgAccountGuildsPersonaInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGACCOUNTGUILDSPERSONAINFO,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgAccountGuildsPersonaInfo)
+  ))
+_sym_db.RegisterMessage(CMsgAccountGuildsPersonaInfo)
+
+CMsgGuildFeedEvent = _reflection.GeneratedProtocolMessageType('CMsgGuildFeedEvent', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGUILDFEEDEVENT,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGuildFeedEvent)
+  ))
+_sym_db.RegisterMessage(CMsgGuildFeedEvent)
+
+CMsgClientToGCCreateGuild = _reflection.GeneratedProtocolMessageType('CMsgClientToGCCreateGuild', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCCREATEGUILD,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCCreateGuild)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCCreateGuild)
+
+CMsgClientToGCCreateGuildResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCCreateGuildResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCCREATEGUILDRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCCreateGuildResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCCreateGuildResponse)
+
+CMsgClientToGCSetGuildInfo = _reflection.GeneratedProtocolMessageType('CMsgClientToGCSetGuildInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCSETGUILDINFO,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCSetGuildInfo)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCSetGuildInfo)
+
+CMsgClientToGCSetGuildInfoResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCSetGuildInfoResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCSETGUILDINFORESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCSetGuildInfoResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCSetGuildInfoResponse)
+
+CMsgClientToGCRequestGuildData = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestGuildData', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTGUILDDATA,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestGuildData)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRequestGuildData)
+
+CMsgClientToGCRequestGuildDataResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestGuildDataResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestGuildDataResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRequestGuildDataResponse)
+
+CMsgGCToClientGuildDataUpdated = _reflection.GeneratedProtocolMessageType('CMsgGCToClientGuildDataUpdated', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOCLIENTGUILDDATAUPDATED,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientGuildDataUpdated)
+  ))
+_sym_db.RegisterMessage(CMsgGCToClientGuildDataUpdated)
+
+CMsgGCToClientGuildMembersDataUpdated = _reflection.GeneratedProtocolMessageType('CMsgGCToClientGuildMembersDataUpdated', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOCLIENTGUILDMEMBERSDATAUPDATED,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientGuildMembersDataUpdated)
+  ))
+_sym_db.RegisterMessage(CMsgGCToClientGuildMembersDataUpdated)
+
+CMsgClientToGCRequestGuildMembership = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestGuildMembership', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIP,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestGuildMembership)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRequestGuildMembership)
+
+CMsgClientToGCRequestGuildMembershipResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestGuildMembershipResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestGuildMembershipResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRequestGuildMembershipResponse)
+
+CMsgGCToClientGuildMembershipUpdated = _reflection.GeneratedProtocolMessageType('CMsgGCToClientGuildMembershipUpdated', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOCLIENTGUILDMEMBERSHIPUPDATED,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientGuildMembershipUpdated)
+  ))
+_sym_db.RegisterMessage(CMsgGCToClientGuildMembershipUpdated)
+
+CMsgClientToGCRequestGuildSummary = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestGuildSummary', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTGUILDSUMMARY,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestGuildSummary)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRequestGuildSummary)
+
+CMsgClientToGCRequestGuildSummaryResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestGuildSummaryResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestGuildSummaryResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRequestGuildSummaryResponse)
+
+CMsgClientToGCJoinGuild = _reflection.GeneratedProtocolMessageType('CMsgClientToGCJoinGuild', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCJOINGUILD,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCJoinGuild)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCJoinGuild)
+
+CMsgClientToGCJoinGuildResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCJoinGuildResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCJOINGUILDRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCJoinGuildResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCJoinGuildResponse)
+
+CMsgClientToGCLeaveGuild = _reflection.GeneratedProtocolMessageType('CMsgClientToGCLeaveGuild', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCLEAVEGUILD,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCLeaveGuild)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCLeaveGuild)
+
+CMsgClientToGCLeaveGuildResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCLeaveGuildResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCLEAVEGUILDRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCLeaveGuildResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCLeaveGuildResponse)
+
+CMsgClientToGCKickGuildMember = _reflection.GeneratedProtocolMessageType('CMsgClientToGCKickGuildMember', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCKICKGUILDMEMBER,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCKickGuildMember)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCKickGuildMember)
+
+CMsgClientToGCKickGuildMemberResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCKickGuildMemberResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCKickGuildMemberResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCKickGuildMemberResponse)
+
+CMsgClientToGCSetGuildMemberRole = _reflection.GeneratedProtocolMessageType('CMsgClientToGCSetGuildMemberRole', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCSETGUILDMEMBERROLE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCSetGuildMemberRole)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCSetGuildMemberRole)
+
+CMsgClientToGCSetGuildMemberRoleResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCSetGuildMemberRoleResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCSetGuildMemberRoleResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCSetGuildMemberRoleResponse)
+
+CMsgClientToGCInviteToGuild = _reflection.GeneratedProtocolMessageType('CMsgClientToGCInviteToGuild', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCINVITETOGUILD,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCInviteToGuild)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCInviteToGuild)
+
+CMsgClientToGCInviteToGuildResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCInviteToGuildResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCINVITETOGUILDRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCInviteToGuildResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCInviteToGuildResponse)
+
+CMsgClientToGCDeclineInviteToGuild = _reflection.GeneratedProtocolMessageType('CMsgClientToGCDeclineInviteToGuild', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCDECLINEINVITETOGUILD,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCDeclineInviteToGuild)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCDeclineInviteToGuild)
+
+CMsgClientToGCDeclineInviteToGuildResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCDeclineInviteToGuildResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCDeclineInviteToGuildResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCDeclineInviteToGuildResponse)
+
+CMsgClientToGCAcceptInviteToGuild = _reflection.GeneratedProtocolMessageType('CMsgClientToGCAcceptInviteToGuild', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCACCEPTINVITETOGUILD,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCAcceptInviteToGuild)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCAcceptInviteToGuild)
+
+CMsgClientToGCAcceptInviteToGuildResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCAcceptInviteToGuildResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCAcceptInviteToGuildResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCAcceptInviteToGuildResponse)
+
+CMsgClientToGCCancelInviteToGuild = _reflection.GeneratedProtocolMessageType('CMsgClientToGCCancelInviteToGuild', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCCANCELINVITETOGUILD,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCCancelInviteToGuild)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCCancelInviteToGuild)
+
+CMsgClientToGCCancelInviteToGuildResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCCancelInviteToGuildResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCCancelInviteToGuildResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCCancelInviteToGuildResponse)
+
+CMsgClientToGCAddGuildRole = _reflection.GeneratedProtocolMessageType('CMsgClientToGCAddGuildRole', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCADDGUILDROLE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCAddGuildRole)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCAddGuildRole)
+
+CMsgClientToGCAddGuildRoleResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCAddGuildRoleResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCADDGUILDROLERESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCAddGuildRoleResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCAddGuildRoleResponse)
+
+CMsgClientToGCModifyGuildRole = _reflection.GeneratedProtocolMessageType('CMsgClientToGCModifyGuildRole', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCMODIFYGUILDROLE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCModifyGuildRole)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCModifyGuildRole)
+
+CMsgClientToGCModifyGuildRoleResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCModifyGuildRoleResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCModifyGuildRoleResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCModifyGuildRoleResponse)
+
+CMsgClientToGCRemoveGuildRole = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRemoveGuildRole', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREMOVEGUILDROLE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRemoveGuildRole)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRemoveGuildRole)
+
+CMsgClientToGCRemoveGuildRoleResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRemoveGuildRoleResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRemoveGuildRoleResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRemoveGuildRoleResponse)
+
+CMsgClientToGCSetGuildRoleOrder = _reflection.GeneratedProtocolMessageType('CMsgClientToGCSetGuildRoleOrder', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCSETGUILDROLEORDER,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCSetGuildRoleOrder)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCSetGuildRoleOrder)
+
+CMsgClientToGCSetGuildRoleOrderResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCSetGuildRoleOrderResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCSetGuildRoleOrderResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCSetGuildRoleOrderResponse)
+
+CMsgClientToGCGuildFeedRequest = _reflection.GeneratedProtocolMessageType('CMsgClientToGCGuildFeedRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCGUILDFEEDREQUEST,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCGuildFeedRequest)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCGuildFeedRequest)
+
+CMsgClientToGCRequestGuildFeedResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestGuildFeedResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestGuildFeedResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCRequestGuildFeedResponse)
+
+CMsgGCToClientGuildFeedUpdated = _reflection.GeneratedProtocolMessageType('CMsgGCToClientGuildFeedUpdated', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOCLIENTGUILDFEEDUPDATED,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientGuildFeedUpdated)
+  ))
+_sym_db.RegisterMessage(CMsgGCToClientGuildFeedUpdated)
+
+CMsgClientToGCAddPlayerToGuildChat = _reflection.GeneratedProtocolMessageType('CMsgClientToGCAddPlayerToGuildChat', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCADDPLAYERTOGUILDCHAT,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCAddPlayerToGuildChat)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCAddPlayerToGuildChat)
+
+CMsgClientToGCAddPlayerToGuildChatResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCAddPlayerToGuildChatResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCAddPlayerToGuildChatResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCAddPlayerToGuildChatResponse)
+
+CMsgFindGuildByTagResponse = _reflection.GeneratedProtocolMessageType('CMsgFindGuildByTagResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGFINDGUILDBYTAGRESPONSE,
+  __module__ = 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgFindGuildByTagResponse)
+  ))
+_sym_db.RegisterMessage(CMsgFindGuildByTagResponse)
+
+CMsgSearchForOpenGuildsResponse = _reflection.GeneratedProtocolMessageType('CMsgSearchForOpenGuildsResponse', (_message.Message,), dict(
+
+  SearchResult = _reflection.GeneratedProtocolMessageType('SearchResult', (_message.Message,), dict(
+    DESCRIPTOR = _CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT,
     __module__ = 'dota_gcmessages_client_guild_pb2'
-    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildSDO.Invitation)
+    # @@protoc_insertion_point(class_scope:dota.CMsgSearchForOpenGuildsResponse.SearchResult)
     ))
   ,
-  DESCRIPTOR = _CMSGDOTAGUILDSDO,
+  DESCRIPTOR = _CMSGSEARCHFOROPENGUILDSRESPONSE,
   __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildSDO)
+  # @@protoc_insertion_point(class_scope:dota.CMsgSearchForOpenGuildsResponse)
   ))
-_sym_db.RegisterMessage(CMsgDOTAGuildSDO)
-_sym_db.RegisterMessage(CMsgDOTAGuildSDO.Member)
-_sym_db.RegisterMessage(CMsgDOTAGuildSDO.Invitation)
+_sym_db.RegisterMessage(CMsgSearchForOpenGuildsResponse)
+_sym_db.RegisterMessage(CMsgSearchForOpenGuildsResponse.SearchResult)
 
-CMsgDOTAGuildAuditSDO = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildAuditSDO', (_message.Message,), dict(
-
-  Entry = _reflection.GeneratedProtocolMessageType('Entry', (_message.Message,), dict(
-    DESCRIPTOR = _CMSGDOTAGUILDAUDITSDO_ENTRY,
-    __module__ = 'dota_gcmessages_client_guild_pb2'
-    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildAuditSDO.Entry)
-    ))
-  ,
-  DESCRIPTOR = _CMSGDOTAGUILDAUDITSDO,
+CMsgClientToGCReportGuildContent = _reflection.GeneratedProtocolMessageType('CMsgClientToGCReportGuildContent', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREPORTGUILDCONTENT,
   __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildAuditSDO)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCReportGuildContent)
   ))
-_sym_db.RegisterMessage(CMsgDOTAGuildAuditSDO)
-_sym_db.RegisterMessage(CMsgDOTAGuildAuditSDO.Entry)
+_sym_db.RegisterMessage(CMsgClientToGCReportGuildContent)
 
-CMsgDOTAAccountGuildMembershipsSDO = _reflection.GeneratedProtocolMessageType('CMsgDOTAAccountGuildMembershipsSDO', (_message.Message,), dict(
-
-  Membership = _reflection.GeneratedProtocolMessageType('Membership', (_message.Message,), dict(
-    DESCRIPTOR = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_MEMBERSHIP,
-    __module__ = 'dota_gcmessages_client_guild_pb2'
-    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAAccountGuildMembershipsSDO.Membership)
-    ))
-  ,
-
-  Invitation = _reflection.GeneratedProtocolMessageType('Invitation', (_message.Message,), dict(
-    DESCRIPTOR = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO_INVITATION,
-    __module__ = 'dota_gcmessages_client_guild_pb2'
-    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAAccountGuildMembershipsSDO.Invitation)
-    ))
-  ,
-  DESCRIPTOR = _CMSGDOTAACCOUNTGUILDMEMBERSHIPSSDO,
+CMsgClientToGCReportGuildContentResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCReportGuildContentResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE,
   __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAAccountGuildMembershipsSDO)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCReportGuildContentResponse)
   ))
-_sym_db.RegisterMessage(CMsgDOTAAccountGuildMembershipsSDO)
-_sym_db.RegisterMessage(CMsgDOTAAccountGuildMembershipsSDO.Membership)
-_sym_db.RegisterMessage(CMsgDOTAAccountGuildMembershipsSDO.Invitation)
+_sym_db.RegisterMessage(CMsgClientToGCReportGuildContentResponse)
 
-CMsgDOTAGuildCreateRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildCreateRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDCREATEREQUEST,
+CMsgClientToGCRequestAccountGuildPersonaInfo = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestAccountGuildPersonaInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFO,
   __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildCreateRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestAccountGuildPersonaInfo)
   ))
-_sym_db.RegisterMessage(CMsgDOTAGuildCreateRequest)
+_sym_db.RegisterMessage(CMsgClientToGCRequestAccountGuildPersonaInfo)
 
-CMsgDOTAGuildCreateResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildCreateResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDCREATERESPONSE,
+CMsgClientToGCRequestAccountGuildPersonaInfoResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestAccountGuildPersonaInfoResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE,
   __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildCreateResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse)
   ))
-_sym_db.RegisterMessage(CMsgDOTAGuildCreateResponse)
+_sym_db.RegisterMessage(CMsgClientToGCRequestAccountGuildPersonaInfoResponse)
 
-CMsgDOTAGuildSetAccountRoleRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildSetAccountRoleRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDSETACCOUNTROLEREQUEST,
+CMsgClientToGCRequestAccountGuildPersonaInfoBatch = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestAccountGuildPersonaInfoBatch', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCH,
   __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildSetAccountRoleRequest)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatch)
   ))
-_sym_db.RegisterMessage(CMsgDOTAGuildSetAccountRoleRequest)
+_sym_db.RegisterMessage(CMsgClientToGCRequestAccountGuildPersonaInfoBatch)
 
-CMsgDOTAGuildSetAccountRoleResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildSetAccountRoleResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDSETACCOUNTROLERESPONSE,
+CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE,
   __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildSetAccountRoleResponse)
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse)
   ))
-_sym_db.RegisterMessage(CMsgDOTAGuildSetAccountRoleResponse)
-
-CMsgDOTAGuildInviteAccountRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildInviteAccountRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDINVITEACCOUNTREQUEST,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildInviteAccountRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildInviteAccountRequest)
-
-CMsgDOTAGuildInviteAccountResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildInviteAccountResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDINVITEACCOUNTRESPONSE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildInviteAccountResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildInviteAccountResponse)
-
-CMsgDOTAGuildCancelInviteRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildCancelInviteRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDCANCELINVITEREQUEST,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildCancelInviteRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildCancelInviteRequest)
-
-CMsgDOTAGuildCancelInviteResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildCancelInviteResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDCANCELINVITERESPONSE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildCancelInviteResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildCancelInviteResponse)
-
-CMsgDOTAGuildUpdateDetailsRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildUpdateDetailsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDUPDATEDETAILSREQUEST,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildUpdateDetailsRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildUpdateDetailsRequest)
-
-CMsgDOTAGuildUpdateDetailsResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildUpdateDetailsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDUPDATEDETAILSRESPONSE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildUpdateDetailsResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildUpdateDetailsResponse)
-
-CMsgDOTAGCToGCUpdateOpenGuildPartyRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAGCToGCUpdateOpenGuildPartyRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYREQUEST,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGCToGCUpdateOpenGuildPartyRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGCToGCUpdateOpenGuildPartyRequest)
-
-CMsgDOTAGCToGCUpdateOpenGuildPartyResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAGCToGCUpdateOpenGuildPartyResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGCTOGCUPDATEOPENGUILDPARTYRESPONSE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGCToGCUpdateOpenGuildPartyResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGCToGCUpdateOpenGuildPartyResponse)
-
-CMsgDOTAGCToGCDestroyOpenGuildPartyRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAGCToGCDestroyOpenGuildPartyRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYREQUEST,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGCToGCDestroyOpenGuildPartyRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGCToGCDestroyOpenGuildPartyRequest)
-
-CMsgDOTAGCToGCDestroyOpenGuildPartyResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAGCToGCDestroyOpenGuildPartyResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGCTOGCDESTROYOPENGUILDPARTYRESPONSE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGCToGCDestroyOpenGuildPartyResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGCToGCDestroyOpenGuildPartyResponse)
-
-CMsgDOTAPartySetOpenGuildRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAPartySetOpenGuildRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAPARTYSETOPENGUILDREQUEST,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPartySetOpenGuildRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAPartySetOpenGuildRequest)
-
-CMsgDOTAPartySetOpenGuildResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAPartySetOpenGuildResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAPARTYSETOPENGUILDRESPONSE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAPartySetOpenGuildResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAPartySetOpenGuildResponse)
-
-CMsgDOTAJoinOpenGuildPartyRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAJoinOpenGuildPartyRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAJOINOPENGUILDPARTYREQUEST,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAJoinOpenGuildPartyRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAJoinOpenGuildPartyRequest)
-
-CMsgDOTAJoinOpenGuildPartyResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAJoinOpenGuildPartyResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAJOINOPENGUILDPARTYRESPONSE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAJoinOpenGuildPartyResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAJoinOpenGuildPartyResponse)
-
-CMsgDOTAGuildOpenPartyRefresh = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildOpenPartyRefresh', (_message.Message,), dict(
-
-  OpenParty = _reflection.GeneratedProtocolMessageType('OpenParty', (_message.Message,), dict(
-    DESCRIPTOR = _CMSGDOTAGUILDOPENPARTYREFRESH_OPENPARTY,
-    __module__ = 'dota_gcmessages_client_guild_pb2'
-    # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildOpenPartyRefresh.OpenParty)
-    ))
-  ,
-  DESCRIPTOR = _CMSGDOTAGUILDOPENPARTYREFRESH,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildOpenPartyRefresh)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildOpenPartyRefresh)
-_sym_db.RegisterMessage(CMsgDOTAGuildOpenPartyRefresh.OpenParty)
-
-CMsgDOTARequestGuildData = _reflection.GeneratedProtocolMessageType('CMsgDOTARequestGuildData', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAREQUESTGUILDDATA,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTARequestGuildData)
-  ))
-_sym_db.RegisterMessage(CMsgDOTARequestGuildData)
-
-CMsgDOTAGuildInviteData = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildInviteData', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDINVITEDATA,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildInviteData)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildInviteData)
-
-CMsgDOTAGuildUpdateMessage = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildUpdateMessage', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDUPDATEMESSAGE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildUpdateMessage)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildUpdateMessage)
-
-CMsgDOTAGuildEditLogoRequest = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildEditLogoRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDEDITLOGOREQUEST,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildEditLogoRequest)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildEditLogoRequest)
-
-CMsgDOTAGuildEditLogoResponse = _reflection.GeneratedProtocolMessageType('CMsgDOTAGuildEditLogoResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CMSGDOTAGUILDEDITLOGORESPONSE,
-  __module__ = 'dota_gcmessages_client_guild_pb2'
-  # @@protoc_insertion_point(class_scope:dota.CMsgDOTAGuildEditLogoResponse)
-  ))
-_sym_db.RegisterMessage(CMsgDOTAGuildEditLogoResponse)
+_sym_db.RegisterMessage(CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse)
 
 
 DESCRIPTOR._options = None

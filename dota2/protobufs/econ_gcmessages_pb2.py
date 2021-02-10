@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dota',
   syntax='proto2',
   serialized_options=_b('H\001\220\001\000'),
-  serialized_pb=_b('\n\x15\x65\x63on_gcmessages.proto\x12\x04\x64ota\x1a\x13steammessages.proto\x1a\x17\x65\x63on_shared_enums.proto\"E\n\x12\x43MsgApplyAutograph\x12\x19\n\x11\x61utograph_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\"h\n\x1b\x43MsgAdjustItemEquippedState\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x11\n\tnew_class\x18\x02 \x01(\r\x12\x10\n\x08new_slot\x18\x03 \x01(\r\x12\x13\n\x0bstyle_index\x18\x04 \x01(\r\"\x89\x02\n$CMsgEconPlayerStrangeCountAdjustment\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x65\n\x19strange_count_adjustments\x18\x02 \x03(\x0b\x32\x42.dota.CMsgEconPlayerStrangeCountAdjustment.CStrangeCountAdjustment\x12\x12\n\nturbo_mode\x18\x03 \x01(\x08\x1aR\n\x17\x43StrangeCountAdjustment\x12\x12\n\nevent_type\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x12\x12\n\nadjustment\x18\x03 \x01(\r\"=\n)CMsgRequestItemPurgatory_FinalizePurchase\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\"U\n1CMsgRequestItemPurgatory_FinalizePurchaseResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08item_ids\x18\x02 \x03(\x04\";\n\'CMsgRequestItemPurgatory_RefundPurchase\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\"A\n/CMsgRequestItemPurgatory_RefundPurchaseResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"(\n\x14\x43MsgCraftingResponse\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\"@\n\x1b\x43MsgGCRequestStoreSalesData\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x10\n\x08\x63urrency\x18\x02 \x01(\r\"\xbe\x01\n#CMsgGCRequestStoreSalesDataResponse\x12\x43\n\nsale_price\x18\x01 \x03(\x0b\x32/.dota.CMsgGCRequestStoreSalesDataResponse.Price\x12\x0f\n\x07version\x18\x02 \x01(\r\x12\x17\n\x0f\x65xpiration_time\x18\x03 \x01(\r\x1a(\n\x05Price\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\r\n\x05price\x18\x02 \x01(\r\"W\n+CMsgGCRequestStoreSalesDataUpToDateResponse\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x17\n\x0f\x65xpiration_time\x18\x02 \x01(\r\"\x17\n\x15\x43MsgGCToGCPingRequest\"\x18\n\x16\x43MsgGCToGCPingResponse\"4\n\x1e\x43MsgGCToGCGetUserSessionServer\x12\x12\n\naccount_id\x18\x01 \x01(\r\"T\n&CMsgGCToGCGetUserSessionServerResponse\x12\x17\n\x0fserver_steam_id\x18\x01 \x01(\x06\x12\x11\n\tis_online\x18\x02 \x01(\x08\"L\n\x1e\x43MsgGCToGCGetUserServerMembers\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x16\n\x0emax_spectators\x18\x02 \x01(\r\"C\n&CMsgGCToGCGetUserServerMembersResponse\x12\x19\n\x11member_account_id\x18\x01 \x03(\r\"8\n\x1e\x43MsgLookupMultipleAccountNames\x12\x16\n\naccountids\x18\x01 \x03(\rB\x02\x10\x01\"\x9f\x01\n&CMsgLookupMultipleAccountNamesResponse\x12\x46\n\x08\x61\x63\x63ounts\x18\x01 \x03(\x0b\x32\x34.dota.CMsgLookupMultipleAccountNamesResponse.Account\x1a-\n\x07\x41\x63\x63ount\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x0f\n\x07persona\x18\x02 \x01(\t\"/\n\x15\x43MsgRequestCrateItems\x12\x16\n\x0e\x63rate_item_def\x18\x01 \x01(\r\"\x86\x01\n\x1d\x43MsgRequestCrateItemsResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x11\n\titem_defs\x18\x02 \x03(\r\x12\x16\n\x0epeek_item_defs\x18\x03 \x03(\r\"(\n\x07\x45Result\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x0c\n\x08k_Failed\x10\x01\"9\n\x1f\x43MsgRequestCrateEscalationLevel\x12\x16\n\x0e\x63rate_item_def\x18\x01 \x01(\r\"\xd1\x01\n\'CMsgRequestCrateEscalationLevelResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x19\n\x11\x65scalation_level0\x18\x02 \x01(\r\x12\x19\n\x11\x65scalation_level1\x18\x03 \x01(\r\x12\x19\n\x11\x65scalation_level2\x18\x04 \x01(\r\x12\x19\n\x11\x65scalation_level3\x18\x05 \x01(\r\"(\n\x07\x45Result\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x0c\n\x08k_Failed\x10\x01\"\x98\x01\n\x1d\x43MsgGCToGCCanUseDropRateBonus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64rop_rate_bonus\x18\x02 \x01(\x02\x12\x14\n\x0c\x62ooster_type\x18\x03 \x01(\r\x12\x1a\n\x12\x65xclusive_item_def\x18\x04 \x01(\r\x12\x18\n\x10\x61llow_equal_rate\x18\x05 \x01(\x08\"\xb1\x01\n\x17\x43MsgSQLAddDropRateBonus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x12\x10\n\x08item_def\x18\x03 \x01(\r\x12\x17\n\x0f\x64rop_rate_bonus\x18\x04 \x01(\x02\x12\x14\n\x0c\x62ooster_type\x18\x05 \x01(\r\x12\x18\n\x10seconds_duration\x18\x06 \x01(\r\x12\x16\n\x0e\x65nd_time_stamp\x18\x07 \x01(\r\"o\n\x1b\x43MsgSQLUpgradeBattleBooster\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x12\x14\n\x0c\x62onus_to_add\x18\x03 \x01(\x02\x12\x14\n\x0c\x62ooster_type\x18\x04 \x01(\r\">\n\x18\x43MsgGCToGCRefreshSOCache\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0e\n\x06reload\x18\x02 \x01(\x08\"J\n!CMsgGCToGCCheckAccountTradeStatus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tinitiator\x18\x02 \x01(\x08\"R\n)CMsgGCToGCCheckAccountTradeStatusResponse\x12\x11\n\tcan_trade\x18\x01 \x01(\x08\x12\x12\n\nerror_code\x18\x02 \x01(\r\"z\n\x1d\x43MsgGCToGCAddSubscriptionTime\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12)\n!matching_subscription_def_indexes\x18\x02 \x03(\r\x12\x1a\n\x12\x61\x64\x64itional_seconds\x18\x03 \x01(\r\"\x8b\x05\n!CMsgGCToGCGrantAccountRolledItems\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12;\n\x05items\x18\x02 \x03(\x0b\x32,.dota.CMsgGCToGCGrantAccountRolledItems.Item\x12\x14\n\x0c\x61udit_action\x18\x03 \x01(\r\x12\x12\n\naudit_data\x18\x04 \x01(\x04\x1a\xea\x03\n\x04Item\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x12\n\nloot_lists\x18\x02 \x03(\t\x12\x14\n\x0cignore_limit\x18\x03 \x01(\x08\x12\x0e\n\x06origin\x18\x04 \x01(\r\x12Y\n\x12\x64ynamic_attributes\x18\x05 \x03(\x0b\x32=.dota.CMsgGCToGCGrantAccountRolledItems.Item.DynamicAttribute\x12\x63\n\x18\x61\x64\x64itional_audit_entries\x18\x06 \x03(\x0b\x32\x41.dota.CMsgGCToGCGrantAccountRolledItems.Item.AdditionalAuditEntry\x12\x17\n\x0finventory_token\x18\x07 \x01(\r\x1a\x61\n\x10\x44ynamicAttribute\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cvalue_uint32\x18\x02 \x01(\r\x12\x13\n\x0bvalue_float\x18\x03 \x01(\x02\x12\x14\n\x0cvalue_string\x18\x04 \x01(\t\x1aZ\n\x14\x41\x64\x64itionalAuditEntry\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61udit_action\x18\x02 \x01(\r\x12\x12\n\naudit_data\x18\x03 \x01(\x04\"Q\n$CMsgGCToGCGrantSelfMadeItemToAccount\x12\x16\n\x0eitem_def_index\x18\x01 \x01(\r\x12\x11\n\taccountid\x18\x02 \x01(\r\"\xb1\x01\n\x0b\x43MsgUseItem\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x17\n\x0ftarget_steam_id\x18\x02 \x01(\x06\x12\x1f\n\x17gift__potential_targets\x18\x03 \x03(\r\x12\x18\n\x10\x64uel__class_lock\x18\x04 \x01(\r\x12\x1a\n\x12initiator_steam_id\x18\x05 \x01(\x04\x12!\n\x19itempack__ack_immediately\x18\x06 \x01(\x08\"Z\n\x11\x43MsgServerUseItem\x12\x1c\n\x14initiator_account_id\x18\x01 \x01(\r\x12\'\n\x0cuse_item_msg\x18\x02 \x01(\x0b\x32\x11.dota.CMsgUseItem\"(\n\x14\x43MsgUseMultipleItems\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\"\x1d\n\x1b\x43MsgGCPartnerBalanceRequest\"u\n\x1c\x43MsgGCPartnerBalanceResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32\x1f.dota.EGCPartnerRequestResponse:\x13k_EPartnerRequestOK\x12\x0f\n\x07\x62\x61lance\x18\x02 \x01(\r\"J\n!CGCStoreRechargeRedirect_LineItem\x12\x13\n\x0bitem_def_id\x18\x01 \x01(\r\x12\x10\n\x08quantity\x18\x02 \x01(\r\"f\n\'CMsgGCPartnerRechargeRedirectURLRequest\x12;\n\nline_items\x18\x01 \x03(\x0b\x32\'.dota.CGCStoreRechargeRedirect_LineItem\"}\n(CMsgGCPartnerRechargeRedirectURLResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32\x1f.dota.EGCPartnerRequestResponse:\x13k_EPartnerRequestOK\x12\x0b\n\x03url\x18\x02 \x01(\t\"\xab\x01\n)CMsgGCEconSQLWorkItemEmbeddedRollbackData\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65leted_item_id\x18\x02 \x01(\x04\x12\x18\n\x10old_audit_action\x18\x03 \x01(\r\x12\x18\n\x10new_audit_action\x18\x04 \x01(\r\x12\x1d\n\x15\x65xpected_audit_action\x18\x05 \x01(\r\"\x85\x01\n\x0f\x43MsgCraftStatue\x12\x0e\n\x06heroid\x18\x01 \x01(\r\x12\x14\n\x0csequencename\x18\x02 \x01(\t\x12\r\n\x05\x63ycle\x18\x03 \x01(\x02\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x18\n\x10pedestal_itemdef\x18\x05 \x01(\r\x12\x0e\n\x06toolid\x18\x06 \x01(\x04\"\x1e\n\x0e\x43MsgRedeemCode\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\xad\x01\n\x16\x43MsgRedeemCodeResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"p\n\x0b\x45ResultCode\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x19\n\x15k_Failed_CodeNotFound\x10\x01\x12\x1c\n\x18k_Failed_CodeAlreadyUsed\x10\x02\x12\x17\n\x13k_Failed_OtherError\x10\x03\"q\n\x15\x43MsgDevNewItemRequest\x12\x15\n\ritem_def_name\x18\x03 \x01(\t\x12\x16\n\x0eloot_list_name\x18\x04 \x01(\t\x12\x15\n\rattr_def_name\x18\x05 \x03(\t\x12\x12\n\nattr_value\x18\x06 \x03(\t\"0\n\x1d\x43MsgDevNewItemRequestResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"-\n\x1a\x43MsgDevUnlockAllItemStyles\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"5\n\"CMsgDevUnlockAllItemStylesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"6\n CMsgGCGetAccountSubscriptionItem\x12\x12\n\naccount_id\x18\x01 \x01(\r\"=\n(CMsgGCGetAccountSubscriptionItemResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\"8\n\x11\x43MsgGCAddGiftItem\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"e\n CMsgClientToGCWrapAndDeliverGift\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x1a\n\x12give_to_account_id\x18\x02 \x01(\r\x12\x14\n\x0cgift_message\x18\x03 \x01(\t\"\xce\x02\n(CMsgClientToGCWrapAndDeliverGiftResponse\x12:\n\x08response\x18\x01 \x01(\x0e\x32\x14.dota.EGCMsgResponse:\x12k_EGCMsgResponseOK\x12\x1b\n\x13gifting_charge_uses\x18\x02 \x01(\r\x12\x1a\n\x12gifting_charge_max\x18\x03 \x01(\x05\x12\x14\n\x0cgifting_uses\x18\x04 \x01(\r\x12\x13\n\x0bgifting_max\x18\x05 \x01(\x05\x12\x1c\n\x14gifting_window_hours\x18\x06 \x01(\r\x12\x64\n\x11trade_restriction\x18\x07 \x01(\x0e\x32!.dota.EGCMsgInitiateTradeResponse:&k_EGCMsgInitiateTradeResponse_Accepted\"+\n\x18\x43MsgClientToGCUnwrapGift\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\"\n CMsgClientToGCGetGiftPermissions\"\xf6\x03\n(CMsgClientToGCGetGiftPermissionsResponse\x12\x14\n\x0cis_unlimited\x18\x01 \x01(\x08\x12\x16\n\x0ehas_two_factor\x18\x03 \x01(\x08\x12\x64\n\x11sender_permission\x18\x06 \x01(\x0e\x32!.dota.EGCMsgInitiateTradeResponse:&k_EGCMsgInitiateTradeResponse_Accepted\x12\"\n\x1a\x66riendship_age_requirement\x18\x07 \x01(\r\x12-\n%friendship_age_requirement_two_factor\x18\x08 \x01(\r\x12[\n\x12\x66riend_permissions\x18\t \x03(\x0b\x32?.dota.CMsgClientToGCGetGiftPermissionsResponse.FriendPermission\x1a\x85\x01\n\x10\x46riendPermission\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12]\n\npermission\x18\x02 \x01(\x0e\x32!.dota.EGCMsgInitiateTradeResponse:&k_EGCMsgInitiateTradeResponse_Accepted\"-\n\x1a\x43MsgClientToGCUnpackBundle\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\x82\x04\n\"CMsgClientToGCUnpackBundleResponse\x12\x19\n\x11unpacked_item_ids\x18\x01 \x03(\x04\x12\x62\n\x08response\x18\x02 \x01(\x0e\x32\x36.dota.CMsgClientToGCUnpackBundleResponse.EUnpackBundle:\x18k_UnpackBundle_Succeeded\x12!\n\x19unpacked_item_def_indexes\x18\x03 \x03(\r\"\xb9\x02\n\rEUnpackBundle\x12\x1c\n\x18k_UnpackBundle_Succeeded\x10\x00\x12)\n%k_UnpackBundle_Failed_ItemIsNotBundle\x10\x01\x12\x35\n1k_UnpackBundle_Failed_UnableToCreateContainedItem\x10\x02\x12&\n\"k_UnpackBundle_Failed_SOCacheError\x10\x03\x12\'\n#k_UnpackBundle_Failed_ItemIsInvalid\x10\x04\x12)\n%k_UnpackBundle_Failed_BadItemQuantity\x10\x05\x12,\n(k_UnpackBundle_Failed_UnableToDeleteItem\x10\x06\"K\n\'CMsgGCToClientStoreTransactionCompleted\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\x12\x10\n\x08item_ids\x18\x02 \x03(\x04\"M\n\x18\x43MsgClientToGCEquipItems\x12\x31\n\x06\x65quips\x18\x01 \x03(\x0b\x32!.dota.CMsgAdjustItemEquippedState\"?\n CMsgClientToGCEquipItemsResponse\x12\x1b\n\x13so_cache_version_id\x18\x01 \x01(\x06\"B\n\x1a\x43MsgClientToGCSetItemStyle\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x13\n\x0bstyle_index\x18\x02 \x01(\r\"\xe3\x01\n\"CMsgClientToGCSetItemStyleResponse\x12Z\n\x08response\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCSetItemStyleResponse.ESetStyle:\x14k_SetStyle_Succeeded\"a\n\tESetStyle\x12\x18\n\x14k_SetStyle_Succeeded\x10\x00\x12\x15\n\x11k_SetStyle_Failed\x10\x01\x12#\n\x1fk_SetStyle_Failed_StyleIsLocked\x10\x02\"i\n\x1d\x43MsgClientToGCUnlockItemStyle\x12\x16\n\x0eitem_to_unlock\x18\x01 \x01(\x04\x12\x13\n\x0bstyle_index\x18\x02 \x01(\r\x12\x1b\n\x13\x63onsumable_item_ids\x18\x03 \x03(\x04\"\xa7\x05\n%CMsgClientToGCUnlockItemStyleResponse\x12\x63\n\x08response\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCUnlockItemStyleResponse.EUnlockStyle:\x17k_UnlockStyle_Succeeded\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x12\x13\n\x0bstyle_index\x18\x03 \x01(\r\x12\x14\n\x0cstyle_prereq\x18\x04 \x01(\r\"\xdc\x03\n\x0c\x45UnlockStyle\x12\x1b\n\x17k_UnlockStyle_Succeeded\x10\x00\x12\x1f\n\x1bk_UnlockStyle_Failed_PreReq\x10\x01\x12#\n\x1fk_UnlockStyle_Failed_CantAfford\x10\x02\x12#\n\x1fk_UnlockStyle_Failed_CantCommit\x10\x03\x12&\n\"k_UnlockStyle_Failed_CantLockCache\x10\x04\x12)\n%k_UnlockStyle_Failed_CantAffordAttrib\x10\x05\x12&\n\"k_UnlockStyle_Failed_CantAffordGem\x10\x06\x12*\n&k_UnlockStyle_Failed_NoCompendiumLevel\x10\x07\x12(\n$k_UnlockStyle_Failed_AlreadyUnlocked\x10\x08\x12#\n\x1fk_UnlockStyle_Failed_OtherError\x10\t\x12&\n\"k_UnlockStyle_Failed_ItemIsInvalid\x10\n\x12&\n\"k_UnlockStyle_Failed_ToolIsInvalid\x10\x0b\"\x83\x01\n&CMsgClientToGCSetItemInventoryCategory\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\x12\x14\n\x0cset_to_value\x18\x02 \x01(\r\x12\x19\n\x11remove_categories\x18\x03 \x01(\r\x12\x16\n\x0e\x61\x64\x64_categories\x18\x04 \x01(\r\"G\n\x19\x43MsgClientToGCUnlockCrate\x12\x15\n\rcrate_item_id\x18\x01 \x01(\x04\x12\x13\n\x0bkey_item_id\x18\x02 \x01(\x04\"\xce\x01\n!CMsgClientToGCUnlockCrateResponse\x12\x38\n\x06result\x18\x01 \x01(\x0e\x32\x14.dota.EGCMsgResponse:\x12k_EGCMsgResponseOK\x12\x43\n\rgranted_items\x18\x02 \x03(\x0b\x32,.dota.CMsgClientToGCUnlockCrateResponse.Item\x1a*\n\x04Item\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x11\n\tdef_index\x18\x02 \x01(\r\"4\n!CMsgClientToGCRemoveItemAttribute\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\xb7\x03\n)CMsgClientToGCRemoveItemAttributeResponse\x12w\n\x08response\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCRemoveItemAttributeResponse.ERemoveItemAttribute:\x1fk_RemoveItemAttribute_Succeeded\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"\xff\x01\n\x14\x45RemoveItemAttribute\x12#\n\x1fk_RemoveItemAttribute_Succeeded\x10\x00\x12 \n\x1ck_RemoveItemAttribute_Failed\x10\x01\x12.\n*k_RemoveItemAttribute_Failed_ItemIsInvalid\x10\x02\x12\x39\n5k_RemoveItemAttribute_Failed_AttributeCannotBeRemoved\x10\x03\x12\x35\n1k_RemoveItemAttribute_Failed_AttributeDoesntExist\x10\x04\"U\n\x16\x43MsgClientToGCNameItem\x12\x17\n\x0fsubject_item_id\x18\x01 \x01(\x04\x12\x14\n\x0ctool_item_id\x18\x02 \x01(\x04\x12\x0c\n\x04name\x18\x03 \x01(\t\"\xb7\x02\n\x1e\x43MsgClientToGCNameItemResponse\x12V\n\x08response\x18\x01 \x01(\x0e\x32..dota.CMsgClientToGCNameItemResponse.ENameItem:\x14k_NameItem_Succeeded\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"\xab\x01\n\tENameItem\x12\x18\n\x14k_NameItem_Succeeded\x10\x00\x12\x15\n\x11k_NameItem_Failed\x10\x01\x12#\n\x1fk_NameItem_Failed_ToolIsInvalid\x10\x02\x12#\n\x1fk_NameItem_Failed_ItemIsInvalid\x10\x03\x12#\n\x1fk_NameItem_Failed_NameIsInvalid\x10\x04\">\n\x15\x43MsgGCSetItemPosition\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x14\n\x0cnew_position\x18\x02 \x01(\r\"\xed\x01\n%CAttribute_ItemDynamicRecipeComponent\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\r\x12\x12\n\nitem_flags\x18\x03 \x01(\r\x12\x19\n\x11\x61ttributes_string\x18\x04 \x01(\t\x12\x12\n\nitem_count\x18\x05 \x01(\r\x12\x17\n\x0fitems_fulfilled\x18\x06 \x01(\r\x12\x13\n\x0bitem_rarity\x18\x07 \x01(\r\x12\x10\n\x08lootlist\x18\x08 \x01(\t\x12\x19\n\x11\x66ulfilled_item_id\x18\t \x01(\x04\"\xb2\x01\n\x10\x43ProtoItemSocket\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x16\n\x0e\x61ttr_def_index\x18\x02 \x01(\r\x12\x15\n\rrequired_type\x18\x03 \x01(\r\x12\x15\n\rrequired_hero\x18\x04 \x01(\t\x12\x15\n\rgem_def_index\x18\x05 \x01(\r\x12\x14\n\x0cnot_tradable\x18\x06 \x01(\x08\x12\x1a\n\x12required_item_slot\x18\x07 \x01(\t\"@\n\x16\x43ProtoItemSocket_Empty\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\"Q\n\x17\x43ProtoItemSocket_Effect\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x0e\n\x06\x65\x66\x66\x65\x63t\x18\x02 \x01(\r\"j\n\x16\x43ProtoItemSocket_Color\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x0b\n\x03red\x18\x02 \x01(\r\x12\r\n\x05green\x18\x03 \x01(\r\x12\x0c\n\x04\x62lue\x18\x04 \x01(\r\"o\n\x18\x43ProtoItemSocket_Strange\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x14\n\x0cstrange_type\x18\x02 \x01(\r\x12\x15\n\rstrange_value\x18\x03 \x01(\r\"\x96\x01\n\x1a\x43ProtoItemSocket_Spectator\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x14\n\x0cgames_viewed\x18\x02 \x01(\r\x12\x16\n\x0e\x63orporation_id\x18\x03 \x01(\r\x12\x11\n\tleague_id\x18\x04 \x01(\r\x12\x0f\n\x07team_id\x18\x05 \x01(\r\"`\n\x1e\x43ProtoItemSocket_AssetModifier\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x16\n\x0e\x61sset_modifier\x18\x02 \x01(\r\"\xac\x01\n;CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x16\n\x0e\x61sset_modifier\x18\x02 \x01(\r\x12\x15\n\ranim_modifier\x18\x03 \x01(\r\x12\x16\n\x0e\x61\x62ility_effect\x18\x04 \x01(\r\"\x86\x01\n\x1a\x43ProtoItemSocket_Autograph\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x11\n\tautograph\x18\x02 \x01(\t\x12\x14\n\x0c\x61utograph_id\x18\x03 \x01(\r\x12\x17\n\x0f\x61utograph_score\x18\x04 \x01(\r\"H\n\x1e\x43ProtoItemSocket_StaticVisuals\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\"\"\n\x11\x43\x41ttribute_String\x12\r\n\x05value\x18\x01 \x01(\t\"m\n%CWorkshop_GetItemDailyRevenue_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\x12\x12\n\ndate_start\x18\x03 \x01(\r\x12\x10\n\x08\x64\x61te_end\x18\x04 \x01(\r\"\xe2\x01\n&CWorkshop_GetItemDailyRevenue_Response\x12Y\n\x0f\x63ountry_revenue\x18\x01 \x03(\x0b\x32@.dota.CWorkshop_GetItemDailyRevenue_Response.CountryDailyRevenue\x1a]\n\x13\x43ountryDailyRevenue\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x02 \x01(\r\x12\x13\n\x0brevenue_usd\x18\x03 \x01(\x03\x12\r\n\x05units\x18\x04 \x01(\x05\"c\n(CWorkshop_GetPackageDailyRevenue_Request\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x12\n\ndate_start\x18\x02 \x01(\r\x12\x10\n\x08\x64\x61te_end\x18\x03 \x01(\r\"\xe8\x01\n)CWorkshop_GetPackageDailyRevenue_Response\x12\\\n\x0f\x63ountry_revenue\x18\x01 \x03(\x0b\x32\x43.dota.CWorkshop_GetPackageDailyRevenue_Response.CountryDailyRevenue\x1a]\n\x13\x43ountryDailyRevenue\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x02 \x01(\r\x12\x13\n\x0brevenue_usd\x18\x03 \x01(\x03\x12\r\n\x05units\x18\x04 \x01(\x05\"H\n\x1f\x43MsgSQLGCToGCGrantBackpackSlots\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tadd_slots\x18\x02 \x01(\r\"5\n\x1f\x43MsgClientToGCLookupAccountName\x12\x12\n\naccount_id\x18\x01 \x01(\r\"S\n\'CMsgClientToGCLookupAccountNameResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x02 \x01(\t\"\xa2\x01\n CMsgClientToGCCreateStaticRecipe\x12:\n\x05items\x18\x01 \x03(\x0b\x32+.dota.CMsgClientToGCCreateStaticRecipe.Item\x12\x18\n\x10recipe_def_index\x18\x02 \x01(\r\x1a(\n\x04Item\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x0f\n\x07slot_id\x18\x02 \x01(\r\"\xb1\x06\n(CMsgClientToGCCreateStaticRecipeResponse\x12]\n\x08response\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCCreateStaticRecipeResponse.EResponse:\x11\x65Response_Success\x12O\n\x0coutput_items\x18\x02 \x03(\x0b\x32\x39.dota.CMsgClientToGCCreateStaticRecipeResponse.OutputItem\x12O\n\x0cinput_errors\x18\x03 \x03(\x0b\x32\x39.dota.CMsgClientToGCCreateStaticRecipeResponse.InputError\x12[\n\x12\x61\x64\x64itional_outputs\x18\x04 \x03(\x0b\x32?.dota.CMsgClientToGCCreateStaticRecipeResponse.AdditionalOutput\x1a\x41\n\nOutputItem\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x12\x0f\n\x07slot_id\x18\x03 \x01(\r\x1ay\n\nInputError\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12Z\n\x05\x65rror\x18\x02 \x01(\x0e\x32\x38.dota.CMsgClientToGCCreateStaticRecipeResponse.EResponse:\x11\x65Response_Success\x1a\x32\n\x10\x41\x64\x64itionalOutput\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\x04\"\xb4\x01\n\tEResponse\x12\x15\n\x11\x65Response_Success\x10\x00\x12\x1e\n\x1a\x65Response_OfferingDisabled\x10\x01\x12\x1a\n\x16\x65Response_InvalidItems\x10\x02\x12\x1b\n\x17\x65Response_InternalError\x10\x03\x12\x1b\n\x17\x65Response_MissingLeague\x10\x04\x12\x1a\n\x16\x65Response_MissingEvent\x10\x05\"\xe0\x03\n\x1b\x43MsgProcessTransactionOrder\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\x12\x14\n\x0csteam_txn_id\x18\x02 \x01(\x04\x12\x16\n\x0epartner_txn_id\x18\x03 \x01(\x04\x12\x10\n\x08steam_id\x18\x04 \x01(\x06\x12\x12\n\ntime_stamp\x18\x05 \x01(\r\x12\x11\n\twatermark\x18\x06 \x01(\x04\x12\x1e\n\x16purchase_report_status\x18\x07 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x08 \x01(\r\x12\x35\n\x05items\x18\t \x03(\x0b\x32&.dota.CMsgProcessTransactionOrder.Item\x1a\xe0\x01\n\x04Item\x12\x16\n\x0eitem_def_index\x18\x01 \x01(\r\x12\x12\n\nitem_price\x18\x02 \x01(\r\x12\x10\n\x08quantity\x18\x03 \x01(\r\x12\x15\n\rcategory_desc\x18\x04 \x01(\t\x12\x1b\n\x13store_purchase_type\x18\x05 \x01(\r\x12\x1b\n\x13source_reference_id\x18\x06 \x01(\x04\x12\x1a\n\x12parent_stack_index\x18\x07 \x01(\x05\x12\x15\n\rdefault_price\x18\x08 \x01(\x08\x12\x16\n\x0eis_user_facing\x18\t \x01(\x08\"o\n&CMsgGCToGCStoreProcessCDKeyTransaction\x12\x30\n\x05order\x18\x01 \x01(\x0b\x32!.dota.CMsgProcessTransactionOrder\x12\x13\n\x0breason_code\x18\x02 \x01(\r\"A\n.CMsgGCToGCStoreProcessCDKeyTransactionResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"e\n CMsgGCToGCStoreProcessSettlement\x12\x30\n\x05order\x18\x01 \x01(\x0b\x32!.dota.CMsgProcessTransactionOrder\x12\x0f\n\x07partner\x18\x02 \x01(\r\";\n(CMsgGCToGCStoreProcessSettlementResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"}\n!CMsgGCToGCBroadcastConsoleCommand\x12\x13\n\x0b\x63on_command\x18\x01 \x01(\t\x12\x15\n\rreport_output\x18\x02 \x01(\x08\x12\x12\n\nsending_gc\x18\x03 \x01(\r\x12\x18\n\x10output_initiator\x18\x04 \x01(\t\"\xa8\x01\n\x17\x43MsgGCToGCConsoleOutput\x12\x11\n\tinitiator\x18\x01 \x01(\t\x12\x12\n\nsending_gc\x18\x02 \x01(\r\x12\x36\n\x04msgs\x18\x03 \x03(\x0b\x32(.dota.CMsgGCToGCConsoleOutput.OutputLine\x1a.\n\nOutputLine\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x12\n\nspew_level\x18\x02 \x01(\r\"\x93\x01\n\x0c\x43MsgItemAges\x12\x45\n\x16max_item_id_timestamps\x18\x01 \x03(\x0b\x32%.dota.CMsgItemAges.MaxItemIDTimestamp\x1a<\n\x12MaxItemIDTimestamp\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x13\n\x0bmax_item_id\x18\x02 \x01(\x04\"\xab\x01\n\x19\x43MsgGCToGCInternalTestMsg\x12\x12\n\nsending_gc\x18\x01 \x01(\r\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x0f\n\x07\x63ontext\x18\x03 \x01(\r\x12\x12\n\nmessage_id\x18\x04 \x01(\r\x12\x14\n\x0cmessage_body\x18\x05 \x01(\x0c\x12\x15\n\rjob_id_source\x18\x06 \x01(\x06\x12\x15\n\rjob_id_target\x18\x07 \x01(\x06\"\xc0\x01\n%CMsgGCToGCClientServerVersionsUpdated\x12\"\n\x1a\x63lient_min_allowed_version\x18\x01 \x01(\r\x12\x1d\n\x15\x63lient_active_version\x18\x02 \x01(\r\x12\x1d\n\x15server_active_version\x18\x03 \x01(\r\x12\x1f\n\x17server_deployed_version\x18\x04 \x01(\r\x12\x14\n\x0cwhat_changed\x18\x05 \x01(\r\"\x83\x01\n!CMsgGCToGCBroadcastMessageFromSub\x12\x0e\n\x06msg_id\x18\x01 \x01(\r\x12\x16\n\x0eserialized_msg\x18\x02 \x01(\x0c\x12\x1b\n\x0f\x61\x63\x63ount_id_list\x18\x03 \x03(\rB\x02\x10\x01\x12\x19\n\rsteam_id_list\x18\x04 \x03(\x06\x42\x02\x10\x01\"\xbd\x01\n!CMsgGCToClientCurrencyPricePoints\x12\x15\n\tprice_key\x18\x01 \x03(\x04\x42\x02\x10\x01\x12\x44\n\ncurrencies\x18\x02 \x03(\x0b\x32\x30.dota.CMsgGCToClientCurrencyPricePoints.Currency\x1a;\n\x08\x43urrency\x12\x13\n\x0b\x63urrency_id\x18\x01 \x01(\r\x12\x1a\n\x0e\x63urrency_price\x18\x02 \x03(\x04\x42\x02\x10\x01\";\n\x12\x43MsgBannedWordList\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x14\n\x0c\x62\x61nned_words\x18\x02 \x03(\t\"V\n!CEcon_FlushInventoryCache_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x04\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\x11\n\tcontextid\x18\x03 \x01(\x04\"5\n\"CEcon_FlushInventoryCache_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\"\x8b\x01\n\"CMsgGCToGCFlushSteamInventoryCache\x12:\n\x04keys\x18\x01 \x03(\x0b\x32,.dota.CMsgGCToGCFlushSteamInventoryCache.Key\x1a)\n\x03Key\x12\x0f\n\x07steamid\x18\x01 \x01(\x04\x12\x11\n\tcontextid\x18\x02 \x01(\x04\"N\n!CMsgGCToGCUpdateSubscriptionItems\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x15\n\ralways_notify\x18\x02 \x01(\x08\"\'\n\x12\x43MsgGCToGCSelfPing\x12\x11\n\tsample_id\x18\x01 \x01(\r\"!\n\x1f\x43MsgGCToGCGetInfuxIntervalStats\"\xa3\x01\n\'CMsgGCToGCGetInfuxIntervalStatsResponse\x12\x14\n\x08stat_ids\x18\x01 \x03(\x07\x42\x02\x10\x01\x12\x16\n\nstat_total\x18\x02 \x03(\x04\x42\x02\x10\x01\x12\x18\n\x0cstat_samples\x18\x03 \x03(\rB\x02\x10\x01\x12\x14\n\x08stat_max\x18\x04 \x03(\rB\x02\x10\x01\x12\x1a\n\x12sample_duration_ms\x18\x05 \x01(\r*\xbe\x37\n\nEGCItemMsg\x12\x11\n\x0ck_EMsgGCBase\x10\xe8\x07\x12\x1c\n\x17k_EMsgGCSetItemPosition\x10\xe9\x07\x12\x13\n\x0ek_EMsgGCDelete\x10\xec\x07\x12$\n\x1fk_EMsgGCVerifyCacheSubscription\x10\xed\x07\x12\x1d\n\x18k_EMsgClientToGCNameItem\x10\xee\x07\x12\x16\n\x11k_EMsgGCPaintItem\x10\xf1\x07\x12\x1e\n\x19k_EMsgGCPaintItemResponse\x10\xf2\x07\x12\"\n\x1dk_EMsgGCGoldenWrenchBroadcast\x10\xf3\x07\x12\x18\n\x13k_EMsgGCMOTDRequest\x10\xf4\x07\x12 \n\x1bk_EMsgGCMOTDRequestResponse\x10\xf5\x07\x12\'\n\"k_EMsgGCAddItemToSocket_DEPRECATED\x10\xf6\x07\x12/\n*k_EMsgGCAddItemToSocketResponse_DEPRECATED\x10\xf7\x07\x12+\n&k_EMsgGCAddSocketToBaseItem_DEPRECATED\x10\xf8\x07\x12\'\n\"k_EMsgGCAddSocketToItem_DEPRECATED\x10\xf9\x07\x12/\n*k_EMsgGCAddSocketToItemResponse_DEPRECATED\x10\xfa\x07\x12\x19\n\x14k_EMsgGCNameBaseItem\x10\xfb\x07\x12!\n\x1ck_EMsgGCNameBaseItemResponse\x10\xfc\x07\x12(\n#k_EMsgGCRemoveSocketItem_DEPRECATED\x10\xfd\x07\x12\x30\n+k_EMsgGCRemoveSocketItemResponse_DEPRECATED\x10\xfe\x07\x12!\n\x1ck_EMsgGCCustomizeItemTexture\x10\xff\x07\x12)\n$k_EMsgGCCustomizeItemTextureResponse\x10\x80\x08\x12\x1b\n\x16k_EMsgGCUseItemRequest\x10\x81\x08\x12\x1c\n\x17k_EMsgGCUseItemResponse\x10\x82\x08\x12\x18\n\x13k_EMsgGCGiftedItems\x10\x83\x08\x12\x1b\n\x16k_EMsgGCRemoveItemName\x10\x86\x08\x12\x1c\n\x17k_EMsgGCRemoveItemPaint\x10\x87\x08\x12\x1e\n\x19k_EMsgGCUnwrapGiftRequest\x10\x8d\x08\x12\x1f\n\x1ak_EMsgGCUnwrapGiftResponse\x10\x8e\x08\x12$\n\x1fk_EMsgGCSetItemStyle_DEPRECATED\x10\x8f\x08\x12\x1e\n\x19k_EMsgGCUsedClaimCodeItem\x10\x90\x08\x12\x16\n\x11k_EMsgGCSortItems\x10\x91\x08\x12*\n%k_EMsgGC_RevolvingLootList_DEPRECATED\x10\x92\x08\x12\x1d\n\x18k_EMsgGCUpdateItemSchema\x10\x99\x08\x12 \n\x1bk_EMsgGCRemoveCustomTexture\x10\x9b\x08\x12(\n#k_EMsgGCRemoveCustomTextureResponse\x10\x9c\x08\x12\x1d\n\x18k_EMsgGCRemoveMakersMark\x10\x9d\x08\x12%\n k_EMsgGCRemoveMakersMarkResponse\x10\x9e\x08\x12#\n\x1ek_EMsgGCRemoveUniqueCraftIndex\x10\x9f\x08\x12+\n&k_EMsgGCRemoveUniqueCraftIndexResponse\x10\xa0\x08\x12\x1b\n\x16k_EMsgGCSaxxyBroadcast\x10\xa1\x08\x12!\n\x1ck_EMsgGCBackpackSortFinished\x10\xa2\x08\x12$\n\x1fk_EMsgGCAdjustItemEquippedState\x10\xa3\x08\x12\x18\n\x13k_EMsgGCCollectItem\x10\xa5\x08\x12\x1d\n\x18k_EMsgGCItemAcknowledged\x10\xa6\x08\x12)\n$k_EMsgGCPresets_SelectPresetForClass\x10\xa7\x08\x12$\n\x1fk_EMsgGCPresets_SetItemPosition\x10\xa8\x08\x12.\n)k_EMsgGCPresets_SelectPresetForClassReply\x10\xab\x08\x12%\n k_EMsgClientToGCNameItemResponse\x10\xac\x08\x12#\n\x1ek_EMsgGCApplyConsumableEffects\x10\xad\x08\x12\x1e\n\x19k_EMsgGCShowItemsPickedUp\x10\xaf\x08\x12&\n!k_EMsgGCClientDisplayNotification\x10\xb0\x08\x12\x1d\n\x18k_EMsgGCApplyStrangePart\x10\xb1\x08\x12(\n#k_EMsgGC_IncrementKillCountResponse\x10\xb3\x08\x12 \n\x1bk_EMsgGCApplyPennantUpgrade\x10\xb4\x08\x12\x1d\n\x18k_EMsgGCSetItemPositions\x10\xb5\x08\x12)\n$k_EMsgGCSetItemPositions_RateLimited\x10\xc8\x08\x12\x1c\n\x17k_EMsgGCApplyEggEssence\x10\xb6\x08\x12#\n\x1ek_EMsgGCNameEggEssenceResponse\x10\xb7\x08\x12*\n%k_EMsgGCFulfillDynamicRecipeComponent\x10\xba\x08\x12\x32\n-k_EMsgGCFulfillDynamicRecipeComponentResponse\x10\xbb\x08\x12$\n\x1fk_EMsgGCClientRequestMarketData\x10\xbc\x08\x12,\n\'k_EMsgGCClientRequestMarketDataResponse\x10\xbd\x08\x12\x18\n\x13k_EMsgGCExtractGems\x10\xbe\x08\x12\x16\n\x11k_EMsgGCAddSocket\x10\xbf\x08\x12\x1c\n\x17k_EMsgGCAddItemToSocket\x10\xc0\x08\x12$\n\x1fk_EMsgGCAddItemToSocketResponse\x10\xc1\x08\x12\x1e\n\x19k_EMsgGCAddSocketResponse\x10\xc2\x08\x12!\n\x1ck_EMsgGCResetStrangeGemCount\x10\xc3\x08\x12\x1e\n\x19k_EMsgGCRequestCrateItems\x10\xc4\x08\x12&\n!k_EMsgGCRequestCrateItemsResponse\x10\xc5\x08\x12 \n\x1bk_EMsgGCExtractGemsResponse\x10\xc6\x08\x12)\n$k_EMsgGCResetStrangeGemCountResponse\x10\xc7\x08\x12!\n\x1ck_EMsgGCServerUseItemRequest\x10\xcf\x08\x12\x18\n\x13k_EMsgGCAddGiftItem\x10\xd0\x08\x12\"\n\x1dk_EMsgGCRemoveItemGiftMessage\x10\xd1\x08\x12*\n%k_EMsgGCRemoveItemGiftMessageResponse\x10\xd2\x08\x12&\n!k_EMsgGCRemoveItemGifterAccountId\x10\xd3\x08\x12.\n)k_EMsgGCRemoveItemGifterAccountIdResponse\x10\xd4\x08\x12/\n*k_EMsgClientToGCRemoveItemGifterAttributes\x10\xd5\x08\x12#\n\x1ek_EMsgClientToGCRemoveItemName\x10\xd6\x08\x12*\n%k_EMsgClientToGCRemoveItemDescription\x10\xd7\x08\x12\x30\n+k_EMsgClientToGCRemoveItemAttributeResponse\x10\xd8\x08\x12\x18\n\x13k_EMsgGCTradingBase\x10\xdc\x0b\x12)\n$k_EMsgGCTrading_InitiateTradeRequest\x10\xdd\x0b\x12*\n%k_EMsgGCTrading_InitiateTradeResponse\x10\xde\x0b\x12!\n\x1ck_EMsgGCTrading_StartSession\x10\xdf\x0b\x12\"\n\x1dk_EMsgGCTrading_SessionClosed\x10\xe5\x0b\x12\x31\n,k_EMsgGCTrading_InitiateTradeRequestResponse\x10\xea\x0b\x12)\n$k_EMsgGCServerBrowser_FavoriteServer\x10\xc1\x0c\x12*\n%k_EMsgGCServerBrowser_BlacklistServer\x10\xc2\x0c\x12\x1e\n\x19k_EMsgGCServerRentalsBase\x10\xa4\r\x12\x1f\n\x1ak_EMsgGCDev_NewItemRequest\x10\xd1\x0f\x12\'\n\"k_EMsgGCDev_NewItemRequestResponse\x10\xd2\x0f\x12+\n&k_EMsgGCDev_UnlockAllItemStylesRequest\x10\xd3\x0f\x12,\n\'k_EMsgGCDev_UnlockAllItemStylesResponse\x10\xd4\x0f\x12\"\n\x1dk_EMsgGCStorePurchaseFinalize\x10\xc8\x13\x12*\n%k_EMsgGCStorePurchaseFinalizeResponse\x10\xc9\x13\x12 \n\x1bk_EMsgGCStorePurchaseCancel\x10\xca\x13\x12(\n#k_EMsgGCStorePurchaseCancelResponse\x10\xcb\x13\x12\x1e\n\x19k_EMsgGCStorePurchaseInit\x10\xce\x13\x12&\n!k_EMsgGCStorePurchaseInitResponse\x10\xcf\x13\x12&\n!k_EMsgGCToGCBannedWordListUpdated\x10\xd3\x13\x12\x1e\n\x19k_EMsgGCToGCDirtySDOCache\x10\xd4\x13\x12&\n!k_EMsgGCToGCDirtyMultipleSDOCache\x10\xd5\x13\x12\"\n\x1dk_EMsgGCToGCUpdateSQLKeyValue\x10\xd6\x13\x12(\n#k_EMsgGCToGCBroadcastConsoleCommand\x10\xd9\x13\x12!\n\x1ck_EMsgGCServerVersionUpdated\x10\xda\x13\x12\x1b\n\x16k_EMsgGCApplyAutograph\x10\xdb\x13\x12%\n k_EMsgGCToGCWebAPIAccountChanged\x10\xdc\x13\x12!\n\x1ck_EMsgGCClientVersionUpdated\x10\xe0\x13\x12+\n&k_EMsgGCItemPurgatory_FinalizePurchase\x10\xe3\x13\x12\x33\n.k_EMsgGCItemPurgatory_FinalizePurchaseResponse\x10\xe4\x13\x12)\n$k_EMsgGCItemPurgatory_RefundPurchase\x10\xe5\x13\x12\x31\n,k_EMsgGCItemPurgatory_RefundPurchaseResponse\x10\xe6\x13\x12.\n)k_EMsgGCToGCPlayerStrangeCountAdjustments\x10\xe7\x13\x12\"\n\x1dk_EMsgGCRequestStoreSalesData\x10\xe8\x13\x12*\n%k_EMsgGCRequestStoreSalesDataResponse\x10\xe9\x13\x12\x32\n-k_EMsgGCRequestStoreSalesDataUpToDateResponse\x10\xea\x13\x12\x1c\n\x17k_EMsgGCToGCPingRequest\x10\xeb\x13\x12\x1d\n\x18k_EMsgGCToGCPingResponse\x10\xec\x13\x12%\n k_EMsgGCToGCGetUserSessionServer\x10\xed\x13\x12-\n(k_EMsgGCToGCGetUserSessionServerResponse\x10\xee\x13\x12%\n k_EMsgGCToGCGetUserServerMembers\x10\xef\x13\x12-\n(k_EMsgGCToGCGetUserServerMembersResponse\x10\xf0\x13\x12 \n\x1bk_EMsgGCToGCGetUserPCBangNo\x10\xf1\x13\x12(\n#k_EMsgGCToGCGetUserPCBangNoResponse\x10\xf2\x13\x12$\n\x1fk_EMsgGCToGCCanUseDropRateBonus\x10\xf3\x13\x12\x1e\n\x19k_EMsgSQLAddDropRateBonus\x10\xf4\x13\x12\x1f\n\x1ak_EMsgGCToGCRefreshSOCache\x10\xf5\x13\x12&\n!k_EMsgGCToGCApplyLocalizationDiff\x10\xf6\x13\x12.\n)k_EMsgGCToGCApplyLocalizationDiffResponse\x10\xf7\x13\x12(\n#k_EMsgGCToGCCheckAccountTradeStatus\x10\xf8\x13\x12\x30\n+k_EMsgGCToGCCheckAccountTradeStatusResponse\x10\xf9\x13\x12(\n#k_EMsgGCToGCGrantAccountRolledItems\x10\xfa\x13\x12+\n&k_EMsgGCToGCGrantSelfMadeItemToAccount\x10\xfb\x13\x12\"\n\x1dk_EMsgGCPartnerBalanceRequest\x10\xfd\x13\x12#\n\x1ek_EMsgGCPartnerBalanceResponse\x10\xfe\x13\x12.\n)k_EMsgGCPartnerRechargeRedirectURLRequest\x10\xff\x13\x12/\n*k_EMsgGCPartnerRechargeRedirectURLResponse\x10\x80\x14\x12\x18\n\x13k_EMsgGCStatueCraft\x10\x81\x14\x12\x17\n\x12k_EMsgGCRedeemCode\x10\x82\x14\x12\x1f\n\x1ak_EMsgGCRedeemCodeResponse\x10\x83\x14\x12(\n#k_EMsgGCToGCItemConsumptionRollback\x10\x84\x14\x12\'\n\"k_EMsgClientToGCWrapAndDeliverGift\x10\x85\x14\x12/\n*k_EMsgClientToGCWrapAndDeliverGiftResponse\x10\x86\x14\x12)\n$k_EMsgClientToGCUnpackBundleResponse\x10\x87\x14\x12.\n)k_EMsgGCToClientStoreTransactionCompleted\x10\x88\x14\x12\x1f\n\x1ak_EMsgClientToGCEquipItems\x10\x89\x14\x12\'\n\"k_EMsgClientToGCEquipItemsResponse\x10\x8a\x14\x12$\n\x1fk_EMsgClientToGCUnlockItemStyle\x10\x8b\x14\x12,\n\'k_EMsgClientToGCUnlockItemStyleResponse\x10\x8c\x14\x12-\n(k_EMsgClientToGCSetItemInventoryCategory\x10\x8d\x14\x12 \n\x1bk_EMsgClientToGCUnlockCrate\x10\x8e\x14\x12(\n#k_EMsgClientToGCUnlockCrateResponse\x10\x8f\x14\x12!\n\x1ck_EMsgClientToGCUnpackBundle\x10\x90\x14\x12!\n\x1ck_EMsgClientToGCSetItemStyle\x10\x91\x14\x12)\n$k_EMsgClientToGCSetItemStyleResponse\x10\x92\x14\x12&\n!k_EMsgSQLGCToGCGrantBackpackSlots\x10\x94\x14\x12&\n!k_EMsgClientToGCLookupAccountName\x10\x95\x14\x12.\n)k_EMsgClientToGCLookupAccountNameResponse\x10\x96\x14\x12#\n\x1ek_EMsgGCToGCDevRevokeUserItems\x10\x97\x14\x12\'\n\"k_EMsgClientToGCCreateStaticRecipe\x10\x98\x14\x12/\n*k_EMsgClientToGCCreateStaticRecipeResponse\x10\x99\x14\x12-\n(k_EMsgGCToGCStoreProcessCDKeyTransaction\x10\x9a\x14\x12\x35\n0k_EMsgGCToGCStoreProcessCDKeyTransactionResponse\x10\x9b\x14\x12\'\n\"k_EMsgGCToGCStoreProcessSettlement\x10\x9c\x14\x12/\n*k_EMsgGCToGCStoreProcessSettlementResponse\x10\x9d\x14\x12\x1e\n\x19k_EMsgGCToGCConsoleOutput\x10\x9e\x14\x12\x1d\n\x18k_EMsgGCToClientItemAges\x10\x9f\x14\x12 \n\x1bk_EMsgGCToGCInternalTestMsg\x10\xa0\x14\x12,\n\'k_EMsgGCToGCClientServerVersionsUpdated\x10\xa1\x14\x12$\n\x1fk_EMsgGCUseMultipleItemsRequest\x10\xa2\x14\x12\'\n\"k_EMsgGCGetAccountSubscriptionItem\x10\xa3\x14\x12/\n*k_EMsgGCGetAccountSubscriptionItemResponse\x10\xa4\x14\x12(\n#k_EMsgGCToGCBroadcastMessageFromSub\x10\xa6\x14\x12(\n#k_EMsgGCToClientCurrencyPricePoints\x10\xa7\x14\x12$\n\x1fk_EMsgGCToGCAddSubscriptionTime\x10\xa8\x14\x12)\n$k_EMsgGCToGCFlushSteamInventoryCache\x10\xa9\x14\x12(\n#k_EMsgGCRequestCrateEscalationLevel\x10\xaa\x14\x12\x30\n+k_EMsgGCRequestCrateEscalationLevelResponse\x10\xab\x14\x12(\n#k_EMsgGCToGCUpdateSubscriptionItems\x10\xac\x14\x12\x19\n\x14k_EMsgGCToGCSelfPing\x10\xad\x14\x12&\n!k_EMsgGCToGCGetInfuxIntervalStats\x10\xae\x14\x12.\n)k_EMsgGCToGCGetInfuxIntervalStatsResponse\x10\xaf\x14*\xf3\x02\n\x1f\x45ItemPurgatoryResponse_Finalize\x12.\n*k_ItemPurgatoryResponse_Finalize_Succeeded\x10\x00\x12\x36\n2k_ItemPurgatoryResponse_Finalize_Failed_Incomplete\x10\x01\x12?\n;k_ItemPurgatoryResponse_Finalize_Failed_ItemsNotInPurgatory\x10\x02\x12=\n9k_ItemPurgatoryResponse_Finalize_Failed_CouldNotFindItems\x10\x03\x12\x35\n1k_ItemPurgatoryResponse_Finalize_Failed_NoSOCache\x10\x04\x12\x31\n-k_ItemPurgatoryResponse_Finalize_BackpackFull\x10\x05*\xb0\x02\n\x1d\x45ItemPurgatoryResponse_Refund\x12,\n(k_ItemPurgatoryResponse_Refund_Succeeded\x10\x00\x12<\n8k_ItemPurgatoryResponse_Refund_Failed_ItemNotInPurgatory\x10\x01\x12:\n6k_ItemPurgatoryResponse_Refund_Failed_CouldNotFindItem\x10\x02\x12\x33\n/k_ItemPurgatoryResponse_Refund_Failed_NoSOCache\x10\x03\x12\x32\n.k_ItemPurgatoryResponse_Refund_Failed_NoDetail\x10\x04*\xb9\n\n\x1b\x45GCMsgInitiateTradeResponse\x12*\n&k_EGCMsgInitiateTradeResponse_Accepted\x10\x00\x12*\n&k_EGCMsgInitiateTradeResponse_Declined\x10\x01\x12\x36\n2k_EGCMsgInitiateTradeResponse_VAC_Banned_Initiator\x10\x02\x12\x33\n/k_EGCMsgInitiateTradeResponse_VAC_Banned_Target\x10\x03\x12\x38\n4k_EGCMsgInitiateTradeResponse_Target_Already_Trading\x10\x04\x12*\n&k_EGCMsgInitiateTradeResponse_Disabled\x10\x05\x12-\n)k_EGCMsgInitiateTradeResponse_NotLoggedIn\x10\x06\x12(\n$k_EGCMsgInitiateTradeResponse_Cancel\x10\x07\x12)\n%k_EGCMsgInitiateTradeResponse_TooSoon\x10\x08\x12\x30\n,k_EGCMsgInitiateTradeResponse_TooSoonPenalty\x10\t\x12\x38\n4k_EGCMsgInitiateTradeResponse_Trade_Banned_Initiator\x10\n\x12\x35\n1k_EGCMsgInitiateTradeResponse_Trade_Banned_Target\x10\x0b\x12\x43\n?k_EGCMsgInitiateTradeResponse_Free_Account_Initiator_DEPRECATED\x10\x0c\x12:\n6k_EGCMsgInitiateTradeResponse_Shared_Account_Initiator\x10\r\x12\x35\n1k_EGCMsgInitiateTradeResponse_Service_Unavailable\x10\x0e\x12\x30\n,k_EGCMsgInitiateTradeResponse_Target_Blocked\x10\x0f\x12\x33\n/k_EGCMsgInitiateTradeResponse_NeedVerifiedEmail\x10\x10\x12\x30\n,k_EGCMsgInitiateTradeResponse_NeedSteamGuard\x10\x11\x12\x34\n0k_EGCMsgInitiateTradeResponse_SteamGuardDuration\x10\x12\x12\x31\n-k_EGCMsgInitiateTradeResponse_TheyCannotTrade\x10\x13\x12\x37\n3k_EGCMsgInitiateTradeResponse_Recent_Password_Reset\x10\x14\x12\x32\n.k_EGCMsgInitiateTradeResponse_Using_New_Device\x10\x15\x12\x35\n1k_EGCMsgInitiateTradeResponse_Sent_Invalid_Cookie\x10\x16\x12\x31\n-k_EGCMsgInitiateTradeResponse_TooRecentFriend\x10\x17\x12\x37\n3k_EGCMsgInitiateTradeResponse_WalledFundsNotTrusted\x10\x18\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x15\x65\x63on_gcmessages.proto\x12\x04\x64ota\x1a\x13steammessages.proto\x1a\x17\x65\x63on_shared_enums.proto\"E\n\x12\x43MsgApplyAutograph\x12\x19\n\x11\x61utograph_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\"h\n\x1b\x43MsgAdjustItemEquippedState\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x11\n\tnew_class\x18\x02 \x01(\r\x12\x10\n\x08new_slot\x18\x03 \x01(\r\x12\x13\n\x0bstyle_index\x18\x04 \x01(\r\"\x89\x02\n$CMsgEconPlayerStrangeCountAdjustment\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x65\n\x19strange_count_adjustments\x18\x02 \x03(\x0b\x32\x42.dota.CMsgEconPlayerStrangeCountAdjustment.CStrangeCountAdjustment\x12\x12\n\nturbo_mode\x18\x03 \x01(\x08\x1aR\n\x17\x43StrangeCountAdjustment\x12\x12\n\nevent_type\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x12\x12\n\nadjustment\x18\x03 \x01(\r\"=\n)CMsgRequestItemPurgatory_FinalizePurchase\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\"U\n1CMsgRequestItemPurgatory_FinalizePurchaseResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08item_ids\x18\x02 \x03(\x04\";\n\'CMsgRequestItemPurgatory_RefundPurchase\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\"A\n/CMsgRequestItemPurgatory_RefundPurchaseResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"(\n\x14\x43MsgCraftingResponse\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\"@\n\x1b\x43MsgGCRequestStoreSalesData\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x10\n\x08\x63urrency\x18\x02 \x01(\r\"\xbe\x01\n#CMsgGCRequestStoreSalesDataResponse\x12\x43\n\nsale_price\x18\x01 \x03(\x0b\x32/.dota.CMsgGCRequestStoreSalesDataResponse.Price\x12\x0f\n\x07version\x18\x02 \x01(\r\x12\x17\n\x0f\x65xpiration_time\x18\x03 \x01(\r\x1a(\n\x05Price\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\r\n\x05price\x18\x02 \x01(\r\"W\n+CMsgGCRequestStoreSalesDataUpToDateResponse\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x17\n\x0f\x65xpiration_time\x18\x02 \x01(\r\"\x17\n\x15\x43MsgGCToGCPingRequest\"\x18\n\x16\x43MsgGCToGCPingResponse\"4\n\x1e\x43MsgGCToGCGetUserSessionServer\x12\x12\n\naccount_id\x18\x01 \x01(\r\"T\n&CMsgGCToGCGetUserSessionServerResponse\x12\x17\n\x0fserver_steam_id\x18\x01 \x01(\x06\x12\x11\n\tis_online\x18\x02 \x01(\x08\"L\n\x1e\x43MsgGCToGCGetUserServerMembers\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x16\n\x0emax_spectators\x18\x02 \x01(\r\"C\n&CMsgGCToGCGetUserServerMembersResponse\x12\x19\n\x11member_account_id\x18\x01 \x03(\r\"8\n\x1e\x43MsgLookupMultipleAccountNames\x12\x16\n\naccountids\x18\x01 \x03(\rB\x02\x10\x01\"\x9f\x01\n&CMsgLookupMultipleAccountNamesResponse\x12\x46\n\x08\x61\x63\x63ounts\x18\x01 \x03(\x0b\x32\x34.dota.CMsgLookupMultipleAccountNamesResponse.Account\x1a-\n\x07\x41\x63\x63ount\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x0f\n\x07persona\x18\x02 \x01(\t\"/\n\x15\x43MsgRequestCrateItems\x12\x16\n\x0e\x63rate_item_def\x18\x01 \x01(\r\"\x86\x01\n\x1d\x43MsgRequestCrateItemsResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x11\n\titem_defs\x18\x02 \x03(\r\x12\x16\n\x0epeek_item_defs\x18\x03 \x03(\r\"(\n\x07\x45Result\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x0c\n\x08k_Failed\x10\x01\"9\n\x1f\x43MsgRequestCrateEscalationLevel\x12\x16\n\x0e\x63rate_item_def\x18\x01 \x01(\r\"\xd1\x01\n\'CMsgRequestCrateEscalationLevelResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x19\n\x11\x65scalation_level0\x18\x02 \x01(\r\x12\x19\n\x11\x65scalation_level1\x18\x03 \x01(\r\x12\x19\n\x11\x65scalation_level2\x18\x04 \x01(\r\x12\x19\n\x11\x65scalation_level3\x18\x05 \x01(\r\"(\n\x07\x45Result\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x0c\n\x08k_Failed\x10\x01\"\x98\x01\n\x1d\x43MsgGCToGCCanUseDropRateBonus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64rop_rate_bonus\x18\x02 \x01(\x02\x12\x14\n\x0c\x62ooster_type\x18\x03 \x01(\r\x12\x1a\n\x12\x65xclusive_item_def\x18\x04 \x01(\r\x12\x18\n\x10\x61llow_equal_rate\x18\x05 \x01(\x08\"\xb1\x01\n\x17\x43MsgSQLAddDropRateBonus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x12\x10\n\x08item_def\x18\x03 \x01(\r\x12\x17\n\x0f\x64rop_rate_bonus\x18\x04 \x01(\x02\x12\x14\n\x0c\x62ooster_type\x18\x05 \x01(\r\x12\x18\n\x10seconds_duration\x18\x06 \x01(\r\x12\x16\n\x0e\x65nd_time_stamp\x18\x07 \x01(\r\"o\n\x1b\x43MsgSQLUpgradeBattleBooster\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08item_def\x18\x02 \x01(\r\x12\x14\n\x0c\x62onus_to_add\x18\x03 \x01(\x02\x12\x14\n\x0c\x62ooster_type\x18\x04 \x01(\r\">\n\x18\x43MsgGCToGCRefreshSOCache\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0e\n\x06reload\x18\x02 \x01(\x08\"J\n!CMsgGCToGCCheckAccountTradeStatus\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tinitiator\x18\x02 \x01(\x08\"R\n)CMsgGCToGCCheckAccountTradeStatusResponse\x12\x11\n\tcan_trade\x18\x01 \x01(\x08\x12\x12\n\nerror_code\x18\x02 \x01(\r\"z\n\x1d\x43MsgGCToGCAddSubscriptionTime\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12)\n!matching_subscription_def_indexes\x18\x02 \x03(\r\x12\x1a\n\x12\x61\x64\x64itional_seconds\x18\x03 \x01(\r\"\x8b\x05\n!CMsgGCToGCGrantAccountRolledItems\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12;\n\x05items\x18\x02 \x03(\x0b\x32,.dota.CMsgGCToGCGrantAccountRolledItems.Item\x12\x14\n\x0c\x61udit_action\x18\x03 \x01(\r\x12\x12\n\naudit_data\x18\x04 \x01(\x04\x1a\xea\x03\n\x04Item\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x12\n\nloot_lists\x18\x02 \x03(\t\x12\x14\n\x0cignore_limit\x18\x03 \x01(\x08\x12\x0e\n\x06origin\x18\x04 \x01(\r\x12Y\n\x12\x64ynamic_attributes\x18\x05 \x03(\x0b\x32=.dota.CMsgGCToGCGrantAccountRolledItems.Item.DynamicAttribute\x12\x63\n\x18\x61\x64\x64itional_audit_entries\x18\x06 \x03(\x0b\x32\x41.dota.CMsgGCToGCGrantAccountRolledItems.Item.AdditionalAuditEntry\x12\x17\n\x0finventory_token\x18\x07 \x01(\r\x1a\x61\n\x10\x44ynamicAttribute\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cvalue_uint32\x18\x02 \x01(\r\x12\x13\n\x0bvalue_float\x18\x03 \x01(\x02\x12\x14\n\x0cvalue_string\x18\x04 \x01(\t\x1aZ\n\x14\x41\x64\x64itionalAuditEntry\x12\x18\n\x10owner_account_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61udit_action\x18\x02 \x01(\r\x12\x12\n\naudit_data\x18\x03 \x01(\x04\"Q\n$CMsgGCToGCGrantSelfMadeItemToAccount\x12\x16\n\x0eitem_def_index\x18\x01 \x01(\r\x12\x11\n\taccountid\x18\x02 \x01(\r\"\xb1\x01\n\x0b\x43MsgUseItem\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x17\n\x0ftarget_steam_id\x18\x02 \x01(\x06\x12\x1f\n\x17gift__potential_targets\x18\x03 \x03(\r\x12\x18\n\x10\x64uel__class_lock\x18\x04 \x01(\r\x12\x1a\n\x12initiator_steam_id\x18\x05 \x01(\x04\x12!\n\x19itempack__ack_immediately\x18\x06 \x01(\x08\"Z\n\x11\x43MsgServerUseItem\x12\x1c\n\x14initiator_account_id\x18\x01 \x01(\r\x12\'\n\x0cuse_item_msg\x18\x02 \x01(\x0b\x32\x11.dota.CMsgUseItem\"(\n\x14\x43MsgUseMultipleItems\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\"\x1d\n\x1b\x43MsgGCPartnerBalanceRequest\"u\n\x1c\x43MsgGCPartnerBalanceResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32\x1f.dota.EGCPartnerRequestResponse:\x13k_EPartnerRequestOK\x12\x0f\n\x07\x62\x61lance\x18\x02 \x01(\r\"J\n!CGCStoreRechargeRedirect_LineItem\x12\x13\n\x0bitem_def_id\x18\x01 \x01(\r\x12\x10\n\x08quantity\x18\x02 \x01(\r\"f\n\'CMsgGCPartnerRechargeRedirectURLRequest\x12;\n\nline_items\x18\x01 \x03(\x0b\x32\'.dota.CGCStoreRechargeRedirect_LineItem\"}\n(CMsgGCPartnerRechargeRedirectURLResponse\x12\x44\n\x06result\x18\x01 \x01(\x0e\x32\x1f.dota.EGCPartnerRequestResponse:\x13k_EPartnerRequestOK\x12\x0b\n\x03url\x18\x02 \x01(\t\"\xab\x01\n)CMsgGCEconSQLWorkItemEmbeddedRollbackData\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65leted_item_id\x18\x02 \x01(\x04\x12\x18\n\x10old_audit_action\x18\x03 \x01(\r\x12\x18\n\x10new_audit_action\x18\x04 \x01(\r\x12\x1d\n\x15\x65xpected_audit_action\x18\x05 \x01(\r\"\x85\x01\n\x0f\x43MsgCraftStatue\x12\x0e\n\x06heroid\x18\x01 \x01(\r\x12\x14\n\x0csequencename\x18\x02 \x01(\t\x12\r\n\x05\x63ycle\x18\x03 \x01(\x02\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x18\n\x10pedestal_itemdef\x18\x05 \x01(\r\x12\x0e\n\x06toolid\x18\x06 \x01(\x04\"\x1e\n\x0e\x43MsgRedeemCode\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\xad\x01\n\x16\x43MsgRedeemCodeResponse\x12\x10\n\x08response\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"p\n\x0b\x45ResultCode\x12\x0f\n\x0bk_Succeeded\x10\x00\x12\x19\n\x15k_Failed_CodeNotFound\x10\x01\x12\x1c\n\x18k_Failed_CodeAlreadyUsed\x10\x02\x12\x17\n\x13k_Failed_OtherError\x10\x03\"q\n\x15\x43MsgDevNewItemRequest\x12\x15\n\ritem_def_name\x18\x03 \x01(\t\x12\x16\n\x0eloot_list_name\x18\x04 \x01(\t\x12\x15\n\rattr_def_name\x18\x05 \x03(\t\x12\x12\n\nattr_value\x18\x06 \x03(\t\"0\n\x1d\x43MsgDevNewItemRequestResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"-\n\x1a\x43MsgDevUnlockAllItemStyles\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"5\n\"CMsgDevUnlockAllItemStylesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"6\n CMsgGCGetAccountSubscriptionItem\x12\x12\n\naccount_id\x18\x01 \x01(\r\"=\n(CMsgGCGetAccountSubscriptionItemResponse\x12\x11\n\tdef_index\x18\x01 \x01(\r\"8\n\x11\x43MsgGCAddGiftItem\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"e\n CMsgClientToGCWrapAndDeliverGift\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x1a\n\x12give_to_account_id\x18\x02 \x01(\r\x12\x14\n\x0cgift_message\x18\x03 \x01(\t\"\xce\x02\n(CMsgClientToGCWrapAndDeliverGiftResponse\x12:\n\x08response\x18\x01 \x01(\x0e\x32\x14.dota.EGCMsgResponse:\x12k_EGCMsgResponseOK\x12\x1b\n\x13gifting_charge_uses\x18\x02 \x01(\r\x12\x1a\n\x12gifting_charge_max\x18\x03 \x01(\x05\x12\x14\n\x0cgifting_uses\x18\x04 \x01(\r\x12\x13\n\x0bgifting_max\x18\x05 \x01(\x05\x12\x1c\n\x14gifting_window_hours\x18\x06 \x01(\r\x12\x64\n\x11trade_restriction\x18\x07 \x01(\x0e\x32!.dota.EGCMsgInitiateTradeResponse:&k_EGCMsgInitiateTradeResponse_Accepted\"+\n\x18\x43MsgClientToGCUnwrapGift\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\"\n CMsgClientToGCGetGiftPermissions\"\xf6\x03\n(CMsgClientToGCGetGiftPermissionsResponse\x12\x14\n\x0cis_unlimited\x18\x01 \x01(\x08\x12\x16\n\x0ehas_two_factor\x18\x03 \x01(\x08\x12\x64\n\x11sender_permission\x18\x06 \x01(\x0e\x32!.dota.EGCMsgInitiateTradeResponse:&k_EGCMsgInitiateTradeResponse_Accepted\x12\"\n\x1a\x66riendship_age_requirement\x18\x07 \x01(\r\x12-\n%friendship_age_requirement_two_factor\x18\x08 \x01(\r\x12[\n\x12\x66riend_permissions\x18\t \x03(\x0b\x32?.dota.CMsgClientToGCGetGiftPermissionsResponse.FriendPermission\x1a\x85\x01\n\x10\x46riendPermission\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12]\n\npermission\x18\x02 \x01(\x0e\x32!.dota.EGCMsgInitiateTradeResponse:&k_EGCMsgInitiateTradeResponse_Accepted\"-\n\x1a\x43MsgClientToGCUnpackBundle\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\x82\x04\n\"CMsgClientToGCUnpackBundleResponse\x12\x19\n\x11unpacked_item_ids\x18\x01 \x03(\x04\x12\x62\n\x08response\x18\x02 \x01(\x0e\x32\x36.dota.CMsgClientToGCUnpackBundleResponse.EUnpackBundle:\x18k_UnpackBundle_Succeeded\x12!\n\x19unpacked_item_def_indexes\x18\x03 \x03(\r\"\xb9\x02\n\rEUnpackBundle\x12\x1c\n\x18k_UnpackBundle_Succeeded\x10\x00\x12)\n%k_UnpackBundle_Failed_ItemIsNotBundle\x10\x01\x12\x35\n1k_UnpackBundle_Failed_UnableToCreateContainedItem\x10\x02\x12&\n\"k_UnpackBundle_Failed_SOCacheError\x10\x03\x12\'\n#k_UnpackBundle_Failed_ItemIsInvalid\x10\x04\x12)\n%k_UnpackBundle_Failed_BadItemQuantity\x10\x05\x12,\n(k_UnpackBundle_Failed_UnableToDeleteItem\x10\x06\"K\n\'CMsgGCToClientStoreTransactionCompleted\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\x12\x10\n\x08item_ids\x18\x02 \x03(\x04\"M\n\x18\x43MsgClientToGCEquipItems\x12\x31\n\x06\x65quips\x18\x01 \x03(\x0b\x32!.dota.CMsgAdjustItemEquippedState\"?\n CMsgClientToGCEquipItemsResponse\x12\x1b\n\x13so_cache_version_id\x18\x01 \x01(\x06\"B\n\x1a\x43MsgClientToGCSetItemStyle\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x13\n\x0bstyle_index\x18\x02 \x01(\r\"\xe3\x01\n\"CMsgClientToGCSetItemStyleResponse\x12Z\n\x08response\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCSetItemStyleResponse.ESetStyle:\x14k_SetStyle_Succeeded\"a\n\tESetStyle\x12\x18\n\x14k_SetStyle_Succeeded\x10\x00\x12\x15\n\x11k_SetStyle_Failed\x10\x01\x12#\n\x1fk_SetStyle_Failed_StyleIsLocked\x10\x02\"i\n\x1d\x43MsgClientToGCUnlockItemStyle\x12\x16\n\x0eitem_to_unlock\x18\x01 \x01(\x04\x12\x13\n\x0bstyle_index\x18\x02 \x01(\r\x12\x1b\n\x13\x63onsumable_item_ids\x18\x03 \x03(\x04\"\xa7\x05\n%CMsgClientToGCUnlockItemStyleResponse\x12\x63\n\x08response\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCUnlockItemStyleResponse.EUnlockStyle:\x17k_UnlockStyle_Succeeded\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x12\x13\n\x0bstyle_index\x18\x03 \x01(\r\x12\x14\n\x0cstyle_prereq\x18\x04 \x01(\r\"\xdc\x03\n\x0c\x45UnlockStyle\x12\x1b\n\x17k_UnlockStyle_Succeeded\x10\x00\x12\x1f\n\x1bk_UnlockStyle_Failed_PreReq\x10\x01\x12#\n\x1fk_UnlockStyle_Failed_CantAfford\x10\x02\x12#\n\x1fk_UnlockStyle_Failed_CantCommit\x10\x03\x12&\n\"k_UnlockStyle_Failed_CantLockCache\x10\x04\x12)\n%k_UnlockStyle_Failed_CantAffordAttrib\x10\x05\x12&\n\"k_UnlockStyle_Failed_CantAffordGem\x10\x06\x12*\n&k_UnlockStyle_Failed_NoCompendiumLevel\x10\x07\x12(\n$k_UnlockStyle_Failed_AlreadyUnlocked\x10\x08\x12#\n\x1fk_UnlockStyle_Failed_OtherError\x10\t\x12&\n\"k_UnlockStyle_Failed_ItemIsInvalid\x10\n\x12&\n\"k_UnlockStyle_Failed_ToolIsInvalid\x10\x0b\"\x83\x01\n&CMsgClientToGCSetItemInventoryCategory\x12\x10\n\x08item_ids\x18\x01 \x03(\x04\x12\x14\n\x0cset_to_value\x18\x02 \x01(\r\x12\x19\n\x11remove_categories\x18\x03 \x01(\r\x12\x16\n\x0e\x61\x64\x64_categories\x18\x04 \x01(\r\"G\n\x19\x43MsgClientToGCUnlockCrate\x12\x15\n\rcrate_item_id\x18\x01 \x01(\x04\x12\x13\n\x0bkey_item_id\x18\x02 \x01(\x04\"\xce\x01\n!CMsgClientToGCUnlockCrateResponse\x12\x38\n\x06result\x18\x01 \x01(\x0e\x32\x14.dota.EGCMsgResponse:\x12k_EGCMsgResponseOK\x12\x43\n\rgranted_items\x18\x02 \x03(\x0b\x32,.dota.CMsgClientToGCUnlockCrateResponse.Item\x1a*\n\x04Item\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x11\n\tdef_index\x18\x02 \x01(\r\"4\n!CMsgClientToGCRemoveItemAttribute\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\"\xb7\x03\n)CMsgClientToGCRemoveItemAttributeResponse\x12w\n\x08response\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCRemoveItemAttributeResponse.ERemoveItemAttribute:\x1fk_RemoveItemAttribute_Succeeded\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"\xff\x01\n\x14\x45RemoveItemAttribute\x12#\n\x1fk_RemoveItemAttribute_Succeeded\x10\x00\x12 \n\x1ck_RemoveItemAttribute_Failed\x10\x01\x12.\n*k_RemoveItemAttribute_Failed_ItemIsInvalid\x10\x02\x12\x39\n5k_RemoveItemAttribute_Failed_AttributeCannotBeRemoved\x10\x03\x12\x35\n1k_RemoveItemAttribute_Failed_AttributeDoesntExist\x10\x04\"U\n\x16\x43MsgClientToGCNameItem\x12\x17\n\x0fsubject_item_id\x18\x01 \x01(\x04\x12\x14\n\x0ctool_item_id\x18\x02 \x01(\x04\x12\x0c\n\x04name\x18\x03 \x01(\t\"\xb7\x02\n\x1e\x43MsgClientToGCNameItemResponse\x12V\n\x08response\x18\x01 \x01(\x0e\x32..dota.CMsgClientToGCNameItemResponse.ENameItem:\x14k_NameItem_Succeeded\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\"\xab\x01\n\tENameItem\x12\x18\n\x14k_NameItem_Succeeded\x10\x00\x12\x15\n\x11k_NameItem_Failed\x10\x01\x12#\n\x1fk_NameItem_Failed_ToolIsInvalid\x10\x02\x12#\n\x1fk_NameItem_Failed_ItemIsInvalid\x10\x03\x12#\n\x1fk_NameItem_Failed_NameIsInvalid\x10\x04\">\n\x15\x43MsgGCSetItemPosition\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x14\n\x0cnew_position\x18\x02 \x01(\r\"\xed\x01\n%CAttribute_ItemDynamicRecipeComponent\x12\x10\n\x08item_def\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\r\x12\x12\n\nitem_flags\x18\x03 \x01(\r\x12\x19\n\x11\x61ttributes_string\x18\x04 \x01(\t\x12\x12\n\nitem_count\x18\x05 \x01(\r\x12\x17\n\x0fitems_fulfilled\x18\x06 \x01(\r\x12\x13\n\x0bitem_rarity\x18\x07 \x01(\r\x12\x10\n\x08lootlist\x18\x08 \x01(\t\x12\x19\n\x11\x66ulfilled_item_id\x18\t \x01(\x04\"\xb2\x01\n\x10\x43ProtoItemSocket\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x16\n\x0e\x61ttr_def_index\x18\x02 \x01(\r\x12\x15\n\rrequired_type\x18\x03 \x01(\r\x12\x15\n\rrequired_hero\x18\x04 \x01(\t\x12\x15\n\rgem_def_index\x18\x05 \x01(\r\x12\x14\n\x0cnot_tradable\x18\x06 \x01(\x08\x12\x1a\n\x12required_item_slot\x18\x07 \x01(\t\"@\n\x16\x43ProtoItemSocket_Empty\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\"Q\n\x17\x43ProtoItemSocket_Effect\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x0e\n\x06\x65\x66\x66\x65\x63t\x18\x02 \x01(\r\"j\n\x16\x43ProtoItemSocket_Color\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x0b\n\x03red\x18\x02 \x01(\r\x12\r\n\x05green\x18\x03 \x01(\r\x12\x0c\n\x04\x62lue\x18\x04 \x01(\r\"o\n\x18\x43ProtoItemSocket_Strange\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x14\n\x0cstrange_type\x18\x02 \x01(\r\x12\x15\n\rstrange_value\x18\x03 \x01(\r\"\xa4\x01\n5CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x14\n\x0cstrange_type\x18\x02 \x01(\r\x12\x15\n\rstrange_value\x18\x03 \x01(\r\x12\x16\n\x0e\x61\x62ility_effect\x18\x04 \x01(\r\"\x96\x01\n\x1a\x43ProtoItemSocket_Spectator\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x14\n\x0cgames_viewed\x18\x02 \x01(\r\x12\x16\n\x0e\x63orporation_id\x18\x03 \x01(\r\x12\x11\n\tleague_id\x18\x04 \x01(\r\x12\x0f\n\x07team_id\x18\x05 \x01(\r\"`\n\x1e\x43ProtoItemSocket_AssetModifier\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x16\n\x0e\x61sset_modifier\x18\x02 \x01(\r\"\xac\x01\n;CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x16\n\x0e\x61sset_modifier\x18\x02 \x01(\r\x12\x15\n\ranim_modifier\x18\x03 \x01(\r\x12\x16\n\x0e\x61\x62ility_effect\x18\x04 \x01(\r\"\x86\x01\n\x1a\x43ProtoItemSocket_Autograph\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\x12\x11\n\tautograph\x18\x02 \x01(\t\x12\x14\n\x0c\x61utograph_id\x18\x03 \x01(\r\x12\x17\n\x0f\x61utograph_score\x18\x04 \x01(\r\"H\n\x1e\x43ProtoItemSocket_StaticVisuals\x12&\n\x06socket\x18\x01 \x01(\x0b\x32\x16.dota.CProtoItemSocket\"\"\n\x11\x43\x41ttribute_String\x12\r\n\x05value\x18\x01 \x01(\t\"m\n%CWorkshop_GetItemDailyRevenue_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\x12\x12\n\ndate_start\x18\x03 \x01(\r\x12\x10\n\x08\x64\x61te_end\x18\x04 \x01(\r\"\xe2\x01\n&CWorkshop_GetItemDailyRevenue_Response\x12Y\n\x0f\x63ountry_revenue\x18\x01 \x03(\x0b\x32@.dota.CWorkshop_GetItemDailyRevenue_Response.CountryDailyRevenue\x1a]\n\x13\x43ountryDailyRevenue\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x02 \x01(\r\x12\x13\n\x0brevenue_usd\x18\x03 \x01(\x03\x12\r\n\x05units\x18\x04 \x01(\x05\"c\n(CWorkshop_GetPackageDailyRevenue_Request\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x12\n\ndate_start\x18\x02 \x01(\r\x12\x10\n\x08\x64\x61te_end\x18\x03 \x01(\r\"\xe8\x01\n)CWorkshop_GetPackageDailyRevenue_Response\x12\\\n\x0f\x63ountry_revenue\x18\x01 \x03(\x0b\x32\x43.dota.CWorkshop_GetPackageDailyRevenue_Response.CountryDailyRevenue\x1a]\n\x13\x43ountryDailyRevenue\x12\x14\n\x0c\x63ountry_code\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x02 \x01(\r\x12\x13\n\x0brevenue_usd\x18\x03 \x01(\x03\x12\r\n\x05units\x18\x04 \x01(\x05\"H\n\x1f\x43MsgSQLGCToGCGrantBackpackSlots\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tadd_slots\x18\x02 \x01(\r\"5\n\x1f\x43MsgClientToGCLookupAccountName\x12\x12\n\naccount_id\x18\x01 \x01(\r\"S\n\'CMsgClientToGCLookupAccountNameResponse\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x02 \x01(\t\"\xa2\x01\n CMsgClientToGCCreateStaticRecipe\x12:\n\x05items\x18\x01 \x03(\x0b\x32+.dota.CMsgClientToGCCreateStaticRecipe.Item\x12\x18\n\x10recipe_def_index\x18\x02 \x01(\r\x1a(\n\x04Item\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x0f\n\x07slot_id\x18\x02 \x01(\r\"\xb1\x06\n(CMsgClientToGCCreateStaticRecipeResponse\x12]\n\x08response\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCCreateStaticRecipeResponse.EResponse:\x11\x65Response_Success\x12O\n\x0coutput_items\x18\x02 \x03(\x0b\x32\x39.dota.CMsgClientToGCCreateStaticRecipeResponse.OutputItem\x12O\n\x0cinput_errors\x18\x03 \x03(\x0b\x32\x39.dota.CMsgClientToGCCreateStaticRecipeResponse.InputError\x12[\n\x12\x61\x64\x64itional_outputs\x18\x04 \x03(\x0b\x32?.dota.CMsgClientToGCCreateStaticRecipeResponse.AdditionalOutput\x1a\x41\n\nOutputItem\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\x04\x12\x0f\n\x07slot_id\x18\x03 \x01(\r\x1ay\n\nInputError\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12Z\n\x05\x65rror\x18\x02 \x01(\x0e\x32\x38.dota.CMsgClientToGCCreateStaticRecipeResponse.EResponse:\x11\x65Response_Success\x1a\x32\n\x10\x41\x64\x64itionalOutput\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\x04\"\xb4\x01\n\tEResponse\x12\x15\n\x11\x65Response_Success\x10\x00\x12\x1e\n\x1a\x65Response_OfferingDisabled\x10\x01\x12\x1a\n\x16\x65Response_InvalidItems\x10\x02\x12\x1b\n\x17\x65Response_InternalError\x10\x03\x12\x1b\n\x17\x65Response_MissingLeague\x10\x04\x12\x1a\n\x16\x65Response_MissingEvent\x10\x05\"\xe0\x03\n\x1b\x43MsgProcessTransactionOrder\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\x12\x14\n\x0csteam_txn_id\x18\x02 \x01(\x04\x12\x16\n\x0epartner_txn_id\x18\x03 \x01(\x04\x12\x10\n\x08steam_id\x18\x04 \x01(\x06\x12\x12\n\ntime_stamp\x18\x05 \x01(\r\x12\x11\n\twatermark\x18\x06 \x01(\x04\x12\x1e\n\x16purchase_report_status\x18\x07 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x08 \x01(\r\x12\x35\n\x05items\x18\t \x03(\x0b\x32&.dota.CMsgProcessTransactionOrder.Item\x1a\xe0\x01\n\x04Item\x12\x16\n\x0eitem_def_index\x18\x01 \x01(\r\x12\x12\n\nitem_price\x18\x02 \x01(\r\x12\x10\n\x08quantity\x18\x03 \x01(\r\x12\x15\n\rcategory_desc\x18\x04 \x01(\t\x12\x1b\n\x13store_purchase_type\x18\x05 \x01(\r\x12\x1b\n\x13source_reference_id\x18\x06 \x01(\x04\x12\x1a\n\x12parent_stack_index\x18\x07 \x01(\x05\x12\x15\n\rdefault_price\x18\x08 \x01(\x08\x12\x16\n\x0eis_user_facing\x18\t \x01(\x08\"\x80\x01\n&CMsgGCToGCStoreProcessCDKeyTransaction\x12\x30\n\x05order\x18\x01 \x01(\x0b\x32!.dota.CMsgProcessTransactionOrder\x12\x13\n\x0breason_code\x18\x02 \x01(\r\x12\x0f\n\x07partner\x18\x03 \x01(\r\"A\n.CMsgGCToGCStoreProcessCDKeyTransactionResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"e\n CMsgGCToGCStoreProcessSettlement\x12\x30\n\x05order\x18\x01 \x01(\x0b\x32!.dota.CMsgProcessTransactionOrder\x12\x0f\n\x07partner\x18\x02 \x01(\r\";\n(CMsgGCToGCStoreProcessSettlementResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"}\n!CMsgGCToGCBroadcastConsoleCommand\x12\x13\n\x0b\x63on_command\x18\x01 \x01(\t\x12\x15\n\rreport_output\x18\x02 \x01(\x08\x12\x12\n\nsending_gc\x18\x03 \x01(\r\x12\x18\n\x10output_initiator\x18\x04 \x01(\t\"\xc8\x01\n\x17\x43MsgGCToGCConsoleOutput\x12\x11\n\tinitiator\x18\x01 \x01(\t\x12\x12\n\nsending_gc\x18\x02 \x01(\r\x12\x36\n\x04msgs\x18\x03 \x03(\x0b\x32(.dota.CMsgGCToGCConsoleOutput.OutputLine\x12\x1e\n\x16is_last_for_source_job\x18\x04 \x01(\x08\x1a.\n\nOutputLine\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x12\n\nspew_level\x18\x02 \x01(\r\"\x93\x01\n\x0c\x43MsgItemAges\x12\x45\n\x16max_item_id_timestamps\x18\x01 \x03(\x0b\x32%.dota.CMsgItemAges.MaxItemIDTimestamp\x1a<\n\x12MaxItemIDTimestamp\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x13\n\x0bmax_item_id\x18\x02 \x01(\x04\"\xab\x01\n\x19\x43MsgGCToGCInternalTestMsg\x12\x12\n\nsending_gc\x18\x01 \x01(\r\x12\x11\n\tsender_id\x18\x02 \x01(\x06\x12\x0f\n\x07\x63ontext\x18\x03 \x01(\r\x12\x12\n\nmessage_id\x18\x04 \x01(\r\x12\x14\n\x0cmessage_body\x18\x05 \x01(\x0c\x12\x15\n\rjob_id_source\x18\x06 \x01(\x06\x12\x15\n\rjob_id_target\x18\x07 \x01(\x06\"\xc0\x01\n%CMsgGCToGCClientServerVersionsUpdated\x12\"\n\x1a\x63lient_min_allowed_version\x18\x01 \x01(\r\x12\x1d\n\x15\x63lient_active_version\x18\x02 \x01(\r\x12\x1d\n\x15server_active_version\x18\x03 \x01(\r\x12\x1f\n\x17server_deployed_version\x18\x04 \x01(\r\x12\x14\n\x0cwhat_changed\x18\x05 \x01(\r\"\x83\x01\n!CMsgGCToGCBroadcastMessageFromSub\x12\x0e\n\x06msg_id\x18\x01 \x01(\r\x12\x16\n\x0eserialized_msg\x18\x02 \x01(\x0c\x12\x1b\n\x0f\x61\x63\x63ount_id_list\x18\x03 \x03(\rB\x02\x10\x01\x12\x19\n\rsteam_id_list\x18\x04 \x03(\x06\x42\x02\x10\x01\"\xbd\x01\n!CMsgGCToClientCurrencyPricePoints\x12\x15\n\tprice_key\x18\x01 \x03(\x04\x42\x02\x10\x01\x12\x44\n\ncurrencies\x18\x02 \x03(\x0b\x32\x30.dota.CMsgGCToClientCurrencyPricePoints.Currency\x1a;\n\x08\x43urrency\x12\x13\n\x0b\x63urrency_id\x18\x01 \x01(\r\x12\x1a\n\x0e\x63urrency_price\x18\x02 \x03(\x04\x42\x02\x10\x01\";\n\x12\x43MsgBannedWordList\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x14\n\x0c\x62\x61nned_words\x18\x02 \x03(\t\"V\n!CEcon_FlushInventoryCache_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x04\x12\r\n\x05\x61ppid\x18\x02 \x01(\r\x12\x11\n\tcontextid\x18\x03 \x01(\x04\"5\n\"CEcon_FlushInventoryCache_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\"\x8b\x01\n\"CMsgGCToGCFlushSteamInventoryCache\x12:\n\x04keys\x18\x01 \x03(\x0b\x32,.dota.CMsgGCToGCFlushSteamInventoryCache.Key\x1a)\n\x03Key\x12\x0f\n\x07steamid\x18\x01 \x01(\x04\x12\x11\n\tcontextid\x18\x02 \x01(\x04\"N\n!CMsgGCToGCUpdateSubscriptionItems\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x15\n\ralways_notify\x18\x02 \x01(\x08\"\'\n\x12\x43MsgGCToGCSelfPing\x12\x11\n\tsample_id\x18\x01 \x01(\r\"!\n\x1f\x43MsgGCToGCGetInfuxIntervalStats\"\xa3\x01\n\'CMsgGCToGCGetInfuxIntervalStatsResponse\x12\x14\n\x08stat_ids\x18\x01 \x03(\x07\x42\x02\x10\x01\x12\x16\n\nstat_total\x18\x02 \x03(\x04\x42\x02\x10\x01\x12\x18\n\x0cstat_samples\x18\x03 \x03(\rB\x02\x10\x01\x12\x14\n\x08stat_max\x18\x04 \x03(\rB\x02\x10\x01\x12\x1a\n\x12sample_duration_ms\x18\x05 \x01(\r\"\x1d\n\x1b\x43MsgGCToGCPurchaseSucceeded\"\\\n\x0e\x43\x45xtraMsgBlock\x12\x10\n\x08msg_type\x18\x01 \x01(\r\x12\x10\n\x08\x63ontents\x18\x02 \x01(\x0c\x12\x0f\n\x07msg_key\x18\x03 \x01(\x04\x12\x15\n\ris_compressed\x18\x04 \x01(\x08\"@\n,CMsgClientToGCGetLimitedItemPurchaseQuantity\x12\x10\n\x08item_def\x18\x01 \x01(\r\"\xd0\x02\n4CMsgClientToGCGetLimitedItemPurchaseQuantityResponse\x12\x66\n\x06result\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCGetLimitedItemPurchaseQuantityResponse.EResponse:\x10k_eInternalError\x12\x1a\n\x12quantity_purchased\x18\x02 \x01(\r\"\x93\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidItemDef\x10\x05\x12\x18\n\x14k_eItemDefNotLimited\x10\x06*\xd4\x38\n\nEGCItemMsg\x12\x11\n\x0ck_EMsgGCBase\x10\xe8\x07\x12\x1c\n\x17k_EMsgGCSetItemPosition\x10\xe9\x07\x12\x13\n\x0ek_EMsgGCDelete\x10\xec\x07\x12$\n\x1fk_EMsgGCVerifyCacheSubscription\x10\xed\x07\x12\x1d\n\x18k_EMsgClientToGCNameItem\x10\xee\x07\x12\x16\n\x11k_EMsgGCPaintItem\x10\xf1\x07\x12\x1e\n\x19k_EMsgGCPaintItemResponse\x10\xf2\x07\x12\"\n\x1dk_EMsgGCGoldenWrenchBroadcast\x10\xf3\x07\x12\x18\n\x13k_EMsgGCMOTDRequest\x10\xf4\x07\x12 \n\x1bk_EMsgGCMOTDRequestResponse\x10\xf5\x07\x12\'\n\"k_EMsgGCAddItemToSocket_DEPRECATED\x10\xf6\x07\x12/\n*k_EMsgGCAddItemToSocketResponse_DEPRECATED\x10\xf7\x07\x12+\n&k_EMsgGCAddSocketToBaseItem_DEPRECATED\x10\xf8\x07\x12\'\n\"k_EMsgGCAddSocketToItem_DEPRECATED\x10\xf9\x07\x12/\n*k_EMsgGCAddSocketToItemResponse_DEPRECATED\x10\xfa\x07\x12\x19\n\x14k_EMsgGCNameBaseItem\x10\xfb\x07\x12!\n\x1ck_EMsgGCNameBaseItemResponse\x10\xfc\x07\x12(\n#k_EMsgGCRemoveSocketItem_DEPRECATED\x10\xfd\x07\x12\x30\n+k_EMsgGCRemoveSocketItemResponse_DEPRECATED\x10\xfe\x07\x12!\n\x1ck_EMsgGCCustomizeItemTexture\x10\xff\x07\x12)\n$k_EMsgGCCustomizeItemTextureResponse\x10\x80\x08\x12\x1b\n\x16k_EMsgGCUseItemRequest\x10\x81\x08\x12\x1c\n\x17k_EMsgGCUseItemResponse\x10\x82\x08\x12\x18\n\x13k_EMsgGCGiftedItems\x10\x83\x08\x12\x1b\n\x16k_EMsgGCRemoveItemName\x10\x86\x08\x12\x1c\n\x17k_EMsgGCRemoveItemPaint\x10\x87\x08\x12\x1e\n\x19k_EMsgGCUnwrapGiftRequest\x10\x8d\x08\x12\x1f\n\x1ak_EMsgGCUnwrapGiftResponse\x10\x8e\x08\x12$\n\x1fk_EMsgGCSetItemStyle_DEPRECATED\x10\x8f\x08\x12\x1e\n\x19k_EMsgGCUsedClaimCodeItem\x10\x90\x08\x12\x16\n\x11k_EMsgGCSortItems\x10\x91\x08\x12*\n%k_EMsgGC_RevolvingLootList_DEPRECATED\x10\x92\x08\x12\x1d\n\x18k_EMsgGCUpdateItemSchema\x10\x99\x08\x12 \n\x1bk_EMsgGCRemoveCustomTexture\x10\x9b\x08\x12(\n#k_EMsgGCRemoveCustomTextureResponse\x10\x9c\x08\x12\x1d\n\x18k_EMsgGCRemoveMakersMark\x10\x9d\x08\x12%\n k_EMsgGCRemoveMakersMarkResponse\x10\x9e\x08\x12#\n\x1ek_EMsgGCRemoveUniqueCraftIndex\x10\x9f\x08\x12+\n&k_EMsgGCRemoveUniqueCraftIndexResponse\x10\xa0\x08\x12\x1b\n\x16k_EMsgGCSaxxyBroadcast\x10\xa1\x08\x12!\n\x1ck_EMsgGCBackpackSortFinished\x10\xa2\x08\x12$\n\x1fk_EMsgGCAdjustItemEquippedState\x10\xa3\x08\x12\x18\n\x13k_EMsgGCCollectItem\x10\xa5\x08\x12\x1d\n\x18k_EMsgGCItemAcknowledged\x10\xa6\x08\x12)\n$k_EMsgGCPresets_SelectPresetForClass\x10\xa7\x08\x12$\n\x1fk_EMsgGCPresets_SetItemPosition\x10\xa8\x08\x12.\n)k_EMsgGCPresets_SelectPresetForClassReply\x10\xab\x08\x12%\n k_EMsgClientToGCNameItemResponse\x10\xac\x08\x12#\n\x1ek_EMsgGCApplyConsumableEffects\x10\xad\x08\x12\x1e\n\x19k_EMsgGCShowItemsPickedUp\x10\xaf\x08\x12&\n!k_EMsgGCClientDisplayNotification\x10\xb0\x08\x12\x1d\n\x18k_EMsgGCApplyStrangePart\x10\xb1\x08\x12(\n#k_EMsgGC_IncrementKillCountResponse\x10\xb3\x08\x12 \n\x1bk_EMsgGCApplyPennantUpgrade\x10\xb4\x08\x12\x1d\n\x18k_EMsgGCSetItemPositions\x10\xb5\x08\x12)\n$k_EMsgGCSetItemPositions_RateLimited\x10\xc8\x08\x12\x1c\n\x17k_EMsgGCApplyEggEssence\x10\xb6\x08\x12#\n\x1ek_EMsgGCNameEggEssenceResponse\x10\xb7\x08\x12*\n%k_EMsgGCFulfillDynamicRecipeComponent\x10\xba\x08\x12\x32\n-k_EMsgGCFulfillDynamicRecipeComponentResponse\x10\xbb\x08\x12$\n\x1fk_EMsgGCClientRequestMarketData\x10\xbc\x08\x12,\n\'k_EMsgGCClientRequestMarketDataResponse\x10\xbd\x08\x12\x18\n\x13k_EMsgGCExtractGems\x10\xbe\x08\x12\x16\n\x11k_EMsgGCAddSocket\x10\xbf\x08\x12\x1c\n\x17k_EMsgGCAddItemToSocket\x10\xc0\x08\x12$\n\x1fk_EMsgGCAddItemToSocketResponse\x10\xc1\x08\x12\x1e\n\x19k_EMsgGCAddSocketResponse\x10\xc2\x08\x12!\n\x1ck_EMsgGCResetStrangeGemCount\x10\xc3\x08\x12\x1e\n\x19k_EMsgGCRequestCrateItems\x10\xc4\x08\x12&\n!k_EMsgGCRequestCrateItemsResponse\x10\xc5\x08\x12 \n\x1bk_EMsgGCExtractGemsResponse\x10\xc6\x08\x12)\n$k_EMsgGCResetStrangeGemCountResponse\x10\xc7\x08\x12!\n\x1ck_EMsgGCServerUseItemRequest\x10\xcf\x08\x12\x18\n\x13k_EMsgGCAddGiftItem\x10\xd0\x08\x12\"\n\x1dk_EMsgGCRemoveItemGiftMessage\x10\xd1\x08\x12*\n%k_EMsgGCRemoveItemGiftMessageResponse\x10\xd2\x08\x12&\n!k_EMsgGCRemoveItemGifterAccountId\x10\xd3\x08\x12.\n)k_EMsgGCRemoveItemGifterAccountIdResponse\x10\xd4\x08\x12/\n*k_EMsgClientToGCRemoveItemGifterAttributes\x10\xd5\x08\x12#\n\x1ek_EMsgClientToGCRemoveItemName\x10\xd6\x08\x12*\n%k_EMsgClientToGCRemoveItemDescription\x10\xd7\x08\x12\x30\n+k_EMsgClientToGCRemoveItemAttributeResponse\x10\xd8\x08\x12\x18\n\x13k_EMsgGCTradingBase\x10\xdc\x0b\x12)\n$k_EMsgGCTrading_InitiateTradeRequest\x10\xdd\x0b\x12*\n%k_EMsgGCTrading_InitiateTradeResponse\x10\xde\x0b\x12!\n\x1ck_EMsgGCTrading_StartSession\x10\xdf\x0b\x12\"\n\x1dk_EMsgGCTrading_SessionClosed\x10\xe5\x0b\x12\x31\n,k_EMsgGCTrading_InitiateTradeRequestResponse\x10\xea\x0b\x12)\n$k_EMsgGCServerBrowser_FavoriteServer\x10\xc1\x0c\x12*\n%k_EMsgGCServerBrowser_BlacklistServer\x10\xc2\x0c\x12\x1e\n\x19k_EMsgGCServerRentalsBase\x10\xa4\r\x12\x1f\n\x1ak_EMsgGCDev_NewItemRequest\x10\xd1\x0f\x12\'\n\"k_EMsgGCDev_NewItemRequestResponse\x10\xd2\x0f\x12+\n&k_EMsgGCDev_UnlockAllItemStylesRequest\x10\xd3\x0f\x12,\n\'k_EMsgGCDev_UnlockAllItemStylesResponse\x10\xd4\x0f\x12\"\n\x1dk_EMsgGCStorePurchaseFinalize\x10\xc8\x13\x12*\n%k_EMsgGCStorePurchaseFinalizeResponse\x10\xc9\x13\x12 \n\x1bk_EMsgGCStorePurchaseCancel\x10\xca\x13\x12(\n#k_EMsgGCStorePurchaseCancelResponse\x10\xcb\x13\x12\x1e\n\x19k_EMsgGCStorePurchaseInit\x10\xce\x13\x12&\n!k_EMsgGCStorePurchaseInitResponse\x10\xcf\x13\x12&\n!k_EMsgGCToGCBannedWordListUpdated\x10\xd3\x13\x12\x1e\n\x19k_EMsgGCToGCDirtySDOCache\x10\xd4\x13\x12&\n!k_EMsgGCToGCDirtyMultipleSDOCache\x10\xd5\x13\x12\"\n\x1dk_EMsgGCToGCUpdateSQLKeyValue\x10\xd6\x13\x12(\n#k_EMsgGCToGCBroadcastConsoleCommand\x10\xd9\x13\x12!\n\x1ck_EMsgGCServerVersionUpdated\x10\xda\x13\x12\x1b\n\x16k_EMsgGCApplyAutograph\x10\xdb\x13\x12%\n k_EMsgGCToGCWebAPIAccountChanged\x10\xdc\x13\x12!\n\x1ck_EMsgGCClientVersionUpdated\x10\xe0\x13\x12+\n&k_EMsgGCItemPurgatory_FinalizePurchase\x10\xe3\x13\x12\x33\n.k_EMsgGCItemPurgatory_FinalizePurchaseResponse\x10\xe4\x13\x12)\n$k_EMsgGCItemPurgatory_RefundPurchase\x10\xe5\x13\x12\x31\n,k_EMsgGCItemPurgatory_RefundPurchaseResponse\x10\xe6\x13\x12.\n)k_EMsgGCToGCPlayerStrangeCountAdjustments\x10\xe7\x13\x12\"\n\x1dk_EMsgGCRequestStoreSalesData\x10\xe8\x13\x12*\n%k_EMsgGCRequestStoreSalesDataResponse\x10\xe9\x13\x12\x32\n-k_EMsgGCRequestStoreSalesDataUpToDateResponse\x10\xea\x13\x12\x1c\n\x17k_EMsgGCToGCPingRequest\x10\xeb\x13\x12\x1d\n\x18k_EMsgGCToGCPingResponse\x10\xec\x13\x12%\n k_EMsgGCToGCGetUserSessionServer\x10\xed\x13\x12-\n(k_EMsgGCToGCGetUserSessionServerResponse\x10\xee\x13\x12%\n k_EMsgGCToGCGetUserServerMembers\x10\xef\x13\x12-\n(k_EMsgGCToGCGetUserServerMembersResponse\x10\xf0\x13\x12 \n\x1bk_EMsgGCToGCGetUserPCBangNo\x10\xf1\x13\x12(\n#k_EMsgGCToGCGetUserPCBangNoResponse\x10\xf2\x13\x12$\n\x1fk_EMsgGCToGCCanUseDropRateBonus\x10\xf3\x13\x12\x1e\n\x19k_EMsgSQLAddDropRateBonus\x10\xf4\x13\x12\x1f\n\x1ak_EMsgGCToGCRefreshSOCache\x10\xf5\x13\x12&\n!k_EMsgGCToGCApplyLocalizationDiff\x10\xf6\x13\x12.\n)k_EMsgGCToGCApplyLocalizationDiffResponse\x10\xf7\x13\x12(\n#k_EMsgGCToGCCheckAccountTradeStatus\x10\xf8\x13\x12\x30\n+k_EMsgGCToGCCheckAccountTradeStatusResponse\x10\xf9\x13\x12(\n#k_EMsgGCToGCGrantAccountRolledItems\x10\xfa\x13\x12+\n&k_EMsgGCToGCGrantSelfMadeItemToAccount\x10\xfb\x13\x12\"\n\x1dk_EMsgGCPartnerBalanceRequest\x10\xfd\x13\x12#\n\x1ek_EMsgGCPartnerBalanceResponse\x10\xfe\x13\x12.\n)k_EMsgGCPartnerRechargeRedirectURLRequest\x10\xff\x13\x12/\n*k_EMsgGCPartnerRechargeRedirectURLResponse\x10\x80\x14\x12\x18\n\x13k_EMsgGCStatueCraft\x10\x81\x14\x12\x17\n\x12k_EMsgGCRedeemCode\x10\x82\x14\x12\x1f\n\x1ak_EMsgGCRedeemCodeResponse\x10\x83\x14\x12(\n#k_EMsgGCToGCItemConsumptionRollback\x10\x84\x14\x12\'\n\"k_EMsgClientToGCWrapAndDeliverGift\x10\x85\x14\x12/\n*k_EMsgClientToGCWrapAndDeliverGiftResponse\x10\x86\x14\x12)\n$k_EMsgClientToGCUnpackBundleResponse\x10\x87\x14\x12.\n)k_EMsgGCToClientStoreTransactionCompleted\x10\x88\x14\x12\x1f\n\x1ak_EMsgClientToGCEquipItems\x10\x89\x14\x12\'\n\"k_EMsgClientToGCEquipItemsResponse\x10\x8a\x14\x12$\n\x1fk_EMsgClientToGCUnlockItemStyle\x10\x8b\x14\x12,\n\'k_EMsgClientToGCUnlockItemStyleResponse\x10\x8c\x14\x12-\n(k_EMsgClientToGCSetItemInventoryCategory\x10\x8d\x14\x12 \n\x1bk_EMsgClientToGCUnlockCrate\x10\x8e\x14\x12(\n#k_EMsgClientToGCUnlockCrateResponse\x10\x8f\x14\x12!\n\x1ck_EMsgClientToGCUnpackBundle\x10\x90\x14\x12!\n\x1ck_EMsgClientToGCSetItemStyle\x10\x91\x14\x12)\n$k_EMsgClientToGCSetItemStyleResponse\x10\x92\x14\x12&\n!k_EMsgSQLGCToGCGrantBackpackSlots\x10\x94\x14\x12&\n!k_EMsgClientToGCLookupAccountName\x10\x95\x14\x12.\n)k_EMsgClientToGCLookupAccountNameResponse\x10\x96\x14\x12#\n\x1ek_EMsgGCToGCDevRevokeUserItems\x10\x97\x14\x12\'\n\"k_EMsgClientToGCCreateStaticRecipe\x10\x98\x14\x12/\n*k_EMsgClientToGCCreateStaticRecipeResponse\x10\x99\x14\x12-\n(k_EMsgGCToGCStoreProcessCDKeyTransaction\x10\x9a\x14\x12\x35\n0k_EMsgGCToGCStoreProcessCDKeyTransactionResponse\x10\x9b\x14\x12\'\n\"k_EMsgGCToGCStoreProcessSettlement\x10\x9c\x14\x12/\n*k_EMsgGCToGCStoreProcessSettlementResponse\x10\x9d\x14\x12\x1e\n\x19k_EMsgGCToGCConsoleOutput\x10\x9e\x14\x12\x1d\n\x18k_EMsgGCToClientItemAges\x10\x9f\x14\x12 \n\x1bk_EMsgGCToGCInternalTestMsg\x10\xa0\x14\x12,\n\'k_EMsgGCToGCClientServerVersionsUpdated\x10\xa1\x14\x12$\n\x1fk_EMsgGCUseMultipleItemsRequest\x10\xa2\x14\x12\'\n\"k_EMsgGCGetAccountSubscriptionItem\x10\xa3\x14\x12/\n*k_EMsgGCGetAccountSubscriptionItemResponse\x10\xa4\x14\x12(\n#k_EMsgGCToGCBroadcastMessageFromSub\x10\xa6\x14\x12(\n#k_EMsgGCToClientCurrencyPricePoints\x10\xa7\x14\x12$\n\x1fk_EMsgGCToGCAddSubscriptionTime\x10\xa8\x14\x12)\n$k_EMsgGCToGCFlushSteamInventoryCache\x10\xa9\x14\x12(\n#k_EMsgGCRequestCrateEscalationLevel\x10\xaa\x14\x12\x30\n+k_EMsgGCRequestCrateEscalationLevelResponse\x10\xab\x14\x12(\n#k_EMsgGCToGCUpdateSubscriptionItems\x10\xac\x14\x12\x19\n\x14k_EMsgGCToGCSelfPing\x10\xad\x14\x12&\n!k_EMsgGCToGCGetInfuxIntervalStats\x10\xae\x14\x12.\n)k_EMsgGCToGCGetInfuxIntervalStatsResponse\x10\xaf\x14\x12\"\n\x1dk_EMsgGCToGCPurchaseSucceeded\x10\xb0\x14\x12\x33\n.k_EMsgClientToGCGetLimitedItemPurchaseQuantity\x10\xb1\x14\x12;\n6k_EMsgClientToGCGetLimitedItemPurchaseQuantityResponse\x10\xb2\x14*\xf3\x02\n\x1f\x45ItemPurgatoryResponse_Finalize\x12.\n*k_ItemPurgatoryResponse_Finalize_Succeeded\x10\x00\x12\x36\n2k_ItemPurgatoryResponse_Finalize_Failed_Incomplete\x10\x01\x12?\n;k_ItemPurgatoryResponse_Finalize_Failed_ItemsNotInPurgatory\x10\x02\x12=\n9k_ItemPurgatoryResponse_Finalize_Failed_CouldNotFindItems\x10\x03\x12\x35\n1k_ItemPurgatoryResponse_Finalize_Failed_NoSOCache\x10\x04\x12\x31\n-k_ItemPurgatoryResponse_Finalize_BackpackFull\x10\x05*\xb0\x02\n\x1d\x45ItemPurgatoryResponse_Refund\x12,\n(k_ItemPurgatoryResponse_Refund_Succeeded\x10\x00\x12<\n8k_ItemPurgatoryResponse_Refund_Failed_ItemNotInPurgatory\x10\x01\x12:\n6k_ItemPurgatoryResponse_Refund_Failed_CouldNotFindItem\x10\x02\x12\x33\n/k_ItemPurgatoryResponse_Refund_Failed_NoSOCache\x10\x03\x12\x32\n.k_ItemPurgatoryResponse_Refund_Failed_NoDetail\x10\x04*\xb9\n\n\x1b\x45GCMsgInitiateTradeResponse\x12*\n&k_EGCMsgInitiateTradeResponse_Accepted\x10\x00\x12*\n&k_EGCMsgInitiateTradeResponse_Declined\x10\x01\x12\x36\n2k_EGCMsgInitiateTradeResponse_VAC_Banned_Initiator\x10\x02\x12\x33\n/k_EGCMsgInitiateTradeResponse_VAC_Banned_Target\x10\x03\x12\x38\n4k_EGCMsgInitiateTradeResponse_Target_Already_Trading\x10\x04\x12*\n&k_EGCMsgInitiateTradeResponse_Disabled\x10\x05\x12-\n)k_EGCMsgInitiateTradeResponse_NotLoggedIn\x10\x06\x12(\n$k_EGCMsgInitiateTradeResponse_Cancel\x10\x07\x12)\n%k_EGCMsgInitiateTradeResponse_TooSoon\x10\x08\x12\x30\n,k_EGCMsgInitiateTradeResponse_TooSoonPenalty\x10\t\x12\x38\n4k_EGCMsgInitiateTradeResponse_Trade_Banned_Initiator\x10\n\x12\x35\n1k_EGCMsgInitiateTradeResponse_Trade_Banned_Target\x10\x0b\x12\x43\n?k_EGCMsgInitiateTradeResponse_Free_Account_Initiator_DEPRECATED\x10\x0c\x12:\n6k_EGCMsgInitiateTradeResponse_Shared_Account_Initiator\x10\r\x12\x35\n1k_EGCMsgInitiateTradeResponse_Service_Unavailable\x10\x0e\x12\x30\n,k_EGCMsgInitiateTradeResponse_Target_Blocked\x10\x0f\x12\x33\n/k_EGCMsgInitiateTradeResponse_NeedVerifiedEmail\x10\x10\x12\x30\n,k_EGCMsgInitiateTradeResponse_NeedSteamGuard\x10\x11\x12\x34\n0k_EGCMsgInitiateTradeResponse_SteamGuardDuration\x10\x12\x12\x31\n-k_EGCMsgInitiateTradeResponse_TheyCannotTrade\x10\x13\x12\x37\n3k_EGCMsgInitiateTradeResponse_Recent_Password_Reset\x10\x14\x12\x32\n.k_EGCMsgInitiateTradeResponse_Using_New_Device\x10\x15\x12\x35\n1k_EGCMsgInitiateTradeResponse_Sent_Invalid_Cookie\x10\x16\x12\x31\n-k_EGCMsgInitiateTradeResponse_TooRecentFriend\x10\x17\x12\x37\n3k_EGCMsgInitiateTradeResponse_WalledFundsNotTrusted\x10\x18\x42\x05H\x01\x90\x01\x00')
   ,
   dependencies=[steammessages__pb2.DESCRIPTOR,econ__shared__enums__pb2.DESCRIPTOR,])
 
@@ -769,11 +769,23 @@ _EGCITEMMSG = _descriptor.EnumDescriptor(
       name='k_EMsgGCToGCGetInfuxIntervalStatsResponse', index=183, number=2607,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCToGCPurchaseSucceeded', index=184, number=2608,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCGetLimitedItemPurchaseQuantity', index=185, number=2609,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgClientToGCGetLimitedItemPurchaseQuantityResponse', index=186, number=2610,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=15724,
-  serialized_end=22826,
+  serialized_start=16471,
+  serialized_end=23723,
 )
 _sym_db.RegisterEnumDescriptor(_EGCITEMMSG)
 
@@ -811,8 +823,8 @@ _EITEMPURGATORYRESPONSE_FINALIZE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=22829,
-  serialized_end=23200,
+  serialized_start=23726,
+  serialized_end=24097,
 )
 _sym_db.RegisterEnumDescriptor(_EITEMPURGATORYRESPONSE_FINALIZE)
 
@@ -846,8 +858,8 @@ _EITEMPURGATORYRESPONSE_REFUND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=23203,
-  serialized_end=23507,
+  serialized_start=24100,
+  serialized_end=24404,
 )
 _sym_db.RegisterEnumDescriptor(_EITEMPURGATORYRESPONSE_REFUND)
 
@@ -961,8 +973,8 @@ _EGCMSGINITIATETRADERESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=23510,
-  serialized_end=24847,
+  serialized_start=24407,
+  serialized_end=25744,
 )
 _sym_db.RegisterEnumDescriptor(_EGCMSGINITIATETRADERESPONSE)
 
@@ -1151,6 +1163,9 @@ k_EMsgGCToGCUpdateSubscriptionItems = 2604
 k_EMsgGCToGCSelfPing = 2605
 k_EMsgGCToGCGetInfuxIntervalStats = 2606
 k_EMsgGCToGCGetInfuxIntervalStatsResponse = 2607
+k_EMsgGCToGCPurchaseSucceeded = 2608
+k_EMsgClientToGCGetLimitedItemPurchaseQuantity = 2609
+k_EMsgClientToGCGetLimitedItemPurchaseQuantityResponse = 2610
 k_ItemPurgatoryResponse_Finalize_Succeeded = 0
 k_ItemPurgatoryResponse_Finalize_Failed_Incomplete = 1
 k_ItemPurgatoryResponse_Finalize_Failed_ItemsNotInPurgatory = 2
@@ -1494,10 +1509,52 @@ _CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE_ERESPONSE = _descriptor.EnumDescriptor
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=12903,
-  serialized_end=13083,
+  serialized_start=13070,
+  serialized_end=13250,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE_ERESPONSE)
+
+_CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
+  name='EResponse',
+  full_name='dota.CMsgClientToGCGetLimitedItemPurchaseQuantityResponse.EResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='k_eInternalError', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eSuccess', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTooBusy', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eDisabled', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eTimeout', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidItemDef', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eItemDefNotLimited', index=6, number=6,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=16321,
+  serialized_end=16468,
+)
+_sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE_ERESPONSE)
 
 
 _CMSGAPPLYAUTOGRAPH = _descriptor.Descriptor(
@@ -5100,6 +5157,58 @@ _CPROTOITEMSOCKET_STRANGE = _descriptor.Descriptor(
 )
 
 
+_CPROTOITEMSOCKET_STRANGE_DESERIALIZE_FROM_STRING_ONLY = _descriptor.Descriptor(
+  name='CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY',
+  full_name='dota.CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='socket', full_name='dota.CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY.socket', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='strange_type', full_name='dota.CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY.strange_type', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='strange_value', full_name='dota.CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY.strange_value', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ability_effect', full_name='dota.CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY.ability_effect', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10538,
+  serialized_end=10702,
+)
+
+
 _CPROTOITEMSOCKET_SPECTATOR = _descriptor.Descriptor(
   name='CProtoItemSocket_Spectator',
   full_name='dota.CProtoItemSocket_Spectator',
@@ -5154,8 +5263,8 @@ _CPROTOITEMSOCKET_SPECTATOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10538,
-  serialized_end=10688,
+  serialized_start=10705,
+  serialized_end=10855,
 )
 
 
@@ -5192,8 +5301,8 @@ _CPROTOITEMSOCKET_ASSETMODIFIER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10690,
-  serialized_end=10786,
+  serialized_start=10857,
+  serialized_end=10953,
 )
 
 
@@ -5244,8 +5353,8 @@ _CPROTOITEMSOCKET_ASSETMODIFIER_DESERIALIZE_FROM_STRING_ONLY = _descriptor.Descr
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10789,
-  serialized_end=10961,
+  serialized_start=10956,
+  serialized_end=11128,
 )
 
 
@@ -5296,8 +5405,8 @@ _CPROTOITEMSOCKET_AUTOGRAPH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10964,
-  serialized_end=11098,
+  serialized_start=11131,
+  serialized_end=11265,
 )
 
 
@@ -5327,8 +5436,8 @@ _CPROTOITEMSOCKET_STATICVISUALS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11100,
-  serialized_end=11172,
+  serialized_start=11267,
+  serialized_end=11339,
 )
 
 
@@ -5358,8 +5467,8 @@ _CATTRIBUTE_STRING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11174,
-  serialized_end=11208,
+  serialized_start=11341,
+  serialized_end=11375,
 )
 
 
@@ -5410,8 +5519,8 @@ _CWORKSHOP_GETITEMDAILYREVENUE_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11210,
-  serialized_end=11319,
+  serialized_start=11377,
+  serialized_end=11486,
 )
 
 
@@ -5462,8 +5571,8 @@ _CWORKSHOP_GETITEMDAILYREVENUE_RESPONSE_COUNTRYDAILYREVENUE = _descriptor.Descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11455,
-  serialized_end=11548,
+  serialized_start=11622,
+  serialized_end=11715,
 )
 
 _CWORKSHOP_GETITEMDAILYREVENUE_RESPONSE = _descriptor.Descriptor(
@@ -5492,8 +5601,8 @@ _CWORKSHOP_GETITEMDAILYREVENUE_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11322,
-  serialized_end=11548,
+  serialized_start=11489,
+  serialized_end=11715,
 )
 
 
@@ -5537,8 +5646,8 @@ _CWORKSHOP_GETPACKAGEDAILYREVENUE_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11550,
-  serialized_end=11649,
+  serialized_start=11717,
+  serialized_end=11816,
 )
 
 
@@ -5589,8 +5698,8 @@ _CWORKSHOP_GETPACKAGEDAILYREVENUE_RESPONSE_COUNTRYDAILYREVENUE = _descriptor.Des
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11455,
-  serialized_end=11548,
+  serialized_start=11622,
+  serialized_end=11715,
 )
 
 _CWORKSHOP_GETPACKAGEDAILYREVENUE_RESPONSE = _descriptor.Descriptor(
@@ -5619,8 +5728,8 @@ _CWORKSHOP_GETPACKAGEDAILYREVENUE_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11652,
-  serialized_end=11884,
+  serialized_start=11819,
+  serialized_end=12051,
 )
 
 
@@ -5657,8 +5766,8 @@ _CMSGSQLGCTOGCGRANTBACKPACKSLOTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11886,
-  serialized_end=11958,
+  serialized_start=12053,
+  serialized_end=12125,
 )
 
 
@@ -5688,8 +5797,8 @@ _CMSGCLIENTTOGCLOOKUPACCOUNTNAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11960,
-  serialized_end=12013,
+  serialized_start=12127,
+  serialized_end=12180,
 )
 
 
@@ -5726,8 +5835,8 @@ _CMSGCLIENTTOGCLOOKUPACCOUNTNAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12015,
-  serialized_end=12098,
+  serialized_start=12182,
+  serialized_end=12265,
 )
 
 
@@ -5764,8 +5873,8 @@ _CMSGCLIENTTOGCCREATESTATICRECIPE_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12223,
-  serialized_end=12263,
+  serialized_start=12390,
+  serialized_end=12430,
 )
 
 _CMSGCLIENTTOGCCREATESTATICRECIPE = _descriptor.Descriptor(
@@ -5801,8 +5910,8 @@ _CMSGCLIENTTOGCCREATESTATICRECIPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12101,
-  serialized_end=12263,
+  serialized_start=12268,
+  serialized_end=12430,
 )
 
 
@@ -5846,8 +5955,8 @@ _CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE_OUTPUTITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12660,
-  serialized_end=12725,
+  serialized_start=12827,
+  serialized_end=12892,
 )
 
 _CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE_INPUTERROR = _descriptor.Descriptor(
@@ -5883,8 +5992,8 @@ _CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE_INPUTERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12727,
-  serialized_end=12848,
+  serialized_start=12894,
+  serialized_end=13015,
 )
 
 _CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE_ADDITIONALOUTPUT = _descriptor.Descriptor(
@@ -5920,8 +6029,8 @@ _CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE_ADDITIONALOUTPUT = _descriptor.Descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12850,
-  serialized_end=12900,
+  serialized_start=13017,
+  serialized_end=13067,
 )
 
 _CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE = _descriptor.Descriptor(
@@ -5972,8 +6081,8 @@ _CMSGCLIENTTOGCCREATESTATICRECIPERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12266,
-  serialized_end=13083,
+  serialized_start=12433,
+  serialized_end=13250,
 )
 
 
@@ -6059,8 +6168,8 @@ _CMSGPROCESSTRANSACTIONORDER_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13342,
-  serialized_end=13566,
+  serialized_start=13509,
+  serialized_end=13733,
 )
 
 _CMSGPROCESSTRANSACTIONORDER = _descriptor.Descriptor(
@@ -6145,8 +6254,8 @@ _CMSGPROCESSTRANSACTIONORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13086,
-  serialized_end=13566,
+  serialized_start=13253,
+  serialized_end=13733,
 )
 
 
@@ -6171,6 +6280,13 @@ _CMSGGCTOGCSTOREPROCESSCDKEYTRANSACTION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='partner', full_name='dota.CMsgGCToGCStoreProcessCDKeyTransaction.partner', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -6183,8 +6299,8 @@ _CMSGGCTOGCSTOREPROCESSCDKEYTRANSACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13568,
-  serialized_end=13679,
+  serialized_start=13736,
+  serialized_end=13864,
 )
 
 
@@ -6214,8 +6330,8 @@ _CMSGGCTOGCSTOREPROCESSCDKEYTRANSACTIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13681,
-  serialized_end=13746,
+  serialized_start=13866,
+  serialized_end=13931,
 )
 
 
@@ -6252,8 +6368,8 @@ _CMSGGCTOGCSTOREPROCESSSETTLEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13748,
-  serialized_end=13849,
+  serialized_start=13933,
+  serialized_end=14034,
 )
 
 
@@ -6283,8 +6399,8 @@ _CMSGGCTOGCSTOREPROCESSSETTLEMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13851,
-  serialized_end=13910,
+  serialized_start=14036,
+  serialized_end=14095,
 )
 
 
@@ -6335,8 +6451,8 @@ _CMSGGCTOGCBROADCASTCONSOLECOMMAND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13912,
-  serialized_end=14037,
+  serialized_start=14097,
+  serialized_end=14222,
 )
 
 
@@ -6373,8 +6489,8 @@ _CMSGGCTOGCCONSOLEOUTPUT_OUTPUTLINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14162,
-  serialized_end=14208,
+  serialized_start=14379,
+  serialized_end=14425,
 )
 
 _CMSGGCTOGCCONSOLEOUTPUT = _descriptor.Descriptor(
@@ -6405,6 +6521,13 @@ _CMSGGCTOGCCONSOLEOUTPUT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='is_last_for_source_job', full_name='dota.CMsgGCToGCConsoleOutput.is_last_for_source_job', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -6417,8 +6540,8 @@ _CMSGGCTOGCCONSOLEOUTPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14040,
-  serialized_end=14208,
+  serialized_start=14225,
+  serialized_end=14425,
 )
 
 
@@ -6455,8 +6578,8 @@ _CMSGITEMAGES_MAXITEMIDTIMESTAMP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14298,
-  serialized_end=14358,
+  serialized_start=14515,
+  serialized_end=14575,
 )
 
 _CMSGITEMAGES = _descriptor.Descriptor(
@@ -6485,8 +6608,8 @@ _CMSGITEMAGES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14211,
-  serialized_end=14358,
+  serialized_start=14428,
+  serialized_end=14575,
 )
 
 
@@ -6558,8 +6681,8 @@ _CMSGGCTOGCINTERNALTESTMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14361,
-  serialized_end=14532,
+  serialized_start=14578,
+  serialized_end=14749,
 )
 
 
@@ -6617,8 +6740,8 @@ _CMSGGCTOGCCLIENTSERVERVERSIONSUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14535,
-  serialized_end=14727,
+  serialized_start=14752,
+  serialized_end=14944,
 )
 
 
@@ -6669,8 +6792,8 @@ _CMSGGCTOGCBROADCASTMESSAGEFROMSUB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14730,
-  serialized_end=14861,
+  serialized_start=14947,
+  serialized_end=15078,
 )
 
 
@@ -6707,8 +6830,8 @@ _CMSGGCTOCLIENTCURRENCYPRICEPOINTS_CURRENCY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14994,
-  serialized_end=15053,
+  serialized_start=15211,
+  serialized_end=15270,
 )
 
 _CMSGGCTOCLIENTCURRENCYPRICEPOINTS = _descriptor.Descriptor(
@@ -6744,8 +6867,8 @@ _CMSGGCTOCLIENTCURRENCYPRICEPOINTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14864,
-  serialized_end=15053,
+  serialized_start=15081,
+  serialized_end=15270,
 )
 
 
@@ -6782,8 +6905,8 @@ _CMSGBANNEDWORDLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15055,
-  serialized_end=15114,
+  serialized_start=15272,
+  serialized_end=15331,
 )
 
 
@@ -6827,8 +6950,8 @@ _CECON_FLUSHINVENTORYCACHE_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15116,
-  serialized_end=15202,
+  serialized_start=15333,
+  serialized_end=15419,
 )
 
 
@@ -6858,8 +6981,8 @@ _CECON_FLUSHINVENTORYCACHE_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15204,
-  serialized_end=15257,
+  serialized_start=15421,
+  serialized_end=15474,
 )
 
 
@@ -6896,8 +7019,8 @@ _CMSGGCTOGCFLUSHSTEAMINVENTORYCACHE_KEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15358,
-  serialized_end=15399,
+  serialized_start=15575,
+  serialized_end=15616,
 )
 
 _CMSGGCTOGCFLUSHSTEAMINVENTORYCACHE = _descriptor.Descriptor(
@@ -6926,8 +7049,8 @@ _CMSGGCTOGCFLUSHSTEAMINVENTORYCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15260,
-  serialized_end=15399,
+  serialized_start=15477,
+  serialized_end=15616,
 )
 
 
@@ -6964,8 +7087,8 @@ _CMSGGCTOGCUPDATESUBSCRIPTIONITEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15401,
-  serialized_end=15479,
+  serialized_start=15618,
+  serialized_end=15696,
 )
 
 
@@ -6995,8 +7118,8 @@ _CMSGGCTOGCSELFPING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15481,
-  serialized_end=15520,
+  serialized_start=15698,
+  serialized_end=15737,
 )
 
 
@@ -7019,8 +7142,8 @@ _CMSGGCTOGCGETINFUXINTERVALSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15522,
-  serialized_end=15555,
+  serialized_start=15739,
+  serialized_end=15772,
 )
 
 
@@ -7078,8 +7201,154 @@ _CMSGGCTOGCGETINFUXINTERVALSTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15558,
-  serialized_end=15721,
+  serialized_start=15775,
+  serialized_end=15938,
+)
+
+
+_CMSGGCTOGCPURCHASESUCCEEDED = _descriptor.Descriptor(
+  name='CMsgGCToGCPurchaseSucceeded',
+  full_name='dota.CMsgGCToGCPurchaseSucceeded',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=15940,
+  serialized_end=15969,
+)
+
+
+_CEXTRAMSGBLOCK = _descriptor.Descriptor(
+  name='CExtraMsgBlock',
+  full_name='dota.CExtraMsgBlock',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='msg_type', full_name='dota.CExtraMsgBlock.msg_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='contents', full_name='dota.CExtraMsgBlock.contents', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='msg_key', full_name='dota.CExtraMsgBlock.msg_key', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='is_compressed', full_name='dota.CExtraMsgBlock.is_compressed', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=15971,
+  serialized_end=16063,
+)
+
+
+_CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITY = _descriptor.Descriptor(
+  name='CMsgClientToGCGetLimitedItemPurchaseQuantity',
+  full_name='dota.CMsgClientToGCGetLimitedItemPurchaseQuantity',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='item_def', full_name='dota.CMsgClientToGCGetLimitedItemPurchaseQuantity.item_def', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=16065,
+  serialized_end=16129,
+)
+
+
+_CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE = _descriptor.Descriptor(
+  name='CMsgClientToGCGetLimitedItemPurchaseQuantityResponse',
+  full_name='dota.CMsgClientToGCGetLimitedItemPurchaseQuantityResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='dota.CMsgClientToGCGetLimitedItemPurchaseQuantityResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='quantity_purchased', full_name='dota.CMsgClientToGCGetLimitedItemPurchaseQuantityResponse.quantity_purchased', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE_ERESPONSE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=16132,
+  serialized_end=16468,
 )
 
 _CMSGECONPLAYERSTRANGECOUNTADJUSTMENT_CSTRANGECOUNTADJUSTMENT.containing_type = _CMSGECONPLAYERSTRANGECOUNTADJUSTMENT
@@ -7125,6 +7394,7 @@ _CPROTOITEMSOCKET_EMPTY.fields_by_name['socket'].message_type = _CPROTOITEMSOCKE
 _CPROTOITEMSOCKET_EFFECT.fields_by_name['socket'].message_type = _CPROTOITEMSOCKET
 _CPROTOITEMSOCKET_COLOR.fields_by_name['socket'].message_type = _CPROTOITEMSOCKET
 _CPROTOITEMSOCKET_STRANGE.fields_by_name['socket'].message_type = _CPROTOITEMSOCKET
+_CPROTOITEMSOCKET_STRANGE_DESERIALIZE_FROM_STRING_ONLY.fields_by_name['socket'].message_type = _CPROTOITEMSOCKET
 _CPROTOITEMSOCKET_SPECTATOR.fields_by_name['socket'].message_type = _CPROTOITEMSOCKET
 _CPROTOITEMSOCKET_ASSETMODIFIER.fields_by_name['socket'].message_type = _CPROTOITEMSOCKET
 _CPROTOITEMSOCKET_ASSETMODIFIER_DESERIALIZE_FROM_STRING_ONLY.fields_by_name['socket'].message_type = _CPROTOITEMSOCKET
@@ -7157,6 +7427,8 @@ _CMSGGCTOCLIENTCURRENCYPRICEPOINTS_CURRENCY.containing_type = _CMSGGCTOCLIENTCUR
 _CMSGGCTOCLIENTCURRENCYPRICEPOINTS.fields_by_name['currencies'].message_type = _CMSGGCTOCLIENTCURRENCYPRICEPOINTS_CURRENCY
 _CMSGGCTOGCFLUSHSTEAMINVENTORYCACHE_KEY.containing_type = _CMSGGCTOGCFLUSHSTEAMINVENTORYCACHE
 _CMSGGCTOGCFLUSHSTEAMINVENTORYCACHE.fields_by_name['keys'].message_type = _CMSGGCTOGCFLUSHSTEAMINVENTORYCACHE_KEY
+_CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE_ERESPONSE
+_CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgApplyAutograph'] = _CMSGAPPLYAUTOGRAPH
 DESCRIPTOR.message_types_by_name['CMsgAdjustItemEquippedState'] = _CMSGADJUSTITEMEQUIPPEDSTATE
 DESCRIPTOR.message_types_by_name['CMsgEconPlayerStrangeCountAdjustment'] = _CMSGECONPLAYERSTRANGECOUNTADJUSTMENT
@@ -7236,6 +7508,7 @@ DESCRIPTOR.message_types_by_name['CProtoItemSocket_Empty'] = _CPROTOITEMSOCKET_E
 DESCRIPTOR.message_types_by_name['CProtoItemSocket_Effect'] = _CPROTOITEMSOCKET_EFFECT
 DESCRIPTOR.message_types_by_name['CProtoItemSocket_Color'] = _CPROTOITEMSOCKET_COLOR
 DESCRIPTOR.message_types_by_name['CProtoItemSocket_Strange'] = _CPROTOITEMSOCKET_STRANGE
+DESCRIPTOR.message_types_by_name['CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY'] = _CPROTOITEMSOCKET_STRANGE_DESERIALIZE_FROM_STRING_ONLY
 DESCRIPTOR.message_types_by_name['CProtoItemSocket_Spectator'] = _CPROTOITEMSOCKET_SPECTATOR
 DESCRIPTOR.message_types_by_name['CProtoItemSocket_AssetModifier'] = _CPROTOITEMSOCKET_ASSETMODIFIER
 DESCRIPTOR.message_types_by_name['CProtoItemSocket_AssetModifier_DESERIALIZE_FROM_STRING_ONLY'] = _CPROTOITEMSOCKET_ASSETMODIFIER_DESERIALIZE_FROM_STRING_ONLY
@@ -7271,6 +7544,10 @@ DESCRIPTOR.message_types_by_name['CMsgGCToGCUpdateSubscriptionItems'] = _CMSGGCT
 DESCRIPTOR.message_types_by_name['CMsgGCToGCSelfPing'] = _CMSGGCTOGCSELFPING
 DESCRIPTOR.message_types_by_name['CMsgGCToGCGetInfuxIntervalStats'] = _CMSGGCTOGCGETINFUXINTERVALSTATS
 DESCRIPTOR.message_types_by_name['CMsgGCToGCGetInfuxIntervalStatsResponse'] = _CMSGGCTOGCGETINFUXINTERVALSTATSRESPONSE
+DESCRIPTOR.message_types_by_name['CMsgGCToGCPurchaseSucceeded'] = _CMSGGCTOGCPURCHASESUCCEEDED
+DESCRIPTOR.message_types_by_name['CExtraMsgBlock'] = _CEXTRAMSGBLOCK
+DESCRIPTOR.message_types_by_name['CMsgClientToGCGetLimitedItemPurchaseQuantity'] = _CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITY
+DESCRIPTOR.message_types_by_name['CMsgClientToGCGetLimitedItemPurchaseQuantityResponse'] = _CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE
 DESCRIPTOR.enum_types_by_name['EGCItemMsg'] = _EGCITEMMSG
 DESCRIPTOR.enum_types_by_name['EItemPurgatoryResponse_Finalize'] = _EITEMPURGATORYRESPONSE_FINALIZE
 DESCRIPTOR.enum_types_by_name['EItemPurgatoryResponse_Refund'] = _EITEMPURGATORYRESPONSE_REFUND
@@ -7894,6 +8171,13 @@ CProtoItemSocket_Strange = _reflection.GeneratedProtocolMessageType('CProtoItemS
   ))
 _sym_db.RegisterMessage(CProtoItemSocket_Strange)
 
+CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY = _reflection.GeneratedProtocolMessageType('CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY', (_message.Message,), dict(
+  DESCRIPTOR = _CPROTOITEMSOCKET_STRANGE_DESERIALIZE_FROM_STRING_ONLY,
+  __module__ = 'econ_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY)
+  ))
+_sym_db.RegisterMessage(CProtoItemSocket_Strange_DESERIALIZE_FROM_STRING_ONLY)
+
 CProtoItemSocket_Spectator = _reflection.GeneratedProtocolMessageType('CProtoItemSocket_Spectator', (_message.Message,), dict(
   DESCRIPTOR = _CPROTOITEMSOCKET_SPECTATOR,
   __module__ = 'econ_gcmessages_pb2'
@@ -8226,6 +8510,34 @@ CMsgGCToGCGetInfuxIntervalStatsResponse = _reflection.GeneratedProtocolMessageTy
   # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCGetInfuxIntervalStatsResponse)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCGetInfuxIntervalStatsResponse)
+
+CMsgGCToGCPurchaseSucceeded = _reflection.GeneratedProtocolMessageType('CMsgGCToGCPurchaseSucceeded', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCTOGCPURCHASESUCCEEDED,
+  __module__ = 'econ_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCPurchaseSucceeded)
+  ))
+_sym_db.RegisterMessage(CMsgGCToGCPurchaseSucceeded)
+
+CExtraMsgBlock = _reflection.GeneratedProtocolMessageType('CExtraMsgBlock', (_message.Message,), dict(
+  DESCRIPTOR = _CEXTRAMSGBLOCK,
+  __module__ = 'econ_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CExtraMsgBlock)
+  ))
+_sym_db.RegisterMessage(CExtraMsgBlock)
+
+CMsgClientToGCGetLimitedItemPurchaseQuantity = _reflection.GeneratedProtocolMessageType('CMsgClientToGCGetLimitedItemPurchaseQuantity', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITY,
+  __module__ = 'econ_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCGetLimitedItemPurchaseQuantity)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCGetLimitedItemPurchaseQuantity)
+
+CMsgClientToGCGetLimitedItemPurchaseQuantityResponse = _reflection.GeneratedProtocolMessageType('CMsgClientToGCGetLimitedItemPurchaseQuantityResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGCLIENTTOGCGETLIMITEDITEMPURCHASEQUANTITYRESPONSE,
+  __module__ = 'econ_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgClientToGCGetLimitedItemPurchaseQuantityResponse)
+  ))
+_sym_db.RegisterMessage(CMsgClientToGCGetLimitedItemPurchaseQuantityResponse)
 
 
 DESCRIPTOR._options = None

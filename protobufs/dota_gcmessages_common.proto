@@ -62,7 +62,37 @@ enum ECustomGameWhitelistState {
 	CUSTOM_GAME_WHITELIST_STATE_REJECTED = 2;
 }
 
+enum EDOTATriviaQuestionCategory {
+	k_EDOTATriviaQuestionCategory_AbilityIcon = 0;
+	k_EDOTATriviaQuestionCategory_AbilityCooldown = 1;
+	k_EDOTATriviaQuestionCategory_HeroAttributes = 2;
+	k_EDOTATriviaQuestionCategory_HeroMovementSpeed = 3;
+	k_EDOTATriviaQuestionCategory_TalentTree = 4;
+	k_EDOTATriviaQuestionCategory_HeroStats = 5;
+	k_EDOTATriviaQuestionCategory_ItemPrice = 6;
+	k_EDOTATriviaQuestionCategory_AbilitySound = 7;
+	k_EDOTATriviaQuestionCategory_InvokerSpells = 8;
+	k_EDOTATriviaQuestionCategory_AbilityManaCost = 9;
+	k_EDOTATriviaQuestionCategory_HeroAttackSound = 10;
+	k_EDOTATriviaQuestionCategory_AbilityName = 11;
+	k_EDOTATriviaQuestionCategory_ItemComponents = 12;
+	k_EDOTATriviaQuestionCategory_ItemLore = 13;
+	k_EDOTATriviaQuestionCategory_ItemPassives = 14;
+}
+
+enum EOverwatchConviction {
+	k_EOverwatchConviction_None = 0;
+	k_EOverwatchConviction_NotGuilty = 1;
+	k_EOverwatchConviction_GuiltUnclear = 2;
+	k_EOverwatchConviction_Guilty = 3;
+}
+
 message CSODOTAGameAccountClient {
+	message RoleHandicap {
+		optional uint32 role = 1;
+		optional float handicap = 2;
+	}
+
 	optional uint32 account_id = 1 [(key_field) = true];
 	optional uint32 wins = 3;
 	optional uint32 losses = 4;
@@ -79,10 +109,6 @@ message CSODOTAGameAccountClient {
 	optional uint32 last_secondary_abandoned_game_date = 59;
 	optional uint32 leaver_penalty_count = 23;
 	optional uint32 completed_game_streak = 24;
-	optional uint32 teaching = 28;
-	optional uint32 leadership = 29;
-	optional uint32 friendly = 30;
-	optional uint32 forgiving = 31;
 	optional uint32 account_disabled_until_date = 38;
 	optional uint32 account_disabled_count = 39;
 	optional uint32 match_disabled_until_date = 41;
@@ -91,8 +117,8 @@ message CSODOTAGameAccountClient {
 	optional uint32 partner_account_state = 45;
 	optional uint32 shutdownlawterminatetimestamp = 47;
 	optional uint32 low_priority_games_remaining = 48;
-	optional uint32 competitive_2019_rank = 49;
-	optional uint32 competitive_2019_calibration_games_remaining = 51;
+	optional uint32 competitive_rank = 49;
+	optional uint32 competitive_calibration_games_remaining = 51;
 	optional uint32 solo_competitive_2019_rank = 52;
 	optional uint32 solo_competitive_2019_calibration_games_remaining = 54;
 	optional uint32 recruitment_level = 55;
@@ -138,6 +164,14 @@ message CSODOTAGameAccountClient {
 	optional uint32 competitive_core_calibration_games_remaining = 111;
 	optional uint32 competitive_support_rank = 112;
 	optional uint32 competitive_support_calibration_games_remaining = 113;
+	optional uint32 queue_points = 114;
+	repeated dota.CSODOTAGameAccountClient.RoleHandicap role_handicaps = 115;
+	optional uint32 gauntlet_tier = 116;
+	optional uint32 gauntlet_wins = 117;
+	optional uint32 gauntlet_losses = 118;
+	optional uint32 gauntlet_recent_time = 119;
+	optional uint32 event_mode_recent_time = 120;
+	optional uint32 mmr_recalibration_time = 121;
 }
 
 message CSODOTAGameAccountPlus {
@@ -166,9 +200,19 @@ message CMsgLobbyEventPoints {
 		optional uint32 message_id_end = 2;
 	}
 
+	message PingWheelMessageRange {
+		optional uint32 message_id_start = 1;
+		optional uint32 message_id_end = 2;
+	}
+
 	message PeriodicResourceValues {
 		optional uint32 remaining = 1;
 		optional uint32 max = 2;
+	}
+
+	message EventGameCustomActions {
+		optional uint32 action_id = 1;
+		optional uint32 times_granted = 2;
 	}
 
 	message AccountPoints {
@@ -178,8 +222,6 @@ message CMsgLobbyEventPoints {
 		optional bool owned = 4;
 		optional uint32 favorite_team = 5;
 		optional uint32 favorite_team_level = 6;
-		optional uint32 points_held = 7;
-		optional uint32 premium_points_held = 8;
 		optional uint32 favorite_team_foil_level = 9;
 		optional uint64 active_effects_mask = 12;
 		repeated dota.CMsgLobbyEventPoints.ChatWheelMessageRange unlocked_chat_wheel_message_ranges = 13;
@@ -187,12 +229,44 @@ message CMsgLobbyEventPoints {
 		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues wager_tokens = 17;
 		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues rank_wager_tokens = 18;
 		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues tip_tokens = 19;
-		optional uint32 tip_amount = 20;
 		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues periodic_point_adjustments = 21;
+		repeated dota.CMsgLobbyEventPoints.PingWheelMessageRange unlocked_ping_wheel_message_ranges = 22;
+		optional uint32 wager_streak = 23;
+		optional dota.CMsgLobbyEventPoints.PeriodicResourceValues bounties = 24;
+		repeated dota.CMsgLobbyEventPoints.EventGameCustomActions event_game_custom_actions = 25;
+		optional uint32 tip_amount_index = 26;
 	}
 
 	optional uint32 event_id = 1;
 	repeated dota.CMsgLobbyEventPoints.AccountPoints account_points = 2;
+}
+
+message CMsgLobbyEventGameData {
+	optional uint32 game_seed = 1;
+	optional uint32 event_window_start_time = 2;
+}
+
+message CMsgLobbyGauntletProgress {
+	message AccountProgress {
+		optional uint32 account_id = 1;
+		optional uint32 gauntlet_tier = 3;
+		optional uint32 gauntlet_wins = 4;
+		optional uint32 gauntlet_losses = 5;
+	}
+
+	repeated dota.CMsgLobbyGauntletProgress.AccountProgress accounts = 1;
+}
+
+message CMsgLocalServerGuildData {
+	optional uint32 guild_id = 1;
+	optional dota.EEvent event_id = 2 [default = EVENT_ID_NONE];
+	optional uint32 guild_points = 3;
+	optional uint64 guild_logo = 4;
+	optional uint32 guild_primary_color = 5;
+	optional uint32 guild_secondary_color = 6;
+	optional uint32 guild_pattern = 7;
+	optional uint32 guild_flags = 8;
+	optional uint32 guild_weekly_percentile = 9;
 }
 
 message CMsgLocalServerFakeLobbyData {
@@ -202,6 +276,7 @@ message CMsgLocalServerFakeLobbyData {
 	optional uint32 primary_event_id = 4;
 	optional uint32 favorite_team = 5;
 	optional uint32 favorite_team_quality = 6;
+	optional dota.CMsgLocalServerGuildData guild_info = 7;
 }
 
 message CMsgBattleCupVictory {
@@ -256,8 +331,50 @@ message CMatchPlayerTimedStats {
 	optional uint32 deaths = 3;
 	optional uint32 assists = 4;
 	optional uint32 net_worth = 5;
-	optional uint32 last_hits = 6;
-	optional uint32 denies = 7;
+	optional uint32 xp = 6;
+	optional uint32 last_hits = 7;
+	optional uint32 denies = 8;
+	optional uint32 bounty_rune_gold = 9;
+	optional uint32 range_creep_upgrade_gold = 10;
+	optional uint32 observer_wards_dewarded = 11;
+	optional uint32 reliable_gold_earned = 12;
+	optional uint32 gold_loss_prevented = 13;
+	optional uint32 hero_kill_gold = 14;
+	optional uint32 creep_kill_gold = 15;
+	optional uint32 building_gold = 16;
+	optional uint32 other_gold = 17;
+	optional uint32 comeback_gold = 18;
+	optional uint32 experimental_gold = 19;
+	optional uint32 experimental2_gold = 20;
+	optional uint32 creep_deny_gold = 21;
+	optional uint32 tp_scrolls_purchased_1 = 22;
+	optional uint32 tp_scrolls_purchased_2 = 23;
+	optional uint32 tp_scrolls_purchased_3 = 24;
+	optional uint32 tp_scrolls_purchased_4 = 25;
+	optional uint32 tp_scrolls_purchased_5 = 26;
+	optional uint32 neutral_gold = 27;
+	optional uint32 courier_gold = 28;
+	optional uint32 roshan_gold = 29;
+	optional uint32 income_gold = 30;
+	optional uint32 custom_stats_1 = 31;
+	optional uint32 custom_stats_2 = 32;
+	optional uint32 custom_stats_3 = 33;
+	optional uint32 custom_stats_4 = 34;
+	optional uint32 custom_stats_5 = 35;
+	optional uint32 item_value = 36;
+	optional uint32 support_gold_spent = 37;
+	optional uint32 camps_stacked = 38;
+	optional uint32 wards_placed = 39;
+	optional uint32 triple_kills = 40;
+	optional uint32 rampages = 41;
+}
+
+message CMatchTeamTimedStats {
+	optional uint32 time = 1;
+	optional uint32 enemy_towers_killed = 2;
+	optional uint32 enemy_barracks_killed = 3;
+	optional uint32 enemy_towers_status = 4;
+	optional uint32 enemy_barracks_status = 5;
 }
 
 message CMatchAdditionalUnitInventory {
@@ -268,6 +385,7 @@ message CMatchAdditionalUnitInventory {
 message CMatchPlayerPermanentBuff {
 	optional uint32 permanent_buff = 1;
 	optional uint32 stack_count = 2;
+	optional uint32 grant_time = 3;
 }
 
 message CMatchHeroSelectEvent {
@@ -436,12 +554,9 @@ message CMsgDOTAProfileCard {
 	optional uint32 rank_tier_score = 12;
 	optional uint32 previous_rank_tier = 13;
 	optional uint32 rank_tier_mmr_type = 14;
-	optional uint32 rank_tier_core = 15;
-	optional uint32 rank_tier_core_score = 16;
 	optional uint32 leaderboard_rank_core = 17;
-	optional uint32 rank_tier_support = 18;
-	optional uint32 rank_tier_support_score = 19;
-	optional uint32 leaderboard_rank_support = 20;
+	optional uint32 rank_tier_peak = 21;
+	optional uint32 title = 23;
 }
 
 message CSODOTAPlayerChallenge {
@@ -943,6 +1058,7 @@ message CMsgDOTAMatch {
 		optional uint32 item_6 = 59;
 		optional uint32 item_7 = 60;
 		optional uint32 item_8 = 61;
+		optional uint32 item_9 = 76;
 		optional float expected_team_contribution = 10;
 		optional float scaled_metric = 11;
 		optional uint32 previous_rank = 12;
@@ -999,6 +1115,8 @@ message CMsgDOTAMatch {
 		optional uint32 seconds_dead = 70;
 		optional uint32 gold_lost_to_death = 71;
 		optional uint32 lane_selection_flags = 75;
+		optional uint32 bounty_runes = 77;
+		optional uint32 outposts_captured = 78;
 	}
 
 	message BroadcasterInfo {
@@ -1252,16 +1370,9 @@ message CMsgMatchConsumableUsage {
 }
 
 message CMsgMatchEventActionGrants {
-	message Grant {
-		optional uint32 event_id = 1;
-		optional uint32 action_id = 2;
-		optional uint32 audit = 3;
-		optional uint32 quantity = 4;
-	}
-
 	message PlayerGrants {
 		optional uint32 account_id = 1;
-		repeated dota.CMsgMatchEventActionGrants.Grant actions_granted = 2;
+		repeated dota.CMsgPendingEventAward actions_granted = 3;
 	}
 
 	repeated dota.CMsgMatchEventActionGrants.PlayerGrants player_grants = 1;
@@ -1347,3 +1458,89 @@ message CMsgRequestPlayerRecentAccomplishmentsResponse {
 	optional dota.CMsgRecentAccomplishments player_accomplishments = 2;
 }
 
+message CMsgArcanaVoteMatchVotes {
+	optional uint32 match_id = 1;
+	optional uint32 hero_id = 2;
+	optional uint32 vote_count = 3;
+}
+
+message CMsgGCtoGCAssociatedExploiterAccountInfo {
+	optional uint32 account_id = 1;
+	optional uint32 num_matches_to_search = 2;
+	optional uint32 min_shared_match_count = 3;
+	optional uint32 num_additional_players = 4;
+}
+
+message CMsgGCtoGCAssociatedExploiterAccountInfoResponse {
+	message Account {
+		optional uint32 account_id = 1;
+		optional uint32 num_common_matches = 2;
+		optional uint32 earliest_common_match = 3;
+		optional uint32 latest_common_match = 4;
+		optional uint32 generation = 5;
+		optional string persona = 6;
+		optional bool already_banned = 7;
+	}
+
+	repeated dota.CMsgGCtoGCAssociatedExploiterAccountInfoResponse.Account accounts = 1;
+}
+
+message CMsgPullTabsData {
+	message Slot {
+		optional uint32 event_id = 1;
+		optional uint32 board_id = 2;
+		optional uint32 hero_id = 3;
+		optional uint32 action_id = 4;
+		optional bool redeemed = 5;
+	}
+
+	message Jackpot {
+		optional uint32 board_id = 1;
+		optional uint32 action_id = 2;
+		optional uint32 hero_id = 3;
+	}
+
+	repeated dota.CMsgPullTabsData.Slot slots = 1;
+	repeated dota.CMsgPullTabsData.Jackpot jackpots = 2;
+	optional uint32 last_board = 3;
+}
+
+message CMsgUnderDraftData {
+	message BenchSlot {
+		optional uint32 slot_id = 1;
+		optional uint32 hero_id = 2;
+		optional uint32 stars = 3;
+	}
+
+	message ShopSlot {
+		optional uint32 slot_id = 1;
+		optional uint32 hero_id = 2;
+		optional bool is_special_reward = 3;
+	}
+
+	repeated dota.CMsgUnderDraftData.BenchSlot bench_slots = 1;
+	repeated dota.CMsgUnderDraftData.ShopSlot shop_slots = 2;
+	optional uint32 gold = 3;
+	optional uint32 total_gold = 4;
+	optional bool not_restorable = 5;
+}
+
+message CMsgPlayerTitleData {
+	repeated uint32 title = 1;
+	repeated uint32 event_id = 2;
+	optional uint32 active = 3;
+}
+
+message CMsgDOTATriviaQuestion {
+	optional uint32 question_id = 1;
+	optional dota.EDOTATriviaQuestionCategory category = 2 [default = k_EDOTATriviaQuestionCategory_AbilityIcon];
+	optional uint32 timestamp = 3;
+	optional string question_value = 4;
+	repeated string answer_values = 5;
+	optional uint32 correct_answer_index = 6;
+}
+
+message CMsgDOTATriviaQuestionAnswersSummary {
+	optional bool summary_available = 1;
+	repeated uint32 picked_count = 2;
+}

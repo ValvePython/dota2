@@ -131,6 +131,8 @@ message CMsgDOTAChatMessage {
 	optional dota.CMsgDOTAChatMessage.TriviaAnswered trivia_answer = 32;
 	optional uint32 requested_ability_id = 33;
 	optional uint32 chat_flags = 34;
+	optional bool started_finding_match = 35;
+	optional bool ctrl_is_down = 36;
 }
 
 message CMsgDOTAChatMember {
@@ -254,4 +256,3 @@ message CMsgDOTAChatRegionsEnabled {
 	optional bool enable_all_regions = 1;
 	repeated dota.CMsgDOTAChatRegionsEnabled.Region enabled_regions = 2;
 }
-

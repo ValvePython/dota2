@@ -69,6 +69,29 @@ message CMsgDOTATeam {
 }
 
 message CMsgDOTATeamInfo {
+	message HeroStats {
+		optional uint32 hero_id = 1;
+		optional uint32 picks = 2;
+		optional uint32 wins = 3;
+		optional uint32 bans = 4;
+		optional float avg_kills = 5;
+		optional float avg_deaths = 6;
+		optional float avg_assists = 7;
+		optional float avg_gpm = 8;
+		optional float avg_xpm = 9;
+	}
+
+	message MemberStats {
+		optional uint32 account_id = 1;
+		optional uint32 wins_with_team = 2;
+		optional uint32 losses_with_team = 3;
+		repeated dota.CMsgDOTATeamInfo.HeroStats top_heroes = 4;
+	}
+
+	message TeamStats {
+		repeated dota.CMsgDOTATeamInfo.HeroStats played_heroes = 1;
+	}
+
 	message Member {
 		optional uint32 account_id = 1;
 		optional uint32 time_joined = 2;
@@ -101,6 +124,9 @@ message CMsgDOTATeamInfo {
 	repeated uint32 registered_member_account_ids = 30;
 	repeated dota.CMsgDOTATeamInfo.AuditEntry audit_entries = 31;
 	optional dota.ELeagueRegion region = 29 [default = LEAGUE_REGION_UNSET];
+	optional string abbreviation = 32;
+	repeated dota.CMsgDOTATeamInfo.MemberStats member_stats = 33;
+	optional dota.CMsgDOTATeamInfo.TeamStats team_stats = 34;
 }
 
 message CMsgDOTATeamInfoRequest {
@@ -110,6 +136,10 @@ message CMsgDOTATeamInfoRequest {
 message CMsgDOTATeamsInfo {
 	optional uint32 league_id = 1;
 	repeated dota.CMsgDOTATeamInfo teams = 2;
+}
+
+message CMsgDOTATeamInfoList {
+	repeated dota.CMsgDOTATeamInfo teams = 1;
 }
 
 message CMsgDOTAMyTeamInfoRequest {
@@ -125,6 +155,7 @@ message CMsgDOTACreateTeam {
 	optional string country_code = 7;
 	optional string url = 8;
 	optional bool pickup_team = 9;
+	optional string abbreviation = 10;
 }
 
 message CMsgDOTACreateTeamResponse {
@@ -165,6 +196,7 @@ message CMsgDOTAEditTeamDetails {
 	optional string country_code = 8;
 	optional string url = 9;
 	optional bool in_use_by_party = 10;
+	optional string abbreviation = 11;
 }
 
 message CMsgDOTAEditTeamDetailsResponse {
@@ -287,4 +319,3 @@ message CMsgDOTALeaveTeamResponse {
 message CMsgDOTABetaParticipation {
 	optional uint32 access_rights = 1;
 }
-
