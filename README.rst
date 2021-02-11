@@ -19,11 +19,15 @@ Installation
 
 Install latest version from PYPI::
 
-    pip install -U dota2
+    pip install dota2
 
 Install the current dev version from ``github``::
 
     pip install git+https://github.com/ValvePython/dota2
+    
+    # if you are installing over existing install
+    # note: "only-if-needed" will only update dependecies if needed
+    pip install -U --upgrade-strategy only-if-needed git+https://github.com/ValvePython/dota2
 
 
 
