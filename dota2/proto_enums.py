@@ -125,6 +125,7 @@ class DOTA_BOT_MODE(IntEnum):
     COMPANION = 23
     TUTORIAL_BOSS = 24
     MINION = 25
+    OUTPOST = 26
 
 class DOTA_CM_PICK(IntEnum):
     DOTA_CM_RANDOM = 0
@@ -255,6 +256,7 @@ class DOTABotDifficulty(IntEnum):
     BOT_DIFFICULTY_EXTRA1 = 6
     BOT_DIFFICULTY_EXTRA2 = 7
     BOT_DIFFICULTY_EXTRA3 = 8
+    BOT_DIFFICULTY_NPX = 9
 
 class DOTAChatChannelType_t(IntEnum):
     DOTAChannelType_Regional = 0
@@ -271,6 +273,7 @@ class DOTAChatChannelType_t(IntEnum):
     DOTAChannelType_GameAll = 11
     DOTAChannelType_GameAllies = 12
     DOTAChannelType_GameSpectator = 13
+    DOTAChannelType_GameCoaching = 14
     DOTAChannelType_Cafe = 15
     DOTAChannelType_CustomGame = 16
     DOTAChannelType_Private = 17
@@ -279,6 +282,8 @@ class DOTAChatChannelType_t(IntEnum):
     DOTAChannelType_HLTVSpectator = 20
     DOTAChannelType_GameEvents = 21
     DOTAChannelType_Trivia = 22
+    DOTAChannelType_NewPlayer = 23
+    DOTAChannelType_PrivateCoaching = 24
 
 class DOTAConnectionState_t(IntEnum):
     DOTA_CONNECTION_STATE_UNKNOWN = 0
@@ -372,11 +377,10 @@ class EBroadcastTimelineEvent(IntEnum):
     TeamFight = 8
     FirstBlood = 9
 
-ECoachTeammateRating = IntEnum('ECoachTeammateRating', {
+EChatSpecialPrivileges = IntEnum('EChatSpecialPrivileges', {
     'None': 0,
-    'Positive': 1,
-    'Negative': 2,
-    'Abusive': 3,
+    'Moderator': 1,
+    'SuperModerator': 2,
     })
 
 class ECustomGameInstallStatus(IntEnum):
@@ -643,6 +647,7 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCFantasyTeamRosterSwapResponse = 7356
     EMsgGCFantasyTeamRosterRequest = 7357
     EMsgGCFantasyTeamRosterResponse = 7358
+    EMsgGCChatModeratorBan = 7359
     EMsgGCFantasyTeamRosterAddDropRequest = 7361
     EMsgGCFantasyTeamRosterAddDropResponse = 7362
     EMsgPresentedClientTerminateDlg = 7363
@@ -1058,7 +1063,7 @@ class EDOTAGCMsg(IntEnum):
     EMsgClientToGCTransferSeasonalMMRRequest = 8193
     EMsgClientToGCTransferSeasonalMMRResponse = 8194
     EMsgGCToGCPublicChatCommunicationBan = 8195
-    EMsgGCToGCUpdateAccountPublicChatBan = 8196
+    EMsgGCToGCUpdateAccountInfo = 8196
     EMsgGCChatReportPublicSpam = 8197
     EMsgClientToGCSetPartyBuilderOptions = 8198
     EMsgClientToGCSetPartyBuilderOptionsResponse = 8199
@@ -1363,6 +1368,30 @@ class EDOTAGCMsg(IntEnum):
     EMsgClientToGCSetDPCFavoriteState = 8779
     EMsgClientToGCSetDPCFavoriteStateResponse = 8780
     EMsgClientToGCOverwatchReplayError = 8781
+    EMsgServerToGCPlayerChallengeHistory = 8782
+    EMsgSignOutBanData = 8783
+    EMsgWebapiDPCSeasonResults = 8784
+    EMsgClientToGCCoachFriend = 8785
+    EMsgClientToGCCoachFriendResponse = 8786
+    EMsgClientToGCRequestPrivateCoachingSession = 8787
+    EMsgClientToGCRequestPrivateCoachingSessionResponse = 8788
+    EMsgClientToGCAcceptPrivateCoachingSession = 8789
+    EMsgClientToGCAcceptPrivateCoachingSessionResponse = 8790
+    EMsgClientToGCLeavePrivateCoachingSession = 8791
+    EMsgClientToGCLeavePrivateCoachingSessionResponse = 8792
+    EMsgClientToGCGetCurrentPrivateCoachingSession = 8793
+    EMsgClientToGCGetCurrentPrivateCoachingSessionResponse = 8794
+    EMsgGCToClientPrivateCoachingSessionUpdated = 8795
+    EMsgClientToGCSubmitPrivateCoachingSessionRating = 8796
+    EMsgClientToGCSubmitPrivateCoachingSessionRatingResponse = 8797
+    EMsgClientToGCGetAvailablePrivateCoachingSessions = 8798
+    EMsgClientToGCGetAvailablePrivateCoachingSessionsResponse = 8799
+    EMsgClientToGCGetAvailablePrivateCoachingSessionsSummary = 8800
+    EMsgClientToGCGetAvailablePrivateCoachingSessionsSummaryResponse = 8801
+    EMsgClientToGCJoinPrivateCoachingSessionLobby = 8802
+    EMsgClientToGCJoinPrivateCoachingSessionLobbyResponse = 8803
+    EMsgClientToGCRespondToCoachFriendRequest = 8804
+    EMsgClientToGCRespondToCoachFriendRequestResponse = 8805
 
 class EDOTAGCSessionNeed(IntEnum):
     Unknown = 0
@@ -1404,11 +1433,6 @@ EDOTAPlayerMMRType = IntEnum('EDOTAPlayerMMRType', {
     'GeneralCompetitive': 3,
     'SoloCompetitive2019': 4,
     '1v1Competitive_UNUSED': 5,
-    'GeneralSeasonalRanked': 6,
-    'SoloSeasonalRanked': 7,
-    'Competitive_Core': 8,
-    'Competitive_Support': 9,
-    'Competitive_Classic': 10,
     })
 
 class EDOTATriviaAnswerResult(IntEnum):
@@ -1446,6 +1470,8 @@ class EDPCPushNotification(IntEnum):
     DPC_PUSH_NOTIFICATION_MATCH_STARTING = 1
     DPC_PUSH_NOTIFICATION_PLAYER_LEFT_TEAM = 10
     DPC_PUSH_NOTIFICATION_PLAYER_JOINED_TEAM = 11
+    DPC_PUSH_NOTIFICATION_PLAYER_JOINED_TEAM_AS_COACH = 12
+    DPC_PUSH_NOTIFICATION_PLAYER_LEFT_TEAM_AS_COACH = 13
     DPC_PUSH_NOTIFICATION_LEAGUE_RESULT = 20
     DPC_PUSH_NOTIFICATION_PREDICTION_MATCHES_AVAILABLE = 30
     DPC_PUSH_NOTIFICATION_PREDICTION_RESULT = 31
@@ -1554,6 +1580,7 @@ class EGCBaseMsg(IntEnum):
     EMsgGCToGCPerformManualOp = 4516
     EMsgGCToGCPerformManualOpCompleted = 4517
     EMsgGCToGCReloadServerRegionSettings = 4518
+    EMsgGCAdditionalWelcomeMsgList = 4519
 
 class EGCBaseProtoObjectTypes(IntEnum):
     EProtoObjectPartyInvite = 1001
@@ -1673,6 +1700,7 @@ class EGCItemMsg(IntEnum):
     EMsgGCApplyAutograph = 2523
     EMsgGCToGCWebAPIAccountChanged = 2524
     EMsgGCClientVersionUpdated = 2528
+    EMsgGCToGCUpdateWelcomeMsg = 2529
     EMsgGCItemPurgatory_FinalizePurchase = 2531
     EMsgGCItemPurgatory_FinalizePurchaseResponse = 2532
     EMsgGCItemPurgatory_RefundPurchase = 2533
@@ -1810,6 +1838,11 @@ class EGCPartnerRequestResponse(IntEnum):
     EPartnerRequestBadAccount = 2
     EPartnerRequestNotLinked = 3
     EPartnerRequestUnsupportedPartnerType = 4
+
+class EHeroRelicRarity(IntEnum):
+    HERO_RELIC_RARITY_INVALID = -1
+    HERO_RELIC_RARITY_COMMON = 0
+    HERO_RELIC_RARITY_RARE = 1
 
 class EHighPriorityMMState(IntEnum):
     EHighPriorityMM_Unknown = 0
@@ -1968,6 +2001,11 @@ class ELeagueTierCategory(IntEnum):
     LEAGUE_TIER_CATEGORY_PROFESSIONAL = 2
     LEAGUE_TIER_CATEGORY_DPC = 3
 
+class ELobbyMemberCoachRequestState(IntEnum):
+    eLobbyMemberCoachRequestState_None = 0
+    eLobbyMemberCoachRequestState_Accepted = 1
+    eLobbyMemberCoachRequestState_Rejected = 2
+
 class EMatchBehaviorScoreVariance(IntEnum):
     Invalid = 0
     Low = 1
@@ -2019,8 +2057,13 @@ EPartyMatchmakingFlags = IntEnum('EPartyMatchmakingFlags', {
     'LargeRankSpread': 1,
     })
 
-class EPlayerCoachMatchFlag(IntEnum):
-    EligibleForRewards = 1
+class EPlayerChallengeHistoryType(IntEnum):
+    Invalid = 0
+    KillEater = 1
+    DotaPlusRelic = 2
+    DotaPlusHeroPlayerChallenge = 3
+    InGameEventChallenge = 4
+    GuildContract = 5
 
 class EProfileCardSlotType(IntEnum):
     Empty = 0
@@ -2039,6 +2082,7 @@ class EPurchaseHeroRelicResult(IntEnum):
     PurchaseNotAllowed = 4
     InvalidRelic = 5
     AlreadyOwned = 6
+    InvalidRarity = 7
 
 class EReadyCheckRequestResult(IntEnum):
     Success = 0
@@ -2107,6 +2151,8 @@ class EStartFindingMatchResult(IntEnum):
     DifficultyNotUnlocked = 130
     CoachesNotAllowedInParty = 131
     MatchmakingBusy = 132
+    SteamChinaBanned = 133
+    SteamChinaInvalidMixedParty = 134
 
 class ESupportEventRequestResult(IntEnum):
     Success = 0
@@ -2127,8 +2173,7 @@ class ESupportEventRequestResult(IntEnum):
 class ETeamFanContentStatus(IntEnum):
     TEAM_FAN_CONTENT_STATUS_INVALID = 0
     TEAM_FAN_CONTENT_STATUS_PENDING = 1
-    TEAM_FAN_CONTENT_STATUS_APPROVED = 2
-    TEAM_FAN_CONTENT_STATUS_REJECTED = 3
+    TEAM_FAN_CONTENT_STATUS_EVALUATED = 2
 
 class ETeamInviteResult(IntEnum):
     TEAM_INVITE_SUCCESS = 0
@@ -2340,6 +2385,7 @@ class MatchType(IntEnum):
     MATCH_TYPE_MUTATION = 11
     MATCH_TYPE_COACHES_CHALLENGE = 12
     MATCH_TYPE_GAUNTLET = 13
+    MATCH_TYPE_NEW_PLAYER_POOL = 14
 
 class PartnerAccountType(IntEnum):
     PARTNER_NONE = 0
@@ -2370,7 +2416,7 @@ __all__ = [
     'DOTASelectionPriorityRules',
     'EBadgeType',
     'EBroadcastTimelineEvent',
-    'ECoachTeammateRating',
+    'EChatSpecialPrivileges',
     'ECustomGameInstallStatus',
     'ECustomGameWhitelistState',
     'EDACPlatform',
@@ -2398,6 +2444,7 @@ __all__ = [
     'EGCMsgResponse',
     'EGCMsgUseItemResponse',
     'EGCPartnerRequestResponse',
+    'EHeroRelicRarity',
     'EHighPriorityMMState',
     'EItemEditorReservationResult',
     'EItemPurgatoryResponse_Finalize',
@@ -2413,6 +2460,7 @@ __all__ = [
     'ELeagueStatus',
     'ELeagueTier',
     'ELeagueTierCategory',
+    'ELobbyMemberCoachRequestState',
     'EMatchBehaviorScoreVariance',
     'EMatchGroupServerStatus',
     'EMatchOutcome',
@@ -2421,7 +2469,7 @@ __all__ = [
     'EOverwatchReportReason',
     'EPartyBeaconType',
     'EPartyMatchmakingFlags',
-    'EPlayerCoachMatchFlag',
+    'EPlayerChallengeHistoryType',
     'EProfileCardSlotType',
     'EPurchaseHeroRelicResult',
     'EReadyCheckRequestResult',

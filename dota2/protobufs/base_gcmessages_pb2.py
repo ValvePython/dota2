@@ -15,6 +15,7 @@ _sym_db = _symbol_database.Default()
 
 
 import dota2.protobufs.steammessages_pb2 as steammessages__pb2
+import dota2.protobufs.gcsdk_gcmessages_pb2 as gcsdk__gcmessages__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -22,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dota',
   syntax='proto2',
   serialized_options=_b('H\001\220\001\000'),
-  serialized_pb=_b('\n\x15\x62\x61se_gcmessages.proto\x12\x04\x64ota\x1a\x13steammessages.proto\"\x9a\x01\n\x1d\x43GCStorePurchaseInit_LineItem\x12\x13\n\x0bitem_def_id\x18\x01 \x01(\r\x12\x10\n\x08quantity\x18\x02 \x01(\r\x12\x1e\n\x16\x63ost_in_local_currency\x18\x03 \x01(\r\x12\x15\n\rpurchase_type\x18\x04 \x01(\r\x12\x1b\n\x13source_reference_id\x18\x05 \x01(\x04\"\x87\x01\n\x17\x43MsgGCStorePurchaseInit\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\x12\x37\n\nline_items\x18\x04 \x03(\x0b\x32#.dota.CGCStorePurchaseInit_LineItem\"A\n\x1f\x43MsgGCStorePurchaseInitResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06txn_id\x18\x02 \x01(\x04\"&\n\x13\x43MsgSystemBroadcast\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x9e\x01\n\x12\x43MsgClientPingData\x12\x17\n\x0brelay_codes\x18\x04 \x03(\x07\x42\x02\x10\x01\x12\x17\n\x0brelay_pings\x18\x05 \x03(\rB\x02\x10\x01\x12\x18\n\x0cregion_codes\x18\x08 \x03(\rB\x02\x10\x01\x12\x18\n\x0cregion_pings\x18\t \x03(\rB\x02\x10\x01\x12\"\n\x1aregion_ping_failed_bitmask\x18\n \x01(\r\"\x8d\x01\n\x11\x43MsgInviteToParty\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\x12\x10\n\x08\x61s_coach\x18\x04 \x01(\x08\x12+\n\tping_data\x18\x05 \x01(\x0b\x32\x18.dota.CMsgClientPingData\"=\n\x11\x43MsgInviteToLobby\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\"Q\n\x15\x43MsgInvitationCreated\x12\x10\n\x08group_id\x18\x01 \x01(\x04\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x14\n\x0cuser_offline\x18\x03 \x01(\x08\"\x80\x01\n\x17\x43MsgPartyInviteResponse\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12+\n\tping_data\x18\x08 \x01(\x0b\x32\x18.dota.CMsgClientPingData\"\x8b\x01\n\x17\x43MsgLobbyInviteResponse\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12\x17\n\x0f\x63ustom_game_crc\x18\x06 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x07 \x01(\x07\"%\n\x11\x43MsgKickFromParty\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"\x10\n\x0e\x43MsgLeaveParty\"\xa7\x01\n\x1b\x43MsgCustomGameInstallStatus\x12R\n\x06status\x18\x01 \x01(\x0e\x32\x1e.dota.ECustomGameInstallStatus:\"k_ECustomGameInstallStatus_Unknown\x12\x0f\n\x07message\x18\x02 \x01(\t\x12#\n\x1blatest_timestamp_from_steam\x18\x03 \x01(\x07\"\\\n\x13\x43MsgServerAvailable\x12\x45\n\x1a\x63ustom_game_install_status\x18\x01 \x01(\x0b\x32!.dota.CMsgCustomGameInstallStatus\"*\n\x16\x43MsgLANServerAvailable\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\"\xaa\x02\n\x18\x43SOEconGameAccountClient\x12$\n\x19\x61\x64\x64itional_backpack_slots\x18\x01 \x01(\r:\x01\x30\x12\x1c\n\rtrial_account\x18\x02 \x01(\x08:\x05\x66\x61lse\x12&\n\x18\x65ligible_for_online_play\x18\x03 \x01(\x08:\x04true\x12*\n\"need_to_choose_most_helpful_friend\x18\x04 \x01(\x08\x12\x17\n\x0fin_coaches_list\x18\x05 \x01(\x08\x12\x1c\n\x14trade_ban_expiration\x18\x06 \x01(\x07\x12\x1b\n\x13\x64uel_ban_expiration\x18\x07 \x01(\x07\x12\"\n\x13made_first_purchase\x18\t \x01(\x08:\x05\x66\x61lse\"r\n\x18\x43SOItemCriteriaCondition\x12\n\n\x02op\x18\x01 \x01(\x05\x12\r\n\x05\x66ield\x18\x02 \x01(\t\x12\x10\n\x08required\x18\x03 \x01(\x08\x12\x13\n\x0b\x66loat_value\x18\x04 \x01(\x02\x12\x14\n\x0cstring_value\x18\x05 \x01(\t\"\x88\x02\n\x0f\x43SOItemCriteria\x12\x12\n\nitem_level\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\x05\x12\x16\n\x0eitem_level_set\x18\x03 \x01(\x08\x12\x18\n\x10item_quality_set\x18\x04 \x01(\x08\x12\x19\n\x11initial_inventory\x18\x05 \x01(\r\x12\x18\n\x10initial_quantity\x18\x06 \x01(\r\x12\x1b\n\x13ignore_enabled_flag\x18\x08 \x01(\x08\x12\x32\n\nconditions\x18\t \x03(\x0b\x32\x1e.dota.CSOItemCriteriaCondition\x12\x13\n\x0brecent_only\x18\n \x01(\x08\"\xdf\x03\n\rCSOItemRecipe\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03n_a\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65sc_inputs\x18\x04 \x01(\t\x12\x14\n\x0c\x64\x65sc_outputs\x18\x05 \x01(\t\x12\x0c\n\x04\x64i_a\x18\x06 \x01(\t\x12\x0c\n\x04\x64i_b\x18\x07 \x01(\t\x12\x0c\n\x04\x64i_c\x18\x08 \x01(\t\x12\x0c\n\x04\x64o_a\x18\t \x01(\t\x12\x0c\n\x04\x64o_b\x18\n \x01(\t\x12\x0c\n\x04\x64o_c\x18\x0b \x01(\t\x12\x1f\n\x17requires_all_same_class\x18\x0c \x01(\x08\x12\x1e\n\x16requires_all_same_slot\x18\r \x01(\x08\x12\x1e\n\x16\x63lass_usage_for_output\x18\x0e \x01(\x05\x12\x1d\n\x15slot_usage_for_output\x18\x0f \x01(\x05\x12\x16\n\x0eset_for_output\x18\x10 \x01(\x05\x12\x33\n\x14input_items_criteria\x18\x14 \x03(\x0b\x32\x15.dota.CSOItemCriteria\x12\x34\n\x15output_items_criteria\x18\x15 \x03(\x0b\x32\x15.dota.CSOItemCriteria\x12\x1e\n\x16input_item_dupe_counts\x18\x16 \x03(\r\"J\n\x14\x43MsgApplyStrangePart\x12\x1c\n\x14strange_part_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\"K\n\x17\x43MsgApplyPennantUpgrade\x12\x17\n\x0fupgrade_item_id\x18\x01 \x01(\x04\x12\x17\n\x0fpennant_item_id\x18\x02 \x01(\x04\"C\n\x13\x43MsgApplyEggEssence\x12\x17\n\x0f\x65ssence_item_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x65gg_item_id\x18\x02 \x01(\x04\"M\n\x14\x43SOEconItemAttribute\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\x12\x13\n\x0bvalue_bytes\x18\x03 \x01(\x0c\":\n\x13\x43SOEconItemEquipped\x12\x11\n\tnew_class\x18\x01 \x01(\r\x12\x10\n\x08new_slot\x18\x02 \x01(\r\"\xe9\x02\n\x0b\x43SOEconItem\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12\x11\n\tinventory\x18\x03 \x01(\r\x12\x11\n\tdef_index\x18\x04 \x01(\r\x12\x13\n\x08quantity\x18\x05 \x01(\r:\x01\x31\x12\x10\n\x05level\x18\x06 \x01(\r:\x01\x31\x12\x12\n\x07quality\x18\x07 \x01(\r:\x01\x34\x12\x10\n\x05\x66lags\x18\x08 \x01(\r:\x01\x30\x12\x11\n\x06origin\x18\t \x01(\r:\x01\x30\x12-\n\tattribute\x18\x0c \x03(\x0b\x32\x1a.dota.CSOEconItemAttribute\x12(\n\rinterior_item\x18\r \x01(\x0b\x32\x11.dota.CSOEconItem\x12\x10\n\x05style\x18\x0f \x01(\r:\x01\x30\x12\x16\n\x0boriginal_id\x18\x10 \x01(\x04:\x01\x30\x12\x31\n\x0e\x65quipped_state\x18\x12 \x03(\x0b\x32\x19.dota.CSOEconItemEquipped\"\"\n\rCMsgSortItems\x12\x11\n\tsort_type\x18\x01 \x01(\r\"^\n\x10\x43SOEconClaimCode\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tcode_type\x18\x02 \x01(\r\x12\x15\n\rtime_acquired\x18\x03 \x01(\r\x12\x0c\n\x04\x63ode\x18\x04 \x01(\t\"_\n\x14\x43MsgUpdateItemSchema\x12\x12\n\nitems_game\x18\x01 \x01(\x0c\x12\x1b\n\x13item_schema_version\x18\x02 \x01(\x07\x12\x16\n\x0eitems_game_url\x18\x03 \x01(\t\"!\n\x0b\x43MsgGCError\x12\x12\n\nerror_text\x18\x01 \x01(\t\"\x1d\n\x1b\x43MsgRequestInventoryRefresh\".\n\x0f\x43MsgConVarValue\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\">\n\x14\x43MsgReplicateConVars\x12&\n\x07\x63onvars\x18\x01 \x03(\x0b\x32\x15.dota.CMsgConVarValue\"\x81\x01\n\x14\x43MsgItemAcknowledged\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tinventory\x18\x02 \x01(\r\x12\x11\n\tdef_index\x18\x03 \x01(\r\x12\x0f\n\x07quality\x18\x04 \x01(\r\x12\x0e\n\x06rarity\x18\x05 \x01(\r\x12\x0e\n\x06origin\x18\x06 \x01(\r\"\x8a\x01\n\x14\x43MsgSetItemPositions\x12?\n\x0eitem_positions\x18\x01 \x03(\x0b\x32\'.dota.CMsgSetItemPositions.ItemPosition\x1a\x31\n\x0cItemPosition\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x10\n\x08position\x18\x02 \x01(\r\"f\n\x1a\x43MsgGCNameItemNotification\x12\x16\n\x0eplayer_steamid\x18\x01 \x01(\x06\x12\x16\n\x0eitem_def_index\x18\x02 \x01(\r\x12\x18\n\x10item_name_custom\x18\x03 \x01(\t\"\xb6\x01\n\x1f\x43MsgGCClientDisplayNotification\x12+\n#notification_title_localization_key\x18\x01 \x01(\t\x12*\n\"notification_body_localization_key\x18\x02 \x01(\t\x12\x1b\n\x13\x62ody_substring_keys\x18\x03 \x03(\t\x12\x1d\n\x15\x62ody_substring_values\x18\x04 \x03(\t\"1\n\x17\x43MsgGCShowItemsPickedUp\x12\x16\n\x0eplayer_steamid\x18\x01 \x01(\x06\"|\n CMsgGCIncrementKillCountResponse\x12\x1f\n\x11killer_account_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x11\n\tnum_kills\x18\x02 \x01(\r\x12\x10\n\x08item_def\x18\x03 \x01(\r\x12\x12\n\nlevel_type\x18\x04 \x01(\r\"\xcd\x01\n\x18\x43SOEconItemDropRateBonus\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x17\n\x0f\x65xpiration_date\x18\x02 \x01(\x07\x12\x13\n\x05\x62onus\x18\x03 \x01(\x02\x42\x04\x80\x97\"\x01\x12\x13\n\x0b\x62onus_count\x18\x04 \x01(\r\x12\x0f\n\x07item_id\x18\x05 \x01(\x04\x12\x11\n\tdef_index\x18\x06 \x01(\r\x12\x14\n\x0cseconds_left\x18\x07 \x01(\r\x12\x1a\n\x0c\x62ooster_type\x18\x08 \x01(\rB\x04\x80\x97\"\x01\"w\n\x19\x43SOEconItemLeagueViewPass\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x17\n\tleague_id\x18\x02 \x01(\rB\x04\x80\x97\"\x01\x12\x11\n\titemindex\x18\x04 \x01(\r\x12\x14\n\x0cgrant_reason\x18\x05 \x01(\r\"O\n\x16\x43SOEconItemEventTicket\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\x04\"\xca\x01\n\x1d\x43SOEconItemTournamentPassport\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\x04\x12\x1d\n\x15original_purchaser_id\x18\x04 \x01(\r\x12\x18\n\x10passports_bought\x18\x05 \x01(\r\x12\x0f\n\x07version\x18\x06 \x01(\r\x12\x11\n\tdef_index\x18\x07 \x01(\r\x12\x14\n\x0creward_flags\x18\x08 \x01(\r\"+\n\x19\x43MsgGCStorePurchaseCancel\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\"3\n!CMsgGCStorePurchaseCancelResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"-\n\x1b\x43MsgGCStorePurchaseFinalize\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\"G\n#CMsgGCStorePurchaseFinalizeResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08item_ids\x18\x02 \x03(\x04\"3\n\x1f\x43MsgGCToGCBannedWordListUpdated\x12\x10\n\x08group_id\x18\x01 \x01(\r\"?\n\x17\x43MsgGCToGCDirtySDOCache\x12\x10\n\x08sdo_type\x18\x01 \x01(\r\x12\x12\n\nkey_uint64\x18\x02 \x01(\x04\"G\n\x1f\x43MsgGCToGCDirtyMultipleSDOCache\x12\x10\n\x08sdo_type\x18\x01 \x01(\r\x12\x12\n\nkey_uint64\x18\x02 \x03(\x04\"H\n\x1f\x43MsgGCToGCApplyLocalizationDiff\x12\x10\n\x08language\x18\x01 \x01(\r\x12\x13\n\x0bpacked_diff\x18\x02 \x01(\t\":\n\'CMsgGCToGCApplyLocalizationDiffResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"H\n\x11\x43MsgGCCollectItem\x12\x1a\n\x12\x63ollection_item_id\x18\x01 \x01(\x04\x12\x17\n\x0fsubject_item_id\x18\x02 \x01(\x04\"\x14\n\x12\x43MsgSDONoMemcached\"/\n\x1b\x43MsgGCToGCUpdateSQLKeyValue\x12\x10\n\x08key_name\x18\x01 \x01(\t\"4\n\x1a\x43MsgGCServerVersionUpdated\x12\x16\n\x0eserver_version\x18\x01 \x01(\r\"4\n\x1a\x43MsgGCClientVersionUpdated\x12\x16\n\x0e\x63lient_version\x18\x01 \x01(\r\" \n\x1e\x43MsgGCToGCWebAPIAccountChanged\"G\n\x13\x43MsgRecipeComponent\x12\x17\n\x0fsubject_item_id\x18\x01 \x01(\x04\x12\x17\n\x0f\x61ttribute_index\x18\x02 \x01(\x04\"t\n!CMsgFulfillDynamicRecipeComponent\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x39\n\x16\x63onsumption_components\x18\x02 \x03(\x0b\x32\x19.dota.CMsgRecipeComponent\"6\n\x1d\x43MsgGCClientMarketDataRequest\x12\x15\n\ruser_currency\x18\x01 \x01(\r\"\x88\x01\n\x1b\x43MsgGCClientMarketDataEntry\x12\x16\n\x0eitem_def_index\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\r\x12\x1a\n\x12item_sell_listings\x18\x03 \x01(\r\x12\x1f\n\x17price_in_local_currency\x18\x04 \x01(\r\"L\n\x16\x43MsgGCClientMarketData\x12\x32\n\x07\x65ntries\x18\x01 \x03(\x0b\x32!.dota.CMsgGCClientMarketDataEntry\"\\\n\x0f\x43MsgExtractGems\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\x12\x1d\n\x0eitem_socket_id\x18\x03 \x01(\r:\x05\x36\x35\x35\x33\x35\"\xd9\x02\n\x17\x43MsgExtractGemsResponse\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12U\n\x08response\x18\x02 \x01(\x0e\x32*.dota.CMsgExtractGemsResponse.EExtractGems:\x17k_ExtractGems_Succeeded\"\xd5\x01\n\x0c\x45\x45xtractGems\x12\x1b\n\x17k_ExtractGems_Succeeded\x10\x00\x12&\n\"k_ExtractGems_Failed_ToolIsInvalid\x10\x01\x12&\n\"k_ExtractGems_Failed_ItemIsInvalid\x10\x02\x12,\n(k_ExtractGems_Failed_ToolCannotRemoveGem\x10\x03\x12*\n&k_ExtractGems_Failed_FailedToRemoveGem\x10\x04\"L\n\rCMsgAddSocket\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\x12\x0f\n\x07unusual\x18\x03 \x01(\x08\"\xbe\x02\n\x15\x43MsgAddSocketResponse\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x1c\n\x14updated_socket_index\x18\x02 \x03(\r\x12O\n\x08response\x18\x03 \x01(\x0e\x32&.dota.CMsgAddSocketResponse.EAddSocket:\x15k_AddSocket_Succeeded\"\xa4\x01\n\nEAddSocket\x12\x19\n\x15k_AddSocket_Succeeded\x10\x00\x12$\n k_AddSocket_Failed_ToolIsInvalid\x10\x01\x12+\n\'k_AddSocket_Failed_ItemCannotBeSocketed\x10\x02\x12(\n$k_AddSocket_Failed_FailedToAddSocket\x10\x03\"D\n\x17\x43MsgAddItemToSocketData\x12\x13\n\x0bgem_item_id\x18\x01 \x01(\x04\x12\x14\n\x0csocket_index\x18\x02 \x01(\r\"b\n\x13\x43MsgAddItemToSocket\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x35\n\x0egems_to_socket\x18\x02 \x03(\x0b\x32\x1d.dota.CMsgAddItemToSocketData\"\xe4\x03\n\x1b\x43MsgAddItemToSocketResponse\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x1c\n\x14updated_socket_index\x18\x02 \x03(\r\x12O\n\x08response\x18\x03 \x01(\x0e\x32).dota.CMsgAddItemToSocketResponse.EAddGem:\x12k_AddGem_Succeeded\"\xbf\x02\n\x07\x45\x41\x64\x64Gem\x12\x16\n\x12k_AddGem_Succeeded\x10\x00\x12 \n\x1ck_AddGem_Failed_GemIsInvalid\x10\x01\x12!\n\x1dk_AddGem_Failed_ItemIsInvalid\x10\x02\x12\"\n\x1ek_AddGem_Failed_FailedToAddGem\x10\x03\x12+\n\'k_AddGem_Failed_InvalidGemTypeForSocket\x10\x04\x12)\n%k_AddGem_Failed_InvalidGemTypeForHero\x10\x05\x12)\n%k_AddGem_Failed_InvalidGemTypeForSlot\x10\x06\x12\x30\n,k_AddGem_Failed_SocketContainsUnremovableGem\x10\x07\"F\n\x18\x43MsgResetStrangeGemCount\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x14\n\x0csocket_index\x18\x02 \x01(\r\"\xc3\x02\n CMsgResetStrangeGemCountResponse\x12X\n\x08response\x18\x01 \x01(\x0e\x32\x30.dota.CMsgResetStrangeGemCountResponse.EResetGem:\x14k_ResetGem_Succeeded\"\xc4\x01\n\tEResetGem\x12\x18\n\x14k_ResetGem_Succeeded\x10\x00\x12&\n\"k_ResetGem_Failed_FailedToResetGem\x10\x01\x12#\n\x1fk_ResetGem_Failed_ItemIsInvalid\x10\x02\x12%\n!k_ResetGem_Failed_InvalidSocketId\x10\x03\x12)\n%k_ResetGem_Failed_SocketCannotBeReset\x10\x04\"[\n\x1d\x43MsgGCToClientPollFileRequest\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x0f\n\x07poll_id\x18\x03 \x01(\r\"D\n\x1e\x43MsgGCToClientPollFileResponse\x12\x0f\n\x07poll_id\x18\x01 \x01(\r\x12\x11\n\tfile_size\x18\x02 \x01(\r\">\n\x19\x43MsgGCToGCPerformManualOp\x12\r\n\x05op_id\x18\x01 \x01(\x04\x12\x12\n\ngroup_code\x18\x02 \x01(\r\"H\n\"CMsgGCToGCPerformManualOpCompleted\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x11\n\tsource_gc\x18\x02 \x01(\r\"&\n$CMsgGCToGCReloadServerRegionSettings*\x8f\x05\n\nEGCBaseMsg\x12\x1a\n\x15k_EMsgGCSystemMessage\x10\xa1\x1f\x12\x1d\n\x18k_EMsgGCReplicateConVars\x10\xa2\x1f\x12\x1a\n\x15k_EMsgGCConVarUpdated\x10\xa3\x1f\x12\x1a\n\x15k_EMsgGCInviteToParty\x10\x95#\x12\x1e\n\x19k_EMsgGCInvitationCreated\x10\x96#\x12 \n\x1bk_EMsgGCPartyInviteResponse\x10\x97#\x12\x1a\n\x15k_EMsgGCKickFromParty\x10\x98#\x12\x17\n\x12k_EMsgGCLeaveParty\x10\x99#\x12\x1c\n\x17k_EMsgGCServerAvailable\x10\x9a#\x12\"\n\x1dk_EMsgGCClientConnectToServer\x10\x9b#\x12\x1b\n\x16k_EMsgGCGameServerInfo\x10\x9c#\x12\x12\n\rk_EMsgGCError\x10\x9d#\x12\x1f\n\x1ak_EMsgGCLANServerAvailable\x10\x9f#\x12\x1a\n\x15k_EMsgGCInviteToLobby\x10\xa0#\x12 \n\x1bk_EMsgGCLobbyInviteResponse\x10\xa1#\x12$\n\x1fk_EMsgGCToClientPollFileRequest\x10\xa2#\x12%\n k_EMsgGCToClientPollFileResponse\x10\xa3#\x12 \n\x1bk_EMsgGCToGCPerformManualOp\x10\xa4#\x12)\n$k_EMsgGCToGCPerformManualOpCompleted\x10\xa5#\x12+\n&k_EMsgGCToGCReloadServerRegionSettings\x10\xa6#*Y\n\x17\x45GCBaseProtoObjectTypes\x12\x1e\n\x19k_EProtoObjectPartyInvite\x10\xe9\x07\x12\x1e\n\x19k_EProtoObjectLobbyInvite\x10\xea\x07*\xe8\x03\n\x18\x45\x43ustomGameInstallStatus\x12&\n\"k_ECustomGameInstallStatus_Unknown\x10\x00\x12$\n k_ECustomGameInstallStatus_Ready\x10\x01\x12#\n\x1fk_ECustomGameInstallStatus_Busy\x10\x02\x12,\n(k_ECustomGameInstallStatus_FailedGeneric\x10\x65\x12\x32\n.k_ECustomGameInstallStatus_FailedInternalError\x10\x66\x12\x37\n3k_ECustomGameInstallStatus_RequestedTimestampTooOld\x10g\x12\x37\n3k_ECustomGameInstallStatus_RequestedTimestampTooNew\x10h\x12*\n&k_ECustomGameInstallStatus_CRCMismatch\x10i\x12*\n&k_ECustomGameInstallStatus_FailedSteam\x10j\x12-\n)k_ECustomGameInstallStatus_FailedCanceled\x10kB\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\x15\x62\x61se_gcmessages.proto\x12\x04\x64ota\x1a\x13steammessages.proto\x1a\x16gcsdk_gcmessages.proto\"\x9a\x01\n\x1d\x43GCStorePurchaseInit_LineItem\x12\x13\n\x0bitem_def_id\x18\x01 \x01(\r\x12\x10\n\x08quantity\x18\x02 \x01(\r\x12\x1e\n\x16\x63ost_in_local_currency\x18\x03 \x01(\r\x12\x15\n\rpurchase_type\x18\x04 \x01(\r\x12\x1b\n\x13source_reference_id\x18\x05 \x01(\x04\"\x87\x01\n\x17\x43MsgGCStorePurchaseInit\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\x12\x37\n\nline_items\x18\x04 \x03(\x0b\x32#.dota.CGCStorePurchaseInit_LineItem\"A\n\x1f\x43MsgGCStorePurchaseInitResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06txn_id\x18\x02 \x01(\x04\"&\n\x13\x43MsgSystemBroadcast\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x9e\x01\n\x12\x43MsgClientPingData\x12\x17\n\x0brelay_codes\x18\x04 \x03(\x07\x42\x02\x10\x01\x12\x17\n\x0brelay_pings\x18\x05 \x03(\rB\x02\x10\x01\x12\x18\n\x0cregion_codes\x18\x08 \x03(\rB\x02\x10\x01\x12\x18\n\x0cregion_pings\x18\t \x03(\rB\x02\x10\x01\x12\"\n\x1aregion_ping_failed_bitmask\x18\n \x01(\r\"\x8d\x01\n\x11\x43MsgInviteToParty\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x0f\n\x07team_id\x18\x03 \x01(\r\x12\x10\n\x08\x61s_coach\x18\x04 \x01(\x08\x12+\n\tping_data\x18\x05 \x01(\x0b\x32\x18.dota.CMsgClientPingData\"=\n\x11\x43MsgInviteToLobby\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\"Q\n\x15\x43MsgInvitationCreated\x12\x10\n\x08group_id\x18\x01 \x01(\x04\x12\x10\n\x08steam_id\x18\x02 \x01(\x06\x12\x14\n\x0cuser_offline\x18\x03 \x01(\x08\"\x80\x01\n\x17\x43MsgPartyInviteResponse\x12\x10\n\x08party_id\x18\x01 \x01(\x04\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12+\n\tping_data\x18\x08 \x01(\x0b\x32\x18.dota.CMsgClientPingData\"\x8b\x01\n\x17\x43MsgLobbyInviteResponse\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x61\x63\x63\x65pt\x18\x02 \x01(\x08\x12\x16\n\x0e\x63lient_version\x18\x03 \x01(\r\x12\x17\n\x0f\x63ustom_game_crc\x18\x06 \x01(\x06\x12\x1d\n\x15\x63ustom_game_timestamp\x18\x07 \x01(\x07\"%\n\x11\x43MsgKickFromParty\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"\x10\n\x0e\x43MsgLeaveParty\"\xa7\x01\n\x1b\x43MsgCustomGameInstallStatus\x12R\n\x06status\x18\x01 \x01(\x0e\x32\x1e.dota.ECustomGameInstallStatus:\"k_ECustomGameInstallStatus_Unknown\x12\x0f\n\x07message\x18\x02 \x01(\t\x12#\n\x1blatest_timestamp_from_steam\x18\x03 \x01(\x07\"\\\n\x13\x43MsgServerAvailable\x12\x45\n\x1a\x63ustom_game_install_status\x18\x01 \x01(\x0b\x32!.dota.CMsgCustomGameInstallStatus\"*\n\x16\x43MsgLANServerAvailable\x12\x10\n\x08lobby_id\x18\x01 \x01(\x06\"\xaa\x02\n\x18\x43SOEconGameAccountClient\x12$\n\x19\x61\x64\x64itional_backpack_slots\x18\x01 \x01(\r:\x01\x30\x12\x1c\n\rtrial_account\x18\x02 \x01(\x08:\x05\x66\x61lse\x12&\n\x18\x65ligible_for_online_play\x18\x03 \x01(\x08:\x04true\x12*\n\"need_to_choose_most_helpful_friend\x18\x04 \x01(\x08\x12\x17\n\x0fin_coaches_list\x18\x05 \x01(\x08\x12\x1c\n\x14trade_ban_expiration\x18\x06 \x01(\x07\x12\x1b\n\x13\x64uel_ban_expiration\x18\x07 \x01(\x07\x12\"\n\x13made_first_purchase\x18\t \x01(\x08:\x05\x66\x61lse\"r\n\x18\x43SOItemCriteriaCondition\x12\n\n\x02op\x18\x01 \x01(\x05\x12\r\n\x05\x66ield\x18\x02 \x01(\t\x12\x10\n\x08required\x18\x03 \x01(\x08\x12\x13\n\x0b\x66loat_value\x18\x04 \x01(\x02\x12\x14\n\x0cstring_value\x18\x05 \x01(\t\"\x88\x02\n\x0f\x43SOItemCriteria\x12\x12\n\nitem_level\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\x05\x12\x16\n\x0eitem_level_set\x18\x03 \x01(\x08\x12\x18\n\x10item_quality_set\x18\x04 \x01(\x08\x12\x19\n\x11initial_inventory\x18\x05 \x01(\r\x12\x18\n\x10initial_quantity\x18\x06 \x01(\r\x12\x1b\n\x13ignore_enabled_flag\x18\x08 \x01(\x08\x12\x32\n\nconditions\x18\t \x03(\x0b\x32\x1e.dota.CSOItemCriteriaCondition\x12\x13\n\x0brecent_only\x18\n \x01(\x08\"\xdf\x03\n\rCSOItemRecipe\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03n_a\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65sc_inputs\x18\x04 \x01(\t\x12\x14\n\x0c\x64\x65sc_outputs\x18\x05 \x01(\t\x12\x0c\n\x04\x64i_a\x18\x06 \x01(\t\x12\x0c\n\x04\x64i_b\x18\x07 \x01(\t\x12\x0c\n\x04\x64i_c\x18\x08 \x01(\t\x12\x0c\n\x04\x64o_a\x18\t \x01(\t\x12\x0c\n\x04\x64o_b\x18\n \x01(\t\x12\x0c\n\x04\x64o_c\x18\x0b \x01(\t\x12\x1f\n\x17requires_all_same_class\x18\x0c \x01(\x08\x12\x1e\n\x16requires_all_same_slot\x18\r \x01(\x08\x12\x1e\n\x16\x63lass_usage_for_output\x18\x0e \x01(\x05\x12\x1d\n\x15slot_usage_for_output\x18\x0f \x01(\x05\x12\x16\n\x0eset_for_output\x18\x10 \x01(\x05\x12\x33\n\x14input_items_criteria\x18\x14 \x03(\x0b\x32\x15.dota.CSOItemCriteria\x12\x34\n\x15output_items_criteria\x18\x15 \x03(\x0b\x32\x15.dota.CSOItemCriteria\x12\x1e\n\x16input_item_dupe_counts\x18\x16 \x03(\r\"J\n\x14\x43MsgApplyStrangePart\x12\x1c\n\x14strange_part_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\"K\n\x17\x43MsgApplyPennantUpgrade\x12\x17\n\x0fupgrade_item_id\x18\x01 \x01(\x04\x12\x17\n\x0fpennant_item_id\x18\x02 \x01(\x04\"C\n\x13\x43MsgApplyEggEssence\x12\x17\n\x0f\x65ssence_item_id\x18\x01 \x01(\x04\x12\x13\n\x0b\x65gg_item_id\x18\x02 \x01(\x04\"M\n\x14\x43SOEconItemAttribute\x12\x11\n\tdef_index\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\r\x12\x13\n\x0bvalue_bytes\x18\x03 \x01(\x0c\":\n\x13\x43SOEconItemEquipped\x12\x11\n\tnew_class\x18\x01 \x01(\r\x12\x10\n\x08new_slot\x18\x02 \x01(\r\"\xe9\x02\n\x0b\x43SOEconItem\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x12\n\naccount_id\x18\x02 \x01(\r\x12\x11\n\tinventory\x18\x03 \x01(\r\x12\x11\n\tdef_index\x18\x04 \x01(\r\x12\x13\n\x08quantity\x18\x05 \x01(\r:\x01\x31\x12\x10\n\x05level\x18\x06 \x01(\r:\x01\x31\x12\x12\n\x07quality\x18\x07 \x01(\r:\x01\x34\x12\x10\n\x05\x66lags\x18\x08 \x01(\r:\x01\x30\x12\x11\n\x06origin\x18\t \x01(\r:\x01\x30\x12-\n\tattribute\x18\x0c \x03(\x0b\x32\x1a.dota.CSOEconItemAttribute\x12(\n\rinterior_item\x18\r \x01(\x0b\x32\x11.dota.CSOEconItem\x12\x10\n\x05style\x18\x0f \x01(\r:\x01\x30\x12\x16\n\x0boriginal_id\x18\x10 \x01(\x04:\x01\x30\x12\x31\n\x0e\x65quipped_state\x18\x12 \x03(\x0b\x32\x19.dota.CSOEconItemEquipped\"\"\n\rCMsgSortItems\x12\x11\n\tsort_type\x18\x01 \x01(\r\"^\n\x10\x43SOEconClaimCode\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tcode_type\x18\x02 \x01(\r\x12\x15\n\rtime_acquired\x18\x03 \x01(\r\x12\x0c\n\x04\x63ode\x18\x04 \x01(\t\"_\n\x14\x43MsgUpdateItemSchema\x12\x12\n\nitems_game\x18\x01 \x01(\x0c\x12\x1b\n\x13item_schema_version\x18\x02 \x01(\x07\x12\x16\n\x0eitems_game_url\x18\x03 \x01(\t\"!\n\x0b\x43MsgGCError\x12\x12\n\nerror_text\x18\x01 \x01(\t\"\x1d\n\x1b\x43MsgRequestInventoryRefresh\".\n\x0f\x43MsgConVarValue\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\">\n\x14\x43MsgReplicateConVars\x12&\n\x07\x63onvars\x18\x01 \x03(\x0b\x32\x15.dota.CMsgConVarValue\"\x81\x01\n\x14\x43MsgItemAcknowledged\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tinventory\x18\x02 \x01(\r\x12\x11\n\tdef_index\x18\x03 \x01(\r\x12\x0f\n\x07quality\x18\x04 \x01(\r\x12\x0e\n\x06rarity\x18\x05 \x01(\r\x12\x0e\n\x06origin\x18\x06 \x01(\r\"\x8a\x01\n\x14\x43MsgSetItemPositions\x12?\n\x0eitem_positions\x18\x01 \x03(\x0b\x32\'.dota.CMsgSetItemPositions.ItemPosition\x1a\x31\n\x0cItemPosition\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x10\n\x08position\x18\x02 \x01(\r\"f\n\x1a\x43MsgGCNameItemNotification\x12\x16\n\x0eplayer_steamid\x18\x01 \x01(\x06\x12\x16\n\x0eitem_def_index\x18\x02 \x01(\r\x12\x18\n\x10item_name_custom\x18\x03 \x01(\t\"\xb6\x01\n\x1f\x43MsgGCClientDisplayNotification\x12+\n#notification_title_localization_key\x18\x01 \x01(\t\x12*\n\"notification_body_localization_key\x18\x02 \x01(\t\x12\x1b\n\x13\x62ody_substring_keys\x18\x03 \x03(\t\x12\x1d\n\x15\x62ody_substring_values\x18\x04 \x03(\t\"1\n\x17\x43MsgGCShowItemsPickedUp\x12\x16\n\x0eplayer_steamid\x18\x01 \x01(\x06\"|\n CMsgGCIncrementKillCountResponse\x12\x1f\n\x11killer_account_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x11\n\tnum_kills\x18\x02 \x01(\r\x12\x10\n\x08item_def\x18\x03 \x01(\r\x12\x12\n\nlevel_type\x18\x04 \x01(\r\"\xcd\x01\n\x18\x43SOEconItemDropRateBonus\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x17\n\x0f\x65xpiration_date\x18\x02 \x01(\x07\x12\x13\n\x05\x62onus\x18\x03 \x01(\x02\x42\x04\x80\x97\"\x01\x12\x13\n\x0b\x62onus_count\x18\x04 \x01(\r\x12\x0f\n\x07item_id\x18\x05 \x01(\x04\x12\x11\n\tdef_index\x18\x06 \x01(\r\x12\x14\n\x0cseconds_left\x18\x07 \x01(\r\x12\x1a\n\x0c\x62ooster_type\x18\x08 \x01(\rB\x04\x80\x97\"\x01\"w\n\x19\x43SOEconItemLeagueViewPass\x12\x18\n\naccount_id\x18\x01 \x01(\rB\x04\x80\x97\"\x01\x12\x17\n\tleague_id\x18\x02 \x01(\rB\x04\x80\x97\"\x01\x12\x11\n\titemindex\x18\x04 \x01(\r\x12\x14\n\x0cgrant_reason\x18\x05 \x01(\r\"O\n\x16\x43SOEconItemEventTicket\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x10\n\x08\x65vent_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\x04\"\xca\x01\n\x1d\x43SOEconItemTournamentPassport\x12\x12\n\naccount_id\x18\x01 \x01(\r\x12\x11\n\tleague_id\x18\x02 \x01(\r\x12\x0f\n\x07item_id\x18\x03 \x01(\x04\x12\x1d\n\x15original_purchaser_id\x18\x04 \x01(\r\x12\x18\n\x10passports_bought\x18\x05 \x01(\r\x12\x0f\n\x07version\x18\x06 \x01(\r\x12\x11\n\tdef_index\x18\x07 \x01(\r\x12\x14\n\x0creward_flags\x18\x08 \x01(\r\"+\n\x19\x43MsgGCStorePurchaseCancel\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\"3\n!CMsgGCStorePurchaseCancelResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"-\n\x1b\x43MsgGCStorePurchaseFinalize\x12\x0e\n\x06txn_id\x18\x01 \x01(\x04\"G\n#CMsgGCStorePurchaseFinalizeResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08item_ids\x18\x02 \x03(\x04\"3\n\x1f\x43MsgGCToGCBannedWordListUpdated\x12\x10\n\x08group_id\x18\x01 \x01(\r\"?\n\x17\x43MsgGCToGCDirtySDOCache\x12\x10\n\x08sdo_type\x18\x01 \x01(\r\x12\x12\n\nkey_uint64\x18\x02 \x01(\x04\"G\n\x1f\x43MsgGCToGCDirtyMultipleSDOCache\x12\x10\n\x08sdo_type\x18\x01 \x01(\r\x12\x12\n\nkey_uint64\x18\x02 \x03(\x04\"H\n\x1f\x43MsgGCToGCApplyLocalizationDiff\x12\x10\n\x08language\x18\x01 \x01(\r\x12\x13\n\x0bpacked_diff\x18\x02 \x01(\t\":\n\'CMsgGCToGCApplyLocalizationDiffResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"H\n\x11\x43MsgGCCollectItem\x12\x1a\n\x12\x63ollection_item_id\x18\x01 \x01(\x04\x12\x17\n\x0fsubject_item_id\x18\x02 \x01(\x04\"\x14\n\x12\x43MsgSDONoMemcached\"/\n\x1b\x43MsgGCToGCUpdateSQLKeyValue\x12\x10\n\x08key_name\x18\x01 \x01(\t\"4\n\x1a\x43MsgGCServerVersionUpdated\x12\x16\n\x0eserver_version\x18\x01 \x01(\r\"4\n\x1a\x43MsgGCClientVersionUpdated\x12\x16\n\x0e\x63lient_version\x18\x01 \x01(\r\" \n\x1e\x43MsgGCToGCWebAPIAccountChanged\"G\n\x13\x43MsgRecipeComponent\x12\x17\n\x0fsubject_item_id\x18\x01 \x01(\x04\x12\x17\n\x0f\x61ttribute_index\x18\x02 \x01(\x04\"t\n!CMsgFulfillDynamicRecipeComponent\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x39\n\x16\x63onsumption_components\x18\x02 \x03(\x0b\x32\x19.dota.CMsgRecipeComponent\"6\n\x1d\x43MsgGCClientMarketDataRequest\x12\x15\n\ruser_currency\x18\x01 \x01(\r\"\x88\x01\n\x1b\x43MsgGCClientMarketDataEntry\x12\x16\n\x0eitem_def_index\x18\x01 \x01(\r\x12\x14\n\x0citem_quality\x18\x02 \x01(\r\x12\x1a\n\x12item_sell_listings\x18\x03 \x01(\r\x12\x1f\n\x17price_in_local_currency\x18\x04 \x01(\r\"L\n\x16\x43MsgGCClientMarketData\x12\x32\n\x07\x65ntries\x18\x01 \x03(\x0b\x32!.dota.CMsgGCClientMarketDataEntry\"\\\n\x0f\x43MsgExtractGems\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\x12\x1d\n\x0eitem_socket_id\x18\x03 \x01(\r:\x05\x36\x35\x35\x33\x35\"\xd9\x02\n\x17\x43MsgExtractGemsResponse\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12U\n\x08response\x18\x02 \x01(\x0e\x32*.dota.CMsgExtractGemsResponse.EExtractGems:\x17k_ExtractGems_Succeeded\"\xd5\x01\n\x0c\x45\x45xtractGems\x12\x1b\n\x17k_ExtractGems_Succeeded\x10\x00\x12&\n\"k_ExtractGems_Failed_ToolIsInvalid\x10\x01\x12&\n\"k_ExtractGems_Failed_ItemIsInvalid\x10\x02\x12,\n(k_ExtractGems_Failed_ToolCannotRemoveGem\x10\x03\x12*\n&k_ExtractGems_Failed_FailedToRemoveGem\x10\x04\"L\n\rCMsgAddSocket\x12\x14\n\x0ctool_item_id\x18\x01 \x01(\x04\x12\x14\n\x0citem_item_id\x18\x02 \x01(\x04\x12\x0f\n\x07unusual\x18\x03 \x01(\x08\"\xbe\x02\n\x15\x43MsgAddSocketResponse\x12\x0f\n\x07item_id\x18\x01 \x01(\x04\x12\x1c\n\x14updated_socket_index\x18\x02 \x03(\r\x12O\n\x08response\x18\x03 \x01(\x0e\x32&.dota.CMsgAddSocketResponse.EAddSocket:\x15k_AddSocket_Succeeded\"\xa4\x01\n\nEAddSocket\x12\x19\n\x15k_AddSocket_Succeeded\x10\x00\x12$\n k_AddSocket_Failed_ToolIsInvalid\x10\x01\x12+\n\'k_AddSocket_Failed_ItemCannotBeSocketed\x10\x02\x12(\n$k_AddSocket_Failed_FailedToAddSocket\x10\x03\"D\n\x17\x43MsgAddItemToSocketData\x12\x13\n\x0bgem_item_id\x18\x01 \x01(\x04\x12\x14\n\x0csocket_index\x18\x02 \x01(\r\"b\n\x13\x43MsgAddItemToSocket\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x35\n\x0egems_to_socket\x18\x02 \x03(\x0b\x32\x1d.dota.CMsgAddItemToSocketData\"\xe4\x03\n\x1b\x43MsgAddItemToSocketResponse\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x1c\n\x14updated_socket_index\x18\x02 \x03(\r\x12O\n\x08response\x18\x03 \x01(\x0e\x32).dota.CMsgAddItemToSocketResponse.EAddGem:\x12k_AddGem_Succeeded\"\xbf\x02\n\x07\x45\x41\x64\x64Gem\x12\x16\n\x12k_AddGem_Succeeded\x10\x00\x12 \n\x1ck_AddGem_Failed_GemIsInvalid\x10\x01\x12!\n\x1dk_AddGem_Failed_ItemIsInvalid\x10\x02\x12\"\n\x1ek_AddGem_Failed_FailedToAddGem\x10\x03\x12+\n\'k_AddGem_Failed_InvalidGemTypeForSocket\x10\x04\x12)\n%k_AddGem_Failed_InvalidGemTypeForHero\x10\x05\x12)\n%k_AddGem_Failed_InvalidGemTypeForSlot\x10\x06\x12\x30\n,k_AddGem_Failed_SocketContainsUnremovableGem\x10\x07\"F\n\x18\x43MsgResetStrangeGemCount\x12\x14\n\x0citem_item_id\x18\x01 \x01(\x04\x12\x14\n\x0csocket_index\x18\x02 \x01(\r\"\xc3\x02\n CMsgResetStrangeGemCountResponse\x12X\n\x08response\x18\x01 \x01(\x0e\x32\x30.dota.CMsgResetStrangeGemCountResponse.EResetGem:\x14k_ResetGem_Succeeded\"\xc4\x01\n\tEResetGem\x12\x18\n\x14k_ResetGem_Succeeded\x10\x00\x12&\n\"k_ResetGem_Failed_FailedToResetGem\x10\x01\x12#\n\x1fk_ResetGem_Failed_ItemIsInvalid\x10\x02\x12%\n!k_ResetGem_Failed_InvalidSocketId\x10\x03\x12)\n%k_ResetGem_Failed_SocketCannotBeReset\x10\x04\"[\n\x1d\x43MsgGCToClientPollFileRequest\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x16\n\x0e\x63lient_version\x18\x02 \x01(\r\x12\x0f\n\x07poll_id\x18\x03 \x01(\r\"D\n\x1e\x43MsgGCToClientPollFileResponse\x12\x0f\n\x07poll_id\x18\x01 \x01(\r\x12\x11\n\tfile_size\x18\x02 \x01(\r\">\n\x19\x43MsgGCToGCPerformManualOp\x12\r\n\x05op_id\x18\x01 \x01(\x04\x12\x12\n\ngroup_code\x18\x02 \x01(\r\"H\n\"CMsgGCToGCPerformManualOpCompleted\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x11\n\tsource_gc\x18\x02 \x01(\r\"&\n$CMsgGCToGCReloadServerRegionSettings\"P\n\x1e\x43MsgGCAdditionalWelcomeMsgList\x12.\n\x10welcome_messages\x18\x01 \x03(\x0b\x32\x14.dota.CExtraMsgBlock*\xb6\x05\n\nEGCBaseMsg\x12\x1a\n\x15k_EMsgGCSystemMessage\x10\xa1\x1f\x12\x1d\n\x18k_EMsgGCReplicateConVars\x10\xa2\x1f\x12\x1a\n\x15k_EMsgGCConVarUpdated\x10\xa3\x1f\x12\x1a\n\x15k_EMsgGCInviteToParty\x10\x95#\x12\x1e\n\x19k_EMsgGCInvitationCreated\x10\x96#\x12 \n\x1bk_EMsgGCPartyInviteResponse\x10\x97#\x12\x1a\n\x15k_EMsgGCKickFromParty\x10\x98#\x12\x17\n\x12k_EMsgGCLeaveParty\x10\x99#\x12\x1c\n\x17k_EMsgGCServerAvailable\x10\x9a#\x12\"\n\x1dk_EMsgGCClientConnectToServer\x10\x9b#\x12\x1b\n\x16k_EMsgGCGameServerInfo\x10\x9c#\x12\x12\n\rk_EMsgGCError\x10\x9d#\x12\x1f\n\x1ak_EMsgGCLANServerAvailable\x10\x9f#\x12\x1a\n\x15k_EMsgGCInviteToLobby\x10\xa0#\x12 \n\x1bk_EMsgGCLobbyInviteResponse\x10\xa1#\x12$\n\x1fk_EMsgGCToClientPollFileRequest\x10\xa2#\x12%\n k_EMsgGCToClientPollFileResponse\x10\xa3#\x12 \n\x1bk_EMsgGCToGCPerformManualOp\x10\xa4#\x12)\n$k_EMsgGCToGCPerformManualOpCompleted\x10\xa5#\x12+\n&k_EMsgGCToGCReloadServerRegionSettings\x10\xa6#\x12%\n k_EMsgGCAdditionalWelcomeMsgList\x10\xa7#*Y\n\x17\x45GCBaseProtoObjectTypes\x12\x1e\n\x19k_EProtoObjectPartyInvite\x10\xe9\x07\x12\x1e\n\x19k_EProtoObjectLobbyInvite\x10\xea\x07*\xe8\x03\n\x18\x45\x43ustomGameInstallStatus\x12&\n\"k_ECustomGameInstallStatus_Unknown\x10\x00\x12$\n k_ECustomGameInstallStatus_Ready\x10\x01\x12#\n\x1fk_ECustomGameInstallStatus_Busy\x10\x02\x12,\n(k_ECustomGameInstallStatus_FailedGeneric\x10\x65\x12\x32\n.k_ECustomGameInstallStatus_FailedInternalError\x10\x66\x12\x37\n3k_ECustomGameInstallStatus_RequestedTimestampTooOld\x10g\x12\x37\n3k_ECustomGameInstallStatus_RequestedTimestampTooNew\x10h\x12*\n&k_ECustomGameInstallStatus_CRCMismatch\x10i\x12*\n&k_ECustomGameInstallStatus_FailedSteam\x10j\x12-\n)k_ECustomGameInstallStatus_FailedCanceled\x10kB\x05H\x01\x90\x01\x00')
   ,
-  dependencies=[steammessages__pb2.DESCRIPTOR,])
+  dependencies=[steammessages__pb2.DESCRIPTOR,gcsdk__gcmessages__pb2.DESCRIPTOR,])
 
 _EGCBASEMSG = _descriptor.EnumDescriptor(
   name='EGCBaseMsg',
@@ -112,11 +113,15 @@ _EGCBASEMSG = _descriptor.EnumDescriptor(
       name='k_EMsgGCToGCReloadServerRegionSettings', index=19, number=4518,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_EMsgGCAdditionalWelcomeMsgList', index=20, number=4519,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8727,
-  serialized_end=9382,
+  serialized_start=8833,
+  serialized_end=9527,
 )
 _sym_db.RegisterEnumDescriptor(_EGCBASEMSG)
 
@@ -138,8 +143,8 @@ _EGCBASEPROTOOBJECTTYPES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9384,
-  serialized_end=9473,
+  serialized_start=9529,
+  serialized_end=9618,
 )
 _sym_db.RegisterEnumDescriptor(_EGCBASEPROTOOBJECTTYPES)
 
@@ -193,8 +198,8 @@ _ECUSTOMGAMEINSTALLSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9476,
-  serialized_end=9964,
+  serialized_start=9621,
+  serialized_end=10109,
 )
 _sym_db.RegisterEnumDescriptor(_ECUSTOMGAMEINSTALLSTATUS)
 
@@ -219,6 +224,7 @@ k_EMsgGCToClientPollFileResponse = 4515
 k_EMsgGCToGCPerformManualOp = 4516
 k_EMsgGCToGCPerformManualOpCompleted = 4517
 k_EMsgGCToGCReloadServerRegionSettings = 4518
+k_EMsgGCAdditionalWelcomeMsgList = 4519
 k_EProtoObjectPartyInvite = 1001
 k_EProtoObjectLobbyInvite = 1002
 k_ECustomGameInstallStatus_Unknown = 0
@@ -262,8 +268,8 @@ _CMSGEXTRACTGEMSRESPONSE_EEXTRACTGEMS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6716,
-  serialized_end=6929,
+  serialized_start=6740,
+  serialized_end=6953,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGEXTRACTGEMSRESPONSE_EEXTRACTGEMS)
 
@@ -292,8 +298,8 @@ _CMSGADDSOCKETRESPONSE_EADDSOCKET = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7164,
-  serialized_end=7328,
+  serialized_start=7188,
+  serialized_end=7352,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGADDSOCKETRESPONSE_EADDSOCKET)
 
@@ -338,8 +344,8 @@ _CMSGADDITEMTOSOCKETRESPONSE_EADDGEM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7666,
-  serialized_end=7985,
+  serialized_start=7690,
+  serialized_end=8009,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGADDITEMTOSOCKETRESPONSE_EADDGEM)
 
@@ -372,8 +378,8 @@ _CMSGRESETSTRANGEGEMCOUNTRESPONSE_ERESETGEM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8187,
-  serialized_end=8383,
+  serialized_start=8211,
+  serialized_end=8407,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGRESETSTRANGEGEMCOUNTRESPONSE_ERESETGEM)
 
@@ -432,8 +438,8 @@ _CGCSTOREPURCHASEINIT_LINEITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53,
-  serialized_end=207,
+  serialized_start=77,
+  serialized_end=231,
 )
 
 
@@ -484,8 +490,8 @@ _CMSGGCSTOREPURCHASEINIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=210,
-  serialized_end=345,
+  serialized_start=234,
+  serialized_end=369,
 )
 
 
@@ -522,8 +528,8 @@ _CMSGGCSTOREPURCHASEINITRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=347,
-  serialized_end=412,
+  serialized_start=371,
+  serialized_end=436,
 )
 
 
@@ -553,8 +559,8 @@ _CMSGSYSTEMBROADCAST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=414,
-  serialized_end=452,
+  serialized_start=438,
+  serialized_end=476,
 )
 
 
@@ -612,8 +618,8 @@ _CMSGCLIENTPINGDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=455,
-  serialized_end=613,
+  serialized_start=479,
+  serialized_end=637,
 )
 
 
@@ -671,8 +677,8 @@ _CMSGINVITETOPARTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=616,
-  serialized_end=757,
+  serialized_start=640,
+  serialized_end=781,
 )
 
 
@@ -709,8 +715,8 @@ _CMSGINVITETOLOBBY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=759,
-  serialized_end=820,
+  serialized_start=783,
+  serialized_end=844,
 )
 
 
@@ -754,8 +760,8 @@ _CMSGINVITATIONCREATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=822,
-  serialized_end=903,
+  serialized_start=846,
+  serialized_end=927,
 )
 
 
@@ -806,8 +812,8 @@ _CMSGPARTYINVITERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=906,
-  serialized_end=1034,
+  serialized_start=930,
+  serialized_end=1058,
 )
 
 
@@ -865,8 +871,8 @@ _CMSGLOBBYINVITERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1037,
-  serialized_end=1176,
+  serialized_start=1061,
+  serialized_end=1200,
 )
 
 
@@ -896,8 +902,8 @@ _CMSGKICKFROMPARTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1178,
-  serialized_end=1215,
+  serialized_start=1202,
+  serialized_end=1239,
 )
 
 
@@ -920,8 +926,8 @@ _CMSGLEAVEPARTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1217,
-  serialized_end=1233,
+  serialized_start=1241,
+  serialized_end=1257,
 )
 
 
@@ -965,8 +971,8 @@ _CMSGCUSTOMGAMEINSTALLSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1236,
-  serialized_end=1403,
+  serialized_start=1260,
+  serialized_end=1427,
 )
 
 
@@ -996,8 +1002,8 @@ _CMSGSERVERAVAILABLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1405,
-  serialized_end=1497,
+  serialized_start=1429,
+  serialized_end=1521,
 )
 
 
@@ -1027,8 +1033,8 @@ _CMSGLANSERVERAVAILABLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1499,
-  serialized_end=1541,
+  serialized_start=1523,
+  serialized_end=1565,
 )
 
 
@@ -1107,8 +1113,8 @@ _CSOECONGAMEACCOUNTCLIENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1544,
-  serialized_end=1842,
+  serialized_start=1568,
+  serialized_end=1866,
 )
 
 
@@ -1166,8 +1172,8 @@ _CSOITEMCRITERIACONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1844,
-  serialized_end=1958,
+  serialized_start=1868,
+  serialized_end=1982,
 )
 
 
@@ -1253,8 +1259,8 @@ _CSOITEMCRITERIA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1961,
-  serialized_end=2225,
+  serialized_start=1985,
+  serialized_end=2249,
 )
 
 
@@ -1410,8 +1416,8 @@ _CSOITEMRECIPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2228,
-  serialized_end=2707,
+  serialized_start=2252,
+  serialized_end=2731,
 )
 
 
@@ -1448,8 +1454,8 @@ _CMSGAPPLYSTRANGEPART = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2709,
-  serialized_end=2783,
+  serialized_start=2733,
+  serialized_end=2807,
 )
 
 
@@ -1486,8 +1492,8 @@ _CMSGAPPLYPENNANTUPGRADE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2785,
-  serialized_end=2860,
+  serialized_start=2809,
+  serialized_end=2884,
 )
 
 
@@ -1524,8 +1530,8 @@ _CMSGAPPLYEGGESSENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2862,
-  serialized_end=2929,
+  serialized_start=2886,
+  serialized_end=2953,
 )
 
 
@@ -1569,8 +1575,8 @@ _CSOECONITEMATTRIBUTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2931,
-  serialized_end=3008,
+  serialized_start=2955,
+  serialized_end=3032,
 )
 
 
@@ -1607,8 +1613,8 @@ _CSOECONITEMEQUIPPED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3010,
-  serialized_end=3068,
+  serialized_start=3034,
+  serialized_end=3092,
 )
 
 
@@ -1729,8 +1735,8 @@ _CSOECONITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3071,
-  serialized_end=3432,
+  serialized_start=3095,
+  serialized_end=3456,
 )
 
 
@@ -1760,8 +1766,8 @@ _CMSGSORTITEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3434,
-  serialized_end=3468,
+  serialized_start=3458,
+  serialized_end=3492,
 )
 
 
@@ -1812,8 +1818,8 @@ _CSOECONCLAIMCODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3470,
-  serialized_end=3564,
+  serialized_start=3494,
+  serialized_end=3588,
 )
 
 
@@ -1857,8 +1863,8 @@ _CMSGUPDATEITEMSCHEMA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3566,
-  serialized_end=3661,
+  serialized_start=3590,
+  serialized_end=3685,
 )
 
 
@@ -1888,8 +1894,8 @@ _CMSGGCERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3663,
-  serialized_end=3696,
+  serialized_start=3687,
+  serialized_end=3720,
 )
 
 
@@ -1912,8 +1918,8 @@ _CMSGREQUESTINVENTORYREFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3698,
-  serialized_end=3727,
+  serialized_start=3722,
+  serialized_end=3751,
 )
 
 
@@ -1950,8 +1956,8 @@ _CMSGCONVARVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3729,
-  serialized_end=3775,
+  serialized_start=3753,
+  serialized_end=3799,
 )
 
 
@@ -1981,8 +1987,8 @@ _CMSGREPLICATECONVARS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3777,
-  serialized_end=3839,
+  serialized_start=3801,
+  serialized_end=3863,
 )
 
 
@@ -2047,8 +2053,8 @@ _CMSGITEMACKNOWLEDGED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3842,
-  serialized_end=3971,
+  serialized_start=3866,
+  serialized_end=3995,
 )
 
 
@@ -2085,8 +2091,8 @@ _CMSGSETITEMPOSITIONS_ITEMPOSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4063,
-  serialized_end=4112,
+  serialized_start=4087,
+  serialized_end=4136,
 )
 
 _CMSGSETITEMPOSITIONS = _descriptor.Descriptor(
@@ -2115,8 +2121,8 @@ _CMSGSETITEMPOSITIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3974,
-  serialized_end=4112,
+  serialized_start=3998,
+  serialized_end=4136,
 )
 
 
@@ -2160,8 +2166,8 @@ _CMSGGCNAMEITEMNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4114,
-  serialized_end=4216,
+  serialized_start=4138,
+  serialized_end=4240,
 )
 
 
@@ -2212,8 +2218,8 @@ _CMSGGCCLIENTDISPLAYNOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4219,
-  serialized_end=4401,
+  serialized_start=4243,
+  serialized_end=4425,
 )
 
 
@@ -2243,8 +2249,8 @@ _CMSGGCSHOWITEMSPICKEDUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4403,
-  serialized_end=4452,
+  serialized_start=4427,
+  serialized_end=4476,
 )
 
 
@@ -2295,8 +2301,8 @@ _CMSGGCINCREMENTKILLCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4454,
-  serialized_end=4578,
+  serialized_start=4478,
+  serialized_end=4602,
 )
 
 
@@ -2375,8 +2381,8 @@ _CSOECONITEMDROPRATEBONUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4581,
-  serialized_end=4786,
+  serialized_start=4605,
+  serialized_end=4810,
 )
 
 
@@ -2427,8 +2433,8 @@ _CSOECONITEMLEAGUEVIEWPASS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4788,
-  serialized_end=4907,
+  serialized_start=4812,
+  serialized_end=4931,
 )
 
 
@@ -2472,8 +2478,8 @@ _CSOECONITEMEVENTTICKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4909,
-  serialized_end=4988,
+  serialized_start=4933,
+  serialized_end=5012,
 )
 
 
@@ -2552,8 +2558,8 @@ _CSOECONITEMTOURNAMENTPASSPORT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4991,
-  serialized_end=5193,
+  serialized_start=5015,
+  serialized_end=5217,
 )
 
 
@@ -2583,8 +2589,8 @@ _CMSGGCSTOREPURCHASECANCEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5195,
-  serialized_end=5238,
+  serialized_start=5219,
+  serialized_end=5262,
 )
 
 
@@ -2614,8 +2620,8 @@ _CMSGGCSTOREPURCHASECANCELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5240,
-  serialized_end=5291,
+  serialized_start=5264,
+  serialized_end=5315,
 )
 
 
@@ -2645,8 +2651,8 @@ _CMSGGCSTOREPURCHASEFINALIZE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5293,
-  serialized_end=5338,
+  serialized_start=5317,
+  serialized_end=5362,
 )
 
 
@@ -2683,8 +2689,8 @@ _CMSGGCSTOREPURCHASEFINALIZERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5340,
-  serialized_end=5411,
+  serialized_start=5364,
+  serialized_end=5435,
 )
 
 
@@ -2714,8 +2720,8 @@ _CMSGGCTOGCBANNEDWORDLISTUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5413,
-  serialized_end=5464,
+  serialized_start=5437,
+  serialized_end=5488,
 )
 
 
@@ -2752,8 +2758,8 @@ _CMSGGCTOGCDIRTYSDOCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5466,
-  serialized_end=5529,
+  serialized_start=5490,
+  serialized_end=5553,
 )
 
 
@@ -2790,8 +2796,8 @@ _CMSGGCTOGCDIRTYMULTIPLESDOCACHE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5531,
-  serialized_end=5602,
+  serialized_start=5555,
+  serialized_end=5626,
 )
 
 
@@ -2828,8 +2834,8 @@ _CMSGGCTOGCAPPLYLOCALIZATIONDIFF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5604,
-  serialized_end=5676,
+  serialized_start=5628,
+  serialized_end=5700,
 )
 
 
@@ -2859,8 +2865,8 @@ _CMSGGCTOGCAPPLYLOCALIZATIONDIFFRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5678,
-  serialized_end=5736,
+  serialized_start=5702,
+  serialized_end=5760,
 )
 
 
@@ -2897,8 +2903,8 @@ _CMSGGCCOLLECTITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5738,
-  serialized_end=5810,
+  serialized_start=5762,
+  serialized_end=5834,
 )
 
 
@@ -2921,8 +2927,8 @@ _CMSGSDONOMEMCACHED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5812,
-  serialized_end=5832,
+  serialized_start=5836,
+  serialized_end=5856,
 )
 
 
@@ -2952,8 +2958,8 @@ _CMSGGCTOGCUPDATESQLKEYVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5834,
-  serialized_end=5881,
+  serialized_start=5858,
+  serialized_end=5905,
 )
 
 
@@ -2983,8 +2989,8 @@ _CMSGGCSERVERVERSIONUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5883,
-  serialized_end=5935,
+  serialized_start=5907,
+  serialized_end=5959,
 )
 
 
@@ -3014,8 +3020,8 @@ _CMSGGCCLIENTVERSIONUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5937,
-  serialized_end=5989,
+  serialized_start=5961,
+  serialized_end=6013,
 )
 
 
@@ -3038,8 +3044,8 @@ _CMSGGCTOGCWEBAPIACCOUNTCHANGED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5991,
-  serialized_end=6023,
+  serialized_start=6015,
+  serialized_end=6047,
 )
 
 
@@ -3076,8 +3082,8 @@ _CMSGRECIPECOMPONENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6025,
-  serialized_end=6096,
+  serialized_start=6049,
+  serialized_end=6120,
 )
 
 
@@ -3114,8 +3120,8 @@ _CMSGFULFILLDYNAMICRECIPECOMPONENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6098,
-  serialized_end=6214,
+  serialized_start=6122,
+  serialized_end=6238,
 )
 
 
@@ -3145,8 +3151,8 @@ _CMSGGCCLIENTMARKETDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6216,
-  serialized_end=6270,
+  serialized_start=6240,
+  serialized_end=6294,
 )
 
 
@@ -3197,8 +3203,8 @@ _CMSGGCCLIENTMARKETDATAENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6273,
-  serialized_end=6409,
+  serialized_start=6297,
+  serialized_end=6433,
 )
 
 
@@ -3228,8 +3234,8 @@ _CMSGGCCLIENTMARKETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6411,
-  serialized_end=6487,
+  serialized_start=6435,
+  serialized_end=6511,
 )
 
 
@@ -3273,8 +3279,8 @@ _CMSGEXTRACTGEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6489,
-  serialized_end=6581,
+  serialized_start=6513,
+  serialized_end=6605,
 )
 
 
@@ -3312,8 +3318,8 @@ _CMSGEXTRACTGEMSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6584,
-  serialized_end=6929,
+  serialized_start=6608,
+  serialized_end=6953,
 )
 
 
@@ -3357,8 +3363,8 @@ _CMSGADDSOCKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6931,
-  serialized_end=7007,
+  serialized_start=6955,
+  serialized_end=7031,
 )
 
 
@@ -3403,8 +3409,8 @@ _CMSGADDSOCKETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7010,
-  serialized_end=7328,
+  serialized_start=7034,
+  serialized_end=7352,
 )
 
 
@@ -3441,8 +3447,8 @@ _CMSGADDITEMTOSOCKETDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7330,
-  serialized_end=7398,
+  serialized_start=7354,
+  serialized_end=7422,
 )
 
 
@@ -3479,8 +3485,8 @@ _CMSGADDITEMTOSOCKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7400,
-  serialized_end=7498,
+  serialized_start=7424,
+  serialized_end=7522,
 )
 
 
@@ -3525,8 +3531,8 @@ _CMSGADDITEMTOSOCKETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7501,
-  serialized_end=7985,
+  serialized_start=7525,
+  serialized_end=8009,
 )
 
 
@@ -3563,8 +3569,8 @@ _CMSGRESETSTRANGEGEMCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7987,
-  serialized_end=8057,
+  serialized_start=8011,
+  serialized_end=8081,
 )
 
 
@@ -3595,8 +3601,8 @@ _CMSGRESETSTRANGEGEMCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8060,
-  serialized_end=8383,
+  serialized_start=8084,
+  serialized_end=8407,
 )
 
 
@@ -3640,8 +3646,8 @@ _CMSGGCTOCLIENTPOLLFILEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8385,
-  serialized_end=8476,
+  serialized_start=8409,
+  serialized_end=8500,
 )
 
 
@@ -3678,8 +3684,8 @@ _CMSGGCTOCLIENTPOLLFILERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8478,
-  serialized_end=8546,
+  serialized_start=8502,
+  serialized_end=8570,
 )
 
 
@@ -3716,8 +3722,8 @@ _CMSGGCTOGCPERFORMMANUALOP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8548,
-  serialized_end=8610,
+  serialized_start=8572,
+  serialized_end=8634,
 )
 
 
@@ -3754,8 +3760,8 @@ _CMSGGCTOGCPERFORMMANUALOPCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8612,
-  serialized_end=8684,
+  serialized_start=8636,
+  serialized_end=8708,
 )
 
 
@@ -3778,8 +3784,39 @@ _CMSGGCTOGCRELOADSERVERREGIONSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8686,
-  serialized_end=8724,
+  serialized_start=8710,
+  serialized_end=8748,
+)
+
+
+_CMSGGCADDITIONALWELCOMEMSGLIST = _descriptor.Descriptor(
+  name='CMsgGCAdditionalWelcomeMsgList',
+  full_name='dota.CMsgGCAdditionalWelcomeMsgList',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='welcome_messages', full_name='dota.CMsgGCAdditionalWelcomeMsgList.welcome_messages', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8750,
+  serialized_end=8830,
 )
 
 _CMSGGCSTOREPURCHASEINIT.fields_by_name['line_items'].message_type = _CGCSTOREPURCHASEINIT_LINEITEM
@@ -3807,6 +3844,7 @@ _CMSGADDITEMTOSOCKETRESPONSE.fields_by_name['response'].enum_type = _CMSGADDITEM
 _CMSGADDITEMTOSOCKETRESPONSE_EADDGEM.containing_type = _CMSGADDITEMTOSOCKETRESPONSE
 _CMSGRESETSTRANGEGEMCOUNTRESPONSE.fields_by_name['response'].enum_type = _CMSGRESETSTRANGEGEMCOUNTRESPONSE_ERESETGEM
 _CMSGRESETSTRANGEGEMCOUNTRESPONSE_ERESETGEM.containing_type = _CMSGRESETSTRANGEGEMCOUNTRESPONSE
+_CMSGGCADDITIONALWELCOMEMSGLIST.fields_by_name['welcome_messages'].message_type = gcsdk__gcmessages__pb2._CEXTRAMSGBLOCK
 DESCRIPTOR.message_types_by_name['CGCStorePurchaseInit_LineItem'] = _CGCSTOREPURCHASEINIT_LINEITEM
 DESCRIPTOR.message_types_by_name['CMsgGCStorePurchaseInit'] = _CMSGGCSTOREPURCHASEINIT
 DESCRIPTOR.message_types_by_name['CMsgGCStorePurchaseInitResponse'] = _CMSGGCSTOREPURCHASEINITRESPONSE
@@ -3883,6 +3921,7 @@ DESCRIPTOR.message_types_by_name['CMsgGCToClientPollFileResponse'] = _CMSGGCTOCL
 DESCRIPTOR.message_types_by_name['CMsgGCToGCPerformManualOp'] = _CMSGGCTOGCPERFORMMANUALOP
 DESCRIPTOR.message_types_by_name['CMsgGCToGCPerformManualOpCompleted'] = _CMSGGCTOGCPERFORMMANUALOPCOMPLETED
 DESCRIPTOR.message_types_by_name['CMsgGCToGCReloadServerRegionSettings'] = _CMSGGCTOGCRELOADSERVERREGIONSETTINGS
+DESCRIPTOR.message_types_by_name['CMsgGCAdditionalWelcomeMsgList'] = _CMSGGCADDITIONALWELCOMEMSGLIST
 DESCRIPTOR.enum_types_by_name['EGCBaseMsg'] = _EGCBASEMSG
 DESCRIPTOR.enum_types_by_name['EGCBaseProtoObjectTypes'] = _EGCBASEPROTOOBJECTTYPES
 DESCRIPTOR.enum_types_by_name['ECustomGameInstallStatus'] = _ECUSTOMGAMEINSTALLSTATUS
@@ -4427,6 +4466,13 @@ CMsgGCToGCReloadServerRegionSettings = _reflection.GeneratedProtocolMessageType(
   # @@protoc_insertion_point(class_scope:dota.CMsgGCToGCReloadServerRegionSettings)
   ))
 _sym_db.RegisterMessage(CMsgGCToGCReloadServerRegionSettings)
+
+CMsgGCAdditionalWelcomeMsgList = _reflection.GeneratedProtocolMessageType('CMsgGCAdditionalWelcomeMsgList', (_message.Message,), dict(
+  DESCRIPTOR = _CMSGGCADDITIONALWELCOMEMSGLIST,
+  __module__ = 'base_gcmessages_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCAdditionalWelcomeMsgList)
+  ))
+_sym_db.RegisterMessage(CMsgGCAdditionalWelcomeMsgList)
 
 
 DESCRIPTOR._options = None

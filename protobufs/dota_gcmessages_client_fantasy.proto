@@ -131,7 +131,6 @@ message CMsgDOTAPlayerInfo {
 	optional bool is_locked = 9;
 	optional bool is_pro = 10;
 	optional string real_name = 11;
-	optional uint32 birthdate = 12;
 	optional uint32 total_earnings = 13;
 	repeated dota.CMsgDOTAPlayerInfo.Results results = 14;
 	optional string team_url_logo = 15;
@@ -931,4 +930,43 @@ message CMsgDOTAFantasyDPCLeagueStatus {
 	}
 
 	repeated dota.CMsgDOTAFantasyDPCLeagueStatus.LeagueInfo league_infos = 1;
+}
+
+message CMsgDOTADPCSearchResults {
+	message Player {
+		optional uint32 id = 1;
+		optional string name = 2;
+		optional string real_name = 3;
+	}
+
+	message Team {
+		optional uint32 id = 1;
+		optional string name = 2;
+		optional string url = 3;
+	}
+
+	message League {
+		optional uint32 id = 1;
+		optional string name = 2;
+	}
+
+	enum ESearchResultsDesired {
+		k_ESearchResultsDesired_Players = 1;
+		k_ESearchResultsDesired_Teams = 2;
+		k_ESearchResultsDesired_Leagues = 4;
+		k_ESearchResultsDesired_All = 7;
+	}
+
+	repeated dota.CMsgDOTADPCSearchResults.Player players = 1;
+	repeated dota.CMsgDOTADPCSearchResults.Team teams = 2;
+	repeated dota.CMsgDOTADPCSearchResults.League leagues = 3;
+}
+
+message CMsgDOTADPCTeamFavoriteRankings {
+	message Team {
+		optional uint32 team_id = 1;
+		optional uint32 favorites = 2;
+	}
+
+	repeated dota.CMsgDOTADPCTeamFavoriteRankings.Team teams = 1;
 }

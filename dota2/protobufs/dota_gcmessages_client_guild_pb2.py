@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dota',
   syntax='proto2',
   serialized_options=_b('H\001\220\001\000'),
-  serialized_pb=_b('\n\"dota_gcmessages_client_guild.proto\x12\x04\x64ota\"\xcb\x03\n\rCMsgGuildInfo\x12\x12\n\nguild_name\x18\x01 \x01(\t\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x19\n\x11\x63reated_timestamp\x18\x03 \x01(\r\x12\x16\n\x0eguild_language\x18\x04 \x01(\r\x12\x13\n\x0bguild_flags\x18\x05 \x01(\r\x12\x12\n\nguild_logo\x18\x07 \x01(\x04\x12\x14\n\x0cguild_region\x18\x08 \x01(\r\x12\x1b\n\x13guild_chat_group_id\x18\t \x01(\x04\x12\x19\n\x11guild_description\x18\n \x01(\t\x12\x1f\n\x17\x64\x65\x66\x61ult_chat_channel_id\x18\x0b \x01(\x04\x12\x1b\n\x13guild_primary_color\x18\x0c \x01(\r\x12\x1d\n\x15guild_secondary_color\x18\r \x01(\r\x12\x15\n\rguild_pattern\x18\x0e \x01(\r\x12!\n\x19guild_refresh_time_offset\x18\x0f \x01(\r\x12 \n\x18guild_required_rank_tier\x18\x10 \x01(\r\x12\x1c\n\x14guild_motd_timestamp\x18\x11 \x01(\r\x12\x12\n\nguild_motd\x18\x12 \x01(\t\"\xb5\x02\n\x10\x43MsgGuildSummary\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12\x14\n\x0cmember_count\x18\x02 \x01(\r\x12\x38\n\x0c\x65vent_points\x18\x03 \x03(\x0b\x32\".dota.CMsgGuildSummary.EventPoints\x1a\xa7\x01\n\x0b\x45ventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x14\n\x0cguild_points\x18\x02 \x01(\r\x12\x12\n\nguild_rank\x18\x03 \x01(\r\x12\x19\n\x11guild_weekly_rank\x18\x04 \x01(\r\x12\x1f\n\x17guild_weekly_percentile\x18\x05 \x01(\r\x12 \n\x18guild_current_percentile\x18\x06 \x01(\r\"[\n\rCMsgGuildRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\x12\x12\n\nrole_order\x18\x04 \x01(\r\"\x8b\x01\n\x0f\x43MsgGuildMember\x12\x19\n\x11member_account_id\x18\x01 \x01(\r\x12\x16\n\x0emember_role_id\x18\x02 \x01(\r\x12\x1f\n\x17member_joined_timestamp\x18\x03 \x01(\r\x12$\n\x1cmember_last_active_timestamp\x18\x04 \x01(\r\"b\n\x0f\x43MsgGuildInvite\x12\x1c\n\x14requester_account_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"\xd0\x01\n\rCMsgGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12(\n\x0bguild_roles\x18\x03 \x03(\x0b\x32\x13.dota.CMsgGuildRole\x12,\n\rguild_members\x18\x04 \x03(\x0b\x32\x15.dota.CMsgGuildMember\x12,\n\rguild_invites\x18\x05 \x03(\x0b\x32\x15.dota.CMsgGuildInvite\"`\n\x16\x43MsgAccountGuildInvite\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1c\n\x14requester_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"e\n\x1b\x43MsgAccountGuildMemberships\x12\x11\n\tguild_ids\x18\x01 \x03(\r\x12\x33\n\rguild_invites\x18\x02 \x03(\x0b\x32\x1c.dota.CMsgAccountGuildInvite\"P\n\x14\x43MsgGuildPersonaInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x13\n\x0bguild_flags\x18\x03 \x01(\r\"W\n\x1c\x43MsgAccountGuildsPersonaInfo\x12\x37\n\x13guild_persona_infos\x18\x01 \x03(\x0b\x32\x1a.dota.CMsgGuildPersonaInfo\"\x94\x01\n\x12\x43MsgGuildFeedEvent\x12\x15\n\rfeed_event_id\x18\x01 \x01(\x04\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x12\n\nevent_type\x18\x03 \x01(\r\x12\x14\n\x0cparam_uint_1\x18\x04 \x01(\r\x12\x14\n\x0cparam_uint_2\x18\x05 \x01(\r\x12\x14\n\x0cparam_uint_3\x18\x06 \x01(\r\"\x91\x01\n\x19\x43MsgClientToGCCreateGuild\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x02 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xd9\x03\n!CMsgClientToGCCreateGuildResponse\x12S\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgClientToGCCreateGuildResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\"\xcc\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x12\n\x0ek_eInvalidName\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x11\n\rk_eInvalidTag\x10\x07\x12\x15\n\x11k_eTagAlreadyUsed\x10\x08\x12\x19\n\x15k_eInvalidDescription\x10\t\x12\x14\n\x10k_eInvalidRegion\x10\n\x12\x12\n\x0ek_eInvalidLogo\x10\x0b\x12\x16\n\x12k_eDoesNotOwnEvent\x10\x0c\x12\x11\n\rk_eGuildLimit\x10\r\x12\x12\n\x0ek_eInvalidMotD\x10\x0e\x12\x0e\n\nk_eBlocked\x10\x0f\"\xa4\x01\n\x1a\x43MsgClientToGCSetGuildInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x03 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xc0\x03\n\"CMsgClientToGCSetGuildInfoResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCSetGuildInfoResponse.EResponse:\x10k_eInternalError\"\xc3\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x13\n\x0fk_eNoPermission\x10\x07\x12\x12\n\x0ek_eMotDTooLong\x10\x08\x12\x1e\n\x1ak_eNameChangeNoPermissions\x10\t\x12\x1d\n\x19k_eTagChangeNoPermissions\x10\n\x12\x12\n\x0ek_eNameInvalid\x10\x0b\x12\x11\n\rk_eTagInvalid\x10\x0c\x12\x19\n\x15k_eDescriptionInvalid\x10\r\x12\x0e\n\nk_eBlocked\x10\x0e\"2\n\x1e\x43MsgClientToGCRequestGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb7\x02\n&CMsgClientToGCRequestGuildDataResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildDataResponse.EResponse:\x10k_eInternalError\x12\'\n\nguild_data\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildData\"\x89\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\"_\n\x1e\x43MsgGCToClientGuildDataUpdated\x12\'\n\nguild_data\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildData\x12\x14\n\x0cupdate_flags\x18\x02 \x01(\r\"f\n%CMsgGCToClientGuildMembersDataUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12+\n\x0cmembers_data\x18\x02 \x03(\x0b\x32\x15.dota.CMsgGuildMember\"&\n$CMsgClientToGCRequestGuildMembership\"\xb0\x02\n,CMsgClientToGCRequestGuildMembershipResponse\x12^\n\x06result\x18\x01 \x01(\x0e\x32<.dota.CMsgClientToGCRequestGuildMembershipResponse.EResponse:\x10k_eInternalError\x12<\n\x11guild_memberships\x18\x02 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"d\n$CMsgGCToClientGuildMembershipUpdated\x12<\n\x11guild_memberships\x18\x01 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"5\n!CMsgClientToGCRequestGuildSummary\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb0\x02\n)CMsgClientToGCRequestGuildSummaryResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCRequestGuildSummaryResponse.EResponse:\x10k_eInternalError\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"w\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\"+\n\x17\x43MsgClientToGCJoinGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xdd\x02\n\x1f\x43MsgClientToGCJoinGuildResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgClientToGCJoinGuildResponse.EResponse:\x10k_eInternalError\"\xe6\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x14\n\x10k_eAlreadyMember\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x1a\n\x16k_eGuildRequiresInvite\x10\t\x12\x16\n\x12k_eGuildRankTooLow\x10\n\",\n\x18\x43MsgClientToGCLeaveGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x94\x02\n CMsgClientToGCLeaveGuildResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgClientToGCLeaveGuildResponse.EResponse:\x10k_eInternalError\"\x9b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x10\n\x0ck_eLastAdmin\x10\x07\"L\n\x1d\x43MsgClientToGCKickGuildMember\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xd7\x02\n%CMsgClientToGCKickGuildMemberResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCKickGuildMemberResponse.EResponse:\x10k_eInternalError\"\xd4\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x13\n\x0fk_eCantKickSelf\x10\t\"g\n CMsgClientToGCSetGuildMemberRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_role_id\x18\x03 \x01(\r\"\xf3\x02\n(CMsgClientToGCSetGuildMemberRoleResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCSetGuildMemberRoleResponse.EResponse:\x10k_eInternalError\"\xea\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x12\n\x0ek_eInvalidRole\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\"J\n\x1b\x43MsgClientToGCInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\x84\x03\n#CMsgClientToGCInviteToGuildResponse\x12U\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgClientToGCInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x85\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x19\n\x15k_eRequesterNotMember\x10\x07\x12\x15\n\x11k_eAlreadyAMember\x10\x08\x12\x15\n\x11k_eAlreadyInvited\x10\t\x12\x1a\n\x16k_eNoInvitePermissions\x10\n\x12\x15\n\x11k_eTooManyInvites\x10\x0b\"6\n\"CMsgClientToGCDeclineInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x9a\x02\n*CMsgClientToGCDeclineInviteToGuildResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCDeclineInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\"5\n!CMsgClientToGCAcceptInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xeb\x02\n)CMsgClientToGCAcceptInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCAcceptInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xe0\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x10\n\x0ck_eGuildFull\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x15\n\x11k_eInvalidInviter\x10\t\x12\x15\n\x11k_eAlreadyInGuild\x10\n\"P\n!CMsgClientToGCCancelInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xae\x02\n)CMsgClientToGCCancelInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCCancelInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xa3\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\"U\n\x1a\x43MsgClientToGCAddGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\"\x98\x03\n\"CMsgClientToGCAddGuildRoleResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCAddGuildRoleResponse.EResponse:\x10k_eInternalError\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\x8a\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\x12\x13\n\x0fk_eTooManyRoles\x10\x0b\x12\x0e\n\nk_eBlocked\x10\x0c\"i\n\x1d\x43MsgClientToGCModifyGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x12\n\nrole_flags\x18\x04 \x01(\r\"\x8c\x03\n%CMsgClientToGCModifyGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCModifyGuildRoleResponse.EResponse:\x10k_eInternalError\"\x89\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x16\n\x12k_eNameAlreadyUsed\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x14\n\x10k_eNoPermissions\x10\n\x12\x15\n\x11k_eAdminViolation\x10\x0b\x12\x0e\n\nk_eBlocked\x10\x0c\"B\n\x1d\x43MsgClientToGCRemoveGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\xee\x02\n%CMsgClientToGCRemoveGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCRemoveGuildRoleResponse.EResponse:\x10k_eInternalError\"\xeb\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eRoleNotEmpty\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\x12\x1c\n\x18k_eCantRemoveDefaultRole\x10\n\"j\n\x1f\x43MsgClientToGCSetGuildRoleOrder\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1a\n\x12requested_role_ids\x18\x02 \x03(\r\x12\x19\n\x11previous_role_ids\x18\x03 \x03(\r\"\xf0\x02\n\'CMsgClientToGCSetGuildRoleOrderResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgClientToGCSetGuildRoleOrderResponse.EResponse:\x10k_eInternalError\x12\x1a\n\x12\x63onfirmed_role_ids\x18\x02 \x03(\r\"\xcd\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eInvalidOrder\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\"H\n\x1e\x43MsgClientToGCGuildFeedRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x14\n\x0clast_seen_id\x18\x02 \x01(\x04\"\xd3\x02\n&CMsgClientToGCRequestGuildFeedResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildFeedResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\x0b\x66\x65\x65\x64_events\x18\x03 \x03(\x0b\x32\x18.dota.CMsgGuildFeedEvent\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoPermissions\x10\x06\"2\n\x1e\x43MsgGCToClientGuildFeedUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"6\n\"CMsgClientToGCAddPlayerToGuildChat\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb2\x02\n*CMsgClientToGCAddPlayerToGuildChatResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCAddPlayerToGuildChatResponse.EResponse:\x10k_eInternalError\"\xa5\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x1a\n\x16k_eSteamChatNotEnabled\x10\x07\"\xb9\x02\n\x1a\x43MsgFindGuildByTagResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32*.dota.CMsgFindGuildByTagResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\rguild_summary\x18\x03 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"\x8b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x11\n\rk_eInvalidTag\x10\x05\x12\x14\n\x10k_eGuildNotFound\x10\x06\"\x8c\x03\n\x1f\x43MsgSearchForOpenGuildsResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgSearchForOpenGuildsResponse.EResponse:\x10k_eInternalError\x12J\n\x0esearch_results\x18\x02 \x03(\x0b\x32\x32.dota.CMsgSearchForOpenGuildsResponse.SearchResult\x12\x15\n\ruse_whitelist\x18\x03 \x01(\x08\x1aO\n\x0cSearchResult\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"\xcf\x01\n CMsgClientToGCReportGuildContent\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1b\n\x13guild_content_flags\x18\x02 \x01(\r\"|\n\rEContentFlags\x12\x0b\n\x07k_eNone\x10\x00\x12\x18\n\x14k_eInappropriateName\x10\x01\x12\x17\n\x13k_eInappropriateTag\x10\x02\x12\x18\n\x14k_eInappropriateLogo\x10\x04\x12\x11\n\rk_eValidFlags\x10\x07\"\x96\x02\n(CMsgClientToGCReportGuildContentResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCReportGuildContentResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x14\n\x10k_eGuildNotFound\x10\x05\x12\x13\n\x0fk_eFlagsInvalid\x10\x06\"B\n,CMsgClientToGCRequestAccountGuildPersonaInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd3\x02\n4CMsgClientToGCRequestAccountGuildPersonaInfoResponse\x12\x66\n\x06result\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.EResponse:\x10k_eInternalError\x12\x38\n\x0cpersona_info\x18\x02 \x01(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidAccount\x10\x05\"H\n1CMsgClientToGCRequestAccountGuildPersonaInfoBatch\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\xde\x02\n9CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse\x12k\n\x06result\x18\x01 \x01(\x0e\x32I.dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.EResponse:\x10k_eInternalError\x12\x39\n\rpersona_infos\x18\x02 \x03(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidRequest\x10\x05*\xbe\x08\n\x11\x45GuildAuditAction\x12\x1f\n\x1bk_EGuildAuditAction_Invalid\x10\x00\x12$\n k_EGuildAuditAction_GuildCreated\x10\x01\x12,\n(k_EGuildAuditAction_GuildLanguageChanged\x10\x02\x12)\n%k_EGuildAuditAction_GuildFlagsChanged\x10\x03\x12)\n%k_EGuildAuditAction_GuildMemberJoined\x10\x05\x12\'\n#k_EGuildAuditAction_GuildMemberLeft\x10\x06\x12)\n%k_EGuildAuditAction_GuildMemberKicked\x10\x07\x12.\n*k_EGuildAuditAction_GuildMemberRoleChanged\x10\x08\x12(\n$k_EGuildAuditAction_GuildLogoChanged\x10\t\x12*\n&k_EGuildAuditAction_GuildRegionChanged\x10\n\x12/\n+k_EGuildAuditAction_GuildDescriptionChanged\x10\x0b\x12\x30\n,k_EGuildAuditAction_GuildPrimaryColorChanged\x10\x0c\x12\x32\n.k_EGuildAuditAction_GuildSecondaryColorChanged\x10\r\x12+\n\'k_EGuildAuditAction_GuildPatternChanged\x10\x0e\x12(\n$k_EGuildAuditAction_AdminClearedLogo\x10\x0f\x12\x30\n,k_EGuildAuditAction_GuildRequiredRankChanged\x10\x10\x12(\n$k_EGuildAuditAction_GuildMotDChanged\x10\x12\x12&\n\"k_EGuildAuditAction_AdminResetName\x10\x13\x12%\n!k_EGuildAuditAction_AdminResetTag\x10\x14\x12!\n\x1dk_EGuildAuditAction_AdminLock\x10\x15\x12(\n$k_EGuildAuditAction_GuildNameChanged\x10\x16\x12\'\n#k_EGuildAuditAction_GuildTagChanged\x10\x17\x12&\n\"k_EGuildAuditAction_AdminPermitted\x10\x18\x12$\n k_EGuildAuditAction_AdminBlocked\x10\x19\x12\'\n#k_EGuildAuditAction_AdminBannedUser\x10\x1a*p\n\x0e\x45GuildChatType\x12 \n\x1ck_EGuildChatType_Unspecified\x10\x00\x12#\n\x1fk_EGuildChatType_SteamChatGroup\x10\x01\x12\x17\n\x13k_EGuildChatType_GC\x10\x02\x42\x05H\x01\x90\x01\x00')
+  serialized_pb=_b('\n\"dota_gcmessages_client_guild.proto\x12\x04\x64ota\"\xcb\x03\n\rCMsgGuildInfo\x12\x12\n\nguild_name\x18\x01 \x01(\t\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x19\n\x11\x63reated_timestamp\x18\x03 \x01(\r\x12\x16\n\x0eguild_language\x18\x04 \x01(\r\x12\x13\n\x0bguild_flags\x18\x05 \x01(\r\x12\x12\n\nguild_logo\x18\x07 \x01(\x04\x12\x14\n\x0cguild_region\x18\x08 \x01(\r\x12\x1b\n\x13guild_chat_group_id\x18\t \x01(\x04\x12\x19\n\x11guild_description\x18\n \x01(\t\x12\x1f\n\x17\x64\x65\x66\x61ult_chat_channel_id\x18\x0b \x01(\x04\x12\x1b\n\x13guild_primary_color\x18\x0c \x01(\r\x12\x1d\n\x15guild_secondary_color\x18\r \x01(\r\x12\x15\n\rguild_pattern\x18\x0e \x01(\r\x12!\n\x19guild_refresh_time_offset\x18\x0f \x01(\r\x12 \n\x18guild_required_rank_tier\x18\x10 \x01(\r\x12\x1c\n\x14guild_motd_timestamp\x18\x11 \x01(\r\x12\x12\n\nguild_motd\x18\x12 \x01(\t\"\xb5\x02\n\x10\x43MsgGuildSummary\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12\x14\n\x0cmember_count\x18\x02 \x01(\r\x12\x38\n\x0c\x65vent_points\x18\x03 \x03(\x0b\x32\".dota.CMsgGuildSummary.EventPoints\x1a\xa7\x01\n\x0b\x45ventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x14\n\x0cguild_points\x18\x02 \x01(\r\x12\x12\n\nguild_rank\x18\x03 \x01(\r\x12\x19\n\x11guild_weekly_rank\x18\x04 \x01(\r\x12\x1f\n\x17guild_weekly_percentile\x18\x05 \x01(\r\x12 \n\x18guild_current_percentile\x18\x06 \x01(\r\"[\n\rCMsgGuildRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\x12\x12\n\nrole_order\x18\x04 \x01(\r\"\x8b\x01\n\x0f\x43MsgGuildMember\x12\x19\n\x11member_account_id\x18\x01 \x01(\r\x12\x16\n\x0emember_role_id\x18\x02 \x01(\r\x12\x1f\n\x17member_joined_timestamp\x18\x03 \x01(\r\x12$\n\x1cmember_last_active_timestamp\x18\x04 \x01(\r\"b\n\x0f\x43MsgGuildInvite\x12\x1c\n\x14requester_account_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"\xd0\x01\n\rCMsgGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12(\n\x0bguild_roles\x18\x03 \x03(\x0b\x32\x13.dota.CMsgGuildRole\x12,\n\rguild_members\x18\x04 \x03(\x0b\x32\x15.dota.CMsgGuildMember\x12,\n\rguild_invites\x18\x05 \x03(\x0b\x32\x15.dota.CMsgGuildInvite\"`\n\x16\x43MsgAccountGuildInvite\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1c\n\x14requester_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"e\n\x1b\x43MsgAccountGuildMemberships\x12\x11\n\tguild_ids\x18\x01 \x03(\r\x12\x33\n\rguild_invites\x18\x02 \x03(\x0b\x32\x1c.dota.CMsgAccountGuildInvite\"P\n\x14\x43MsgGuildPersonaInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x13\n\x0bguild_flags\x18\x03 \x01(\r\"W\n\x1c\x43MsgAccountGuildsPersonaInfo\x12\x37\n\x13guild_persona_infos\x18\x01 \x03(\x0b\x32\x1a.dota.CMsgGuildPersonaInfo\"\x94\x01\n\x12\x43MsgGuildFeedEvent\x12\x15\n\rfeed_event_id\x18\x01 \x01(\x04\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x12\n\nevent_type\x18\x03 \x01(\r\x12\x14\n\x0cparam_uint_1\x18\x04 \x01(\r\x12\x14\n\x0cparam_uint_2\x18\x05 \x01(\r\x12\x14\n\x0cparam_uint_3\x18\x06 \x01(\r\"\x91\x01\n\x19\x43MsgClientToGCCreateGuild\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x02 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xd9\x03\n!CMsgClientToGCCreateGuildResponse\x12S\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgClientToGCCreateGuildResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\"\xcc\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x12\n\x0ek_eInvalidName\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x11\n\rk_eInvalidTag\x10\x07\x12\x15\n\x11k_eTagAlreadyUsed\x10\x08\x12\x19\n\x15k_eInvalidDescription\x10\t\x12\x14\n\x10k_eInvalidRegion\x10\n\x12\x12\n\x0ek_eInvalidLogo\x10\x0b\x12\x16\n\x12k_eDoesNotOwnEvent\x10\x0c\x12\x11\n\rk_eGuildLimit\x10\r\x12\x12\n\x0ek_eInvalidMotD\x10\x0e\x12\x0e\n\nk_eBlocked\x10\x0f\"\xa4\x01\n\x1a\x43MsgClientToGCSetGuildInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x03 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xc0\x03\n\"CMsgClientToGCSetGuildInfoResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCSetGuildInfoResponse.EResponse:\x10k_eInternalError\"\xc3\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x13\n\x0fk_eNoPermission\x10\x07\x12\x12\n\x0ek_eMotDTooLong\x10\x08\x12\x1e\n\x1ak_eNameChangeNoPermissions\x10\t\x12\x1d\n\x19k_eTagChangeNoPermissions\x10\n\x12\x12\n\x0ek_eNameInvalid\x10\x0b\x12\x11\n\rk_eTagInvalid\x10\x0c\x12\x19\n\x15k_eDescriptionInvalid\x10\r\x12\x0e\n\nk_eBlocked\x10\x0e\"2\n\x1e\x43MsgClientToGCRequestGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb7\x02\n&CMsgClientToGCRequestGuildDataResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildDataResponse.EResponse:\x10k_eInternalError\x12\'\n\nguild_data\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildData\"\x89\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\"_\n\x1e\x43MsgGCToClientGuildDataUpdated\x12\'\n\nguild_data\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildData\x12\x14\n\x0cupdate_flags\x18\x02 \x01(\r\"f\n%CMsgGCToClientGuildMembersDataUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12+\n\x0cmembers_data\x18\x02 \x03(\x0b\x32\x15.dota.CMsgGuildMember\"&\n$CMsgClientToGCRequestGuildMembership\"\xb0\x02\n,CMsgClientToGCRequestGuildMembershipResponse\x12^\n\x06result\x18\x01 \x01(\x0e\x32<.dota.CMsgClientToGCRequestGuildMembershipResponse.EResponse:\x10k_eInternalError\x12<\n\x11guild_memberships\x18\x02 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"d\n$CMsgGCToClientGuildMembershipUpdated\x12<\n\x11guild_memberships\x18\x01 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"5\n!CMsgClientToGCRequestGuildSummary\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb0\x02\n)CMsgClientToGCRequestGuildSummaryResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCRequestGuildSummaryResponse.EResponse:\x10k_eInternalError\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"w\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\"+\n\x17\x43MsgClientToGCJoinGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xdd\x02\n\x1f\x43MsgClientToGCJoinGuildResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgClientToGCJoinGuildResponse.EResponse:\x10k_eInternalError\"\xe6\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x14\n\x10k_eAlreadyMember\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x1a\n\x16k_eGuildRequiresInvite\x10\t\x12\x16\n\x12k_eGuildRankTooLow\x10\n\",\n\x18\x43MsgClientToGCLeaveGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x94\x02\n CMsgClientToGCLeaveGuildResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgClientToGCLeaveGuildResponse.EResponse:\x10k_eInternalError\"\x9b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x10\n\x0ck_eLastAdmin\x10\x07\"L\n\x1d\x43MsgClientToGCKickGuildMember\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xd7\x02\n%CMsgClientToGCKickGuildMemberResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCKickGuildMemberResponse.EResponse:\x10k_eInternalError\"\xd4\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x13\n\x0fk_eCantKickSelf\x10\t\"g\n CMsgClientToGCSetGuildMemberRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_role_id\x18\x03 \x01(\r\"\xf3\x02\n(CMsgClientToGCSetGuildMemberRoleResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCSetGuildMemberRoleResponse.EResponse:\x10k_eInternalError\"\xea\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x12\n\x0ek_eInvalidRole\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\"J\n\x1b\x43MsgClientToGCInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\x98\x03\n#CMsgClientToGCInviteToGuildResponse\x12U\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgClientToGCInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x99\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x19\n\x15k_eRequesterNotMember\x10\x07\x12\x15\n\x11k_eAlreadyAMember\x10\x08\x12\x15\n\x11k_eAlreadyInvited\x10\t\x12\x1a\n\x16k_eNoInvitePermissions\x10\n\x12\x15\n\x11k_eTooManyInvites\x10\x0b\x12\x12\n\x0ek_eInvalidUser\x10\x0c\"6\n\"CMsgClientToGCDeclineInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x9a\x02\n*CMsgClientToGCDeclineInviteToGuildResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCDeclineInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\"5\n!CMsgClientToGCAcceptInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xeb\x02\n)CMsgClientToGCAcceptInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCAcceptInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xe0\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x10\n\x0ck_eGuildFull\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x15\n\x11k_eInvalidInviter\x10\t\x12\x15\n\x11k_eAlreadyInGuild\x10\n\"P\n!CMsgClientToGCCancelInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xae\x02\n)CMsgClientToGCCancelInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCCancelInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xa3\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\"U\n\x1a\x43MsgClientToGCAddGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\"\x98\x03\n\"CMsgClientToGCAddGuildRoleResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCAddGuildRoleResponse.EResponse:\x10k_eInternalError\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\x8a\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\x12\x13\n\x0fk_eTooManyRoles\x10\x0b\x12\x0e\n\nk_eBlocked\x10\x0c\"i\n\x1d\x43MsgClientToGCModifyGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x12\n\nrole_flags\x18\x04 \x01(\r\"\x8c\x03\n%CMsgClientToGCModifyGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCModifyGuildRoleResponse.EResponse:\x10k_eInternalError\"\x89\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x16\n\x12k_eNameAlreadyUsed\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x14\n\x10k_eNoPermissions\x10\n\x12\x15\n\x11k_eAdminViolation\x10\x0b\x12\x0e\n\nk_eBlocked\x10\x0c\"B\n\x1d\x43MsgClientToGCRemoveGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\xee\x02\n%CMsgClientToGCRemoveGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCRemoveGuildRoleResponse.EResponse:\x10k_eInternalError\"\xeb\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eRoleNotEmpty\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\x12\x1c\n\x18k_eCantRemoveDefaultRole\x10\n\"j\n\x1f\x43MsgClientToGCSetGuildRoleOrder\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1a\n\x12requested_role_ids\x18\x02 \x03(\r\x12\x19\n\x11previous_role_ids\x18\x03 \x03(\r\"\xf0\x02\n\'CMsgClientToGCSetGuildRoleOrderResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgClientToGCSetGuildRoleOrderResponse.EResponse:\x10k_eInternalError\x12\x1a\n\x12\x63onfirmed_role_ids\x18\x02 \x03(\r\"\xcd\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eInvalidOrder\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\"H\n\x1e\x43MsgClientToGCGuildFeedRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x14\n\x0clast_seen_id\x18\x02 \x01(\x04\"\xd3\x02\n&CMsgClientToGCRequestGuildFeedResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildFeedResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\x0b\x66\x65\x65\x64_events\x18\x03 \x03(\x0b\x32\x18.dota.CMsgGuildFeedEvent\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoPermissions\x10\x06\"2\n\x1e\x43MsgGCToClientGuildFeedUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"6\n\"CMsgClientToGCAddPlayerToGuildChat\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb2\x02\n*CMsgClientToGCAddPlayerToGuildChatResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCAddPlayerToGuildChatResponse.EResponse:\x10k_eInternalError\"\xa5\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x1a\n\x16k_eSteamChatNotEnabled\x10\x07\"\xb9\x02\n\x1a\x43MsgFindGuildByTagResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32*.dota.CMsgFindGuildByTagResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\rguild_summary\x18\x03 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"\x8b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x11\n\rk_eInvalidTag\x10\x05\x12\x14\n\x10k_eGuildNotFound\x10\x06\"\x8c\x03\n\x1f\x43MsgSearchForOpenGuildsResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgSearchForOpenGuildsResponse.EResponse:\x10k_eInternalError\x12J\n\x0esearch_results\x18\x02 \x03(\x0b\x32\x32.dota.CMsgSearchForOpenGuildsResponse.SearchResult\x12\x15\n\ruse_whitelist\x18\x03 \x01(\x08\x1aO\n\x0cSearchResult\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"\xcf\x01\n CMsgClientToGCReportGuildContent\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1b\n\x13guild_content_flags\x18\x02 \x01(\r\"|\n\rEContentFlags\x12\x0b\n\x07k_eNone\x10\x00\x12\x18\n\x14k_eInappropriateName\x10\x01\x12\x17\n\x13k_eInappropriateTag\x10\x02\x12\x18\n\x14k_eInappropriateLogo\x10\x04\x12\x11\n\rk_eValidFlags\x10\x07\"\x96\x02\n(CMsgClientToGCReportGuildContentResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCReportGuildContentResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x14\n\x10k_eGuildNotFound\x10\x05\x12\x13\n\x0fk_eFlagsInvalid\x10\x06\"B\n,CMsgClientToGCRequestAccountGuildPersonaInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd3\x02\n4CMsgClientToGCRequestAccountGuildPersonaInfoResponse\x12\x66\n\x06result\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.EResponse:\x10k_eInternalError\x12\x38\n\x0cpersona_info\x18\x02 \x01(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidAccount\x10\x05\"H\n1CMsgClientToGCRequestAccountGuildPersonaInfoBatch\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\xde\x02\n9CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse\x12k\n\x06result\x18\x01 \x01(\x0e\x32I.dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.EResponse:\x10k_eInternalError\x12\x39\n\rpersona_infos\x18\x02 \x03(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidRequest\x10\x05*\xbe\x08\n\x11\x45GuildAuditAction\x12\x1f\n\x1bk_EGuildAuditAction_Invalid\x10\x00\x12$\n k_EGuildAuditAction_GuildCreated\x10\x01\x12,\n(k_EGuildAuditAction_GuildLanguageChanged\x10\x02\x12)\n%k_EGuildAuditAction_GuildFlagsChanged\x10\x03\x12)\n%k_EGuildAuditAction_GuildMemberJoined\x10\x05\x12\'\n#k_EGuildAuditAction_GuildMemberLeft\x10\x06\x12)\n%k_EGuildAuditAction_GuildMemberKicked\x10\x07\x12.\n*k_EGuildAuditAction_GuildMemberRoleChanged\x10\x08\x12(\n$k_EGuildAuditAction_GuildLogoChanged\x10\t\x12*\n&k_EGuildAuditAction_GuildRegionChanged\x10\n\x12/\n+k_EGuildAuditAction_GuildDescriptionChanged\x10\x0b\x12\x30\n,k_EGuildAuditAction_GuildPrimaryColorChanged\x10\x0c\x12\x32\n.k_EGuildAuditAction_GuildSecondaryColorChanged\x10\r\x12+\n\'k_EGuildAuditAction_GuildPatternChanged\x10\x0e\x12(\n$k_EGuildAuditAction_AdminClearedLogo\x10\x0f\x12\x30\n,k_EGuildAuditAction_GuildRequiredRankChanged\x10\x10\x12(\n$k_EGuildAuditAction_GuildMotDChanged\x10\x12\x12&\n\"k_EGuildAuditAction_AdminResetName\x10\x13\x12%\n!k_EGuildAuditAction_AdminResetTag\x10\x14\x12!\n\x1dk_EGuildAuditAction_AdminLock\x10\x15\x12(\n$k_EGuildAuditAction_GuildNameChanged\x10\x16\x12\'\n#k_EGuildAuditAction_GuildTagChanged\x10\x17\x12&\n\"k_EGuildAuditAction_AdminPermitted\x10\x18\x12$\n k_EGuildAuditAction_AdminBlocked\x10\x19\x12\'\n#k_EGuildAuditAction_AdminBannedUser\x10\x1a*p\n\x0e\x45GuildChatType\x12 \n\x1ck_EGuildChatType_Unspecified\x10\x00\x12#\n\x1fk_EGuildChatType_SteamChatGroup\x10\x01\x12\x17\n\x13k_EGuildChatType_GC\x10\x02\x42\x05H\x01\x90\x01\x00')
 )
 
 _EGUILDAUDITACTION = _descriptor.EnumDescriptor(
@@ -133,8 +133,8 @@ _EGUILDAUDITACTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=12545,
-  serialized_end=13631,
+  serialized_start=12565,
+  serialized_end=13651,
 )
 _sym_db.RegisterEnumDescriptor(_EGUILDAUDITACTION)
 
@@ -160,8 +160,8 @@ _EGUILDCHATTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=13633,
-  serialized_end=13745,
+  serialized_start=13653,
+  serialized_end=13765,
 )
 _sym_db.RegisterEnumDescriptor(_EGUILDCHATTYPE)
 
@@ -732,11 +732,15 @@ _CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
       name='k_eTooManyInvites', index=11, number=11,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_eInvalidUser', index=12, number=12,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=6336,
-  serialized_end=6597,
+  serialized_end=6617,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE)
 
@@ -777,8 +781,8 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescript
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6797,
-  serialized_end=6938,
+  serialized_start=6817,
+  serialized_end=6958,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE)
 
@@ -835,8 +839,8 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescripto
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7135,
-  serialized_end=7359,
+  serialized_start=7155,
+  serialized_end=7379,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE)
 
@@ -881,8 +885,8 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescripto
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7583,
-  serialized_end=7746,
+  serialized_start=7603,
+  serialized_end=7766,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE)
 
@@ -947,8 +951,8 @@ _CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7978,
-  serialized_end=8244,
+  serialized_start=7998,
+  serialized_end=8264,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE)
 
@@ -1013,8 +1017,8 @@ _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8485,
-  serialized_end=8750,
+  serialized_start=8505,
+  serialized_end=8770,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE)
 
@@ -1071,8 +1075,8 @@ _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8952,
-  serialized_end=9187,
+  serialized_start=8972,
+  serialized_end=9207,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE)
 
@@ -1125,8 +1129,8 @@ _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9461,
-  serialized_end=9666,
+  serialized_start=9481,
+  serialized_end=9686,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE)
 
@@ -1167,8 +1171,8 @@ _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9941,
-  serialized_end=10082,
+  serialized_start=9961,
+  serialized_end=10102,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE)
 
@@ -1213,8 +1217,8 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE = _descriptor.EnumDescript
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=10334,
-  serialized_end=10499,
+  serialized_start=10354,
+  serialized_end=10519,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE)
 
@@ -1255,8 +1259,8 @@ _CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=10676,
-  serialized_end=10815,
+  serialized_start=10696,
+  serialized_end=10835,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE)
 
@@ -1323,8 +1327,8 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENT_ECONTENTFLAGS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=11300,
-  serialized_end=11424,
+  serialized_start=11320,
+  serialized_end=11444,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREPORTGUILDCONTENT_ECONTENTFLAGS)
 
@@ -1365,8 +1369,8 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE = _descriptor.EnumDescriptor
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=11564,
-  serialized_end=11705,
+  serialized_start=11584,
+  serialized_end=11725,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE)
 
@@ -1403,8 +1407,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE = _descriptor.En
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=11994,
-  serialized_end=12115,
+  serialized_start=12014,
+  serialized_end=12135,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE)
 
@@ -1441,8 +1445,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE = _descript
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=12421,
-  serialized_end=12542,
+  serialized_start=12441,
+  serialized_end=12562,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE)
 
@@ -2936,7 +2940,7 @@ _CMSGCLIENTTOGCINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=6209,
-  serialized_end=6597,
+  serialized_end=6617,
 )
 
 
@@ -2966,8 +2970,8 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6599,
-  serialized_end=6653,
+  serialized_start=6619,
+  serialized_end=6673,
 )
 
 
@@ -2998,8 +3002,8 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6656,
-  serialized_end=6938,
+  serialized_start=6676,
+  serialized_end=6958,
 )
 
 
@@ -3029,8 +3033,8 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6940,
-  serialized_end=6993,
+  serialized_start=6960,
+  serialized_end=7013,
 )
 
 
@@ -3061,8 +3065,8 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6996,
-  serialized_end=7359,
+  serialized_start=7016,
+  serialized_end=7379,
 )
 
 
@@ -3099,8 +3103,8 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7361,
-  serialized_end=7441,
+  serialized_start=7381,
+  serialized_end=7461,
 )
 
 
@@ -3131,8 +3135,8 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7444,
-  serialized_end=7746,
+  serialized_start=7464,
+  serialized_end=7766,
 )
 
 
@@ -3176,8 +3180,8 @@ _CMSGCLIENTTOGCADDGUILDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7748,
-  serialized_end=7833,
+  serialized_start=7768,
+  serialized_end=7853,
 )
 
 
@@ -3215,8 +3219,8 @@ _CMSGCLIENTTOGCADDGUILDROLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7836,
-  serialized_end=8244,
+  serialized_start=7856,
+  serialized_end=8264,
 )
 
 
@@ -3267,8 +3271,8 @@ _CMSGCLIENTTOGCMODIFYGUILDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8246,
-  serialized_end=8351,
+  serialized_start=8266,
+  serialized_end=8371,
 )
 
 
@@ -3299,8 +3303,8 @@ _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8354,
-  serialized_end=8750,
+  serialized_start=8374,
+  serialized_end=8770,
 )
 
 
@@ -3337,8 +3341,8 @@ _CMSGCLIENTTOGCREMOVEGUILDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8752,
-  serialized_end=8818,
+  serialized_start=8772,
+  serialized_end=8838,
 )
 
 
@@ -3369,8 +3373,8 @@ _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8821,
-  serialized_end=9187,
+  serialized_start=8841,
+  serialized_end=9207,
 )
 
 
@@ -3414,8 +3418,8 @@ _CMSGCLIENTTOGCSETGUILDROLEORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9189,
-  serialized_end=9295,
+  serialized_start=9209,
+  serialized_end=9315,
 )
 
 
@@ -3453,8 +3457,8 @@ _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9298,
-  serialized_end=9666,
+  serialized_start=9318,
+  serialized_end=9686,
 )
 
 
@@ -3491,8 +3495,8 @@ _CMSGCLIENTTOGCGUILDFEEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9668,
-  serialized_end=9740,
+  serialized_start=9688,
+  serialized_end=9760,
 )
 
 
@@ -3537,8 +3541,8 @@ _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9743,
-  serialized_end=10082,
+  serialized_start=9763,
+  serialized_end=10102,
 )
 
 
@@ -3568,8 +3572,8 @@ _CMSGGCTOCLIENTGUILDFEEDUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10084,
-  serialized_end=10134,
+  serialized_start=10104,
+  serialized_end=10154,
 )
 
 
@@ -3599,8 +3603,8 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10136,
-  serialized_end=10190,
+  serialized_start=10156,
+  serialized_end=10210,
 )
 
 
@@ -3631,8 +3635,8 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10193,
-  serialized_end=10499,
+  serialized_start=10213,
+  serialized_end=10519,
 )
 
 
@@ -3677,8 +3681,8 @@ _CMSGFINDGUILDBYTAGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10502,
-  serialized_end=10815,
+  serialized_start=10522,
+  serialized_end=10835,
 )
 
 
@@ -3715,8 +3719,8 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11035,
-  serialized_end=11114,
+  serialized_start=11055,
+  serialized_end=11134,
 )
 
 _CMSGSEARCHFOROPENGUILDSRESPONSE = _descriptor.Descriptor(
@@ -3760,8 +3764,8 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10818,
-  serialized_end=11214,
+  serialized_start=10838,
+  serialized_end=11234,
 )
 
 
@@ -3799,8 +3803,8 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11217,
-  serialized_end=11424,
+  serialized_start=11237,
+  serialized_end=11444,
 )
 
 
@@ -3831,8 +3835,8 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11427,
-  serialized_end=11705,
+  serialized_start=11447,
+  serialized_end=11725,
 )
 
 
@@ -3862,8 +3866,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11707,
-  serialized_end=11773,
+  serialized_start=11727,
+  serialized_end=11793,
 )
 
 
@@ -3901,8 +3905,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11776,
-  serialized_end=12115,
+  serialized_start=11796,
+  serialized_end=12135,
 )
 
 
@@ -3932,8 +3936,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12117,
-  serialized_end=12189,
+  serialized_start=12137,
+  serialized_end=12209,
 )
 
 
@@ -3971,8 +3975,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE = _descriptor.Descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12192,
-  serialized_end=12542,
+  serialized_start=12212,
+  serialized_end=12562,
 )
 
 _CMSGGUILDSUMMARY_EVENTPOINTS.containing_type = _CMSGGUILDSUMMARY
