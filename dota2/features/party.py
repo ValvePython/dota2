@@ -179,7 +179,7 @@ class Party(object):
         """
         if (not self.party
             or self.party.leader_id != self.steam.steam_id
-            or steam_id not in self.party.memeber_ids): return
+            or steam_id not in self.party.member_ids): return
 
         if self.verbose_debug:
             self._LOG.debug("Kicking %s from the party." % steam_id)
