@@ -1,7 +1,9 @@
 syntax = "proto2";
 package dota;
+import "dota_shared_enums.proto";
+
 option optimize_for = SPEED;
-option py_generic_services = false;
+option cc_generic_services = false;
 
 enum EGuildAuditAction {
 	k_EGuildAuditAction_Invalid = 0;
@@ -29,6 +31,7 @@ enum EGuildAuditAction {
 	k_EGuildAuditAction_AdminPermitted = 24;
 	k_EGuildAuditAction_AdminBlocked = 25;
 	k_EGuildAuditAction_AdminBannedUser = 26;
+	k_EGuildAuditAction_AdminExonerated = 27;
 }
 
 enum EGuildChatType {
@@ -234,24 +237,6 @@ message CMsgClientToGCRequestGuildMembershipResponse {
 
 message CMsgGCToClientGuildMembershipUpdated {
 	optional dota.CMsgAccountGuildMemberships guild_memberships = 1;
-}
-
-message CMsgClientToGCRequestGuildSummary {
-	optional uint32 guild_id = 1;
-}
-
-message CMsgClientToGCRequestGuildSummaryResponse {
-	enum EResponse {
-		k_eInternalError = 0;
-		k_eSuccess = 1;
-		k_eTooBusy = 2;
-		k_eDisabled = 3;
-		k_eTimeout = 4;
-		k_eInvalidGuild = 5;
-	}
-
-	optional dota.CMsgClientToGCRequestGuildSummaryResponse.EResponse result = 1 [default = k_eInternalError];
-	optional dota.CMsgGuildSummary guild_summary = 2;
 }
 
 message CMsgClientToGCJoinGuild {

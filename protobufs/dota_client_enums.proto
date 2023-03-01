@@ -1,7 +1,9 @@
 syntax = "proto2";
 package dota;
+import "dota_shared_enums.proto";
+
 option optimize_for = SPEED;
-option py_generic_services = false;
+option cc_generic_services = false;
 
 enum ETournamentTemplate {
 	k_ETournamentTemplate_None = 0;

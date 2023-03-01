@@ -1,7 +1,7 @@
 syntax = "proto2";
 package dota;
 option optimize_for = SPEED;
-option py_generic_services = false;
+option cc_generic_services = false;
 
 enum EGCEconBaseMsg {
 	k_EMsgGCGenericResult = 2579;
@@ -17,13 +17,6 @@ enum EGCMsgResponse {
 	k_EGCMsgResponseUnknownError = 6;
 	k_EGCMsgResponseNotLoggedOn = 7;
 	k_EGCMsgFailedToCreate = 8;
-}
-
-enum EGCPartnerRequestResponse {
-	k_EPartnerRequestOK = 1;
-	k_EPartnerRequestBadAccount = 2;
-	k_EPartnerRequestNotLinked = 3;
-	k_EPartnerRequestUnsupportedPartnerType = 4;
 }
 
 enum EGCMsgUseItemResponse {

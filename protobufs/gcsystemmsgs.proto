@@ -1,7 +1,7 @@
 syntax = "proto2";
 package dota;
 option optimize_for = SPEED;
-option py_generic_services = false;
+option cc_generic_services = false;
 
 enum ESOMsg {
 	k_ESOMsg_Create = 21;

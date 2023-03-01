@@ -3,7 +3,7 @@ package dota;
 import "steammessages.proto";
 
 option optimize_for = SPEED;
-option py_generic_services = false;
+option cc_generic_services = false;
 
 enum ESourceEngine {
 	k_ESE_Source1 = 0;
@@ -50,12 +50,6 @@ message CMsgSDOAssert {
 
 	optional int32 sdo_type = 1;
 	repeated dota.CMsgSDOAssert.Request requests = 2;
-}
-
-message CMsgSHA1Digest {
-	required fixed64 block1 = 1;
-	required fixed64 block2 = 2;
-	required fixed32 block3 = 3;
 }
 
 message CMsgSOIDOwner {
@@ -137,16 +131,16 @@ message CMsgGCMultiplexMessage {
 }
 
 message CMsgGCToGCSubGCStarting {
-	optional uint32 dir_index = 1;
+	optional int32 dir_index = 1;
 }
 
 message CGCToGCMsgMasterAck {
 	message Process {
-		optional uint32 dir_index = 1;
+		optional int32 dir_index = 1;
 		repeated uint32 type_instances = 2;
 	}
 
-	optional uint32 dir_index = 1;
+	optional int32 dir_index = 1;
 	optional string machine_name = 3;
 	optional string process_name = 4;
 	repeated dota.CGCToGCMsgMasterAck.Process directory = 6;
@@ -166,7 +160,7 @@ message CMsgGCToGCUniverseStartupResponse {
 
 message CGCToGCMsgMasterStartupComplete {
 	message GCInfo {
-		optional uint32 dir_index = 1;
+		optional int32 dir_index = 1;
 		optional string machine_name = 2;
 	}
 
@@ -234,6 +228,7 @@ message CMsgClientHello {
 	optional uint32 swap_width = 19;
 	optional uint32 swap_height = 20;
 	optional bool is_steam_china = 22;
+	optional bool is_steam_china_client = 24;
 	optional string platform_name = 23;
 }
 
@@ -250,8 +245,6 @@ message CMsgClientWelcome {
 	repeated dota.CMsgSOCacheSubscriptionCheck uptodate_subscribed_caches = 4;
 	optional dota.CMsgClientWelcome.Location location = 5;
 	optional bytes save_game_key = 6;
-	optional fixed32 item_schema_crc = 7;
-	optional string items_game_url = 8;
 	optional uint32 gc_socache_file_version = 9;
 	optional string txn_country_code = 10;
 	optional bytes game_data2 = 11;
