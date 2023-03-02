@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import valveextensions_pb2 as valveextensions__pb2
+import dota2.protobufs.valveextensions_pb2 as valveextensions__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

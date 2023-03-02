@@ -12,8 +12,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import steammessages_pb2 as steammessages__pb2
-import gcsdk_gcmessages_pb2 as gcsdk__gcmessages__pb2
+import dota2.protobufs.steammessages_pb2 as steammessages__pb2
+import dota2.protobufs.gcsdk_gcmessages_pb2 as gcsdk__gcmessages__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

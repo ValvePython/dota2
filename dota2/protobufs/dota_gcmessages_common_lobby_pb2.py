@@ -12,8 +12,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import steammessages_pb2 as steammessages__pb2
-import dota_shared_enums_pb2 as dota__shared__enums__pb2
+import dota2.protobufs.steammessages_pb2 as steammessages__pb2
+import dota2.protobufs.dota_shared_enums_pb2 as dota__shared__enums__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

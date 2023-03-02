@@ -12,15 +12,15 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import steammessages_pb2 as steammessages__pb2
-import dota_shared_enums_pb2 as dota__shared__enums__pb2
-import dota_gcmessages_common_pb2 as dota__gcmessages__common__pb2
-import dota_gcmessages_webapi_pb2 as dota__gcmessages__webapi__pb2
-import gcsdk_gcmessages_pb2 as gcsdk__gcmessages__pb2
-import base_gcmessages_pb2 as base__gcmessages__pb2
-import econ_gcmessages_pb2 as econ__gcmessages__pb2
-import dota_gcmessages_client_pb2 as dota__gcmessages__client__pb2
-import valveextensions_pb2 as valveextensions__pb2
+import dota2.protobufs.steammessages_pb2 as steammessages__pb2
+import dota2.protobufs.dota_shared_enums_pb2 as dota__shared__enums__pb2
+import dota2.protobufs.dota_gcmessages_common_pb2 as dota__gcmessages__common__pb2
+import dota2.protobufs.dota_gcmessages_webapi_pb2 as dota__gcmessages__webapi__pb2
+import dota2.protobufs.gcsdk_gcmessages_pb2 as gcsdk__gcmessages__pb2
+import dota2.protobufs.base_gcmessages_pb2 as base__gcmessages__pb2
+import dota2.protobufs.econ_gcmessages_pb2 as econ__gcmessages__pb2
+import dota2.protobufs.dota_gcmessages_client_pb2 as dota__gcmessages__client__pb2
+import dota2.protobufs.valveextensions_pb2 as valveextensions__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
