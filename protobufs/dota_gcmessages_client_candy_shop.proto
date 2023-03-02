@@ -1,0 +1,307 @@
+syntax = "proto2";
+package dota;
+import "steammessages.proto";
+import "dota_shared_enums.proto";
+import "dota_gcmessages_common.proto";
+import "dota_gcmessages_webapi.proto";
+import "gcsdk_gcmessages.proto";
+import "base_gcmessages.proto";
+import "econ_gcmessages.proto";
+import "dota_gcmessages_client.proto";
+import "valveextensions.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = false;
+
+enum ECandyShopAuditAction {
+	k_eInvalid = 0;
+	k_eSupportModify = 1;
+	k_ePurchaseReward = 2;
+	k_eOpenBags = 3;
+	k_eRerollRewards = 4;
+	k_eDoVariableExchange = 5;
+	k_eDoExchange = 6;
+	k_eEventActionGrantInventorySizeIncrease = 7;
+	k_eEventActionGrantRerollChargesIncrease = 8;
+}
+
+enum ECandyShopRewardType {
+	k_eCandyShopRewardType_None = 0;
+	k_eCandyShopRewardType_Item = 1;
+	k_eCandyShopRewardType_EventAction = 2;
+	k_eCandyShopRewardType_EventPoints = 3;
+}
+
+message CMsgCandyShopCandyCount {
+	optional uint32 candy_type = 1;
+	optional uint32 candy_count = 2;
+}
+
+message CMsgCandyShopCandyQuantity {
+	repeated dota.CMsgCandyShopCandyCount candy_counts = 1;
+}
+
+message CMsgCandyShopExchangeRecipe {
+	optional uint32 recipe_id = 1;
+	optional dota.CMsgCandyShopCandyQuantity input = 2;
+	optional dota.CMsgCandyShopCandyQuantity output = 3;
+}
+
+message CMsgCandyShopRewardData_Item {
+	optional uint32 item_def = 1;
+}
+
+message CMsgCandyShopRewardData_EventAction {
+	optional dota.EEvent event_id = 1 [default = EVENT_ID_NONE];
+	optional uint32 action_id = 2;
+	optional uint32 quantity = 3;
+}
+
+message CMsgCandyShopRewardData_EventPoints {
+	optional dota.EEvent event_id = 1 [default = EVENT_ID_NONE];
+	optional uint32 points = 2;
+}
+
+message CMsgCandyShopReward {
+	optional uint32 reward_id = 1;
+	optional uint32 reward_option_id = 2;
+	optional dota.CMsgCandyShopCandyQuantity price = 3;
+	optional dota.ECandyShopRewardType reward_type = 4 [default = k_eCandyShopRewardType_None];
+	optional dota.CMsgCandyShopRewardData_Item item_data = 5;
+	optional dota.CMsgCandyShopRewardData_EventAction event_action_data = 6;
+	optional dota.CMsgCandyShopRewardData_EventPoints event_points_data = 7;
+}
+
+message CMsgCandyShopUserData {
+	optional uint32 inventory_size = 1;
+	optional dota.CMsgCandyShopCandyQuantity inventory = 2;
+	optional fixed32 exchange_reset_timestamp = 3;
+	repeated dota.CMsgCandyShopExchangeRecipe exchange_recipes = 4;
+	repeated dota.CMsgCandyShopReward active_rewards = 5;
+	optional uint32 reroll_charges = 6;
+}
+
+message CMsgClientToGCCandyShopGetUserData {
+	optional uint32 candy_shop_id = 1;
+}
+
+message CMsgClientToGCCandyShopGetUserDataResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eInvalidShop = 5;
+		k_eExpiredShop = 6;
+	}
+
+	optional dota.CMsgClientToGCCandyShopGetUserDataResponse.EResponse response = 1 [default = k_eInternalError];
+	optional dota.CMsgCandyShopUserData user_data = 2;
+}
+
+message CMsgGCToClientCandyShopUserDataUpdated {
+	optional uint32 candy_shop_id = 1;
+	optional dota.CMsgCandyShopUserData user_data = 2;
+}
+
+message CMsgClientToGCCandyShopPurchaseReward {
+	optional uint32 candy_shop_id = 1;
+	optional uint64 reward_id = 2;
+}
+
+message CMsgClientToGCCandyShopPurchaseRewardResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eInvalidShop = 5;
+		k_eInvalidReward = 6;
+		k_eNotEnoughCandy = 7;
+		k_eExpiredShop = 8;
+	}
+
+	optional dota.CMsgClientToGCCandyShopPurchaseRewardResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopOpenBags {
+	optional uint32 candy_shop_id = 1;
+	optional uint32 bag_count = 2;
+}
+
+message CMsgClientToGCCandyShopOpenBagsResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eInvalidShop = 5;
+		k_eInvalidItem = 6;
+		k_eNotEnoughBags = 7;
+		k_eNotEnoughSpace = 8;
+		k_eExpiredShop = 9;
+	}
+
+	optional dota.CMsgClientToGCCandyShopOpenBagsResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopDoExchange {
+	optional uint32 candy_shop_id = 1;
+	optional uint32 recipe_id = 2;
+}
+
+message CMsgClientToGCCandyShopDoExchangeResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eInvalidShop = 5;
+		k_eNotEnoughCandy = 6;
+		k_eInvalidRecipe = 7;
+		k_eNotEnoughSpace = 8;
+		k_eExpiredShop = 9;
+	}
+
+	optional dota.CMsgClientToGCCandyShopDoExchangeResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopDoVariableExchange {
+	optional uint32 candy_shop_id = 1;
+	optional dota.CMsgCandyShopCandyQuantity input = 2;
+	optional dota.CMsgCandyShopCandyQuantity output = 3;
+}
+
+message CMsgClientToGCCandyShopDoVariableExchangeResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eInvalidShop = 5;
+		k_eNotEnoughCandy = 6;
+		k_eInvalidRecipe = 7;
+		k_eNotEnoughSpace = 8;
+		k_eExpiredShop = 9;
+	}
+
+	optional dota.CMsgClientToGCCandyShopDoVariableExchangeResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopRerollRewards {
+	optional uint32 candy_shop_id = 1;
+}
+
+message CMsgClientToGCCandyShopRerollRewardsResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eInvalidShop = 5;
+		k_eNoRerollCharges = 6;
+		k_eExpiredShop = 7;
+	}
+
+	optional dota.CMsgClientToGCCandyShopRerollRewardsResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopDevGrantCandy {
+	optional uint32 candy_shop_id = 1;
+	optional dota.CMsgCandyShopCandyQuantity candy_quantity = 2;
+}
+
+message CMsgClientToGCCandyShopDevGrantCandyResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eNotAllowed = 5;
+		k_eInvalidShop = 6;
+		k_eNotEnoughSpace = 7;
+	}
+
+	optional dota.CMsgClientToGCCandyShopDevGrantCandyResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopDevClearInventory {
+	optional uint32 candy_shop_id = 1;
+}
+
+message CMsgClientToGCCandyShopDevClearInventoryResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eNotAllowed = 5;
+		k_eInvalidShop = 6;
+	}
+
+	optional dota.CMsgClientToGCCandyShopDevClearInventoryResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopDevGrantCandyBags {
+	optional uint32 candy_shop_id = 1;
+	optional uint32 quantity = 2;
+}
+
+message CMsgClientToGCCandyShopDevGrantCandyBagsResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eNotAllowed = 5;
+		k_eInvalidShop = 6;
+	}
+
+	optional dota.CMsgClientToGCCandyShopDevGrantCandyBagsResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopDevShuffleExchange {
+	optional uint32 candy_shop_id = 1;
+}
+
+message CMsgClientToGCCandyShopDevShuffleExchangeResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eNotAllowed = 5;
+		k_eInvalidShop = 6;
+	}
+
+	optional dota.CMsgClientToGCCandyShopDevShuffleExchangeResponse.EResponse response = 1 [default = k_eInternalError];
+}
+
+message CMsgClientToGCCandyShopDevGrantRerollCharges {
+	optional uint32 candy_shop_id = 1;
+	optional uint32 reroll_charges = 2;
+}
+
+message CMsgClientToGCCandyShopDevGrantRerollChargesResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTooBusy = 2;
+		k_eDisabled = 3;
+		k_eTimeout = 4;
+		k_eNotAllowed = 5;
+		k_eInvalidShop = 6;
+	}
+
+	optional dota.CMsgClientToGCCandyShopDevGrantRerollChargesResponse.EResponse response = 1 [default = k_eInternalError];
+}

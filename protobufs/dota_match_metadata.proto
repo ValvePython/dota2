@@ -2,10 +2,11 @@ syntax = "proto2";
 package dota;
 import "base_gcmessages.proto";
 import "dota_gcmessages_common_match_management.proto";
+import "dota_gcmessages_common_lobby.proto";
 import "dota_gcmessages_common.proto";
 import "dota_shared_enums.proto";
 
-option py_generic_services = false;
+option cc_generic_services = false;
 
 message CDOTAMatchMetadataFile {
 	required int32 version = 1;
@@ -33,6 +34,8 @@ message CDOTAMatchMetadata {
 			optional uint32 deaths = 4;
 			optional uint32 assists = 5;
 			optional uint32 level = 6;
+			repeated uint32 backpack_item_id = 7;
+			optional uint32 neutral_item_id = 8;
 		}
 
 		message AutoStyleCriteria {
@@ -73,11 +76,19 @@ message CDOTAMatchMetadata {
 			optional uint32 action_id = 1;
 			optional uint32 quantity = 2;
 			optional uint32 audit = 3;
+			optional bool requires_win = 4;
+			optional uint64 audit_data = 5;
 		}
 
 		message CandyGrant {
 			optional uint32 points = 1;
 			optional uint32 reason = 2;
+		}
+
+		message PeriodicResourceData {
+			optional uint32 periodic_resource_id = 1;
+			optional uint32 remaining = 2;
+			optional uint32 max = 3;
 		}
 
 		message EventData {
@@ -103,12 +114,21 @@ message CDOTAMatchMetadata {
 			optional uint32 team_wager_bonus_pct = 21;
 			optional uint32 wager_streak_pct = 22;
 			repeated dota.CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;
+			optional uint32 active_season_id = 24;
+			optional bool cavern_crawl_half_credit = 25;
+			repeated dota.CDOTAMatchMetadata.Team.PeriodicResourceData periodic_resources = 26;
 		}
 
 		message GauntletProgress {
 			optional uint32 gauntlet_tier = 2;
 			optional uint32 gauntlet_wins = 3;
 			optional uint32 gauntlet_losses = 4;
+		}
+
+		message FeaturedGamemodeProgress {
+			optional uint32 start_value = 1;
+			optional uint32 end_value = 2;
+			optional uint32 max_value = 3;
 		}
 
 		message Player {
@@ -169,6 +189,12 @@ message CDOTAMatchMetadata {
 			optional dota.CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;
 			repeated dota.CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;
 			repeated uint32 guild_ids = 49;
+			repeated float graph_hero_damage = 50;
+			optional dota.DOTA_GC_TEAM team_number = 51 [default = DOTA_GC_TEAM_GOOD_GUYS];
+			optional uint32 team_slot = 52;
+			optional dota.CDOTAMatchMetadata.Team.FeaturedGamemodeProgress featured_gamemode_progress = 53;
+			optional uint32 featured_hero_sticker_index = 54;
+			optional uint32 featured_hero_sticker_quality = 55;
 		}
 
 		optional uint32 dota_team = 1;
@@ -177,7 +203,7 @@ message CDOTAMatchMetadata {
 		repeated float graph_gold_earned = 4;
 		repeated float graph_net_worth = 5;
 		optional bool cm_first_pick = 6;
-		optional uint32 cm_captain_player_id = 7;
+		optional int32 cm_captain_player_id = 7;
 		repeated uint32 cm_bans = 8;
 		repeated uint32 cm_picks = 9;
 		optional uint32 cm_penalty = 10;
@@ -209,6 +235,7 @@ message CDOTAMatchMetadata {
 	optional dota.CMsgMatchMatchmakingStats matchmaking_stats = 8;
 	optional dota.CMvpData mvp_data = 9;
 	repeated dota.CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;
+	optional bytes custom_post_game_table = 11;
 }
 
 message CDOTAMatchPrivateMetadata {
@@ -292,6 +319,8 @@ message CDOTAMatchPrivateMetadata {
 			repeated float graph_denies = 11;
 			optional dota.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;
 			optional dota.CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;
+			optional dota.DOTA_GC_TEAM team_number = 14 [default = DOTA_GC_TEAM_GOOD_GUYS];
+			optional uint32 team_slot = 15;
 		}
 
 		message Building {

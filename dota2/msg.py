@@ -9,13 +9,24 @@ from dota2.protobufs import (
     gcsdk_gcmessages_pb2,
     dota_gcmessages_common_pb2,
     dota_gcmessages_client_pb2,
+    dota_gcmessages_client_battle_report_pb2,
+    dota_gcmessages_client_candy_shop_pb2,
     dota_gcmessages_client_chat_pb2,
+    dota_gcmessages_client_coaching_pb2,
     dota_gcmessages_client_fantasy_pb2,
+    dota_gcmessages_client_guild_events_pb2,
     dota_gcmessages_client_guild_pb2,
     dota_gcmessages_client_match_management_pb2,
     dota_gcmessages_client_team_pb2,
     dota_gcmessages_client_tournament_pb2,
     dota_gcmessages_client_watch_pb2,
+    dota_gcmessages_common_bot_script_pb2,
+    dota_gcmessages_common_league_pb2,
+    dota_gcmessages_common_lobby_pb2,
+    dota_gcmessages_common_match_management_pb2,
+    dota_gcmessages_msgid_pb2,
+    dota_gcmessages_server_pb2,
+    dota_gcmessages_webapi_pb2,
     econ_gcmessages_pb2,
 )
 
@@ -66,15 +77,26 @@ def find_proto(emsg):
                    gcsdk_gcmessages_pb2,
                    dota_gcmessages_common_pb2,
                    dota_gcmessages_client_pb2,
+                   dota_gcmessages_client_battle_report_pb2,
+                   dota_gcmessages_client_candy_shop_pb2,
                    dota_gcmessages_client_chat_pb2,
+                   dota_gcmessages_client_coaching_pb2,
                    dota_gcmessages_client_fantasy_pb2,
+                   dota_gcmessages_client_guild_events_pb2,
                    dota_gcmessages_client_guild_pb2,
                    dota_gcmessages_client_match_management_pb2,
                    dota_gcmessages_client_team_pb2,
                    dota_gcmessages_client_tournament_pb2,
                    dota_gcmessages_client_watch_pb2,
-                   econ_gcmessages_pb2,
-                  ):
+                   dota_gcmessages_common_bot_script_pb2,
+                   dota_gcmessages_common_league_pb2,
+                   dota_gcmessages_common_lobby_pb2,
+                   dota_gcmessages_common_match_management_pb2,
+                   dota_gcmessages_msgid_pb2,
+                   dota_gcmessages_server_pb2,
+                   dota_gcmessages_webapi_pb2,
+                   econ_gcmessages_pb2
+                   ):
 
         proto = getattr(module, emsg.name.replace("EMsg", "CMsg"), None)
 

@@ -3,10 +3,8 @@ import six
 from eventemitter import EventEmitter
 from dota2.enums import EDOTAGCMsg, DOTAChatChannelType_t
 from dota2.protobufs.dota_gcmessages_client_chat_pb2 import CMsgDOTAJoinChatChannelResponse,\
-                                                            CMsgDOTAChatChannelFullUpdate,\
                                                             CMsgDOTAOtherJoinedChatChannel,\
-                                                            CMsgDOTAOtherLeftChatChannel,\
-                                                            CMsgDOTAChatChannelMemberUpdate
+                                                            CMsgDOTAOtherLeftChatChannel
 
 
 class ChatBase(object):
@@ -67,7 +65,6 @@ class ChannelManager(EventEmitter):
         self._dota.on(EDOTAGCMsg.EMsgGCChatMessage, self._handle_message)
         self._dota.on(EDOTAGCMsg.EMsgGCOtherJoinedChannel, self._handle_members_update)
         self._dota.on(EDOTAGCMsg.EMsgGCOtherLeftChannel, self._handle_members_update)
-        self._dota.on(EDOTAGCMsg.EMsgDOTAChatChannelMemberUpdate, self._handle_members_update)
 
     def __repr__(self):
         return "<ChannelManager(): %d channels>" % (
@@ -126,11 +123,6 @@ class ChannelManager(EventEmitter):
                 left.append(message.steam_id or message.channel_user_id)
             elif isinstance(message, CMsgDOTAOtherJoinedChatChannel):
                 joined.append(message.steam_id or message.channel_user_id)
-            elif isinstance(message, CMsgDOTAChatChannelMemberUpdate):
-                left = list(message.left_steam_ids)
-                joined = list(map(lambda x: x.steam_id or x.channel_user_id, message.joined_members))
-            elif isinstance(message, CMsgDOTAChatChannelFullUpdate):
-                pass
 
             channel._process_members_from_proto(message)
 
@@ -266,11 +258,6 @@ class ChatChannel(object):
             members = [data]
         elif isinstance(data, CMsgDOTAJoinChatChannelResponse):
             members = data.members
-        elif isinstance(data, CMsgDOTAChatChannelMemberUpdate):
-            for steam_id in data.left_steam_ids:
-                self.members.pop(steam_id, None)
-
-            members = data.joined_members
 
         for member in members:
             self.members[member.steam_id or member.channel_user_id] = (
